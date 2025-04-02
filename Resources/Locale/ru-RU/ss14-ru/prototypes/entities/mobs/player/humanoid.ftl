@@ -1,8 +1,14 @@
 ent-RandomHumanoidSpawnerDeathSquad = Агент Эскадрона смерти
     .suffix = Роль ОБР, Эскадрон смерти
     .desc = { "" }
-ent-RandomHumanoidSpawnerERTLeader = ОБР лидер
-    .suffix = Роль ОБР, Базовый
+ent-MobHumanDeathSquadUnit = { ent-MobHuman }
+    .desc = { ent-MobHuman.desc }
+ent-RandomHumanoidSpawnerMobHumanCentcomBlueShieldOfficer = офицер "Синий Щит"
+    .suffix = ОСЩ, Призрачная роль, Без доступа ЦК
+    .desc = { ent-MarkerBase.desc }
+ent-MobHumanCentcomBlueShieldOfficer = { ent-MobHuman }
+    .desc = { ent-MobHuman.desc }
+ent-RandomHumanoidSpawnerERTLeaderAmber = ОБР лидер
     .desc = { "" }
 ent-RandomHumanoidSpawnerERTLeaderEVA = ОБР лидер
     .suffix = Роль ОБР, Броня EVA

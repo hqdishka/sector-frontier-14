@@ -41,6 +41,30 @@ panic-bunker-account-reason-overall =
         [few] минуты
        *[other] минут
     }.
+whitelist-playtime = У вас недостаточно игрового времени, чтобы присоединиться к этому серверу. Вам нужно как минимум { $minutes } минут игрового времени, чтобы присоединиться к этому серверу.
+whitelist-player-count = Этот сервер в данный момент не принимает игроков. Пожалуйста, повторите попытку позже.
+whitelist-notes = У вас слишком много заметок от администрации, чтобы присоединиться к этому серверу. Вы можете проверить свои заметки, набрав /adminremarks в чате.
+whitelist-manual = Вы отсутствуете в белом списке этого сервера.
+whitelist-blacklisted = Вы находитесь в чёрном списке этого сервера.
+whitelist-always-deny = Вам запрещено присоединяться к этому серверу.
+whitelist-fail-prefix = Не внесён в белый список: { $msg }
+cmd-blacklistadd-desc = Добавить игрока в чёрный список сервера.
+cmd-blacklistadd-help = Использование: blacklistadd <username>
+cmd-blacklistadd-existing = { $username } уже находится в чёрном списке!
+cmd-blacklistadd-added = { $username } добавлен в чёрный список
+cmd-blacklistadd-not-found = Не удалось найти игрока '{ $username }'
+cmd-blacklistadd-arg-player = [player]
+cmd-blacklistremove-desc = Удалить игрока из чёрного списка сервера.
+cmd-blacklistremove-help = Использование: blacklistremove <username>
+cmd-blacklistremove-existing = { $username } не находится в чёрном списке!
+cmd-blacklistremove-removed = { $username } удалён из чёрного списка
+cmd-blacklistremove-not-found = Не удалось найти игрока '{ $username }'
+cmd-blacklistremove-arg-player = [player]
+generic-misconfigured = Сервер неправильно настроен и не принимает игроков. Пожалуйста, свяжитесь с владельцем сервера и повторите попытку позже.
+ipintel-server-ratelimited = На этом сервере используется система безопасности с внешней проверкой, которая достигла своего максимального предела проверки. Пожалуйста, обратитесь за помощью к администрации сервера и повторите попытку позже.
+ipintel-unknown = На этом сервере используется система безопасности с внешней проверкой, но она столкнулась с ошибкой. Пожалуйста, обратитесь за помощью к администрации сервера и повторите попытку позже.
+ipintel-suspicious = Похоже, вы подключаетесь через центр обработки данных или VPN. По административным причинам мы не разрешаем играть через VPN-соединения. Пожалуйста, обратитесь за помощью к администрации сервера, если вы считаете, что это ошибочно.
+hwid-required = Your client has refused to send a hardware id. Please contact the administration team for further assistance.
 baby-jail-account-denied = Этот сервер предназначен для новичков и тех, кто хочет им помочь. Новые подключения от слишком старых аккаунтов или аккаунтов, не входящих в белый список, не принимаются. Ознакомьтесь с другими серверами и узнайте всё, что может предложить Space Station 14. Удачи!
 baby-jail-account-denied-reason = Этот сервер предназначен для новичков и тех, кто хочет им помочь. Новые подключения от слишком старых аккаунтов или аккаунтов, не входящих в белый список, не принимаются. Ознакомьтесь с другими серверами и узнайте всё, что может предложить Space Station 14. Удачи! Причина: "{ $reason }"
 baby-jail-account-reason-account = Ваш аккаунт Space Station 14 слишком старый. Он должен быть моложе { $minutes } минут.
