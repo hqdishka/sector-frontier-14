@@ -125,6 +125,11 @@
     attributes:
       gender: male
   - type: Sharp
+  - type: NightVision # Goobstation - Nigthvision
+    toggleAction: null
+    color: "#808080"
+    activateSound: null
+    deactivateSound: null
   - type: TimedDespawn
     lifetime: 2400
 
@@ -305,6 +310,10 @@
   - type: FireVisuals
     sprite: Mobs/Effects/onfire.rsi
     normalState: Mouse_burning
+  - type: NightVision # Goobstation - Nigthvision
+    color: "#808080"
+    activateSound: null
+    deactivateSound: null
 
 
 - type: weightedRandomEntity
