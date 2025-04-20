@@ -433,11 +433,13 @@
     - Silicon
   - type: Eye
     drawFov: false
+  - type: ContentEye
+    maxZoom: "4, 4"
   - type: Examiner
   - type: InputMover
+  - type: Alerts
   - type: Speech
     speechVerb: Robotic
-    speechSounds: Borg
   - type: Tag
     tags:
     - HideContextMenu
