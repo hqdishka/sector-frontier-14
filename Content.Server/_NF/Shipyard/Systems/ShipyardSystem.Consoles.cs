@@ -241,7 +241,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             _shipOwnership.RegisterShipOwnership(shuttleUid, actorComp.PlayerSession);
         }
 
-        if (!voucherUsed)
+        if (!voucherUsed && component.NewJobTitle != null)
         {
             _idSystem.TryChangeJobTitle(targetId, Loc.GetString(component.NewJobTitle), idCard, player);
         }
