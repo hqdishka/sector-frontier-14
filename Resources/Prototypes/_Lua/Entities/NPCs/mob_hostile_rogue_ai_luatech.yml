@@ -1,0 +1,221 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent:
+  - MobRogueSiliconDroneBase
+  - MobRogueSiliconProjectileBatteryAmmo
+  id: MobRogueSiliconDroneScienceLuaTech
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: _NF/Mobs/RogueSilicons/drones.rsi
+      state: base
+    - sprite: _NF/Mobs/RogueSilicons/drones.rsi
+      state: decor_department
+    - sprite: _NF/Mobs/RogueSilicons/drones.rsi
+      state: decor_department_accent
+      color: "#6400c8"
+    - sprite: _NF/Mobs/RogueSilicons/drones.rsi
+      state: base_eyes
+      shader: unshaded
+      color: "#ffff00"
+  - type: NpcFactionMember
+    factions:
+    - SiliconsLuaTech
+  - type: ProjectileBatteryAmmoProvider
+    proto: AnomalousParticleSigmaStrong
+    fireCost: 100
+
+- type: entity
+  parent:
+  - MobRogueSiliconDroneBase
+  - MobRogueSiliconProjectileBatteryAmmo
+  id: MobRogueSiliconDroneLethalsLuaTech
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - sprite: _NF/Mobs/RogueSilicons/drones.rsi
+      state: base
+    - sprite: _NF/Mobs/RogueSilicons/drones.rsi
+      state: decor_department
+      color: "#990000"
+    - sprite: _NF/Mobs/RogueSilicons/drones.rsi
+      state: decor_department_accent
+      color: "#000000"
+    - sprite: _NF/Mobs/RogueSilicons/drones.rsi
+      state: base_eyes
+      shader: unshaded
+      color: "#990000"
+  - type: NpcFactionMember
+    factions:
+    - SiliconsLuaTech
+
+- type: npcFaction
+  id: SiliconsLuaTech
+  hostile:
+  ## SS14 factions
+  - NanoTrasen
+  - Syndicate
+  - SimpleHostile
+  - Passive
+  - PetsNT
+  - Zombie
+  - Revolutionary
+  - Xeno
+  ## Frontier Factions
+  - WizFedFaction
+  - BloodCultNF
+  - PirateNF
+  - ExplorersExpeditionNF
+  - ArtifactConstruct
+  - StreetGangNF
+  - DinosaursNF
+  - MercenariesExpeditionNF
+  #- SiliconsExpeditionNF
+  - AberrantFleshExpeditionNF
+
+- type: entity
+  parent: BaseStructure
+  id: WeaponTurretBaseLaser
+  abstract: true
+  components:
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Actions
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeAabb
+            bounds: "-0.45,-0.45,0.45,0.45"
+          density: 60
+          mask:
+            - MachineMask
+          layer:
+            - MachineLayer
+    - type: Sprite
+      sprite: _Lua/Objects/Weapons/Guns/Turrets/laserluatech.rsi
+      drawdepth: Mobs
+      layers:
+        - map: ["enum.DamageStateVisualLayers.Base"]
+        - state: impulselaser
+          sprite: _Lua/Objects/Weapons/Guns/Turrets/laserluatech.rsi
+        - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+          state: impulselaser-unshaded
+          sprite: _Lua/Objects/Weapons/Guns/Turrets/laserluatech.rsi
+          shader: unshaded
+    - type: InteractionPopup
+      interactDelay: 0.2
+      successChance: 0.8
+      interactSuccessString: petting-success-generic
+      interactFailureString: petting-failure-generic
+      interactSuccessSound:
+        path: /Audio/Effects/double_beep.ogg
+    - type: CombatMode
+      toggleMouseRotator: false
+    - type: Damageable
+      damageContainer: Inorganic
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 600
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+        - trigger:
+            !type:DamageTrigger
+            damage: 300
+          # TODO: Construction graph
+          behaviors:
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                SheetSteel1:
+                  min: 3
+                  max: 5
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 80
+    - type: Gun
+      fireRate: 1
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot:
+        path: /Audio/_Lua/Weapons/Guns/Gunshots/laser_shot.ogg
+        params:
+          volume: -2
+    - type: HitscanBatteryAmmoProvider
+      proto: VioletLaser
+      fireCost: 200
+    - type: Battery
+      maxCharge: 2000
+      startingCharge: 2000
+    - type: HTN
+      rootTask:
+        task: TurretCompound
+      blackboard:
+        RotateSpeed: !type:Single
+          3.141
+        SoundTargetInLOS: !type:SoundPathSpecifier
+          path: /Audio/Effects/double_beep.ogg
+    - type: MouseRotator
+      angleTolerance: 6
+      rotationSpeed: 300
+      simple4DirMode: false
+    - type: NoRotateOnInteract
+    - type: NoRotateOnMove
+    - type: Input
+      context: "human"
+    - type: StaticPrice
+      price: 750
+
+- type: entity
+  parent: WeaponTurretBaseLaser
+  id: WeaponTurretLaserLuaTech
+  name: оборонная турель
+  suffix: LuaTech
+  components:
+  - type: NpcFactionMember
+    factions:
+    - SiliconsLuaTech
+
+- type: entity
+  name: drone spawner
+  id: SpawnMobRogueDronesLuaTech
+  parent: MarkerBase
+  suffix: LuaTech
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - state: ai
+    - sprite: _NF/Mobs/RogueSilicons/drones.rsi
+      state: base
+    - sprite: _NF/Mobs/RogueSilicons/drones.rsi
+      state: decor_department
+      color: "#990000"
+    - sprite: _NF/Mobs/RogueSilicons/drones.rsi
+      state: decor_department_accent
+      color: "#ffff00"
+    - sprite: _NF/Mobs/RogueSilicons/drones.rsi
+      state: base_eyes
+      shader: unshaded
+      color: "#990000"
+  - type: RandomSpawner
+    prototypes:
+    - MobRogueSiliconDroneLethalsLuaTech
+    - MobRogueSiliconDroneScienceLuaTech
+    chance: 1
+    offset: 0.0

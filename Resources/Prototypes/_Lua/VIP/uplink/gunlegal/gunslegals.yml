@@ -1,0 +1,116 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+# - type: entity
+#   name: Vector
+#   parent: BaseWeaponSubMachineGun
+#   id: WeaponSubMachineGunVectorLegal
+#   description: An excellent fully automatic Heavy SMG. Uses .45 magnum ammo.
+#   components:
+#   - type: Sprite
+#     sprite: _Lua/Guns/vectorlegal.rsi
+#     layers:
+#       - state: base
+#         map: ["enum.GunVisualLayers.Base"]
+#       - state: mag-0
+#         map: ["enum.GunVisualLayers.Mag"]
+#   - type: Clothing
+#     sprite: _Lua/Guns/vectorlegal.rsi
+#   - type: Gun
+#     fireRate: 1
+#     selectedMode: FullAuto
+#     soundGunshot:
+#       path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
+#     availableModes:
+#     - FullAuto
+#   - type: ItemSlots
+#     slots:
+#       gun_magazine:
+#         name: Magazine
+#         startingItem: MagazineMagnumSubMachineGun
+#         insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+#         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+#         priority: 2
+#         whitelist:
+#           tags:
+#             - MagazineMagnumSubMachineGun
+#       gun_chamber:
+#         name: Chamber
+#         startingItem: CartridgeMagnum
+#         priority: 1
+#         whitelist:
+#           tags:
+#             - CartridgeMagnum
+#   - type: MagazineVisuals
+#     magState: mag
+#     steps: 1
+#     zeroVisible: true
+#   - type: Appearance
+
+# - type: entity
+#   name: double-bladed energy sword legal
+#   parent: EnergySword
+#   id: EnergySwordDoubleLegal
+#   description: Legal
+#   components:
+#   - type: EnergySwordLegal
+#   - type: ItemToggle
+#     soundActivate:
+#       path: /Audio/Weapons/ebladeon.ogg
+#       params:
+#         volume: 3
+#     soundDeactivate:
+#       path: /Audio/Weapons/ebladeoff.ogg
+#       params:
+#         volume: 3
+#   - type: ItemToggleMeleeWeapon
+#     activatedSoundOnSwing:
+#       path: /Audio/Weapons/eblademiss.ogg
+#       params:
+#         volume: 3
+#         variation: 0.250
+#     activatedDamage:
+#         types:
+#             Slash: 12
+#             Heat: 12
+#             Structural: 15
+#   # - type: ItemToggleActiveSound
+#   #   activeSound:
+#   #     path: /Audio/Weapons/ebladehum.ogg
+#   #     params:
+#   #       volume: 3
+#   - type: Wieldable
+#   - type: MeleeWeapon
+#     wideAnimationRotation: -135
+#     attackRate: 1.5
+#     angle: 100
+#     damage:
+#       types:
+#         Blunt: 4.5
+#   - type: Sprite
+#     sprite: _Lua/Guns/e_sword_double_legal.rsi
+#     layers:
+#       - state: e_sword_double
+#       - state: e_sword_double_blade
+#         color: "#FFAA00"
+#         visible: true
+#         shader: unshaded
+#         map: [ "blade" ]
+#   - type: Item
+#     size: Small
+#     sprite: _Lua/Guns/e_sword_double-inhands_legal.rsi
+#   - type: Reflect
+#     reflectProb: 0.1
+#     spread: 75
+#   - type: UseDelay
+#     delay: 1
+#   - type: ToggleableLightVisuals
+#     spriteLayer: blade
+#     inhandVisuals:
+#       left:
+#       - state: inhand-left-blade
+#         shader: unshaded
+#       right:
+#       - state: inhand-right-blade
+#         shader: unshaded

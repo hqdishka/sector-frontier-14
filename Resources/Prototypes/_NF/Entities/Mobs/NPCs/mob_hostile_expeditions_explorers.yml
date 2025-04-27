@@ -229,13 +229,7 @@
     layers:
     # Helmet
     - sprite: Clothing/Head/Hardsuits/spatiohelm.rsi
-      state: equipped-head
-    - sprite: Clothing/Head/Hardsuits/spatiohelm.rsi
-      state: equipped-head-unshaded
-      shader: unshaded
-    - sprite: Clothing/Head/Hardsuits/spatiohelm.rsi
-      state: equipped-head-light
-      shader: unshaded
+      state: on-equipped-HELMET
       color: "#47f8ff"
     # Suit
     - sprite: Clothing/OuterClothing/Hardsuits/spatio.rsi
@@ -279,13 +273,7 @@
     layers:
     # Helmet
     - sprite: Clothing/Head/Hardsuits/spatiohelm.rsi
-      state: equipped-head
-    - sprite: Clothing/Head/Hardsuits/spatiohelm.rsi
-      state: equipped-head-unshaded
-      shader: unshaded
-    - sprite: Clothing/Head/Hardsuits/spatiohelm.rsi
-      state: equipped-head-light
-      shader: unshaded
+      state: on-equipped-HELMET
       color: "#47f8ff"
     # Suit
     - sprite: Clothing/OuterClothing/Hardsuits/spatio.rsi
@@ -336,8 +324,7 @@
     - sprite: Clothing/Head/Hardsuits/salvage.rsi
       state: on-equipped-HELMET
     - sprite: Clothing/Head/Hardsuits/spatiohelm.rsi
-      state: equipped-head-light
-      shader: unshaded
+      state: on-equipped-HELMET
       color: "#47f8ff"
     # Suit
     - sprite: Clothing/OuterClothing/Hardsuits/salvage.rsi
@@ -392,8 +379,7 @@
     - sprite: Clothing/Head/Hardsuits/luxury.rsi
       state: off-equipped-HELMET
     - sprite: Clothing/Head/Hardsuits/spatiohelm.rsi
-      state: equipped-head-light
-      shader: unshaded
+      state: on-equipped-HELMET
       color: "#47f8ff"
     # Suit
     - sprite: Clothing/OuterClothing/Hardsuits/luxury.rsi
@@ -536,8 +522,7 @@
     - sprite: _NF/Clothing/Head/Hardsuits/maxim_prototype.rsi
       state: off-equipped-HELMET
     - sprite: Clothing/Head/Hardsuits/spatiohelm.rsi
-      state: equipped-head-light
-      shader: unshaded
+      state: on-equipped-HELMET
       color: "#47f8ff"
     # Suit
     - sprite: _NF/Clothing/OuterClothing/Hardsuits/maxim_prototype.rsi

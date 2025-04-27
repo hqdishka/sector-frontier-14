@@ -1,0 +1,14 @@
+- type: entity
+  name: мина
+  parent: BaseLandMine
+  id: LandMineXeno
+  suffix: Ксено, Вирус
+  components:
+  - type: SmokeOnTrigger
+    duration: 5
+    spreadAmount: 20
+    solution:
+      reagents:
+      - ReagentId: FluorosulfuricAcid
+        Quantity: 20
+  - type: DeleteOnTrigger

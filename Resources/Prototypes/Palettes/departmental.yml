@@ -1,4 +1,4 @@
-﻿- type: palette
+- type: palette
   id: Departmental
   name: Departmental
   colors:
@@ -7,6 +7,7 @@
     service: "#9FED5896"
     engineering: "#EFB34196"
     security: "#DE3A3A96"
+    securityNew: "#2B465296"
     bar: "#79150096"
     science: "#D381C996"
     cargo: "#A4610696"

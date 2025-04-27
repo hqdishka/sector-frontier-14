@@ -17,6 +17,17 @@
   - Pirate
   engine:
   - Plasma
+  addComponents:
+    - type: AutoDelete
+      distanceToCheck: 40
+      delayToDelete: 2400
+      delayToCheck: 60
+      isHumanoidNear: True
+    - type: IFF
+      color: "#ffffff"
+    - type: PirateFtl
+    - type: PirateMercFtl
+    - type: NanotrasenFtl
 
 - type: gameMap
   id: Barnacle
@@ -33,5 +44,5 @@
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: StationJobs
-          availableJobs: 
+          availableJobs:
             Pirate: [ 0, 0 ]

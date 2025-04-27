@@ -48,8 +48,8 @@
         orGroup: Guns
       - id: WeaponRifleAk
         orGroup: Guns
-      - id: WeaponRifleM90GrenadeLauncher
-        orGroup: Guns
+      # - id: WeaponRifleM90GrenadeLauncher
+      #   orGroup: Guns
       - id: WeaponRifleLecter
         orGroup: Guns
       - id: WeaponShotgunBulldog
@@ -84,12 +84,12 @@
         orGroup: Guns
       - id: WeaponPistolFlintlock
         orGroup: Guns
-      - id: WeaponLauncherChinaLake
-        orGroup: Guns
-      - id: WeaponLauncherRocket
-        orGroup: Guns
-      - id: WeaponLauncherPirateCannon
-        orGroup: Guns
+      # - id: WeaponLauncherChinaLake
+      #   orGroup: Guns
+      # - id: WeaponLauncherRocket
+      #   orGroup: Guns
+      # - id: WeaponLauncherPirateCannon
+      #   orGroup: Guns
       - id: WeaponTetherGun
         orGroup: Guns
       - id: WeaponForceGun

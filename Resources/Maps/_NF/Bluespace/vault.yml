@@ -82,7 +82,7 @@ entities:
         version: 2
         nodes:
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: Bot
           decals:
             0: -1,-5
@@ -341,14 +341,14 @@ entities:
             133: 2,13
             134: 2,14
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteLineW
           decals:
             137: 2,-15
             138: 2,-14
         - node:
             angle: -1.5707963267948966 rad
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: Caution
           decals:
             72: 2,-3
@@ -356,7 +356,7 @@ entities:
             74: 2,1
             75: 2,2
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: Caution
           decals:
             60: -1,16
@@ -385,7 +385,7 @@ entities:
             103: 9,14
         - node:
             angle: 1.5707963267948966 rad
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: Caution
           decals:
             76: -3,-3
@@ -393,7 +393,7 @@ entities:
             78: -3,1
             79: -3,2
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: DiagonalCheckerAOverlay
           decals:
             141: -1,-15
@@ -665,7 +665,7 @@ entities:
             455: 4,1
             456: 4,2
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: StandClear
           decals:
             52: 0,4

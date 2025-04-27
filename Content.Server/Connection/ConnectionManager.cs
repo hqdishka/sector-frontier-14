@@ -10,6 +10,7 @@ using Content.Server.GameTicking;
 using Content.Server.Preferences.Managers;
 using Content.Shared.CCVar;
 using Content.Shared._NF.CCVar; // Frontier
+using Content.Shared.Corvax.CCCVars;
 using Content.Shared.GameTicking;
 using Content.Shared.Players.PlayTimeTracking;
 using Robust.Server.Player;
@@ -31,6 +32,8 @@ namespace Content.Server.Connection
     {
         void Initialize();
         void PostInit();
+
+        Task<bool> HavePrivilegedJoin(NetUserId userId); // Corvax-Queue
 
         /// <summary>
         /// Temporarily allow a user to bypass regular connection requirements.
@@ -243,12 +246,17 @@ namespace Content.Server.Connection
             }
 
             var adminData = await _db.GetAdminDataForAsync(e.UserId);
+
+            // Corvax-Start: Allow privileged players bypass bunker
+            var isPrivileged = await HavePrivilegedJoin(e.UserId);
             // New Frontiers - Session Respector - Checks that a player was connected before applying panic bunker/baby jail/no whitelist on low pop checks
             // This code is licensed under AGPLv3. See AGPLv3.txt
             var wasInGame = EntitySystem.TryGet<GameTicker>(out var ticker) &&
-                            ticker.PlayerGameStatuses.ContainsKey(userId); // Frontier: remove status.JoinedGame check, TryGetValue<ContainsKey
+                            ticker.PlayerGameStatuses.TryGetValue(userId, out var status) &&
+                            status == PlayerGameStatus.JoinedGame; // Frontier: remove status.JoinedGame check, TryGetValue<ContainsKey
 
-            if (_cfg.GetCVar(CCVars.PanicBunkerEnabled) && adminData == null && !wasInGame) // Frontier: allow users who joined before panic bunker was enforced to reconnect
+            if (_cfg.GetCVar(CCVars.PanicBunkerEnabled) && adminData == null && !wasInGame && !isPrivileged) // Frontier: allow users who joined before panic bunker was enforced to reconnect
+            // Corvax-End
             {
                 var showReason = _cfg.GetCVar(CCVars.PanicBunkerShowReason);
                 var customReason = _cfg.GetCVar(CCVars.PanicBunkerCustomReason);
@@ -309,6 +317,7 @@ namespace Content.Server.Connection
 
             // Frontier: wasInGame previously calculated here.
             var adminBypass = _cfg.GetCVar(CCVars.AdminBypassMaxPlayers) && adminData != null;
+            var isQueueEnabled = _cfg.GetCVar(CCCVars.QueueEnabled);
             var softPlayerCount = _plyMgr.PlayerCount;
 
             if (!_cfg.GetCVar(CCVars.AdminsCountForMaxPlayers))
@@ -316,7 +325,8 @@ namespace Content.Server.Connection
                 softPlayerCount -= _adminManager.ActiveAdmins.Count();
             }
 
-            if ((softPlayerCount >= _cfg.GetCVar(CCVars.SoftMaxPlayers) && !adminBypass) && !wasInGame)
+            if (softPlayerCount >= _cfg.GetCVar(CCVars.SoftMaxPlayers) && !adminBypass && !isPrivileged && !isQueueEnabled && !wasInGame)
+            // Corvax-Queue-End
             {
                 return (ConnectionDenyReason.Full, Loc.GetString("soft-player-cap-full"), null);
             }
@@ -401,5 +411,22 @@ namespace Content.Server.Connection
             await _db.AssignUserIdAsync(name, assigned);
             return assigned;
         }
+
+        // Corvax-Queue-Start
+        public async Task<bool> HavePrivilegedJoin(NetUserId userId)
+        {
+            var isAdmin = await _db.GetAdminDataForAsync(userId) != null;
+            //var havePriorityJoin = _sponsorsManager?.TryGetInfo(userId, out var sponsor) == true &&
+            //    sponsor.HavePriorityJoin &&
+            //    sponsor.ExpireDate > DateTime.Now;
+            //MAKE WHITELISTED PLS
+            var wasInGame = EntitySystem.TryGet<GameTicker>(out var ticker) &&
+                ticker.PlayerGameStatuses.TryGetValue(userId, out var status) &&
+                status == PlayerGameStatus.JoinedGame;
+
+            //return isAdmin || havePriorityJoin || wasInGame;
+            return isAdmin || wasInGame;
+        }
+        // Corvax-Queue-End
     }
 }

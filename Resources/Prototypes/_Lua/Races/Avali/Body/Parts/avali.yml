@@ -1,0 +1,190 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  id: PartAvali
+  parent: BaseItem
+  name: туловище
+  abstract: true
+  components:
+  - type: Damageable
+    damageContainer: Biological
+  - type: BodyPart
+  - type: ContainerContainer
+    containers:
+      bodypart: !type:Container
+        ents: []
+  - type: StaticPrice #DynamicPrice
+    price: 100
+  - type: Tag
+    tags:
+      - Trash
+
+- type: entity
+  id: TorsoAvali
+  name: торс
+  parent: PartAvali
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Lua/Races/Avali/parts.rsi
+    state: "torso_m"
+  - type: Icon
+    sprite: _Lua/Races/Avali/parts.rsi
+    state: "torso_m"
+  - type: BodyPart
+    partType: Torso
+
+- type: entity
+  id: HeadAvali
+  name: голова
+  parent: PartAvali
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Lua/Races/Avali/parts.rsi
+    state: "head_m"
+  - type: Icon
+    sprite: _Lua/Races/Avali/parts.rsi
+    state: "head_m"
+  - type: BodyPart
+    partType: Head
+    vital: true
+  - type: Input
+    context: "ghost"
+  - type: InputMover
+  - type: GhostOnMove
+  - type: Tag
+    tags:
+      - Head
+
+- type: entity
+  id: LeftArmAvali
+  name: левая рука
+  parent: PartAvali
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Lua/Races/Avali/parts.rsi
+    state: "l_arm"
+  - type: Icon
+    sprite: _Lua/Races/Avali/parts.rsi
+    state: "l_arm"
+  - type: BodyPart
+    partType: Arm
+    symmetry: Left
+
+- type: entity
+  id: RightArmAvali
+  name: правая рука
+  parent: PartAvali
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Lua/Races/Avali/parts.rsi
+    state: "r_arm"
+  - type: Icon
+    sprite: _Lua/Races/Avali/parts.rsi
+    state: "r_arm"
+  - type: BodyPart
+    partType: Arm
+    symmetry: Right
+
+- type: entity
+  id: LeftHandAvali
+  name: левая ладонь
+  parent: PartAvali
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Lua/Races/Avali/parts.rsi
+    state: "l_hand"
+  - type: Icon
+    sprite: _Lua/Races/Avali/parts.rsi
+    state: "l_hand"
+  - type: BodyPart
+    partType: Hand
+    symmetry: Left
+
+- type: entity
+  id: RightHandAvali
+  name: правая ладонь
+  parent: PartHarpy
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Lua/Races/Avali/parts.rsi
+    state: "r_hand"
+  - type: Icon
+    sprite: _Lua/Races/Avali/parts.rsi
+    state: "r_hand"
+  - type: BodyPart
+    partType: Hand
+    symmetry: Right
+
+- type: entity
+  id: LeftLegAvali
+  name: левая нога
+  parent: PartAvali
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Lua/Races/Avali/parts.rsi
+    state: "l_leg"
+  - type: Icon
+    sprite: _Lua/Races/Avali/parts.rsi
+    state: "l_leg"
+  - type: BodyPart
+    partType: Leg
+    symmetry: Left
+  - type: MovementBodyPart
+
+- type: entity
+  id: RightLegAvali
+  name: правая нога
+  parent: PartAvali
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Lua/Races/Avali/parts.rsi
+    state: "r_leg"
+  - type: Icon
+    sprite: _Lua/Races/Avali/parts.rsi
+    state: "r_leg"
+  - type: BodyPart
+    partType: Leg
+    symmetry: Right
+  - type: MovementBodyPart
+
+- type: entity
+  id: LeftFootAvali
+  name: левая пятка
+  parent: PartAvali
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Lua/Races/Avali/parts.rsi
+    state: "l_foot"
+  - type: Icon
+    sprite: _Lua/Races/Avali/parts.rsi
+    state: "l_foot"
+  - type: BodyPart
+    partType: Foot
+    symmetry: Left
+
+- type: entity
+  id: RightFootAvali
+  name: правая пятка
+  parent: PartAvali
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Lua/Races/Avali/parts.rsi
+    state: "r_foot"
+  - type: Icon
+    sprite: _Lua/Races/Avali/parts.rsi
+    state: "r_foot"
+  - type: BodyPart
+    partType: Foot
+    symmetry: Right

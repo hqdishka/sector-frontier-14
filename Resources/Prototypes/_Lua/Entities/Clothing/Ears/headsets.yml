@@ -1,0 +1,41 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetKSO
+  name: гарнитура КСО
+  description: Гарнитура, используемая Корпусом Специальных Операций.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCentCom
+      - EncryptionKeyStationMaster
+      - EncryptionKeyKSO
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+  - type: Headset
+    color: "#00fa9a"
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetAltOutpostTypan
+  name: полноразмерная кроваво - красная гарнитура
+  description: Модифицированный модульный интерком синдиката.
+  components:
+  - type: Headset
+    color: "#8f4a4b"
+  - type: EncryptionKeyHolder
+    keySlots: 5
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/syndicate.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/syndicate.rsi
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyOutpostTypan

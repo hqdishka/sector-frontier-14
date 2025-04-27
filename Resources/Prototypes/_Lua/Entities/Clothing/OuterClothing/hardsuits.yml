@@ -1,0 +1,204 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: ClothingOuterHardsuitSyndieCommander
+  id: ClothingOuterHardsuitFSFCommanderBravo
+  name: скафандр командира рейнджеров
+  suffix: ФСФ, Браво
+  description: A protective hardsuit worn by the leader of an emergency response team.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits/fsf_bravo_commander_hardsuit.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits/fsf_bravo_commander_hardsuit.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: Reflect
+    reflectProb: 0.2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.45
+        Slash: 0.45
+        Piercing: 0.35
+        Heat: 0.55
+        Radiation: 0.30
+        Caustic: 0.45
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitFSFCommanderBravo
+  # - type: HardsuitIdentification
+  #   emaggable: false
+  - type: Speech
+  - type: TTS
+    voice: Adjutant
+
+- type: entity
+  parent: ClothingOuterHardsuitSyndie
+  id: ClothingOuterHardsuitFSFSpecialistBravo
+  name: средний скафандр рейнджера
+  suffix: ФСФ, Браво
+  description: A protective hardsuit worn by the security officers of an emergency response team.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits/fsf_bravo_specialist_hardsuit.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits/fsf_bravo_specialist_hardsuit.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitFSFSpecialistBravo
+  - type: ExplosionResistance
+    damageCoefficient: 0.4
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Radiation: 0.5
+        Caustic: 0.5
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+  # - type: HardsuitIdentification
+  #   emaggable: false
+  - type: Speech
+  - type: TTS
+    voice: Adjutant
+
+
+######## CHARLIE
+
+
+- type: entity
+  parent: ClothingOuterHardsuitSyndieCommander
+  id: ClothingOuterHardsuitFSFCommanderCharlie
+  name: скафандр командира рейнджеров
+  suffix: ФСФ, Чарли
+  description: A protective hardsuit worn by the leader of an emergency response team.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits/fsf_charlie_commander_hardsuit.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits/fsf_charlie_commander_hardsuit.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.4
+  - type: Reflect
+    reflectProb: 0.3
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.25
+        Heat: 0.45
+        Radiation: 0.20
+        Caustic: 0.35
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitFSFCommanderCharlie
+  # - type: HardsuitIdentification
+  #   emaggable: false
+  - type: Speech
+  - type: TTS
+    voice: Adjutant
+
+- type: entity
+  parent: ClothingOuterHardsuitSyndie
+  id: ClothingOuterHardsuitFSFSpecialistCharlie
+  name: средний скафандр рейнджера
+  suffix: ФСФ, Чарли
+  description: A protective hardsuit worn by the security officers of an emergency response team.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits/fsf_charlie_specialist_hardsuit.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits/fsf_charlie_specialist_hardsuit.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitFSFSpecialistCharlie
+  - type: ExplosionResistance
+    damageCoefficient: 0.3
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.4
+        Slash: 0.4
+        Piercing: 0.4
+        Heat: 0.4
+        Radiation: 0.4
+        Caustic: 0.4
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+  # - type: HardsuitIdentification
+  #   emaggable: false
+  - type: Speech
+  - type: TTS
+    voice: Adjutant
+
+
+###### ALT
+
+- type: entity
+  parent: ClothingOuterHardsuitSyndieCommander
+  id: ClothingOuterHardsuitFSFCommanderAlt
+  name: скафандр командира рейнджеров
+  suffix: СТАРЫЙ, ФСФ, ФРОНТИР
+  description: A protective hardsuit worn by the leader of an emergency response team.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits_Alt/fsf_commander_hardsuit.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits_Alt/fsf_commander_hardsuit.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitFSFCommanderAlt
+  # - type: HardsuitIdentification
+  - type: Speech
+  - type: TTS
+    voice: Adjutant
+
+- type: entity
+  parent: ClothingOuterHardsuitSyndie
+  id: ClothingOuterHardsuitFSFMediumAlt
+  name: средний скафандр рейнджера
+  suffix: СТАРЫЙ, ФСФ, ФРОНТИР
+  description: A protective hardsuit worn by the security officers of an emergency response team.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits_Alt/fsf_medium_hardsuit.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits_Alt/fsf_medium_hardsuit.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitFSFMediumAlt
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+  # - type: HardsuitIdentification
+  - type: Speech
+  - type: TTS
+    voice: Adjutant
+
+- type: entity
+  parent: ClothingOuterHardsuitSyndie
+  id: ClothingOuterHardsuitFSFLightAlt
+  name: лёгкий скафандр рейнджера
+  suffix: СТАРЫЙ, ФСФ, ФРОНТИР
+  description: A protective hardsuit worn by the security officers of an emergency response team.
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits_Alt/fsf_light_hardsuit.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits_Alt/fsf_light_hardsuit.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitFSFLightAlt
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+  # - type: HardsuitIdentification
+  - type: Speech
+  - type: TTS
+    voice: Adjutant

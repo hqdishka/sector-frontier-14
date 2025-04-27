@@ -1,0 +1,53 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  id: StandardAsteroidSector
+  parent:
+  - BaseStation
+  - BaseStationSectorNews
+  - BaseStationRecords
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Transform
+
+- type: entity
+  id: StandardShipVsShipSector
+  parent:
+  - BaseStation
+  - BaseStationJobsSpawning
+  - BaseStationRecords
+  - BaseStationSectorNews
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Transform
+  - type: ShipVsShipRed
+    enabled: true
+  - type: ShipVsShipBlue
+    enabled: true
+
+- type: entity
+  id: StandardShipVsShipRedSector
+  parent:
+  - BaseStation
+  - BaseStationJobsSpawning
+  - BaseStationRecords
+  - BaseStationSectorNews
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Transform
+
+- type: entity
+  id: StandardShipVsShipBlueSector
+  parent:
+  - BaseStation
+  - BaseStationJobsSpawning
+  - BaseStationRecords
+  - BaseStationSectorNews
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Transform
+
+
+

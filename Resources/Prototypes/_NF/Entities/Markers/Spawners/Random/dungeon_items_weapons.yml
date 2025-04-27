@@ -187,93 +187,93 @@
     - SpawnDungeonLootExplosivesT3
     rareChance: 0.1
 
-# T3: rare
-- type: entity
-  name: random weapon
-  id: SpawnDungeonLootMeleeT3
-  parent: MarkerBasePlaceFree
-  suffix: "Dungeon, Melee, T3"
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Sprite
-    layers:
-    - state: green
-      scale: 0.7, 0.7
-    - sprite: Objects/Weapons/Melee/katana.rsi
-      state: icon
-    - sprite: Effects/crayondecals.rsi
-      state: 3
-      color: red
-  - type: RandomSpawner
-    prototypes:
-    - PlasteelArmingSword
-    - Cutlass
-    - Claymore
-    - Truncheon
-    - WeaponCaseShortEnergyDaggerExpedition
-    chance: 1.0
-    offset: 0.0
-    rarePrototypes:
-    - SpawnDungeonLootMeleeT4
-    rareChance: 0.15
+# # T3: rare
+# - type: entity
+#   name: random weapon
+#   id: SpawnDungeonLootMeleeT3
+#   parent: MarkerBasePlaceFree
+#   suffix: "Dungeon, Melee, T3"
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: Sprite
+#     layers:
+#     - state: green
+#       scale: 0.7, 0.7
+#     - sprite: Objects/Weapons/Melee/katana.rsi
+#       state: icon
+#     - sprite: Effects/crayondecals.rsi
+#       state: 3
+#       color: red
+#   - type: RandomSpawner
+#     prototypes:
+#     - PlasteelArmingSword
+#     - Cutlass
+#     - Claymore
+#     - Truncheon
+#     - WeaponCaseShortEnergyDaggerExpedition
+#     chance: 1.0
+#     offset: 0.0
+#     rarePrototypes:
+#     - SpawnDungeonLootMeleeT4
+#     rareChance: 0.15
 
-- type: entity
-  name: random weapon
-  id: SpawnDungeonLootGunT3
-  parent: MarkerBasePlaceFree
-  suffix: "Dungeon, Gun, T3"
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Sprite
-    layers:
-    - state: green
-      scale: 0.7, 0.7
-    - sprite: Objects/Weapons/Guns/Pistols/mk58.rsi
-      state: icon
-    - sprite: Effects/crayondecals.rsi
-      state: 3
-      color: red
-  - type: RandomSpawner
-    prototypes:
-    - WeaponCaseShortMateba
-    - WeaponCaseShortCobra
-    - WeaponCaseLongWT550Expedition
-    - WeaponCaseLongDrozdExpedition
-    - WeaponCaseLongLecterExpedition
-    - WeaponCaseLongLaserCarbineExpedition
-    - WeaponCaseShortSvalinnExpedition
-    - WeaponCaseShortAdvancedLaserExpedition
-    #- WeaponCaseLongMusketExpedition
-    chance: 1.0
-    offset: 0.0
-    rarePrototypes:
-    - SpawnDungeonLootGunT4
-    rareChance: 0.15
+# - type: entity
+#   name: random weapon
+#   id: SpawnDungeonLootGunT3
+#   parent: MarkerBasePlaceFree
+#   suffix: "Dungeon, Gun, T3"
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: Sprite
+#     layers:
+#     - state: green
+#       scale: 0.7, 0.7
+#     - sprite: Objects/Weapons/Guns/Pistols/mk58.rsi
+#       state: icon
+#     - sprite: Effects/crayondecals.rsi
+#       state: 3
+#       color: red
+#   - type: RandomSpawner
+#     prototypes:
+#     - WeaponCaseShortMateba
+#     - WeaponCaseShortCobra
+#     - WeaponCaseLongWT550Expedition
+#     - WeaponCaseLongDrozdExpedition
+#     - WeaponCaseLongLecterExpedition
+#     - WeaponCaseLongLaserCarbineExpedition
+#     - WeaponCaseShortSvalinnExpedition
+#     - WeaponCaseShortAdvancedLaserExpedition
+#     #- WeaponCaseLongMusketExpedition
+#     chance: 1.0
+#     offset: 0.0
+#     rarePrototypes:
+#     - SpawnDungeonLootGunT4
+#     rareChance: 0.15
 
-- type: entity
-  name: random weapon
-  id: SpawnDungeonLootExplosivesT3
-  parent: MarkerBasePlaceFree
-  suffix: "Dungeon, Explosives, T3"
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Sprite
-    layers:
-    - state: green
-      scale: 0.7, 0.7
-    - sprite: Objects/Weapons/Bombs/seismic.rsi
-      state: icon
-    - sprite: Effects/crayondecals.rsi
-      state: 3
-      color: red
-  - type: RandomSpawner
-    prototypes:
-    - WeaponCaseShortSeismicCharge
-    chance: 0.5
-    offset: 0.0
-    rarePrototypes:
-    - SpawnDungeonLootExplosivesT4
-    rareChance: 0.1
+# - type: entity
+#   name: random weapon
+#   id: SpawnDungeonLootExplosivesT3
+#   parent: MarkerBasePlaceFree
+#   suffix: "Dungeon, Explosives, T3"
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: Sprite
+#     layers:
+#     - state: green
+#       scale: 0.7, 0.7
+#     - sprite: Objects/Weapons/Bombs/seismic.rsi
+#       state: icon
+#     - sprite: Effects/crayondecals.rsi
+#       state: 3
+#       color: red
+#   - type: RandomSpawner
+#     prototypes:
+#     - WeaponCaseShortSeismicCharge
+#     chance: 0.5
+#     offset: 0.0
+#     rarePrototypes:
+#     - SpawnDungeonLootExplosivesT4
+#     rareChance: 0.1
 
 # T4: extremely rare
 - type: entity
@@ -325,7 +325,7 @@
     prototypes:
     - WeaponCaseShortN1984Expedition
     - WeaponCaseShortAntiqueLaserExpedition
-    - WeaponCaseLongM90Expedition
+    # - WeaponCaseLongM90Expedition
     - WeaponCaseLongC20r
     - WeaponCaseLongAk
     - WeaponCaseLongEnforcerExpedition
@@ -405,8 +405,8 @@
     prototypes:
     - WeaponCaseLongBulldog
     - WeaponCaseLongAtreidesExpedition
-    - WeaponCaseLongLauncherRocketExpedition
-    - WeaponCaseLongLauncherChinaLake
+    # - WeaponCaseLongLauncherRocketExpedition
+    # - WeaponCaseLongLauncherChinaLake
     - WeaponCaseLongLightMachineGunL6
     - WeaponCaseHeavyAsmgtExpeditions
     - WeaponCaseLongXrayCannonExpedition

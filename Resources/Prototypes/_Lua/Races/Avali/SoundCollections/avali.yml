@@ -1,0 +1,17 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: soundCollection
+  id: AvaliGrowls
+  files:
+    - /Audio/_Lua/Voice/Vulpkanin/male_wolf_growl.ogg
+
+- type: soundCollection
+  id: AvaliScreams
+  files:
+  - /Audio/_Lua/Races/Avali/Scream/fox3.ogg
+  - /Audio/_Lua/Races/Avali/Scream/fox4.ogg
+  - /Audio/_Lua/Races/Avali/Scream/fox5.ogg
+  - /Audio/_Lua/Races/Avali/Scream/fox6.ogg
+  - /Audio/_Lua/Races/Avali/Scream/fox7.ogg

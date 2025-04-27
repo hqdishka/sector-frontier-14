@@ -1,0 +1,128 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  name: Эллен Луиза
+  parent: SimpleMobBase
+  id: ChambermaidXenoMob
+  description: Ксеноморф горничная. Ой... Кажется у вас тут грязно, давайте уберусь?
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: /Textures/_Lua/Mobs/Pets/chambermaidxeno.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: chambermaidxeno
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.25
+        density: 500
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: InputMover
+  - type: MobMover
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Dead
+  - type: CombatMode
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      75: Dead
+  - type: Tool
+    speedModifier: 1.5
+    qualities:
+      - Prying
+  - type: Prying
+    pryPowered: !type:Bool
+        true
+    force: !type:Bool
+      true
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+    - VimPilot
+    - FootstepSound
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.5
+    baseSprintSpeed : 4.5
+  - type: Puller
+    needsHands: false
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatXeno
+      amount: 2
+    - id: ClothingUniformJumpskirtJanichambermaidmini
+      amount: 1
+  - type: Grammar
+    attributes:
+      proper: true
+      gender: female
+  - type: HTN
+    rootTask:
+      task: IdleCompound
+  - type: NoSlip
+  - type: TTS
+    voice: Magess
+  - type: ReplacementAccent
+    accent: xeno
+  - type: TypingIndicator
+    proto: alien
+  - type: Bloodstream
+    bloodReagent: FluorosulfuricAcid
+  - type: MeleeWeapon
+    altDisarm: false
+    angle: 0
+    soundHit:
+     collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      groups:
+        Brute: 5
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: chambermaidxeno
+      Critical:
+        Base: chambermaidxeno_dead
+      Dead:
+        Base: chambermaidxeno_dead
+  - type: Speech
+    speechVerb: LargeMob
+  - type: InteractionPopup
+    successChance: 0.8
+    interactDelay: 1.5
+    interactSuccessString: petting-success-soft-floofy
+    interactFailureString: petting-failure-generic
+    interactSuccessSpawn: EffectHearts
+    interactSuccessSound:
+      path: /Audio/_Lua/Animals/xeno_chambermaidmaid_meow.ogg
+      params:
+        volume: 20
+  - type: Hands
+  - type: Perishable
+    molsPerSecondPerUnitMass: 0.0005
+
+- type: entity
+  name: спавнер ксеноморфа горничной
+  id: SpawnMobXenoChambermaid
+  parent: MarkerBase
+  components:
+  - type: ConditionalSpawner
+    prototypes:
+      - ChambermaidXenoMob
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai

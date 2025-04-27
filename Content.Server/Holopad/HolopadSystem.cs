@@ -38,6 +38,7 @@ public sealed class HolopadSystem : SharedHolopadSystem
     [Dependency] private readonly PopupSystem _popupSystem = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly PvsOverrideSystem _pvs = default!;
+    [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly StationRenameHolopadsSystem _renameHolopads = default!; // Frontier
 
     private float _updateTimer = 1.0f;
@@ -74,7 +75,7 @@ public sealed class HolopadSystem : SharedHolopadSystem
         // Misc events
         SubscribeLocalEvent<HolopadUserComponent, EmoteEvent>(OnEmote);
         SubscribeLocalEvent<HolopadUserComponent, JumpToCoreEvent>(OnJumpToCore);
-        SubscribeLocalEvent<HolopadComponent, GetVerbsEvent<AlternativeVerb>>(AddToggleProjectorVerb);
+        SubscribeLocalEvent<HolopadComponent, GetVerbsEvent<AlternativeVerb>>(AddVerbs);
         SubscribeLocalEvent<HolopadComponent, EntRemovedFromContainerMessage>(OnAiRemove);
 
         SubscribeLocalEvent<HolopadComponent, MapInitEvent>(OnHolopadMapInit); // Frontier
@@ -284,6 +285,15 @@ public sealed class HolopadSystem : SharedHolopadSystem
 
     private void OnTelephoneMessageSent(Entity<HolopadComponent> holopad, ref TelephoneMessageSentEvent args)
     {
+        if (holopad.Comp.Portable && !holopad.Comp.Deployed)
+        {
+            if (TryComp<SpeechComponent>(holopad, out var holopadSpeech) &&
+                TryComp<TelephoneComponent>(holopad, out var telephone))
+            {
+                _telephoneSystem.SetSpeakerForTelephone((holopad, telephone), (holopad, holopadSpeech));
+            }
+        }
+
         LinkHolopadToUser(holopad, args.MessageSource);
     }
 
@@ -310,7 +320,7 @@ public sealed class HolopadSystem : SharedHolopadSystem
                 if (receiverHolopad.Comp.Hologram == null)
                     continue;
 
-                _appearanceSystem.SetData(receiverHolopad.Comp.Hologram.Value.Owner, TypingIndicatorVisuals.IsTyping, ev.IsTyping);
+                _appearanceSystem.SetData(receiverHolopad.Comp.Hologram.Value.Owner, TypingIndicatorVisuals.State, ev.State); // Corvax-TypingIndicator
             }
         }
     }
@@ -394,12 +404,38 @@ public sealed class HolopadSystem : SharedHolopadSystem
         _telephoneSystem.EndTelephoneCalls((stationAiCore, stationAiCoreTelephone));
     }
 
-    private void AddToggleProjectorVerb(Entity<HolopadComponent> entity, ref GetVerbsEvent<AlternativeVerb> args)
+    private void AddVerbs(Entity<HolopadComponent> entity, ref GetVerbsEvent<AlternativeVerb> args)
+    {
+        AddToggleProjectorVerb(entity, args);
+        AddDeployVerb(entity, args);
+    }
+
+    private void AddDeployVerb(Entity<HolopadComponent> entity, GetVerbsEvent<AlternativeVerb> args)
+    {
+        if (!args.CanAccess || !args.CanInteract || !entity.Comp.Portable)
+            return;
+
+        AlternativeVerb verb = new()
+        {
+            Act = () => ToggleDeployed(entity, args.User),
+            Text = entity.Comp.Deployed
+                ? "������� �������"
+                : "���������� �������",
+            Icon = new SpriteSpecifier.Texture(new("/Textures/Interface/VerbIcons/fold.svg.192dpi.png"))
+        };
+
+        args.Verbs.Add(verb);
+    }
+
+    private void AddToggleProjectorVerb(Entity<HolopadComponent> entity, GetVerbsEvent<AlternativeVerb> args)
     {
         if (!args.CanAccess || !args.CanInteract)
             return;
 
-        if (!this.IsPowered(entity, EntityManager))
+        if (!TryComp<HolopadComponent>(entity, out var holopad))
+            return;
+
+        if ((holopad.Portable && !holopad.Deployed) || (!holopad.Portable && !this.IsPowered(entity, EntityManager)))
             return;
 
         if (!TryComp<TelephoneComponent>(entity, out var entityTelephone) ||
@@ -503,6 +539,9 @@ public sealed class HolopadSystem : SharedHolopadSystem
             entity.Comp.HologramProtoId == null)
             return;
 
+        if (entity.Comp.Portable && !entity.Comp.Deployed)
+            return;
+
         var hologramUid = Spawn(entity.Comp.HologramProtoId, Transform(entity).Coordinates);
 
         // Safeguard - spawned holograms must have this component
@@ -581,7 +620,7 @@ public sealed class HolopadSystem : SharedHolopadSystem
                 continue;
 
             if (user == null)
-                _appearanceSystem.SetData(linkedHolopad.Comp.Hologram.Value.Owner, TypingIndicatorVisuals.IsTyping, false);
+                _appearanceSystem.SetData(linkedHolopad.Comp.Hologram.Value.Owner, TypingIndicatorVisuals.State, false);
 
             linkedHolopad.Comp.Hologram.Value.Comp.LinkedEntity = user;
             Dirty(linkedHolopad.Comp.Hologram.Value);
@@ -756,6 +795,47 @@ public sealed class HolopadSystem : SharedHolopadSystem
 
         if (TryComp<AmbientSoundComponent>(entity, out var ambientSound))
             _ambientSoundSystem.SetAmbience(entity, isEnabled, ambientSound);
+    }
+
+    public void ToggleDeployed(Entity<HolopadComponent> entity, EntityUid user)
+    {
+        if (!entity.Comp.Portable)
+            return;
+
+        if (_container.IsEntityInContainer(entity))
+        {
+            _popupSystem.PopupEntity("������� ������ ���� �� ����!", entity, user);
+            return;
+        }
+
+        if (!TryComp<TelephoneComponent>(entity, out var telephone))
+            return;
+
+        entity.Comp.Deployed = !entity.Comp.Deployed;
+
+        if (entity.Comp.Deployed)
+        {
+            if (_telephoneSystem.IsTelephoneEngaged((entity, telephone)))
+                GenerateHologram(entity);
+
+            _xformSystem.AnchorEntity(entity);
+
+            _popupSystem.PopupEntity("������� ��������. ����� ��������� ��� ������� �������.", entity, user);
+        }
+        else
+        {
+            _xformSystem.Unanchor(entity);
+
+            if (entity.Comp.Hologram != null)
+                DeleteHologram(entity.Comp.Hologram.Value, entity);
+
+            if (TryComp<SpeechComponent>(entity, out var speech))
+                _telephoneSystem.SetSpeakerForTelephone((entity, telephone), (entity, speech));
+
+            _popupSystem.PopupEntity("������� ������.", entity, user);
+        }
+
+        Dirty(entity);
     }
 
     // Frontier

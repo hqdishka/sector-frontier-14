@@ -1,0 +1,9 @@
+- files: ["atmos.png"]
+  license: "CC-BY-3.0"
+  copyright: "Created by HacksLua"
+  source: "next"
+  
+- files: ["atmosalert.png"]
+  license: "CC-BY-3.0"
+  copyright: "Created by HacksLua"
+  source: "next"

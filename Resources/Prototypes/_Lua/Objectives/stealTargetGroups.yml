@@ -1,0 +1,10 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: stealTargetGroup
+  id: MedipenTechFabCircuitboard
+  name: stealTargetGroup-medipen-techfab-circuitboard # медипен техфаб (машинная плата)
+  sprite:
+    sprite: Objects/Misc/module.rsi
+    state: medical

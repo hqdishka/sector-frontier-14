@@ -4,6 +4,7 @@
   parent: BaseCartridgeMagnum
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletMagnumRubber
   - type: Sprite
     layers:

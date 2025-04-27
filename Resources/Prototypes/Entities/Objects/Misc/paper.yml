@@ -111,6 +111,8 @@
   id: PaperArtifactAnalyzer
   description: The readout of a device forgotten to time.
   components:
+  - type: TimedDespawn #lua
+    lifetime: 800
   - type: Sprite
     layers:
     - state: paper_dotmatrix
@@ -167,6 +169,8 @@
   id: PaperCargoInvoice
   description: 'A single unit of bureaucracy.'
   components:
+  - type: TimedDespawn #lua
+    lifetime: 800
   - type: Sprite
     layers:
     - state: paper
@@ -201,6 +205,8 @@
   name: bounty manifest
   description: A paper label designating a crate as containing a bounty. Selling a crate with this label will fulfill the bounty.
   components:
+  - type: TimedDespawn #lua
+    lifetime: 800
   - type: Sprite
     layers:
     - state: paper

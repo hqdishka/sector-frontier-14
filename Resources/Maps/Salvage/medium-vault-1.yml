@@ -169,7 +169,7 @@ entities:
             5: -1,-3
             62: -4,1
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: WarnLineGreyscaleS
           decals:
             66: -1,-1

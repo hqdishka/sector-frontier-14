@@ -1,0 +1,72 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "by HacksLua",
+
+    "size": {
+        "x": 8,
+        "y": 8
+    },
+  "states": [
+    {
+		"name": "BlueIconTeam"
+    },
+    {
+		"name": "BlueIconTeamCaptain"
+    },
+    {
+		"name": "RedIconTeam"
+    },
+    {
+		"name": "RedIconTeamCaptain"
+    },
+    {
+		"name": "BlueIconTeamPilot"
+    },
+    {
+		"name": "BlueIconTeamGunner"
+    },
+    {
+		"name": "RedIconTeamPilot"
+    },
+    {
+		"name": "RedIconTeamGunner"
+    },
+    {
+		"name": "Pirate"
+    },
+    {
+		"name": "Vip"
+    },
+    {
+		"name": "Mercenary"
+    },
+	{
+		"name": "botanist"
+	},
+	{
+		"name": "cargo_technician"
+	},
+	{
+		"name": "chef"
+	},
+	{
+		"name": "atmospheric_technician"
+	},
+	{
+		"name": "medical_doctor"
+	},
+	{
+		"name": "research_director"
+	},
+	{
+		"name": "scientist"
+	},
+	{
+		"name": "researcher"
+	},
+	{
+		"name": "security_officer"
+	}
+  ]
+}

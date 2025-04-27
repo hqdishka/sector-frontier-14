@@ -11,11 +11,11 @@
 - type: pointOfInterest
   id: Nfsd
   parent: BasePOI
-  name: 'NFSD Outpost'
+  name: 'Аванспост ДСФБ'
   minimumDistance: 750
   maximumDistance: 1000
   spawnGroup: Required
-  gridPath: /Maps/_NF/POI/nfsd.yml
+  gridPath: /Maps/_Lua/POI/nfsd.yml
   addComponents:
   - type: IFF
     color: "#ae7d57"
@@ -24,15 +24,15 @@
 
 - type: gameMap
   id: Nfsd
-  mapName: 'NFSD Outpost'
-  mapPath: /Maps/_NF/POI/nfsd.yml
+  mapName: 'Аванспост ДСФБ'
+  mapPath: /Maps/_Lua/POI/nfsd.yml
   minPlayers: 0
   stations:
     Nfsd:
       stationProto: SecurityFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'NFSD Outpost'
+          mapNameTemplate: 'Аванспост ДСФБ'
         - type: ExtraStationInformation
           iconPath: /Textures/_NF/Structures/Decoration/banner.rsi/nfsd-banner.png
           stationSubtext: 'frontier-lobby-nfsd-subtext'

@@ -1,0 +1,37 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: vessel
+  id: Mole
+  name: SD Mole
+  description: Более укреплённый шаттл, в отличии от предшественника Граббера. Обладает
+    импульсными пушками и медицинским отсеком.
+  price: 89000
+  category: Medium
+  group: Security
+  shuttlePath: /Maps/_Lua/Shuttles/SD/Mole.yml
+  addComponents:
+    - type: AutoDelete
+      distanceToCheck: 40
+      delayToDelete: 2400
+      delayToCheck: 60
+      isHumanoidNear: True
+    - type: IFF
+      color: "#009954"
+    - type: NanotrasenFtl
+
+- type: gameMap
+  id: Mole
+  mapName: 'SD Mole'
+  mapPath: /Maps/_Lua/Shuttles/SD/Mole.yml
+  minPlayers: 0
+  stations:
+    Mole:
+      stationProto: StandardFrontierVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'SD Mole {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+            prefixCreator: '14'

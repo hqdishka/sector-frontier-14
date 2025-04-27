@@ -1,0 +1,115 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  id: ThrusterPirates
+  name: ракетный двигатель
+  suffix: Пираты
+  parent: BaseThruster
+  components:
+  - type: Machine
+    board: ThrusterMachineCircuitboard
+  - type: Thruster
+    baseThrust: 150
+    thrust: 150
+    damage:
+      types:
+        Heat: 40
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:ChangeConstructionNodeBehavior
+          node: machineFrame
+  - type: Sprite
+    sprite: _Lua/Structures/Thrusters/thrusterpirates.rsi
+    layers:
+    - state: base
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+      offset: 0, 1
+  - type: RadarBlip # Mono
+    radarColor: "#99FF99"
+    scale: 1
+    shape: diamond
+
+- type: entity
+  id: ThrusterPiratesUnanchored
+  parent: ThrusterPirates
+  suffix: Пираты, Закрепленный
+  components:
+    - type: Transform
+      anchored: false
+    - type: Physics
+      bodyType: Dynamic
+
+- type: entity
+  id: ThrusterLua
+  parent: ThrusterPirates
+  name: ракетный двигатель
+  suffix: LuaTech, Луа
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Thrusters/thrusterlua.rsi
+  - type: Thruster
+    baseThrust: 250
+    thrust: 250
+    damage:
+      types:
+        Heat: 40
+        
+- type: entity
+  id: ThrusterLuaUnanchored
+  parent: ThrusterLua
+  suffix: LuaTech, Луа, Закрепленный
+  components:
+    - type: Transform
+      anchored: false
+    - type: Physics
+      bodyType: Dynamic
+    
+- type: entity
+  id: ThrusterSyndie
+  parent: ThrusterPirates
+  name: ракетный двигатель
+  suffix: Синдикат
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Thrusters/thrustersyn.rsi
+  - type: Thruster
+    baseThrust: 200
+    thrust: 200
+    damage:
+      types:
+        Heat: 40
+        
+- type: entity
+  id: ThrusterSyndieUnanchored
+  parent: ThrusterSyndie
+  suffix: Синдикат, Закрепленный
+  components:
+    - type: Transform
+      anchored: false
+    - type: Physics
+      bodyType: Dynamic

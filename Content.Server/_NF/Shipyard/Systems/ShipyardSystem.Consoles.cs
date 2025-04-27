@@ -35,6 +35,7 @@ using static Content.Shared._NF.Shipyard.Components.ShuttleDeedComponent;
 using Content.Server.Shuttles.Components;
 using Content.Server._NF.Station.Components;
 using System.Text.RegularExpressions;
+using Content.Server._Mono.Shipyard;
 using Content.Shared.UserInterface;
 using Robust.Shared.Audio.Systems;
 using Content.Shared.Access;
@@ -194,6 +195,16 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             PlayDenySound(player, shipyardConsoleUid, component);
             return;
         }
+
+        // Add company information to the shuttle
+        if (TryComp<Content.Shared.Company.CompanyComponent>(player, out var playerCompany) &&
+            !string.IsNullOrEmpty(playerCompany.CompanyName))
+        {
+            var shipCompany = EnsureComp<Content.Shared.Company.CompanyComponent>(shuttleUid);
+            shipCompany.CompanyName = playerCompany.CompanyName;
+            Dirty(shuttleUid, shipCompany);
+        }
+
         EntityUid? shuttleStation = null;
         // setting up any stations if we have a matching game map prototype to allow late joins directly onto the vessel
         if (_prototypeManager.TryIndex<GameMapPrototype>(vessel.ID, out var stationProto))
@@ -283,6 +294,9 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         SendPurchaseMessage(shipyardConsoleUid, player, name, component.ShipyardChannel, secret: false);
         if (component.SecretShipyardChannel is { } secretChannel)
             SendPurchaseMessage(shipyardConsoleUid, player, name, secretChannel, secret: true);
+
+        // Mono
+        Get<ShipyardDirectionSystem>().SendShipDirectionMessage(player, shuttleUid);
 
         PlayConfirmSound(player, shipyardConsoleUid, component);
         if (voucherUsed)

@@ -1,0 +1,39 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: ClothingShoesBootsMag
+  id: ClothingShoesBootsMagFSF
+  components:
+  - type: Sprite
+    sprite: _Lua/Clothing/Shoes/Boots/magboots_fsf.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Lua/Clothing/Shoes/Boots/magboots_fsf.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: StaticPrice
+    price: 750
+
+- type: entity
+  parent: ClothingShoesBootsMag
+  id: ADTClothingShoesBootsMagERT
+  components:
+  - type: Sprite
+    sprite: ADT/Clothing/Shoes/Boots/magboots-ert.rsi
+    state: icon
+  - type: Clothing
+    sprite: ADT/Clothing/Shoes/Boots/magboots-ert.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: StaticPrice
+    price: 750

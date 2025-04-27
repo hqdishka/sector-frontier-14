@@ -18,8 +18,8 @@
   components:
   - type: StorageFill
     contents:
-      - id: WeaponLauncherPirateCannon
-        amount: 2
+      # - id: WeaponLauncherPirateCannon
+      #   amount: 2
       - id: ClothingOuterCoatGentle
       - id: Cutlass
         amount: 2

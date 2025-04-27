@@ -2,12 +2,16 @@ using Content.Shared.Audio.Jukebox;
 using Robust.Client.Audio;
 using Robust.Client.UserInterface;
 using Robust.Shared.Audio.Components;
+using Robust.Client.Player;
+using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
+using System.Linq;
 
 namespace Content.Client.Audio.Jukebox;
 
 public sealed class JukeboxBoundUserInterface : BoundUserInterface
 {
+    [Dependency] private readonly IPlayerManager _player = default!;
     [Dependency] private readonly IPrototypeManager _protoManager = default!;
 
     [ViewVariables]
@@ -56,6 +60,7 @@ public sealed class JukeboxBoundUserInterface : BoundUserInterface
         if (_menu == null || !EntMan.TryGetComponent(Owner, out JukeboxComponent? jukebox))
             return;
 
+        _menu.SetMenuTitle(jukebox.MenuTitle);
         _menu.SetAudioStream(jukebox.AudioStream);
 
         if (_protoManager.TryIndex(jukebox.SelectedSongId, out var songProto))
@@ -71,7 +76,12 @@ public sealed class JukeboxBoundUserInterface : BoundUserInterface
 
     public void PopulateMusic()
     {
-        _menu?.Populate(_protoManager.EnumeratePrototypes<JukeboxPrototype>());
+        if (!EntMan.TryGetComponent(Owner, out JukeboxComponent? jukebox))
+            return;
+
+        var songs = _protoManager.EnumeratePrototypes<JukeboxPrototype>()
+                                  .Where(song => song.Category == jukebox.Category);
+        _menu?.Populate(songs);
     }
 
     public void SelectSong(ProtoId<JukeboxPrototype> songid)

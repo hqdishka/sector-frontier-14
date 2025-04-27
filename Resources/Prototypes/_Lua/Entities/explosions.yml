@@ -1,0 +1,111 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+# Missiles
+- type: entity
+  id: BaseExplosion
+  abstract: true
+  components:
+    - type: Explosive
+      explosionType: Default
+      maxIntensity: 20
+      intensitySlope: 5
+      totalIntensity: 10
+      maxTileBreak: 1
+    - type: ExplodeOnInit
+      explodeOnInit: false
+    - type: Sprite
+      sprite: _Lua/Effects/target.rsi
+      layers:
+        - state: alert
+          shader: unshaded
+        - state: outline
+          shader: unshaded
+        - state: target
+          shader: unshaded
+
+- type: entity
+  id: ExplosionMissile
+  parent: BaseExplosion
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Explosive
+      explosionType: Default
+      maxIntensity: 40
+      intensitySlope: 6
+      totalIntensity: 200
+      maxTileBreak: 1
+
+- type: entity
+  id: ExplosionHole
+  parent: BaseExplosion
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Explosive
+      explosionType: Default
+      maxIntensity: 250
+      intensitySlope: 100
+      totalIntensity: 100
+      maxTileBreak: 1
+
+- type: entity
+  id: ExplosionPunch
+  parent: ExplosionHole
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Explosive
+      explosionType: Default
+      maxIntensity: 250
+      intensitySlope: 5
+      totalIntensity: 100
+      maxTileBreak: 0
+
+- type: entity
+  id: ExplosionArtemisMkI
+  parent: BaseExplosion
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Explosive
+      explosionType: Default
+      maxIntensity: 40
+      intensitySlope: 5
+      totalIntensity: 200
+      maxTileBreak: 0
+
+- type: entity
+  id: ExplosionArtemisMkII
+  parent: BaseExplosion
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Explosive
+      explosionType: Default
+      maxIntensity: 80
+      intensitySlope: 3
+      totalIntensity: 400
+      maxTileBreak: 0
+
+# Lasers
+- type: entity
+  id: ExplosionLaser
+  parent: BaseExplosion
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Explosive
+      explosionType: Default
+      maxIntensity: 20
+      intensitySlope: 5
+      totalIntensity: 15
+      maxTileBreak: 0
+
+- type: entity
+  id: ExplosionRailgun
+  parent: BaseExplosion
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Explosive
+      explosionType: Default
+      maxIntensity: 200
+      intensitySlope: 15
+      totalIntensity: 1000
+      maxTileBreak: 0

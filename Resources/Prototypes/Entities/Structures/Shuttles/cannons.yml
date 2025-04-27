@@ -6,9 +6,19 @@
   name: shittle gun
   abstract: true
   components:
+  - type: RadarBlip
+    radarColor: "#CF0E0E"
+    scale: 1
+  - type: ExtensionCableReceiver
+  - type: LightningTarget
+    priority: 1
+  - type: ApcPowerReceiver
+    powerLoad: 250
+  - type: FireControllable
   - type: Appearance
   - type: InteractionOutline
   - type: Anchorable
+    delay: 120
   - type: Rotatable
   - type: ContainerContainer
   - type: Gun
@@ -45,8 +55,12 @@
   parent: [ ShuttleGunBase, ConstructibleMachine]
   name: LSE-400c "Svalinn machine gun"
   description: Basic stationary laser unit. Effective against live targets and electronics. Uses regular power cells to fire, and has an extremely high rate of fire.
-  categories: [ DoNotMap ]
   components:
+  - type: RadarBlip
+    radarColor: "#1c89d1"
+    scale: 1
+  - type: ShipGunType
+    shipType: Energy
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shuttles/laser.rsi
     layers:
@@ -99,8 +113,12 @@
   parent: [ ShuttleGunBase, ConstructibleMachine]
   name: LSE-1200c "Perforator"
   description: Advanced stationary laser unit. Annihilates electronics and is extremely dangerous to health! Uses the power cage to fire.
-  categories: [ DoNotMap ]
   components:
+  - type: RadarBlip
+    radarColor: "#1c89d1"
+    scale: 1
+  - type: ShipGunType
+    shipType: Energy
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shuttles/laser.rsi
     layers:
@@ -152,11 +170,12 @@
 
 - type: entity
   id: ShuttleGunFriendship
-  parent: [ShuttleGunBase] # Frontier: Removed ConstructibleMachine
+  parent: [ShuttleGunBase, ConstructibleMachine]
   name: EXP-320g "Friendship"
   description: A small stationary grenade launcher that holds 2 grenades.
-  categories: [ DoNotMap ]
   components:
+  - type: ShipGunType
+    shipType: Ballistic
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shuttles/launcher.rsi
     layers:
@@ -209,8 +228,9 @@
   parent: [ShuttleGunBase, ConstructibleMachine]
   name: EXP-2100g "Duster"
   description: A powerful stationary grenade launcher. A cartridge is required for use.
-  categories: [ DoNotMap ]
   components:
+  - type: ShipGunType
+    shipType: Ballistic
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shuttles/launcher.rsi
     layers:
@@ -267,10 +287,12 @@
 
 - type: entity
   id: ShuttleGunPirateCannon
-  parent: [BaseStructureDisableToolUse, ShuttleGunBase] # Frontier: Added BaseStructureDisableToolUse
+  parent: ShuttleGunBase
   name: pirate ship cannon
   description: Kaboom!
   components:
+  - type: ShipGunType
+    shipType: Ballistic
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
@@ -312,8 +334,12 @@
   parent: [ ShuttleGunBase, ConstructibleMachine]
   name: PTK-1500e "Matter Dematerializer" # Frontier: "800"<"1500e" (consistent with naming scheme)
   description: Mining turret, effective for blasting hardened targets, but overpowered for softer rock. Gradually accumulates charges on its own. # Frontier: description changed
-  categories: [ DoNotMap ]
   components:
+  - type: RadarBlip
+    radarColor: "#53ff6a"
+    scale: 1
+  - type: ShipGunType
+    shipType: Mining
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shuttles/kinetic.rsi
     layers:

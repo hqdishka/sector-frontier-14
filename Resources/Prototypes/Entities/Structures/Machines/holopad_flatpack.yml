@@ -1,0 +1,68 @@
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: HolopadShuttleFlatpack
+  name: упакованный голопад
+  description: Упакованный голопад
+  components:
+  - type: Flatpack
+    entity: HolopadShuttle
+  - type: StaticPrice
+    price: 250
+  - type: Sprite
+    sprite: _Lua/Flatpack/flatpack.rsi
+    layers:
+    - state: diagnoser
+
+- type: entity
+  parent: [ HolopadLongRange, Holopad ]
+  id: HolopadMedical
+  suffix: Медицинский Отдел
+  components:
+  - type: Label
+    currentLabel: holopad-medical
+
+- type: entity
+  parent: [ HolopadLongRange, Holopad ]
+  id: HolopadTM
+  suffix: Трафик Менеджер
+  components:
+  - type: Label
+    currentLabel: holopad-traffic
+
+- type: entity
+  parent: [ HolopadLongRange, Holopad ]
+  id: HolopadSheriff
+  suffix: Шериф
+  components:
+  - type: Label
+    currentLabel: holopad-sheriff
+
+- type: entity
+  parent: [ HolopadLongRange, Holopad ]
+  id: HolopadBailiff
+  suffix: Маршал
+  components:
+  - type: Label
+    currentLabel: holopad-bailiff
+
+- type: entity
+  parent: [ HolopadLongRange, Holopad ]
+  id: HolopadSR
+  suffix: Представитель Станции
+  components:
+  - type: Label
+    currentLabel: holopad-station-representative
+
+- type: entity
+  parent: [ HolopadLongRange, Holopad ]
+  id: HolopadHub
+  suffix: Общий
+  components:
+  - type: Label
+    currentLabel: holopad-hub
+
+- type: entity
+  parent: [ HolopadBluespace, Holopad ]
+  id: HolopadShuttle
+  suffix: Шаттлы

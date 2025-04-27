@@ -3,6 +3,11 @@
   name: department-Cargo
   description: department-Cargo-description
   color: "#A46106"
+  roles:
+  #- CargoTechnician
+  #- Quartermaster
+  #- SalvageSpecialist
+  - SeniorSalvageSpecialist
   weight: -90
   primary: false
   editorHidden: true # Frontier
@@ -38,20 +43,35 @@
 - type: department
   id: CentralCommand
   name: department-CentralCommand
-  description: department-NFCentralCommand-description # Frontier
+  description: department-CentralCommand-description
   color: "#0c344d"
   roles:
   - CentralCommandOfficial
-#  - CBURN # Frontier
-  - ERTLeader
-  - ERTChaplain
-  - ERTJanitor
-  - ERTMedical
-  - ERTSecurity
-  - ERTEngineer
-#  - DeathSquad # Frontier
-  - ERTMailCarrier # Frontier
-  editorHidden: true
+  - CentralCommandAdministrator
+  - CentralCommandOperator
+  - CentralCommandSpecialOperationsOfficer
+  - CentralCommandOfficer
+  - CBURNLeader
+  - CBURNSierraLeader
+  - CBURNAgent
+  - CBURNSierraAgent
+  - ERTLeaderAmber
+  - ERTLeaderRed
+  - ERTLeaderGamma
+  - ERTSecurityAmber
+  - ERTSecurityRed
+  - ERTSecurityGamma
+  - ERTMedicalAmber
+  - ERTMedicalRed
+  - ERTMedicalGamma
+  - ERTEngineerAmber
+  - ERTEngineerRed
+  - ERTEngineerGamma
+  - ERTJanitorAmber
+  - ERTJanitorRed
+  - ERTJanitorGamma
+  - DeathSquad
+  # - BlueShieldOfficer
   weight: 120
 
 - type: department
@@ -60,22 +80,22 @@
   description: department-NFCommand-description # Frontier
   color: "#334E6D"
   roles:
-  # - Captain # Frontier
-  # - ChiefEngineer # Frontier
-  # - ChiefMedicalOfficer # Frontier
-  # - HeadOfPersonnel # Frontier
-  # - HeadOfSecurity # Frontier
-  # - ResearchDirector # Frontier
-  # - Quartermaster # Frontier
-  # - CentralCommandOfficial # Frontier
-  # - CBURN # Frontier
-  # - ERTLeader # Frontier
-  # - ERTChaplain # Frontier
-  # - ERTJanitor # Frontier
-  # - ERTMedical # Frontier
-  # - ERTSecurity # Frontier
-  # - ERTEngineer # Frontier
-  # - DeathSquad # Frontier
+  - Captain
+  - ChiefEngineer
+  - ChiefMedicalOfficer
+  - HeadOfPersonnel
+  - HeadOfSecurity
+  - ResearchDirector
+  - Quartermaster
+  - CentralCommandOfficial
+  - CBURN
+  - ERTLeader
+  - ERTChaplain
+  - ERTJanitor
+  - ERTMedical
+  - ERTSecurity
+  - ERTEngineer
+  - DeathSquad
   - StationRepresentative # Frontier
   - Sheriff  # Frontier
   - StationTrafficController # Frontier

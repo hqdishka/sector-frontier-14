@@ -71,7 +71,8 @@
   name: RGBB
   description: Don't shoot your eye out, gamer.
   components:
-  - type: CartridgeAmmo # Frontier
+  - type: CartridgeAmmo
+    deleteOnSpawn: true # Frontier
     proto: BulletRGBBDamaged # Frontier
 
 - type: entity

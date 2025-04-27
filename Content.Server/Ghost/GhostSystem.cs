@@ -39,6 +39,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+using Content.Server.Preferences.Managers;
 
 namespace Content.Server.Ghost
 {
@@ -69,6 +70,7 @@ namespace Content.Server.Ghost
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly TagSystem _tag = default!;
         [Dependency] private readonly IAdminManager _admin = default!; // Frontier
+        [Dependency] private readonly IServerPreferencesManager _preferencesManager = default!;
 
         private EntityQuery<GhostComponent> _ghostQuery;
         private EntityQuery<PhysicsComponent> _physicsQuery;
@@ -104,6 +106,8 @@ namespace Content.Server.Ghost
 
             SubscribeLocalEvent<RoundEndTextAppendEvent>(_ => MakeVisible(true));
             SubscribeLocalEvent<ToggleGhostVisibilityToAllEvent>(OnToggleGhostVisibilityToAll);
+
+            SubscribeLocalEvent<GhostComponent, MindAddedMessage>(OnMindAdded);
         }
 
         private void OnGhostHearingAction(EntityUid uid, GhostComponent component, ToggleGhostHearingActionEvent args)
@@ -301,7 +305,18 @@ namespace Content.Server.Ghost
             // Frontier: get admin status for entity.
             bool isAdmin = _admin.IsAdmin(entity);
 
-            var response = new GhostWarpsResponseEvent(GetPlayerWarps(entity).Concat(GetLocationWarps(isAdmin)).ToList()); // Frontier: add isAdmin
+            // Only include admin ghosts if the requester is an admin
+            var warps = GetPlayerWarps(entity)
+                .Concat(GetLocationWarps(isAdmin));
+
+            if (isAdmin)
+            {
+                // Add admin ghosts and regular ghosts to the warp list for admin users
+                warps = warps.Concat(GetAdminGhostWarps(entity))
+                            .Concat(GetRegularGhostWarps(entity));
+            }
+
+            var response = new GhostWarpsResponseEvent(warps.ToList());
             RaiseNetworkEvent(response, args.SenderSession.Channel);
         }
 
@@ -355,7 +370,7 @@ namespace Content.Server.Ghost
         {
             _adminLog.Add(LogType.GhostWarp, $"{ToPrettyString(uid)} ghost warped to {ToPrettyString(target)}");
 
-            if ((TryComp(target, out WarpPointComponent? warp) && warp.Follow) || HasComp<MobStateComponent>(target))
+            if ((TryComp(target, out WarpPointComponent? warp) && warp.Follow) || HasComp<MobStateComponent>(target) || HasComp<GhostComponent>(target))
             {
                 _followerSystem.StartFollowingEntity(uid, target);
                 return;
@@ -397,6 +412,52 @@ namespace Content.Server.Ghost
 
                 if (_mobState.IsAlive(attached) || _mobState.IsCritical(attached))
                     yield return new GhostWarp(GetNetEntity(attached), playerInfo, false);
+            }
+        }
+
+        private IEnumerable<GhostWarp> GetAdminGhostWarps(EntityUid except)
+        {
+            foreach (var player in _playerManager.Sessions)
+            {
+                if (player.AttachedEntity is not {Valid: true} attached)
+                    continue;
+
+                if (attached == except) continue;
+
+                // Skip if not a ghost or not an admin
+                if (!_ghostQuery.HasComp(attached) || !_admin.IsAdmin(attached))
+                    continue;
+
+                TryComp<MindContainerComponent>(attached, out var mind);
+                var jobName = _jobs.MindTryGetJobName(mind?.Mind);
+
+                // Add "(Admin Ghost)" suffix to the display name
+                var playerInfo = $"{Comp<MetaDataComponent>(attached).EntityName} (Admin Ghost)";
+
+                yield return new GhostWarp(GetNetEntity(attached), playerInfo, false);
+            }
+        }
+
+        private IEnumerable<GhostWarp> GetRegularGhostWarps(EntityUid except)
+        {
+            foreach (var player in _playerManager.Sessions)
+            {
+                if (player.AttachedEntity is not {Valid: true} attached)
+                    continue;
+
+                if (attached == except) continue;
+
+                // Skip if not a ghost or if it's an admin
+                if (!_ghostQuery.HasComp(attached) || _admin.IsAdmin(attached))
+                    continue;
+
+                TryComp<MindContainerComponent>(attached, out var mind);
+                var jobName = _jobs.MindTryGetJobName(mind?.Mind);
+
+                // Add "(Ghost)" suffix to the display name
+                var playerInfo = $"{Comp<MetaDataComponent>(attached).EntityName} (Ghost)";
+
+                yield return new GhostWarp(GetNetEntity(attached), playerInfo, false);
             }
         }
 
@@ -518,7 +579,52 @@ namespace Content.Server.Ghost
             else
                 _minds.TransferTo(mind.Owner, ghost, mind: mind.Comp);
             Log.Debug($"Spawned ghost \"{ToPrettyString(ghost)}\" for {mind.Comp.CharacterName}.");
+
+            // Apply admin OOC color to the ghost if the player has one
+            ApplyAdminOOCColor(ghost, mind.Owner);
+
             return ghost;
+        }
+
+        /// <summary>
+        /// Applies the admin OOC color to a ghost entity if the player has one set
+        /// </summary>
+        /// <param name="ghostEntity">The ghost entity to apply the color to</param>
+        /// <param name="mindId">The mind ID of the player</param>
+        public void ApplyAdminOOCColor(EntityUid ghostEntity, EntityUid mindId) // Mono
+        {
+            if (!_mind.TryGetSession(mindId, out var session))
+                return;
+
+            // Only apply admin OOC color if the player is actually an admin
+            if (!_admin.IsAdmin(session))
+                return;
+
+            if (!_preferencesManager.TryGetCachedPreferences(session.UserId, out var prefs))
+                return;
+
+            // Only apply the color if it's not transparent (the default)
+            if (prefs.AdminOOCColor == Color.Transparent)
+                return;
+
+            // Make the color slightly transparent for ghosts
+            var ghostColor = prefs.AdminOOCColor;
+
+            if (TryComp<GhostComponent>(ghostEntity, out var ghostComp))
+            {
+                ghostComp.Color = ghostColor;
+                Dirty(ghostEntity, ghostComp);
+            }
+        }
+
+        private void OnMindAdded(EntityUid uid, GhostComponent component, MindAddedMessage args)
+        {
+            // When a mind is added to a ghost, check if the player has an admin OOC color
+            // and apply it to the ghost if they do
+            if (args.Mind == default)
+                return;
+
+            ApplyAdminOOCColor(uid, args.Mind);
         }
 
         public bool OnGhostAttempt(EntityUid mindId, bool canReturnGlobal, bool viaCommand = false, MindComponent? mind = null)

@@ -1,0 +1,96 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: MobOreElementalSalvage
+  id: MobSaltCrabHqdSalvage
+  name: солевой рудокраб
+  description: Солевой рудокраб, выглядит упорото, почему у него красные глаза?.
+  components:
+  - type: Sprite
+    sprite: /Textures/_Lua/Mobs/Elemental/orecrab.rsi
+    state: salt_crab
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 70
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Salt1:
+            min: 1
+            max: 2
+          SaltDrug:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  id: MobSpawnSaltCrabHqdSalvage
+  parent: MobSpawnBananiumCrabSalvage
+  name: mobspawner salt crab
+  suffix: salvage
+  components:
+  - type: Sprite
+    sprite: /Textures/Corvax/Effects/mobspawn.rsi
+    state: crab_salt
+  - type: SpawnOnDespawn
+    prototype: MobSaltCrabHqdSalvage
+
+- type: entity
+  name: соли
+  description: Что будет если это вдохнуть?
+  parent: BaseItem
+  id: SaltDrug
+  components:
+  - type: Sprite
+    sprite: _Lua/Objects/Specific/Chemistry/salt_drugs.rsi
+    state: salt_drugs
+  - type: Item
+    size: Tiny
+    sprite: _Lua/Objects/Specific/Chemistry/salt_drugs.rsi
+  - type: Food
+    forceFeedDelay: 1
+    transferAmount: null
+    eatMessage: food-swallow
+    useSound: /Audio/Items/pill.ogg
+  - type: BadFood
+  - type: FlavorProfile
+    ignoreReagents: []
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 35
+        reagents:
+        - ReagentId: SpaceDrugs
+          Quantity: 10
+        - ReagentId: Desoxyephedrine
+          Quantity: 5
+        - ReagentId: Vodka
+          Quantity: 10
+        - ReagentId: Laughter
+          Quantity: 10
+  - type: SolutionSpiker
+    sourceSolution: food
+  - type: Extractable
+    grindableSolutionName: food
+  - type: StaticPrice
+    price: 0
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:SpillBehavior
+        solution: food
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

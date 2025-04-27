@@ -1,0 +1,20 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: department
+  id: OutpostTypan
+  name: department-Outpost-Typan
+  description: department-Outpost-Typan-description
+  color: "#D381C9"
+  weight: -9
+  roles:
+  - OutpostTypanAtmosTech
+  - OutpostTypanBotanist
+  - OutpostTypanCargotech
+  - OutpostTypanChef
+  - OutpostTypanMedic
+  - OutpostTypanRD
+  - OutpostTypanScience
+  - OutpostTypanTelecommunicationsOfficer
+  - OutpostTypanResearcher

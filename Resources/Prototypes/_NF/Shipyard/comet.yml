@@ -23,13 +23,22 @@
   - Engineering
   engine:
   - AME
+  addComponents:
+    - type: AutoDelete
+      distanceToCheck: 40
+      delayToDelete: 2400
+      delayToCheck: 60
+      isHumanoidNear: True
+    - type: IFF
+      color: "#ffffff"
+    - type: NanotrasenFtl
 
 - type: gameMap
   id: Comet
   mapName: 'NT Comet'
   mapPath: /Maps/_NF/Shuttles/comet.yml
   minPlayers: 0
-  stations: 
+  stations:
     Comet:
       stationProto: StandardFrontierVessel
       components:

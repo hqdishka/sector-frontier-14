@@ -9,6 +9,7 @@
       - Cartridge
       - CartridgeMagnum
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletMagnum
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
@@ -26,6 +27,7 @@
   parent: BaseCartridgeMagnum
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletMagnum
 
 - type: entity
@@ -34,6 +36,7 @@
   parent: BaseCartridgeMagnum
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletMagnumPractice
   - type: Sprite
     layers:
@@ -49,6 +52,7 @@
   parent: BaseCartridgeMagnum
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletMagnumIncendiary
   - type: Sprite
     layers:
@@ -64,6 +68,7 @@
   parent: BaseCartridgeMagnum
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletMagnumAP
   - type: Sprite
     layers:
@@ -79,6 +84,7 @@
   parent: BaseCartridgeMagnum
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletMagnumUranium
   - type: Sprite
     layers:

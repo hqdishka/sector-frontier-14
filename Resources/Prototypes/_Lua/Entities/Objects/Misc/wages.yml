@@ -1,0 +1,49 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: PaperPrintedCentcomm
+  id: PaperWageFrontier
+  name: распечатанный документ
+  description: Лист бумаги с заголовком центкома. Страшно даже смотреть на него.
+  suffix: Зарплата, Фронтир
+  components:
+  - type: Paper
+    stampState: paper_stamp-centcom
+    stampedBy:
+    - stampedColor: '#006600FF'
+      stampedName: Центральное Командование
+    - stampedColor: '#00BE00FF'
+      stampedName: Одобрено
+    content: paper-wage-frontier
+
+- type: entity
+  parent: PaperPrintedCentcomm
+  id: PaperWageNfsd
+  name: распечатанный документ
+  description: Лист бумаги с заголовком центкома. Страшно даже смотреть на него.
+  suffix: Зарплата, СБ
+  components:
+  - type: Paper
+    stampState: paper_stamp-centcom
+    stampedBy:
+    - stampedColor: '#006600FF'
+      stampedName: Центральное Командование
+    - stampedColor: '#00BE00FF'
+      stampedName: Одобрено
+    content: paper-wage-nfsd
+
+- type: entity
+  parent: PaperPrintedSyndicate
+  id: PaperWageTypan
+  name: распечатанный документ
+  description: Лист бумаги с заголовком синдиката. Страшно даже смотреть на него.
+  suffix: Зарплата, Тайпан
+  components:
+  - type: Paper
+    stampState: paper_stamp-syndicate
+    stampedBy:
+    - stampedColor: '#850000FF'
+      stampedName: Синдикат
+    content: paper-wage-typan

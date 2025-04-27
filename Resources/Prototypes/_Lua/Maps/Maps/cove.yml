@@ -1,0 +1,25 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: gameMap
+  id: Cove
+  mapName: 'Аванпост Пиратов'
+  mapPath: /Maps/_Lua/Maps/tortuga.yml
+  isGrid: true
+  minPlayers: 0
+  stations:
+    Cove:
+      stationProto: StandardPiratesVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Аванпост Пиратов'
+        - type: ExtraStationInformation
+          iconPath: /Textures/Structures/Wallmounts/flags.rsi/pirate_flag.png # used the biggest one, looks better when downscaling than upscaling
+          stationSubtext: 'pirate-lobby-outpost-subtext'
+          stationDescription: 'pirate-lobby-outpost-description'
+        - type: StationJobs
+          availableJobs:
+            PirateCaptain: [ 2, 2 ]
+            PirateFirstMate: [ 2, 2 ]
+            Pirate: [ 10, 10 ]

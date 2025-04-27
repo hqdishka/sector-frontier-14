@@ -1,0 +1,50 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  name: Vector
+  parent: BaseWeaponSubMachineGun
+  id: WeaponSubMachineGunVector
+  description: An excellent fully automatic Heavy SMG. Uses 9.19 ammo.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/SMGs/vector.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/SMGs/vector.rsi
+  - type: Gun
+    fireRate: 9
+    selectedMode: FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
+    availableModes:
+    - FullAuto
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolSubMachineGun
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolSubMachineGun
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgePistol
+        whitelistFailPopup: gun-magazine-whitelist-fail
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance

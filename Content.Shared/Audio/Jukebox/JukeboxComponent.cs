@@ -33,6 +33,12 @@ public sealed partial class JukeboxComponent : Component
     [DataField]
     public string? SelectState;
 
+    [DataField]
+    public string MenuTitle = "jukebox-menu-title";
+
+    [DataField]
+    public string Category = "Default";
+
     [ViewVariables]
     public bool Selecting;
 

@@ -1,0 +1,8 @@
+# - type: entity
+#   id: CrateBerserk
+#   parent: LavalandChest
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: ADTSpaceMarinne
+

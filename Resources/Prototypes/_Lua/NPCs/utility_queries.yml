@@ -1,0 +1,16 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: utilityQuery
+  id: NearbyGunTargetsInorganic
+  query:
+  - !type:NearbyHostilesQuery
+  considerations:
+  - !type:TargetDistanceCon
+    curve: !type:PresetCurve
+      preset: TargetDistance
+  - !type:TargetAccessibleCon
+    curve: !type:BoolCurve
+  - !type:TargetInLOSOrCurrentCon
+    curve: !type:BoolCurve

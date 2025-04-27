@@ -37,3 +37,6 @@
           components:
           - HitscanBatteryAmmoProvider
           - ProjectileBatteryAmmoProvider
+        blacklist:
+          tags:
+          - PlasmaCutter

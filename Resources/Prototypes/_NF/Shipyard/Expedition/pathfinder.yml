@@ -22,13 +22,22 @@
   - Expedition
   engine:
   - AME
+  addComponents:
+    - type: AutoDelete
+      distanceToCheck: 40
+      delayToDelete: 2400
+      delayToCheck: 60
+      isHumanoidNear: True
+    - type: IFF
+      color: "#ffffff"
+    - type: NanotrasenFtl
 
 - type: gameMap
   id: Pathfinder
   mapName: 'KC Pathfinder'
   mapPath: /Maps/_NF/Shuttles/Expedition/pathfinder.yml
   minPlayers: 0
-  stations: 
+  stations:
     Pathfinder:
       stationProto: StandardFrontierExpeditionVessel
       components:

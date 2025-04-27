@@ -30,7 +30,7 @@
   - LedLightBulb
   - SodiumLightBulb
   - ExteriorLightBulb
-  - ConveyorBeltAssembly
+  # - ConveyorBeltAssembly
   - PowerCellSmall
   - PowerCellMedium
 ## Basic electronics

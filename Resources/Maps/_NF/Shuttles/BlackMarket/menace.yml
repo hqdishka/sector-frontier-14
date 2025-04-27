@@ -121,7 +121,7 @@ entities:
             18: -1,0
             19: -1,-1
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: StandClear
           decals:
             16: 5,1

@@ -12,6 +12,17 @@
   - Pirate
   engine:
   - Uranium
+  addComponents:
+    - type: AutoDelete
+      distanceToCheck: 40
+      delayToDelete: 2400
+      delayToCheck: 60
+      isHumanoidNear: True
+    - type: IFF
+      color: "#ffffff"
+    - type: PirateFtl
+    - type: PirateMercFtl
+    - type: NanotrasenFtl
 
 - type: gameMap
   id: Schooner

@@ -1,0 +1,19 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: BaseLightbulb
+  name: led light bulb
+  id: LedLightBulbEpsilon
+  description: A power efficient light bulb.
+  suffix: Epsilon
+  components:
+  - type: LightBulb
+    bulb: Bulb
+    color: "#9400D3"
+    lightEnergy: 1
+    lightRadius: 8
+    lightSoftness: 1
+    BurningTemperature: 350 #LEDs are colder than incandescent bulbs
+    PowerUse: 6 #LEDs are more power efficient than incandescent bulbs

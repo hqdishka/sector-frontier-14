@@ -9,6 +9,7 @@
       - Cartridge
       - CartridgeCap
   - type: CartridgeAmmo
+    deleteOnSpawn: true
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/capgun_casing.rsi
     layers:
@@ -25,4 +26,5 @@
   parent: BaseCartridgeCap
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletCap

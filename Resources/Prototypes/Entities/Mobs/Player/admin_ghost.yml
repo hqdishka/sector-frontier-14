@@ -50,6 +50,12 @@
       enum.GeneralStationRecordConsoleKey.Key:
       # who the fuck named this bruh
         type: GeneralStationRecordConsoleBoundUserInterface
+      enum.AtmosMonitoringConsoleUiKey.Key:
+        type: AtmosMonitoringConsoleBoundUserInterface
+      enum.AtmosAlertsComputerUiKey.Key:
+        type: AtmosAlertsComputerBoundUserInterface
+      enum.PowerMonitoringConsoleUiKey.Key:
+        type: PowerMonitoringConsoleBoundUserInterface
   - type: IntrinsicUI
     uis:
       enum.SolarControlConsoleUiKey.Key:
@@ -64,7 +70,19 @@
         toggleAction: ActionAGhostShowCrewMonitoring
       enum.GeneralStationRecordConsoleKey.Key:
         toggleAction: ActionAGhostShowStationRecords
+      enum.AtmosMonitoringConsoleUiKey.Key:
+        toggleAction: ActionAGhostShowStationAtmos
+      enum.AtmosAlertsComputerUiKey.Key:
+        toggleAction: ActionAGhostShowStationAtmosAlerts
+      enum.PowerMonitoringConsoleUiKey.Key:
+        toggleAction: ActionAGhostShowStationPowerMonitor
   - type: SolarControlConsole # look ma i AM the computer!
+  - type: AtmosMonitoringConsole
+    navMapTileColor: "#1a1a1a"
+    navMapWallColor: "#404040"
+  - type: PowerMonitoringCableNetworks
+  - type: PowerMonitoringConsole
+  - type: AtmosAlertsComputer
   - type: CommunicationsConsole
     title: comms-console-announcement-title-centcom
     color: "#1d8bad"
@@ -98,12 +116,20 @@
   - type: SolutionScanner
   - type: IgnoreUIRange
   - type: ShowAntagIcons
+  - type: ShowJobIcons
+  - type: ShowMindShieldIcons
   - type: Inventory
     templateId: aghost
   - type: Loadout
     prototypes: [ NFMobAghostGear ] # Frontier MobAghostGear<NFMobAghostGear
   - type: BypassInteractionChecks
   - type: BankAccount # Frontier
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 20
+  - type: InteractionPopup
+    successChance: 1
+    interactSuccessString: hugging-success-generic
+    interactSuccessSound: /Audio/Effects/thudswoosh.ogg
 
 - type: entity
   id: ActionAGhostShowSolar
@@ -111,10 +137,10 @@
   description: View a Solar Control Interface.
   components:
   - type: InstantAction
-    icon: { sprite: Structures/Machines/parts.rsi, state: box_0 }
-    iconOn: Structures/Machines/parts.rsi/box_2.png
+    icon: _Corvax/Interface/AdminActions/solar.png # Corvax-Resprite
+    iconOn: _Corvax/Interface/AdminActions/solar.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
-    priority: -10
+    priority: 20
     event: !type:ToggleIntrinsicUIEvent { key: enum.SolarControlConsoleUiKey.Key }
 
 - type: entity
@@ -123,10 +149,10 @@
   description: View a Communications Interface.
   components:
   - type: InstantAction
-    icon: { sprite: Interface/Actions/actions_ai.rsi, state: comms_console }
-    iconOn: Interface/Actions/actions_ai.rsi/comms_console.png
+    icon: _Corvax/Interface/AdminActions/communications.png # Corvax-Resprite
+    iconOn: _Corvax/Interface/AdminActions/communications.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
-    priority: -4
+    priority: 20
     event: !type:ToggleIntrinsicUIEvent { key: enum.CommunicationsConsoleUiKey.Key }
 
 - type: entity
@@ -135,10 +161,10 @@
   description: View a Mass Scanner Interface.
   components:
   - type: InstantAction
-    icon: { sprite: Interface/Actions/actions_ai.rsi, state: mass_scanner }
-    iconOn: Interface/Actions/actions_ai.rsi/mass_scanner.png
+    icon: _Corvax/Interface/AdminActions/radar.png # Corvax-Resprite
+    iconOn: _Corvax/Interface/AdminActions/radar.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
-    priority: -6
+    priority: 20
     event: !type:ToggleIntrinsicUIEvent { key: enum.RadarConsoleUiKey.Key }
 
 - type: entity
@@ -147,10 +173,10 @@
   description: View a Cargo Ordering Interface.
   components:
   - type: InstantAction
-    icon: { sprite: Structures/Machines/parts.rsi, state: box_0 }
-    iconOn: Structures/Machines/parts.rsi/box_2.png
+    icon: _Corvax/Interface/AdminActions/cargo.png # Corvax-Resprite
+    iconOn: _Corvax/Interface/AdminActions/cargo.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
-    priority: -10
+    priority: 20
     event: !type:ToggleIntrinsicUIEvent { key: enum.CargoConsoleUiKey.Orders }
 
 - type: entity
@@ -159,10 +185,10 @@
   description: View a Crew Monitoring Interface.
   components:
   - type: InstantAction
-    icon: { sprite: Interface/Actions/actions_ai.rsi, state: crew_monitor }
-    iconOn: Interface/Actions/actions_ai.rsi/crew_monitor.png
+    icon: _Corvax/Interface/AdminActions/monitoring.png # Corvax-Resprite
+    iconOn: _Corvax/Interface/AdminActions/monitoring.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
-    priority: -8
+    priority: 20
     event: !type:ToggleIntrinsicUIEvent { key: enum.CrewMonitoringUIKey.Key }
 
 - type: entity
@@ -171,8 +197,44 @@
   description: View a Station Records Interface.
   components:
   - type: InstantAction
-    icon: { sprite: Interface/Actions/actions_ai.rsi, state: station_records }
-    iconOn: Interface/Actions/actions_ai.rsi/station_records.png
+    icon: _Corvax/Interface/AdminActions/records.png # Corvax-Resprite
+    iconOn: _Corvax/Interface/AdminActions/records.png # Corvax-Resprite
     keywords: [ "AI", "console", "interface" ]
-    priority: -7
+    priority: 20
     event: !type:ToggleIntrinsicUIEvent { key: enum.GeneralStationRecordConsoleKey.Key }
+
+- type: entity
+  id: ActionAGhostShowStationAtmos
+  name: Мониторинг Атмосферной Сети
+  description: Используется для мониторинга атмосферных сетей станции
+  components:
+  - type: InstantAction
+    icon: _Lua/Interface/AdminActions/atmos.png
+    iconOn: _Lua/Interface/AdminActions/atmos.png
+    keywords: [ "AI", "console", "interface" ]
+    priority: 20
+    event: !type:ToggleIntrinsicUIEvent { key: enum.AtmosMonitoringConsoleUiKey.Key }
+
+- type: entity
+  id: ActionAGhostShowStationAtmosAlerts
+  name: Консоль Оповещений
+  description: Используется для доступа к автоматизированной системе оповещения станции
+  components:
+  - type: InstantAction
+    icon: _Lua/Interface/AdminActions/atmosalert.png
+    iconOn: _Lua/Interface/AdminActions/atmosalert.png
+    keywords: [ "AI", "console", "interface" ]
+    priority: 20
+    event: !type:ToggleIntrinsicUIEvent { key: enum.AtmosAlertsComputerUiKey.Key }
+
+- type: entity
+  id: ActionAGhostShowStationPowerMonitor
+  name: Консоль Контроля Питания
+  description: Он отслеживает показатели энергии по всей станции
+  components:
+  - type: InstantAction
+    icon: _Lua/Interface/AdminActions/energy.png
+    iconOn: _Lua/Interface/AdminActions/energy.png
+    keywords: [ "AI", "console", "interface" ]
+    priority: 20
+    event: !type:ToggleIntrinsicUIEvent { key: enum.PowerMonitoringConsoleUiKey.Key }

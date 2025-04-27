@@ -1,0 +1,36 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: job
+  id: OutpostTypanCargotech
+  name: job-name-typan-cargotech
+  playTimeTracker: JobOutpostTypanCargotech
+  description: Карготехник из далёкого космоса.
+  startingGear: SyndicateCargotech
+  icon: "JobIconOutpostTypanCargotech"
+  supervisors: job-supervisors-typan-telecommunications-officer
+  canBeAntag: false
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Cargo
+      time: 18000
+    - !type:OverallPlaytimeRequirement
+      time: 36000
+  access:
+  - SyndicateAgent
+  - NuclearOperative
+  accessGroups:
+  - AllAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ DeathAcidifierImplantLWTypan ]
+
+- type: startingGear
+  id: SyndicateCargotech
+  equipment:
+    ears: ClothingHeadsetAltOutpostTypan
+    jumpsuit: ClothingUniformJumpsuitOutpostTypanCargotech
+    back: ClothingBackpackSyndicateFilled
+    shoes: ClothingShoesBootsCombatOutpostTypan
+    id: SyndiPDACargo

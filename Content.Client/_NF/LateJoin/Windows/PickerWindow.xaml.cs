@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Content.Client._NF.LateJoin.Controls;
 using Content.Client._NF.LateJoin.Interfaces;
 using Content.Client.GameTicking.Managers;
@@ -39,6 +39,8 @@ public sealed partial class PickerWindow : FancyWindow
         _gameTicker = _entitySystem.GetEntitySystem<ClientGameTicker>();
         _gameTicker.LobbyJobsAvailableUpdated += UpdateUi;
         _sawmill = Logger.GetSawmill("latejoin");
+
+        CrewTabButton.Visible = false; //Lua disable Crew
 
         CrewTabButton.OnPressed += _ =>
         {

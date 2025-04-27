@@ -80,6 +80,8 @@
   description: A BBP (big broken pipe).
   components:
   - type: Sprite
+    drawdepth: ThickPipe
+    sprite: Structures/Piping/disposal.rsi
     layers:
     - map: [ "pipe" ]
       state: pipe-b
@@ -96,6 +98,8 @@
   description: A huge pipe segment used for constructing disposal systems.
   components:
   - type: Sprite
+    drawdepth: ThickPipe
+    sprite: Structures/Piping/disposal.rsi
     layers:
     - map: [ "pipe" ]
       state: conpipe-s
@@ -124,6 +128,8 @@
   description: A pipe that tags entities for routing.
   components:
   - type: Sprite
+    drawdepth: ThickPipe
+    sprite: Structures/Piping/disposal.rsi
     layers:
     - map: [ "pipe" ]
       state: conpipe-tagger
@@ -158,6 +164,8 @@
   description: A pipe trunk used as an entry point for disposal systems.
   components:
   - type: Sprite
+    drawdepth: ThickPipe
+    sprite: Structures/Piping/disposal.rsi
     layers:
     - map: [ "pipe" ]
       state: conpipe-t
@@ -194,6 +202,8 @@
   description: A three-way router. Entities with matching tags get routed to the side via configurable filters.
   components:
   - type: Sprite
+    drawdepth: ThickPipe
+    sprite: Structures/Piping/disposal.rsi
     layers:
     - map: [ "pipe" ]
       state: conpipe-j1s
@@ -242,6 +252,8 @@
   suffix: flipped
   components:
   - type: Sprite
+    drawdepth: ThickPipe
+    sprite: Structures/Piping/disposal.rsi
     layers:
     - map: [ "pipe" ]
       state: conpipe-j2s
@@ -283,6 +295,8 @@
   description: A three-way junction. The arrow indicates where items exit.
   components:
   - type: Sprite
+    drawdepth: ThickPipe
+    sprite: Structures/Piping/disposal.rsi
     layers:
     - map: [ "pipe" ]
       state: conpipe-j1
@@ -326,6 +340,8 @@
   suffix: flipped
   components:
   - type: Sprite
+    drawdepth: ThickPipe
+    sprite: Structures/Piping/disposal.rsi
     layers:
     - map: [ "pipe" ]
       state: conpipe-j2
@@ -367,6 +383,8 @@
   description: A three-way junction with another exit point.
   components:
   - type: Sprite
+    drawdepth: ThickPipe
+    sprite: Structures/Piping/disposal.rsi
     layers:
     - map: [ "pipe" ]
       state: conpipe-y
@@ -407,6 +425,8 @@
   description: A tube bent at a 90 degree angle.
   components:
   - type: Sprite
+    drawdepth: ThickPipe
+    sprite: Structures/Piping/disposal.rsi
     layers:
     - map: [ "pipe" ]
       state: conpipe-c
@@ -443,6 +463,7 @@
   description: A signal-controlled three-way router.
   components:
   - type: Sprite
+    drawdepth: ThickPipe
     layers:
     - map: [ "pipe" ]
       state: signal-router-free

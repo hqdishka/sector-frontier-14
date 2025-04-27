@@ -4,6 +4,7 @@
   parent: BaseCartridgeCaselessRifle
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletCaselessRifleRubber
   - type: Sprite
     layers:

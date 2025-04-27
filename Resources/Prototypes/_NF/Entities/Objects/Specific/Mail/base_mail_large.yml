@@ -5,6 +5,8 @@
   id: BaseMailLarge
   name: mail-large-item-name-unaddressed
   components:
+  - type: TimedDespawn #lua
+    lifetime: 1500
   - type: Item
     size: Ginormous
   - type: Sprite

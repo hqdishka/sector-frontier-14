@@ -1,0 +1,40 @@
+# XenoVirus
+- type: polymorph
+  id: chambermaidxenoMorph
+  configuration:
+    entity: ChambermaidXenoMob
+    forced: true
+    inventory: Drop
+    transferName: true
+    revertOnCrit: true
+    revertOnDeath: true
+
+- type: polymorph
+  id: XenoQueenMorph
+  configuration:
+    entity: MobXenoQueen
+    forced: true
+    inventory: Drop
+    transferName: true
+    revertOnCrit: true
+    revertOnDeath: true
+
+- type: polymorph
+  id: XenoDroneMorph
+  configuration:
+    entity: MobXenoDrone
+    forced: true
+    inventory: Drop
+    transferName: true
+    revertOnCrit: true
+    revertOnDeath: true
+
+- type: polymorph
+  id: MobXenoSpitterMorph
+  configuration:
+    entity: MobXenoSpitter
+    forced: true
+    inventory: Drop
+    transferName: true
+    revertOnCrit: true
+    revertOnDeath: true

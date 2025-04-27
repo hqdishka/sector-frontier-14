@@ -208,7 +208,7 @@ public abstract partial class SharedGunSystem
     /// <summary>
     /// Tries to take ammo from the magazine and insert into the chamber.
     /// </summary>
-    private bool CycleCartridge(EntityUid uid, ChamberMagazineAmmoProviderComponent component, EntityUid? user = null, AppearanceComponent? appearance = null)
+    public bool CycleCartridge(EntityUid uid, ChamberMagazineAmmoProviderComponent component, EntityUid? user = null, AppearanceComponent? appearance = null) // public mod Lua
     {
         // Try to put a new round in if possible.
         var magEnt = GetMagazineEntity(uid);

@@ -1,45 +1,44 @@
-﻿# A quick summary of how to mark code files in this repository
+# Краткое руководство по маркировке файлов в этом репозитории
 
 ## CSharp
 
-All C# code contributed after 1 July, 2024 23:00:00 UTC should contain the following header:
+Весь код на C#, добавленный после 1 июля 2024 года, 23:00:00 UTC, должен содержать следующий заголовок:
 
 ```csharp
 /*
- * New Frontiers - This file is licensed under AGPLv3
- * Copyright (c) [Year] New Frontiers Contributors
+ * LuaWorld - This file is licensed under AGPLv3
+ * Copyright (c) [Year] LuaWorld Contributors
  * See AGPLv3.txt for details.
  */
 ```
 
-For any changes within MIT licensed(upstream) files, the following marker should be used at the start of the modification
+Для любых изменений в файлах, лицензированных под MIT (из основного репозитория), в начале модификации необходимо использовать следующую маркировку:
 
 ```csharp
-/* New Frontiers - [Title of changes] - [Description of changes]
+/* LuaWorld - [Title of changes] - [Description of changes]
 This code is licensed under AGPLv3. See AGPLv3.txt */
 yourCodeHere();
-// End of modified code
+// Конец изменённого кода
 ```
 
 ## Yaml
 
-All Yaml files contributed after 1 July, 2024 23:00:00 UTC should contain the following header:
+Все Yaml-файлы, добавленные после 1 июля 2024 года, 23:00:00 UTC, должны содержать следующий заголовок:
 
 ```yaml
-# New Frontiers - This file is licensed under AGPLv3
-# Copyright (c) [Year] New Frontiers Contributors
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) [Year] LuaWorld Contributors
 # See AGPLv3.txt for details.
 ```
 
-For any changes within MIT licensed(upstream) files, the following marker should be used at the start of the modification
+Для любых изменений в файлах, лицензированных под MIT (из основного репозитория), в начале модификации необходимо использовать следующую маркировку:
 
 ```yaml
-# New Frontiers - [Title of changes] - [Description of changes]
+# LuaWorld - [Title of changes] - [Description of changes]
 # This code is licensed under AGPLv3. See LICENSE
 modifiedYaml: "Goes Here"
-# End of modified code
+# Конец изменённого кода
 ```
 
-## Note
-
-Both Space Wizards and Nyanotrasen code is licensed under MIT, and any changes made to their code should be marked as AGPLv3 with the above markers.
+## Примечание
+Код Space Wizards и Nyanotrasen лицензирован под MIT, и любые изменения в их файлах должны быть помечены как AGPLv3 с использованием указанных выше маркеров.

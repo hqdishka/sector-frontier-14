@@ -1,5 +1,7 @@
-﻿<Control Name="CFlavorText" xmlns="https://spacestation14.io">
+<Control Name="CFlavorText" xmlns="https://spacestation14.io">
     <BoxContainer Orientation="Vertical" HorizontalExpand="True">
         <TextEdit Name="CFlavorTextInput" Access="Public" MinSize="220 100" Margin="10" HorizontalExpand="True" VerticalExpand="True" />
+        <OptionButton Name="CERPStatusOption" Access="Public" MinSize="220 0" HorizontalExpand="True" />
+        <RichTextLabel Name="CERPLabelInfo" HorizontalExpand="False" VerticalExpand="True" MaxWidth="850" HorizontalAlignment="Left"/>
     </BoxContainer>
 </Control>

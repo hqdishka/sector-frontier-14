@@ -249,5 +249,27 @@ namespace Content.Server.Power.EntitySystems
 
             return battery.CurrentCharge >= battery.MaxCharge;
         }
+
+        public int CalculateChargeDeficit(EntityUid uid, BatteryComponent? battery = null)
+        {
+            if (!Resolve(uid, ref battery))
+                return 0;
+
+            return (int)(battery.MaxCharge - battery.CurrentCharge);
+        }
+
+        public float IncreaseCharge(EntityUid uid, float amount, BatteryComponent? battery = null)
+        {
+            if (amount <= 0 || !Resolve(uid, ref battery))
+                return battery?.CurrentCharge ?? 0;
+
+            float adjustedCharge = Math.Min(battery.CurrentCharge + amount, battery.MaxCharge);
+            battery.CurrentCharge = adjustedCharge;
+
+            var chargeUpdate = new ChargeChangedEvent(battery.CurrentCharge, battery.MaxCharge);
+            RaiseLocalEvent(uid, ref chargeUpdate);
+
+            return adjustedCharge;
+        }
     }
 }

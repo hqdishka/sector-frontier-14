@@ -1,0 +1,55 @@
+- type: entity
+  name: arkalis
+  parent: BaseItem
+  id: ADTObjectWeaponsMeleeArkalis
+  description: Don't even try to use it like a razor. It's forget from bluespace steel. Lagand says it took the energy of several stars to create it.
+  components:
+  - type: Sharp
+  - type: Tag
+    tags:
+    - SupremeCommanderSabre
+  - type: Sprite
+    sprite: ADT/Objects/Weapons/Melee/supreme-commander-sabre.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 1.5
+    damage:
+      types:
+        Slash: 15
+    soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+  - type: Reflect
+    # Design intent: a robust captain or tot can sacrifice movement to make the most of this weapon, but they have to
+    # really restrict themselves to walking speed or less.
+    reflectProb: 0.1
+  - type: Item
+    size: Normal
+    sprite: ADT/Objects/Weapons/Melee/supreme-commander-sabre.rsi
+  - type: DisarmMalus
+
+- type: entity
+  name: ninja katana
+  parent: BaseItem
+  id: ADTObjectWeaponsMeleeSupremeSabre
+  description: Don't even try to use it like a razor. It's forget from bluespace steel. Lagand says it took the energy of several stars to create it.
+  components:
+  - type: Sharp
+  - type: Tag
+    tags:
+    - SupremeSabre
+  - type: Sprite
+    sprite: ADT/Objects/Weapons/Melee/supreme-sabre.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 1.0
+    damage:
+      types:
+        Slash: 10
+        Radiation: 5
+        Blunt: 5
+  - type: Item
+    size: Normal
+    sprite: ADT/Objects/Weapons/Melee/supreme-sabre.rsi
+  - type: DisarmMalus

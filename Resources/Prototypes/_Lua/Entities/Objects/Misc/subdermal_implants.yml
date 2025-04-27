@@ -1,0 +1,24 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: DeathAcidifierImplantLWTypan
+  name: death-acidifier implant
+  description: This implant melts the user and their equipment upon death.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    permanent: true
+    implantAction: ActionActivateDeathAcidifier
+  - type: TriggerImplantAction
+  - type: GibOnTrigger
+    deleteItems: true
+  - type: SpawnOnTrigger
+    proto: Acidifier
+  - type: Tag
+    tags:
+    - SubdermalImplant
+    - HideContextMenu
+    - DeathAcidifier

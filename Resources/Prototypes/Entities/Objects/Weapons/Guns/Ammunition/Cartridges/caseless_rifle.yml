@@ -27,6 +27,7 @@
   parent: BaseCartridgeCaselessRifle
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletCaselessRifle
 
 - type: entity
@@ -35,6 +36,7 @@
   parent: BaseCartridgeCaselessRifle
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletCaselessRiflePractice
   - type: Sprite
     layers:

@@ -1,5 +1,6 @@
 using Content.Shared.Damage;
 using Content.Shared.FixedPoint;
+using Content.Shared.Whitelist;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
@@ -104,4 +105,13 @@ public sealed partial class ProjectileComponent : Component
     /// </summary>
     [DataField]
     public float RandomBlindChance { get; set; } = 0;
+
+    [DataField("whitelist"), AutoNetworkedField]
+    public EntityWhitelist? Whitelist = new();
+
+    /// <summary>
+    /// Additional damage to be applied.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite), DataField("damageWhitelist")]
+    public DamageSpecifier DamageWhitelist = new();
 }

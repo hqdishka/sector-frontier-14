@@ -365,7 +365,7 @@ entities:
           decals:
             551: 25,21
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickCornerOverlaySW
           decals:
             117: 38,-3
@@ -645,7 +645,7 @@ entities:
             193: 19,15
             555: 26,21
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickLineOverlayS
           decals:
             118: 39,-3
@@ -735,7 +735,7 @@ entities:
             559: 44,13
             560: 44,12
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickLineOverlayW
           decals:
             119: 38,0

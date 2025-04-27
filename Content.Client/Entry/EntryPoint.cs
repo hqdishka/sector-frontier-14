@@ -1,6 +1,8 @@
 using Content.Client.Administration.Managers;
 using Content.Client.Changelog;
 using Content.Client.Chat.Managers;
+using Content.Client.Corvax.DiscordAuth;
+using Content.Client.Corvax.JoinQueue;
 using Content.Client.DebugMon;
 using Content.Client.Eui;
 using Content.Client.Fullscreen;
@@ -68,6 +70,8 @@ namespace Content.Client.Entry
         [Dependency] private readonly JobRequirementsManager _jobRequirements = default!;
         [Dependency] private readonly ContentLocalizationManager _contentLoc = default!;
         [Dependency] private readonly ContentReplayPlaybackManager _playbackMan = default!;
+        [Dependency] private readonly JoinQueueManager _queueManager = default!; // Corvax-Queue
+        [Dependency] private readonly DiscordAuthManager _discordAuthManager = default!; // Corvax-DiscordAuth
         [Dependency] private readonly IResourceManager _resourceManager = default!;
         [Dependency] private readonly IReplayLoadManager _replayLoad = default!;
         [Dependency] private readonly ILogManager _logManager = default!;
@@ -125,6 +129,7 @@ namespace Content.Client.Entry
             _prototypeManager.RegisterIgnore("ghostRoleRaffleDecider");
             _prototypeManager.RegisterIgnore("gasDeposit"); // Frontier
             _prototypeManager.RegisterIgnore("pointOfInterest"); // Frontier: worldgen-related, server-only
+            _prototypeManager.RegisterIgnore("stationGoal");
 
             _componentFactory.GenerateNetIds();
             _adminManager.Initialize();
@@ -171,6 +176,8 @@ namespace Content.Client.Entry
             _voteManager.Initialize();
             _userInterfaceManager.SetDefaultTheme("SS14DefaultTheme");
             _userInterfaceManager.SetActiveTheme(_configManager.GetCVar(CVars.InterfaceTheme));
+            _queueManager.Initialize(); // Corvax-Queue
+            _discordAuthManager.Initialize(); // Corvax-DiscordAuth
             _documentParsingManager.Initialize();
             _titleWindowManager.Initialize();
 

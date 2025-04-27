@@ -208,7 +208,7 @@ entities:
             116: -6,-9
             117: -5,-9
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: WarnBoxGreyscale
           decals:
             120: -4,-9

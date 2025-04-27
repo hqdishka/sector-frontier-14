@@ -120,6 +120,12 @@
       "name": "pirate"
     },
     {
+      "name": "vip"
+    },
+    {
+      "name": "idvip"
+    },
+    {
       "name": "pirate-inhand-left",
       "directions": 4
     },

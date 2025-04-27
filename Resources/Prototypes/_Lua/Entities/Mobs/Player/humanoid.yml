@@ -1,0 +1,303 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: [ MedicalPodNanotrasen, MedicalPod ]
+  id: MedicalPodFSFCommnanderBravo
+  suffix: ФСФ, Браво, Командир
+  components:
+  - type: StorageFill
+    contents:
+    - id: RandomHumanoidSpawnerFSFCommnanderBravo
+      orGroup: body
+      prob: 1
+  - type: Icon
+    sprite:  _Lua/Structures/Storage/emergency_pod_nt.rsi
+    state: icon
+  - type: Sprite
+    noRot: true
+    sprite: _Lua/Structures/Storage/emergency_pod_nt.rsi
+    layers:
+    - state: base
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: window-closed
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: antenna-unlit
+      shader: unshaded
+    - state: healthanalyzer-unlit
+      shader: unshaded
+      map: ["healthanalyzer"]
+    - state: occupied-unlit
+      shader: unshaded
+      map: ["occupied"]
+
+- type: entity
+  id: RandomHumanoidSpawnerFSFCommnanderBravo
+  categories: [ HideSpawnMenu ]
+  parent: RandomHumanoidSpawnerERTLeaderGamma
+  name: командир рейнджеров браво
+  suffix: ФСФ, Браво
+  components:
+    - type: Sprite
+      sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits/fsf_bravo_commander_hardsuit.rsi
+      state: full
+    - type: RandomHumanoidSpawner
+      settings: FSFCommanderBravoPreset
+
+- type: randomHumanoidSettings
+  id: FSFCommanderBravoPreset
+  parent: EventHumanoidFSF
+  components:
+    - type: AutoImplant
+      implants:
+      - TrackingImplant
+      # - MicroBombImplant
+      - MedicalTrackingImplant
+      - MindShieldImplant
+    - type: GhostTakeoverAvailable
+    - type: GhostRole
+      name: ghost-role-information-fsf-commander-name
+      description: ghost-role-information-fsf-commander-description
+      rules: ghost-role-information-nonantagonist-rules
+      requirements:
+        - !type:DepartmentTimeRequirement
+          department: Medical
+          time: 36000 # 10 hours
+        - !type:DepartmentTimeRequirement
+          department: Security
+          time: 72000 # 20 hours
+        - !type:DepartmentTimeRequirement
+          department: Command
+          time: 36000 # 10 hours
+      raffle:
+        settings: default
+      #job: ERTLeaderGamma
+    - type: Loadout
+      prototypes: [ FSFCommanderBravoGear ]
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstERTLeader
+      - NamesLastERT
+
+- type: entity
+  parent: [ MedicalPodNanotrasen, MedicalPod ]
+  id: MedicalPodFSFSpecialistBravo
+  suffix: ФСФ, Браво, Специалист
+  components:
+  - type: StorageFill
+    contents:
+    - id: RandomHumanoidSpawnerFSFSpecialistBravo
+      orGroup: body
+      prob: 1
+  - type: Icon
+    sprite:  _Lua/Structures/Storage/emergency_pod_nt.rsi
+    state: icon
+  - type: Sprite
+    noRot: true
+    sprite: _Lua/Structures/Storage/emergency_pod_nt.rsi
+    layers:
+    - state: base
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: window-closed
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: antenna-unlit
+      shader: unshaded
+    - state: healthanalyzer-unlit
+      shader: unshaded
+      map: ["healthanalyzer"]
+    - state: occupied-unlit
+      shader: unshaded
+      map: ["occupied"]
+
+- type: entity
+  id: RandomHumanoidSpawnerFSFSpecialistBravo
+  parent: RandomHumanoidSpawnerERTSecurityGamma
+  categories: [ HideSpawnMenu ]
+  name: специалист рейнджеров браво
+  suffix: ФСФ, Браво
+  components:
+    - type: Sprite
+      sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits/fsf_bravo_specialist_hardsuit.rsi
+      state: full
+    - type: RandomHumanoidSpawner
+      settings: FSFSpecialistBravoPreset
+
+- type: randomHumanoidSettings
+  id: FSFSpecialistBravoPreset
+  parent: EventHumanoidFSF
+  components:
+    - type: AutoImplant
+      implants:
+      - TrackingImplant
+      # - MicroBombImplant
+      - MedicalTrackingImplant
+      - MindShieldImplant
+    - type: GhostTakeoverAvailable
+    - type: GhostRole
+      name: ghost-role-information-fsf-specialist-name
+      description: ghost-role-information-fsf-specialist-description
+      rules: ghost-role-information-nonantagonist-rules
+      requirements:
+        - !type:DepartmentTimeRequirement
+          department: Medical
+          time: 14400 # 4 hours
+        - !type:DepartmentTimeRequirement
+          department: Security
+          time: 72000 # 20 hours
+      raffle:
+        settings: default
+      #job: ERTSecurityGamma
+    - type: Loadout
+      prototypes: [ FSFSpecialistBravoGear ]
+
+###CHARLIE
+
+- type: entity
+  parent: [ MedicalPodNanotrasen, MedicalPod ]
+  id: MedicalPodFSFCommnanderCharlie
+  suffix: ФСФ, Чарли, Командир
+  components:
+  - type: StorageFill
+    contents:
+    - id: RandomHumanoidSpawnerFSFCommnanderCharlie
+      orGroup: body
+      prob: 1
+  - type: Icon
+    sprite:  _Lua/Structures/Storage/emergency_pod_nt.rsi
+    state: icon
+  - type: Sprite
+    noRot: true
+    sprite: _Lua/Structures/Storage/emergency_pod_nt.rsi
+    layers:
+    - state: base
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: window-closed
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: antenna-unlit
+      shader: unshaded
+    - state: healthanalyzer-unlit
+      shader: unshaded
+      map: ["healthanalyzer"]
+    - state: occupied-unlit
+      shader: unshaded
+      map: ["occupied"]
+
+- type: entity
+  id: RandomHumanoidSpawnerFSFCommnanderCharlie
+  parent: RandomHumanoidSpawnerERTLeaderGamma
+  categories: [ HideSpawnMenu ]
+  name: командир рейнджеров чарли
+  suffix: ФСФ, Чарли
+  components:
+    - type: Sprite
+      sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits/fsf_charlie_commander_hardsuit.rsi
+      state: full
+    - type: RandomHumanoidSpawner
+      settings: FSFCommanderCharliePreset
+
+- type: randomHumanoidSettings
+  id: FSFCommanderCharliePreset
+  parent: EventHumanoidFSF
+  components:
+    - type: AutoImplant
+      implants:
+      - TrackingImplant
+      # - MicroBombImplant
+      - MedicalTrackingImplant
+      - MindShieldImplant
+    - type: GhostTakeoverAvailable
+    - type: GhostRole
+      name: ghost-role-information-fsf-commander-name
+      description: ghost-role-information-fsf-commander-description
+      rules: ghost-role-information-nonantagonist-rules
+      requirements:
+        - !type:DepartmentTimeRequirement
+          department: Medical
+          time: 36000 # 10 hours
+        - !type:DepartmentTimeRequirement
+          department: Security
+          time: 72000 # 20 hours
+        - !type:DepartmentTimeRequirement
+          department: Command
+          time: 36000 # 10 hours
+      raffle:
+        settings: default
+      #job: ERTLeaderGamma
+    - type: Loadout
+      prototypes: [ FSFCommanderCharlieGear ]
+    - type: RandomMetadata
+      nameSegments:
+      - NamesFirstERTLeader
+      - NamesLastERT
+
+- type: entity
+  parent: [ MedicalPodNanotrasen, MedicalPod ]
+  id: MedicalPodFSFSpecialistCharlie
+  suffix: ФСФ, Чарли, Специалист
+  components:
+  - type: StorageFill
+    contents:
+    - id: RandomHumanoidSpawnerFSFSpecialistCharlie
+      orGroup: body
+      prob: 1
+  - type: Icon
+    sprite:  _Lua/Structures/Storage/emergency_pod_nt.rsi
+    state: icon
+  - type: Sprite
+    noRot: true
+    sprite: _Lua/Structures/Storage/emergency_pod_nt.rsi
+    layers:
+    - state: base
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: window-closed
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: antenna-unlit
+      shader: unshaded
+    - state: healthanalyzer-unlit
+      shader: unshaded
+      map: ["healthanalyzer"]
+    - state: occupied-unlit
+      shader: unshaded
+      map: ["occupied"]
+
+- type: entity
+  id: RandomHumanoidSpawnerFSFSpecialistCharlie
+  parent: RandomHumanoidSpawnerERTSecurityGamma
+  categories: [ HideSpawnMenu ]
+  name: специалист рейнджеров чарли
+  suffix: ФСФ, Чарли
+  components:
+    - type: Sprite
+      sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits/fsf_charlie_specialist_hardsuit.rsi
+      state: full
+    - type: RandomHumanoidSpawner
+      settings: FSFSpecialistCharliePreset
+
+- type: randomHumanoidSettings
+  id: FSFSpecialistCharliePreset
+  parent: EventHumanoidFSF
+  components:
+    - type: AutoImplant
+      implants:
+      - TrackingImplant
+      # - MicroBombImplant
+      - MedicalTrackingImplant
+      - MindShieldImplant
+    - type: GhostTakeoverAvailable
+    - type: GhostRole
+      name: ghost-role-information-fsf-specialist-name
+      description: ghost-role-information-fsf-specialist-description
+      rules: ghost-role-information-nonantagonist-rules
+      requirements:
+        - !type:DepartmentTimeRequirement
+          department: Medical
+          time: 14400 # 4 hours
+        - !type:DepartmentTimeRequirement
+          department: Security
+          time: 72000 # 20 hours
+      raffle:
+        settings: default
+      #job: ERTSecurityGamma
+    - type: Loadout
+      prototypes: [ FSFSpecialistCharlieGear ]

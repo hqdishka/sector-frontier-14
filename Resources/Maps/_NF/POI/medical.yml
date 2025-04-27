@@ -739,7 +739,7 @@ entities:
             1195: -2,-28
             1196: 8,-28
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteLineE
           decals:
             1535: 8,10
@@ -808,7 +808,7 @@ entities:
             1197: -4,-28
             1198: 6,-28
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteLineW
           decals:
             1537: -4,14

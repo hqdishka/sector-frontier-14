@@ -35,6 +35,11 @@
 
 #uplink categoires
 - type: storeCategory
+  id: UplinkConverter
+  name: Конвертер
+  priority: -1
+
+- type: storeCategory
   id: UplinkWeaponry
   name: store-category-weapons
   priority: 0

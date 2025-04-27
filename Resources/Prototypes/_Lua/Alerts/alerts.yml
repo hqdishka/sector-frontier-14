@@ -1,0 +1,51 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: alert
+  id: Pve
+  icons:
+  - sprite: /Textures/_Lua/Interface/Alerts/zone.rsi
+    state: pve
+  name: alerts-pve-name
+  description: alerts-pve-desc
+
+- type: alert
+  id: Pvp
+  icons:
+  - sprite: /Textures/_Lua/Interface/Alerts/zone.rsi
+    state: pvp
+  name: alerts-pvp-name
+  description: alerts-pvp-desc
+
+- type: alert
+  id: Frontier
+  icons:
+  - sprite: /Textures/_Lua/Interface/Alerts/zone.rsi
+    state: frontier
+  name: alerts-frontier-name
+  description: alerts-frontier-desc
+
+- type: alert
+  id: Expedition
+  icons:
+  - sprite: /Textures/_Lua/Interface/Alerts/zone.rsi
+    state: frontier
+  name: alerts-expedition-name
+  description: alerts-expedition-desc
+
+- type: alert
+  id: Nfsd
+  icons:
+  - sprite: /Textures/_Lua/Interface/Alerts/zone.rsi
+    state: nfsd
+  name: alerts-nfsd-name
+  description: alerts-nfsd-desc
+
+- type: alert
+  id: NoFlight
+  icons:
+  - sprite: /Textures/_Lua/Interface/Alerts/zone.rsi
+    state: noflight
+  name: alerts-noflight-name
+  description: alerts-noflight-desc

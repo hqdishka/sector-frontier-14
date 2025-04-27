@@ -2,12 +2,15 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Content.Shared._NF.Bank;
 using Content.Shared.CCVar;
+using Content.Shared.Corvax.TTS;
 using Content.Shared.GameTicking;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Preferences.Loadouts;
 using Content.Shared.Roles;
 using Content.Shared.Traits;
+using Content.Shared._Lua.ERP;
+using Content.Shared.Company;
 using Robust.Shared.Collections;
 using Robust.Shared.Configuration;
 using Robust.Shared.Enums;
@@ -26,7 +29,7 @@ namespace Content.Shared.Preferences
     [Serializable, NetSerializable]
     public sealed partial class HumanoidCharacterProfile : ICharacterProfile
     {
-        private static readonly Regex RestrictedNameRegex = new(@"[^A-Za-z0-9 '\-]");
+        private static readonly Regex RestrictedNameRegex = new(@"[^А-Яа-яёЁ0-9' -]"); // Corvax-Localization
         private static readonly Regex ICNameCaseRegex = new(@"^(?<word>\w)|\b(?<word>\w)(?=\w*$)");
 
         public const int MaxNameLength = 32;
@@ -78,6 +81,7 @@ namespace Content.Shared.Preferences
         /// </summary>
         [DataField]
         public string FlavorText { get; set; } = string.Empty;
+        public EnumERPStatus ERPStatus { get; set; }
 
         /// <summary>
         /// Associated <see cref="SpeciesPrototype"/> for this profile.
@@ -85,8 +89,14 @@ namespace Content.Shared.Preferences
         [DataField]
         public ProtoId<SpeciesPrototype> Species { get; set; } = SharedHumanoidAppearanceSystem.DefaultSpecies;
 
+        /// <summary>
+        /// Associated <see cref="TTSVoicePrototype"/> for this profile.
+        /// </summary>
         [DataField]
-        public int Age { get; set; } = 18;
+        public string Voice { get; set; } = SharedHumanoidAppearanceSystem.DefaultVoice;
+
+        [DataField]
+        public int Age { get; set; } = 20;
 
         [DataField]
         public Sex Sex { get; private set; } = Sex.Male;
@@ -136,10 +146,18 @@ namespace Content.Shared.Preferences
         public PreferenceUnavailableMode PreferenceUnavailable { get; private set; } =
             PreferenceUnavailableMode.SpawnAsOverflow;
 
+        /// <summary>
+        /// The company affiliation of the character
+        /// </summary>
+        [DataField]
+        public string Company { get; private set; } = "None";
+
         public HumanoidCharacterProfile(
             string name,
             string flavortext,
+            int erpStatus,
             string species,
+            string voice, // Corvax-TTS
             int age,
             Sex sex,
             Gender gender,
@@ -150,11 +168,14 @@ namespace Content.Shared.Preferences
             PreferenceUnavailableMode preferenceUnavailable,
             HashSet<ProtoId<AntagPrototype>> antagPreferences,
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
-            Dictionary<string, RoleLoadout> loadouts)
+            Dictionary<string, RoleLoadout> loadouts,
+            string company = "None")
         {
             Name = name;
             FlavorText = flavortext;
+            ERPStatus = (EnumERPStatus)erpStatus;
             Species = species;
+            Voice = voice; // Corvax-TTS
             Age = age;
             Sex = sex;
             Gender = gender;
@@ -166,6 +187,7 @@ namespace Content.Shared.Preferences
             _antagPreferences = antagPreferences;
             _traitPreferences = traitPreferences;
             _loadouts = loadouts;
+            Company = company;
         }
 
         /// <summary>Copy constructor but with overridable references (to prevent useless copies)</summary>
@@ -175,8 +197,8 @@ namespace Content.Shared.Preferences
             HashSet<ProtoId<AntagPrototype>> antagPreferences,
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
             Dictionary<string, RoleLoadout> loadouts)
-            : this(other.Name, other.FlavorText, other.Species, other.Age, other.Sex, other.Gender, other.BankBalance, other.Appearance, other.SpawnPriority,
-                jobPriorities, other.PreferenceUnavailable, antagPreferences, traitPreferences, loadouts)
+            : this(other.Name, other.FlavorText, (int)other.ERPStatus, other.Species, other.Voice, other.Age, other.Sex, other.Gender, other.BankBalance, other.Appearance, other.SpawnPriority,
+                jobPriorities, other.PreferenceUnavailable, antagPreferences, traitPreferences, loadouts, other.Company)
         {
         }
 
@@ -184,7 +206,9 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterProfile(HumanoidCharacterProfile other)
             : this(other.Name,
                 other.FlavorText,
+                (int)other.ERPStatus,
                 other.Species,
+                other.Voice, // Corvax-TTS
                 other.Age,
                 other.Sex,
                 other.Gender,
@@ -195,7 +219,8 @@ namespace Content.Shared.Preferences
                 other.PreferenceUnavailable,
                 new HashSet<ProtoId<AntagPrototype>>(other.AntagPreferences),
                 new HashSet<ProtoId<TraitPrototype>>(other.TraitPreferences),
-                new Dictionary<string, RoleLoadout>(other.Loadouts))
+                new Dictionary<string, RoleLoadout>(other.Loadouts),
+                other.Company)
         {
         }
 
@@ -249,6 +274,13 @@ namespace Content.Shared.Preferences
                 age = random.Next(speciesPrototype.MinAge, speciesPrototype.OldAge); // people don't look and keep making 119 year old characters with zero rp, cap it at middle aged
             }
 
+            // Corvax-TTS-Start
+            var voiceId = random.Pick(prototypeManager
+                .EnumeratePrototypes<TTSVoicePrototype>()
+                .Where(o => CanHaveVoice(o, sex) && !o.SponsorOnly).ToArray()
+            ).ID;
+            // Corvax-TTS-End
+
             var gender = Gender.Epicene;
 
             switch (sex)
@@ -262,6 +294,7 @@ namespace Content.Shared.Preferences
             }
 
             var name = GetName(species, gender);
+
             return new HumanoidCharacterProfile()
             {
                 Name = name,
@@ -269,6 +302,7 @@ namespace Content.Shared.Preferences
                 Age = age,
                 Gender = gender,
                 Species = species,
+                Voice = voiceId, // Corvax-TTS
                 Appearance = HumanoidCharacterAppearance.Random(species, sex),
             };
         }
@@ -281,6 +315,10 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterProfile WithFlavorText(string flavorText)
         {
             return new(this) { FlavorText = flavorText };
+        }
+        public HumanoidCharacterProfile WithERPStatus(EnumERPStatus state)
+        {
+            return new(this) { ERPStatus = state };
         }
 
         public HumanoidCharacterProfile WithAge(int age)
@@ -310,6 +348,12 @@ namespace Content.Shared.Preferences
             return new(this) { Species = species };
         }
 
+        // Corvax-TTS-Start
+        public HumanoidCharacterProfile WithVoice(string voice)
+        {
+            return new(this) { Voice = voice };
+        }
+        // Corvax-TTS-End
 
         public HumanoidCharacterProfile WithCharacterAppearance(HumanoidCharacterAppearance appearance)
         {
@@ -377,6 +421,11 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterProfile WithPreferenceUnavailable(PreferenceUnavailableMode mode)
         {
             return new(this) { PreferenceUnavailable = mode };
+        }
+
+        public HumanoidCharacterProfile WithCompany(string company)
+        {
+            return new(this) { Company = company };
         }
 
         public HumanoidCharacterProfile WithAntagPreferences(IEnumerable<ProtoId<AntagPrototype>> antagPreferences)
@@ -486,12 +535,28 @@ namespace Content.Shared.Preferences
             if (BankBalance != other.BankBalance) return false; // Frontier
             if (PreferenceUnavailable != other.PreferenceUnavailable) return false;
             if (SpawnPriority != other.SpawnPriority) return false;
+            if (Company != other.Company) return false;
             if (!_jobPriorities.SequenceEqual(other._jobPriorities)) return false;
             if (!_antagPreferences.SequenceEqual(other._antagPreferences)) return false;
             if (!_traitPreferences.SequenceEqual(other._traitPreferences)) return false;
             if (!Loadouts.SequenceEqual(other.Loadouts)) return false;
             if (FlavorText != other.FlavorText) return false;
-            return Appearance.MemberwiseEquals(other.Appearance);
+            if (!Appearance.MemberwiseEquals(other.Appearance)) return false;
+
+            // Compare loadouts
+            if (Loadouts.Count != other.Loadouts.Count)
+                return false;
+
+            foreach (var (key, loadout) in Loadouts)
+            {
+                if (!other.Loadouts.TryGetValue(key, out var otherLoadout))
+                    return false;
+
+                if (loadout != otherLoadout)
+                    return false;
+            }
+
+            return true;
         }
 
         public void EnsureValid(ICommonSession session, IDependencyCollection collection)
@@ -546,15 +611,7 @@ namespace Content.Shared.Preferences
 
             if (configManager.GetCVar(CCVars.RestrictedNames))
             {
-                name = Regex.Replace(name, @"[^\u0041-\u005A,\u0061-\u007A,\u00C0-\u00D6,\u00D8-\u00F6,\u00F8-\u00FF,\u0100-\u017F, -]", string.Empty);
-                /*
-                 * 0041-005A  Basic Latin: Uppercase Latin Alphabet
-                 * 0061-007A  Basic Latin: Lowercase Latin Alphabet
-                 * 00C0-00D6  Latin-1 Supplement: Letters I
-                 * 00D8-00F6  Latin-1 Supplement: Letters II
-                 * 00F8-00FF  Latin-1 Supplement: Letters III
-                 * 0100-017F  Latin Extended A: European Latin
-                 */
+                name = RestrictedNameRegex.Replace(name, string.Empty);
             }
 
             if (configManager.GetCVar(CCVars.ICNameCase))
@@ -642,6 +699,14 @@ namespace Content.Shared.Preferences
             Appearance = appearance;
             SpawnPriority = spawnPriority;
 
+            // Check if the company exists, if not set to "None"
+            if (!string.IsNullOrEmpty(Company) &&
+                Company != "None" &&
+                !prototypeManager.HasIndex<CompanyPrototype>(Company))
+            {
+                Company = "None";
+            }
+
             _jobPriorities.Clear();
 
             foreach (var (job, priority) in priorities)
@@ -675,7 +740,21 @@ namespace Content.Shared.Preferences
             {
                 _loadouts.Remove(value);
             }
+
+            // Corvax-TTS-Start
+            prototypeManager.TryIndex<TTSVoicePrototype>(Voice, out var voice);
+            if (voice is null || !CanHaveVoice(voice, Sex))
+                Voice = SharedHumanoidAppearanceSystem.DefaultSexVoice[sex];
+            // Corvax-TTS-End
         }
+
+        // Corvax-TTS-Start
+        // MUST NOT BE PUBLIC, BUT....
+        public static bool CanHaveVoice(TTSVoicePrototype voice, Sex sex)
+        {
+            return voice.RoundStart && sex == Sex.Unsexed || (voice.Sex == sex || voice.Sex == Sex.Unsexed);
+        }
+        // Corvax-TTS-End
 
         /// <summary>
         /// Takes in an IEnumerable of traits and returns a List of the valid traits.

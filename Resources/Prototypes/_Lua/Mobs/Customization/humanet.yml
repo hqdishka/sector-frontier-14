@@ -1,0 +1,636 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: marking
+  id: HumanNewFoxTail
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+          category: Hair
+      fallbackTypes:
+        - !type:CategoryColoring
+          category: FacialHair
+        - !type:SkinColoring
+  sprites:
+  - sprite: _Lua/fox_parts.rsi
+    state: tail_fox_wag_stripes_prime # AdventureTime-Sponsors
+  - sprite: _Lua/fox_parts.rsi
+    state: tail_fox_wag_stripes_second # AdventureTime-Sponsors
+  - sprite: _Lua/fox_parts.rsi
+    state: tail_fox_wag_stripes_third # AdventureTime-Sponsors
+
+# Felinid Ears
+
+- type: marking
+  id: HumanNewEarsBasic
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_ears.rsi
+    state: basic_outer
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_ears.rsi
+    state: basic_inner
+
+- type: marking
+  id: HumanNewEarsCurled
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_ears.rsi
+    state: curled_outer
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_ears.rsi
+    state: curled_inner
+
+- type: marking
+  id: HumanNewEarsDroopy
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_ears.rsi
+    state: droopy_outer
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_ears.rsi
+    state: droopy_inner
+
+- type: marking
+  id: HumanNewEarsFuzzy
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_ears.rsi
+    state: basic_outer
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_ears.rsi
+    state: fuzzy_inner
+
+- type: marking
+  id: HumanNewEarsStubby
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_ears.rsi
+    state: stubby_outer
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_ears.rsi
+    state: stubby_inner
+
+- type: marking
+  id: HumanNewEarsTall
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_ears.rsi
+    state: tall_outer
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_ears.rsi
+    state: tall_inner
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_ears.rsi
+    state: tall_fuzz
+
+- type: marking
+  id: HumanNewEarsTorn
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_ears.rsi
+    state: torn_outer
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_ears.rsi
+    state: torn_inner
+
+- type: marking
+  id: HumanNewEarsWide
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_ears.rsi
+    state: wide_outer
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_ears.rsi
+    state: wide_inner
+
+# Felinid Tails
+
+- type: marking
+  id: HumanNewTailBasic
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_tails.rsi
+    state: basic_tail_tip
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_tails.rsi
+    state: basic_tail_stripes_even
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_tails.rsi
+    state: basic_tail_stripes_odd
+
+- type: marking
+  id: HumanNewTailBasicWithBow
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_tails.rsi
+    state: basic_tail_tip
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_tails.rsi
+    state: basic_tail_stripes_even
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_tails.rsi
+    state: basic_tail_stripes_odd
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_tails.rsi
+    state: basic_bow
+
+- type: marking
+  id: HumanNewTailBasicWithBell
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_tails.rsi
+    state: basic_tail_tip
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_tails.rsi
+    state: basic_tail_stripes_even
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_tails.rsi
+    state: basic_tail_stripes_odd
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_tails.rsi
+    state: basic_bell
+
+- type: marking
+  id: HumanNewTailBasicWithBowAndBell
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_tails.rsi
+    state: basic_tail_tip
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_tails.rsi
+    state: basic_tail_stripes_even
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_tails.rsi
+    state: basic_tail_stripes_odd
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_tails.rsi
+    state: basic_bow
+  - sprite: Nyanotrasen/Mobs/Customization/felinid_tails.rsi
+    state: basic_bell
+
+- type: marking
+  id: HumanNewFluffyTailRings
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+  - sprite: _DV/Mobs/Customization/Felinid/felinid_tails.rsi
+    state: Felinid_fluffy_tail_full
+  - sprite: _DV/Mobs/Customization/Felinid/felinid_tails.rsi
+    state: felinid_fluffy_tail_rings
+
+- type: marking
+  id: HumanNewFluffyTail
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+  - sprite: _DV/Mobs/Customization/Felinid/felinid_tails.rsi
+    state: Felinid_fluffy_tail_full
+
+# Tail Markings
+- type: marking
+  id: HumanNewTail
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp-fade
+
+- type: marking
+  id: HumanNewTailTip
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp-tip
+
+- type: marking
+  id: HumanNewTailWag
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp_wag
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp_wag-tip #fade
+
+- type: marking
+  id: HumanNewTailWagTip
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp_wag
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp_wag-tip
+
+- type: marking
+  id: HumanNewTailAlt
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp_alt
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp_alt-fade
+
+- type: marking
+  id: HumanNewTailAltTip
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp_alt
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: vulp_alt-tip
+
+- type: marking
+  id: HumanNewTailLong
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: long
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: long-tip
+
+- type: marking
+  id: HumanNewTailFox
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox-fade
+
+- type: marking
+  id: HumanNewTailFoxTip
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox-tip
+
+- type: marking
+  id: HumanNewTailFoxWag
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox_wag
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox_wag-fade
+
+- type: marking
+  id: HumanNewTailFoxWagTip
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox_wag
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox_wag-tip
+
+- type: marking
+  id: HumanNewTailBushy
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: bushfluff
+
+- type: marking
+  id: HumanNewTailBushyWag
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: bushfluff_wag
+
+- type: marking
+  id: HumanNewTailCoyote
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: coyote
+
+- type: marking
+  id: HumanNewTailCoyoteWag
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: coyote_wag
+
+- type: marking
+  id: HumanNewTailCorgiWag
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: corgi_wag
+
+- type: marking
+  id: HumanNewTailHusky
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: husky-inner
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: husky-outer
+
+- type: marking
+  id: HumanNewTailKitsune
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _Lua/tails32x32.rsi
+      state: kitsune_primary
+    - sprite: _Lua/tails32x32.rsi
+      state: kitsune_secondary
+
+- type: marking
+  id: HumanNewTailFluffy2
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _Lua/tails32x32.rsi
+      state: fluffy
+
+- type: marking
+  id: HumanNewTailShadowkinMedium
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _Lua/tails32x32.rsi
+      state: shadowkin_medium
+
+- type: marking
+  id: HumanNewTailShadowkinShorter
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _Lua/tails32x32.rsi
+      state: shadowkin_shorter
+
+- type: marking
+  id: HumanNewTailMaw
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _Lua/tails32x32.rsi
+      state: maw
+
+- type: marking
+  id: HumanNewSharkEar
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _Lua/tails32x32.rsi
+      state: datashark_ears
+    - sprite: _Lua/tails32x32.rsi
+      state: datashark_ears_inner
+
+- type: marking
+  id: HumanNewTailHuskyAlt
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: husky
+
+- type: marking
+  id: HumanNewTailFox2
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox2
+
+- type: marking
+  id: HumanNewTailFox3
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox3
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fox3-tip
+
+- type: marking
+  id: HumanNewTailFennec
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fennec
+
+- type: marking
+  id: HumanNewTailOtie
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: otie
+
+- type: marking
+  id: HumanNewTailFluffy
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fluffy
+
+- type: marking
+  id: HumanNewTailDalmatianWag
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: dalmatian_wag
+
+# Ears Markings
+- type: marking
+  id: HumanNewEar
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: vulp
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: vulp-inner
+
+- type: marking
+  id: HumanNewEarFade
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: vulp
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: vulp-fade
+
+- type: marking
+  id: HumanNewEarSharp
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: vulp
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: vulp-sharp
+
+- type: marking
+  id: HumanNewEarJackal
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: jackal
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: jackal-inner
+
+- type: marking
+  id: HumanNewEarTerrier
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: terrier
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: terrier-inner
+
+- type: marking
+  id: HumanNewEarWolf
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: wolf
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: wolf-inner
+
+- type: marking
+  id: HumanNewEarFennec
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: fennec
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: fennec-inner
+
+- type: marking
+  id: HumanNewEarFox
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: fox
+
+- type: marking
+  id: HumanNewEarOtie
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: otie
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: otie-inner
+
+- type: marking
+  id: HumanNewEarTajaran
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: msai
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: msai-inner
+
+- type: marking
+  id: HumanNewEarShock
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: shock
+
+- type: marking
+  id: HumanNewEarCoyote
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: coyote
+
+- type: marking
+  id: HumanNewEarDalmatian
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
+      state: dalmatian

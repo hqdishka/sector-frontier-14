@@ -2,8 +2,8 @@
   id: Prowler
   parent: BaseVessel
   name: NSF Prowler
-  description: A medium-sized patrol craft, the Prowler class is a dedicated deep space pursuit vessel with an advanced sensor suite. 
-  price: 42000 #Appraises on purchase at ~35000. 20% markup applied due to the presence of the radar. 
+  description: A medium-sized patrol craft, the Prowler class is a dedicated deep space pursuit vessel with an advanced sensor suite.
+  price: 42000 #Appraises on purchase at ~35000. 20% markup applied due to the presence of the radar.
   category: Medium
   group: Security
   access: Sergeant
@@ -13,6 +13,15 @@
   - Patrol
   engine:
   - AME
+  addComponents:
+    - type: AutoDelete
+      distanceToCheck: 40
+      delayToDelete: 2400
+      delayToCheck: 60
+      isHumanoidNear: True
+    - type: IFF
+      color: "#009954"
+    - type: NanotrasenFtl
 
 - type: gameMap
   id: Prowler

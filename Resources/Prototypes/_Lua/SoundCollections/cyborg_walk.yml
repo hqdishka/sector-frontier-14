@@ -1,0 +1,9 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: soundCollection
+  id: FootstepBorgSec
+  files:
+  - /Audio/_Lua/Effects/Footsteps/robotic1.ogg
+  - /Audio/_Lua/Effects/Footsteps/robotic2.ogg

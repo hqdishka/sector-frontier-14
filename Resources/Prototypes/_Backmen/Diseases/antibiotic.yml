@@ -1,0 +1,58 @@
+- type: reagent
+  id: Antibiotic
+  name: reagent-name-antibiotic
+  desc: reagent-desc-antibiotic
+  physicalDesc: reagent-physical-desc-fibrous
+  flavor: bitter
+  color: "#c8ff69"
+  recognizable: true
+  boilingPoint: 147.0
+  meltingPoint: -11.0
+
+# - type: reaction
+#   id: Antibiotic
+#   reactants:
+#     Penicillum:
+#       amount: 1
+#     Water:
+#       amount: 1
+#   products:
+#     Antibiotic: 2
+
+- type: entity
+  name: таблетка
+  suffix: Антибиотик 1u
+  parent: Pill
+  id: PillAntibiotic
+  description: Это не свеча.
+  components:
+  - type: Pill
+    pillType: 4
+  - type: Sprite
+    state: pill5
+  - type: Label
+    currentLabel: antibiotic 1u
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Antibiotic
+          Quantity: 1
+
+- type: entity
+  name: баночка для таблеток
+  parent: PillCanister
+  id: PillCanisterAntibiotic
+  suffix: Антибиотик 1u, 7
+  description: На этикетке написано "Антибиотик"
+  components:
+  - type: Label
+    currentLabel: antibiotic 1u
+  - type: StorageFill
+    contents:
+    - id: PillAntibiotic
+      amount: 7
+  - type: StaticPrice
+#    price: 2500
+    price: 100

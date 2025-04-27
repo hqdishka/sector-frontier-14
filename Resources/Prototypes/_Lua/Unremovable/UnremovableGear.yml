@@ -1,0 +1,408 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+# - type: entity
+#   parent: ClothingHeadHatSyndieMAA
+#   id: ClothingHeadHatSyndieMAALW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingUniformJumpsuitSyndieFormalNF
+#   id: ClothingUniformJumpsuitSyndieFormalNFLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingShoesBootsCombat
+#   id: ClothingShoesBootsCombatLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingHandsGlovesColorBlackPython
+#   id: ClothingHandsGlovesColorBlackPythonLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingNeckScarfStripedSyndieRed
+#   id: ClothingNeckScarfStripedSyndieRedLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# # Continue with the rest of the list...
+# - type: entity
+#   parent: ClothingMaskGasSyndicate
+#   id: ClothingMaskGasSyndicateLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingOuterCoatSyndieCapArmored
+#   id: ClothingOuterCoatSyndieCapArmoredLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingHeadHatHardhatRed
+#   id: ClothingHeadHatHardhatRedLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingUniformJumpsuitChiefEngineerSyndieNF
+#   id: ClothingUniformJumpsuitChiefEngineerSyndieNFLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# # Continue with the rest of the list...
+# - type: entity
+#   parent: ClothingHandsGlovesColorBlackShotgun
+#   id: ClothingHandsGlovesColorBlackShotgunLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingBeltUtility
+#   id: ClothingBeltUtilityLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingOuterArmorBasic
+#   id: ClothingOuterArmorBasicLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingHeadHatSyndie
+#   id: ClothingHeadHatSyndieLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# # Continue with the rest of the list...
+# - type: entity
+#   parent: ClothingUniformJumpsuitParamedicSyndieNF
+#   id: ClothingUniformJumpsuitParamedicSyndieNFLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingHandsGlovesCombat
+#   id: ClothingHandsGlovesCombatLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingBeltMedical
+#   id: ClothingBeltMedicalLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingNeckStethoscope
+#   id: ClothingNeckStethoscopeLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# # Continue with the rest of the list...
+# - type: entity
+#   parent: ClothingOuterCoatAMG
+#   id: ClothingOuterCoatAMGLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingUniformJumpsuitRecruitSyndieNF
+#   id: ClothingUniformJumpsuitRecruitSyndieNFLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingHandsGlovesColorBlackLaserPistol
+#   id: ClothingHandsGlovesColorBlackLaserPistolLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingEyesGlassesSunglasses
+#   id: ClothingEyesGlassesSunglassesLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# # Continue with the rest of the list...
+# - type: entity
+#   parent: ClothingBeltMilitaryWebbing
+#   id: ClothingBeltMilitaryWebbingLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingMaskNeckGaiter
+#   id: ClothingMaskNeckGaiterLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingHeadHelmetSwatSyndicate
+#   id: ClothingHeadHelmetSwatSyndicateLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingUniformJumpsuitOperative
+#   id: ClothingUniformJumpsuitOperativeLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# # Continue with the rest of the list...
+# - type: entity
+#   parent: ClothingHandsGlovesColorBlackSMG
+#   id: ClothingHandsGlovesColorBlackSMGLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingOuterArmorBulletproof
+#   id: ClothingOuterArmorBulletproofLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingHeadHelmetBombSuitSyndie
+#   id: ClothingHeadHelmetBombSuitSyndieLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingUniformJumpsuitPyjamaSyndicateRed
+#   id: ClothingUniformJumpsuitPyjamaSyndicateRedLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# # Continue with the rest of the list...
+# - type: entity
+#   parent: ClothingHandsGlovesColorBlackChinaLake
+#   id: ClothingHandsGlovesColorBlackChinaLakeLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingOuterSuitBombSyndie
+#   id: ClothingOuterSuitBombSyndieLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingHandsGlovesColorBlackPistol
+#   id: ClothingHandsGlovesColorBlackPistolLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingOuterArmorBasicSlim
+#   id: ClothingOuterArmorBasicSlimLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# # Continue with the rest of the list...
+# - type: entity
+#   parent: SyndicateVictimInsaneGear
+#   id: SyndicateVictimInsaneGearLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingOuterHospitalGown
+#   id: ClothingOuterHospitalGownLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingMaskMuzzle
+#   id: ClothingMaskMuzzleLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingNeckHeadphones
+#   id: ClothingNeckHeadphonesLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# # Continue with the rest of the list...
+# - type: entity
+#   parent: BedsheetSyndie
+#   id: BedsheetSyndieLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingOuterHardsuitSyndieEliteUnremoveable
+#   id: ClothingOuterHardsuitSyndieEliteUnremoveableLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingHeadHelmetHardsuitSyndieEliteUnremoveable
+#   id: ClothingHeadHelmetHardsuitSyndieEliteUnremoveableLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingHandsGlovesColorBlackAK
+#   id: ClothingHandsGlovesColorBlackAKLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# # Continue with the rest of the list...
+# - type: entity
+#   parent: ClothingShoesBootsMagSyndie
+#   id: ClothingShoesBootsMagSyndieLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingOuterHardsuitSyndieBloodRedUnremoveable
+#   id: ClothingOuterHardsuitSyndieBloodRedUnremoveableLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingHeadHelmetHardsuitSyndieUnremoveable
+#   id: ClothingHeadHelmetHardsuitSyndieUnremoveableLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingShoesBootsWork
+#   id: ClothingShoesBootsWorkLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# # Continue with the rest of the list...
+# - type: entity
+#   parent: SyndicateNavalMimeGear
+#   id: SyndicateNavalMimeGearLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingHeadHatBeret
+#   id: ClothingHeadHatBeretLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingMaskMime
+#   id: ClothingMaskMimeLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingUniformJumpsuitMime
+#   id: ClothingUniformJumpsuitMimeLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# # Continue with the rest of the list...
+# - type: entity
+#   parent: ClothingEyesHudSyndicate
+#   id: ClothingEyesHudSyndicateLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingHeadHatHoodWinterSyndieUnremoveable
+#   id: ClothingHeadHatHoodWinterSyndieUnremoveableLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingHandsGlovesColorBlackSprayNozzle
+#   id: ClothingHandsGlovesColorBlackSprayNozzleLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingShoesBootsWinterSyndicate
+#   id: ClothingShoesBootsWinterSyndicateLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# # Continue with the rest of the list...
+# - type: entity
+#   parent: ClothingOuterWinterSyndie
+#   id: ClothingOuterWinterSyndieLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingHeadHatHoodBioArmoredSyndicate
+#   id: ClothingHeadHatHoodBioArmoredSyndicateLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable
+
+# - type: entity
+#   parent: ClothingOuterBioArmoredSyndicate
+#   id: ClothingOuterBioArmoredSyndicateLW
+#   suffix: Несъемный
+#   components:
+#     - type: Unremoveable

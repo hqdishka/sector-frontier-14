@@ -7,7 +7,7 @@
 # Discord: Tych0
 
 # Shuttle Notes:
-# Keeping watch for Ragnarök. As soon as someone adds ship horns they better make a Gjallarhorn for this thing. 
+# Keeping watch for Ragnarök. As soon as someone adds ship horns they better make a Gjallarhorn for this thing.
 - type: vessel
   id: Heimdall
   name: NSF Heimdall
@@ -23,6 +23,15 @@
   - Detective
   engine:
   - Plasma
+  addComponents:
+    - type: AutoDelete
+      distanceToCheck: 40
+      delayToDelete: 2400
+      delayToCheck: 60
+      isHumanoidNear: True
+    - type: IFF
+      color: "#009954"
+    - type: NanotrasenFtl
 
 - type: gameMap
   id: Heimdall

@@ -15,7 +15,7 @@ namespace Content.Server.Database.Migrations.Sqlite
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "8.0.0");
+            modelBuilder.HasAnnotation("ProductVersion", "9.0.1");
 
             modelBuilder.Entity("Content.Server.Database.Admin", b =>
                 {
@@ -264,8 +264,7 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("expiration_time");
 
-                    b.Property<DateTime?>("LastEditedAt")
-                        .IsRequired()
+                    b.Property<DateTime>("LastEditedAt")
                         .HasColumnType("TEXT")
                         .HasColumnName("last_edited_at");
 
@@ -393,8 +392,7 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("expiration_time");
 
-                    b.Property<DateTime?>("LastEditedAt")
-                        .IsRequired()
+                    b.Property<DateTime>("LastEditedAt")
                         .HasColumnType("TEXT")
                         .HasColumnName("last_edited_at");
 
@@ -788,6 +786,15 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("char_name");
 
+                    b.Property<string>("Company")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("company");
+
+                    b.Property<int>("ERPStatus")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("erpstatus");
+
                     b.Property<string>("EyeColor")
                         .IsRequired()
                         .HasColumnType("TEXT")
@@ -857,6 +864,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("species");
+
+                    b.Property<string>("Voice")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("voice");
 
                     b.HasKey("Id")
                         .HasName("PK_profile");

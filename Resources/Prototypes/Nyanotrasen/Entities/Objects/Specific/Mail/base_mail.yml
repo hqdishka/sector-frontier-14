@@ -4,6 +4,8 @@
   id: BaseMail
   name: mail-item-name-unaddressed
   components:
+  - type: TimedDespawn #lua
+    lifetime: 1500
   - type: Item
 #    size: Normal # Frontier
     storedRotation: -90

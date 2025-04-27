@@ -1,0 +1,40 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: job
+  id: OutpostTypanMedic
+  name: job-name-typan-medic
+  playTimeTracker: JobOutpostTypanMedic
+  description: Медик из далёкого космоса.
+  startingGear: SyndicateParamedic
+  icon: "JobIconSyndicateParamedic"
+  supervisors: job-supervisors-typan-telecommunications-officer
+  canBeAntag: false
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobChemist
+      time: 6000
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 18000
+  access:
+  - SyndicateAgent
+  - NuclearOperative
+  accessGroups:
+  - AllAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ DeathAcidifierImplantLWTypan ]
+
+- type: startingGear
+  id: SyndicateParamedic
+  equipment:
+    eyes: ClothingEyesHudSyndicateAgentOutpostTypan
+    ears: ClothingHeadsetAltOutpostTypan
+    jumpsuit: ClothingUniformJumpsuitParamedicSyndie
+    outerClothing: ClothingOuterMedOutpostTypan
+    shoes: ClothingShoesBootsCombat
+    id: MedicalPDASyndi
+    back: ClothingBackpackSyndicateFilled
+    belt: ClothingBeltMedicalFilled

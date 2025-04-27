@@ -1,0 +1,37 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: vessel
+  id: TYPioneer
+  name: TY Pioneer
+  description: Корабль для секретных заданий и конспирации
+  price: 18500
+  category: Small
+  group: Typan
+  shuttlePath: /Maps/_Lua/Shuttles/Typan/pioneer.yml
+  addComponents:
+    - type: AutoDelete
+      distanceToCheck: 40
+      delayToDelete: 2400
+      delayToCheck: 60
+      isHumanoidNear: True
+    - type: IFF
+      color: "#990816"
+    - type: NanotrasenFtl
+    - type: TypanFtl
+
+- type: gameMap
+  id: TYPioneer
+  mapName: 'TY Pioneer'
+  mapPath: /Maps/_Lua/Shuttles/Typan/pioneer.yml
+  minPlayers: 0
+  stations:
+    TYPioneer:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'TY Pioneer {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+            prefixCreator: '14'

@@ -65,6 +65,11 @@ public sealed partial class JukeboxMenu : FancyWindow
         SetPlayPauseButton(_audioSystem.IsPlaying(_audio), force: true);
     }
 
+    public void SetMenuTitle(string menuTitle)
+    {
+        Title = Loc.GetString(menuTitle);
+    }
+
     public JukeboxMenu(AudioSystem audioSystem)
     {
         _audioSystem = audioSystem;

@@ -1,0 +1,8 @@
+- type: entity
+  parent: BaseC2ContrabandUnredeemable
+  id: BaseC2ContrabandMercenary
+  abstract: true
+  components:
+  - type: Contraband
+    severity: Class2Restricted
+    allowedDepartments: [ PMC, Security, Command, CentralCommand ]

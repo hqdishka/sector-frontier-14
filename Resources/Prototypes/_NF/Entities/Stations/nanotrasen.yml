@@ -15,6 +15,58 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Transform
+  - type: AsteroidSector
+    enabled: true
+  - type: PirateSector
+    enabled: true
+  - type: MercenarySector
+    enabled: true
+  - type: TypanSector
+    enabled: true
+
+- type: entity
+  id: StandardTypanVessel
+  parent:
+    - BaseStation
+    - BaseStationCargo
+    - BaseStationJobsSpawning
+    - BaseStationRecords
+    - BaseStationAlertLevels
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Transform
+
+- type: entity
+  id: StandardAsteroidOutpost
+  parent:
+    - BaseStation
+    - BaseStationCargo
+    - BaseStationSiliconLawFrontierShips
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Transform
+
+- type: entity
+  id: StandardPiratesVessel
+  parent:
+    - BaseStation
+    - BaseStationJobsSpawning
+    - BaseStationRecords
+    - BaseStationAlertLevels
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Transform
+
+- type: entity
+  id: StandardMercenaryVessel
+  parent:
+    - BaseStation
+    - BaseStationJobsSpawning
+    - BaseStationRecords
+    - BaseStationAlertLevels
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Transform
 
 - type: entity
   id: StandardFrontierOutpost

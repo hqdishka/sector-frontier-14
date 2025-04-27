@@ -1,0 +1,30 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  id: LockerSyndicateSalvageSpecialistFilled
+  suffix: Filled
+  parent: LockerSyndicate
+  components:
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:NestedSelector
+          tableId: LockerFillTypanSalvage
+
+- type: entityTable
+  id: LockerFillTypanSalvage
+  table: !type:AllSelector
+    children:
+    - id: ClothingEyesGlassesMeson # Frontier
+    - id: ClothingBeltUtilityEngineering # Frontier
+    - id: SurvivalKnife
+    - id: HandheldGPSBasic # Frontier
+    - id: RadioHandheldNF
+    - id: OreBag
+    - id: BoxDispenserFlare # Frontier
+    - id: MiningDrill # Frontier
+    - id: WeaponProtoKineticAccelerator # Frontier
+    - id: ClothingShoesBootsMagSyndie
+    - id: ClothingOuterHardsuitSyndie
+    - id: AirTankFilled

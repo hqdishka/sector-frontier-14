@@ -174,6 +174,12 @@ public sealed partial class MarkingSet
                 {
                     toRemove.Add((category, marking.MarkingId));
                 }
+
+                if (prototype.SpeciesBlacklist != null && prototype.SpeciesBlacklist.Contains(species))
+                {
+                    toRemove.Add((category, marking.MarkingId));
+                    continue;
+                }
             }
         }
 

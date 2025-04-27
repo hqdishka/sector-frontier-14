@@ -76,6 +76,12 @@ namespace Content.Shared.Humanoid.Markings
                 {
                     continue;
                 }
+
+                if (marking.SpeciesBlacklist != null && marking.SpeciesBlacklist.Contains(species))
+                {
+                    continue;
+                }
+
                 res.Add(key, marking);
             }
 
@@ -136,6 +142,11 @@ namespace Content.Shared.Humanoid.Markings
                 }
 
                 if (marking.SpeciesRestrictions != null && !marking.SpeciesRestrictions.Contains(species))
+                {
+                    continue;
+                }
+
+                if (marking.SpeciesBlacklist != null && marking.SpeciesBlacklist.Contains(species))
                 {
                     continue;
                 }
@@ -215,6 +226,11 @@ namespace Content.Shared.Humanoid.Markings
                 return false;
             }
 
+            if (prototype.SpeciesBlacklist != null && prototype.SpeciesBlacklist.Contains(species))
+            {
+                return false;
+            }
+
             if (prototype.SexRestriction != null && prototype.SexRestriction != sex)
             {
                 return false;
@@ -237,6 +253,11 @@ namespace Content.Shared.Humanoid.Markings
 
             if (prototype.SpeciesRestrictions != null &&
                 !prototype.SpeciesRestrictions.Contains(species))
+            {
+                return false;
+            }
+
+            if (prototype.SpeciesBlacklist != null && prototype.SpeciesBlacklist.Contains(species))
             {
                 return false;
             }

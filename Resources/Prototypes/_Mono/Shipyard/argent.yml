@@ -1,0 +1,49 @@
+# Author Info
+# GitHub: starch70
+# Discord: _starch_
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Argent
+  parent: BaseVessel
+  name: NT-SFS Argent
+  description: A retired frigate gutted out and refurbished for cargo transport.
+  price: 48500
+  category: Medium
+  group: Shipyard
+  shuttlePath: /Maps/_Mono/Shuttles/argent.yml
+  guidebookPage: ShipyardArgent
+  class:
+  - Cargo
+  engine:
+  - Uranium
+  addComponents:
+    - type: AutoDelete
+      distanceToCheck: 40
+      delayToDelete: 2400
+      delayToCheck: 60
+      isHumanoidNear: True
+    - type: IFF
+      color: "#ffffff"
+    - type: NanotrasenFtl
+
+- type: gameMap
+  id: Argent
+  mapName: 'NT-SFS Argent'
+  mapPath: /Maps/_Mono/Shuttles/argent.yml
+  minPlayers: 0
+  stations:
+    Argent:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Argent {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

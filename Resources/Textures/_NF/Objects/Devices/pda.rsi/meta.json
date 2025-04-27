@@ -273,6 +273,30 @@
       "name": "pda-doc"
     },
     {
+      "name": "pda-cburn"
+    },
+    {
+      "name": "pda-guard"
+    },
+    {
+      "name": "pda-investigator"
+    },
+    {
+      "name": "pda-pathologist"
+    },
+    {
+      "name": "pda-seniorminer"
+    },
+    {
+      "name": "pda-seniorservice"
+    },
+    {
+      "name": "pda-surgeon"
+    },
+    {
+      "name": "pda-vip"
+    },
+    {
       "name": "equipped-IDCARD",
       "directions": 4
     }

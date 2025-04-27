@@ -2141,6 +2141,7 @@
   id: VendingMachinePride
   name: Pride-O-Mat
   description: A vending machine containing pride.
+  categories: [HideSpawnMenu]
   components:
   - type: VendingMachine
     pack: PrideDrobeInventory

@@ -12,8 +12,8 @@
   - type: Item
     size: Small
   - type: CartridgeAmmo
-    proto: BulletRocket
     deleteOnSpawn: true
+    proto: BulletRocket
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     state: rpg
@@ -32,8 +32,8 @@
     - type: Item
       size: Small
     - type: CartridgeAmmo
-      proto: BulletWeakRocket
       deleteOnSpawn: true
+      proto: BulletWeakRocket
     - type: Sprite
       sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
       state: frag
@@ -61,6 +61,7 @@
   parent: BaseGrenade
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletGrenadeBaton
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
@@ -78,6 +79,7 @@
   parent: BaseGrenade
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletGrenadeBlast
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
@@ -95,6 +97,7 @@
   parent: BaseGrenade
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletGrenadeFlash
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
@@ -112,6 +115,7 @@
   parent: BaseGrenade
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletGrenadeFrag
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
@@ -129,6 +133,7 @@
   parent: BaseGrenade
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletGrenadeEMP
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
@@ -166,8 +171,8 @@
   parent: BaseCannonBall
   components:
   - type: CartridgeAmmo
-    proto: BulletCannonBall
     deleteOnSpawn: true
+    proto: BulletCannonBall
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     state: ball
@@ -179,8 +184,8 @@
   parent: BaseCannonBall
   components:
   - type: CartridgeAmmo
-    proto: PelletGrapeshotSpread
     deleteOnSpawn: true
+    proto: PelletGrapeshotSpread
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     state: grapeshot
@@ -192,8 +197,8 @@
   parent: BaseCannonBall
   components:
   - type: CartridgeAmmo
-    proto: PelletGlassSpread
     deleteOnSpawn: true
+    proto: PelletGlassSpread
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     state: glassshot

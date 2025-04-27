@@ -186,7 +186,7 @@ entities:
             1561: 22,10
             1562: 20,10
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BotGreyscale
           decals:
             97: 32,25
@@ -843,7 +843,7 @@ entities:
             197: 1,45
             199: 2,31
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteLineE
           decals:
             96: 16,21
@@ -2291,7 +2291,7 @@ entities:
             903: 6,2
             906: 10,2
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: StandClearGreyscale
           decals:
             168: 26,7

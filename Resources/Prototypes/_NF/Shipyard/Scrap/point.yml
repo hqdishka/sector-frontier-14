@@ -2,7 +2,7 @@
   id: Point
   parent: BaseVessel
   name: SV Point
-  description: Two wrecks welded together that are somehow capable of research. 
+  description: Two wrecks welded together that are somehow capable of research.
   price: 16100
   category: Small
   group: Scrap
@@ -13,6 +13,15 @@
   - Science
   engine:
   - Plasma
+  addComponents:
+    - type: AutoDelete
+      distanceToCheck: 40
+      delayToDelete: 2400
+      delayToCheck: 60
+      isHumanoidNear: True
+    - type: IFF
+      color: "#ffffff"
+    - type: NanotrasenFtl
 
 - type: gameMap
   id: Point

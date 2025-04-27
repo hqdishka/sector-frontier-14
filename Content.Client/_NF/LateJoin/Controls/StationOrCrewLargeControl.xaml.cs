@@ -24,6 +24,7 @@ public sealed partial class StationOrCrewLargeControl : PickerControl
 
         StationButton.OnPressed += StationButtonOnOnPressed;
         CrewButton.OnPressed += CrewButtonOnOnPressed;
+        CrewButton.Visible = false; //Lua disable Crew
         UpdateUi(_gameTicker.StationJobInformationList);
     }
 

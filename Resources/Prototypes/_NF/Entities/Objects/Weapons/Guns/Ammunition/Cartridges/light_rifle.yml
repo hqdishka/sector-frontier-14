@@ -4,6 +4,7 @@
   parent: BaseCartridgeLightRifle
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletLightRifleRubber
   - type: Sprite
     layers:

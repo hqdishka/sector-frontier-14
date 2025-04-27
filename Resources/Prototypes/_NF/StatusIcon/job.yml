@@ -27,8 +27,8 @@
   parent: JobIcon
   id: JobIconMercenary
   icon:
-    sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
-    state: mercenary
+    sprite: /Textures/_Lua/Interface/Misc/job_icons.rsi
+    state: Mercenary
   jobName: job-name-mercenary
 
 - type: jobIcon

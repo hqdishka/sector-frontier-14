@@ -1,0 +1,48 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: ComputerGunneryConsoleFlatpack
+  name: упакованная консоль управления огнём
+  description: Упакованная консоль управления огнём для наведения и управления огнём оружия, обеспечивающий точное прицеливание и стрельбу.
+  components:
+  - type: Flatpack
+    entity: ComputerGunneryConsole
+  - type: StaticPrice
+    price: 250
+  - type: Sprite
+    sprite: _Lua/Flatpack/flatpack.rsi
+    layers:
+    - state: ship_weapon
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: GunneryServerFlatpack
+  name: упакованный сервер управления огнём
+  description: Упакованный сервер управления огнём для наведения и управления огнём оружия установленного на шаттле.
+  components:
+  - type: Flatpack
+    entity: GunneryServer
+  - type: StaticPrice
+    price: 250
+  - type: Sprite
+    sprite: _Lua/Flatpack/flatpack.rsi
+    layers:
+    - state: ship_weapon
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: MachineFTLDrive600Flatpack
+  name: упакованный FSS-600 блюспейс двигатель
+  description: Упакованный FSS-600 блюспейс двигатель который увеличивает дальность сверхсветового перемещения корабля до 600 метров
+  components:
+  - type: Flatpack
+    entity: MachineFTLDrive600
+  - type: StaticPrice
+    price: 250
+  - type: Sprite
+    sprite: _Lua/Flatpack/flatpack.rsi
+    layers:
+    - state: ship_weapon

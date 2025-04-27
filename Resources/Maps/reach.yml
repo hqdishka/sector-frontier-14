@@ -258,7 +258,7 @@ entities:
             71: 4,1
             86: 12,1
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteCornerNe
           decals:
             360: 19,1
@@ -277,7 +277,7 @@ entities:
             69: 2,1
             87: 10,1
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteCornerNw
           decals:
             361: 14,5
@@ -292,7 +292,7 @@ entities:
           decals:
             81: 12,-3
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteCornerSe
           decals:
             364: 19,-1
@@ -307,7 +307,7 @@ entities:
           decals:
             68: 2,-1
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteCornerSw
           decals:
             363: 14,-1
@@ -327,7 +327,7 @@ entities:
           decals:
             94: 4,-3
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteInnerNe
           decals:
             374: 16,1
@@ -373,7 +373,7 @@ entities:
             82: 12,-2
             83: 12,-1
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteLineE
           decals:
             370: 16,4
@@ -396,7 +396,7 @@ entities:
             92: 6,-3
             93: 5,-3
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteLineN
           decals:
             373: 17,1
@@ -417,7 +417,7 @@ entities:
             411: 5,-3
             412: 11,-3
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteLineS
           decals:
             365: 18,-1
@@ -443,7 +443,7 @@ entities:
           decals:
             57: -2,-8
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteLineW
           decals:
             367: 14,1
@@ -890,7 +890,7 @@ entities:
           decals:
             112: 12,0
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: WarnLineGreyscaleE
           decals:
             377: 19,0
@@ -911,12 +911,12 @@ entities:
             241: 3,5
             242: 0,5
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: WarnLineGreyscaleN
           decals:
             359: 18,1
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: WarnLineGreyscaleS
           decals:
             357: 17,-1
@@ -927,7 +927,7 @@ entities:
           decals:
             111: 10,0
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: WarnLineGreyscaleW
           decals:
             375: 14,0

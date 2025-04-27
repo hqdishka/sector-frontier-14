@@ -80,6 +80,8 @@
     containers:
       key_slots:
       - EncryptionKeyCommon
+      #- EncryptionKeyOutpostTypan # Typan
+      - EncryptionKeyFreelance #Pirates
       - EncryptionKeyCargo
       - EncryptionKeyEngineering
       - EncryptionKeyMedical
@@ -87,6 +89,25 @@
       - EncryptionKeySecurity
       - EncryptionKeyService
       - EncryptionKeyCommand
+      - EncryptionKeyTraffic # Frontier - Add Traffic channel
+      - EncryptionKeyTrade # Lua - Trade Channel
+      - EncryptionKeyMercenary # Lua
+      - EncryptionKeyVip # Lua
+
+- type: entity
+  parent: TelecomServer
+  id: TelecomServerTypan
+  suffix: Тайпан
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyTraffic
+      - EncryptionKeyTrade
+      - EncryptionKeyMercenary
+      - EncryptionKeyVip
+      - EncryptionKeyOutpostTypan
 
 - type: entity
   parent: TelecomServer

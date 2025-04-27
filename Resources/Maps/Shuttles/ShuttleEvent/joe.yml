@@ -830,7 +830,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingUniformJumpskirtJanimaidmini
+- proto: ClothingUniformJumpskirtJanichambermaidmini
   entities:
   - uid: 232
     components:

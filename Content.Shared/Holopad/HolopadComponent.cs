@@ -57,6 +57,12 @@ public sealed partial class HolopadComponent : Component
     [DataField]
     public float ControlLockoutCoolDown { get; private set; } = 180f;
 
+    [DataField, ViewVariables, AutoNetworkedField]
+    public bool Portable { get; set; }
+
+    [DataField, ViewVariables, AutoNetworkedField]
+    public bool Deployed { get; set; }
+
     /// <summary>
     /// Frontier - If true, will sync pad name with a station name.
     /// </summary>

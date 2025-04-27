@@ -34,6 +34,10 @@ public sealed partial class ApcComponent : BaseApcNetComponent
     public const float HighPowerThreshold = 0.9f;
     public static TimeSpan VisualsChangeDelay = TimeSpan.FromSeconds(1);
 
+    // TODO: remove this since it probably breaks when 2 people use it
+    [DataField("hasAccess")]
+    public bool HasAccess = false;
+
     // TODO ECS power a little better!
     // End the suffering
     protected override void AddSelfToNet(IApcNet apcNet)

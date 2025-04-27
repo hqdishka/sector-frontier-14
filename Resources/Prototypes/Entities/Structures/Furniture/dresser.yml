@@ -320,7 +320,7 @@
       - id: ClothingUniformJumpskirtJanimaid
         prob: 0.005
         orGroup: dressermainloot
-      - id: ClothingUniformJumpskirtJanimaidmini
+      - id: ClothingUniformJumpskirtJanichambermaidmini
         prob: 0.005
         orGroup: dressermainloot
       - id: ClothingNeckScarfStripedSyndieRed

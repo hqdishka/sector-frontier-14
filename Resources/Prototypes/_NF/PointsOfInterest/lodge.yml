@@ -11,7 +11,7 @@
 - type: pointOfInterest
   id: Lodge
   parent: BasePOI
-  name: 'Expeditionary Lodge'
+  name: 'Аванпост Экспедиций'
   minimumDistance: 1650
   maximumDistance: 3400
   spawnGroup: Required
@@ -23,7 +23,7 @@
 
 - type: gameMap
   id: Lodge
-  mapName: 'Expeditionary Lodge'
+  mapName: 'Аванпост Экспедиций'
   mapPath: /Maps/_NF/POI/lodge.yml
   minPlayers: 0
   stations:
@@ -31,15 +31,14 @@
       stationProto: RecordsFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Expeditionary Lodge'
+          mapNameTemplate: 'Аванпост Экспедиций'
         - type: ExtraStationInformation
-          iconPath: /Textures/_NF/Markers/jobs.rsi/mercenary.png
+          iconPath: /Textures/Structures/Wallmounts/flags.rsi/expedition_flag.png
           stationSubtext: 'frontier-lobby-exped-subtext'
           stationDescription: 'frontier-lobby-exped-description'
           lobbySortOrder: 3
         - type: StationJobs
           availableJobs:
             Pilot: [ -1, -1 ]
-            Mercenary: [ -1, -1 ]
         - type: StationDeadDrop
           maxDeadDrops: 1 # Fewer here, players start here.

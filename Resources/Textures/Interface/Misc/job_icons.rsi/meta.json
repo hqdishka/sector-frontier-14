@@ -12,6 +12,36 @@
             "name": "Detective"
         },
         {
+            "name": "ADTInvestigator"
+        },
+        {
+            "name": "BlueShieldOfficer"
+        },
+        {
+            "name": "Pathologist"
+        },
+        {
+            "name": "IAA"
+        },
+        {
+            "name": "Magistrat"
+        },
+        {
+            "name": "NanotrasenRed"
+        },
+        {
+            "name": "SecurityPilot"
+        },
+        {
+            "name": "SeniorService"
+        },
+        {
+            "name": "SeniorCargo"
+        },
+        {
+            "name": "Surgeon"
+        },
+        {
             "name": "QuarterMaster"
         },
         {
@@ -175,9 +205,8 @@
         },
         {
             "name": "MindShield",
-            "delays":
-            [
-                [1.0,1.0]
+            "delays": [
+                [ 1.0, 1.0 ]
             ]
         },
         {

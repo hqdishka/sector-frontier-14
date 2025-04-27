@@ -9,6 +9,7 @@ using Content.Shared.Weapons.Ranged;
 using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared.Weapons.Ranged.Systems;
+using Content.Shared.Mech.Components; //Lua mech gun support
 using Robust.Client.Animations;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
@@ -167,6 +168,11 @@ public sealed partial class GunSystem : SharedGunSystem
         }
 
         var entity = entityNull.Value;
+
+        if (TryComp<MechPilotComponent>(entity, out var mechPilot))
+        {
+            entity = mechPilot.Mech;
+        }
 
         if (!TryGetGun(entity, out var gunUid, out var gun))
         {

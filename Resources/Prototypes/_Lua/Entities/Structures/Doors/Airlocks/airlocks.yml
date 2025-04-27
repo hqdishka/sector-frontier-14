@@ -1,0 +1,267 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+# Standard
+- type: entity
+  parent: Airlock
+  id: AirlockHatchAtmosLua
+  name: шлюз
+  suffix: Lua, Атмос
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/hatch_atmos_lua.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockHatchBotanyLua
+  name: шлюз
+  suffix: Lua, Ботаника
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/hatch_botany_lua.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockHatchChemLua
+  name: шлюз
+  suffix: Lua, Химия
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/hatch_chem_lua.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockHatchClearLua
+  name: шлюз
+  suffix: Lua, Чистый
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/hatch_clear_lua.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockHatchCommLua
+  name: шлюз
+  suffix: Lua, Командный
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/hatch_comm_lua.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockHatchDormLua
+  name: шлюз
+  suffix: Lua, Дормы
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/hatch_dorm_lua.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockHatchEngineerLua
+  name: шлюз
+  suffix: Lua, Инженерный
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/hatch_engin_lua.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockHatchMaintenanceLua
+  name: шлюз
+  suffix: Lua, Технический
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/hatch_maint_lua.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockHatchMedicalLua
+  name: шлюз
+  suffix: Lua, Медицинский
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/hatch_medi_lua.rsi
+
+- type: entity
+  parent: Airlock
+  id: AirlockHatchScienceLua
+  name: шлюз
+  suffix: Lua, Научный
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Standard/hatch_scie_lua.rsi
+
+# Glass
+- type: entity
+  parent: AirlockGlass
+  id: AirlockHatchAtmosGlassLua
+  name: стеклянный шлюз
+  suffix: Lua, Атмос
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/glass_hatch_atmos_lua.rsi
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockHatchBotanyGlassLua
+  name: стеклянный шлюз
+  suffix: Lua, Ботаника
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/glass_hatch_botany_lua.rsi
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockHatchChemGlassLua
+  name: стеклянный шлюз
+  suffix: Lua, Химия
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/glass_hatch_chem_lua.rsi
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockHatchClearGlassLua
+  name: стеклянный шлюз
+  suffix: Lua, Чистый
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/glass_hatch_clear_lua.rsi
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockHatchCommGlassLua
+  name: стеклянный шлюз
+  suffix: Lua, Командный
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/glass_hatch_comm_lua.rsi
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockHatchDormGlassLua
+  name: стеклянный шлюз
+  suffix: Lua, Дормы
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/glass_hatch_dorm_lua.rsi
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockHatchEngineerGlassLua
+  name: стеклянный шлюз
+  suffix: Lua, Инженерный
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/glass_hatch_engin_lua.rsi
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockHatchMaintenanceGlassLua
+  name: стеклянный шлюз
+  suffix: Lua, Технический
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/glass_hatch_maint_lua.rsi
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockHatchMedicalGlassLua
+  name: стеклянный шлюз
+  suffix: Lua, Медицинский
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/glass_hatch_medi_lua.rsi
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockHatchScienceGlassLua
+  name: стеклянный шлюз
+  suffix: Lua, Научный
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/glass_hatch_scie_lua.rsi
+
+- type: entity
+  id: BigGlassAirlockBase
+  parent: AirlockGlass
+  name: большой стеклянный шлюз
+  description: Это с виду обычный шлюз... Но очень широкий
+  suffix: Шлюз на 3 тайла
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Transform
+    noRot: false
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-1.49,-0.49,1.49,0.49"
+        density: 100
+        mask:
+        - FullTileMask
+        layer:
+        - GlassAirlockLayer
+  - type: Sprite
+    snapCardinals: false
+    offset: 0,0
+
+- type: entity
+  id: BigExternalAirlockGlass
+  parent: [BigGlassAirlockBase, AirlockExternalGlass]
+  name: большой стеклянный экстренный шлюз
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/big_external_glass_lua.rsi
+
+- type: entity
+  id: BigMedicalAirlockGlass
+  parent: [BigGlassAirlockBase, AirlockGlass]
+  name: большой стеклянный медицинский шлюз
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/big_medical_glass_lua.rsi
+
+- type: entity
+  id: BigAirlockGlass
+  parent: [BigGlassAirlockBase, AirlockGlass]
+  name: большой стеклянный шлюз
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/big_glass_lua.rsi
+
+- type: entity
+  id: MediumGlassAirlockBase
+  parent: AirlockGlass
+  name: средний стеклянный шлюз
+  description: Это с виду обычный шлюз... Но очень широкий
+  suffix: Шлюз на 2 тайла
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Transform
+    noRot: false
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,1.49,0.49"
+        density: 100
+        mask:
+        - FullTileMask
+        layer:
+        - GlassAirlockLayer
+  - type: Sprite
+    snapCardinals: false
+    offset: 0.5,0
+
+- type: entity
+  id: MediumMedicalAirlockGlass
+  parent: [MediumGlassAirlockBase, AirlockGlass]
+  name: средний стеклянный медицинский шлюз
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/medium_medical_glass_lua.rsi

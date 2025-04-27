@@ -1,0 +1,31 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: DrinkGlassBase
+  id: UplinkLuaDrinkGlass
+  name: странный напиток
+  description: Ни слова по русски
+  components:
+  - type: Sprite
+    sprite: /Textures/_Lua/Objects/Consumable/Drinks/uplinkglass.rsi
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: UplinkLuaDrink
+          Quantity: 30
+
+- type: reagent
+  id: UplinkLuaDrink
+  name: reagent-name-uplink
+  parent: BaseAlcohol
+  desc: reagent-desc-uplink
+  physicalDesc: reagent-physical-desc-fizzy-and-creamy
+  flavor: gargleblaster
+  color: "#9e0e0e"
+  metamorphicSprite:
+    sprite: /Textures/_Lua/Objects/Consumable/Drinks/uplinkglass.rsi
+    state: icon

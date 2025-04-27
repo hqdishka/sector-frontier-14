@@ -9,8 +9,9 @@
   skinColoration: Hues
   maleFirstNames: names_oni_male
   femaleFirstNames: names_oni_female
-  lastNames: names_oni_location
-  naming: LastNoFirst
+  maleLastNames: names_last_male
+  femaleLastNames: names_last_female
+  naming: firstlast
 
 - type: markingPoints
   id: MobOniMarkingLimits

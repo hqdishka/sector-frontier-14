@@ -1,0 +1,35 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: CarpStatue
+  id: SlimeStructure
+  name: липкая субстанция
+  description: Состоит из жидкости, и может растворить вас в себе.
+  components:
+  - type: Sprite
+    sprite: _Lua/Structures/Specific/Slimes/slimestructure.rsi
+    layers:
+    - state: slime_statue
+    - state: unshaded
+      shader: unshaded
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 2

@@ -1,0 +1,45 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  name: Случайный спавн Карпов
+  id: SpawnMobCarpGate
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai
+  - type: RandomSpawner
+    prototypes:
+      - MobCarp
+      - MobCarpMagic
+      - MobCarpHolo
+      - MobCarpRainbow
+    rarePrototypes:
+      - MobShark
+    rareChance: 0.02
+
+- type: entity
+  name: Случайный спавн Ксено
+  id: SpawnMobXenoGate
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - state: ai
+  - type: RandomSpawner
+    prototypes:
+      - MobXeno
+      - MobXenoPraetorian
+      - MobXenoDrone
+      - MobXenoRavager
+      - MobXenoRunner
+      - MobXenoSpitter
+      - MobPurpleSnake
+      - MobSmallPurpleSnake
+    rarePrototypes:
+      - MobXenoQueen
+    rareChance: 0.05

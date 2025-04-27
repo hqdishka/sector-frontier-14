@@ -1,0 +1,168 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitSyndieCommander
+  id: ClothingHeadHelmetHardsuitFSFCommanderBravo
+  name: шлем командира рейнджеров
+  suffix: ФСФ, Браво
+  description: A special hardsuit helmet worn by members of an emergency response team.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits/fsf_bravo_commander_helmet.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits/fsf_bravo_commander_helmet.rsi
+  - type: PointLight
+    color: "#addbff"
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitSyndie
+  id: ClothingHeadHelmetHardsuitFSFSpecialistBravo
+  name: средний шлем рейнджера
+  suffix: ФСФ, Браво
+  description: A special hardsuit helmet worn by members of an emergency response team.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits/fsf_bravo_specialist_helmet.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits/fsf_bravo_specialist_helmet.rsi
+  - type: PointLight
+    color: "#ffadc6"
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+
+###### CHARLIE
+
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitSyndieCommander
+  id: ClothingHeadHelmetHardsuitFSFCommanderCharlie
+  name: шлем командира рейнджеров
+  suffix: ФСФ, Чарли
+  description: A special hardsuit helmet worn by members of an emergency response team.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits/fsf_charlie_commander_helmet.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits/fsf_charlie_commander_helmet.rsi
+  - type: PointLight
+    color: "#addbff"
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitSyndie
+  id: ClothingHeadHelmetHardsuitFSFSpecialistCharlie
+  name: средний шлем рейнджера
+  suffix: ФСФ, Чарли
+  description: A special hardsuit helmet worn by members of an emergency response team.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits/fsf_charlie_specialist_helmet.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits/fsf_charlie_specialist_helmet.rsi
+  - type: PointLight
+    color: "#ffadc6"
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+
+###### ALT
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitSyndieCommander
+  id: ClothingHeadHelmetHardsuitFSFCommanderAlt
+  name: шлем командира рейнджеров
+  description: A special hardsuit helmet worn by members of an emergency response team.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits_Alt/fsf_commander_helmet.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits_Alt/fsf_commander_helmet.rsi
+  - type: PointLight
+    color: "#addbff"
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitSyndie
+  id: ClothingHeadHelmetHardsuitFSFMediumAlt
+  name: средний шлем рейнджера
+  description: A special hardsuit helmet worn by members of an emergency response team.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits_Alt/fsf_medium_helmet.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits_Alt/fsf_medium_helmet.rsi
+  - type: PointLight
+    color: "#ffadc6"
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitSyndie
+  id: ClothingHeadHelmetHardsuitFSFLightAlt
+  name: лёгкий шлем рейнджера
+  description: A special hardsuit helmet worn by members of an emergency response team.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits_Alt/fsf_light_helmet.rsi
+  - type: Clothing
+    sprite: _Lua/Clothing/OuterClothing/Hardsuits/FSFSuits_Alt/fsf_light_helmet.rsi
+  - type: PointLight
+    color: "#ffadc6"
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9

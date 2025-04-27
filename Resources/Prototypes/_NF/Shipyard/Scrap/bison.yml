@@ -14,13 +14,22 @@
   - Civilian
   engine:
   - Plasma
+  addComponents:
+    - type: AutoDelete
+      distanceToCheck: 40
+      delayToDelete: 2400
+      delayToCheck: 60
+      isHumanoidNear: True
+    - type: IFF
+      color: "#ffffff"
+    - type: NanotrasenFtl
 
 - type: gameMap
   id: Bison
   mapName: 'NT Bison'
   mapPath: /Maps/_NF/Shuttles/Scrap/bison.yml
   minPlayers: 0
-  stations: 
+  stations:
     Bison:
       stationProto: StandardFrontierVessel
       components:

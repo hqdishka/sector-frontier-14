@@ -17,6 +17,8 @@
   - type: Appearance
   - type: Extractable
     grindableSolutionName: food
+  - type: TimedDespawn
+    lifetime: 1800
 
 # For produce that can be immediately eaten
 

@@ -448,7 +448,7 @@ entities:
             215: 3,5
             216: 4,5
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: WarnBox
           decals:
             99: -4,-8

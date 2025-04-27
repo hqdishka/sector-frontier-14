@@ -9,6 +9,7 @@
       - Cartridge
       - CartridgePistol
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletPistol
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
@@ -26,6 +27,7 @@
   parent: BaseCartridgePistol
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletPistol
 
 - type: entity
@@ -34,6 +36,7 @@
   parent: BaseCartridgePistol
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletPistolPractice
   -  type: Sprite
      layers:
@@ -49,6 +52,7 @@
   parent: BaseCartridgePistol
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletPistolIncendiary
   - type: Sprite
     layers:
@@ -64,6 +68,7 @@
   parent: BaseCartridgePistol
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletPistolUranium
   - type: Sprite
     layers:

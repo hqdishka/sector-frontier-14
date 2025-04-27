@@ -44,6 +44,7 @@
   - type: RequireProjectileTarget
     active: False
   - type: AnimatedEmotes # goob edit - animated emotes
+  - type: TTS # Corvax-TTS
 
 - type: entity
   save: false

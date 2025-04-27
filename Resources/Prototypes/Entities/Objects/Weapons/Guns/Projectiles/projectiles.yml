@@ -16,7 +16,7 @@
     tags:
       - HideContextMenu
   - type: AnimationPlayer
-  
+
 - type: entity
   parent: MuzzleFlashEffect
   id: MuzzleFlashEffectOmnilaser
@@ -30,7 +30,7 @@
       map: ["enum.EffectLayers.Unshaded"]
       sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
       state: omnilaser_flash
-  
+
 - type: entity
   parent: MuzzleFlashEffect
   id: MuzzleFlashEffectHeavyLaser
@@ -283,6 +283,46 @@
     forceSound: true
 
 - type: entity
+  name : Laser bolt
+  id: ADTBulletLaser
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Reflective
+    reflective:
+    - Energy
+  - type: FlyBySound
+    sound:
+      collection: EnergyMiss
+      params:
+        volume: 5
+  - type: Sprite
+    sprite: ADT/Objects/Weapons/Guns/Projectiles/projectiles_ss.rsi
+    layers:
+    - state: omnilaser
+      shader: unshaded
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.3,0.15,0.3"
+        hard: false
+        mask:
+        - Opaque
+      fly-by: *flybyfixture
+  - type: Ammo
+  - type: Projectile
+    impactEffect: BulletImpactEffectLaser
+    damage:
+      types:
+        Heat: 20
+    soundHit:
+      collection: WeakHit
+    forceSound: true
+
+- type: entity
   name : disabler bolt practice
   id: BulletDisablerPractice
   parent: BaseBullet
@@ -447,12 +487,24 @@
     lifetime: 0.4
   - type: GatheringProjectile
   - type: MiningGatheringSoft # Frontier
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 0.45
+    requireNoGrid: true
+    radarColor: "#53ff6a"
+    shape: square
 
 - type: entity
   id: BulletKineticShuttle
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
   components:
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 0.45
+    requireNoGrid: true
+    radarColor: "#53ff6a"
+    shape: square
   - type: Sprite
     noRot: false
     sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
@@ -469,7 +521,7 @@
   - type: Ammo
     muzzleFlash: HitscanEffect
   - type: TimedDespawn
-    lifetime: 1 # Frontier 1.5<1
+    lifetime: 2 # Frontier 1.5<1
   - type: PointLight
     radius: 2.5
     color: "#FF8888" # Frontier: white<FF8888
@@ -733,6 +785,11 @@
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
   components:
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 0.90
+    requireNoGrid: true
+    shape: square
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     layers:
@@ -753,6 +810,11 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 0.90
+    requireNoGrid: true
+    shape: square
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     layers:
@@ -770,6 +832,11 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 0.90
+    requireNoGrid: true
+    shape: square
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     layers:
@@ -789,6 +856,11 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 0.90
+    requireNoGrid: true
+    shape: square
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     layers:
@@ -806,6 +878,12 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 0.90
+    requireNoGrid: true
+    radarColor: "#75d8ff"
+    shape: square
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     layers:
@@ -902,6 +980,11 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 0.90
+    requireNoGrid: true
+    shape: square
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     layers:
@@ -1077,6 +1160,11 @@
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
   components:
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 2.5
+    requireNoGrid: true
+    shape: triangle
   - type: TimedDespawn
     lifetime: 5
   - type: Sprite
@@ -1207,6 +1295,12 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 0.90
+    requireNoGrid: true
+    radarColor: "#75d8ff"
+    shape: square
   - type: Projectile
     damage:
       types:
@@ -1227,6 +1321,12 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 0.90
+    requireNoGrid: true
+    radarColor: "#75d8ff"
+    shape: square
   - type: Projectile
     damage:
       types:
@@ -1248,6 +1348,12 @@
   name: emp projectile
   categories: [ HideSpawnMenu ]
   components:
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 0.90
+    requireNoGrid: true
+    radarColor: "#75d8ff"
+    shape: square
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
     layers:
@@ -1283,6 +1389,12 @@
   parent: BaseBulletTrigger
   categories: [ HideSpawnMenu ]
   components:
+  - type: ShipWeaponProjectile
+  - type: RadarBlip
+    scale: 0.90
+    requireNoGrid: true
+    radarColor: "#75d8ff"
+    shape: square
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     layers:

@@ -1,5 +1,8 @@
 using System.Linq;
 using Content.Server.Verbs;
+using Content.Shared._Lua.ERP;
+using Content.Shared._NF.Bank.Components;
+using Content.Shared.DetailExaminable;
 using Content.Shared.Examine;
 using Content.Shared.Verbs;
 using JetBrains.Annotations;
@@ -70,8 +73,42 @@ namespace Content.Server.Examine
                 verbs = _verbSystem.GetLocalVerbs(entity, playerEnt, typeof(ExamineVerb));
 
             var text = GetExamineText(entity, player.AttachedEntity);
+
+            if (TryComp<BankAccountComponent>(entity, out _) && TryComp<DetailExaminableComponent>(entity, out var detail))
+            {
+                AddERPStatusToMessage(text, detail.ERPStatus);
+            }
+
             RaiseNetworkEvent(new ExamineSystemMessages.ExamineInfoResponseMessage(
                 request.NetEntity, request.Id, text, verbs?.ToList()), channel);
+        }
+
+        private void AddERPStatusToMessage(FormattedMessage message, EnumERPStatus status)
+        {
+            message.PushNewline();
+
+            switch (status)
+            {
+                case EnumERPStatus.FULL:
+                    message.PushColor(Color.Green);
+                    break;
+                case EnumERPStatus.HALF:
+                    message.PushColor(Color.Yellow);
+                    break;
+                default:
+                    message.PushColor(Color.Red);
+                    break;
+            }
+
+            string statusText = status switch
+            {
+                EnumERPStatus.HALF => Loc.GetString("humanoid-erp-status-half"),
+                EnumERPStatus.FULL => Loc.GetString("humanoid-erp-status-full"),
+                _ => Loc.GetString("humanoid-erp-status-no")
+            };
+
+            message.AddText(statusText);
+            message.Pop();
         }
     }
 }

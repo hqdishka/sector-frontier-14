@@ -81,6 +81,7 @@
     tags:
       - Debug
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletDebug
 
 - type: entity

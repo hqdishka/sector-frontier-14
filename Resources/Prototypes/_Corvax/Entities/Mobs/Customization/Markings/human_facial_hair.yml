@@ -1,0 +1,17 @@
+- type: marking
+  id: HumanFacialHairHandlebar
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  speciesBlacklist: [Avali]
+  sprites:
+    - sprite: Corvax/Mobs/Customization/human_facial_hair.rsi
+      state: handlebar
+
+- type: marking
+  id: HumanFacialHairHandlebarAlt
+  bodyPart: FacialHair
+  markingCategory: FacialHair
+  speciesBlacklist: [Avali]
+  sprites:
+    - sprite: Corvax/Mobs/Customization/human_facial_hair.rsi
+      state: handlebar2

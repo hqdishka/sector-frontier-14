@@ -1,0 +1,22 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  name: holy hand grenade
+  description: O Lord, bless this thy hand grenade, that with it thou mayst blow thine enemies to tiny bits, in thy mercy.
+  parent: GrenadeDummy
+  id: HolyHandGrenadeMeme
+  suffix: Адмем
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Grenades/holyhandgrenade.rsi
+  - type: SoundOnTrigger
+    sound:
+      path: /Audio/Effects/Emotes/parp1.ogg
+  - type: Appearance
+  - type: TimerTriggerVisuals
+    primingSound:
+      path: /Audio/Effects/hallelujah.ogg
+      params:
+        volume: 12

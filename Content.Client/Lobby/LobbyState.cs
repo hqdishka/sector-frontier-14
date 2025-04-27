@@ -1,4 +1,5 @@
 using Content.Client._NF.LateJoin;
+using Content.Client.Chat.Managers;
 using Content.Client.Audio;
 using Content.Client.Eui;
 using Content.Client.GameTicking.Managers;
@@ -9,10 +10,13 @@ using Content.Client.Voting;
 using Content.Shared.CCVar;
 using Robust.Client;
 using Robust.Client.Console;
+using Robust.Client.Graphics;
 using Robust.Client.ResourceManagement;
+using Robust.Client.State;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Configuration;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using PickerWindow = Content.Client._NF.LateJoin.Windows.PickerWindow;
 
@@ -25,9 +29,13 @@ namespace Content.Client.Lobby
         [Dependency] private readonly IClientConsoleHost _consoleHost = default!;
         [Dependency] private readonly IEntityManager _entityManager = default!;
         [Dependency] private readonly IResourceCache _resourceCache = default!;
+        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly IUserInterfaceManager _userInterfaceManager = default!;
+        [Dependency] private readonly IClientPreferencesManager _preferencesManager = default!;
         [Dependency] private readonly IGameTiming _gameTiming = default!;
         [Dependency] private readonly IVoteManager _voteManager = default!;
+
+        [ViewVariables] private CharacterSetupGui? _characterSetup;
 
         private ClientGameTicker _gameTicker = default!;
         private ContentAudioSystem _contentAudioSystem = default!;
@@ -50,7 +58,7 @@ namespace Content.Client.Lobby
             var chatController = _userInterfaceManager.GetUIController<ChatUIController>();
             _gameTicker = _entityManager.System<ClientGameTicker>();
             _contentAudioSystem = _entityManager.System<ContentAudioSystem>();
-            _contentAudioSystem.LobbySoundtrackChanged += UpdateLobbySoundtrackInfo;
+            //_contentAudioSystem.LobbySoundtrackChanged += UpdateLobbySoundtrackInfo;
 
             chatController.SetMainChat(true);
 
@@ -76,6 +84,10 @@ namespace Content.Client.Lobby
             _gameTicker.InfoBlobUpdated += UpdateLobbyUi;
             _gameTicker.LobbyStatusUpdated += LobbyStatusUpdated;
             _gameTicker.LobbyLateJoinStatusUpdated += LobbyLateJoinStatusUpdated;
+
+            Lobby.MinimizeButton.OnToggled += OnMinimizeToggled;
+
+            Lobby.ServersButton.OnToggled += OnServersToggled;
         }
 
         protected override void Shutdown()
@@ -85,7 +97,7 @@ namespace Content.Client.Lobby
             _gameTicker.InfoBlobUpdated -= UpdateLobbyUi;
             _gameTicker.LobbyStatusUpdated -= LobbyStatusUpdated;
             _gameTicker.LobbyLateJoinStatusUpdated -= LobbyLateJoinStatusUpdated;
-            _contentAudioSystem.LobbySoundtrackChanged -= UpdateLobbySoundtrackInfo;
+            //_contentAudioSystem.LobbySoundtrackChanged -= UpdateLobbySoundtrackInfo;
 
             _voteManager.ClearPopupContainer();
 
@@ -94,6 +106,22 @@ namespace Content.Client.Lobby
             Lobby!.ReadyButton.OnToggled -= OnReadyToggled;
 
             Lobby = null;
+        }
+
+        private void OnMinimizeToggled(BaseButton.ButtonToggledEventArgs args)
+        {
+            if (args.Pressed)
+                Lobby?.SwitchState(LobbyGui.LobbyGuiState.Minimize);
+            else
+                Lobby?.SwitchState(LobbyGui.LobbyGuiState.Default);
+        }
+
+        private void OnServersToggled(BaseButton.ButtonToggledEventArgs args)
+        {
+            if (args.Pressed)
+                Lobby?.SwitchState(LobbyGui.LobbyGuiState.Servers);
+            else
+                Lobby?.SwitchState(LobbyGui.LobbyGuiState.Default);
         }
 
         public void SwitchState(LobbyGui.LobbyGuiState state)
@@ -204,40 +232,40 @@ namespace Content.Client.Lobby
             }
         }
 
-        private void UpdateLobbySoundtrackInfo(LobbySoundtrackChangedEvent ev)
-        {
-            if (ev.SoundtrackFilename == null)
-            {
-                Lobby!.LobbySong.SetMarkup(Loc.GetString("lobby-state-song-no-song-text"));
-            }
-            else if (
-                ev.SoundtrackFilename != null
-                && _resourceCache.TryGetResource<AudioResource>(ev.SoundtrackFilename, out var lobbySongResource)
-                )
-            {
-                var lobbyStream = lobbySongResource.AudioStream;
+        //private void UpdateLobbySoundtrackInfo(LobbySoundtrackChangedEvent ev)
+        //{
+        //    if (ev.SoundtrackFilename == null)
+        //    {
+        //        Lobby!.LobbySong.SetMarkup(Loc.GetString("lobby-state-song-no-song-text"));
+        //    }
+        //    else if (
+        //        ev.SoundtrackFilename != null
+        //        && _resourceCache.TryGetResource<AudioResource>(ev.SoundtrackFilename, out var lobbySongResource)
+        //        )
+        //    {
+        //        var lobbyStream = lobbySongResource.AudioStream;
 
-                var title = string.IsNullOrEmpty(lobbyStream.Title)
-                    ? Loc.GetString("lobby-state-song-unknown-title")
-                    : lobbyStream.Title;
+        //        var title = string.IsNullOrEmpty(lobbyStream.Title)
+        //            ? Loc.GetString("lobby-state-song-unknown-title")
+        //            : lobbyStream.Title;
 
-                var artist = string.IsNullOrEmpty(lobbyStream.Artist)
-                    ? Loc.GetString("lobby-state-song-unknown-artist")
-                    : lobbyStream.Artist;
+        //        var artist = string.IsNullOrEmpty(lobbyStream.Artist)
+        //            ? Loc.GetString("lobby-state-song-unknown-artist")
+        //            : lobbyStream.Artist;
 
-                var markup = Loc.GetString("lobby-state-song-text",
-                    ("songTitle", title),
-                    ("songArtist", artist));
+        //        var markup = Loc.GetString("lobby-state-song-text",
+        //            ("songTitle", title),
+        //            ("songArtist", artist));
 
-                Lobby!.LobbySong.SetMarkup(markup);
-            }
-        }
+        //        Lobby!.LobbySong.SetMarkup(markup);
+        //    }
+        //}
 
         private void UpdateLobbyBackground()
         {
             if (_gameTicker.LobbyBackground != null)
             {
-                Lobby!.Background.Texture = _resourceCache.GetResource<TextureResource>(_gameTicker.LobbyBackground );
+                Lobby!.Background.SetRSI(_resourceCache.GetResource<RSIResource>(_gameTicker.LobbyBackground).RSI); //Lua animated
             }
             else
             {

@@ -182,7 +182,7 @@
         orGroup: Uniform
       - id: ClothingUniformJumpskirtJanimaid
         orGroup: Uniform
-      - id: ClothingUniformJumpskirtJanimaidmini
+      - id: ClothingUniformJumpskirtJanichambermaidmini
         orGroup: Uniform
       - id: MegaSprayBottle
       - id: ClothingHandsGlovesColorWhite

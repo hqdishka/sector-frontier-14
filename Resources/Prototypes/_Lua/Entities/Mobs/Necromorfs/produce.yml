@@ -1,0 +1,20 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  name: железа заразителя
+  parent: FoodProduceBase
+  id: NecroGland
+  description: Мешочек с жидкостью
+  components:
+  - type: Tag
+    tags:
+    - MedipenLathe
+  - type: Sprite
+    sprite: _Lua/Other/infector_gland.rsi
+    state: gland
+  - type: PhysicalComposition
+    materialComposition:
+      NecroGland: 100
+  - type: Material

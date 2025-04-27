@@ -1,0 +1,250 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+# - type: technology
+#   id: BasicShuttleWeaponPad
+# #  name: research-technology-basic-shuttle-armament
+#   name: research-technology-basic-weaponpad
+#   icon:
+#     sprite: _Lua/Structures/Machines/computers.rsi
+#     state: full
+#   discipline: Shiparmory
+#   tier: 1
+#   cost: 10500
+#   recipeUnlocks:
+#   - WeaponPadCircuitboard
+
+- type: technology
+  id: BasicShuttleWeapon
+  name: research-technology-basic-weapon
+  icon:
+    sprite: Objects/Weapons/Guns/Shuttles/kinetic.rsi
+    state: ptk-800
+  discipline: Shiparmory
+  tier: 1
+  cost: 12500
+  recipeUnlocks:
+  - ShuttleGunKineticCircuitboard
+  - ShuttleGunSvalinnMachineGunCircuitboard
+  # technologyPrerequisites:
+  # - BasicShuttleWeaponPad
+
+- type: technology
+  id: ShuttlePowerCage
+  name: research-technology-shuttle-powercage
+  icon:
+    sprite: Objects/Power/power_cages.rsi
+    state: high
+  discipline: Shiparmory
+  tier: 1
+  cost: 13500
+  recipeUnlocks:
+  - PowerCageSmallEmpty
+  - PowerCageMediumEmpty
+  - PowerCageHighEmpty
+  - PowerCageRechargerCircuitboard
+  technologyPrerequisites:
+  - BasicShuttleWeapon
+
+- type: technology
+  id: ShuttleShuttleGunPerforator
+  name: research-technology-shuttle-perforator
+  icon:
+    sprite: Objects/Weapons/Guns/Shuttles/laser.rsi
+    state: lse-1200c
+  discipline: Shiparmory
+  tier: 1
+  cost: 14800
+  recipeUnlocks:
+  - ShuttleGunPerforatorCircuitboard
+  technologyPrerequisites:
+  - ShuttlePowerCage
+
+- type: technology
+  id: ShuttleGrenade
+  name: research-technology-shuttle-grenade
+  icon:
+    sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    state: blast
+  discipline: Shiparmory
+  tier: 1
+  cost: 12100
+  recipeUnlocks:
+  - GrenadeBlast
+  - CannonBall
+  - GrenadeFrag
+  - GrenadeFlash
+  technologyPrerequisites:
+  - ShuttleShuttleGunPerforator
+
+- type: technology
+  id: ShuttleFriendshipPirate
+  name: research-technology-shuttle-friendshippirate
+  icon:
+    sprite: Objects/Weapons/Guns/Shuttles/launcher.rsi
+    state: exp-320g
+  discipline: Shiparmory
+  tier: 2
+  cost: 18200
+  recipeUnlocks:
+  - ShuttleGunFriendshipCircuitboard
+  - ShuttleGunPirateCannonCircuitboard
+  technologyPrerequisites:
+  - ShuttleGrenade
+
+- type: technology
+  id: ShuttleCannonBall
+  name: research-technology-shuttle-cannonball
+  icon:
+    sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    state: grapeshot
+  discipline: Shiparmory
+  tier: 2
+  cost: 16900
+  recipeUnlocks:
+  - CannonBallGrapeshot
+  - CannonBallGlassshot
+  technologyPrerequisites:
+  - ShuttleFriendshipPirate
+
+- type: technology
+  id: ShuttleGrenadeEMP
+  name: research-technology-shuttle-grenadeemp
+  icon:
+    sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
+    state: emp
+  discipline: Shiparmory
+  tier: 2
+  cost: 14800
+  recipeUnlocks:
+  - GrenadeEMP
+  - GrenadeBaton
+  technologyPrerequisites:
+  - ShuttleCannonBall
+
+- type: technology
+  id: ShuttleGunDuster
+  name: research-technology-shuttle-gunduster
+  icon:
+    sprite: Objects/Weapons/Guns/Shuttles/launcher.rsi
+    state: exp-2100g
+  discipline: Shiparmory
+  tier: 2
+  cost: 21100
+  recipeUnlocks:
+  - MagazineGrenadeEmpty
+  - ShuttleGunDusterCircuitboard
+  technologyPrerequisites:
+  - ShuttleGrenadeEMP
+
+- type: technology
+  id: ShuttleTurretAPone
+  name: research-technology-turret-one-ap
+  icon:
+    sprite: _Lua/Objects/Weapons/Guns/Ammunition/Boxes/light_rifle_ap.rsi
+    state: base-full20
+  discipline: Shiparmory
+  tier: 2
+  cost: 11900
+  recipeUnlocks:
+  - MagazineBox20mmAP
+  - MagazineBox53mmAP
+  - MagazineBox80mmAP
+  technologyPrerequisites:
+  - ShuttleGunDuster
+
+# - type: technology
+#   id: ShuttleTurretHEone
+#   name: research-technology-turret-one-he
+#   icon:
+#     sprite: _Lua/Objects/Weapons/Guns/Ammunition/Boxes/light_rifle_he.rsi
+#     state: base-full53
+#   discipline: Shiparmory
+#   tier: 3
+#   cost: 12600
+#   recipeUnlocks:
+#   - MagazineBox20mm
+#   - MagazineBox53mm
+#   - MagazineBox80mm
+#   technologyPrerequisites:
+#   - ShuttleTurretAPone
+
+# - type: technology
+#   id: ShuttleTurretPFone
+#   name: research-technology-turret-one-pf
+#   icon:
+#     sprite: _Lua/Objects/Weapons/Guns/Ammunition/Boxes/light_rifle_pf.rsi
+#     state: base-full80
+#   discipline: Shiparmory
+#   tier: 3
+#   cost: 16800
+#   recipeUnlocks:
+#   - MagazineBox20mmPF
+#   - MagazineBox53mmPF
+#   - MagazineBox80mmPF
+#   technologyPrerequisites:
+#   - ShuttleTurretHEone
+
+- type: technology
+  id: ShuttleTurretAPtwo
+  name: research-technology-turret-two-ap
+  icon:
+    sprite: _Lua/Objects/Weapons/Guns/Ammunition/launcher_box.rsi
+    state: basefullap
+  discipline: Shiparmory
+  tier: 3
+  cost: 12100
+  recipeUnlocks:
+  - MagazineBox105mmAP
+  - Cartridge120mmAP
+  - Cartridge140mmAP
+  technologyPrerequisites:
+  - ShuttleTurretAPone
+
+- type: technology
+  id: ShuttleTurretHEtwo
+  name: research-technology-turret-two-he
+  icon:
+    sprite: _Lua/Objects/Weapons/Guns/Ammunition/launcher_box.rsi
+    state: basefullhe
+  discipline: Shiparmory
+  tier: 3
+  cost: 14100
+  recipeUnlocks:
+  - MagazineBox105mmHE
+  - Cartridge120mm
+  - Cartridge140mm
+  technologyPrerequisites:
+  - ShuttleTurretAPtwo
+
+- type: technology
+  id: ShuttleTurretPFtwo
+  name: research-technology-turret-two-pf
+  icon:
+    sprite: _Lua/Objects/Weapons/Guns/Ammunition/launcher_box.rsi
+    state: basefullpf
+  discipline: Shiparmory
+  tier: 3
+  cost: 16600
+  recipeUnlocks:
+  - MagazineBox105mmPF
+  - Cartridge120mmPF
+  - Cartridge140mmPF
+  technologyPrerequisites:
+  - ShuttleTurretHEtwo
+
+- type: technology
+  id: ShuttleTurretTeslaLaser
+  name: research-technology-turret-teslalaser
+  icon:
+    sprite: _Lua/Objects/SpaceArtillery/laserturret.rsi
+    state: base-spent
+  discipline: Shiparmory
+  tier: 3
+  cost: 18300
+  recipeUnlocks:
+  - PowerCartridgeImpulseEmpty
+  - PowerCartridgeTeslaEmpty
+  technologyPrerequisites:
+  - ShuttleTurretPFtwo

@@ -287,6 +287,25 @@
     sprite: Clothing/Eyes/Hud/diagpatch.rsi
 
 - type: entity
+  parent: [ClothingEyesBase, ShowSecurityIcons, ShowMedicalIcons]
+  id: ClothingEyesHudAdvanced
+  name: Advanced hud
+  description: A heads-up display that scans the humanoids in view and provides accurate data about their ID status and security records.
+  components:
+  - type: Sprite
+    sprite: ADT/Clothing/Eyes/HUD/advanced_hud.rsi
+  - type: Clothing
+    sprite: ADT/Clothing/Eyes/HUD/advanced_hud.rsi
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+    - Inorganic
+    - Silicon
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+
+- type: entity
   parent: [ClothingEyesEyepatchHudDiag, ClothingHeadEyeBaseFlipped]
   id: ClothingEyesEyepatchHudDiagFlipped
   name: diagnostic hud eyepatch

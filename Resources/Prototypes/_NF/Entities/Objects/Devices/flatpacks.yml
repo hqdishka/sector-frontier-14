@@ -23,6 +23,20 @@
 
 - type: entity
   parent: BaseNFFlatpack
+  id: OreMachineFlatpack
+  name: ore processor flatpack
+  description: A flatpack used for constructing an ore processor.
+  components:
+  - type: Flatpack
+    entity: OreProcessor
+  - type: StaticPrice
+    price: 250
+  - type: Sprite
+    layers:
+    - state: ore_machine
+
+- type: entity
+  parent: BaseNFFlatpack
   id: EngineeringTechFabFlatpack
   name: engineering techfab flatpack
   description: A flatpack used for constructing an engineering techfab.

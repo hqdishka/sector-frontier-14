@@ -11,6 +11,15 @@
             "name": "base"
         },
         {
+            "name": "ore_machine"
+        },
+        {
+            "name": "iff_console"
+        },
+        {
+            "name": "cryopod_flat"
+        },
+        {
             "name": "overlay"
         },
         {

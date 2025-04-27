@@ -1,0 +1,37 @@
+- type: entity
+  abstract: true
+  parent: RMCBaseMeleeWeapon
+  id: CMBaseWeaponGun
+  components:
+  - type: Clothing
+    quickEquip: false
+  - type: UseDelay
+    delay: 0
+  - type: MeleeWeapon
+    resetOnHandSelected: false
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 5
+    soundHit:
+      collection: GenericHit
+  - type: EmitSoundOnPickup
+    sound:
+      collection: RMCEquipGun
+  - type: EmitSoundOnLand
+    sound:
+      collection: RMCRustleGun
+  - type: Gun
+    meleeCooldownOnShoot: false
+    resetOnHandSelected: false
+
+- type: entity
+  parent: BaseBullet
+  id: RMCBaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Projectiles/bullet_projectiles.rsi
+    layers:
+    - state: bullet
+      shader: unshaded

@@ -1,6 +1,18 @@
 # TODO: make more categories
 # Guns
 
+
+
+- type: listing
+  id: UplinkConvertTelecrystal
+  name: Телекристалл
+  description: Обменяйте свои кредиты на более полезные вещи
+  productEntity: Telecrystal1
+  cost:
+    Speso: 10000
+  categories:
+  - UplinkConverter
+
 - type: listing
   id: UplinkPistolViper
   name: uplink-pistol-viper-name
@@ -65,6 +77,11 @@
     Telecrystal: 8
   categories:
   - UplinkWeaponry
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
 
 - type: listing
   id: UplinkEnergyDagger
@@ -107,23 +124,24 @@
   categories:
   - UplinkWeaponry
 
-# - type: listing # Frontier
-  # id: UplinkDisposableTurret
-  # name: uplink-disposable-turret-name
-  # description: uplink-disposable-turret-desc
-  # productEntity: ToolboxElectricalTurretFilled
-  # discountCategory: usualDiscounts
-  # discountDownTo:
-    # Telecrystal: 3
-  # cost:
-    # Telecrystal: 6
-  # categories:
-  # - UplinkWeaponry
-  # conditions:
-    # - !type:StoreWhitelistCondition
-      # blacklist:
-        # tags:
-          # - NukeOpsUplink
+- type: listing
+  id: UplinkDisposableTurret
+  name: uplink-disposable-turret-name
+  description: uplink-disposable-turret-desc
+  productEntity: ToolboxElectricalTurretFilled
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 3
+  cost:
+    Telecrystal: 6
+  categories:
+  - UplinkWeaponry
+  conditions:
+    - !type:StoreWhitelistCondition
+      blacklist:
+        tags:
+          - NukeOpsUplink
+          - TypanUplink
 
 - type: listing
   id: UplinkEshield
@@ -143,6 +161,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - TypanUplink
 
 - type: listing
   id: UplinkSniperBundle
@@ -249,18 +268,23 @@
   categories:
   - UplinkExplosives
 
-# - type: listing # Frontier
-  # id: UplinkSyndieMiniBomb
-  # name: uplink-mini-bomb-name
-  # description: uplink-mini-bomb-desc
-  # productEntity: SyndieMiniBomb
-  # discountCategory: veryRareDiscounts
-  # discountDownTo:
-    # Telecrystal: 3
-  # cost:
-    # Telecrystal: 6
-  # categories:
-    # - UplinkExplosives
+- type: listing
+  id: UplinkSyndieMiniBomb
+  name: uplink-mini-bomb-name
+  description: uplink-mini-bomb-desc
+  productEntity: SyndieMiniBomb
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 3
+  cost:
+    Telecrystal: 6
+  categories:
+    - UplinkExplosives
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - TypanUplink
 
 # - type: listing # Frontier
 #   id: UplinkSingularityGrenade
@@ -377,49 +401,54 @@
   # categories:
   # - UplinkExplosives
 
-# - type: listing # Frontier
-  # id: UplinkSyndicateBomb
-  # name: uplink-exploding-syndicate-bomb-name
-  # description: uplink-exploding-syndicate-bomb-desc
-  # productEntity: SyndicateBomb
-  # cost:
-    # Telecrystal: 11
-  # categories:
-    # - UplinkExplosives
-  # restockTime: 1800
-  # conditions:
-  # - !type:StoreWhitelistCondition
-    # blacklist:
-      # tags:
-      # - NukeOpsUplink
+- type: listing
+  id: UplinkSyndicateBomb
+  name: uplink-exploding-syndicate-bomb-name
+  description: uplink-exploding-syndicate-bomb-desc
+  productEntity: SyndicateBomb
+  cost:
+    Telecrystal: 11
+  categories:
+    - UplinkExplosives
+  restockTime: 1800
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+      - TypanUplink
 
-# - type: listing # Frontier
-  # id: UplinkSyndicateBombNukie
-  # name: uplink-exploding-syndicate-bomb-name
-  # description: uplink-exploding-syndicate-bomb-desc
-  # productEntity: SyndicateBomb
-  # cost:
-    # Telecrystal: 11
-  # categories:
-    # - UplinkExplosives
-  # conditions:
-  # - !type:StoreWhitelistCondition
-    # whitelist:
-      # tags:
-      # - NukeOpsUplink
+- type: listing
+  id: UplinkSyndicateBombNukie
+  name: uplink-exploding-syndicate-bomb-name
+  description: uplink-exploding-syndicate-bomb-desc
+  productEntity: SyndicateBomb
+  cost:
+    Telecrystal: 11
+  categories:
+    - UplinkExplosives
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - TypanUplink
 
-# - type: listing # Frontier
-  # id: UplinkClusterGrenade
-  # name: uplink-cluster-grenade-name
-  # description: uplink-cluster-grenade-desc
-  # productEntity: ClusterGrenade
-  # discountCategory: usualDiscounts
-  # discountDownTo:
-    # Telecrystal: 5
-  # cost:
-    # Telecrystal: 8
-  # categories:
-  # - UplinkExplosives
+- type: listing
+  id: UplinkClusterGrenade
+  name: uplink-cluster-grenade-name
+  description: uplink-cluster-grenade-desc
+  productEntity: ClusterGrenade
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 5
+  cost:
+    Telecrystal: 8
+  categories:
+  - UplinkExplosives
 
 - type: listing
   id: UplinkGrenadeShrapnel
@@ -549,6 +578,10 @@
       blacklist:
         components:
           - SurplusBundle
+    - !type:StoreWhitelistCondition
+      blacklist:
+        tags:
+          - TypanUplink
 
 #Chemicals
 
@@ -594,25 +627,29 @@
   categories:
   - UplinkChemicals
 
-# - type: listing # Frontier
-  # id: UplinkZombieBundle
-  # name: uplink-zombie-bundle-name
-  # description: uplink-zombie-bundle-desc
-  # icon: { sprite: /Textures/Structures/Wallmounts/signs.rsi, state: bio }
-  # productEntity: ClothingBackpackDuffelZombieBundle
-  # cost:
-    # Telecrystal: 40
-  # categories:
-  # - UplinkChemicals
-  # conditions:
-  # - !type:StoreWhitelistCondition
-    # whitelist:
-      # tags:
-      # - NukeOpsUplink
-  # - !type:BuyerWhitelistCondition
-    # blacklist:
-      # components:
-      # - SurplusBundle
+- type: listing
+  id: UplinkZombieBundle
+  name: uplink-zombie-bundle-name
+  description: uplink-zombie-bundle-desc
+  icon: { sprite: /Textures/Structures/Wallmounts/signs.rsi, state: bio }
+  productEntity: ClothingBackpackDuffelZombieBundle
+  cost:
+    Telecrystal: 40
+  categories:
+  - UplinkChemicals
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+  - !type:BuyerWhitelistCondition
+    blacklist:
+      components:
+      - SurplusBundle
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - TypanUplink
 
 - type: listing
   id: UplinkNocturineChemistryBottle
@@ -768,6 +805,11 @@
     Telecrystal: 2
   categories:
   - UplinkDeception
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - TypanUplink
 
 - type: listing
   id: UplinkBinaryTranslatorKey
@@ -1061,42 +1103,49 @@
     blacklist:
       tags:
       - NukeOpsUplink
+      - TypanUplink
   - !type:BuyerWhitelistCondition
     blacklist:
       components:
       - SurplusBundle
 
-# - type: listing
-#   id: UplinkSuperSurplusBundle
-#   name: uplink-super-surplus-bundle-name
-#   description: uplink-super-surplus-bundle-desc
-#   productEntity: CrateSyndicateSuperSurplusBundle
-#   cost:
-#     Telecrystal: 40
-#   categories:
-#   - UplinkDisruption
-#   conditions:
-#   - !type:StoreWhitelistCondition
-#     blacklist:
-#       tags:
-#       - NukeOpsUplink
-#   - !type:BuyerWhitelistCondition
-#     blacklist:
-#       components:
-#       - SurplusBundle
+- type: listing
+  id: UplinkSuperSurplusBundle
+  name: uplink-super-surplus-bundle-name
+  description: uplink-super-surplus-bundle-desc
+  productEntity: CrateSyndicateSuperSurplusBundle
+  cost:
+    Telecrystal: 40
+  categories:
+  - UplinkDisruption
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+      - TypanUplink
+  - !type:BuyerWhitelistCondition
+    blacklist:
+      components:
+      - SurplusBundle
 
-# - type: listing # Frontier
-  # id: UplinkSingarityBeacon
-  # name: uplink-singularity-beacon-name
-  # description: uplink-singularity-beacon-desc
-  # productEntity: SingularityBeacon
-  # discountCategory: usualDiscounts
-  # discountDownTo:
-    # Telecrystal: 4
-  # cost:
-    # Telecrystal: 12
-  # categories:
-    # - UplinkDisruption
+- type: listing
+  id: UplinkSingarityBeacon
+  name: uplink-singularity-beacon-name
+  description: uplink-singularity-beacon-desc
+  productEntity: SingularityBeacon
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 12
+  categories:
+    - UplinkDisruption
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - TypanUplink
 
 - type: listing
   id: UplinkCameraBug
@@ -1128,25 +1177,27 @@
     blacklist:
       tags:
       - NukeOpsUplink
+      - TypanUplink
 
-# - type: listing # Frontier
-  # id: UplinkReinforcementRadioSyndicate
-  # name: uplink-reinforcement-radio-name
-  # description: uplink-reinforcement-radio-traitor-desc
-  # productEntity: ReinforcementRadioSyndicate
-  # icon: { sprite: Objects/Devices/communication.rsi, state: old-radio-urist }
-  # discountCategory: usualDiscounts
-  # discountDownTo:
-    # Telecrystal: 7
-  # cost:
-    # Telecrystal: 14
-  # categories:
-  # - UplinkAllies
-  # conditions:
-    # - !type:StoreWhitelistCondition
-      # blacklist:
-        # tags:
-          # - NukeOpsUplink
+- type: listing
+  id: UplinkReinforcementRadioSyndicate
+  name: uplink-reinforcement-radio-name
+  description: uplink-reinforcement-radio-traitor-desc
+  productEntity: ReinforcementRadioSyndicate
+  icon: { sprite: Objects/Devices/communication.rsi, state: old-radio-urist }
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 7
+  cost:
+    Telecrystal: 14
+  categories:
+  - UplinkAllies
+  conditions:
+    - !type:StoreWhitelistCondition
+      blacklist:
+        tags:
+          - NukeOpsUplink
+          - TypanUplink
 
 # Frontier: no reinforcements
 # - type: listing
@@ -1450,6 +1501,10 @@
       blacklist:
         components:
           - SurplusBundle
+    - !type:StoreWhitelistCondition
+      blacklist:
+        tags:
+          - TypanUplink
 
 - type: listing
   id: UplinkFakeMindshield
@@ -1664,6 +1719,11 @@
     Telecrystal: 12
   categories:
   - UplinkWearables
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - TypanUplink
 
 - type: listing
   id: UplinkClothingEyesHudSyndicate
@@ -1883,7 +1943,7 @@
     Telecrystal: 10 # Frontier: 6<10 (all the time in the world)
   categories:
   - UplinkWeaponry # Frontier: UplinkJob<UplinkWeaponry
-  # conditions: # Frontier: 
+  # conditions: # Frontier:
   # - !type:BuyerJobCondition
   #   whitelist:
   #   - Botanist
@@ -1991,7 +2051,7 @@
 #     Telecrystal: 2
 #   categories:
 #   - UplinkJob
-#   conditions: 
+#   conditions:
 #   - !type:BuyerJobCondition
 #     whitelist:
 #     - Clown

@@ -1,0 +1,170 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: latheRecipePack
+  id: ArmoryLatheDynamicPack
+  recipes:
+  - PowerCageRechargerCircuitboard
+  # - WeaponPadCircuitboard
+  - MagazineBox20mmAP
+  - MagazineBox53mmAP
+  - MagazineBox80mmAP
+  - MagazineBox105mmAP
+  - MagazineBox105mmHE
+  - MagazineBox105mmPF
+  - Cartridge120mmAP
+  - Cartridge120mm
+  - Cartridge120mmPF
+  - Cartridge140mmAP
+  - Cartridge140mm
+  - Cartridge140mmPF
+  - GrenadeBlast
+  - GrenadeFrag
+  - GrenadeFlash
+  - GrenadeBaton
+  - GrenadeEMP
+  - MagazineGrenadeEmpty
+  - PowerCageSmallEmpty
+  - PowerCageMediumEmpty
+  - PowerCageHighEmpty
+  - CannonBall
+  - CannonBallGrapeshot
+  - CannonBallGlassshot
+  - ShuttleGunSvalinnMachineGunCircuitboard
+  - ShuttleGunPerforatorCircuitboard
+  - ShuttleGunFriendshipCircuitboard
+  - ShuttleGunKineticCircuitboard
+  - ShuttleGunDusterCircuitboard
+  - ShuttleGunPirateCannonCircuitboard
+
+- type: latheRecipePack
+  id: MedipenTechfabPack
+  recipes:
+  - EmergencyMedipen
+  - BurnAutoInjector
+  #- ZetaTwoMedipen
+  #- ZetaOneMedipen
+  - AntiPoisonMedipen
+  - PyraAutoInjector
+  - PunctAutoInjector
+  - CombatMedipen
+  - SpaceMedipen
+  - RadAutoInjector
+  - AirlossAutoInjector
+
+- type: latheRecipePack
+  id: ArmoryLatheDynamicPackEvent
+  recipes:
+  - MagazineBox20mmAPEvent
+  - MagazineBox53mmAPEvent
+  - MagazineBox80mmAPEvent
+  - MagazineBox105mmAPEvent
+  - MagazineBox105mmHEEvent
+  - MagazineBox105mmPFEvent
+  - Cartridge120mmAPEvent
+  - Cartridge120mmEvent
+  - Cartridge120mmPFEvent
+  - Cartridge140mmAPEvent
+  - Cartridge140mmEvent
+  - Cartridge140mmPFEvent
+  - MissileTomahawkEvent
+  - MissileGREvent
+  # Replaced WeaponCase entries with actual weapons and magazines:
+  - WeaponPistolMk58ExpeditionEvent
+  - MagazinePistolEvent
+  - WeaponPistolN1984Event
+  - MagazineMagnumEvent
+  - WeaponPistolViperEvent
+  - WeaponPistolCobraEvent
+  - MagazinePistolCaselessRifleEvent
+  - MagazineBoxCaselessRifle10x24Event
+  - WeaponPistolUniversalExpeditionEvent
+  - WeaponPistolPollockExpeditionEvent
+  - WeaponAntiqueLaserEvent
+  # Revolvers
+  - WeaponRevolverArgentiExpeditionEvent
+  - SpeedLoaderRifleHeavyEvent
+  - WeaponRevolverDeckardExpeditionEvent
+  - WeaponRevolverPythonEvent
+  - WeaponRevolverMatebaExpeditionEvent
+  - WeaponRevolverFitzExpeditionEvent
+  - WeaponRevolverFaithExpeditionEvent
+  - WeaponRevolverLuckyExpeditionEvent
+  - WeaponRevolverPirateExpeditionEvent
+  # Shotguns
+  - WeaponShotgunHandmadeExpeditionEvent
+  - BoxLethalshotEvent
+  - WeaponShotgunDoubleBarreledExpeditionEvent
+  - WeaponShotgunSawnExpeditionEvent
+  - WeaponShotgunKammererExpeditionEvent
+  - WeaponShotgunEnforcerExpeditionEvent
+  - WeaponShotgunBulldogEvent
+  - MagazineShotgunEvent
+  # SMGs
+  - WeaponSubMachineGunWt550ExpeditionEvent
+  - MagazinePistolSubMachineGunTopMountedEvent
+  - MagazineBoxPistolEvent
+  - WeaponSubMachineGunAtreidesExpeditionEvent
+  - MagazinePistolSubMachineGunEvent
+  - WeaponSubMachineGunDrozdExpeditionEvent
+  - WeaponSubMachineGunC20rEvent
+  - WeaponSubMachineGunTypewriterExpeditionEvent
+  # Rifles
+  - WeaponRifleGestioEvent
+  - MagazineLightRifleLowCapacityEvent
+  - WeaponRifleNovaliteC1ExpeditionEvent
+  - MagazineNovaliteC1Event
+  - WeaponRifleLecterEvent
+  - MagazineRifleEvent
+  - WeaponRifleAkEvent
+  - MagazineLightRifleEvent
+  # - WeaponRifleM90GrenadeLauncherEvent
+  - WeaponRifleSVSEvent
+  - WeaponRifleVulcanExpeditionEvent
+  - WeaponRifleJackdawEvent
+  - MagazineCaselessRifleEvent
+  # Energy Weapons
+  - WeaponLaserGunExpeditionEvent
+  - WeaponLaserSvalinnExpeditionEvent
+  - PowerCellHighEvent
+  - WeaponLaserCarbineExpeditionEvent
+  - WeaponEnergyGunExpeditionEvent
+  - WeaponAdvancedLaserExpeditionEvent
+  - WeaponLaserCannonExpeditionEvent
+  - WeaponXrayCannonExpeditionEvent
+  # Sniper Rifles
+  - WeaponSniperMosinExpeditionEvent
+  - MagazineBoxLightRifleEvent
+  - WeaponSniperHristovEvent
+  - MagazineBoxAntiMaterielEvent
+  - WeaponSniperRepeaterEvent
+  - MagazineBoxMagnumEvent
+  - WeaponMusketExpeditionEvent
+  - WeaponSniperCeremonialExpeditionEvent
+  # LMG
+  - WeaponLightMachineGunL6Event
+  - MagazineLightRifleBoxEvent
+  # Melee Weapons
+  - EnergySwordEvent
+  # Explosives
+  # - FireBombEvent
+  # - PipeBombEvent
+  # - SeismicChargeEvent
+  # - ExGrenadeEvent
+  # - C4Event
+
+- type: latheRecipePack
+  id: MedipenTechfabPackEvent
+  recipes:
+  - EmergencyMedipenEvent
+  - BurnAutoInjectorEvent
+  #- ZetaTwoMedipen
+  #- ZetaOneMedipen
+  - AntiPoisonMedipenEvent
+  - PyraAutoInjectorEvent
+  - PunctAutoInjectorEvent
+  - CombatMedipenEvent
+  - SpaceMedipenEvent
+  - RadAutoInjectorEvent
+  - AirlossAutoInjectorEvent

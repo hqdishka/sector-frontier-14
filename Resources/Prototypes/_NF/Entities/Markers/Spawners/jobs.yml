@@ -20,6 +20,19 @@
       - state: mercenary
 
 - type: entity
+  id: SpawnPointMercenaryBase
+  parent: SpawnPointJobBase
+  name: mercenary base
+  components:
+  - type: SpawnPoint
+    job_id: MercenaryBase
+  - type: Sprite
+    sprite: _NF/Markers/jobs.rsi
+    layers:
+      - state: green
+      - state: mercenary
+
+- type: entity
   id: SpawnPointPilot
   parent: SpawnPointJobBase
   name: pilot

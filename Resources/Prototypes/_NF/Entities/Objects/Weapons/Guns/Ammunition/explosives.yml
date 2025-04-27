@@ -12,8 +12,8 @@
   - type: Item
     size: Tiny
   - type: CartridgeAmmo
-    proto: BulletRocketEmp
     deleteOnSpawn: true
+    proto: BulletRocketEmp
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
     state: rpg-emp
@@ -30,8 +30,8 @@
   parent: BaseCannonBall
   components:
   - type: CartridgeAmmo
-    proto: BulletCannonBallEmp
     deleteOnSpawn: true
+    proto: BulletCannonBallEmp
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     state: ball-emp

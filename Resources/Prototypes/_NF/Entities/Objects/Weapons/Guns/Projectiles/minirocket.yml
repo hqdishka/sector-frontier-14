@@ -30,8 +30,8 @@
     - type: Item
       size: Small
     - type: CartridgeAmmo
-      proto: BulletRocketMiniNF
       deleteOnSpawn: true
+      proto: BulletRocketMiniNF
     - type: Sprite
       sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi
       state: frag

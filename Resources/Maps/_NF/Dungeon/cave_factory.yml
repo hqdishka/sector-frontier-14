@@ -232,7 +232,7 @@ entities:
             182: 30,25
             183: 30,24
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BotGreyscale
           decals:
             220: 26,7
@@ -730,7 +730,7 @@ entities:
           decals:
             1301: 10,44
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteCornerNe
           decals:
             155: 16,22
@@ -895,7 +895,7 @@ entities:
             249: 1,45
             251: 2,31
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteLineE
           decals:
             156: 16,21
@@ -969,7 +969,7 @@ entities:
           decals:
             250: 3,43
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteLineN
           decals:
             157: 15,22
@@ -2731,7 +2731,7 @@ entities:
             1790: 31,22
             1791: 33,22
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: StandClearGreyscale
           decals:
             223: 26,7
@@ -2804,7 +2804,7 @@ entities:
             1769: 34,2
             1818: 9,48
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: WarnLineGreyscaleE
           decals:
             3: 18,26
@@ -2835,7 +2835,7 @@ entities:
             103: 10,35
             226: 5,2
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: WarnLineGreyscaleN
           decals:
             2: 17,28
@@ -2857,7 +2857,7 @@ entities:
             101: 3,48
             105: 5,28
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: WarnLineGreyscaleS
           decals:
             1: 17,24
@@ -2882,7 +2882,7 @@ entities:
             99: 3,42
             104: 5,24
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: WarnLineGreyscaleW
           decals:
             4: 16,26

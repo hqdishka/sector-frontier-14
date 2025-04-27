@@ -9,6 +9,7 @@
       - Cartridge
       - CartridgeHeavyRifle
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletHeavyRifle
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
@@ -26,5 +27,5 @@
   parent: BaseCartridgeHeavyRifle
   components:
   - type: CartridgeAmmo
-    proto: BulletMinigun
     deleteOnSpawn: true
+    proto: BulletMinigun

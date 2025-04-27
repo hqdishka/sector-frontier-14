@@ -14,6 +14,10 @@
   id: Paramedic
   name: id-card-access-level-paramedic
 
+- type: accessLevel
+  id: Pathologist
+  name: id-card-access-level-pathologist
+
 - type: accessGroup
   id: Medical
   tags:

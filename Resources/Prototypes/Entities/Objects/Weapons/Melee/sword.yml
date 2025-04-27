@@ -205,7 +205,7 @@
       soundHit:
         path: /Audio/Effects/explosion_small1.ogg
     - type: Reflect
-      reflectProb: .25
+      reflectProb: .10
       spread: 90
     - type: Item
       size: Ginormous

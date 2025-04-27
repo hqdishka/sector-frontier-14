@@ -1,0 +1,9 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: soundCollection
+  id: IPSIPCScreams
+  files:
+    - /Audio/_Lua/Voice/IPSIPC/robot_scream1.ogg
+    - /Audio/_Lua/Voice/IPSIPC/robot_scream2.ogg

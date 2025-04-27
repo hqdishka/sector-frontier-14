@@ -1,0 +1,58 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+# торговый канал
+- type: radioChannel
+  id: Trade
+  name: chat-radio-trade
+  keycode: 'я'
+  frequency: 1015
+  color: "#1a5871"
+
+# канал наёмников
+- type: radioChannel
+  id: Mercenary
+  name: chat-radio-mercenary
+  keycode: 'у'
+  frequency: 1016
+  color: "#556B2F"
+
+# канал випов
+- type: radioChannel
+  id: Vip
+  name: chat-radio-vip
+  keycode: 'э'
+  frequency: 1017
+  color: "#878426"
+
+- type: radioChannel
+  id: DeathSquad
+  name: chat-radio-deathsquad
+  keycode: 'а'
+  frequency: 2707
+  color: "#CF1CFF"
+  longRange: true
+
+- type: radioChannel
+  id: Law
+  name: chat-radio-law
+  keycode: 'ю'
+  frequency: 1305
+  color: "#d98b71"
+
+- type: radioChannel
+  id: SOC
+  name: chat-radio-soc
+  keycode: 'е'
+  frequency: 1307
+  color: "#00fa9a"
+  longRange: true
+
+- type: radioChannel
+  id: Typan
+  name: chat-radio-typan
+  keycode: 'й'
+  frequency: 6542
+  color: "#8f0d4b"
+  longRange: true

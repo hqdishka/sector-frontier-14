@@ -1,0 +1,161 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: latheRecipe
+  id: BurnAutoInjector
+  result: BurnAutoInjector
+  completetime: 10
+  materials:
+     Plastic: 500
+     FoodAloe: 300
+     Plasma: 100
+
+# - type: latheRecipe
+#   id: ZetaTwoMedipen
+#   result: ZetaTwoMedipen
+#   completetime: 10
+#   materials:
+#      Plastic: 500
+#      FoodAmbrosiaVulgaris: 200
+#      NecroGland: 200
+#      DeathNettle: 100
+
+# - type: latheRecipe
+#   id: ZetaOneMedipen
+#   result: ZetaOneMedipen
+#   completetime: 10
+#   materials:
+#      Plastic: 500
+#      FoodFlyAmanita: 100
+#      NecroGland: 200
+#      FoodGalaxythistle: 100
+#      FoodGatfruit: 100
+
+- type: latheRecipe
+  id: AntiPoisonMedipen
+  result: AntiPoisonMedipen
+  completetime: 10
+  materials:
+     Plastic: 500
+     FoodLingzhi: 200
+     Plasma: 100
+     Nettle: 200
+     FoodGalaxythistle: 100
+
+- type: latheRecipe
+  id: PyraAutoInjector
+  result: PyraAutoInjector
+  completetime: 10
+  materials:
+     Plastic: 500
+     FoodAmbrosiaVulgaris: 100
+     FoodChillyPepper: 200
+     FoodAloe: 200
+
+- type: latheRecipe
+  id: PunctAutoInjector
+  result: PunctAutoInjector
+  completetime: 10
+  materials:
+     Plastic: 500
+     FoodLily: 200
+     FoodPoppy: 100
+     Nettle: 100
+
+- type: latheRecipe
+  id: CombatMedipen
+  result: CombatMedipen
+  completetime: 15
+  materials:
+     Plastic: 1000
+     FoodAmbrosiaDeus: 900
+     FoodGoldenApple: 100
+
+- type: latheRecipe
+  id: SpaceMedipen
+  result: SpaceMedipen
+  completetime: 10
+  materials:
+     Plastic: 500
+     FoodAloe: 300
+     FoodChiliPepper: 100
+     FoodChillyPepper: 100
+     Plasma: 100
+
+- type: latheRecipe
+  id: RadAutoInjector
+  result: RadAutoInjector
+  completetime: 10
+  materials:
+     Plastic: 500
+     FoodFlyAmanita: 100
+     Nettle: 200
+     FoodGarlic: 100
+     FoodPoppy: 200
+
+- type: latheRecipe
+  id: EmergencyMedipen
+  result: EmergencyMedipen
+  completetime: 10
+  materials:
+     Plastic: 500
+     FoodAmbrosiaVulgaris: 100
+     FoodLingzhi: 100
+     Nettle: 200
+
+- type: latheRecipe
+  id: AirlossAutoInjector
+  result: AirlossAutoInjector
+  completetime: 10
+  materials:
+     Plastic: 500
+     FoodSpacemansTrumpet: 400
+     FoodBloodTomato: 200
+
+#####EVENT!
+
+- type: latheRecipe
+  id: BurnAutoInjectorEvent
+  result: BurnAutoInjector
+  completetime: 10
+
+- type: latheRecipe
+  id: AntiPoisonMedipenEvent
+  result: AntiPoisonMedipen
+  completetime: 10
+
+- type: latheRecipe
+  id: PyraAutoInjectorEvent
+  result: PyraAutoInjector
+  completetime: 10
+
+- type: latheRecipe
+  id: PunctAutoInjectorEvent
+  result: PunctAutoInjector
+  completetime: 10
+
+- type: latheRecipe
+  id: CombatMedipenEvent
+  result: CombatMedipen
+  completetime: 15
+
+- type: latheRecipe
+  id: SpaceMedipenEvent
+  result: SpaceMedipen
+  completetime: 10
+
+- type: latheRecipe
+  id: RadAutoInjectorEvent
+  result: RadAutoInjector
+  completetime: 10
+
+- type: latheRecipe
+  id: EmergencyMedipenEvent
+  result: EmergencyMedipen
+  completetime: 10
+
+- type: latheRecipe
+  id: AirlossAutoInjectorEvent
+  result: AirlossAutoInjector
+  completetime: 10

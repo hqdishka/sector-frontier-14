@@ -1,0 +1,23 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  name: Имплант телепортации "LuaTech"
+  id: BlinkImplanterLua
+  categories: [ HideSpawnMenu ]
+  parent: BaseImplantOnlyImplanterSyndi
+  components:
+    - type: Implanter
+      implant: ActionBlinkImplant
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: ActionBlinkImplant
+  categories: [ HideSpawnMenu ]
+  name: Имплант телепортации "LuaTech"
+  description: Способен переместить вас практически куда угодно
+  components:
+    - type: SubdermalImplant
+      implantAction: ActionBlink
+    - type: TriggerImplantAction

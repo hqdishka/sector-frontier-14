@@ -68,7 +68,7 @@ entities:
           decals:
             110: 1,2
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileSteelCornerNe
           decals:
             76: -1,10
@@ -83,7 +83,7 @@ entities:
           decals:
             112: -1,2
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileSteelCornerNw
           decals:
             75: -4,10
@@ -98,7 +98,7 @@ entities:
           decals:
             113: 1,-2
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileSteelCornerSe
           decals:
             81: -1,8
@@ -113,7 +113,7 @@ entities:
           decals:
             114: -1,-2
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileSteelCornerSw
           decals:
             82: -4,8
@@ -136,7 +136,7 @@ entities:
             118: 1,0
             169: 1,-1
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileSteelLineE
           decals:
             79: -1,9
@@ -151,7 +151,7 @@ entities:
           decals:
             116: 0,2
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileSteelLineN
           decals:
             77: -3,10
@@ -168,7 +168,7 @@ entities:
           decals:
             115: 0,-2
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileSteelLineS
           decals:
             83: -3,8
@@ -188,7 +188,7 @@ entities:
             121: -1,0
             122: -1,-1
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileSteelLineW
           decals:
             80: -4,9

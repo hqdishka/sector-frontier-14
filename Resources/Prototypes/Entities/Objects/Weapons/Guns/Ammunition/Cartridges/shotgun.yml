@@ -9,6 +9,7 @@
     - Cartridge
     - ShellShotgun
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     soundEject:
       collection: ShellEject
   - type: Sprite
@@ -36,6 +37,7 @@
       - state: beanbag
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: PelletShotgunBeanbag
   - type: SpentAmmoVisuals
     state: "beanbag"
@@ -50,6 +52,7 @@
       - state: slug
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: PelletShotgunSlug
   - type: SpentAmmoVisuals
     state: "slug"
@@ -69,6 +72,7 @@
       - state: flare
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: PelletShotgunFlare
   - type: SpentAmmoVisuals
     state: "flare"
@@ -83,6 +87,7 @@
       - state: base
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: PelletShotgunSpread
 
 - type: entity
@@ -95,6 +100,7 @@
       - state: incendiary
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: PelletShotgunIncendiarySpread
   - type: SpentAmmoVisuals
     state: "incendiary"
@@ -109,6 +115,7 @@
       - state: practice
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: PelletShotgunPracticeSpread
   - type: SpentAmmoVisuals
     state: "practice"
@@ -128,6 +135,7 @@
       - state: tranquilizer
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: PelletShotgunTranquilizer
   - type: ChemicalAmmo
   - type: SolutionContainerManager
@@ -160,6 +168,7 @@
     graph: ImprovisedShotgunShellGraph
     node: shell
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: PelletShotgunImprovisedSpread
   - type: SpentAmmoVisuals
     state: "improvised"
@@ -174,6 +183,7 @@
         - state: depleted-uranium
           map: [ "enum.AmmoVisualLayers.Base" ]
     - type: CartridgeAmmo
+      deleteOnSpawn: true
       proto: PelletShotgunUraniumSpread
     - type: SpentAmmoVisuals
       state: "depleted-uranium"

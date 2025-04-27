@@ -1,0 +1,29 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  id: PoweredStrobeLightEpsilonFullSound
+  suffix: Epsilon, Звук
+  parent: PoweredStrobeLightEpsilon
+  components:
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: PoweredLight
+    hasLampOnSpawn: LedLightBulbEpsilon
+  - type: AmbientSound
+    volume: 0
+    range: 10
+    sound:
+      path: "/Audio/_Lua/Alarm/sirenlua.ogg"
+
+- type: entity
+  id: PoweredStrobeLightEpsilonFull
+  suffix: Epsilon
+  parent: PoweredStrobeLightEmpty
+  components:
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: PoweredLight
+    hasLampOnSpawn: LedLightBulbEpsilon
+

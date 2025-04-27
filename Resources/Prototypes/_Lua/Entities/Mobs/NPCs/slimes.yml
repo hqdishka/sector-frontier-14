@@ -1,0 +1,531 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+#LuaSlimes
+- type: entity
+  name: basic slime
+  id: BaseMobAdultSlimesSpace
+  parent: [ MobSpaceBasic, SimpleSpaceMobBase, MobCombat ]
+  abstract: true
+  description: It looks so much like jelly. I wonder what it tastes like?
+  components:
+  - type: TimedDespawn
+    lifetime: 3600
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/slimes.rsi
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: blue_adult_slime
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.30
+        density: 80
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      120: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2
+    baseSprintSpeed: 4
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Effects/Footsteps/slime1.ogg
+      params:
+        volume: 3
+  - type: Tag
+    tags:
+    - FootstepSound
+    - DoorBumpOpener
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: FoodMeatSlime
+      amount: 2
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Slime
+  - type: Bloodstream
+    bloodReagent: Slime
+    bloodlossDamage:
+      types:
+        Bloodloss:
+          0.5
+    bloodlossHealDamage:
+      types:
+        Bloodloss:
+          -0.25
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+    reactions:
+    - reagents: [ Water, SpaceCleaner ]
+      methods: [ Touch ]
+      effects:
+      - !type:WashCreamPieReaction
+    - reagents: [ Water ]
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        scaleByQuantity: true
+        damage:
+          types:
+            Heat: 3
+      - !type:PopupMessage
+        type: Local
+        messages: [ "slime-hurt-by-water-popup" ]
+        probability: 0.25
+  - type: Body
+    prototype: Slimes
+    requiredLegs: 1
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Weapons/punch3.ogg
+    angle: 0
+    animation: WeaponArcPunch
+    damage:
+      types:
+        Blunt: 6
+        Structural: 4
+        Caustic: 4
+  - type: InteractionPopup
+    successChance: 0.5
+    interactSuccessString: petting-success-slimes
+    interactFailureString: petting-failure-generic
+  - type: Speech
+    speechVerb: Slime
+    speechSounds: Slime
+  - type: TypingIndicator
+    proto: slime
+
+- type: entity
+  name: basic slime
+  id: MobAdultSlimesSpace
+  parent: BaseMobAdultSlimesSpace
+  abstract: true
+  description: It looks so much like jelly. I wonder what it tastes like?
+  components:
+  - type: TimedDespawn
+    lifetime: 3600
+  - type: ReplacementAccent
+    accent: slimes
+  - type: Speech
+    speechVerb: Slime
+    speechSounds: Slime
+  - type: TypingIndicator
+    proto: slime
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+
+- type: entity
+  name: галактический слайм
+  parent: MobAdultSlimes
+  id: MobAdultSlimesGalactic
+  description: Он так похож на желе. Интересно, каков он на вкус?
+  components:
+    - type: Sprite
+      layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: galactic_adult_slime
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: galactic_adult_slime
+        Dead:
+          Base: galactic_adult_slime_dead
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 8
+          Structural: 6
+          Caustic: 2
+          Poison: 6
+
+#SPACE SLIME
+- type: entity
+  name: синий космический слайм
+  id: MobAdultSlimesBlueSpace
+  parent: MobAdultSlimesSpace
+  description: Он так похож на желе. Интересно, каков он на вкус?
+  suffix: Космический
+  components:
+    - type: Sprite
+      layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: blue_adult_slime
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: blue_adult_slime
+        Dead:
+          Base: blue_adult_slime_dead
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 6
+          Structural: 4
+          Caustic: 1
+          Poison: 4
+
+- type: entity
+  name: зелёный космический слайм
+  parent: MobAdultSlimesSpace
+  id: MobAdultSlimesGreenSpace
+  description: Он так похож на желе. Интересно, каков он на вкус?
+  suffix: Космический
+  components:
+    - type: Sprite
+      layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: green_adult_slime
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: green_adult_slime
+        Dead:
+          Base: green_adult_slime_dead
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 6
+          Structural: 4
+          Caustic: 1
+          Poison: 4
+
+- type: entity
+  name: галактический слайм
+  parent: MobAdultSlimesSpace
+  id: MobAdultSlimesGalacticSpace
+  description: Он так похож на желе. Интересно, каков он на вкус?
+  suffix: Космический
+  components:
+    - type: Sprite
+      layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: galactic_adult_slime
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: galactic_adult_slime
+        Dead:
+          Base: galactic_adult_slime_dead
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 8
+          Structural: 6
+          Caustic: 2
+          Poison: 6
+
+- type: entity
+  name: жёлтый космический слайм
+  parent: MobAdultSlimesSpace
+  id: MobAdultSlimesYellowSpace
+  description: Он так похож на желе. Интересно, каков он на вкус?
+  suffix: Космический
+  components:
+    - type: Sprite
+      layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: yellow_adult_slime
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: yellow_adult_slime
+        Dead:
+          Base: yellow_adult_slime_dead
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 6
+          Structural: 4
+          Caustic: 1
+          Cellular: 3
+
+- type: entity
+  name: радужный космический слайм
+  id: MobSlimesRainbowSpace
+  parent: MobAdultSlimesSpace
+  description: Он так похож на желе. Интересно, каков он на вкус?
+  suffix: Космический
+  components:
+  - type: Sprite
+    scale: 1.5, 1.5
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: rainbow_baby_slime
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: aslime-_3
+      shader: unshaded
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: rainbow_baby_slime
+          BaseUnshaded: aslime-_3
+        Dead:
+          Base: rainbow_baby_slime_dead
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 8
+          Structural: 7
+          Caustic: 8
+          Cellular: 5
+
+#Не ну я еще хочу
+
+- type: entity
+  name: химический космический слайм
+  description: Состоит из жидкости, и хочет растворить вас в себе.
+  suffix: Космический, Вода
+  id: ReagentSlimeSpace
+  parent: [ MobAdultSlimesSpace, MobCombat ]
+  components:
+  - type: TimedDespawn
+    lifetime: 3600
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/elemental.rsi
+    layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: alive
+        color: "#75b1f0"
+  - type: PointLight
+    radius: 2.0
+    energy: 3.5
+    color: "#75b1f0"
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      150: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      50: 0.4
+  - type: Bloodstream
+    bloodReagent: Water
+    chemicalMaxVolume: 100
+  - type: StatusEffects
+    allowed:
+    - SlowedDown
+    - Electrocution
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    animation: WeaponArcBite
+    damage:
+      types:
+        Slash: 8
+  - type: MeleeChemicalInjector
+    solution: bloodstream
+    transferAmount: 5
+  - type: DamageStateVisuals
+    rotate: true
+    states:
+      Alive:
+        Base: alive
+      Dead:
+        Base: dead
+  - type: Tag
+    tags:
+      - FootstepSound
+      - CannotSuicide
+      - DoorBumpOpener
+  - type: NoSlip
+  - type: ZombieImmune
+  - type: ExaminableSolution
+    solution: bloodstream
+  - type: InjectableSolution
+    solution: bloodstream
+  - type: DrainableSolution
+    solution: bloodstream
+
+- type: entity
+  name: Спавнер элементальных космических слаймов
+  id: ReagentSlimeSpawnerSpace
+  parent: MarkerBase
+  components:
+    - type: SpaceGarbage
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: Mobs/Aliens/elemental.rsi
+          state: alive
+    - type: RandomSpawner
+      prototypes:
+        - ReagentSlimeSpace
+        - ReagentSlimeBeerSpace
+        - ReagentSlimePaxSpace
+        - ReagentSlimeTHCSpace
+        - ReagentSlimeBicaridineSpace
+        - ReagentSlimeOmnizineSpace
+        - ReagentSlimeMuteToxinSpace
+        - ReagentSlimeEphedrineSpace
+        - ReagentSlimeRobustHarvestSpace
+      chance: 1
+
+- type: entity
+  id: ReagentSlimeBeerSpace
+  parent: ReagentSlimeSpace
+  suffix: Космический, Пиво
+  components:
+  - type: SpaceGarbage
+  - type: Bloodstream
+    bloodReagent: Beer
+  - type: PointLight
+    color: "#cfa85f"
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/elemental.rsi
+    layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: alive
+        color: "#cfa85f"
+
+- type: entity
+  id: ReagentSlimePaxSpace
+  parent: ReagentSlimeSpace
+  suffix: Космический, Пакс
+  components:
+  - type: SpaceGarbage
+  - type: Bloodstream
+    bloodReagent: Pax
+  - type: PointLight
+    color: "#AAAAAA"
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/elemental.rsi
+    layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: alive
+        color: "#AAAAAA"
+  - type: MeleeChemicalInjector
+    solution: bloodstream
+    transferAmount: 1
+
+- type: entity
+  id: ReagentSlimeTHCSpace
+  parent: ReagentSlimeSpace
+  suffix: Космический, ТГК
+  components:
+  - type: SpaceGarbage
+  - type: Bloodstream
+    bloodReagent: THC
+  - type: PointLight
+    color: "#808080"
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/elemental.rsi
+    layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: alive
+        color: "#808080"
+
+- type: entity
+  id: ReagentSlimeBicaridineSpace
+  parent: ReagentSlimeSpace
+  suffix: Космический, Бикаридин
+  components:
+  - type: SpaceGarbage
+  - type: Bloodstream
+    bloodReagent: Bicaridine
+  - type: PointLight
+    color: "#ffaa00"
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/elemental.rsi
+    layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: alive
+        color: "#ffaa00"
+
+- type: entity
+  id: ReagentSlimeOmnizineSpace
+  parent: ReagentSlimeSpace
+  suffix: Космический, Омнизин
+  components:
+  - type: SpaceGarbage
+  - type: Bloodstream
+    bloodReagent: Omnizine
+  - type: PointLight
+    color: "#fcf7f9"
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/elemental.rsi
+    layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: alive
+        color: "#fcf7f9"
+
+- type: entity
+  id: ReagentSlimeMuteToxinSpace
+  parent: ReagentSlimeSpace
+  suffix: Космический, Токсин немоты
+  components:
+  - type: SpaceGarbage
+  - type: Bloodstream
+    bloodReagent: MuteToxin
+  - type: PointLight
+    color: "#0f0f0f"
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/elemental.rsi
+    layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: alive
+        color: "#0f0f0f"
+
+- type: entity
+  id: ReagentSlimeEphedrineSpace
+  parent: ReagentSlimeSpace
+  suffix: Космический, Эфедрин
+  components:
+  - type: SpaceGarbage
+  - type: Bloodstream
+    bloodReagent: Ephedrine
+  - type: PointLight
+    color: "#D2FFFA"
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/elemental.rsi
+    layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: alive
+        color: "#D2FFFA"
+
+- type: entity
+  id: ReagentSlimeRobustHarvestSpace
+  parent: ReagentSlimeSpace
+  suffix: Космический, Робаст харвест
+  components:
+  - type: SpaceGarbage
+  - type: Bloodstream
+    bloodReagent: RobustHarvest
+  - type: PointLight
+    color: "#3e901c"
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/elemental.rsi
+    layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: alive
+        color: "#3e901c"

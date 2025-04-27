@@ -1,0 +1,27 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: animatedLobbyScreen
+  id: RocketLobbyScreen
+  path: /Textures/_Lua/LobbyScreens/backgrounds/rocket.rsi
+
+- type: animatedLobbyScreen
+  id: CubeLobbyScreen
+  path: /Textures/_Lua/LobbyScreens/backgrounds/cube.rsi
+
+- type: animatedLobbyScreen
+  id: FleetLobbyScreen
+  path: /Textures/_Lua/LobbyScreens/backgrounds/Fleet.rsi
+
+- type: animatedLobbyScreen
+  id: ExpeditionLobbyScreen
+  path: /Textures/_Lua/LobbyScreens/backgrounds/LongExpedition.rsi
+
+- type: animatedLobbyScreen
+  id: PortalLobbyScreen
+  path: /Textures/_Lua/LobbyScreens/backgrounds/Portal.rsi
+
+- type: animatedLobbyScreen
+  id: SpaceCombatLobbyScreen
+  path: /Textures/_Lua/LobbyScreens/backgrounds/SpaceCombat.rsi

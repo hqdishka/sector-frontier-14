@@ -9,11 +9,18 @@ namespace Content.Client.Shuttles.UI
     {
         public event Action<NetEntity?, InertiaDampeningMode>? OnInertiaDampeningModeChanged;
 
+        public event Action<string, string>? OnNetworkPortButtonPressed;
+
         private void NfInitialize()
         {
             NavContainer.OnInertiaDampeningModeChanged += (entity, mode) =>
             {
                 OnInertiaDampeningModeChanged?.Invoke(entity, mode);
+            };
+
+            NavContainer.OnNetworkPortButtonPressed += (sourcePort, targetPort) =>
+            {
+                OnNetworkPortButtonPressed?.Invoke(sourcePort, targetPort);
             };
         }
 

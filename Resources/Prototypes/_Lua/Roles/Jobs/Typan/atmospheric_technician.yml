@@ -1,0 +1,35 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: job
+  id: OutpostTypanAtmosTech
+  name: job-name-typan-atmos-tech
+  playTimeTracker: JobOutpostTypanAtmosTech
+  description: Атмосферный инженер из далёкого космоса.
+  startingGear: SyndicateAtmos
+  icon: "JobIconSyndicateAtmos"
+  supervisors: job-supervisors-typan-telecommunications-officer
+  canBeAntag: false
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 54000
+  access:
+  - SyndicateAgent
+  - NuclearOperative
+  accessGroups:
+  - AllAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ DeathAcidifierImplantLWTypan ]
+
+- type: startingGear
+  id: SyndicateAtmos
+  equipment:
+    ears: ClothingHeadsetAltOutpostTypan
+    jumpsuit: ClothingUniformJumpsuitChiefEngineerSyndie
+    shoes: ClothingShoesBootsOutpostTypan
+    back: ClothingBackpackSyndicateFilled
+    belt: ClothingBeltAssaultOutpostTypan
+    id: SyndiPDAEng

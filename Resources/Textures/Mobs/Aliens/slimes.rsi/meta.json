@@ -29,6 +29,20 @@
       ]
     },
     {
+      "name": "galactic_adult_slime_dead"
+    },
+    {
+      "name": "galactic_adult_slime",
+      "delays": [
+        [
+          0.3,
+          0.3,
+          0.3,
+          0.3
+        ]
+      ]
+    },
+    {
       "name": "green_adult_slime_dead"
     },
     {

@@ -96,12 +96,12 @@ namespace Content.Client.Stylesheets
         public static readonly Color DangerousRedFore = Color.FromHex("#BB3232");
         public static readonly Color DisabledFore = Color.FromHex("#5A5A5A");
 
-        public static readonly Color ButtonColorDefault = Color.FromHex("#464B46");
-        public static readonly Color ButtonColorDefaultRed = Color.FromHex("#D43B3B");
-        public static readonly Color ButtonColorHovered = Color.FromHex("#575B57");
-        public static readonly Color ButtonColorHoveredRed = Color.FromHex("#DF6B6B");
-        public static readonly Color ButtonColorPressed = Color.FromHex("#3e6c45");
-        public static readonly Color ButtonColorDisabled = Color.FromHex("#303331");
+        public static readonly Color ButtonColorDefault = Color.FromHex("#232323");
+        public static readonly Color ButtonColorDefaultRed = Color.FromHex("#640000");
+        public static readonly Color ButtonColorHovered = Color.FromHex("#2d2d2d");
+        public static readonly Color ButtonColorHoveredRed = Color.FromHex("#960000");
+        public static readonly Color ButtonColorPressed = Color.FromHex("#0f0f0f");
+        public static readonly Color ButtonColorDisabled = Color.FromHex("#0f0f0f");
 
         public static readonly Color ButtonColorCautionDefault = Color.FromHex("#ab3232");
         public static readonly Color ButtonColorCautionHovered = Color.FromHex("#cf2f2f");
@@ -240,6 +240,19 @@ namespace Content.Client.Stylesheets
                 Texture = borderedTransparentWindowBackgroundTex,
             };
             borderedTransparentWindowBackground.SetPatchMargin(StyleBox.Margin.All, 2);
+
+
+            var backgroundTex = resCache.GetTexture("/Textures/Interface/Nano/lobby_b.png");
+            var background = new StyleBoxTexture
+            {
+                Texture = backgroundTex,
+                Mode = StyleBoxTexture.StretchMode.Tile,
+                Modulate = new Color(1.0f, 1.0f, 1.0f, 0.5f)
+            };
+
+            background.SetPatchMargin(StyleBox.Margin.All, 24);
+            background.SetExpandMargin(StyleBox.Margin.All, -4);
+            background.SetContentMarginOverride(StyleBox.Margin.All, 8);
 
             var hotbarBackground = new StyleBoxTexture
             {

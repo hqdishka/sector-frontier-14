@@ -1,6 +1,7 @@
 using Content.Shared.Examine;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Verbs;
+using Content.Shared._Lua.ERP;
 using Robust.Shared.Utility;
 
 namespace Content.Shared.DetailExaminable;
@@ -31,6 +32,16 @@ public sealed class DetailExaminableSystem : EntitySystem
             {
                 var markup = new FormattedMessage();
                 markup.AddMarkupPermissive(ent.Comp.Content);
+
+                if (ent.Comp.ERPStatus == EnumERPStatus.FULL)
+                    markup.PushColor(Color.Green);
+                else if (ent.Comp.ERPStatus == EnumERPStatus.HALF)
+                    markup.PushColor(Color.Yellow);
+                else
+                    markup.PushColor(Color.Red);
+
+                markup.AddMarkupOrThrow("\n" + ent.Comp.GetERPStatusName());
+
                 _examine.SendExamineTooltip(user, ent, markup, false, false);
             },
             Text = Loc.GetString("detail-examinable-verb-text"),

@@ -1,0 +1,94 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  id: MechReising
+  parent: BaseMech
+  name: Reising
+  description: Боевая машина разработанная корпорацией LuaTech на корпусе выгравровано "LuaTech"
+  components:
+  - type: ContainerFill
+    containers:
+      mech-battery-slot:
+      - PowerCellSmallPrinted
+  - type: Sprite
+    scale: 0.8, 0.8
+    drawdepth: Mobs
+    noRot: true
+    sprite: _Lua/Objects/Specific/Mech/mech.rsi
+    layers:
+    - map: [ "enum.MechVisualLayers.Base" ]
+      state: reising
+  - type: InnateTool
+    tools:
+      - id: MechaWeaponMR12
+      - id: MechaWeaponMinigun
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: Mech
+    baseState: reising
+    openState: reising #-open
+    brokenState: reising-broken #-broken
+    mechToPilotDamageMultiplier: 0.05
+    maxEquipmentAmount: 4
+    equipmentWhitelist:
+      tags: 
+      - ReisingGun
+    pilotWhitelist:
+      components:
+        - HumanoidAppearance
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.00
+    baseSprintSpeed: 4.0
+  - type: Reflect
+    reflectProb: 0.25
+#  - type: MovementIgnoreGravity
+  - type: Prying # Открытие дверей
+  - type: HandheldLight
+    toggleOnInteract: false
+    wattage: 0.2
+    blinkingBehaviourId: blinking
+    radiatingBehaviourId: radiating
+  - type: LightBehaviour
+    behaviours:
+    - !type:FadeBehaviour
+      id: radiating
+      maxDuration: 2.0
+      startValue: 3.0
+      endValue: 2.0
+      isLooped: true
+      reverseWhenFinished: true
+    - !type:PulseBehaviour
+      id: blinking
+      interpolate: Nearest
+      maxDuration: 1.0
+      minValue: 0.1
+      maxValue: 2.0
+      isLooped: true
+  - type: ToggleableLightVisuals
+  - type: PointLight
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    radius: 8
+    energy: 4
+    color: "#E20D26"
+  - type: UnpoweredFlashlight
+
+- type: entity
+  id: MechReisingBattery
+  parent: MechReising
+  suffix: Battery
+  components:
+  - type: ContainerFill
+    containers:
+      mech-battery-slot:
+      - PowerCellHigh
+      mech-equipment-container:
+      - MechaWeaponMinigun
+      - MechaWeaponMinigun
+      - MechaWeaponMR12
+      - MechaWeaponMR12
+      # - MechWeaponSniperMA21

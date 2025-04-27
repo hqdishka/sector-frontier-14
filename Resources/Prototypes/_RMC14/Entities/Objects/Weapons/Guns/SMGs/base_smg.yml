@@ -1,0 +1,42 @@
+- type: entity
+  abstract: true
+  parent: [CMBaseWeaponRifle, BaseGunWieldable]
+  id: CMBaseWeaponSMG
+  components:
+  - type: Item
+    size: Large
+  - type: AmmoCounter
+  - type: Gun
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - Burst
+    - FullAuto
+  # - type: RMCSelectiveFire
+  #   baseFireModes:
+  #   - SemiAuto
+  #   - Burst
+  #   - FullAuto
+  #   modifiers:
+  #     FullAuto:
+  #       maxScatterModifier: 12
+  #       useBurstScatterMult: true
+  #       unwieldedScatterMultiplier: 2
+  #       shotsToMaxScatter: 4
+  - type: Tag
+    tags:
+    - RMCWeaponSMG
+
+- type: entity
+  parent: BaseCartridgeCaselessRifle
+  id: CMCartridgeSMGBase
+  abstract: true
+  components:
+  - type: CartridgeAmmo
+    deleteOnSpawn: true
+
+- type: Tag
+  id: RMCWeaponSMG
+
+- type: Tag
+  id: CMMagazineSmg

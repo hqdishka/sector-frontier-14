@@ -1,0 +1,96 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  name: плазменный резак
+  parent: BaseWeaponBatterySmall
+  id: WeaponPlasmaCutter
+  description: Плазменный резак - это инструмент для обработки горных пород или же очередных некроморфов, производитель - Nanotrasen, заряжается плазменной рудой.
+  components:
+  - type: MaterialAmmo
+    allowedMaterials: [RawPlasma]
+  - type: ProjectileBatteryAmmoProvider
+    proto: PlasmaCutProjectile
+    fireCost: 500
+  - type: Battery
+    maxCharge: 10000
+    startingCharge: 10000
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Lua/Objects/Weapons/Guns/Pistols/plasma_cutter.rsi
+    state: icon
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: _Lua/Objects/Weapons/Guns/Pistols/plasma_cutter.rsi
+  - type: Gun
+    fireRate: 1.6
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      collection: cutter
+  - type: StaticPrice
+    price: 1500
+  - type: Tag
+    tags:
+    - PlasmaCutter
+
+- type: soundCollection
+  id: cutter
+  files:
+    - /Audio/_Lua/Weapons/Guns/PlasmaCutter/cutter.ogg
+    - /Audio/_Lua/Weapons/Guns/PlasmaCutter/cutter2.ogg
+    - /Audio/_Lua/Weapons/Guns/PlasmaCutter/cutter3.ogg
+    - /Audio/_Lua/Weapons/Guns/PlasmaCutter/cutter4.ogg
+    - /Audio/_Lua/Weapons/Guns/PlasmaCutter/cutter5.ogg
+    - /Audio/_Lua/Weapons/Guns/PlasmaCutter/cutter6.ogg
+
+- type: entity
+  id: PlasmaCutProjectile
+  name: cutter bolt
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  description: Not too bad, but you still don't want to get hit by it.
+  components:
+  - type: Reflective
+    reflective:
+      - Energy
+  - type: Sprite
+    noRot: false
+    sprite: _Lua/Objects/Weapons/Guns/Projectiles/bullet_hit.rsi
+    layers:
+    - state: impact_bullet
+  - type: StaminaDamageOnCollide
+    damage: 20
+  - type: TimedDespawn
+    lifetime: 0.2
+  - type: PointLight
+    radius: 2
+    color: "#E8AD80"
+    energy: 1
+  - type: MiningGatheringHard
+  - type: MiningGatheringSoft
+  - type: GatheringProjectile
+    amount: 40
+  - type: DamageMarkerOnCollide
+  - type: Projectile
+    deleteOnCollide: false
+    damage:
+      types:
+        Heat: 5
+        Slash: 5
+    whitelist:
+      components:
+        - Necromorf
+        - Unitology
+    damageWhitelist:
+      types:
+        Heat: 5
+        Slash: 60

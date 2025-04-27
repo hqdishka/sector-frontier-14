@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Numerics;
 using Content.Shared._NF.Vehicle.Components;
 using Content.Shared.Access.Components;
@@ -5,6 +6,9 @@ using Content.Shared.Actions;
 using Content.Shared.Audio;
 using Content.Shared.Buckle;
 using Content.Shared.Buckle.Components;
+using Content.Shared.Hands;
+using Content.Shared.Hands.Components;
+using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Inventory.VirtualItem;
 using Content.Shared.Item;
 using Content.Shared.Light.Components;
@@ -32,6 +36,7 @@ public abstract partial class SharedVehicleSystem : EntitySystem
     [Dependency] private readonly INetManager _netManager = default!;
 
     [Dependency] protected readonly SharedAppearanceSystem Appearance = default!;
+    [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
     [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
     [Dependency] private readonly MovementSpeedModifierSystem _modifier = default!;
     [Dependency] private readonly SharedAmbientSoundSystem _ambientSound = default!;
@@ -81,15 +86,58 @@ public abstract partial class SharedVehicleSystem : EntitySystem
             if (!vehicle.AutoAnimate)
                 continue;
 
-            // Why is this updating appearance data every tick, instead of when it needs to be updated???
+            bool isMoving = _mover.GetVelocityInput(mover).Sprinting != Vector2.Zero;
+            UpdateAutoAnimate(uid, isMoving);
+        }
 
-            if (_mover.GetVelocityInput(mover).Sprinting == Vector2.Zero)
-            {
-                UpdateAutoAnimate(uid, false);
+        ValidatePassengerStates();
+    }
+
+    private void ValidatePassengerStates()
+    {
+        var riderQuery = EntityQueryEnumerator<RiderComponent>();
+        while (riderQuery.MoveNext(out var uid, out var rider))
+        {
+            if (rider.Vehicle == null)
                 continue;
-            }
 
-            UpdateAutoAnimate(uid, true);
+            EnsureHandsAreCorrect(uid, rider.Vehicle.Value);
+        }
+    }
+
+    private bool TryOccupyHands(EntityUid rider, EntityUid vehicle)
+    {
+        if (!TryComp<HandsComponent>(rider, out var hands))
+            return false;
+
+        var twoHands = hands.Hands.Values.Count(hand => hand.IsEmpty);
+        if (twoHands < 2)
+            return false;
+
+        foreach (var hand in hands.Hands.Values.Where(hand => hand.IsEmpty).Take(2))
+        {
+            _virtualItemSystem.TrySpawnVirtualItemInHand(vehicle, rider);
+        }
+        return true;
+    }
+
+    private void EnsureHandsAreCorrect(EntityUid rider, EntityUid vehicle)
+    {
+        if (!TryComp<HandsComponent>(rider, out var hands))
+            return;
+
+        foreach (var hand in hands.Hands.Values)
+        {
+            if (hand.IsEmpty)
+            {
+                _virtualItemSystem.TrySpawnVirtualItemInHand(vehicle, rider);
+            }
+            else if (!HasComp<VirtualItemComponent>(hand.HeldEntity))
+            {
+                _handsSystem.TryDrop(rider, hand);
+                _popupSystem.PopupEntity(Loc.GetString("vehicle-no-free-hands"), rider, PopupType.Medium);
+                _virtualItemSystem.TrySpawnVirtualItemInHand(vehicle, rider);
+            }
         }
     }
 
@@ -108,7 +156,7 @@ public abstract partial class SharedVehicleSystem : EntitySystem
     }
 
     // Umbra: vehicle changes
-    private void OnUnstrapped(EntityUid uid, VehicleComponent component, ref UnstrappedEvent args)
+    protected virtual void OnUnstrapped(EntityUid uid, VehicleComponent component, ref UnstrappedEvent args)
     {
         // Remove rider
         var riderUid = args.Buckle.Owner;
@@ -148,8 +196,7 @@ public abstract partial class SharedVehicleSystem : EntitySystem
             }
             // End Frontier
 
-            // Add a virtual item to rider's hand, cancel if we can't.
-            if (!_virtualItemSystem.TrySpawnVirtualItemInHand(uid, riderUid))
+            if (!TryOccupyHands(riderUid, uid))
             {
                 args.Cancelled = true;
                 return;
@@ -157,7 +204,7 @@ public abstract partial class SharedVehicleSystem : EntitySystem
         }
     }
 
-    private void OnStrapped(EntityUid uid, VehicleComponent component, ref StrappedEvent args)
+    protected virtual void OnStrapped(EntityUid uid, VehicleComponent component, ref StrappedEvent args)
     {
         var riderUid = args.Buckle.Owner;
 

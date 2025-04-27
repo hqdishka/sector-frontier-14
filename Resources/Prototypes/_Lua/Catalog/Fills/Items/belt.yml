@@ -1,0 +1,17 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  id: ClothingBeltERTFilled
+  parent: ClothingBeltSecurity
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: Stunbaton
+    - id: GrenadeFlashBang
+    - id: Handcuffs
+    - id: Handcuffs
+    - id: Handcuffs
+    - id: Handcuffs

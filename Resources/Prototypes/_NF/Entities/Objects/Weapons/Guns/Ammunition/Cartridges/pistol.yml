@@ -5,6 +5,7 @@
   parent: BaseCartridgePistol
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletPistolRubber
   - type: Sprite
     layers:
@@ -21,6 +22,7 @@
   parent: BaseCartridgePistol
   components:
   - type: CartridgeAmmo
+    deleteOnSpawn: true
     proto: BulletPistolEmp
   - type: EmpDescription
     range: 0.3

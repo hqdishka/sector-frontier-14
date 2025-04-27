@@ -203,6 +203,12 @@ namespace Content.Server.Database
 
             var balance = profile.BankBalance;
 
+            // Corvax-TTS-Start
+            var voice = profile.Voice;
+            if (voice == String.Empty)
+                voice = SharedHumanoidAppearanceSystem.DefaultSexVoice[sex];
+            // Corvax-TTS-End
+
             // ReSharper disable once ConditionalAccessQualifierIsNonNullableAccordingToAPIContract
             var markingsRaw = profile.Markings?.Deserialize<List<string>>();
 
@@ -243,10 +249,15 @@ namespace Content.Server.Database
                 loadouts[role.RoleName] = loadout;
             }
 
+            // Get the company with fallback to default "None"
+            var company = profile.Company ?? "None";
+
             return new HumanoidCharacterProfile(
                 profile.CharacterName,
                 profile.FlavorText,
+                profile.ERPStatus,
                 profile.Species,
+                voice, // Corvax-TTS
                 profile.Age,
                 sex,
                 gender,
@@ -266,7 +277,8 @@ namespace Content.Server.Database
                 (PreferenceUnavailableMode) profile.PreferenceUnavailable,
                 antags.ToHashSet(),
                 traits.ToHashSet(),
-                loadouts
+                loadouts,
+                company
             );
         }
 
@@ -283,7 +295,9 @@ namespace Content.Server.Database
 
             profile.CharacterName = humanoid.Name;
             profile.FlavorText = humanoid.FlavorText;
+            profile.ERPStatus = (int)humanoid.ERPStatus; //Lua
             profile.Species = humanoid.Species;
+            profile.Voice = humanoid.Voice; // Corvax-TTS
             profile.Age = humanoid.Age;
             profile.Sex = humanoid.Sex.ToString();
             profile.Gender = humanoid.Gender.ToString();
@@ -298,6 +312,7 @@ namespace Content.Server.Database
             profile.Markings = markings;
             profile.Slot = slot;
             profile.PreferenceUnavailable = (DbPreferenceUnavailableMode) humanoid.PreferenceUnavailable;
+            profile.Company = humanoid.Company;
 
             profile.Jobs.Clear();
             profile.Jobs.AddRange(

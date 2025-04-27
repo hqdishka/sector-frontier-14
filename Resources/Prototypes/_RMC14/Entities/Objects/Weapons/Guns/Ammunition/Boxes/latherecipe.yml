@@ -1,0 +1,442 @@
+- type: latheRecipe
+  id: MagazineBoxRMCCartridgeLMGM60
+  result: MagazineBoxRMCCartridgeLMGM60
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxCMCartridgePistol9mm
+  result: MagazineBoxCMCartridgePistol9mm
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxRMCCartridgePistol9mmSquashHead
+  result: MagazineBoxRMCCartridgePistol9mmSquashHead
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxCMCartridgePistolM77AP
+  result: MagazineBoxCMCartridgePistolM77AP
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxCMCartridgePistol.22mm
+  result: MagazineBoxCMCartridgePistol.22mm
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxCMCartridgePistolMK45
+  result: MagazineBoxCMCartridgePistolMK45
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxRMCCartridgePistol45ACP
+  result: MagazineBoxRMCCartridgePistol45ACP
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxRMCCartridgeRevolverMateba
+  result: MagazineBoxRMCCartridgeRevolverMateba
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxRMCCartridgeRevolver44
+  result: MagazineBoxRMCCartridgeRevolver44
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxRMCCartridgeRevolver44Marksman
+  result: MagazineBoxRMCCartridgeRevolver44Marksman
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxRMCCartridgeRifleAR10
+  result: MagazineBoxRMCCartridgeRifleAR10
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxCMCartridgeRifle10x24mm
+  result: MagazineBoxCMCartridgeRifle10x24mm
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxCMCartridgeRifle10x24mmAP
+  result: MagazineBoxCMCartridgeRifle10x24mmAP
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxRMCCartridgeRifleM4SPRA19
+  result: MagazineBoxRMCCartridgeRifleM4SPRA19
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxRMCCartridgeRifleM4SPRA19Impact
+  result: MagazineBoxRMCCartridgeRifleM4SPRA19Impact
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxRMCCartridgeRifleM16
+  result: MagazineBoxRMCCartridgeRifleM16
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxCMCartridgeSmartGun10x30mm
+  result: MagazineBoxCMCartridgeSmartGun10x30mm
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxCMCartridge9mmSMG
+  result: MagazineBoxCMCartridge9mmSMG
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxCMCartridge10x20mm
+  result: MagazineBoxCMCartridge10x20mm
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxCMCartridge10x20mmAP
+  result: MagazineBoxCMCartridge10x20mmAP
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxRMCCartridge7x45mm
+  result: MagazineBoxRMCCartridge7x45mm
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxCMCartridgeSniper10x28mmIncendiary
+  result: MagazineBoxCMCartridgeSniper10x28mmIncendiary
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxCMCartridgeSniper10x28mmFlak
+  result: MagazineBoxCMCartridgeSniper10x28mmFlak
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: MagazineBoxCMCartridgeSniper10x99mmAntiMateriel
+  result: MagazineBoxCMCartridgeSniper10x99mmAntiMateriel
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: BoxCMShellShotgunBuckshot
+  result: BoxCMShellShotgunBuckshot
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: BoxCMShellShotgunSlugs
+  result: BoxCMShellShotgunSlugs
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: BoxCMShellShotgunIncendiary
+  result: BoxCMShellShotgunIncendiary
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: BoxCMShellShotgunBeanbag
+  result: BoxCMShellShotgunBeanbag
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: BoxCMShellShotgunFlechette
+  result: BoxCMShellShotgunFlechette
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: BoxCMShellShotgunIncendiaryBuckshot
+  result: BoxCMShellShotgunIncendiaryBuckshot
+  completetime: 5
+  materials:
+    Steel: 1000
+
+# МАГАЗИНЫ
+
+- type: latheRecipe
+  id: RMCMagazineLMGM60Empty
+  result: RMCMagazineLMGM60Empty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: RMCMagazinePistolB92FSEmpty
+  result: RMCMagazinePistolB92FSEmpty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: RMCMagazinePistolHoldoutEmpty
+  result: RMCMagazinePistolHoldoutEmpty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: RMCMagazinePistolD18Empty
+  result: RMCMagazinePistolD18Empty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: RMCMagazinePistolMK45Empty
+  result: RMCMagazinePistolMK45Empty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: CMMagazinePistolMK80Empty
+  result: CMMagazinePistolMK80Empty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: CMMagazinePistolM77APEmpty
+  result: CMMagazinePistolM77APEmpty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: CMMagazinePistolM1984Empty
+  result: CMMagazinePistolM1984Empty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: RMCMagazinePistolSU6Empty
+  result: RMCMagazinePistolSU6Empty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: RMCSpeedLoaderMatebaEmpty
+  result: RMCSpeedLoaderMatebaEmpty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: RMCSpeedLoaderM44Empty
+  result: RMCSpeedLoaderM44Empty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: RMCSpeedLoader44MarksmanEmpty
+  result: RMCSpeedLoader44MarksmanEmpty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: RMCMagazineRifleAR10Empty
+  result: RMCMagazineRifleAR10Empty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: CMMagazineRifleM4SPREmpty
+  result: CMMagazineRifleM4SPREmpty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: CMMagazineRifleM4SPRAPEmpty
+  result: CMMagazineRifleM4SPRAPEmpty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: CMMagazineRifleM4SPRExtEmpty
+  result: CMMagazineRifleM4SPRExtEmpty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: RMCMagazineRifleM4SPRA19Empty
+  result: RMCMagazineRifleM4SPRA19Empty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: RMCMagazineRifleM4SPRA19ImpactEmpty
+  result: RMCMagazineRifleM4SPRA19ImpactEmpty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: RMCMagazineRifleM16Empty
+  result: RMCMagazineRifleM16Empty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: CMMagazineRifleM54CE2Empty
+  result: CMMagazineRifleM54CE2Empty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: CMMagazineRifleM54CEmpty
+  result: CMMagazineRifleM54CEmpty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: CMMagazineRifleM54CAPEmpty
+  result: CMMagazineRifleM54CAPEmpty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: CMMagazineRifleM54CExtEmpty
+  result: CMMagazineRifleM54CExtEmpty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: RMCMagazineSmartGunEmpty
+  result: RMCMagazineSmartGunEmpty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: CMMagazineSMGMP5Empty
+  result: CMMagazineSMGMP5Empty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: CMMagazineSMGM63Empty
+  result: CMMagazineSMGM63Empty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: CMMagazineSMGM63APEmpty
+  result: CMMagazineSMGM63APEmpty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: CMMagazineSMGM63ExtEmpty
+  result: CMMagazineSMGM63ExtEmpty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: RMCMagazineSMGNailgunEmpty
+  result: RMCMagazineSMGNailgunEmpty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: CMMagazineSniperM96SEmpty
+  result: CMMagazineSniperM96SEmpty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: CMMagazineSniperM96SIncendiaryEmpty
+  result: CMMagazineSniperM96SIncendiaryEmpty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: CMMagazineSniperM96SFlakEmpty
+  result: CMMagazineSniperM96SFlakEmpty
+  completetime: 5
+  materials:
+    Steel: 1000
+
+- type: latheRecipe
+  id: CMMagazineSniperM96SAntiMaterielEmpty
+  result: CMMagazineSniperM96SAntiMaterielEmpty
+  completetime: 5
+  materials:
+    Steel: 1000

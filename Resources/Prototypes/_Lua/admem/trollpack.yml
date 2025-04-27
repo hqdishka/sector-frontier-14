@@ -1,0 +1,43 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  name: мини-стимпак
+  suffix: адмем, ноктюрин
+  parent: ChemicalMedipen
+  id: TrollpackMini
+  description: Уменьшенный инъектор, содержащий дозу стимулятора на около пятнадцати секунд.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: microstimpen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Nocturine
+          Quantity: 15
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: microstimpen_empty
+  - type: StaticPrice
+    price: 100
+  - type: Tag
+    tags: []
+
+- type: entity
+  id: TrollkitFilled
+  suffix: адмем, ноктюрин, полная
+  parent: Medkit
+  components:
+  - type: StorageFill
+    contents:
+      - id: TrollpackMini
+        amount: 6
+  - type: StaticPrice
+    price: 350

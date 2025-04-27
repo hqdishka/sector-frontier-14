@@ -680,7 +680,7 @@ entities:
             6460: 4,21
             11873: 21,-14
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileSteelCornerNe
           decals:
             11: -6,-25
@@ -758,7 +758,7 @@ entities:
             6280: -26,-34
             6461: 3,21
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileSteelCornerNw
           decals:
             4: -13,-20
@@ -831,7 +831,7 @@ entities:
             6462: 4,19
             11874: 21,-15
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileSteelCornerSe
           decals:
             20: -6,-31
@@ -900,7 +900,7 @@ entities:
             5339: -5,-42
             6459: 3,19
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileSteelCornerSw
           decals:
             29: -9,-36
@@ -936,7 +936,7 @@ entities:
             9776: 13,4
             9777: 16,4
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileSteelEndS
           decals:
             5374: -18,-36
@@ -1002,7 +1002,7 @@ entities:
             4115: -34,30
             5341: -4,-41
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileSteelInnerNe
           decals:
             100: -4,-25
@@ -1065,7 +1065,7 @@ entities:
             4116: -32,30
             5340: -4,-41
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileSteelInnerNw
           decals:
             122: -9,-31
@@ -1128,7 +1128,7 @@ entities:
           decals:
             4114: -34,32
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileSteelInnerSe
           decals:
             107: -11,-22
@@ -1196,7 +1196,7 @@ entities:
           decals:
             4113: -32,32
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileSteelInnerSw
           decals:
             112: -4,-23
@@ -1283,7 +1283,7 @@ entities:
             11863: 20,-18
             11870: 20,-19
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileSteelLineE
           decals:
             57: -7,-35
@@ -1427,7 +1427,7 @@ entities:
             11858: 19,-14
             11872: 20,-14
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileSteelLineN
           decals:
             77: -5,-21
@@ -1568,7 +1568,7 @@ entities:
             11868: 19,-15
             11871: 20,-15
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileSteelLineS
           decals:
             86: -8,-36
@@ -1672,7 +1672,7 @@ entities:
             11856: 19,-16
             11869: 19,-19
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileSteelLineW
           decals:
             38: -5,-18
@@ -5929,7 +5929,7 @@ entities:
             7738: -38,-30
             7794: -8,-5
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: MiniTileSteelInnerNe
           decals:
             7745: -15,-31
@@ -5967,7 +5967,7 @@ entities:
             7774: -8,14
             7775: -10,12
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: MiniTileSteelInnerNw
           decals:
             7723: -32,-37
@@ -6001,7 +6001,7 @@ entities:
           decals:
             9840: 16,-7
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: MiniTileSteelInnerSe
           decals:
             7716: -19,-31
@@ -6032,7 +6032,7 @@ entities:
           decals:
             7793: -8,24
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: MiniTileSteelInnerSw
           decals:
             7755: 3,-15
@@ -6093,7 +6093,7 @@ entities:
             9850: 24,-8
             9851: 24,-9
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: MiniTileSteelLineE
           decals:
             7742: -15,-22
@@ -6412,7 +6412,7 @@ entities:
             9853: 23,-10
             9854: 22,-10
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: MiniTileSteelLineS
           decals:
             7633: -9,-15
@@ -6594,7 +6594,7 @@ entities:
             12180: -8,16
             12181: -8,17
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: MiniTileSteelLineW
           decals:
             7722: -32,-35
@@ -7182,7 +7182,7 @@ entities:
             7834: -7,-1
             10634: 52,-21
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: WarnLineGreyscaleE
           decals:
             10434: -2,-22
@@ -7235,7 +7235,7 @@ entities:
           decals:
             10633: 53,-22
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: WarnLineGreyscaleN
           decals:
             6440: 1,-26
@@ -45691,7 +45691,7 @@ entities:
     - type: Transform
       pos: 48.314304,20.618896
       parent: 2
-- proto: ClothingUniformJumpskirtJanimaidmini
+- proto: ClothingUniformJumpskirtJanichambermaidmini
   entities:
   - uid: 13755
     components:

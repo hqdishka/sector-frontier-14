@@ -13,6 +13,15 @@
   - Medical
   engine:
   - APU
+  addComponents:
+    - type: AutoDelete
+      distanceToCheck: 40
+      delayToDelete: 2400
+      delayToCheck: 60
+      isHumanoidNear: True
+    - type: IFF
+      color: "#009954"
+    - type: NanotrasenFtl
 
 - type: gameMap
   id: Hospitaller

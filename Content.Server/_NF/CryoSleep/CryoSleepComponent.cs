@@ -14,6 +14,10 @@ public sealed partial class CryoSleepComponent : Component
     [DataField("leaveSound")]
     public SoundSpecifier LeaveSound = new SoundPathSpecifier("/Audio/Effects/radpulse1.ogg");
 
+    [ViewVariables(VVAccess.ReadWrite)]
+    [AutoNetworkedField]
+    public bool IsCryo = true;
+
     /// <summary>
     ///   The ID of the latest DoAfter event associated with this entity. May be null if there's no DoAfter going on.
     /// </summary>

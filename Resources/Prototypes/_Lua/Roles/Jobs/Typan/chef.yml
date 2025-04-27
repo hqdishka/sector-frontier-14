@@ -1,0 +1,35 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: job
+  id: OutpostTypanChef
+  name: job-name-typan-chef
+  playTimeTracker: JobOutpostTypanChef
+  description: Повар из далёкого космоса.
+  startingGear: SyndicateChef
+  icon: "JobIconOutpostTypanChef"
+  supervisors: job-supervisors-typan-telecommunications-officer
+  canBeAntag: false
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Civilian
+      time: 6000
+  access:
+  - SyndicateAgent
+  - NuclearOperative
+  accessGroups:
+  - AllAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ DeathAcidifierImplantLWTypan ]
+
+- type: startingGear
+  id: SyndicateChef
+  equipment:
+    ears: ClothingHeadsetAltOutpostTypan
+    jumpsuit: ClothingUniformJumpsuitOutpostTypanChef
+    back: ClothingBackpackSyndicateFilled
+    outerClothing: ClothingOuterApronOutpostTypanChef
+    shoes: ClothingShoesColorBlack
+    id: SyndiPDAChef

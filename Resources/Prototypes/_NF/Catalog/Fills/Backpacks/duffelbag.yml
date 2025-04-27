@@ -1,14 +1,14 @@
-- type: entity
-  parent: ClothingBackpackDuffelSyndicateBundle
-  id: ClothingBackpackDuffelSyndicateFilledEmpGrenadeLauncher
-  name: China-Lake EMP bundle
-  description: "An old China-Lake grenade launcher bundled with 8 rounds of EMP."
-  components:
-  - type: StorageFill
-    contents:
-      - id: WeaponLauncherChinaLakeEmp
-      - id: GrenadeEMP
-        amount: 8
+# - type: entity
+#   parent: ClothingBackpackDuffelSyndicateBundle
+#   id: ClothingBackpackDuffelSyndicateFilledEmpGrenadeLauncher
+#   name: China-Lake EMP bundle
+#   description: "An old China-Lake grenade launcher bundled with 8 rounds of EMP."
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: WeaponLauncherChinaLakeEmp
+#       - id: GrenadeEMP
+#         amount: 8
 
 - type: entity
   parent: ClothingBackpackDuffelMime
@@ -47,28 +47,28 @@
       - id: Hemostat
       - id: Retractor
 
-- type: entity
-  parent: ClothingBackpackDuffelNfsdBrown
-  id: ClothingBackpackDuffelNfsdTrackingBundle
-  name: tracking bundle
-  description: "All the equipment needed to track almost anything, careful tracking people"
-  components:
-  - type: StorageFill
-    contents:
-      - id: WeaponLauncherNfsdLake
-      - id: NFBoxDartsTracking
+# - type: entity
+#   parent: ClothingBackpackDuffelNfsdBrown
+#   id: ClothingBackpackDuffelNfsdTrackingBundle
+#   name: tracking bundle
+#   description: "All the equipment needed to track almost anything, careful tracking people"
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: WeaponLauncherNfsdLake
+#       - id: NFBoxDartsTracking
 
-- type: entity
-  parent: ClothingBackpackDuffelNfsdBrown
-  id: ClothingBackpackDuffelNfsdEmpBundle
-  name: NFSD Lake EMP bundle
-  description: "An old repainted China-Lake grenade launcher bundled with 10 rounds of EMP."
-  components:
-  - type: StorageFill
-    contents:
-      - id: WeaponLauncherNfsdLake
-      - id: GrenadeEMP
-        amount: 12
+# - type: entity
+#   parent: ClothingBackpackDuffelNfsdBrown
+#   id: ClothingBackpackDuffelNfsdEmpBundle
+#   name: NFSD Lake EMP bundle
+#   description: "An old repainted China-Lake grenade launcher bundled with 10 rounds of EMP."
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: WeaponLauncherNfsdLake
+#       - id: GrenadeEMP
+#         amount: 12
 
 # Not a duffelbag, but stored with other uplink-related backpacks
 - type: entity

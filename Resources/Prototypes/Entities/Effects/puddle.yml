@@ -18,6 +18,8 @@
   parent: PuddleTemporary
   suffix: Vomit
   components:
+  - type: TimedDespawn #lua
+    lifetime: 400
   - type: SolutionContainerManager
     solutions:
       puddle:
@@ -46,6 +48,8 @@
   parent: PuddleTemporary
   suffix: Tomato
   components:
+  - type: TimedDespawn #lua
+    lifetime: 400
   - type: SolutionContainerManager
     solutions:
       puddle:
@@ -61,6 +65,8 @@
   parent: PuddleTemporary
   suffix: Watermelon
   components:
+  - type: TimedDespawn #lua
+    lifetime: 400
   - type: SolutionContainerManager
     solutions:
       puddle:
@@ -162,6 +168,8 @@
     solution: puddle
   - type: BadDrink
   - type: IgnoresFingerprints
+  - type: TimedDespawn #lua
+    lifetime: 400
   - type: Tag
     tags:
     - DNASolutionScannable

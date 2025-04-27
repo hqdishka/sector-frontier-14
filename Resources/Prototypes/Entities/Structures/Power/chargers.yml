@@ -141,6 +141,8 @@
         whitelist:
           tags:
           - PowerCage
+          - PowerCartridgeImpulse
+          - PowerCartridgeTesla
   - type: Machine
     board: PowerCageRechargerCircuitboard
   - type: StaticPrice
@@ -165,6 +167,9 @@
           - HitscanBatteryAmmoProvider
           - ProjectileBatteryAmmoProvider
           - Stunbaton
+        blacklist:
+          tags:
+          - PlasmaCutter
 
 - type: entity
   parent: BaseItemRecharger
@@ -191,6 +196,7 @@
         blacklist:
           tags:
           - PotatoBattery
+          - PlasmaCutter
 
 - type: entity
   parent: [BaseStructureWallmount, BaseItemRecharger] # Frontier: add BaseStructureWallmount
@@ -217,6 +223,9 @@
           - HitscanBatteryAmmoProvider
           - ProjectileBatteryAmmoProvider
           - Stunbaton
+        blacklist:
+          tags:
+          - PlasmaCutter
 
 - type: entity
   parent: BaseRecharger

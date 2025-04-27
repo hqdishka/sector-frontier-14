@@ -1,0 +1,47 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: emoteSounds
+  id: MaleAvali
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: AvaliScreams
+    Laugh:
+      collection: MaleLaugh
+    Sneeze:
+      collection: MaleSneezes
+    Cough:
+      collection: MaleCoughs
+    Crying:
+      collection: MaleCry
+    Whistle:
+      collection: Whistles
+    Sigh:
+      collection: MaleSigh
+    Growl:
+      collection: AvaliGrowls
+
+- type: emoteSounds
+  id: FemaleAvali
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: AvaliScreams
+    Laugh:
+      collection: FemaleLaugh
+    Sneeze:
+      collection: FemaleSneezes
+    Cough:
+      collection: FemaleCoughs
+    Crying:
+      collection: FemaleCry
+    Whistle:
+      collection: Whistles
+    Sigh:
+      collection: FemaleSigh
+    Growl:
+      collection: AvaliGrowls

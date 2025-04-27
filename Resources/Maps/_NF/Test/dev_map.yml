@@ -3421,13 +3421,6 @@ entities:
         - 0
         - 0
         - 0
-- proto: ClothingBackpackDuffelNfsdTrackingBundle
-  entities:
-  - uid: 175
-    components:
-    - type: Transform
-      pos: -2.1876638,-3.38657
-      parent: 179
 - proto: ClothingBeltQuiverCrossbowFilledPlasma
   entities:
   - uid: 1619

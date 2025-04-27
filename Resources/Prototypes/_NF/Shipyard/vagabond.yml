@@ -7,7 +7,7 @@
 # Discord: 159375107855351808
 
 # Shuttle Notes:
-# 
+#
 
 - type: vessel
   id: Vagabond
@@ -23,6 +23,15 @@
   - Cargo
   engine:
   - Plasma
+  addComponents:
+    - type: AutoDelete
+      distanceToCheck: 40
+      delayToDelete: 2400
+      delayToCheck: 60
+      isHumanoidNear: True
+    - type: IFF
+      color: "#ffffff"
+    - type: NanotrasenFtl
 
 - type: gameMap
   id: Vagabond

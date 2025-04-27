@@ -6,7 +6,7 @@
   components:
   - type: Sprite
     netsync: false
-    sprite: _NF/Structures/Machines/cryopod.rsi
+    sprite: _Lua/Structures/cryopod.rsi
     layers:
     - state: closed
   - type: Physics

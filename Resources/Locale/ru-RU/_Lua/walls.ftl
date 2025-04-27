@@ -1,0 +1,12 @@
+ent-WallKrissReinforced = { ent-WallReinforced }
+    .desc = { ent-WallReinforced.desc }
+ent-WallKrissSolid = { ent-WallSolid }
+    .desc = { ent-WallSolid.desc }
+ent-WallKrissSolidDiagonal = { ent-WallSolidDiagonal }
+    .desc = { ent-WallSolidDiagonal.desc }
+ent-WallKrissReinforcedDiagonal = { ent-WallReinforcedDiagonal }
+    .desc = { ent-WallReinforcedDiagonal.desc }
+ent-ReinforcedWindowKriss = { ent-ReinforcedWindow }
+    .desc = { ent-ReinforcedWindow.desc }
+ent-ReinforcedWindowKrissDiagonal = { ent-ReinforcedWindowDiagonal }
+    .desc = { ent-ReinforcedWindowDiagonal.desc }

@@ -3,6 +3,11 @@
   maps:
   - Frontier
 
+- type: gameMapPool
+  id: ShipVsShip
+  maps:
+  - ShipVsShip
+
 # Frontier: below are the upstream map pools.
   # - Amber
   # - Bagel

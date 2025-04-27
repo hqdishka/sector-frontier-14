@@ -312,3 +312,14 @@
   id: ManifestedSpirit
   coefficients:
     Holy: 2
+
+#Vulpkanin damage
+- type: damageModifierSet
+  id: Fur
+  coefficients:
+    Blunt: 1
+    Piercing: 1
+    Slash: 1
+    Cold: 0.5
+    Heat: 1.5
+    Poison: 1

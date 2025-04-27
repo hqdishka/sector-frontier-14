@@ -1690,7 +1690,7 @@ entities:
           decals:
             506: 47,6
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteCornerNe
           decals:
             1788: 28,8
@@ -1716,7 +1716,7 @@ entities:
           decals:
             507: 45,6
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteCornerNw
           decals:
             1789: 26,8
@@ -1732,7 +1732,7 @@ entities:
           decals:
             509: 47,3
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteCornerSe
           decals:
             1791: 28,6
@@ -1747,7 +1747,7 @@ entities:
           decals:
             508: 45,3
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteCornerSw
           decals:
             1790: 26,6
@@ -1762,7 +1762,7 @@ entities:
           decals:
             280: 16,-5
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteInnerNe
           decals:
             1786: 24,6
@@ -1812,7 +1812,7 @@ entities:
           decals:
             1807: 22,-1
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteInnerSe
           decals:
             1787: 24,8
@@ -1874,7 +1874,7 @@ entities:
             510: 47,4
             511: 47,5
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteLineE
           decals:
             1784: 24,7
@@ -1926,7 +1926,7 @@ entities:
           decals:
             512: 46,6
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteLineN
           decals:
             1793: 27,12
@@ -2021,7 +2021,7 @@ entities:
           decals:
             1770: 19,22
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: BrickTileWhiteLineW
           decals:
             1796: 26,11

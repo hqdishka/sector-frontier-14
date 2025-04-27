@@ -1,0 +1,758 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: latheRecipe
+  id: CannonBallGlassshot
+  result: CannonBallGlassshot
+  completetime: 12
+  materials:
+     Steel: 3100
+     Glass: 1900
+     Gold: 1500
+
+- type: latheRecipe
+  id: CannonBallGrapeshot
+  result: CannonBallGrapeshot
+  completetime: 12
+  materials:
+     Steel: 3100
+     Glass: 1900
+     Gold: 1500
+
+- type: latheRecipe
+  id: CannonBall
+  result: CannonBall
+  completetime: 12
+  materials:
+     Steel: 3100
+     Glass: 1900
+     Gold: 1500
+
+- type: latheRecipe
+  id: PowerCageSmallEmpty
+  result: PowerCageSmallEmpty
+  completetime: 3
+  materials:
+    Steel: 200
+    Plastic: 100
+
+- type: latheRecipe
+  id: PowerCageMediumEmpty
+  result: PowerCageMediumEmpty
+  completetime: 6
+  materials:
+    Steel: 500
+    Glass: 500
+    Plastic: 250
+    Gold: 40
+
+- type: latheRecipe
+  id: PowerCageHighEmpty
+  result: PowerCageHighEmpty
+  completetime: 10
+  materials:
+    Steel: 600
+    Glass: 800
+    Plastic: 400
+    Gold: 100
+
+- type: latheRecipe
+  id: GrenadeBaton
+  result: GrenadeBaton
+  completetime: 10
+  materials:
+    Steel: 600
+    Glass: 800
+    Plastic: 400
+    Gold: 100
+
+- type: latheRecipe
+  id: GrenadeFrag
+  result: GrenadeFrag
+  completetime: 10
+  materials:
+    Steel: 600
+    Glass: 800
+    Plastic: 400
+    Gold: 100
+
+- type: latheRecipe
+  id: MagazineBox20mmAP
+  result: MagazineBox20mmAP
+  completetime: 10
+  materials:
+    Steel: 600
+    Glass: 800
+    Plastic: 400
+    Gold: 100
+
+- type: latheRecipe
+  id: MagazineBox53mmAP
+  result: MagazineBox53mmAP
+  completetime: 10
+  materials:
+    Steel: 600
+    Glass: 800
+    Plastic: 400
+    Gold: 100
+
+- type: latheRecipe
+  id: MagazineBox80mmAP
+  result: MagazineBox80mmAP
+  completetime: 10
+  materials:
+    Steel: 600
+    Glass: 800
+    Plastic: 400
+    Gold: 100
+
+# - type: latheRecipe
+#   id: MagazineBox20mm
+#   result: MagazineBox20mm
+#   completetime: 10
+#   materials:
+#     Steel: 600
+#     Glass: 800
+#     Plastic: 400
+#     Gold: 100
+
+# - type: latheRecipe
+#   id: MagazineBox53mm
+#   result: MagazineBox53mm
+#   completetime: 10
+#   materials:
+#     Steel: 600
+#     Glass: 800
+#     Plastic: 400
+#     Gold: 100
+
+# - type: latheRecipe
+#   id: MagazineBox80mm
+#   result: MagazineBox80mm
+#   completetime: 10
+#   materials:
+#     Steel: 600
+#     Glass: 800
+#     Plastic: 400
+#     Gold: 100
+
+# - type: latheRecipe
+#   id: MagazineBox20mmPF
+#   result: MagazineBox20mmPF
+#   completetime: 10
+#   materials:
+#     Steel: 600
+#     Glass: 800
+#     Plastic: 400
+#     Gold: 100
+
+# - type: latheRecipe
+#   id: MagazineBox53mmPF
+#   result: MagazineBox53mmPF
+#   completetime: 10
+#   materials:
+#     Steel: 600
+#     Glass: 800
+#     Plastic: 400
+#     Gold: 100
+
+# - type: latheRecipe
+#   id: MagazineBox80mmPF
+#   result: MagazineBox80mmPF
+#   completetime: 10
+#   materials:
+#     Steel: 600
+#     Glass: 800
+#     Plastic: 400
+#     Gold: 100
+
+- type: latheRecipe
+  id: MagazineBox105mmAP
+  result: MagazineBox105mmAP
+  completetime: 10
+  materials:
+    Steel: 600
+    Glass: 800
+    Plastic: 400
+    Gold: 100
+
+- type: latheRecipe
+  id: MagazineBox105mmHE
+  result: MagazineBox105mmHE
+  completetime: 10
+  materials:
+    Steel: 600
+    Glass: 800
+    Plastic: 400
+    Gold: 100
+
+- type: latheRecipe
+  id: MagazineBox105mmPF
+  result: MagazineBox105mmPF
+  completetime: 10
+  materials:
+    Steel: 600
+    Glass: 800
+    Plastic: 400
+    Gold: 100
+
+- type: latheRecipe
+  id: Cartridge120mmAP
+  result: Cartridge120mmAP
+  completetime: 10
+  materials:
+    Steel: 600
+    Glass: 800
+    Plastic: 400
+    Gold: 100
+
+- type: latheRecipe
+  id: Cartridge120mm
+  result: Cartridge120mm
+  completetime: 10
+  materials:
+    Steel: 600
+    Glass: 800
+    Plastic: 400
+    Gold: 100
+
+- type: latheRecipe
+  id: Cartridge120mmPF
+  result: Cartridge120mmPF
+  completetime: 10
+  materials:
+    Steel: 600
+    Glass: 800
+    Plastic: 400
+    Gold: 100
+
+- type: latheRecipe
+  id: Cartridge140mmAP
+  result: Cartridge140mmAP
+  completetime: 10
+  materials:
+    Steel: 600
+    Glass: 800
+    Plastic: 400
+    Gold: 100
+
+- type: latheRecipe
+  id: Cartridge140mm
+  result: Cartridge140mm
+  completetime: 10
+  materials:
+    Steel: 600
+    Glass: 800
+    Plastic: 400
+    Gold: 100
+
+- type: latheRecipe
+  id: Cartridge140mmPF
+  result: Cartridge140mmPF
+  completetime: 10
+  materials:
+    Steel: 600
+    Glass: 800
+    Plastic: 400
+    Gold: 100
+
+- type: latheRecipe
+  id: PowerCartridgeImpulseEmpty
+  result: PowerCartridgeImpulseEmpty
+  completetime: 10
+  materials:
+    Steel: 1800
+    Uranium: 1800
+    Plastic: 900
+    Plasma: 1500
+    Glass: 500
+
+- type: latheRecipe
+  id: PowerCartridgeTeslaEmpty
+  result: PowerCartridgeTeslaEmpty
+  completetime: 10
+  materials:
+    Steel: 1800
+    Uranium: 3000
+    Plastic: 900
+    Plasma: 1300
+    Glass: 900
+
+#Event
+
+- type: latheRecipe
+  id: MagazineBox20mmAPEvent
+  result: MagazineBox20mmAP
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazineBox53mmAPEvent
+  result: MagazineBox53mmAP
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazineBox80mmAPEvent
+  result: MagazineBox80mmAP
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazineBox20mmEvent
+  result: MagazineBox20mm
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazineBox53mmEvent
+  result: MagazineBox53mm
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazineBox80mmEvent
+  result: MagazineBox80mm
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazineBox20mmPFEvent
+  result: MagazineBox20mmPF
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazineBox53mmPFEvent
+  result: MagazineBox53mmPF
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazineBox80mmPFEvent
+  result: MagazineBox80mmPF
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazineBox105mmAPEvent
+  result: MagazineBox105mmAP
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazineBox105mmHEEvent
+  result: MagazineBox105mmHE
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazineBox105mmPFEvent
+  result: MagazineBox105mmPF
+  completetime: 10
+
+- type: latheRecipe
+  id: Cartridge120mmAPEvent
+  result: Cartridge120mmAP
+  completetime: 10
+
+- type: latheRecipe
+  id: Cartridge120mmEvent
+  result: Cartridge120mm
+  completetime: 10
+
+- type: latheRecipe
+  id: Cartridge120mmPFEvent
+  result: Cartridge120mmPF
+  completetime: 10
+
+- type: latheRecipe
+  id: Cartridge140mmAPEvent
+  result: Cartridge140mmAP
+  completetime: 10
+
+- type: latheRecipe
+  id: Cartridge140mmEvent
+  result: Cartridge140mm
+  completetime: 10
+
+- type: latheRecipe
+  id: Cartridge140mmPFEvent
+  result: Cartridge140mmPF
+  completetime: 10
+
+- type: latheRecipe
+  id: MissileTomahawkEvent
+  result: MissileTomahawk
+  completetime: 10
+
+- type: latheRecipe
+  id: MissileGREvent
+  result: MissileGR
+  completetime: 10
+
+# Pistols
+- type: latheRecipe
+  id: WeaponPistolMk58ExpeditionEvent
+  result: WeaponPistolMk58Expedition
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazinePistolEvent
+  result: MagazinePistol
+  completetime: 5
+
+- type: latheRecipe
+  id: WeaponPistolN1984Event
+  result: WeaponPistolN1984
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazineMagnumEvent
+  result: MagazineMagnum
+  completetime: 5
+
+- type: latheRecipe
+  id: WeaponPistolViperEvent
+  result: WeaponPistolViper
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponPistolCobraEvent
+  result: WeaponPistolCobra
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazinePistolCaselessRifleEvent
+  result: MagazinePistolCaselessRifle
+  completetime: 5
+
+- type: latheRecipe
+  id: MagazineBoxCaselessRifle10x24Event
+  result: MagazineBoxCaselessRifle10x24
+  completetime: 5
+
+- type: latheRecipe
+  id: WeaponPistolUniversalExpeditionEvent
+  result: WeaponPistolUniversalExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponPistolPollockExpeditionEvent
+  result: WeaponPistolPollockExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponAntiqueLaserEvent
+  result: WeaponAntiqueLaser
+  completetime: 10
+
+# Revolvers
+- type: latheRecipe
+  id: WeaponRevolverArgentiExpeditionEvent
+  result: WeaponRevolverArgentiExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: SpeedLoaderRifleHeavyEvent
+  result: SpeedLoaderRifleHeavy
+  completetime: 5
+
+- type: latheRecipe
+  id: WeaponRevolverDeckardExpeditionEvent
+  result: WeaponRevolverDeckardExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponRevolverPythonEvent
+  result: WeaponRevolverPython
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponRevolverMatebaExpeditionEvent
+  result: WeaponRevolverMatebaExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponRevolverFitzExpeditionEvent
+  result: WeaponRevolverFitzExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponRevolverFaithExpeditionEvent
+  result: WeaponRevolverFaithExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponRevolverLuckyExpeditionEvent
+  result: WeaponRevolverLuckyExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponRevolverPirateExpeditionEvent
+  result: WeaponRevolverPirateExpedition
+  completetime: 10
+
+# Shotguns
+- type: latheRecipe
+  id: WeaponShotgunHandmadeExpeditionEvent
+  result: WeaponShotgunHandmadeExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: BoxLethalshotEvent
+  result: BoxLethalshot
+  completetime: 5
+
+- type: latheRecipe
+  id: WeaponShotgunDoubleBarreledExpeditionEvent
+  result: WeaponShotgunDoubleBarreledExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponShotgunSawnExpeditionEvent
+  result: WeaponShotgunSawnExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponShotgunKammererExpeditionEvent
+  result: WeaponShotgunKammererExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponShotgunEnforcerExpeditionEvent
+  result: WeaponShotgunEnforcerExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponShotgunBulldogEvent
+  result: WeaponShotgunBulldog
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazineShotgunEvent
+  result: MagazineShotgun
+  completetime: 5
+
+# SMGs
+- type: latheRecipe
+  id: WeaponSubMachineGunWt550ExpeditionEvent
+  result: WeaponSubMachineGunWt550Expedition
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazinePistolSubMachineGunTopMountedEvent
+  result: MagazinePistolSubMachineGunTopMounted
+  completetime: 5
+
+- type: latheRecipe
+  id: MagazineBoxPistolEvent
+  result: MagazineBoxPistol
+  completetime: 5
+
+- type: latheRecipe
+  id: WeaponSubMachineGunAtreidesExpeditionEvent
+  result: WeaponSubMachineGunAtreidesExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazinePistolSubMachineGunEvent
+  result: MagazinePistolSubMachineGun
+  completetime: 5
+
+- type: latheRecipe
+  id: WeaponSubMachineGunDrozdExpeditionEvent
+  result: WeaponSubMachineGunDrozdExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponSubMachineGunC20rEvent
+  result: WeaponSubMachineGunC20r
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponSubMachineGunTypewriterExpeditionEvent
+  result: WeaponSubMachineGunTypewriterExpedition
+  completetime: 10
+
+# Rifles
+- type: latheRecipe
+  id: WeaponRifleGestioEvent
+  result: WeaponRifleGestio
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazineLightRifleLowCapacityEvent
+  result: MagazineLightRifleLowCapacity
+  completetime: 5
+
+- type: latheRecipe
+  id: WeaponRifleNovaliteC1ExpeditionEvent
+  result: WeaponRifleNovaliteC1Expedition
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazineNovaliteC1Event
+  result: MagazineNovaliteC1
+  completetime: 5
+
+- type: latheRecipe
+  id: WeaponRifleLecterEvent
+  result: WeaponRifleLecter
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazineRifleEvent
+  result: MagazineRifle
+  completetime: 5
+
+- type: latheRecipe
+  id: MagazineLightRifleEvent
+  result: MagazineLightRifle
+  completetime: 5
+
+- type: latheRecipe
+  id: WeaponRifleAkEvent
+  result: WeaponRifleAk
+  completetime: 10
+
+# - type: latheRecipe
+#   id: WeaponRifleM90GrenadeLauncherEvent
+#   result: WeaponRifleM90GrenadeLauncher
+#   completetime: 10
+
+- type: latheRecipe
+  id: WeaponRifleSVSEvent
+  result: WeaponRifleSVS
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponRifleVulcanExpeditionEvent
+  result: WeaponRifleVulcanExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponRifleJackdawEvent
+  result: WeaponRifleJackdaw
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazineCaselessRifleEvent
+  result: MagazineCaselessRifle
+  completetime: 5
+
+# Energy Weapons
+- type: latheRecipe
+  id: WeaponLaserGunExpeditionEvent
+  result: WeaponLaserGunExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponLaserSvalinnExpeditionEvent
+  result: WeaponLaserSvalinnExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: PowerCellHighEvent
+  result: PowerCellHigh
+  completetime: 5
+
+- type: latheRecipe
+  id: WeaponLaserCarbineExpeditionEvent
+  result: WeaponLaserCarbineExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponEnergyGunExpeditionEvent
+  result: WeaponEnergyGunExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponAdvancedLaserExpeditionEvent
+  result: WeaponAdvancedLaserExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponLaserCannonExpeditionEvent
+  result: WeaponLaserCannonExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponXrayCannonExpeditionEvent
+  result: WeaponXrayCannonExpedition
+  completetime: 10
+
+# Sniper Rifles
+- type: latheRecipe
+  id: WeaponSniperMosinExpeditionEvent
+  result: WeaponSniperMosinExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazineBoxLightRifleEvent
+  result: MagazineBoxLightRifle
+  completetime: 5
+
+- type: latheRecipe
+  id: MagazineBoxMagnumEvent
+  result: MagazineBoxMagnum
+  completetime: 5
+
+- type: latheRecipe
+  id: WeaponSniperHristovEvent
+  result: WeaponSniperHristov
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazineBoxAntiMaterielEvent
+  result: MagazineBoxAntiMateriel
+  completetime: 5
+
+- type: latheRecipe
+  id: WeaponSniperRepeaterEvent
+  result: WeaponSniperRepeater
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponMusketExpeditionEvent
+  result: WeaponMusketExpedition
+  completetime: 10
+
+- type: latheRecipe
+  id: WeaponSniperCeremonialExpeditionEvent
+  result: WeaponSniperCeremonialExpedition
+  completetime: 10
+
+# LMG
+- type: latheRecipe
+  id: WeaponLightMachineGunL6Event
+  result: WeaponLightMachineGunL6
+  completetime: 10
+
+- type: latheRecipe
+  id: MagazineLightRifleBoxEvent
+  result: MagazineLightRifleBox
+  completetime: 5
+
+# Melee Weapons
+
+- type: latheRecipe
+  id: EnergySwordEvent
+  result: EnergySword
+  completetime: 10
+
+# Explosives
+- type: latheRecipe
+  id: FireBombEvent
+  result: FireBomb
+  completetime: 5
+
+- type: latheRecipe
+  id: PipeBombEvent
+  result: PipeBomb
+  completetime: 5
+
+- type: latheRecipe
+  id: SeismicChargeEvent
+  result: SeismicCharge
+  completetime: 5
+
+- type: latheRecipe
+  id: ExGrenadeEvent
+  result: ExGrenade
+  completetime: 5
+
+- type: latheRecipe
+  id: C4Event
+  result: C4
+  completetime: 5

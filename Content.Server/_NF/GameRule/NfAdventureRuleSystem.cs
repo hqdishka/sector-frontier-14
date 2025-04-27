@@ -228,11 +228,11 @@ public sealed class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleCompon
                 remainingUniqueProtosBySpawnGroup[location.SpawnGroup].Add(location);
             }
         }
-        _poi.GenerateDepots(mapUid, depotProtos, out component.CargoDepots);
+        //_poi.GenerateDepots(mapUid, depotProtos, out component.CargoDepots);
         _poi.GenerateMarkets(mapUid, marketProtos, out component.MarketStations);
         _poi.GenerateRequireds(mapUid, requiredProtos, out component.RequiredPois);
-        _poi.GenerateOptionals(mapUid, optionalProtos, out component.OptionalPois);
-        _poi.GenerateUniques(mapUid, remainingUniqueProtosBySpawnGroup, out component.UniquePois);
+        //_poi.GenerateOptionals(mapUid, optionalProtos, out component.OptionalPois);
+        //_poi.GenerateUniques(mapUid, remainingUniqueProtosBySpawnGroup, out component.UniquePois);
 
         base.Started(uid, component, gameRule, args);
 

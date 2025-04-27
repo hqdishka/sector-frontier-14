@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-4.0",
+  "copyright": "Made by LuaWorld/LuaTech tm. (discord)#hackslua.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+    "states": [
+        {
+            "name": "computer",
+            "directions": 4
+        },
+        {
+            "name": "generic_keyboard",
+            "directions": 4
+        },
+        {
+            "name": "suplink",
+            "directions": 4,
+            "delays": [
+                [
+                    0.1,
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+        {
+            "name": "uplink_key",
+            "directions": 4
+        },
+        {
+            "name": "suplinktypan",
+            "directions": 4,
+            "delays": [
+                [
+                    0.1,
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+        {
+            "name": "uplink_key_typan",
+            "directions": 4
+        },
+		{
+			"name": "aiming_keyboard",
+			"directions": 4
+		},
+		{
+			"name": "gun_aiming",
+			"directions": 4,
+			"delays": [
+				[
+					1,
+					0.5,
+					1,
+					0.5,
+					1,
+					0.5,
+					1,
+					0.5
+				],
+				[
+					1,
+					0.5,
+					1,
+					0.5,
+					1,
+					0.5,
+					1,
+					0.5
+				],
+				[
+					1,
+					0.5,
+					1,
+					0.5,
+					1,
+					0.5,
+					1,
+					0.5
+				],
+				[
+					1,
+					0.5,
+					1,
+					0.5,
+					1,
+					0.5,
+					1,
+					0.5
+				]
+			]
+		},
+		{
+			"name": "aiming_key",
+			"directions": 4
+		},
+        {
+            "name": "salaritytypan",
+            "directions": 4
+        },
+        {
+            "name": "id_key",
+            "directions": 4
+        },
+		{
+			"name": "full"
+		}
+    ]
+}

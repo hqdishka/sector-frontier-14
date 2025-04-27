@@ -1,0 +1,31 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: soundCollection
+  id: NecoScreams
+  files:
+  - /Audio/_Lua/Voice/Neco/neco_scream1.ogg
+  - /Audio/_Lua/Voice/Neco/neco_scream2.ogg
+  - /Audio/_Lua/Voice/Neco/neco_scream3.ogg
+
+- type: soundCollection
+  id: NecoLaugh
+  files:
+  - /Audio/_Lua/Voice/Neco/neco_laugh1.ogg
+  - /Audio/_Lua/Voice/Neco/neco_laugh2.ogg
+
+- type: soundCollection
+  id: NecoSneezes
+  files:
+  - /Audio/_Lua/Voice/Neco/neco_sneeze1.ogg
+
+- type: soundCollection
+  id: NecoCoughs
+  files:
+  - /Audio/_Lua/Voice/Neco/neco_cough1.ogg
+
+- type: soundCollection
+  id: NecoCry
+  files:
+  - /Audio/_Lua/Voice/Neco/neco_cry1.ogg

@@ -289,7 +289,7 @@ entities:
             49: 2,2
             50: 3,2
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: HalfTileOverlayGreyscale
           decals:
             30: -1,-4
@@ -365,7 +365,7 @@ entities:
             81: -5,-3
             82: -5,-2
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: QuarterTileOverlayGreyscale
           decals:
             32: 1,-4
@@ -404,7 +404,7 @@ entities:
           decals:
             26: 1,-6
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: QuarterTileOverlayGreyscale90
           decals:
             33: -2,-4

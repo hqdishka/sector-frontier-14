@@ -57,7 +57,7 @@ entities:
         version: 2
         nodes:
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: Bot
           decals:
             0: -5,0
@@ -162,64 +162,64 @@ entities:
             27: 2,1
         - node:
             angle: -1.5707963267948966 rad
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: Caution
           decals:
             47: -5,0
             48: -3,0
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: Caution
           decals:
             45: 0,-3
             46: 0,-5
         - node:
             angle: 1.5707963267948966 rad
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: Caution
           decals:
             49: 5,0
             50: 3,0
         - node:
             angle: 3.141592653589793 rad
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: Caution
           decals:
             51: 0,5
             52: 0,3
         - node:
             angle: -1.5707963267948966 rad
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: CautionGreyscale
           decals:
             41: -5,0
             42: -3,0
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: CautionGreyscale
           decals:
             43: 0,-5
             44: 0,-3
         - node:
             angle: -1.5707963267948966 rad
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: StandClear
           decals:
             40: -4,0
         - node:
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: StandClear
           decals:
             37: 0,-4
         - node:
             angle: 1.5707963267948966 rad
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: StandClear
           decals:
             38: 4,0
         - node:
             angle: 3.141592653589793 rad
-            color: '#DE3A3A96'
+            color: '#2B465296'
             id: StandClear
           decals:
             39: 0,4

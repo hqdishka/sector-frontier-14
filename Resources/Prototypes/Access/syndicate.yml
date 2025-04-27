@@ -5,3 +5,11 @@
 - type: accessLevel
   id: SyndicateAgent
   name: id-card-access-level-syndicate-agent
+
+- type: accessLevel
+  id: TelecomOfficer
+  name: id-card-access-level-telecom-officer
+
+- type: accessLevel
+  id: ResearchDirectorTypan
+  name: id-card-access-level-research-director-typan

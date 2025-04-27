@@ -4,6 +4,38 @@
 #CREW
 #Recruit
 - type: entity
+  parent: Clothing
+  id: ClothingSyndieBaseOutpostTypan
+  name: syndicate base
+  description: A dubious,, dark-grey jumpsuit. As if passengers weren't dubious enough already.
+  abstract: true
+  components:
+  - type: Sprite
+    state: icon
+  - type: Clothing
+    slots: [innerclothing]
+    equipSound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: MaterialCloth1
+      amount: 3
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 30
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 30
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitRecruitNT
   name: recruit jumpsuit
@@ -15,7 +47,7 @@
     sprite: Clothing/Uniforms/Jumpsuit/recruit_nt.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingSyndieBaseOutpostTypan
   id: ClothingUniformJumpsuitRecruitSyndie
   name: syndicate recruit jumpsuit
   description: A dubious, dark-grey jumpsuit. As if passengers weren't dubious enough already.
@@ -61,7 +93,7 @@
     sprite: Clothing/Uniforms/Jumpsuit/paramedic_nt.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingSyndieBaseOutpostTypan
   id: ClothingUniformJumpsuitParamedicSyndie
   name: syndicate paramedic jumpsuit
   description: For some reason, wearing this makes you feel like you're awfully close to violating the Geneva Convention.
@@ -85,7 +117,7 @@
     sprite: Clothing/Uniforms/Jumpsuit/ce_nt.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingSyndieBaseOutpostTypan
   id: ClothingUniformJumpsuitChiefEngineerSyndie
   name: syndicate chief engineer jumpsuit
   description: An evil-looking jumpsuit with a reflective vest & red undershirt. #TODO: Write a better description for this once Ship vs. Ship is real and actual player habits begin forming

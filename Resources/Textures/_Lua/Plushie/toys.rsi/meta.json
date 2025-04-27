@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-4.0",
+  "copyright": "Я забыл кто нарисовал..., но принадлежит Lua <3/Made for LuaWorld/LuaTech tm. (discord)#hackslua.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "plushie_hackslua"
+    },
+    {
+      "name": "plushie_lilamarrnes"
+    },
+    {
+      "name": "heartiv"
+    },
+    {
+      "name": "heartshiro"
+    },
+    {
+      "name": "shiro"
+    },
+    {
+      "name": "tyler_mylukin"
+    }
+  ]
+}

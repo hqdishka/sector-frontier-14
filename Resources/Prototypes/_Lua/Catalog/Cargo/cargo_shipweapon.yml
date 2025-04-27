@@ -1,0 +1,203 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: cargoProduct
+  id: CargoCrateWeaponTargetingPadFlatpack
+  icon:
+    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
+    state: icon
+  product: CrateWeaponTargetingPadFlatpack
+  cost: 25000
+  category: Корабельное вооружение
+  group: market
+
+- type: cargoProduct
+  id: CargoCrateMachineFTLDrive600Flatpack
+  icon:
+    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
+    state: icon
+  product: CrateMachineFTLDrive600Flatpack
+  cost: 45000
+  category: Корабельное вооружение
+  group: market
+
+- type: cargoProduct
+  id: CargoCrateArmoryWeaponImpulseLaser
+  icon:
+    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
+    state: icon
+  product: CrateArmoryWeaponImpulseLaser
+  cost: 85000
+  category: Корабельное вооружение
+  group: market
+
+- type: cargoProduct
+  id: CargoCrateArmoryPowerCartridgeImpulse
+  icon:
+    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
+    state: icon
+  product: CrateArmoryPowerCartridgeImpulse
+  cost: 35000
+  category: Корабельное вооружение
+  group: market
+
+- type: cargoProduct
+  id: CargoCrateArmoryWeaponTeslaTurret
+  icon:
+    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
+    state: icon
+  product: CrateArmoryWeaponTeslaTurret
+  cost: 110000
+  category: Корабельное вооружение
+  group: market
+
+- type: cargoProduct
+  id: CargoCrateArmoryPowerCartridgeTesla
+  icon:
+    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
+    state: icon
+  product: CrateArmoryPowerCartridgeTesla
+  cost: 35000
+  category: Корабельное вооружение
+  group: market
+
+- type: cargoProduct
+  id: CargoCrateWeaponMissileLauncherStarColosusFlatpack
+  icon:
+    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
+    state: icon
+  product: CrateWeaponMissileLauncherStarColosusFlatpack
+  cost: 1000000
+  category: Корабельное вооружение
+  group: market
+
+- type: cargoProduct
+  id: CargoCrateWeaponMissileStarColosus
+  icon:
+    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
+    state: icon
+  product: CrateWeaponMissileStarColosus
+  cost: 20000000
+  category: Корабельное вооружение
+  group: market
+
+- type: cargoProduct
+  id: CargoCrateArmoryWeapon140mmBase
+  icon:
+    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
+    state: icon
+  product: CrateArmoryWeapon140mmBase
+  cost: 85000
+  category: Корабельное вооружение
+  group: market
+
+- type: cargoProduct
+  id: CargoCrateArmoryWeapon120mmBase
+  icon:
+    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
+    state: icon
+  product: CrateArmoryWeapon120mmBase
+  cost: 75000
+  category: Корабельное вооружение
+  group: market
+
+- type: cargoProduct
+  id: CargoCrateArmoryWeapon105mmBase
+  icon:
+    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
+    state: icon
+  product: CrateArmoryWeapon105mmBase
+  cost: 65000
+  category: Корабельное вооружение
+  group: market
+
+- type: cargoProduct
+  id: CargoCrateArmoryWeapon80mmBase
+  icon:
+    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
+    state: icon
+  product: CrateArmoryWeapon80mmBase
+  cost: 55000
+  category: Корабельное вооружение
+  group: market
+
+- type: cargoProduct
+  id: CargoCrateArmoryWeapon53mmBase
+  icon:
+    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
+    state: icon
+  product: CrateArmoryWeapon53mmBase
+  cost: 45000
+  category: Корабельное вооружение
+  group: market
+
+- type: cargoProduct
+  id: CargoCrateArmoryWeapon20mmBase
+  icon:
+    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
+    state: icon
+  product: CrateArmoryWeapon20mmBase
+  cost: 35000
+  category: Корабельное вооружение
+  group: market
+
+- type: cargoProduct
+  id: CargoCrateArmoryWeapon140mmAP
+  icon:
+    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
+    state: icon
+  product: CrateArmoryWeapon140mmAP
+  cost: 15000
+  category: Корабельное вооружение
+  group: market
+
+- type: cargoProduct
+  id: CargoCrateArmoryWeapon120mmAP
+  icon:
+    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
+    state: icon
+  product: CrateArmoryWeapon120mmAP
+  cost: 14000
+  category: Корабельное вооружение
+  group: market
+
+- type: cargoProduct
+  id: CargoCrateArmoryWeapon105mmAP
+  icon:
+    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
+    state: icon
+  product: CrateArmoryWeapon105mmAP
+  cost: 13000
+  category: Корабельное вооружение
+  group: market
+
+- type: cargoProduct
+  id: CargoCrateArmoryWeapon80mmAP
+  icon:
+    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
+    state: icon
+  product: CrateArmoryWeapon80mmAP
+  cost: 25000
+  category: Корабельное вооружение
+  group: market
+
+- type: cargoProduct
+  id: CargoCrateArmoryWeapon53mmAP
+  icon:
+    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
+    state: icon
+  product: CrateArmoryWeapon53mmAP
+  cost: 20000
+  category: Корабельное вооружение
+  group: market
+
+- type: cargoProduct
+  id: CargoCrateArmoryWeapon20mmAP
+  icon:
+    sprite: _Lua/Structures/Storage/Crates/sweapon.rsi
+    state: icon
+  product: CrateArmoryWeapon20mmAP
+  cost: 19000
+  category: Корабельное вооружение
+  group: market

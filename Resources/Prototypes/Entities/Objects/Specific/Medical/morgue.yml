@@ -7,7 +7,7 @@
   - type: Item
     size: Small
   - type: Sprite
-    drawdepth: SmallObjects # I guess body bags need appear above a coroner's table?
+    drawdepth: SmallObjects # I guess body bags need appear above a pathologist's table?
     sprite: Objects/Specific/Medical/Morgue/bodybags.rsi
     layers:
     - state: bag
@@ -120,6 +120,8 @@
     tags:
     - Trash
     - Ash # Frontier
+  - type: TimedDespawn #lua
+    lifetime: 300
   - type: SolutionContainerManager
     solutions:
       food:

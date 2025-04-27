@@ -125,7 +125,7 @@
   suffix: Blood Cult
   components:
   - type: Sprite
-    sprite: _NF/Structures/Specific/BloodCult/airlock.rsi
+    sprite: _Lua/Structures/Doors/Airlocks/Glass/glass_blood_cult_airlock.rsi #Lua new door
   - type: Fixtures
     fixtures:
       fix1:

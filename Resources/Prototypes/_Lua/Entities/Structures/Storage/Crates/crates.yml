@@ -1,0 +1,70 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  parent: CrateBaseWeldable
+  id: CrateGenericSteelMagneet
+  name: стальной магнитный ящик
+  components:
+  - type: Icon
+    sprite: _Lua/Structures/Storage/Crates/steelmagneet.rsi
+  - type: Sprite
+    sprite: _Lua/Structures/Storage/Crates/steelmagneet.rsi
+  - type: Reflect
+    reflects:
+    - Energy
+    reflectProb: 0.2
+    spread: 90
+  - type: MovementIgnoreGravity
+  - type: Construction
+    graph: CrateGenericSteelMagneet
+    node: crategenericsteelmagneet
+  
+- type: construction
+  name: стальной магнитный ящик
+  id: CrateGenericSteelMagneet
+  graph: CrateGenericSteelMagneet
+  startNode: start
+  targetNode: crategenericsteelmagneet
+  category: construction-category-storage
+  description: Большой контейнер для предметов.
+  icon: { sprite: _Lua/Structures/Storage/Crates/steelmagneet.rsi, state: icon }
+  objectType: Structure
+
+
+- type: constructionGraph
+  id: CrateGenericSteelMagneet
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: crategenericsteelmagneet
+          steps:
+            - material: Steel
+              amount: 15
+              doAfter: 15
+            - material: Uranium
+              amount: 5
+              doAfter: 5
+
+
+    - node: crategenericsteelmagneet
+      entity: CrateGenericSteelMagneet
+      edges:
+        - to: start
+          steps:
+            - tool: Screwing
+              doAfter: 5
+          conditions:
+            - !type:StorageWelded
+              welded: false
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 15
+            - !type:SpawnPrototype
+              prototype: SheetUranium1
+              amount: 5
+            - !type:EmptyAllContainers
+            - !type:DeleteEntity

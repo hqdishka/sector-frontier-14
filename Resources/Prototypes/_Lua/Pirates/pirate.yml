@@ -1,0 +1,30 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: entity
+  id: PirateCaptainGhostRole
+  name: Капитан Пиратов
+  suffix: ghostrole
+  parent: MarkerBase
+  components:
+  - type: GhostTakeoverAvailable
+  - type: GhostRole
+    allowMovement: false
+    allowSpeech: false
+    makeSentient: false
+    name: Тест
+    description: Тест
+  - type: CloningAppearance
+    gear: PirateCaptainGear
+    components:
+    - type: PirateIcon
+    - type: ShowPirIcons
+#    - type: BankAccount
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+    - state: green
+    - sprite: Mobs/Animals/regalrat.rsi
+      state: icon
+#Бля щиткод
