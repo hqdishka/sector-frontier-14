@@ -4,17 +4,3 @@
   typingState: felinid0
   idleState: felinid0 # Corvax-TypingIndicator
   offset: 0, 0.2 # 0625
-
-- type: typingIndicator
-  id: rodentia
-  spritePath: /Textures/_DV/Effects/speech.rsi
-  typingState: rodentia0
-  idleState: rodentia0 # Corvax-TypingIndicator FIX-ME
-  offset: 0, 0.2 # 0625
-
-- type: typingIndicator
-  id: Chitinid
-  spritePath: /Textures/_DV/Effects/speech.rsi
-  typingState: chitinid0
-  idleState: chitinid0 # Corvax-TypingIndicator FIX-ME
-  offset: -0.2, 0.1 # 0625

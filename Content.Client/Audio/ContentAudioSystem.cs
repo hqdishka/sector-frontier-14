@@ -31,6 +31,8 @@ public sealed partial class ContentAudioSystem : SharedContentAudioSystem
     public const float InterfaceMultiplier = 2f;
     public const float TtsMultiplier = 3f; // Corvax-TTS
 
+    public const float SalvageMultiplier = 1f; // Frontier
+
     public override void Initialize()
     {
         base.Initialize();

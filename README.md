@@ -81,6 +81,5 @@ Sector Frontier 14 — это форк [Frontier Station 14](https://github.com/
 
 | Название форка | Репозиторий форка | Лицензия |
 |-----------|-----------------|---------|
-| Sector Umbra | https://github.com/Sector-Umbra/Sector-Umbra | MIT |
 | Space Station 14 | https://github.com/space-wizards/space-station-14 | MIT |
 | White Dream | https://github.com/WWhiteDreamProject/wwdpublic | AGPL 3.0 |

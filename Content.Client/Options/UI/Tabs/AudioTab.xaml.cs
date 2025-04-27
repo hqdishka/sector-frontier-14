@@ -1,5 +1,6 @@
 using Content.Client.Administration.Managers;
 using Content.Client.Audio;
+using Content.Shared._NF.CCVar; // Frontier
 using Content.Shared.CCVar;
 using Content.Shared.Corvax.CCCVars;
 using Robust.Client.Audio;
@@ -43,6 +44,13 @@ public sealed partial class AudioTab : Control
             CCVars.AmbienceVolume,
             SliderVolumeAmbience,
             scale: ContentAudioSystem.AmbienceMultiplier);
+
+        // Frontier: add expedition volume slider
+        Control.AddOptionPercentSlider(
+            NFCCVars.SalvageExpeditionMusicVolume,
+            SliderVolumeExpedMusic,
+            scale: ContentAudioSystem.SalvageMultiplier);
+        // End Frontier: add expedition volume slider
 
         Control.AddOptionPercentSlider(
             CCVars.LobbyMusicVolume,

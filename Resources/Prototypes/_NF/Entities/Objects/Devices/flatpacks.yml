@@ -1,4 +1,4 @@
-# Base
+#region Base
 - type: entity
   parent: BaseFlatpack
   id: BaseNFFlatpack
@@ -11,7 +11,7 @@
     - state: engineering_lathe
 
 # Machines
-# Engineering
+#region Engineering
 - type: entity
   parent: BaseNFFlatpack
   id: AutolatheFlatpack
@@ -195,7 +195,7 @@
   - type: Flatpack
     entity: SmallThruster
 
-# Science
+#region Science
 - type: entity
   parent: BaseNFFlatpack
   id: ExosuitFabricatorFlatpack
@@ -300,7 +300,7 @@
   - type: Flatpack
     entity: BlueprintLithograph
 
-# Service
+#region Service
 - type: entity
   parent: BaseNFFlatpack
   id: NFHolopadShipFlatpack
@@ -427,7 +427,16 @@
   - type: Flatpack
     entity: ComputerWithdrawBankATM
 
-# Medical
+- type: entity
+  parent: UniformPrinterFlatpack
+  id: ShuttleGunMailLauncherFlatpack
+  name: FWD-6500m "Priority" flatpack
+  description: A flatpack used for constructing a FWD-6500m "Priority" stationary mail launcher.
+  components:
+  - type: Flatpack
+    entity: ShuttleGunMailLauncher
+
+#region Medical
 - type: entity
   parent: BaseNFFlatpack
   id: MedicalTechFabFlatpack
@@ -514,7 +523,7 @@
   - type: Flatpack
     entity: KitchenReagentGrinder
 
-# Supply
+#region Supply
 - type: entity
   parent: BaseNFFlatpack
   id: OreProcessorFlatpack
@@ -568,7 +577,7 @@
   - type: Flatpack
     entity: ScrapProcessor
 
-# Mercenary
+#region Mercenary
 - type: entity
   parent: BaseNFFlatpack
   id: AmmoTechFabFlatpack
@@ -592,7 +601,7 @@
   - type: StaticPrice
     price: 600
 
-# Consoles
+#region Consoles
 - type: entity
   parent: BaseNFFlatpack
   id: ComputerResearchAndDevelopmentFlatpack
@@ -646,7 +655,7 @@
     layers:
     - state: supply_gun
 
-# Servers
+#region Servers
 - type: entity
   parent: BaseNFFlatpack
   id: ResearchAndDevelopmentServerFlatpack
@@ -673,7 +682,7 @@
     layers:
     - state: command_server
 
-# Airlocks
+#region Airlocks
 - type: entity
   parent: BaseNFFlatpack
   id: AirlockFlatpack
@@ -718,7 +727,7 @@
   - type: Flatpack
     entity: AirlockGlassShuttle
 
-# Musical instruments
+#region Musical instruments
 - type: entity
   parent: BaseNFFlatpack
   id: TubaInstrumentFlatpack
@@ -870,7 +879,7 @@
   - type: StaticPrice
     price: 250
 
-# Hoverbikes
+#region Hoverbikes
 - type: entity
   parent: BaseNFFlatpack
   id: HoverbikeFlatpack
@@ -878,7 +887,7 @@
   description: A flatpack used for constructing a hoverbike. Keys already slotted in the ignition.
   components:
   - type: Flatpack
-    entity: VehicleHoverbikeNFKeys
+    entity: NFVehicleHoverbikeKeys
   - type: StaticPrice
     price: 2000
   - type: Sprite
@@ -903,7 +912,7 @@
   description: A flatpack used for constructing a hoverbike. Keys already slotted in the ignition.
   components:
   - type: Flatpack
-    entity: VehicleHoverbikeNfsdKey
+    entity: NFVehicleHoverbikeNfsdKey
   - type: StaticPrice
     price: 750
 
@@ -929,7 +938,7 @@
   - type: StaticPrice
     price: 375 # 1.25 * base value of input materials
 
-# Vendomats
+#region Vendomats
 - type: entity
   parent: UniformPrinterFlatpack
   id: VendingMachineBoozeFlatpack
@@ -1059,8 +1068,7 @@
   - type: StaticPrice
     price: 2000
 
-    #DoC Console
-
+#region DoC Console
 - type: entity
   parent: BaseNFFlatpack
   id: StationAdministrationConsoleFlatpack

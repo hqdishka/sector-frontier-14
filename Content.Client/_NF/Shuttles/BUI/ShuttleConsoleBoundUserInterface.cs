@@ -3,6 +3,7 @@
 // See AGPLv3.txt for details.
 using Content.Client.Shuttles.UI;
 using Content.Shared._NF.Shuttles.Events;
+using Content.Shared.Shuttles.Components;
 
 namespace Content.Client.Shuttles.BUI
 {
@@ -14,6 +15,7 @@ namespace Content.Client.Shuttles.BUI
             _window.OnInertiaDampeningModeChanged += OnInertiaDampeningModeChanged;
 
             _window.OnNetworkPortButtonPressed += OnNetworkPortButtonPressed;
+            _window.OnServiceFlagsChanged += OnServiceFlagsChanged;
         }
         private void OnInertiaDampeningModeChanged(NetEntity? entityUid, InertiaDampeningMode mode)
         {
@@ -32,5 +34,14 @@ namespace Content.Client.Shuttles.BUI
                 TargetPort = targetPort
             });
         }
+        private void OnServiceFlagsChanged(NetEntity? entityUid, ServiceFlags flags)
+        {
+            SendMessage(new SetServiceFlagsRequest
+            {
+                ShuttleEntityUid = entityUid,
+                ServiceFlags = flags,
+            });
+        }
+
     }
 }

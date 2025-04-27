@@ -41,7 +41,7 @@
   minPlayers: 0
   stations:
     Bocakillo:
-      stationProto: StandardFrontierVessel
+      stationProto: StandardFrontierAntagVessel
       components:
         - type: StationNameSetup
           mapNameTemplate: 'Bocadillo {1}' #Sneaky spoofed name
@@ -50,4 +50,4 @@
             prefixCreator: '14'
         - type: StationJobs
           availableJobs:
-            Pirate: [ 0, 0 ]
+            NFPirate: [ 0, 0 ]

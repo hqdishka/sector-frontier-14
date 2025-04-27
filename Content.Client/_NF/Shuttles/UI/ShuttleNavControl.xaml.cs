@@ -6,6 +6,7 @@ using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Components;
 using Robust.Shared.Physics.Components;
 using System.Numerics;
+using Content.Shared.Shuttles.Components;
 using Robust.Client.Graphics;
 using Robust.Shared.Collections;
 using Robust.Shared.Prototypes;
@@ -16,6 +17,7 @@ namespace Content.Client.Shuttles.UI
     public sealed partial class ShuttleNavControl
     {
         public InertiaDampeningMode DampeningMode { get; set; }
+        public ServiceFlags ServiceFlags { get; set; } = ServiceFlags.None; // Frontier
 
         /// <summary>
         /// Whether the shuttle is currently in FTL. This is used to disable the Park button
@@ -34,6 +36,7 @@ namespace Content.Client.Shuttles.UI
             }
 
             DampeningMode = state.DampeningMode;
+            ServiceFlags = state.ServiceFlags;
 
             // Check if the entity has an FTLComponent which indicates it's in FTL
             if (transform.GridUid != null)
