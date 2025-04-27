@@ -106,6 +106,40 @@
                                          Margin="0"/>
                     </controls:BoxContainer>
                     <!-- End Frontier - Inertia dampener controls-->
+                    <!-- Frontier - Service Flags -->
+                    <controls:BoxContainer Orientation="Vertical" HorizontalExpand="True" Name="ServiceFlagsBox">
+                        <controls:Label Text="{controls:Loc 'shuttle-console-service-flags'}"/>
+                        <controls:BoxContainer Orientation="Horizontal"
+                                               HorizontalExpand="True"
+                                               Align="Center"
+                                               Margin="0 0 0 3">
+                            <controls:Button Name="ServiceFlagServices"
+                                             Text="{controls:Loc 'shuttle-console-service-flag-Services-label'}"
+                                             TextAlign="Center"
+                                             ToggleMode="True"
+                                             MinWidth="30"
+                                             ToolTip="{controls:Loc 'shuttle-console-service-flag-Services-description'}"
+                                             StyleClasses="OpenRight"
+                                             Margin="0"/>
+                            <controls:Button Name="ServiceFlagTrade"
+                                             Text="{controls:Loc 'shuttle-console-service-flag-Trade-label'}"
+                                             TextAlign="Center"
+                                             ToggleMode="True"
+                                             MinWidth="30"
+                                             ToolTip="{controls:Loc 'shuttle-console-service-flag-Trade-description'}"
+                                             StyleClasses="OpenBoth"
+                                             Margin="0"/>
+                            <controls:Button Name="ServiceFlagSocial"
+                                             Text="{controls:Loc 'shuttle-console-service-flag-Social-label'}"
+                                             TextAlign="Center"
+                                             ToggleMode="True"
+                                             MinWidth="30"
+                                             ToolTip="{controls:Loc 'shuttle-console-service-flag-Social-description'}"
+                                             StyleClasses="OpenLeft"
+                                             Margin="0"/>
+                        </controls:BoxContainer>
+                    </controls:BoxContainer>
+                    <!-- End Frontier - Service Flags -->
                     <!-- Frontier - IFF search -->
                     <controls:BoxContainer Orientation="Vertical" HorizontalExpand="True" Name="IffSearchBox">
                         <controls:Label Text="{controls:Loc 'shuttle-console-iff-search'}"/>
@@ -181,42 +215,5 @@
                         </controls:PanelContainer>
                     </controls:BoxContainer>
                     <!-- End Network Port Buttons -->
-                    
-
-                    <!-- Frontier - Service Flags -->
-                    <controls:BoxContainer Orientation="Vertical" HorizontalExpand="True" Name="ServiceFlagsBox">
-                        <controls:Label Text="{controls:Loc 'shuttle-console-service-flags'}"/>
-                        <controls:BoxContainer Orientation="Horizontal"
-                                               HorizontalExpand="True"
-                                               Align="Center"
-                                               Margin="0 0 0 3">
-                            <controls:Button Name="ServiceFlagServices"
-                                             Text="{controls:Loc 'shuttle-console-service-flag-Services-label'}"
-                                             TextAlign="Center"
-                                             ToggleMode="True"
-                                             MinWidth="30"
-                                             ToolTip="{controls:Loc 'shuttle-console-service-flag-Services-description'}"
-                                             StyleClasses="OpenRight"
-                                             Margin="0"/>
-                            <controls:Button Name="ServiceFlagTrade"
-                                             Text="{controls:Loc 'shuttle-console-service-flag-Trade-label'}"
-                                             TextAlign="Center"
-                                             ToggleMode="True"
-                                             MinWidth="30"
-                                             ToolTip="{controls:Loc 'shuttle-console-service-flag-Trade-description'}"
-                                             StyleClasses="OpenBoth"
-                                             Margin="0"/>
-                            <controls:Button Name="ServiceFlagSocial"
-                                             Text="{controls:Loc 'shuttle-console-service-flag-Social-label'}"
-                                             TextAlign="Center"
-                                             ToggleMode="True"
-                                             MinWidth="30"
-                                             ToolTip="{controls:Loc 'shuttle-console-service-flag-Social-description'}"
-                                             StyleClasses="OpenLeft"
-                                             Margin="0"/>
-                        </controls:BoxContainer>
-                    </controls:BoxContainer>
-                    <!-- End Frontier - Service Flags -->
-
                     </controls:BoxContainer>
                 </controls:BoxContainer>

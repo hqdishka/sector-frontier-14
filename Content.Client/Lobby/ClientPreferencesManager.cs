@@ -1,10 +1,10 @@
 using System.Linq;
+using Content.Shared._Mono.Company;
 using Content.Shared.Preferences;
 using Robust.Client;
 using Robust.Client.Player;
 using Robust.Shared.Network;
 using Robust.Shared.Utility;
-using Content.Shared.Company;
 using Robust.Shared.Prototypes;
 
 namespace Content.Client.Lobby

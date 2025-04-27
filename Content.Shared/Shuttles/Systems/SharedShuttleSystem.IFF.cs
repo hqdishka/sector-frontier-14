@@ -1,7 +1,7 @@
 using System.Linq;
+using Content.Shared._Mono.Company;
 using Content.Shared.Shuttles.Components;
 using JetBrains.Annotations;
-using Content.Shared.Company;
 using Robust.Shared.Prototypes;
 
 namespace Content.Shared.Shuttles.Systems;
@@ -43,19 +43,19 @@ public abstract partial class SharedShuttleSystem
             return null;
         }
 
-        // Frontier
         var suffix = component != null ? GetServiceFlagsSuffix(component.ServiceFlags) : string.Empty;
 
-        return string.IsNullOrEmpty(entName) ? Loc.GetString("shuttle-console-unknown") : entName + suffix;
-        // Get the company information if available
+        var labelText = string.IsNullOrEmpty(entName) ? Loc.GetString("shuttle-console-unknown") : entName + suffix;
+
         Color? companyColor = null;
         string? companyName = null;
 
-        if (TryComp<CompanyComponent>(gridUid, out var companyComp) && !string.IsNullOrEmpty(companyComp.CompanyName))
+        if (TryComp<_Mono.Company.CompanyComponent>(gridUid, out var companyComp) && !string.IsNullOrEmpty(companyComp.CompanyName))
         {
+            var noneCompanyLocalized = Loc.GetString("company-none");
+
             if (IoCManager.Resolve<IPrototypeManager>().TryIndex<CompanyPrototype>(companyComp.CompanyName, out var prototype))
             {
-                // Don't include "None" companies in the IFF label
                 if (prototype.ID != "None")
                 {
                     companyName = prototype.Name;
@@ -64,8 +64,7 @@ public abstract partial class SharedShuttleSystem
             }
             else
             {
-                // For unknown companies, still check if it's not "None"
-                if (companyComp.CompanyName != "None")
+                if (companyComp.CompanyName != noneCompanyLocalized)
                 {
                     companyName = companyComp.CompanyName;
                     companyColor = Color.Yellow;
@@ -73,12 +72,8 @@ public abstract partial class SharedShuttleSystem
             }
         }
 
-        var labelText = string.IsNullOrEmpty(entName) ? Loc.GetString("shuttle-console-unknown") : entName;
-
-        // Add company info if available
         if (companyName != null && companyColor != null)
         {
-            // Return a formatted label that the client can parse properly
             return $"{labelText}\n{companyName}";
         }
 

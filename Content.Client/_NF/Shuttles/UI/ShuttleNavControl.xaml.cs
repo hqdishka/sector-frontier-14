@@ -3,14 +3,13 @@
 // See AGPLv3.txt for details.
 using Content.Shared._NF.Shuttles.Events;
 using Content.Shared.Shuttles.BUIStates;
-using Content.Shared.Shuttles.Components;
 using Robust.Shared.Physics.Components;
 using System.Numerics;
+using Content.Shared._Mono.Company;
 using Content.Shared.Shuttles.Components;
 using Robust.Client.Graphics;
 using Robust.Shared.Collections;
 using Robust.Shared.Prototypes;
-using Content.Shared.Company;
 
 namespace Content.Client.Shuttles.UI
 {
@@ -81,7 +80,7 @@ namespace Content.Client.Shuttles.UI
             Color blipColor = color;
 
             if (gridUid != default &&
-                IoCManager.Resolve<IEntityManager>().TryGetComponent(gridUid, out CompanyComponent? companyComp) &&
+                IoCManager.Resolve<IEntityManager>().TryGetComponent(gridUid, out Shared._Mono.Company.CompanyComponent? companyComp) &&
                 !string.IsNullOrEmpty(companyComp.CompanyName))
             {
                 var prototypeManager = IoCManager.Resolve<IPrototypeManager>();

@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Text.RegularExpressions;
+using Content.Shared._Mono.Company;
 using Content.Shared._NF.Bank;
 using Content.Shared.CCVar;
 using Content.Shared.Corvax.TTS;
@@ -10,7 +11,6 @@ using Content.Shared.Preferences.Loadouts;
 using Content.Shared.Roles;
 using Content.Shared.Traits;
 using Content.Shared._Lua.ERP;
-using Content.Shared.Company;
 using Robust.Shared.Collections;
 using Robust.Shared.Configuration;
 using Robust.Shared.Enums;
