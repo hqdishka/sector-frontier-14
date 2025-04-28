@@ -5,10 +5,24 @@ shuttle-console-iff-search = Поиск IFF
 shuttle-console-inertia-dampener-off = Дрейф
 shuttle-console-inertia-dampener-dampen = Ход
 shuttle-console-inertia-dampener-anchor = Стоп
+
+shuttle-console-service-flags = Рекламировать Услуги
+shuttle-console-service-flag-Services-label = Услуги
+shuttle-console-service-flag-Trade-label = Торговля
+shuttle-console-service-flag-Social-label = Социальное
+
+shuttle-console-service-flag-Services-shortform = ♫
+shuttle-console-service-flag-Trade-shortform = $
+shuttle-console-service-flag-Social-shortform = ☺
+
+shuttle-console-service-flag-Services-description = Услуги (например, медицинские, питание, инженерные) предоставляемые на борту.
+shuttle-console-service-flag-Trade-description = Товары, продаваемые на борту.
+shuttle-console-service-flag-Social-description = Социальное пространство для встреч и общения.
+
 shuttle-console-undock-all = Отстыковать Все
  
 # Network Port Buttons
-shuttle-console-network-ports = Network Ports
+shuttle-console-network-ports = Порты управлениия
  
 # Device Link Buttons
 shuttle-console-device-button-1 = Кнопка 1
