@@ -29,7 +29,8 @@ public sealed class CryoSleepEui : BaseEui
         {
             var configManager = IoCManager.Resolve<INetConfigurationManager>();
             var cryoTime = TimeSpan.FromSeconds(configManager.GetCVar(NFCCVars.CryoExpirationTime));
-            _window.StoreText.Text = Loc.GetString("accept-cryo-window-prompt-stored", ("time", cryoTime));
+            _window.StoreText.Text = Loc.GetString("accept-cryo-window-prompt-stored", ("time", cryoTime)) + "\n" +
+                        Loc.GetString("accept-cryo-window-warning");
         }
         else
         {

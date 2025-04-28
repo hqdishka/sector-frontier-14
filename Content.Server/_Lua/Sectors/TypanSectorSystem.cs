@@ -28,6 +28,7 @@ using Robust.Shared.Map.Components;
 using System.Numerics;
 using Content.Server.LW.TypanSectorPOI;
 using Content.Shared.Lua.CLVar;
+using Content.Server._Lua.Sectors;
 
 namespace Content.Server.LW.TypanSector;
 public sealed class TypanSectorSystem : EntitySystem
@@ -160,6 +161,7 @@ public sealed class TypanSectorSystem : EntitySystem
         var opts = DeserializationOptions.Default with { InitializeMaps = true };
         _stationGrid = _gameTicker.MergeGameMap(_prototypeManager.Index(source.Comp.Station), _mapId, opts).FirstOrNull(HasComp<BecomesStationComponent>)!.Value;
         _metaDataSystem.SetEntityName(_mapUid, "Сектор Тайпан");
+        EnsureComp<SectorAtmosSupportComponent>(_mapUid);
 
         var parallaxes = new[]
         {

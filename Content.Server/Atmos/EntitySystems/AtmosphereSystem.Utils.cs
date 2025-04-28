@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using Content.Server._Lua.Sectors;
 using Content.Server.Atmos.Components;
 using Content.Server.Maps;
 using Content.Shared.Atmos;
@@ -126,7 +127,7 @@ public partial class AtmosphereSystem
         if (!TryComp<MapComponent>(mapUid, out var mapComp))
             return false;
 
-        return AllowMapGasExtraction || HasComp<FTLMapComponent>(mapUid) || mapComp.MapId == _gameTicker.DefaultMap;
+        return AllowMapGasExtraction || HasComp<FTLMapComponent>(mapUid) || HasComp<SectorAtmosSupportComponent>(mapUid) || mapComp.MapId == _gameTicker.DefaultMap;
     }
     // End Frontier: disable atmos off maps
 }

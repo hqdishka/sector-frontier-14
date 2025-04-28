@@ -1,10 +1,10 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 247.2.0
-  forkId: frontiertest
-  forkVersion: 24042025185415
-  time: 04/24/2025 13:45:33
+  engineVersion: 251.0.0
+  forkId: ""
+  forkVersion: ""
+  time: 04/28/2025 15:08:32
   entityCount: 127
 maps: []
 grids:
@@ -517,6 +517,18 @@ entities:
     - type: Transform
       pos: 2.5,4.5
       parent: 21857
+    - type: DeviceLinkSource
+      linkedPorts: {}
+      lastSignals: {}
+      ports:
+      - device-button-1
+      - device-button-2
+      - device-button-3
+      - device-button-4
+      - device-button-5
+      - device-button-6
+      - device-button-7
+      - device-button-8
     missingComponents:
     - Anchorable
 - proto: GeneratorWallmountAPU
@@ -635,6 +647,13 @@ entities:
     components:
     - type: Transform
       pos: 1.5,1.5
+      parent: 21857
+- proto: MachineFTLDrive
+  entities:
+  - uid: 46
+    components:
+    - type: Transform
+      pos: 0.5,1.5
       parent: 21857
 - proto: PlasmaReinforcedWindowDirectional
   entities:
@@ -889,12 +908,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 4.5,1.5
-      parent: 21857
-  - uid: 21965
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 0.5,1.5
       parent: 21857
   - uid: 21966
     components:

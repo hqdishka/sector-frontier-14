@@ -22,6 +22,7 @@ using Content.Shared.Parallax;
 using Robust.Shared.Random;
 using Robust.Shared.EntitySerialization;
 using Content.Shared.Lua.CLVar;
+using Content.Server._Lua.Sectors;
 
 namespace Content.Server.LW.PirateSector;
 public sealed class PirateSectorSystem : EntitySystem
@@ -118,6 +119,7 @@ public sealed class PirateSectorSystem : EntitySystem
         var opts = DeserializationOptions.Default with { InitializeMaps = true };
         _stationGrid = _gameTicker.MergeGameMap(_prototypeManager.Index(source.Comp.Station), _mapId, opts).FirstOrNull(HasComp<BecomesStationComponent>)!.Value;
         _metaDataSystem.SetEntityName(_mapUid, "Сектор Пиратов");
+        EnsureComp<SectorAtmosSupportComponent>(_mapUid);
 
         var parallaxes = new[]
         {

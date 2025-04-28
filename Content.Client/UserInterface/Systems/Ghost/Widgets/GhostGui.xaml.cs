@@ -16,6 +16,7 @@ public sealed partial class GhostGui : UIWidget
     [Dependency] private readonly IConfigurationManager _configurationManager = default!;
 
     private TimeSpan? _respawnTime;
+    private TimeSpan? _cryoReturnTime; //Lua
 
     public GhostTargetWindow TargetWindow { get; }
     public GhostRespawnRulesWindow RulesWindow { get; }
@@ -57,6 +58,13 @@ public sealed partial class GhostGui : UIWidget
         _respawnTime = respawnTime;
     }
 
+    //Lua start
+    public void UpdateCryoReturn(TimeSpan? cryoReturnTime)
+    {
+        _cryoReturnTime = cryoReturnTime;
+    }
+    //Lua end
+
     public void Update(int? roles, bool? canReturnToBody, bool? canUncryo)
     {
         ReturnToBodyButton.Disabled = !canReturnToBody ?? true;
@@ -91,6 +99,20 @@ public sealed partial class GhostGui : UIWidget
             GhostRespawnButton.Text = Loc.GetString("ghost-gui-respawn-button-denied", ("time", $"{delta:f1}"));
             GhostRespawnButton.Disabled = true;
         }
+
+        // Lua start таймер возврата из крио
+        if (_cryoReturnTime is null || _gameTiming.CurTime > _cryoReturnTime)
+        {
+            CryosleepReturnButton.Text = Loc.GetString("cryo-wakeup-window-title");
+            CryosleepReturnButton.Disabled = false;
+        }
+        else
+        {
+            double delta = (_cryoReturnTime.Value - _gameTiming.CurTime).TotalSeconds;
+            CryosleepReturnButton.Text = Loc.GetString("cryo-wakeup-window-denied-title", ("time", $"{delta:f1}"));
+            CryosleepReturnButton.Disabled = true;
+        }
+        //Lua end
     }
 
     protected override void Dispose(bool disposing)

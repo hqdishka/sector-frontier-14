@@ -6,6 +6,7 @@ using Content.Server.Ghost;
 using Content.Server.Interaction;
 using Content.Server.Mind;
 using Content.Server.Popups;
+using Content.Server.GameTicking; //Lua
 using Content.Shared._NF.CCVar;
 using Content.Shared._NF.CryoSleep.Events;
 using Content.Shared.ActionBlocker;
@@ -25,11 +26,14 @@ using Content.Shared.Verbs;
 using Robust.Server.Containers;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
+using Robust.Server.Player; //Lua
 using Robust.Shared.Containers;
 using Robust.Shared.Enums;
 using Robust.Shared.Map;
 using Robust.Shared.Network;
 using Robust.Shared.Timing;
+using Content.Shared._Lua.CryoTimer;//Lua
+using Robust.Shared.Player; //Lua
 
 namespace Content.Server._NF.CryoSleep;
 
@@ -50,6 +54,11 @@ public sealed partial class CryoSleepSystem : EntitySystem
     [Dependency] private readonly MapSystem _map = default!;
     [Dependency] private readonly TransformSystem _transform = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private readonly IPlayerManager _player = default!; //Lua
+    [Dependency] private readonly IMapManager _mapManager = default!; //Lua
+    [Dependency] private readonly GameTicker _gameTicker = default!; //Lua
+
+    private readonly Dictionary<NetUserId, (TimeSpan OriginalEndTime, TimeSpan EntryTime)> _cryoTimers = new(); //Lua
 
     private readonly Dictionary<NetUserId, StoredBody?> _storedBodies = new();
     private EntityUid? _storageMap;
@@ -68,6 +77,7 @@ public sealed partial class CryoSleepSystem : EntitySystem
         SubscribeLocalEvent<CryoSleepComponent, CryoStoreDoAfterEvent>(OnAutoCryoSleep);
         SubscribeLocalEvent<CryoSleepComponent, DragDropTargetEvent>(OnEntityDragDropped);
         SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
+        SubscribeLocalEvent<PlayerAttachedEvent>(OnPlayerReconnected); //Lua
 
         InitReturning();
     }
@@ -82,6 +92,49 @@ public sealed partial class CryoSleepSystem : EntitySystem
 
         return _storageMap.Value;
     }
+
+    //Lua timer uncryo start help me ;_;
+    public void SetCryoReturnTimer(NetUserId userId, TimeSpan? unlockTime)
+    {
+        if (unlockTime == null)
+        {
+            _cryoTimers.Remove(userId);
+        }
+        else if (_cryoTimers.TryGetValue(userId, out var existing))
+        {
+            _cryoTimers[userId] = (unlockTime.Value, existing.EntryTime);
+        }
+        else
+        {
+            _cryoTimers[userId] = (unlockTime.Value, _timing.CurTime);
+        }
+
+        if (_player.TryGetSessionById(userId, out var session))
+        {
+            RaiseNetworkEvent(new CryoReturnTimerEvent(unlockTime), session);
+        }
+    }
+
+    public TimeSpan? GetRemainingCryoTime(NetUserId userId)
+    {
+        if (!_cryoTimers.TryGetValue(userId, out var timerData))
+            return null;
+
+        return timerData.OriginalEndTime - _timing.CurTime;
+    }
+
+    public TimeSpan? GetCryoReturnTimer(NetUserId userId)
+    {
+        return _cryoTimers.TryGetValue(userId, out var timerData) ? timerData.OriginalEndTime : null;
+    }
+    private void OnPlayerReconnected(PlayerAttachedEvent args)
+    {
+        if (_cryoTimers.TryGetValue(args.Player.UserId, out var timerData))
+        {
+            SetCryoReturnTimer(args.Player.UserId, timerData.OriginalEndTime);
+        }
+    }
+    //Lua timer uncryo end
 
     private void OnInit(EntityUid uid, CryoSleepComponent component, ComponentStartup args)
     {
@@ -253,7 +306,7 @@ public sealed partial class CryoSleepSystem : EntitySystem
             var args = new DoAfterArgs(
                 _entityManager,
                 toInsert.Value,
-                TimeSpan.FromSeconds(30),
+                TimeSpan.FromSeconds(120), //Lua 30<120
                 ev,
                 cryopod,
                 toInsert,
@@ -293,9 +346,33 @@ public sealed partial class CryoSleepSystem : EntitySystem
                     _storedBodies.Remove(id.Value);
                 else
                     _storedBodies[id.Value] = new StoredBody() { Body = body, Cryopod = cryopod };
+
+                //Lua start
+                if (!_cryoTimers.ContainsKey(id.Value))
+                {
+                    SetCryoReturnTimer(id.Value, _timing.CurTime + TimeSpan.FromMinutes(30));
+                }
+                else
+                {
+                    var timerData = _cryoTimers[id.Value];
+                    SetCryoReturnTimer(id.Value, timerData.OriginalEndTime);
+                }
+                //Lua end
             }
 
-            _ghost.OnGhostAttempt(mindEntity, false, true, mind: mind);
+            //Lua start
+            _mind.TransferTo(mindEntity, null, createGhost: false, mind: mind);
+
+            var mapEntity = _mapManager.GetMapEntityId(_gameTicker.DefaultMap);
+            var defaultCoords = new EntityCoordinates(mapEntity, Vector2.Zero);
+
+            var ghost = _ghost.SpawnGhost((mindEntity, mind), defaultCoords, canReturn: false);
+
+            if (ghost != null)
+            {
+                _mind.TransferTo(mindEntity, ghost, mind: mind);
+            }
+            //Lua End
         }
 
         var storage = GetStorageMap();
@@ -307,22 +384,26 @@ public sealed partial class CryoSleepSystem : EntitySystem
         if (cryo.CryosleepDoAfter != null && _doAfter.GetStatus(cryo.CryosleepDoAfter) == DoAfterStatus.Running)
             _doAfter.Cancel(cryo.CryosleepDoAfter);
 
-        if (deleteEntity)
-        {
-            QueueDel(bodyId);
-        }
-        else
-        {
-            // Start a timer. When it ends, the body needs to be deleted.
-            Timer.Spawn(TimeSpan.FromSeconds(_configurationManager.GetCVar(NFCCVars.CryoExpirationTime)), () =>
-            {
-                if (id != null)
-                    ResetCryosleepState(id.Value);
+        #region DeadCode
+        //Lua no-no-no, no delete!
+        //if (deleteEntity) 
+        //{
+        //    QueueDel(bodyId);
+        //}
+        //else
+        //{
+        //    // Start a timer. When it ends, the body needs to be deleted.
+        //    Timer.Spawn(TimeSpan.FromSeconds(_configurationManager.GetCVar(NFCCVars.CryoExpirationTime)), () =>
+        //    {
+        //        if (id != null)
+        //            ResetCryosleepState(id.Value);
 
-                if (!Deleted(bodyId) && Transform(bodyId).ParentUid == _storageMap)
-                    QueueDel(bodyId);
-            });
-        }
+        //        if (!Deleted(bodyId) && Transform(bodyId).ParentUid == _storageMap)
+        //            QueueDel(bodyId);
+        //    });
+        //}
+        //Lua no delete
+        #endregion DeadCode
     }
 
     /// <param name="body">If not null, will not eject if the stored body is different from that parameter.</param>
@@ -338,10 +419,25 @@ public sealed partial class CryoSleepSystem : EntitySystem
         if (toEject == null)
             return false;
 
+        //Lua start
+        NetUserId? userId = null;
+        if (_mind.TryGetMind(toEject.Value, out _, out var mindComp))
+        {
+            userId = mindComp.UserId;
+        }
+        //Lua end
+
         _container.Remove(toEject.Value, component.BodyContainer, force: true);
 
         if (component.CryosleepDoAfter != null && _doAfter.GetStatus(component.CryosleepDoAfter) == DoAfterStatus.Running)
             _doAfter.Cancel(component.CryosleepDoAfter);
+
+        //Lua start
+        if (userId != null)
+        {
+            _cryoTimers.Remove(userId.Value);
+        }
+        //Lua end
 
         return true;
     }
@@ -354,6 +450,7 @@ public sealed partial class CryoSleepSystem : EntitySystem
     private void OnRoundRestart(RoundRestartCleanupEvent args)
     {
         _storedBodies.Clear();
+        _cryoTimers.Clear(); //Lua
     }
 
     private struct StoredBody

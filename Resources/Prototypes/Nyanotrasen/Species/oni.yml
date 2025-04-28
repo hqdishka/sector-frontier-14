@@ -9,7 +9,8 @@
   skinColoration: Hues
   maleFirstNames: NamesOniMale
   femaleFirstNames: NamesOniFemale
-  lastNames: NamesOniLocation
+  maleLastNames: NamesOniLocation # Corvax-LastnameGender
+  femaleLastNames: NamesOniLocation # Corvax-LastnameGender
   naming: LastNoFirst
 
 - type: markingPoints

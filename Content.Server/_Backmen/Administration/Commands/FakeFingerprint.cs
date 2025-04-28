@@ -11,7 +11,6 @@ namespace Content.Server.Backmen.Administration.Commands;
 [AdminCommand(AdminFlags.Fun)]
 public sealed class FakeFingerprint : IConsoleCommand
 {
-    [Dependency] private readonly IAdminLogManager _adminLogger = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
 
     public string Command => "fakefingerprints";
@@ -57,7 +56,7 @@ public sealed class FakeFingerprint : IConsoleCommand
         }
 
         var f = _entityManager.EnsureComponent<ForensicsComponent>(item.Value);
-        if (_entityManager.TryGetComponent<DnaComponent>(playerUid, out var dna))
+        if (_entityManager.TryGetComponent<DnaComponent>(playerUid, out var dna) && !string.IsNullOrEmpty(dna.DNA))
         {
             f.DNAs.Add(dna.DNA);
         }

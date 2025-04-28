@@ -34,6 +34,7 @@ using Robust.Shared.EntitySerialization;
 using Robust.Shared.Map.Components;
 using System.Numerics;
 using Content.Server.LW.AsteroidSectorPOI;
+using Content.Server._Lua.Sectors;
 
 namespace Content.Server.LW.AsteroidSector;
 public sealed class AsteroidSectorSystem : EntitySystem
@@ -267,6 +268,7 @@ public sealed class AsteroidSectorSystem : EntitySystem
         var opts = DeserializationOptions.Default with { InitializeMaps = true };
         _stationGrid = _gameTicker.MergeGameMap(_prototypeManager.Index(source.Comp.Station), _mapId, opts).FirstOrNull(HasComp<BecomesStationComponent>)!.Value;
         _metaDataSystem.SetEntityName(_mapUid, "Поле Астероидов");
+        EnsureComp<SectorAtmosSupportComponent>(_mapUid);
 
         var parallaxes = new[]
         {

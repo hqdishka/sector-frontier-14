@@ -48,5 +48,3 @@
     - BatteryWeaponFireModesSprites
   - type: StaticPrice
     price: 7500
-  - type: StealTarget
-    stealGroup: WeaponPistolX01

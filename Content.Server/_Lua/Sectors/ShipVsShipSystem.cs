@@ -17,6 +17,7 @@ using Content.Server.LW.ShipVsShipPOI;
 using Content.Server.LW.ShipVsShip.Components;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Whitelist;
+using Content.Server._Lua.Sectors;
 
 namespace Content.Server.LW.ShipVsShipSector;
 public sealed class ShipVsShipRedSystem : EntitySystem
@@ -79,6 +80,7 @@ public sealed class ShipVsShipRedSystem : EntitySystem
         var opts = DeserializationOptions.Default with { InitializeMaps = true };
         _redStationGrid = _gameTicker.MergeGameMap(_prototypeManager.Index(source.Comp.Station), _redMapId, opts).FirstOrNull(HasComp<BecomesStationComponent>)!.Value;
         _metaDataSystem.SetEntityName(_redMapUid, "Сектор Красных");
+        EnsureComp<SectorAtmosSupportComponent>(_redMapUid);
 
         var parallaxes = new[]
         {
@@ -111,6 +113,7 @@ public sealed class ShipVsShipRedSystem : EntitySystem
         var opts = DeserializationOptions.Default with { InitializeMaps = true };
         _blueStationGrid = _gameTicker.MergeGameMap(_prototypeManager.Index(source.Comp.Station), _blueMapId, opts).FirstOrNull(HasComp<BecomesStationComponent>)!.Value;
         _metaDataSystem.SetEntityName(_blueMapUid, "Сектор Синих");
+        EnsureComp<SectorAtmosSupportComponent>(_blueMapUid);
 
         var parallaxes = new[]
         {

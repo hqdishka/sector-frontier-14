@@ -1,6 +1,17 @@
 meta:
-  format: 6
-  postmapinit: false
+  format: 7
+  category: Grid
+  engineVersion: 251.0.0
+  forkId: ""
+  forkVersion: ""
+  time: 04/28/2025 15:19:03
+  entityCount: 2273
+maps: []
+grids:
+- 1
+orphans:
+- 1
+nullspace: []
 tilemap:
   0: Space
   17: FloorBedrock
@@ -1358,7 +1369,8 @@ entities:
         maxVol: 10
         name: food
         reagents:
-        - ReagentId: Fiber
+        - data: []
+          ReagentId: Fiber
           Quantity: 10
     - type: ContainedSolution
       containerName: food
@@ -1374,7 +1386,8 @@ entities:
         maxVol: 30
         name: drink
         reagents:
-        - ReagentId: Water
+        - data: []
+          ReagentId: Water
           Quantity: 30
     - type: ContainedSolution
       containerName: drink
@@ -1390,9 +1403,11 @@ entities:
         maxVol: 100
         name: drink
         reagents:
-        - ReagentId: Tea
+        - data: []
+          ReagentId: Tea
           Quantity: 80
-        - ReagentId: Rum
+        - data: []
+          ReagentId: Rum
           Quantity: 20
     - type: ContainedSolution
       containerName: drink
@@ -1651,18 +1666,12 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -16.5,-2.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 2027
   - uid: 1771
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -16.5,-0.5
       parent: 1
-    - type: DeviceLinkSink
-      links:
-      - 1620
 - proto: AirlockShuttleSyndicate
   entities:
   - uid: 31
@@ -1949,8 +1958,6 @@ entities:
       parent: 1
     - type: Apc
       hasAccess: True
-      lastExternalState: Good
-      lastChargeState: Full
   - uid: 66
     components:
     - type: Transform
@@ -5310,12 +5317,40 @@ entities:
     - type: Transform
       pos: 14.5,10.5
       parent: 1
+- proto: ComputerContrabandPalletConsolePirate
+  entities:
+  - uid: 2262
+    components:
+    - type: Transform
+      pos: 13.5,13.5
+      parent: 1
 - proto: ComputerIFF
   entities:
   - uid: 522
     components:
     - type: Transform
       pos: 8.5,21.5
+      parent: 1
+- proto: ComputerPirateBounty
+  entities:
+  - uid: 2264
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 12.5,10.5
+      parent: 1
+  - uid: 2265
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 16.5,10.5
+      parent: 1
+- proto: ComputerPirateBountyRedemption
+  entities:
+  - uid: 2263
+    components:
+    - type: Transform
+      pos: 7.5,14.5
       parent: 1
 - proto: ComputerPowerMonitoring
   entities:
@@ -5332,32 +5367,12 @@ entities:
       rot: 3.141592653589793 rad
       pos: 15.5,10.5
       parent: 1
-    - type: ContainerContainer
-      containers:
-        ShipyardConsole-targetId: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
   - uid: 525
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 13.5,10.5
       parent: 1
-    - type: ContainerContainer
-      containers:
-        ShipyardConsole-targetId: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-        board: !type:Container
-          showEnts: False
-          occludes: True
-          ents: []
 - proto: ComputerShuttle
   entities:
   - uid: 1140
@@ -5365,6 +5380,18 @@ entities:
     - type: Transform
       pos: 9.5,23.5
       parent: 1
+    - type: DeviceLinkSource
+      linkedPorts: {}
+      lastSignals: {}
+      ports:
+      - device-button-1
+      - device-button-2
+      - device-button-3
+      - device-button-4
+      - device-button-5
+      - device-button-6
+      - device-button-7
+      - device-button-8
 - proto: ComputerTabletopRadar
   entities:
   - uid: 526
@@ -5387,6 +5414,56 @@ entities:
       name: Дорогущая плазма
     - type: Transform
       pos: -0.5,7.5
+      parent: 1
+- proto: ContrabandPalletPirate
+  entities:
+  - uid: 2266
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 14.5,14.5
+      parent: 1
+  - uid: 2267
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 14.5,13.5
+      parent: 1
+  - uid: 2268
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 15.5,14.5
+      parent: 1
+  - uid: 2269
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 15.5,13.5
+      parent: 1
+  - uid: 2270
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 12.5,14.5
+      parent: 1
+  - uid: 2271
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 12.5,13.5
+      parent: 1
+  - uid: 2272
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 11.5,14.5
+      parent: 1
+  - uid: 2273
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 11.5,13.5
       parent: 1
 - proto: CounterWoodFrame
   entities:
@@ -5967,8 +6044,6 @@ entities:
           Drink:
             effects:
             - !type:SatiateThirst
-              shouldLog: False
-              logImpact: Low
               factor: 4
               probability: 1
               conditions: null
@@ -5977,10 +6052,9 @@ entities:
           Extinguish:
             effects:
             - !type:ExtinguishReaction
-              shouldLog: False
-              logImpact: Low
               probability: 1
               conditions: null
+              fireStacksAdjustment: -1.5
             methods:
             - Touch
         tileReactions:
@@ -5989,8 +6063,6 @@ entities:
         - !type:SpillIfPuddlePresentTileReaction {}
         plantMetabolism:
         - !type:PlantAdjustWater
-          shouldLog: False
-          logImpact: Low
           guidebookIsAttributePositive: True
           amount: 1
           guidebookAttributeName: plant-attribute-water
@@ -6024,7 +6096,6 @@ entities:
         metamorphicMaxFillLevels: 0
         recognizable: True
       initialDescription: Стакан-метаморф, который автоматически превращается в ёмкость, соответствующую находящемуся в нём напитку. На донышке виден затёртый номер патента.
-      initialName: стакан-метаморф
     - type: ContainerContainer
       containers:
         solution@drink: !type:ContainerSlot
@@ -6884,7 +6955,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 6.5,1.5
       parent: 1
-- proto: FloraGreyStalagmite1
+- proto: FloraGreyStalagmite
   entities:
   - uid: 735
     components:
@@ -6892,16 +6963,12 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 22.058987,12.219555
       parent: 1
-- proto: FloraGreyStalagmite2
-  entities:
   - uid: 736
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 12.184279,-0.4174717
       parent: 1
-- proto: FloraGreyStalagmite5
-  entities:
   - uid: 737
     components:
     - type: Transform
@@ -6920,7 +6987,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 8.934279,-0.4955967
       parent: 1
-- proto: FloraRockSolid01
+- proto: FloraRockSolid
   entities:
   - uid: 740
     components:
@@ -6933,15 +7000,13 @@ entities:
     - type: Transform
       pos: 27.993038,12.659048
       parent: 1
-- proto: FloraRockSolid02
-  entities:
   - uid: 742
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 17.970663,6.2949486
       parent: 1
-- proto: FloraStalagmite3
+- proto: FloraStalagmite
   entities:
   - uid: 743
     components:
@@ -6954,8 +7019,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 8.013552,5.65706
       parent: 1
-- proto: FloraStalagmite4
-  entities:
   - uid: 745
     components:
     - type: Transform
@@ -6967,8 +7030,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 6.5504246,0.5470781
       parent: 1
-- proto: FloraStalagmite5
-  entities:
   - uid: 747
     components:
     - type: Transform
@@ -7006,7 +7067,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: FoodMeatSnakeKebab
+- proto: FoodKebabSkewer
   entities:
   - uid: 752
     components:
@@ -9304,7 +9365,13 @@ entities:
     - type: ContainerContainer
       containers:
         solution@food: !type:ContainerSlot
+          showEnts: False
+          occludes: True
           ent: 1530
+        stash: !type:ContainerSlot
+          showEnts: False
+          occludes: True
+          ent: null
     - type: Godmode
       wasMovedByPressure: True
     missingComponents:
@@ -9395,7 +9462,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 6.5,-1.5
       parent: 1
-- proto: PoweredlightColoredBlack
+- proto: PoweredlightUltraviolet
   entities:
   - uid: 1037
     components:
@@ -9897,7 +9964,7 @@ entities:
     - type: Transform
       pos: 19.701973,-0.6346198
       parent: 1
-- proto: ShadowTree01
+- proto: ShadowTree
   entities:
   - uid: 1115
     components:
@@ -9916,19 +9983,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -0.03422475,-2.249813
       parent: 1
-  - uid: 1643
-    components:
-    - type: Transform
-      pos: -15.199168,2.873334
-      parent: 1
-  - uid: 2025
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -13.02286,-3.1938946
-      parent: 1
-- proto: ShadowTree02
-  entities:
   - uid: 1120
     components:
     - type: Transform
@@ -9940,21 +9994,12 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -1.9708852,-3.4627993
       parent: 1
-  - uid: 1944
-    components:
-    - type: Transform
-      pos: -13.621113,4.092084
-      parent: 1
-- proto: ShadowTree03
-  entities:
   - uid: 1122
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 21.139551,-1.1214685
       parent: 1
-- proto: ShadowTree05
-  entities:
   - uid: 1123
     components:
     - type: Transform
@@ -9965,8 +10010,6 @@ entities:
     - type: Transform
       pos: 28.157347,13.802317
       parent: 1
-- proto: ShadowTree06
-  entities:
   - uid: 1127
     components:
     - type: Transform
@@ -9983,6 +10026,22 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -2.9552603,-7.5461173
+      parent: 1
+  - uid: 1643
+    components:
+    - type: Transform
+      pos: -15.199168,2.873334
+      parent: 1
+  - uid: 1944
+    components:
+    - type: Transform
+      pos: -13.621113,4.092084
+      parent: 1
+  - uid: 2025
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -13.02286,-3.1938946
       parent: 1
 - proto: SheetPlasma
   entities:
@@ -10222,7 +10281,7 @@ entities:
       parent: 1
     - type: SpawnPoint
       job_id: PirateFirstMate
-- proto: SpawnPointPirate
+- proto: SpawnPointNFPirate
   entities:
   - uid: 1152
     components:
@@ -10234,14 +10293,14 @@ entities:
     - type: Transform
       pos: 13.5,11.5
       parent: 1
-- proto: SpawnPointPirateCaptain
+- proto: SpawnPointNFPirateCaptain
   entities:
   - uid: 1154
     components:
     - type: Transform
       pos: 10.5,11.5
       parent: 1
-- proto: SpawnPointPirateFirstMate
+- proto: SpawnPointNFPirateFirstMate
   entities:
   - uid: 1155
     components:
@@ -10410,6 +10469,13 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -2.1460624,1.4815664
       parent: 1
+- proto: StructurePistolRackWallmounted
+  entities:
+  - uid: 1912
+    components:
+    - type: Transform
+      pos: -4.5,-2.5
+      parent: 1
 - proto: SubstationBasic
   entities:
   - uid: 1179
@@ -10424,32 +10490,24 @@ entities:
     - type: Transform
       pos: 1.5,7.5
       parent: 1
-    - type: Physics
-      canCollide: False
   - uid: 1183
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 1.5,8.5
       parent: 1
-    - type: Physics
-      canCollide: False
   - uid: 1184
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 1.5,9.5
       parent: 1
-    - type: Physics
-      canCollide: False
   - uid: 2134
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -0.5,9.5
       parent: 1
-    - type: Physics
-      canCollide: False
 - proto: SyringeStimulants
   entities:
   - uid: 1185
@@ -14955,13 +15013,6 @@ entities:
     - type: Transform
       pos: 6.4328337,8.346617
       parent: 1
-- proto: WeaponRackPistolWallmountedBase
-  entities:
-  - uid: 1912
-    components:
-    - type: Transform
-      pos: -4.5,-2.5
-      parent: 1
 - proto: WindoorSecure
   entities:
   - uid: 1913
@@ -15057,7 +15108,7 @@ entities:
       pos: 4.5,7.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -70628.63
+      secondsUntilStateChange: -70798.01
       state: Opening
   - uid: 1928
     components:

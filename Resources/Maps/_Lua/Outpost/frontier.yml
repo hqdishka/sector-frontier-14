@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 247.2.0
+  engineVersion: 251.0.0
   forkId: ""
   forkVersion: ""
-  time: 04/23/2025 16:12:05
-  entityCount: 6528
+  time: 04/28/2025 15:15:43
+  entityCount: 6529
 maps:
 - 1
 grids:
@@ -4280,6 +4280,7 @@ entities:
     - type: BecomesStation
       id: Frontier
     - type: StationTransit
+      routes: {}
     - type: ProtectedGrid
       hostileMobKillSound: !type:SoundPathSpecifier
         path: /Audio/Effects/holy.ogg
@@ -5095,7 +5096,7 @@ entities:
       pos: 57.5,-1.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -48122.336
+      secondsUntilStateChange: -48227.633
       state: Opening
     - type: Docking
       name: 5A
@@ -16428,6 +16429,18 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 12.5,14.5
       parent: 2
+    - type: DeviceLinkSource
+      linkedPorts: {}
+      lastSignals: {}
+      ports:
+      - device-button-1
+      - device-button-2
+      - device-button-3
+      - device-button-4
+      - device-button-5
+      - device-button-6
+      - device-button-7
+      - device-button-8
 - proto: ComputerTabletopSurveillanceCameraMonitor
   entities:
   - uid: 778
@@ -22223,6 +22236,16 @@ entities:
     - type: Transform
       pos: 48.526165,17.807875
       parent: 2
+- proto: FTLExclusion
+  entities:
+  - uid: 6529
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -0.5,13.5
+      parent: 2
+    - type: FTLExclusion
+      range: 356
 - proto: GasAnalyzer
   entities:
   - uid: 1821
@@ -33223,17 +33246,19 @@ entities:
     - type: Transform
       pos: -24.5,20.5
       parent: 2
-- proto: PacifiedZone20
+- proto: PacifiedZonePanicBunker20
   entities:
   - uid: 3210
     components:
     - type: Transform
-      pos: -53.5,19.5
+      rot: 3.141592653589793 rad
+      pos: -0.5,12.5
       parent: 2
   - uid: 3211
     components:
     - type: Transform
-      pos: -0.5,13.5
+      rot: 3.141592653589793 rad
+      pos: -53.5,15.5
       parent: 2
 - proto: Paper
   entities:

@@ -484,20 +484,11 @@
   completetime: 10
 
 # Shotguns
-- type: latheRecipe
-  id: WeaponShotgunHandmadeExpeditionEvent
-  result: WeaponShotgunHandmadeExpedition
-  completetime: 10
 
 - type: latheRecipe
   id: BoxLethalshotEvent
   result: BoxLethalshot
   completetime: 5
-
-- type: latheRecipe
-  id: WeaponShotgunDoubleBarreledExpeditionEvent
-  result: WeaponShotgunDoubleBarreledExpedition
-  completetime: 10
 
 - type: latheRecipe
   id: WeaponShotgunSawnExpeditionEvent

@@ -1,6 +1,17 @@
 meta:
-  format: 6
-  postmapinit: false
+  format: 7
+  category: Grid
+  engineVersion: 251.0.0
+  forkId: ""
+  forkVersion: ""
+  time: 04/28/2025 15:05:38
+  entityCount: 113
+maps: []
+grids:
+- 1
+orphans:
+- 1
+nullspace: []
 tilemap:
   0: Space
   44: FloorDarkPlastic
@@ -457,13 +468,6 @@ entities:
     - type: Transform
       pos: 4.5,1.5
       parent: 1
-- proto: CableTerminal
-  entities:
-  - uid: 46
-    components:
-    - type: Transform
-      pos: 3.5,1.5
-      parent: 1
 - proto: CargoPallet
   entities:
   - uid: 113
@@ -491,6 +495,13 @@ entities:
       rot: 3.141592653589793 rad
       pos: 2.5,3.5
       parent: 1
+- proto: ComputerGunneryConsole
+  entities:
+  - uid: 110
+    components:
+    - type: Transform
+      pos: 2.5,4.5
+      parent: 1
 - proto: ComputerIFFSyndicateTypan
   entities:
   - uid: 50
@@ -505,6 +516,18 @@ entities:
     - type: Transform
       pos: 1.5,4.5
       parent: 1
+    - type: DeviceLinkSource
+      linkedPorts: {}
+      lastSignals: {}
+      ports:
+      - device-button-1
+      - device-button-2
+      - device-button-3
+      - device-button-4
+      - device-button-5
+      - device-button-6
+      - device-button-7
+      - device-button-8
 - proto: GravityGeneratorMini
   entities:
   - uid: 52
@@ -562,6 +585,13 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.5,5.5
       parent: 1
+- proto: GunneryServer
+  entities:
+  - uid: 76
+    components:
+    - type: Transform
+      pos: 1.5,-2.5
+      parent: 1
 - proto: Gyroscope
   entities:
   - uid: 62
@@ -575,6 +605,13 @@ entities:
     components:
     - type: Transform
       pos: 0.5,2.5
+      parent: 1
+- proto: MachineFTLDrive
+  entities:
+  - uid: 46
+    components:
+    - type: Transform
+      pos: 1.5,-3.5
       parent: 1
 - proto: PlasmaReinforcedWindowDirectional
   entities:
@@ -646,13 +683,6 @@ entities:
     components:
     - type: Transform
       pos: 3.520473,1.5532408
-      parent: 1
-- proto: SMESBasic
-  entities:
-  - uid: 76
-    components:
-    - type: Transform
-      pos: 3.5,0.5
       parent: 1
 - proto: SubstationWallBasic
   entities:
@@ -868,7 +898,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 3.5,-4.5
       parent: 1
-- proto: WarpPointShip
+- proto: WarpPoint
   entities:
   - uid: 107
     components:
@@ -902,8 +932,7 @@ entities:
           occludes: True
           ents: []
     - type: DeviceLinkSink
-      links:
-      - 110
+      ports: []
   - uid: 109
     components:
     - type: Transform
@@ -928,8 +957,7 @@ entities:
           occludes: True
           ents: []
     - type: DeviceLinkSink
-      links:
-      - 110
+      ports: []
 - proto: WindoorSecurePlasma
   entities:
   - uid: 111

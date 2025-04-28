@@ -1,0 +1,11 @@
+- type: localizedDataset
+  id: NamesAvaliMale
+  values:
+    prefix: names-avali-first-male-dataset-
+    count: 17
+
+- type: localizedDataset
+  id: NamesAvaliFemale
+  values:
+    prefix: names-avali-first-female-dataset-
+    count: 17

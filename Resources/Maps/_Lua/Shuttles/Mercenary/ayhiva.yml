@@ -2314,7 +2314,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -12.621474,13.613901
       parent: 1
-- proto: EpinephrineChemistryBottle
+- proto: ChemistryBottleEpinephrine
   entities:
   - uid: 526
     components:

@@ -308,16 +308,32 @@ namespace Content.Server.Ghost
             // Frontier: get admin status for entity.
             bool isAdmin = _admin.IsAdmin(entity);
 
-            // Only include admin ghosts if the requester is an admin
-            var warps = GetPlayerWarps(entity)
-                .Concat(GetLocationWarps(isAdmin));
+            //Lua start
+            IEnumerable<GhostWarp> warps = Enumerable.Empty<GhostWarp>();
 
             if (isAdmin)
             {
-                // Add admin ghosts and regular ghosts to the warp list for admin users
-                warps = warps.Concat(GetAdminGhostWarps(entity))
-                            .Concat(GetRegularGhostWarps(entity));
+                warps = GetPlayerWarps(entity)
+                    .Concat(GetLocationWarps(true))
+                    .Concat(GetAdminGhostWarps(entity))
+                    .Concat(GetRegularGhostWarps(entity));
             }
+            //Lua end
+
+            #region LuaMod
+            //Lua Disable
+            // Only include admin ghosts if the requester is an admin
+            //var warps = GetPlayerWarps(entity)
+            //    .Concat(GetLocationWarps(isAdmin));
+
+            //if (isAdmin)
+            //{
+            //    // Add admin ghosts and regular ghosts to the warp list for admin users
+            //    warps = warps.Concat(GetAdminGhostWarps(entity))
+            //                .Concat(GetRegularGhostWarps(entity));
+            //}
+            //Lua Disable
+            #endregion LuaMod
 
             var response = new GhostWarpsResponseEvent(warps.ToList());
             RaiseNetworkEvent(response, args.SenderSession.Channel);
@@ -341,9 +357,7 @@ namespace Content.Server.Ghost
             }
 
             // Frontier: check admin status when warping to admin-only warp points
-            if (!_admin.IsAdmin(attached) &&
-                TryComp<WarpPointComponent>(target, out var warpPoint) &&
-                warpPoint.AdminOnly)
+            if (!_admin.IsAdmin(attached))// && TryComp<WarpPointComponent>(target, out var warpPoint) && warpPoint.AdminOnly) //Lua
             {
                 Log.Warning($"User {args.SenderSession.Name} tried to warp to an admin-only warp point: {msg.Target}");
                 _adminLog.Add(LogType.Action, LogImpact.Medium, $"{EntityManager.ToPrettyString(attached):player} tried to warp to admin warp point {EntityManager.ToPrettyString(msg.Target)}");

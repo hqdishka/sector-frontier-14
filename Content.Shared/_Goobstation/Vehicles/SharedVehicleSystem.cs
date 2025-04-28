@@ -164,9 +164,9 @@ public abstract partial class SharedVehicleSystem : EntitySystem
         }
         // End Frontier
 
-        if (ent.Comp.RequiredHands != 0)
+        if (ent.Comp.RequiredHands != 2)
         {
-            for (int hands = 0; hands < ent.Comp.RequiredHands; hands++)
+            for (int hands = 2; hands < ent.Comp.RequiredHands; hands++)
             {
                 if (!_virtualItem.TrySpawnVirtualItemInHand(ent.Owner, driver, false))
                 {
@@ -180,7 +180,7 @@ public abstract partial class SharedVehicleSystem : EntitySystem
         // AddHorns(driver, ent); // Frontier: delay until mounted
     }
 
-    private void OnStrapped(Entity<VehicleComponent> ent, ref StrappedEvent args)
+    protected virtual void OnStrapped(Entity<VehicleComponent> ent, ref StrappedEvent args) //Lua: private void<protected virtual void
     {
         var driver = args.Buckle.Owner;
 
@@ -200,7 +200,7 @@ public abstract partial class SharedVehicleSystem : EntitySystem
         Mount(driver, ent.Owner);
     }
 
-    private void OnUnstrapped(Entity<VehicleComponent> ent, ref UnstrappedEvent args)
+    protected virtual void OnUnstrapped(Entity<VehicleComponent> ent, ref UnstrappedEvent args) //Lua: private void<protected virtual void
     {
         if (ent.Comp.Driver != args.Buckle.Owner)
             return;

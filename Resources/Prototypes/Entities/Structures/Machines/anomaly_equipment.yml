@@ -269,10 +269,12 @@
     whitelist:
       tags:
 #        - Sheet # Frontier
-        - RawMaterial # Frontier
+#        - RawMaterial # Frontier
+        - Sheet # Lua
     materialWhiteList:
 #    - Plasma # Frontier
-    - Bananium # Frontier
+#    - Bananium # Frontier
+    - Plasma # Lua
   - type: Fixtures
     fixtures:
       fix1:

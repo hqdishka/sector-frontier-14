@@ -93,9 +93,7 @@
   - WeaponRevolverLuckyExpeditionEvent
   - WeaponRevolverPirateExpeditionEvent
   # Shotguns
-  - WeaponShotgunHandmadeExpeditionEvent
   - BoxLethalshotEvent
-  - WeaponShotgunDoubleBarreledExpeditionEvent
   - WeaponShotgunSawnExpeditionEvent
   - WeaponShotgunKammererExpeditionEvent
   - WeaponShotgunEnforcerExpeditionEvent

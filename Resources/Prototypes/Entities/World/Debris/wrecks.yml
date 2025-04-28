@@ -27,11 +27,11 @@
           #   prob: 0.3
           - id: SalvageCanisterSpawner
             prob: 0.3
-          - id: SalvageLockerSpawner
+          - id: NFSalvageLockerSpawner
             prob: 0.15
-          - id: SalvageSuitStorageSpawner
+          - id: NFSalvageSuitStorageSpawner
             prob: 0.05
-          - id: SalvageGeneratorSpawner
+          - id: NFSalvageGeneratorSpawner
             prob: 0.1
           - id: SalvageMobSpawner
             prob: 0.3
@@ -65,7 +65,7 @@
             prob: 0.02
           - id: EmergencyRollerBed
             prob: 0.02
-          - id: SalvageHandheldFlagSpawner
+          - id: NFSalvageHandheldFlagSpawner
             prob: 0.02
           - id: Girder
             prob: 1.7
@@ -113,7 +113,7 @@
             prob: 0.05
           - id: Stool
             prob: 0.05
-          - id: RandomBook
+          - id: NFRandomBook
             prob: 0.2
           - id: SalvageCanisterSpawner
             prob: 0.2

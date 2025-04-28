@@ -271,7 +271,6 @@ flavor-complex-cogchamp = как латунь
 flavor-complex-white-gilgamesh = как слегка газированные сливки
 flavor-complex-antifreeze = как тепло
 flavor-complex-caipirinha = like Brazil
-flavor-complex-daiquiri = like rum, lime and sugar
 flavor-complex-deathintheafternoon = like anise and champagne
 flavor-complex-empress75 = like tyrian purple
 flavor-complex-espressomartini = like vodka and coffee

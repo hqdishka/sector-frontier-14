@@ -562,8 +562,8 @@
     - Flare
     - WeaponDisabler
     - HandheldHealthAnalyzer
-    - OmnizineChemistryBottle
-    - EpinephrineChemistryBottle
+    - ChemistryBottleOmnizine
+    - ChemistryBottleEpinephrine
     - Cautery
     - FlashlightLantern
     - CrowbarRed
@@ -602,10 +602,10 @@
     belt: ClothingBeltMedicalFilled # Тут должен быть портативный дефибриллятор, которого пока нет.
   storage:
     back:
-    - OmnizineChemistryBottle
-    - OmnizineChemistryBottle
-    - EpinephrineChemistryBottle
-    - EpinephrineChemistryBottle
+    - ChemistryBottleOmnizine
+    - ChemistryBottleOmnizine
+    - ChemistryBottleEpinephrine
+    - ChemistryBottleEpinephrine
     - Cautery
     - CrowbarRed
     - Flare
@@ -653,12 +653,12 @@
     belt: ClothingBeltMedicalFilled
   storage:
     back:
-    - OmnizineChemistryBottle
-    - OmnizineChemistryBottle
-    - OmnizineChemistryBottle
-    - EpinephrineChemistryBottle
-    - EpinephrineChemistryBottle
-    - EpinephrineChemistryBottle
+    - ChemistryBottleOmnizine
+    - ChemistryBottleOmnizine
+    - ChemistryBottleOmnizine
+    - ChemistryBottleEpinephrine
+    - ChemistryBottleEpinephrine
+    - ChemistryBottleEpinephrine
     - Cautery
     - CrowbarRed
     - ADTCombatHypo

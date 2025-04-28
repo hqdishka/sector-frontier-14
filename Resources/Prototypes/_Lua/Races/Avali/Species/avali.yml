@@ -11,8 +11,10 @@
   sprites: MobAvaliSprites
   markingLimits: MobAvaliMarkingLimits
   dollPrototype: MobAvaliDummy
-  maleFirstNames: names_avali_male
-  femaleFirstNames: names_avali_female
+  maleFirstNames: NamesAvaliMale
+  femaleFirstNames: NamesAvaliFemale
+  maleLastNames: NamesOniMale # Corvax-LastnameGender
+  femaleLastNames: NamesOniFemale # Corvax-LastnameGender
   skinColoration: Hues
 
 - type: speciesBaseSprites

@@ -78,8 +78,8 @@
     - ResearchAndDevelopmentServerMachineCircuitboard
     - PowerCellAntiqueProto
     - ClothingOuterArmorRiot
-    - CognizineChemistryBottle
-    - OmnizineChemistryBottle
+    - ChemistryBottleCognizine
+    - ChemistryBottleOmnizine
     # - EnergySword
     - EnergyDagger
 #    - EnergySwordDouble
