@@ -1,0 +1,23 @@
+- type: ghostRole
+  id: RedactedBorg
+  name: ghost-role-information-redacted-borg
+  description: ghost-role-information-redacted-borg-description
+  rules: ghost-role-information-silicon-rules
+  entityPrototype: PlayerBorgRedacted
+  whitelisted: true
+
+- type: ghostRole
+  id: RemnantAICore
+  name: ghost-role-information-redacted-core
+  description: ghost-role-information-redacted-core-description
+  rules: ghost-role-information-silicon-rules
+  entityPrototype: StationAiBrainRedacted
+  whitelisted: true
+
+- type: ghostRole
+  id: ShipAICore
+  name: ghost-role-information-ship-core
+  description: ghost-role-information-ship-core-description
+  rules: ghost-role-information-silicon-rules
+  entityPrototype: StationAiBrainShip
+  whitelisted: true
