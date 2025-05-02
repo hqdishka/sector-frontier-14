@@ -192,6 +192,13 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         if (!_access.IsAllowed(user, uid)) // Frontier: check access
             return false; // Frontier
 
+        // Check if console is locked
+        if (TryComp<ShuttleConsoleLockComponent>(uid, out var lockComp) && lockComp.Locked)
+        {
+            _popup.PopupEntity(Loc.GetString("shuttle-console-locked"), uid, user);
+            return false;
+        }
+
         var pilotComponent = EnsureComp<PilotComponent>(user);
         var console = pilotComponent.Console;
 
@@ -217,7 +224,7 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
     {
         if (ent.Comp.Console != null)
         {
-            RemovePilot(ent);
+            RemovePilot(ent.Owner, ent.Comp);
         }
     }
 
