@@ -183,8 +183,9 @@
   result: WelderExperimentalEmpty # Frontier - WelderExperimental<WelderExperimentalEmpty
   completetime: 6
   materials:
-    Steel: 800
-    Plasma: 200
+    Steel: 2000
+    Plasma: 1000
+    Silver: 900
 
 - type: latheRecipe
   parent: BaseToolRecipe

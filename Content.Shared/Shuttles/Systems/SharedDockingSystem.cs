@@ -8,7 +8,7 @@ public abstract class SharedDockingSystem : EntitySystem
     [Dependency] protected readonly SharedTransformSystem XformSystem = default!;
 
     public const float DockingHiglightRange = 4f;
-    public const float DockRange = 1f + 0.2f;
+    public const float DockRange = 2f + 2f; // Lua 1f + 0.2f<2f + 2f
     public static readonly double AlignmentTolerance = Angle.FromDegrees(15).Theta;
 
     public bool CanShuttleDock(EntityUid? shuttle)

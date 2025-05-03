@@ -73,6 +73,8 @@
   - DeathSquad
   # - BlueShieldOfficer
   weight: 120
+  primary: false
+  editorHidden: true # Frontier
 
 - type: department
   id: Command

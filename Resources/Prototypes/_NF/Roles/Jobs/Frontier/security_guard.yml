@@ -28,6 +28,10 @@
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Security
 
 - type: startingGear
   id: SecurityGuardGear

@@ -67,8 +67,8 @@ public sealed partial class ChatSystem : SharedChatSystem
     public const int VoiceRange = 10; // how far voice goes in world units
     public const int WhisperClearRange = 2; // how far whisper goes while still being understandable, in world units
     public const int WhisperMuffledRange = 8; // how far whisper goes at all, in world units
-    public const string DefaultAnnouncementSound = "/Audio/Announcements/announce.ogg";
-    public const string CentComAnnouncementSound = "/Audio/Announcements/centcomm.ogg";
+    public const string DefaultAnnouncementSound = "/Audio/_Lua/Announcements/announce.ogg"; // Lua
+    public const string CentComAnnouncementSound = "/Audio/_Lua/Announcements/centcomm.ogg"; // Lua
 
     private bool _loocEnabled = true;
     private bool _deadLoocEnabled;

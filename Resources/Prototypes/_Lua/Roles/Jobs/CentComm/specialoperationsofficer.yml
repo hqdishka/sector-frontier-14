@@ -2,20 +2,21 @@
 # Copyright (c) 2025 LuaWorld Contributors
 # See AGPLv3.txt for details.
 
-- type: job
-  id: CentralCommandSpecialOperationsOfficer
-  name: job-name-soo
-  description: job-description-soo
-  playTimeTracker: JobCentralCommandSpecialOperationsOfficer
-  setPreference: false
-  startingGear: CentcomSpecialOperationsOfficerGear
-  icon: "JobIconNanotrasenRed"
-  supervisors: job-supervisors-no-one
-  canBeAntag: false
-  accessGroups:
-  - AllAccess
-  access:
-  - CentralCommand
+#новый CentralCommandSpecialOperationsOfficer
+# - type: job
+#   id: CentralCommandSpecialOperationsOfficer 
+#   name: job-name-soo
+#   description: job-description-soo
+#   playTimeTracker: JobCentralCommandSpecialOperationsOfficer
+#   setPreference: false
+#   startingGear: CentcomSpecialOperationsOfficerGear
+#   icon: "JobIconNanotrasenRed"
+#   supervisors: job-supervisors-no-one
+#   canBeAntag: false
+#   accessGroups:
+#   - AllAccess
+#   access:
+#   - CentralCommand
 
 - type: startingGear
   id: CentcomSpecialOperationsOfficerGear
@@ -30,6 +31,7 @@
     neck: ClothingNeckCloakCentcomBlack
     id: CentcomSpecialOperationsOfficerPDA
     ears: ClothingHeadsetDeathSquad
+    pocket1: RubberStampCentcom
   #   underwearb: ClothingUnderwearBottomBoxersWhite
   # underweart: ClothingUnderwearTopBraWhite
   # underwearb: ClothingUnderwearBottomPantiesWhite

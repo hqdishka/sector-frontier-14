@@ -1,0 +1,15 @@
+- type: entity
+  parent: [ClothingHeadset,ShowSecurityIcons]
+  id: ClothingHeadsetCentComCC
+  suffix: CentCom
+  name: Гарнитура оператора ЦК
+  description: Стандартная гарнитура ЦК.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCentComOperative
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/centcom.rsi

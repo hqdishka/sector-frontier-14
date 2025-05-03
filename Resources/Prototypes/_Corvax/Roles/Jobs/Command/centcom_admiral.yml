@@ -1,0 +1,14 @@
+# Just equipment preset, no custom role
+
+- type: startingGear
+  id: CentcomAdmiralGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomAdmiral
+    shoes: ClothingShoesBootsJack
+    head: ClothingHeadCapCentcomNaval
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesCentcomNaval
+    outerClothing: ClothingOuterArmorCentcomCarapace
+    neck: ClothingNeckCloakCentcomAdmiral
+    #id: CCAdmiralPDA # maybe later
+    ears: ClothingHeadsetCentCom

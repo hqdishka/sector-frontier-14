@@ -7,7 +7,7 @@
     duration: 1
     reoccurrenceDelay: 240 # Once per four hours.
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_Lua/Announcements/attention.ogg # Lua
   - type: RandomSentienceRule
     minSentiences: 2
     maxSentiences: 5

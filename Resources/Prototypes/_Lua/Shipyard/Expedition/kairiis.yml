@@ -1,0 +1,42 @@
+# LuaWorld - This file is licensed under AGPLv3
+# Copyright (c) 2025 LuaWorld Contributors
+# See AGPLv3.txt for details.
+
+- type: vessel
+  id: Kairiis
+  name: LT Кайриис
+  description: Легкий экспедиционный шаттл использует в качестве топлива уран, оборудован лазерными турелями LuaTech
+  price: 35500
+  category: Small
+  group: Expedition
+  shuttlePath: /Maps/_Lua/Shuttles/Expedition/kairiis.yml
+  #guidebookPage: ShipyardKairiis # Maybe later
+  class:
+  - Expedition
+  - Civilian
+  engine:
+  - Uranium
+  addComponents:
+    - type: AutoDelete
+      distanceToCheck: 40
+      delayToDelete: 2400
+      delayToCheck: 60
+      isHumanoidNear: True
+    - type: IFF
+      color: "#ffffff"
+    - type: NanotrasenFtl
+
+- type: gameMap
+  id: Kairiis
+  mapName: 'LT Кайриис'
+  mapPath: /Maps/_Lua/Shuttles/Expedition/kairiis.yml
+  minPlayers: 0
+  stations:
+    Kairiis:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Кайриис {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'

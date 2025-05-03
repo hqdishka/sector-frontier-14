@@ -1,4 +1,4 @@
-﻿using Content.Server.GameTicking.Rules;
+using Content.Server.GameTicking.Rules;
 using Content.Shared.NukeOps;
 using Robust.Shared.Audio;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
@@ -37,7 +37,7 @@ public sealed partial class WarDeclaratorComponent : Component
     /// War declaration sound file path
     /// </summary>
     [DataField]
-    public SoundSpecifier Sound = new SoundPathSpecifier("/Audio/Announcements/war.ogg");
+    public SoundSpecifier Sound = new SoundPathSpecifier("/Audio/_Lua/Announcements/war.ogg"); // Lua
 
     /// <summary>
     /// Fluent ID for the declaration sender title

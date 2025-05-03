@@ -1,0 +1,9 @@
+- type: npcFaction
+  id: CentralCommand
+  hostile:
+  - SimpleHostile
+  - Syndicate
+  - NanoTrasen
+  - Xeno
+  - Zombie
+  - Revolutionary

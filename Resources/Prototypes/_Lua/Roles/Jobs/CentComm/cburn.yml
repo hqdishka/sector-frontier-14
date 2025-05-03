@@ -18,6 +18,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: CBURNLeaderGear
@@ -71,6 +76,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: CBURNSierraLeaderGear
@@ -131,6 +141,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: CBURNAgentGear
@@ -180,6 +195,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: CBURNSierraAgentGear

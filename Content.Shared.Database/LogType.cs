@@ -497,4 +497,13 @@ public enum LogType
     ShuttleInfoChanged = 208,
     #endregion Frontier Values
     // End Frontier
+
+    #region Lua Values
+    // Start Lua
+    /// <summary>
+    /// Логи пополнения баланса
+    /// </summary>
+    BankTransaction = 300
+    // End Lua
+    #endregion Lua Values
 }

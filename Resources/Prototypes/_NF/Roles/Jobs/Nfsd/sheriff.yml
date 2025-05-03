@@ -42,6 +42,8 @@
   - !type:AddComponentSpecial
     components:
       - type: CommandStaff
+      - type: Company
+        companyName: Security
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift

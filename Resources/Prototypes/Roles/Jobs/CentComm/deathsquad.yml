@@ -12,3 +12,8 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen

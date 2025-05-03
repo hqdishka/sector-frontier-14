@@ -26,6 +26,9 @@
   id: JobCentralCommandOfficial
 
 - type: playTimeTracker
+  id: JobCentralCommandOfficialAlter
+
+- type: playTimeTracker
   id: JobChaplain
 
 - type: playTimeTracker

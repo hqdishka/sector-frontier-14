@@ -107,6 +107,8 @@
   - type: Construction
     graph: Egg
     node: start
+  - type: StaticPrice
+    price: 10
 
 - type: entity
   parent: FoodEggBase

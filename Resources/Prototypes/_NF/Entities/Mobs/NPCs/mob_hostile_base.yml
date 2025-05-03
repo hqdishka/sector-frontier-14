@@ -391,6 +391,8 @@
       types: {}
     damageRecovery:
       types: {}
+  - type: TTS
+    enabled: false
 
 # NonHuman NPC base, no equipment, immune to vacuum/low pressure
 - type: entity
@@ -461,6 +463,8 @@
     - DoorBumpOpener
     - CannotSuicide
   - type: FTLKnockdownImmune
+  - type: TTS
+    enabled: false
 
 # A simpler base for extending existing mobs (e.g. carp, kangaroos, snakes, xenos)
 - type: entity
@@ -498,6 +502,8 @@
     - SimpleHostile
   - type: Carriable # Kept for consistency with other mobs
   - type: FTLKnockdownImmune
+  - type: TTS
+    enabled: false
 
 # Parent for consistent roadkill settings
 - type: entity

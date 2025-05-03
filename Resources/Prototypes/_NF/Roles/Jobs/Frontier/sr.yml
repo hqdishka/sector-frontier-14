@@ -26,6 +26,8 @@
   - !type:AddComponentSpecial
     components:
       - type: CommandStaff
+      - type: Company
+        companyName: Nanotrasen
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift

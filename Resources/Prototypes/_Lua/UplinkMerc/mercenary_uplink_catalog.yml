@@ -502,7 +502,7 @@
   id: UplinkMercenaryMagazinePistolSubMachineGun
   name:  магазин ПП (.35 авто)
   description: магазин ПП (.35 авто)
-  productEntity: WeaponSubMachineGunC20r
+  productEntity: MagazinePistolSubMachineGun
   cost:
     Speso: 1200
   categories:

@@ -2,20 +2,20 @@
 # Copyright (c) 2025 LuaWorld Contributors
 # See AGPLv3.txt for details.
 
-- type: job
-  id: CentralCommandOperator
-  name: job-name-centcom-operator
-  description: job-description-centcom-operator
-  playTimeTracker: JobCentralCommandOperator
-  setPreference: false
-  startingGear: CentcomOperatorGear
-  icon: "JobIconNanotrasen"
-  supervisors: job-supervisors-centcom-administrator
-  canBeAntag: false
-  accessGroups:
-  - AllAccess
-  access:
-  - CentralCommand
+# - type: job
+#   id: CentralCommandOperator
+#   name: job-name-centcom-operator
+#   description: job-description-centcom-operator
+#   playTimeTracker: JobCentralCommandOperatorAlter
+#   setPreference: false
+#   startingGear: CentcomOperatorGear
+#   icon: "JobIconNanotrasen"
+#   supervisors: job-supervisors-centcom-administrator
+#   canBeAntag: false
+#   accessGroups:
+#   - AllAccess
+#   access:
+#   - CentralCommand
 
 - type: startingGear
   id: CentcomOperatorGear

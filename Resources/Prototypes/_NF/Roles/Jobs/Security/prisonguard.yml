@@ -25,6 +25,10 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Security
 
 - type: startingGear
   id: PrisonGuardGear

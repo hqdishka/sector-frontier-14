@@ -111,7 +111,7 @@
   id: JobCentralCommandAdministrator
 
 - type: playTimeTracker
-  id: JobCentralCommandOperator
+  id: JobCentralCommandOperatorAlter
 
 - type: playTimeTracker
   id: JobCentralCommandSpecialOperationsOfficer

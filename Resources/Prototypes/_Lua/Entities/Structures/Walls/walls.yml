@@ -237,9 +237,12 @@
     drawdepth: WallTops
     sprite: _Lua/Structures/Walls/Krissglass_diagonal.rsi
     state: state0
+  - type: Tag
+    tags:
+    - Diagonal
   - type: IconSmooth
     mode: Diagonal
-    key: windows
+    key: walls
     base: state
   - type: Icon
     sprite: _Lua/Structures/Walls/Krissglass_diagonal.rsi

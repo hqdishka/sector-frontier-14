@@ -1,0 +1,47 @@
+- type: startingGear
+  id: OperatorCC
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomOfficial
+    shoes: ClothingShoesBootsJack
+    head: ClothingHeadHatCentcomcap
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesColorBlack
+    id: CCOperatorPDA
+    ears: ClothingHeadsetCentCom
+    neck: ClothingNeckTieDet
+    belt: BoxFolderCentComClipboard
+    pocket1: RubberStampCentcom
+    pocket2: ClothingMaskGasCentcom
+
+# Jumpsuit
+- type: loadout
+  id: BKCCOpearotCCJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomVeryOfficial
+
+
+- type: loadout
+  id: BKCCOpearotCCJumpskirt
+  equipment:
+    innerClothingSkirt: ClothingUniformJumpskirttCentcomVeryOfficial
+
+
+# Neck
+- type: loadout
+  id: BKCCOpearotCCCloak
+  equipment:
+    neck: ClothingNeckCloakCap
+
+
+
+# Back
+- type: loadout
+  id: BKCCOpearotCCBackpack
+  equipment:
+    duffelbag: ClothingBackpackDuffel
+
+
+- type: loadout
+  id: BKCCOpearotCCSatchel
+  equipment:
+    satchel: ClothingBackpackSatchel

@@ -33,7 +33,7 @@
   - type: StationEvent
     startAnnouncement: station-event-gas-leak-nf-start-announcement # Frontier: add nf-
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_Lua/Announcements/attention.ogg # Lua
     endAnnouncement: station-event-gas-leak-nf-end-announcement # Frontier: add nf-
     weight: 8
     earliestStart: 15 # Frontier
@@ -49,7 +49,7 @@
     startAnnouncement: station-event-power-grid-check-nf-start-announcement # Frontier: add nf-
     endAnnouncement: station-event-power-grid-check-nf-end-announcement # Frontier: add nf-
     startAudio:
-      path: /Audio/Announcements/power_off.ogg
+      path: /Audio/_Lua/Announcements/poweroff2.ogg # Lua
       params:
         volume: -4
     duration: 60
@@ -67,7 +67,7 @@
     startAnnouncement: station-event-solar-flare-nf-start-announcement # Frontier: add nf-
     endAnnouncement: station-event-solar-flare-nf-end-announcement # Frontier: add nf-
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_Lua/Announcements/attention.ogg # Lua
     duration: 120
     maxDuration: 240
   - type: SolarFlareRule
@@ -95,7 +95,7 @@
   - type: StationEvent
     startAnnouncement: station-event-vent-clog-nf-start-announcement # Frontier: add nf-
     startAudio:
-      path: /Audio/Announcements/attention.ogg
+      path: /Audio/_Lua/Announcements/attention.ogg # Lua
     earliestStart: 15
     minimumPlayers: 15
     weight: 5

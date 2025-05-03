@@ -1,0 +1,13 @@
+- type: paperworkForm
+  id: Frontier1
+  category: frontier
+  name: paperwork-form-title-frontier-1
+  text: "/Paperwork/Frontier/1.xml"
+  paperPrototype: PaperPrintedSecurity
+
+- type: paperworkForm
+  id: Frontier2
+  category: frontier
+  name: paperwork-form-title-frontier-2
+  text: "/Paperwork/Frontier/2.xml"
+  paperPrototype: PaperPrintedCommand

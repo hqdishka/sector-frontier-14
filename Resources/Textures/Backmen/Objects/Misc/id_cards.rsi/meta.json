@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "ALL resprited by CatBackGround(Github) | catbg(Discord)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "card_centcom"
+    },
+    {
+      "name": "frame_head"
+    },
+    {
+      "name": "frame_default"
+    },
+    {
+      "name": "card_black"
+    },
+    {
+      "name": "card_silver"
+    },
+    {
+      "name": "iddeathcommando"
+    },
+    {
+      "name": "idcargotechnician"
+    },
+    {
+      "name": "idcentcom"
+    },
+    {
+      "name": "card_gold"
+    },
+    {
+      "name": "idsecurityofficer"
+    },
+    {
+      "name": "idintern-service"
+    },
+    {
+      "name": "sub_department"
+    }
+  ]
+}

@@ -162,6 +162,10 @@
   special:
   - !type:AddImplantSpecial
     implants: [ DeathAcidifierImplantLWTypan ]
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: None
 
 #####Gunner
 - type: entity
@@ -203,6 +207,10 @@
   special:
   - !type:AddImplantSpecial
     implants: [ DeathAcidifierImplantLWTypan ]
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: None
 
 ##### Specialist
 - type: entity
@@ -244,6 +252,10 @@
   special:
   - !type:AddImplantSpecial
     implants: [ DeathAcidifierImplantLWTypan ]
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: None
 
 - type: startingGear
   id: BlueTeamGear
@@ -323,6 +335,10 @@
   special:
   - !type:AddImplantSpecial
     implants: [ DeathAcidifierImplantLWTypan ]
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: None
 
 - type: startingGear
   id: BlueTeamGearCaptain
@@ -583,6 +599,10 @@
   special:
   - !type:AddImplantSpecial
     implants: [ DeathAcidifierImplantLWTypan ]
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: None
 
 #####Gunner
 - type: entity
@@ -624,6 +644,10 @@
   special:
   - !type:AddImplantSpecial
     implants: [ DeathAcidifierImplantLWTypan ]
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: None
 
 #### Specialist
 - type: entity
@@ -665,6 +689,10 @@
   special:
   - !type:AddImplantSpecial
     implants: [ DeathAcidifierImplantLWTypan ]
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: None
 
 - type: startingGear
   id: RedTeamGear
@@ -744,6 +772,10 @@
   special:
   - !type:AddImplantSpecial
     implants: [ DeathAcidifierImplantLWTypan ]
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: None
 
 - type: startingGear
   id: RedTeamGearCaptain

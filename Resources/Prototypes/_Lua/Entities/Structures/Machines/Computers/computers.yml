@@ -46,3 +46,44 @@
     sprite: _Lua/Flatpack/flatpack.rsi
     layers:
     - state: ship_weapon
+
+
+#LuaTech
+# - type: entity
+#   parent: [BaseComputerShuttle, BaseShuttleIntercom]
+#   id: ComputerShuttleLuaTech
+#   name: консоль управления шаттлом
+#   description: Используется для пилотирования корабля.
+#   components:
+#   - type: Sprite
+#     sprite: _Lua/Structures/Machines/computers.rsi
+#     layers:
+#     - map: ["computerLayerBody"]
+#       state: computer
+#     - map: ["computerLayerKeyboard"]
+#       state: generic_keyboard
+#     - map: ["computerLayerScreen"]
+#       state: generic
+#     - map: ["computerLayerKeys"]
+#       state: generic_keys
+#     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+#       state: generic_panel_open
+#   - type: Computer
+#     board: ShuttleConsoleCircuitboard
+#   - type: UserInterface
+#     interfaces:
+#         enum.ShuttleConsoleUiKey.Key:
+#           type: ShuttleConsoleBoundUserInterface
+#         enum.IntercomUiKey.Key:
+#           type: IntercomBoundUserInterface
+#   - type: ContainerContainer
+#     containers:
+#       board: !type:Container
+#         ents: []
+#       disk_slot: !type:ContainerSlot {}
+#       key_slots: !type:Container
+#   - type: ContainerFill
+#     containers:
+#       key_slots:
+#       - EncryptionKeyTraffic
+# Мне ща лень рисовать... 

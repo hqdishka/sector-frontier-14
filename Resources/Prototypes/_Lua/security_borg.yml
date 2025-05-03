@@ -370,7 +370,7 @@
     tags:
     - Trash
     - BorgHead
-    - BorgSecHead
+    - BorgBlueShield
 
 - type: entity
   id: TorsoBorgSec
@@ -440,7 +440,7 @@
       sec_head+o:
         whitelist:
           tags:
-          - BorgSecHead
+          - BorgBlueShield
       sec_chest+o:
         whitelist:
           tags:
@@ -456,7 +456,7 @@
       - BorgSecRArm
       - BorgSecLLeg
       - BorgSecRLeg
-      - BorgSecHead
+      - BorgBlueShield
       - BorgSecTorso
   - type: Construction
     graph: CyborgSec

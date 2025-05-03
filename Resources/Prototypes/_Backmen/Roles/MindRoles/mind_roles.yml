@@ -1,0 +1,38 @@
+- type: entity
+  parent: BaseMindRole
+  id: BaseJobMindRole
+  abstract: true
+  components:
+  - type: JobRole
+
+- type: entity
+  parent: BaseJobMindRole
+  id: MindRoleBKCCAssistant
+  name: Ассистент ЦК
+  components:
+  - type: MindRole
+    jobPrototype: CentralCommandAssistant
+
+- type: entity
+  parent: BaseJobMindRole
+  id: MindRoleBKCCCargo
+  name: Карго ЦК
+  components:
+  - type: MindRole
+    jobPrototype: CentralCommandCargo
+
+- type: entity
+  parent: BaseJobMindRole
+  id: MindRoleBKCCOperator
+  name: Оператор ЦК
+  components:
+  - type: MindRole
+    jobPrototype: CentralCommandOperator
+
+- type: entity
+  parent: BaseJobMindRole
+  id: MindRoleBKCCSecOfficer
+  name: Охранник ЦК
+  components:
+  - type: MindRole
+    jobPrototype: CentralCommandSecOfficer

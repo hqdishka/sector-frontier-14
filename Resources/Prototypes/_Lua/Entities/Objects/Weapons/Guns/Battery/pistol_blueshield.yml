@@ -55,3 +55,19 @@
   impactFlash:
     sprite: _Lua/Objects/Weapons/Guns/Projectiles/violethit.rsi
     state: impact_beam_violet
+
+- type: hitscan
+  id: VioletLaserShip # DS
+  damage:
+    types:
+      Structural: 65
+      Heat: 75
+  muzzleFlash:
+    sprite: _Lua/Objects/Weapons/Guns/Projectiles/violethit.rsi
+    state: muzzle_beam_violet
+  travelFlash:
+    sprite: _Lua/Objects/Weapons/Guns/Projectiles/violethit.rsi
+    state: beam_violet
+  impactFlash:
+    sprite: _Lua/Objects/Weapons/Guns/Projectiles/violethit.rsi
+    state: impact_beam_violet

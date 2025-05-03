@@ -1,10 +1,14 @@
 using Content.Server._NF.Bank;
+using Content.Server.Popups; // Lua
+using Content.Server.Chat.Managers; // Lua
 using Content.Shared._NF.Bank.Components;
 using Content.Shared.Access.Components;
+using Content.Shared.Chat; // Lua
 using Content.Shared.GameTicking;
 using Content.Shared.Humanoid;
 using Content.Shared.Inventory;
 using Content.Shared.PDA;
+using Content.Shared.Popups; // Lua
 using Content.Shared.Roles;
 using Robust.Shared.Player;
 
@@ -14,13 +18,21 @@ public sealed class AutoSalarySystem : EntitySystem
 {
     [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly BankSystem _bank = default!;
+    [Dependency] private readonly PopupSystem _popup = default!;
+    [Dependency] private readonly IChatManager _chatManager = default!;
 
     private static float _currentTime = 3600f;
 
     [ValidatePrototypeId<DepartmentPrototype>]
-    private const string FrontierDep = "Frontier";
+    private const string FrontierDepartament = "Frontier"; // Lua Dep<Departament
     [ValidatePrototypeId<DepartmentPrototype>]
-    private const string SecurityDep = "Security";
+    private const string SecurityDepartament = "Security"; // Lua Dep<Departament
+    [ValidatePrototypeId<DepartmentPrototype>]
+    private const string TypanDepartament = "OutpostTypan"; // Lua add Typan
+    [ValidatePrototypeId<DepartmentPrototype>]
+    private const string CentCommDepartament = "CentCom"; // Lua add Centcomm
+    [ValidatePrototypeId<DepartmentPrototype>]
+    private const string CivilianDepartament = "Civilian"; // Lua add Civilian
 
     public override void Initialize()
     {
@@ -55,28 +67,98 @@ public sealed class AutoSalarySystem : EntitySystem
             if (GetDepartment(uid, out var job))
             {
                 int salary = GetSalary(job);
-                _bank.TryBankDeposit(uid, salary);
+                if (_bank.TryBankDeposit(uid, salary))
+                {
+                    NotifySalaryReceived(uid, salary);  // Lua
+                }
             }
         }
     }
+    // Lua start
+    private void NotifySalaryReceived(EntityUid uid, int salary)
+    {
+        if (!TryComp(uid, out BankAccountComponent? bank))
+            return;
+
+        if (!TryComp(uid, out ActorComponent? actor))
+            return;
+
+        var changeAmount = $"+{salary}";
+        var message = Loc.GetString(
+            "bank-program-change-balance-notification",
+            ("balance", bank.Balance),
+            ("change", changeAmount),
+            ("currencySymbol", "$")
+        );
+
+        _popup.PopupEntity(message, uid, Filter.Entities(uid), true, PopupType.Small);
+
+        _chatManager.ChatMessageToOne(
+            ChatChannel.Notifications,
+            message,
+            message,
+            EntityUid.Invalid,
+            false,
+            actor.PlayerSession.Channel
+        );
+    }
+    // Lua end
 
     private int GetSalary(string key) => key switch
     {
-        var s when s == Loc.GetString("job-name-bailiff") => 40000,
-        var s when s == Loc.GetString("job-name-brigmedic") => 32000,
-        var s when s == Loc.GetString("job-name-cadet-nf") => 23000,
-        var s when s == Loc.GetString("job-name-deputy") => 29000,
-        var s when s == Loc.GetString("job-name-nf-detective") => 32500,
-        var s when s == Loc.GetString("job-name-security-guard") => 30000,
-        var s when s == Loc.GetString("job-name-sheriff") => 50000,
-        var s when s == Loc.GetString("job-name-stc") => 17500,
-        var s when s == Loc.GetString("job-name-sr") => 42000,
+        //Security
+        var s when s == Loc.GetString("job-name-sheriff") => 80000,
+        var s when s == Loc.GetString("job-name-bailiff") => 65000,
+        var s when s == Loc.GetString("job-name-senior-officer") => 60500,
+        var s when s == Loc.GetString("job-name-nf-detective") => 40500,
+        var s when s == Loc.GetString("job-name-brigmedic") => 45000,
+        var s when s == Loc.GetString("job-name-deputy") => 40000,
+        var s when s == Loc.GetString("job-name-cadet-nf") => 35000,
+        //Frontier
+        var s when s == Loc.GetString("job-name-security-guard") => 40500,
+        var s when s == Loc.GetString("job-name-mail-carrier") => 30000,
+        var s when s == Loc.GetString("job-name-janitor") => 25000,
+        var s when s == Loc.GetString("job-name-valet") => 25000,
+        var s when s == Loc.GetString("job-name-stc") => 65000,
+        var s when s == Loc.GetString("job-name-sr") => 80000,
         var s when s == Loc.GetString("job-name-pal") => 35000,
-        var s when s == Loc.GetString("job-name-doc") => 31000,
-        var s when s == Loc.GetString("job-name-senior-officer") => 35000,
-        var s when s == Loc.GetString("job-name-janitor") => 20000,
+        var s when s == Loc.GetString("job-name-doc") => 80000,
+        //Civilian
+        var s when s == Loc.GetString("job-name-contractor") => 6000,
+        var s when s == Loc.GetString("job-name-chaplain") => 25500,
+        var s when s == Loc.GetString("job-name-pilot") => 7100,
+        //Typan
+        var s when s == Loc.GetString("job-name-typan-atmos-tech") => 35000,
+        var s when s == Loc.GetString("job-name-typan-botanist") => 25000,
+        var s when s == Loc.GetString("job-name-typan-cargotech") => 35000,
+        var s when s == Loc.GetString("job-name-typan-chef") => 25000,
+        var s when s == Loc.GetString("job-name-typan-medic") => 35000,
+        var s when s == Loc.GetString("job-name-typan-researcher") => 25000,
+        var s when s == Loc.GetString("job-name-typan-rd") => 45000,
+        var s when s == Loc.GetString("job-name-typan-science") => 35000,
+        var s when s == Loc.GetString("job-name-typan-telecommunications-officer") => 65000,
+        //CentralCommand
+        var s when s == Loc.GetString("job-name-centcomblueshield") => 205000,
+        var s when s == Loc.GetString("job-name-centcomcargo") => 100000,
+        var s when s == Loc.GetString("job-name-centcomoffBK") => 140000,
+        var s when s == Loc.GetString("job-name-centcomoso") => 327000,
+        var s when s == Loc.GetString("job-name-centcomassistant") => 93000,
+        var s when s == Loc.GetString("job-name-centcomsecofficer") => 110000,
+        var s when s == Loc.GetString("job-name-centcomoper") => 150000,
         _ => throw new KeyNotFoundException()
     };
+
+
+    // Lua start
+    private static readonly HashSet<string> AllowedDepartments = new()
+    {
+        FrontierDepartament,
+        SecurityDepartament,
+        TypanDepartament,
+        CentCommDepartament,
+        CivilianDepartament
+    };
+    // Lua end
 
     private bool GetDepartment(EntityUid uid, out string job)
     {
@@ -88,9 +170,9 @@ public sealed class AutoSalarySystem : EntitySystem
 
         foreach (var departmentProtoId in idCard.JobDepartments)
         {
-            if (departmentProtoId == FrontierDep || departmentProtoId == SecurityDep)
+            if (AllowedDepartments.Contains(departmentProtoId)) // Lua replace || on HashSet
             {
-                job = idCard.LocalizedJobTitle != null ? idCard.LocalizedJobTitle : string.Empty;
+                job = idCard.LocalizedJobTitle ?? string.Empty;
                 return true;
             }
         }

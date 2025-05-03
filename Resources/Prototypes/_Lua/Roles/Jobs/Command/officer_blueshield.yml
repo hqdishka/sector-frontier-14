@@ -2,57 +2,60 @@
 # Copyright (c) 2025 LuaWorld Contributors
 # See AGPLv3.txt for details.
 
-- type: job
-  id: BlueShieldOfficer
-  name: job-name-blue-shield-officer
-  description: job-description-blue-shield-officer
-  playTimeTracker: JobBlueShieldOfficer
-  setPreference: false
-  requirements:
-    - !type:DepartmentTimeRequirement
-      department: Engineering
-      time: 36000 # 10 hours
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 36000 # 10 hours
-    - !type:RoleTimeRequirement
-      role: JobHeadOfSecurity
-      time: 36000 # 10 hours
-    - !type:DepartmentTimeRequirement
-      department: Command
-      time: 36000 # 10 hours
-    - !type:OverallPlaytimeRequirement
-      time: 324000 # 90 hours
-  startingGear: BlueShieldOfficerGear
-  icon: "JobIconBlueShieldOfficer"
-  supervisors: job-supervisors-centcom
-  canBeAntag: false
-  access:
-  - Captain
-  - Command
-  - Brig
-  - Security
-  - Armory
-  - Maintenance
-  - Service
-  - External
-  - Research
-  - Medical
-  - Engineering
-  - Cargo
-  special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant ]
+#перенесено в BlueShieldOfficer
+# - type: job
+#   id: BlueShieldOfficer
+#   name: job-name-blue-shield-officer
+#   description: job-description-blue-shield-officer
+#   playTimeTracker: JobBlueShieldOfficer
+#   setPreference: false
+#   requirements:
+#     - !type:DepartmentTimeRequirement
+#       department: Engineering
+#       time: 36000 # 10 hours
+#     - !type:DepartmentTimeRequirement
+#       department: Medical
+#       time: 36000 # 10 hours
+#     - !type:RoleTimeRequirement
+#       role: JobHeadOfSecurity
+#       time: 36000 # 10 hours
+#     - !type:DepartmentTimeRequirement
+#       department: Command
+#       time: 36000 # 10 hours
+#     - !type:OverallPlaytimeRequirement
+#       time: 324000 # 90 hours
+#   startingGear: BlueShieldOfficerGear
+#   icon: "JobIconBlueShieldOfficer"
+#   supervisors: job-supervisors-centcom
+#   canBeAntag: false
+#   access:
+#   - Captain
+#   - Command
+#   - Brig
+#   - Security
+#   - Armory
+#   - Maintenance
+#   - Service
+#   - External
+#   - Research
+#   - Medical
+#   - Engineering
+#   - Cargo
+#   special:
+#   - !type:AddImplantSpecial
+#     implants: [ MindShieldImplant ]
 
 - type: startingGear
   id: BlueShieldOfficerGear
   equipment:
+    jumpsuit: ClothingUniformJumpsuitBlueShield
     head: ClothingHeadHatBeretBlueShield
     back: ClothingBackpackBlueShield
     eyes: ClothingEyesGlassesSecurity
     ears: ClothingHeadsetAltCommand
     shoes: ClothingShoesBootsJackFilled
     outerClothing: ClothingOuterArmorBasicBlueShield
+    suitstorage: WeaponRifleLecter
     belt: ClothingBeltMilitaryWebbingBlueShieldFilled
     gloves: ClothingHandsGlovesCombat
     id: BlueShieldOfficerPDA
@@ -83,6 +86,12 @@
         - state: ert_security
     - type: PresetIdCard
       job: BlueShieldOfficer
+    - type: Access
+      tags:
+        - CCSecurity
+        - CentralCommand
+      groups:
+        - AllAccess
 
 - type: entity
   parent: ClothingBackpack

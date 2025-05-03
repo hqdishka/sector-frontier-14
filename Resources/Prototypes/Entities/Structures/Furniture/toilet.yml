@@ -85,9 +85,9 @@
   - type: SolutionContainerManager
     solutions:
       drainBuffer:
-        maxVol: 100
+        maxVol: 1
       tank:
-        maxVol: 500
+        maxVol: 5
   - type: SolutionRegeneration
     solution: tank
     generated:
@@ -129,14 +129,14 @@
   - type: SolutionContainerManager
     solutions:
       drainBuffer:
-        maxVol: 100
+        maxVol: 1
       tank:
-        maxVol: 500
+        maxVol: 5
         reagents:
         - ReagentId: AntiSepticFluid # Frontier: Water<AntiSepticFluid
-          Quantity: 180
+          Quantity: 2
         - ReagentId: GastroToxin
-          Quantity: 20
+          Quantity: 3
   - type: Toilet # Frontier
     clogProbability: 0.3 # Frontier
 
@@ -186,15 +186,15 @@
   - type: SolutionContainerManager
     solutions:
       drainBuffer:
-        maxVol: 100
+        maxVol: 1
       tank:
-        maxVol: 500
+        maxVol: 5
         reagents:
         - ReagentId: AntiSepticFluid # Frontier: Water<AntiSepticFluid
-          Quantity: 160
+          Quantity: 1
         - ReagentId: Gold
-          Quantity: 20
+          Quantity: 1
         - ReagentId: GastroToxin
-          Quantity: 20
+          Quantity: 2
   - type: Toilet # Frontier
     clogProbability: 0.3 # Frontier

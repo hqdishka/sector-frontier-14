@@ -1,0 +1,21 @@
+- type: entity
+  name: пояс охраны спецсил
+  description: Может вмещать различное снаряжение службы безопасности, такое как наручники и вспышки.
+  parent: ClothingBeltSecurity
+  id: ClothingBeltSecuritySuper
+  components:
+    - type: Sprite
+      sprite: Backmen/Clothing/Belt/centcom_security_belt.rsi
+    - type: Clothing
+      sprite: Backmen/Clothing/Belt/centcom_security_belt.rsi
+    - type: Storage
+      grid:
+      - 0,0,5,4
+    - type: StorageFill
+      contents:
+        - id: ADTWeaponPistolX01
+        - id: Stunbaton
+        - id: GrenadeFlashBang
+        - id: GrenadeFlashBang
+        - id: Handcuffs
+        - id: Handcuffs

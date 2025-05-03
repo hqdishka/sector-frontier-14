@@ -1,0 +1,12 @@
+- type: damageModifierSet
+  id: CombineHuman
+  coefficients:
+    Blunt: 0.8
+    Slash: 0.8
+    Piercing: 0.6
+    Cold: 0.0
+    Poison: 0.0
+    Radiation: 0.0
+    Asphyxiation: -1.0
+    Bloodloss: 0.0
+    Cellular: 0.0

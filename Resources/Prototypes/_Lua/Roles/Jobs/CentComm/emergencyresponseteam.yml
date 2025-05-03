@@ -16,6 +16,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: playTimeTracker
   id: JobFSFCommanderBravo
@@ -71,6 +76,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: playTimeTracker
   id: JobFSFSpecialistBravo
@@ -130,6 +140,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: playTimeTracker
   id: JobFSFCommanderCharlie
@@ -189,6 +204,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: playTimeTracker
   id: JobFSFSpecialistCharlie
@@ -249,6 +269,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: ERTLeaderGearAmber
@@ -298,6 +323,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: ERTLeaderGearRed
@@ -347,6 +377,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: ERTLeaderGearGamma
@@ -395,6 +430,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: ERTSecurityGearAmber
@@ -441,6 +481,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: ERTSecurityGearRed
@@ -487,6 +532,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: ERTSecurityGearGamma
@@ -535,6 +585,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: ERTMedicalGearAmber
@@ -585,6 +640,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: ERTMedicalGearRed
@@ -636,6 +696,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: ERTMedicalGearGamma
@@ -691,6 +756,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: ERTEngineerGearAmber
@@ -734,6 +804,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: ERTEngineerGearRed
@@ -780,6 +855,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: ERTEngineerGearGamma
@@ -833,6 +913,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: ERTJanitorGearAmber
@@ -880,6 +965,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: ERTJanitorGearRed
@@ -928,6 +1018,11 @@
   - AllAccess
   access:
   - CentralCommand
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: ERTJanitorGearGamma

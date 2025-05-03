@@ -731,7 +731,7 @@
     color: "#ff0000"
     canShuttle: false
     global: true #announce to everyone they're about to fuck shit up
-    sound: /Audio/Announcements/war.ogg
+    sound: /Audio/_Lua/Announcements/war.ogg # Lua
   - type: Computer
     board: SyndicateCommsComputerCircuitboard
   - type: PointLight
@@ -764,7 +764,7 @@
     color: "#ff00ff"
     canShuttle: false
     global: true #announce to everyone they're about to fuck shit up
-    sound: /Audio/Announcements/war.ogg
+    sound: /Audio/_Lua/Announcements/war.ogg # Lua
   - type: Computer
     board: WizardCommsComputerCircuitboard
   - type: PointLight

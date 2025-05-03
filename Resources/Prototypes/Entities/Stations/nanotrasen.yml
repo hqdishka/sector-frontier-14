@@ -34,6 +34,10 @@
   id: NanotrasenCentralCommand
   parent:
     - BaseStation
+    - BaseStationCargo
+    - BaseStationJobsSpawning
+    - BaseStationSectorServices 
+    - BaseStationRecords
     - BaseStationAlertLevels
     - BaseStationNanotrasen
   categories: [ HideSpawnMenu ]

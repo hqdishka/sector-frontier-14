@@ -1,4 +1,4 @@
 - type: roundAnnouncement
   id: Welcome
   # sound: /Audio/_NF/Announcements/welcome.ogg # Frontier: SOON
-  sound: /Audio/Announcements/welcome.ogg
+  sound: /Audio/_Lua/Announcements/welcome.ogg # Lua

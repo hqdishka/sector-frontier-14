@@ -5,6 +5,42 @@
 # MercenaryBase
 
 - type: roleLoadout
+  id: JobCentralCommandCargo 
+  groups:
+  - NFSpeciesSpecific
+  - ContractorWallet
+
+- type: roleLoadout
+  id: JobCentralCommandOfficial
+  groups:
+  - NFSpeciesSpecific
+  - ContractorWallet
+
+- type: roleLoadout
+  id: JobCentralCommandSpecialOperationsOfficer
+  groups:
+  - NFSpeciesSpecific
+  - ContractorWallet
+
+- type: roleLoadout
+  id: JobCentralCommandAssistant
+  groups:
+  - NFSpeciesSpecific
+  - ContractorWallet
+
+- type: roleLoadout
+  id: JobCentralCommandOperator
+  groups:
+  - NFSpeciesSpecific
+  - ContractorWallet
+
+- type: roleLoadout
+  id: JobBlueShieldOfficer
+  groups:
+  - NFSpeciesSpecific
+  - ContractorWallet
+
+- type: roleLoadout
   id: JobMercenaryBase
   groups:
   - MercenaryHead

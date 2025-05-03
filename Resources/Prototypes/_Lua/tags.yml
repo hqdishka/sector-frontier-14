@@ -81,7 +81,7 @@
   id: BorgSecTorso
 
 - type: Tag
-  id: BorgSecHead
+  id: BorgBlueShield
 
 - type: Tag
   id: BatteryWeaponFireModesSprites

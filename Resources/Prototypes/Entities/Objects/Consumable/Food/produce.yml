@@ -35,6 +35,8 @@
   - type: Appearance
   - type: Extractable
     grindableSolutionName: food
+  - type: TimedDespawn
+    lifetime: 1800
 
 # Subclasses
 
@@ -59,6 +61,8 @@
   - type: Tag
     tags:
     - Wheat
+  - type: StaticPrice
+    price: 50
 
 - type: entity
   name: meatwheat bushel
@@ -105,6 +109,8 @@
       reagents:
       - ReagentId: MilkOat
         Quantity: 5
+  - type: StaticPrice
+    price: 50
 
 - type: entity
   name: sugarcane
@@ -124,6 +130,8 @@
           Quantity: 10
   - type: Produce
     seedId: sugarcane
+  - type: StaticPrice
+    price: 5
 
 - type: entity
   name: papercane roll
@@ -176,6 +184,8 @@
   - type: Tag
     tags:
     - Vegetable
+  - type: StaticPrice
+    price: 7
 
 - type: entity
   name: tower-cap log
@@ -229,6 +239,13 @@
   id: Nettle
   parent: ProduceBase
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      Nettle: 100
+  - type: Tag
+    tags:
+    - MedipenLathe
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/nettle.rsi
   - type: Item
@@ -253,6 +270,8 @@
     pierceArmor: false
   - type: Extractable
     grindableSolutionName: food
+  - type: StaticPrice
+    price: 55
 
 - type: entity
   name: death nettle
@@ -260,6 +279,13 @@
   id: DeathNettle
   parent: ProduceBase
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      DeathNettle: 100
+  - type: Tag
+    tags:
+    - MedipenLathe
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/death_nettle.rsi
   - type: Item
@@ -287,6 +313,8 @@
     pierceArmor: false
   - type: Extractable
     grindableSolutionName: food
+  - type: StaticPrice
+    price: 67
 
 - type: entity
   name: banana
@@ -328,6 +356,8 @@
     entries:
       Burger: Banana
       Taco: Banana
+  - type: StaticPrice
+    price: 8
 
 - type: entity
   name: mimana
@@ -357,6 +387,8 @@
     heldPrefix: produce
   - type: Produce
     seedId: mimana
+  - type: TimedDespawn
+    lifetime: 320
   - type: Extractable
     juiceSolution:
       reagents:
@@ -390,6 +422,8 @@
     enabled: false
   - type: Physics
     bodyType: Dynamic
+  - type: TimedDespawn
+    lifetime: 320
   - type: Fixtures
     fixtures:
       slips:
@@ -515,6 +549,8 @@
     entries:
       Burger: CarrotBurger
       Taco: Carrot
+  - type: StaticPrice
+    price: 50
 
 - type: entity
   name: cabbage
@@ -547,6 +583,8 @@
     entries:
       Burger: CabbageBurger
       Taco: Cabbage
+  - type: StaticPrice
+    price: 50
 
 - type: entity
   name: garlic
@@ -554,6 +592,10 @@
   id: FoodGarlic
   description: Delicious, but with a potentially overwhelming odor.
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      FoodGarlic: 100
   - type: FlavorProfile
     flavors:
       - garlic
@@ -575,6 +617,9 @@
   - type: Tag
     tags:
     - Vegetable
+    - MedipenLathe
+  - type: StaticPrice
+    price: 50
   - type: FoodSequenceElement
     entries:
       Burger: GarlicBurger
@@ -617,6 +662,8 @@
     entries:
       Burger: Lemon
       Taco: Lemon
+  - type: StaticPrice
+    price: 5
 
 - type: entity
   name: lemoon
@@ -654,6 +701,8 @@
     entries:
       Burger: Lemoon
       Taco: Lemoon
+  - type: StaticPrice
+    price: 3
 
 - type: entity
   name: lime
@@ -683,6 +732,8 @@
     entries:
       Burger: Lime
       Taco: Lime
+  - type: StaticPrice
+    price: 5
 
 - type: entity
   name: orange
@@ -711,6 +762,8 @@
     entries:
       Burger: Orange
       Taco: Orange
+  - type: StaticPrice
+    price: 5
 
 - type: entity
   name: extradimensional orange
@@ -792,6 +845,8 @@
   - type: Tag
     tags:
     - Fruit
+  - type: StaticPrice
+    price: 5
 
 - type: entity
   name: potato
@@ -833,6 +888,8 @@
     entries:
       Burger: Potato
       Taco: Potato
+  - type: StaticPrice
+    price: 50
 
 
 - type: entity
@@ -947,6 +1004,8 @@
     entries:
       Burger: BlueTomato
       Taco: BlueTomato
+  - type: StaticPrice
+    price: 14
 
 - type: entity
   name: blood tomato
@@ -954,6 +1013,10 @@
   id: FoodBloodTomato
   description: Wait, that's not ketchup...
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      FoodBloodTomato: 100
   - type: SolutionContainerManager
     solutions:
       food:
@@ -992,6 +1055,9 @@
     tags:
     - Fruit # Fuck you they're a fruit
     - Vegetable
+    - MedipenLathe
+  - type: StaticPrice
+    price: 8
   - type: FoodSequenceElement
     entries:
       Skewer: TomatoSkewer
@@ -1026,6 +1092,8 @@
     tags:
     - Fruit
     - Vegetable
+  - type: StaticPrice
+    price: 12
 
 - type: entity
   name: apple
@@ -1061,6 +1129,8 @@
     entries:
       Burger: Apple
       Taco: Apple
+  - type: StaticPrice
+    price: 5
 
 - type: entity
   name: golden apple
@@ -1068,6 +1138,10 @@
   id: FoodGoldenApple
   description: It should be shaped like a cube, shouldn't it?
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      FoodGoldenApple: 100
   - type: FlavorProfile
     flavors:
       - apple
@@ -1099,6 +1173,7 @@
   - type: Tag
     tags:
     - Fruit
+    - MedipenLathe
   - type: FoodSequenceElement
     entries:
       Burger: GoldenApple
@@ -1136,6 +1211,8 @@
   - type: Tag
     tags:
     - Fruit
+  - type: StaticPrice
+    price: 3
 
 - type: entity
   name: ear of corn
@@ -1177,6 +1254,8 @@
       Burger: Corn
       Taco: Corn
       Skewer: CornSkewer
+  - type: StaticPrice
+    price: 75
 
 - type: entity
   name: corn cob
@@ -1232,6 +1311,8 @@
   - type: Tag
     tags:
     - Vegetable
+  - type: StaticPrice
+    price: 55
 
 - type: entity
   name: red onion
@@ -1287,6 +1368,8 @@
   - type: Tag
     tags:
     - Vegetable
+  - type: StaticPrice
+    price: 30
 
 # Slices
 
@@ -1403,6 +1486,10 @@
   id: FoodChiliPepper
   description: Spicy, best not touch your eyes.
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      FoodChiliPepper: 100
   - type: FlavorProfile
     flavors:
       - spicy
@@ -1426,6 +1513,9 @@
   - type: Tag
     tags:
     - Vegetable
+    - MedipenLathe
+  - type: StaticPrice
+    price: 12
   - type: FoodSequenceElement
     entries:
       Taco: ChiliPepper
@@ -1438,6 +1528,13 @@
   id: FoodChillyPepper
   description: Icy hot.
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      FoodChillyPepper: 100
+  - type: Tag
+    tags:
+    - MedipenLathe
   - type: FlavorProfile
     flavors:
       - spicy
@@ -1464,6 +1561,8 @@
       Taco: ChillyPepper
       Burger: ChillyPepper
       Skewer: ChillyPepperSkewer
+  - type: StaticPrice
+    price: 12
 
 - type: entity
   name: aloe
@@ -1471,6 +1570,10 @@
   id: FoodAloe
   description: A fragrant plant with soothing properties.
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      FoodAloe: 100
   - type: FlavorProfile
     flavors:
       - medicine
@@ -1494,6 +1597,9 @@
   - type: Tag
     tags:
     - Vegetable
+    - MedipenLathe
+  - type: StaticPrice
+    price: 50
   - type: FoodSequenceElement
     entries:
       Taco: Aloe
@@ -1505,6 +1611,10 @@
   id: FoodPoppy
   description: A flower with extracts often used in the production of medicine.
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      FoodPoppy: 100
   - type: Clothing
     slots:
     - HEAD
@@ -1530,6 +1640,9 @@
   - type: Tag
     tags:
     - Flower # TODO add "RedFlower" or "Poppy" tag, when other color flowers will be
+    - MedipenLathe
+  - type: StaticPrice
+    price: 50
   - type: FoodSequenceElement
     entries:
       Taco: Poppy
@@ -1541,6 +1654,10 @@
   id: FoodLily
   description: A beautiful orange flower.
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      FoodLily: 100
   - type: FlavorProfile
     flavors:
       - medicine
@@ -1562,6 +1679,9 @@
   - type: Tag
     tags:
     - Flower
+    - MedipenLathe
+  - type: StaticPrice
+    price: 48
   - type: FoodSequenceElement
     entries:
       Taco: Lily
@@ -1573,6 +1693,13 @@
   id: FoodLingzhi
   description: A potent medicinal mushroom. Don't go overboard.
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      FoodLingzhi: 100
+  - type: Tag
+    tags:
+    - MedipenLathe
   - type: FlavorProfile
     flavors:
       - mushroom
@@ -1598,6 +1725,8 @@
     entries:
       Taco: Lingzhi
       Burger: Lingzhi
+  - type: StaticPrice
+    price: 50
 
 - type: entity
   name: ambrosia vulgaris
@@ -1605,6 +1734,10 @@
   id: FoodAmbrosiaVulgaris
   description: A medicinal plant. May make you feel a little funny.
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      FoodAmbrosiaVulgaris: 100
   - type: FlavorProfile
     flavors:
       - leafy
@@ -1639,6 +1772,9 @@
   - type: Tag
     tags:
     - Ambrosia
+    - MedipenLathe
+  - type: StaticPrice
+    price: 50
   - type: FoodSequenceElement
     entries:
       Taco: AmbrosiaVulgaris
@@ -1650,6 +1786,10 @@
   id: FoodAmbrosiaDeus
   description: An extremely sought-after medicinal plant. May have some funky side effects.
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      FoodAmbrosiaDeus: 100
   - type: FlavorProfile
     flavors:
       - leafy
@@ -1682,6 +1822,9 @@
   - type: Tag
     tags:
     - Ambrosia
+    - MedipenLathe
+  - type: StaticPrice
+    price: 48
   - type: FoodSequenceElement
     entries:
       Taco: AmbrosiaDeus
@@ -1693,6 +1836,10 @@
   id: FoodGalaxythistle
   description: A medicinal plant used for its antitoxin.
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      FoodGalaxythistle: 100
   - type: FlavorProfile
     flavors:
       - medicine
@@ -1715,6 +1862,9 @@
     tags:
     - Galaxythistle
     - Fruit # Probably?
+    - MedipenLathe
+  - type: StaticPrice
+    price: 50
   - type: FoodSequenceElement
     entries:
       Taco: Galaxythistle
@@ -1794,6 +1944,13 @@
   id: FoodFlyAmanita
   description: A delicious-looking mushroom like you see in those cartoons.
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      FoodFlyAmanita: 100
+  - type: Tag
+    tags:
+    - MedipenLathe
   - type: FlavorProfile
     flavors:
       - mushroom
@@ -1819,6 +1976,8 @@
     entries:
       Taco: FlyAmanita
       Burger: FlyAmanita
+  - type: StaticPrice
+    price: 45
 
 - type: entity
   name: gatfruit
@@ -1826,6 +1985,10 @@
   id: FoodGatfruit
   description: A delicious, gun-shaped fruit with a thick wooden stem.
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      FoodGatfruit: 100
   - type: FlavorProfile
     flavors:
       - gunpowder
@@ -1848,6 +2011,9 @@
   - type: Tag
     tags:
     - Fruit # It's in the name
+    - MedipenLathe
+  - type: StaticPrice
+    price: 90
   - type: FoodSequenceElement
     entries:
       Taco: Gatfruit
@@ -1920,6 +2086,8 @@
           Quantity: 10
   - type: Produce
     seedId: rice
+  - type: StaticPrice
+    price: 50
 
 - type: entity
   name: soybeans
@@ -1950,6 +2118,8 @@
     entries:
       Taco: Soybeans
       Burger: SoybeansBurger
+  - type: StaticPrice
+    price: 50
 
 - type: entity
   name: spaceman's trumpet
@@ -1957,6 +2127,10 @@
   id: FoodSpacemansTrumpet
   parent: FoodProduceBase
   components:
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      FoodSpacemansTrumpet: 100
   - type: FlavorProfile
     flavors:
       - violets
@@ -1978,8 +2152,11 @@
   - type: Tag
     tags:
     - Flower
+    - MedipenLathe
   - type: Instrument #hehe trumpet
     program: 56
+  - type: StaticPrice
+    price: 1
   - type: FoodSequenceElement
     entries:
       Taco: SpacemansTrumpet
@@ -2016,6 +2193,8 @@
     entries:
       Taco: Koibean
       Burger: KoibeanBurger
+  - type: StaticPrice
+    price: 58
 
 - type: entity
   name: watermelon
@@ -2079,6 +2258,8 @@
   - type: Tag
     tags:
     - Fruit
+  - type: StaticPrice
+    price: 150
 
 - type: entity
   name: watermelon slice
@@ -2255,6 +2436,8 @@
   - type: Tag
     tags:
     - Fruit
+  - type: StaticPrice
+    price: 50
 
 - type: entity
   name: berries
@@ -2292,6 +2475,8 @@
     entries:
       Taco: Berries
       Burger: BerriesBurger
+  - type: StaticPrice
+    price: 4
 
 - type: entity
   name: bungo fruit
@@ -2330,6 +2515,8 @@
     entries:
       Taco: Bungo
       Burger: Bungo
+  - type: StaticPrice
+    price: 5
 
 - type: entity
   name: bungo pit
@@ -2390,6 +2577,8 @@
     entries:
       Taco: Pea
       Burger: Pea
+  - type: StaticPrice
+    price: 8
 
 - type: entity
   parent: FoodProduceBase
@@ -2474,6 +2663,8 @@
     tags:
     - Fruit
     - Vegetable
+  - type: StaticPrice
+    price: 55
 
 - type: entity
   name: blue pumpkin
@@ -2555,6 +2746,8 @@
     - ClothMade
     - CottonBoll
   - type: MothFood # Frontier
+  - type: StaticPrice
+    price: 50
 
 - type: entity
   name: pyrotton boll
@@ -2589,6 +2782,8 @@
   - type: Extractable
     grindableSolutionName: food
   - type: MothFood # Frontier
+  - type: StaticPrice
+    price: 67
 
 - type: entity
   name: cherry

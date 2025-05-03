@@ -80,7 +80,7 @@ public sealed partial class TTSSystem : EntitySystem
     private async void OnEntitySpoke(EntityUid uid, TTSComponent component, EntitySpokeEvent args)
     {
         var voiceId = component.VoicePrototypeId;
-        if (!_isEnabled ||
+        if (!_isEnabled || !component.Enabled ||
             args.Message.Length > MaxMessageChars ||
             voiceId == null)
             return;
@@ -104,7 +104,7 @@ public sealed partial class TTSSystem : EntitySystem
     private async void OnEntitySpokeToEntity(EntityUid uid, TTSComponent component, EntitySpokeToEntityEvent args)
     {
         var voiceId = component.VoicePrototypeId;
-        if (!_isEnabled ||
+        if (!_isEnabled || !component.Enabled ||
             args.Message.Length > MaxMessageChars ||
             voiceId == null)
             return;
@@ -125,7 +125,7 @@ public sealed partial class TTSSystem : EntitySystem
             args.Message.Length > MaxMessageChars)
             return;
 
-        if (!TryComp(args.Source, out TTSComponent? component))
+        if (!TryComp(args.Source, out TTSComponent? component) || !component.Enabled)
             return;
 
         var voiceId = component.VoicePrototypeId;

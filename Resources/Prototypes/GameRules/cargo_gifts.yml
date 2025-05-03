@@ -29,7 +29,7 @@
   - type: StationEvent
     startColor: "#18abf5"
     startAudio:
-      path: /Audio/Announcements/announce.ogg
+      path: /Audio/_Lua/Announcements/announce.ogg # Lua
   - type: CargoGiftsRule
     sender: cargo-gift-default-sender
 

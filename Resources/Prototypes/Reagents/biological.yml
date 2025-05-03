@@ -193,6 +193,7 @@
     collection: FootstepBlood
     params:
       volume: 6
+  pricePerUnit: 60
 
 - type: reagent
   id: Fat

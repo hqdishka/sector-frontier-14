@@ -21,21 +21,22 @@ public sealed class CompanySystem : EntitySystem
     private readonly HashSet<string> _ngcJobs = new()
     {
         "Sheriff",
-        "StationRepresentative",
-        "StationTrafficController",
+        // "StationRepresentative", Lua off
+        // "StationTrafficController", Lua off
         "Bailiff",
         "SeniorOfficer", // Sergeant
         "Deputy",
         "Brigmedic",
-        "NFDetective",
-        "PublicAffairsLiaison",
-        "DirectorOfCare"
+        "NFDetective" // Lua ,< 
+        //"PublicAffairsLiaison", // Lua off
+        // "DirectorOfCare" // Lua off
     };
 
     private readonly HashSet<string> _rogueJobs = new()
     {
-        "PirateCaptain",
-        "PirateFirstMate"
+        "NFPirateCaptain",
+        "NFPirateFirstMate",
+        "NFPirate"
     };
 
     public override void Initialize()
@@ -66,17 +67,13 @@ public sealed class CompanySystem : EntitySystem
         var playerId = args.Player.UserId.ToString();
         var profileCompany = args.Profile.Company;
 
-        //Lua start: Login support
-        foreach (var companyProto in _prototypeManager.EnumeratePrototypes<CompanyPrototype>())
+        // Lua first check specials
+        if (!string.IsNullOrEmpty(companyComp.CompanyName) && companyComp.CompanyName != "None")
         {
-            if (companyProto.Logins.Contains(args.Player.Name))
-            {
-                companyComp.CompanyName = companyProto.ID;
-                Dirty(args.Mob, companyComp);
-                return;
-            }
+            Dirty(args.Mob, companyComp);
+            return;
         }
-        //Lua end
+        // Lua first check specials
 
         // Use "None" as fallback for empty company
         if (string.IsNullOrEmpty(profileCompany))
@@ -92,19 +89,33 @@ public sealed class CompanySystem : EntitySystem
         if (args.JobId != null && _ngcJobs.Contains(args.JobId))
         {
             // Assign NGC company
-            companyComp.CompanyName = "NGC";
+            companyComp.CompanyName = "Security"; // Lua NGC<Security
         }
         // Check if player's job is one of the Rogue jobs
         else if (args.JobId != null && _rogueJobs.Contains(args.JobId))
         {
             // Assign Rogue company
-            companyComp.CompanyName = "Rogue";
+            companyComp.CompanyName = "None"; // Lua Rogue<None
         }
         else
         {
             // Restore the player's original company preference
             companyComp.CompanyName = _playerOriginalCompanies[playerId];
         }
+
+        // Lua start: Login support
+        if (companyComp.CompanyName == "None")
+        {
+            foreach (var companyProto in _prototypeManager.EnumeratePrototypes<CompanyPrototype>())
+            {
+                if (companyProto.Logins.Contains(args.Player.Name))
+                {
+                    companyComp.CompanyName = companyProto.ID;
+                    break;
+                }
+            }
+        }
+        // Lua end
 
         // Ensure the component is networked to clients
         Dirty(args.Mob, companyComp);

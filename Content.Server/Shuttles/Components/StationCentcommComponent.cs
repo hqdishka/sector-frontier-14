@@ -26,4 +26,6 @@ public sealed partial class StationCentcommComponent : Component
 
     [DataField]
     public EntityUid? MapEntity;
+
+    public MapId MapId = MapId.Nullspace;
 }

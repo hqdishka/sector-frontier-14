@@ -1,0 +1,43 @@
+- type: job
+  id: BlueShieldOfficer
+  name: job-name-centcomblueshield
+  description: job-description-centcomblueshield
+  playTimeTracker: JobBlueShieldOfficer
+  setPreference: true
+  startingGear: BlueShieldOfficerGear
+  icon: JobIconBlueShieldOfficer
+  supervisors: job-supervisors-hoh
+  canBeAntag: false
+  weight: 1
+  requireAdminNotify: true
+  joinNotifyCrew: true
+  whitelisted: true
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobCentralCommandAssistant
+      time: 21600
+    - !type:DepartmentTimeRequirement
+      department: CentCom
+      time: 43200
+    - !type:RoleTimeRequirement
+      role: JobHeadOfSecurity
+      time: 18000
+    - !type:RoleTimeRequirement
+      role: JobCentralCommandSecOfficer
+      time: 18000
+  access:
+    - CentralCommand
+    - CCSecurity
+  accessGroups:
+    - AllAccess
+  special:
+    - !type:AddImplantSpecial
+      implants: [ MindShieldImplant ]
+    - !type:AddComponentSpecial
+      components:
+        - type: NpcFactionMember
+          factions:
+            - CentralCommand
+        - type: AntagImmune
+        - type: Company
+          companyName: CentComm

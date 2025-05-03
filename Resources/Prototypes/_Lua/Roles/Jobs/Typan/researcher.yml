@@ -23,6 +23,10 @@
   special:
   - !type:AddImplantSpecial
     implants: [ DeathAcidifierImplantLWTypan ]
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Syndicate
 
 - type: startingGear
   id: SyndicateResearcher

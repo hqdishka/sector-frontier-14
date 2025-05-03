@@ -1,0 +1,18 @@
+- type: entity
+  parent: CentcomIDCardDeathsquad
+  id: IdCardRO
+  name: ID карта RO
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Misc/id_cards.rsi
+    layers:
+    - state: card_black
+    - state: sub_department
+      color: "#B22222"
+    - state: frame_default
+      color: "#B22222"
+    - state: iddeathcommando
+  - type: Item
+    heldPrefix: black
+  - type: IdCard
+    jobTitle: job-title-red_order_agent
