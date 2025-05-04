@@ -22,6 +22,8 @@
     - Snout
     - HeadTop
     - HeadSide
+    - Head
+    hideOnToggle: true
 
 #Atmospherics Hardsuit
 - type: entity

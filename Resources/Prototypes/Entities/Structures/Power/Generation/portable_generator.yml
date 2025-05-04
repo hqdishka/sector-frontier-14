@@ -193,6 +193,7 @@
     # Frontier: magnet pickup, fuel adapter
     - type: MaterialStorageMagnetPickup
       range: 0.30
+      magnetEnabled: false
     - type: FuelGradeAdapter
       conversions:
       - input: Plasma
@@ -264,6 +265,7 @@
     # Frontier: magnet pickup, fuel adapter
     - type: MaterialStorageMagnetPickup
       range: 0.30
+      magnetEnabled: false
     - type: FuelGradeAdapter
       conversions:
       - input: Uranium

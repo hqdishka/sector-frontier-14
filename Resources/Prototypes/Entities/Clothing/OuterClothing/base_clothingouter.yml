@@ -139,6 +139,10 @@
     - WhitelistChameleon
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
+  - type: HideLayerClothing
+    slots:
+    - Tail
+    hideOnToggle: true
   - type: DamageOnInteractProtection
     damageProtection:
       flatReductions:

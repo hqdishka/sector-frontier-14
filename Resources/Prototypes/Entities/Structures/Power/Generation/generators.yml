@@ -244,6 +244,18 @@
   description: A Radioisotope Thermoelectric Generator for long term power.
   suffix: 10kW
   components:
+  - type: Machine
+    board: GeneratorRTGMachineCircuitboard
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
+  - type: Construction
+    graph: Machine
+    node: machine
+    containers:
+    - machine_parts
+    - machine_board
   - type: PowerSupplier
     supplyRate: 10000 # supposed to be low power at no fuel cost to power derelicts
   - type: Sprite
@@ -284,6 +296,23 @@
             acts: [ "Destruction" ]
   - type: PirateBountyItem # Frontier
     id: GeneratorRTG # Frontier
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  id: GeneratorRTGMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: РИТЭГ (машинная плата)
+  description: Машинная плата радиоизотопного термоэлектрического генератора для долговременного питания.
+  components:
+    - type: MachineBoard
+      prototype: GeneratorRTG
+      requirements:
+        MatterBin: 8
+        Manipulator: 4
+      stackRequirements:
+        UraniumGlass: 5
+        Uranium: 3
 
 # TODO: need radioactive fallout when destroyed
 
@@ -321,13 +350,15 @@
       - !type:PlaySoundBehavior
         sound:
           collection: MetalBreak
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          SheetSteel1:
-            min: 1
-            max: 5
-          SheetUranium1:
-            min: 1
-            max: 5
+      # - !type:SpawnEntitiesBehavior
+      #   spawn:
+      #     SheetSteel1:
+      #       min: 1
+      #       max: 5
+      #     SheetUranium1:
+      #       min: 1
+      #       max: 5
+      - !type:ChangeConstructionNodeBehavior
+        node: machineFrame
       - !type:DoActsBehavior
         acts: [ "Destruction" ]

@@ -11,8 +11,6 @@
   - type: Machine
     board: ThrusterMachineCircuitboard
   - type: Thruster
-    baseThrust: 150
-    thrust: 150
     damage:
       types:
         Heat: 40
@@ -73,12 +71,10 @@
   - type: Sprite
     sprite: _Lua/Structures/Thrusters/thrusterlua.rsi
   - type: Thruster
-    baseThrust: 250
-    thrust: 250
     damage:
       types:
         Heat: 40
-        
+
 - type: entity
   id: ThrusterLuaUnanchored
   parent: ThrusterLua
@@ -88,7 +84,7 @@
       anchored: false
     - type: Physics
       bodyType: Dynamic
-    
+
 - type: entity
   id: ThrusterSyndie
   parent: ThrusterPirates
@@ -98,12 +94,10 @@
   - type: Sprite
     sprite: _Lua/Structures/Thrusters/thrustersyn.rsi
   - type: Thruster
-    baseThrust: 200
-    thrust: 200
     damage:
       types:
         Heat: 40
-        
+
 - type: entity
   id: ThrusterSyndieUnanchored
   parent: ThrusterSyndie

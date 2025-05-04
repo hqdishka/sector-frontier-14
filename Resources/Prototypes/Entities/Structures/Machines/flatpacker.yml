@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   id: MachineFlatpacker
   parent: [ BaseMachinePowered, ConstructibleMachine ]
   name: Flatpacker 1001
@@ -90,6 +90,7 @@
     - board_slot
   - type: MaterialStorageMagnetPickup # Frontier
     range: 0.30 # Frontier
+    magnetEnabled: false
 #  - type: StaticPrice # Frontier
 #    price: 2000
 

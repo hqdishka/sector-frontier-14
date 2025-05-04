@@ -213,6 +213,7 @@
   - ClothingBackpackSatchelHolding
   - ClothingBackpackDuffelHolding
   - ClothingBackpackMessengerHolding # Frontier
+  - BotanistBagOfHolding # Lua
   - NFBlueprintClothingBackpackHolding # Frontier
   - NFBlueprintClothingBackpackSatchelHolding # Frontier
   - NFBlueprintClothingBackpackDuffelHolding # Frontier

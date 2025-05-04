@@ -1,0 +1,393 @@
+- type: loadoutGroup
+  id: SocksUnderwear
+  name: loadout-socks-name
+  hidden: false
+  loadouts:
+    - LoadoutClothingUnderwearSocksNormal
+    - LoadoutClothingUnderwearSocksHigh
+    - LoadoutClothingUnderSocksBee
+    - LoadoutClothingUnderSocksCoder
+    - LoadoutClothingUnderwearSocksShort
+    - LoadoutClothingUnderwearSocksThigh
+    - LoadoutClothingUnderwearSocksQuartermaster
+    - LoadoutClothingUnderwearSocksCargoTech
+    - LoadoutClothingUnderwearSocksSalvage
+    - LoadoutClothingUnderwearSocksSeniorSalvage
+    - LoadoutClothingUnderwearSocksHeadofPersonnel
+    - LoadoutClothingUnderwearSocksService
+    - LoadoutClothingUnderwearSocksBartender
+    - LoadoutClothingUnderwearSocksBotanist
+    - LoadoutClothingUnderwearSocksBoxer
+    - LoadoutClothingUnderwearSocksChaplain
+    - LoadoutClothingUnderwearSocksChef
+    - LoadoutClothingUnderwearSocksClown
+    - LoadoutClothingUnderwearSocksJanitor
+    - LoadoutClothingUnderwearSocksLibrarian
+    - LoadoutClothingUnderwearSocksMime
+    - LoadoutClothingUnderwearSocksMusician
+    - LoadoutClothingUnderwearSocksCurator
+    - LoadoutClothingUnderwearSocksReporter
+    - LoadoutClothingUnderwearSocksZoo
+    - LoadoutClothingUnderwearSocksCaptain
+    - LoadoutClothingUnderwearSocksChiefEngineer
+    - LoadoutClothingUnderwearSocksEngineer
+    - LoadoutClothingUnderwearSocksAtmos
+    - LoadoutClothingUnderwearSocksSeniorEngineer
+    - LoadoutClothingUnderwearSocksTechnicalAssistant
+    - LoadoutClothingUnderwearSocksCMO
+    - LoadoutClothingUnderwearSocksPathologist
+    - LoadoutClothingUnderwearSocksChemist
+    - LoadoutClothingUnderwearSocksIntern
+    - LoadoutClothingUnderwearSocksDoctor
+    - LoadoutClothingUnderwearSocksParamedic
+    - LoadoutClothingUnderwearSocksPsychologist
+    - LoadoutClothingUnderwearSocksSeniorPhysician
+    - LoadoutClothingUnderwearSocksResearchDirector
+    - LoadoutClothingUnderwearSocksScientist
+    - LoadoutClothingUnderwearSocksResearchAssistant
+    - LoadoutClothingUnderwearSocksSeniorResearcher
+    - LoadoutClothingUnderwearSocksHeadOfSecurity
+    - LoadoutClothingUnderwearSocksBrigmedic
+    - LoadoutClothingUnderwearSocksCadet
+    - LoadoutClothingUnderwearSocksDetective
+    - LoadoutClothingUnderwearSocksSecurityOfficer
+    - LoadoutClothingUnderwearSocksSecurityPilot
+    - LoadoutClothingUnderwearSocksSeniorOfficer
+    - LoadoutClothingUnderwearSocksWarden
+    - LoadoutClothingUnderwearSockIAA
+    - LoadoutClothingUnderwearSockLawyer
+    - LoadoutClothingUnderwearSockMagistrat
+    - LoadoutClothingUnderwearSocksThighXmas
+
+  fallbacks:
+  - LoadoutClothingUnderwearSocksNormal
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksNormal
+  price: 0
+  equipment:
+    socks: ClothingUnderwearSocksNormal
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksHigh
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksHigh
+
+- type: loadout
+  id: LoadoutClothingUnderSocksBee
+  price: 200
+  equipment:
+    socks: ClothingUnderSocksBee
+
+- type: loadout
+  id: LoadoutClothingUnderSocksCoder
+  price: 200
+  equipment:
+    socks: ClothingUnderSocksCoder
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksShort
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksShort
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksThigh
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksThigh
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksQuartermaster
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksQuartermaster
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksCargoTech
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksCargoTech
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksSalvage
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksSalvage
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksSeniorSalvage
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksSeniorSalvage
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksHeadofPersonnel
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksHeadofPersonnel
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksService
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksService
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksBartender
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksBartender
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksBotanist
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksBotanist
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksBoxer
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksBoxer
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksChaplain
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksChaplain
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksChef
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksChef
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksClown
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksClown
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksJanitor
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksJanitor
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksLibrarian
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksLibrarian
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksMime
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksMime
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksMusician
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksMusician
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksCurator
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksCurator
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksReporter
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksReporter
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksZoo
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksZoo
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksCaptain
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksCaptain
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksChiefEngineer
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksChiefEngineer
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksEngineer
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksEngineer
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksAtmos
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksAtmos
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksSeniorEngineer
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksSeniorEngineer
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksTechnicalAssistant
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksTechnicalAssistant
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksCMO
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksCMO
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksPathologist
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksPathologist
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksChemist
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksChemist
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksIntern
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksIntern
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksDoctor
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksDoctor
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksParamedic
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksParamedic
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksPsychologist
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksPsychologist
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksSeniorPhysician
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksSeniorPhysician
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksResearchDirector
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksResearchDirector
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksScientist
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksScientist
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksResearchAssistant
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksResearchAssistant
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksSeniorResearcher
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksSeniorResearcher
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksHeadOfSecurity
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksHeadOfSecurity
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksBrigmedic
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksBrigmedic
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksCadet
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksCadet
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksDetective
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksDetective
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksSecurityOfficer
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksSecurityOfficer
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksSecurityPilot
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksSecurityPilot
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksSeniorOfficer
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksSeniorOfficer
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksWarden
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksWarden
+
+- type: loadout
+  id: LoadoutClothingUnderwearSockIAA
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSockIAA
+
+- type: loadout
+  id: LoadoutClothingUnderwearSockLawyer
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSockLawyer
+
+- type: loadout
+  id: LoadoutClothingUnderwearSockMagistrat
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSockMagistrat
+
+- type: loadout
+  id: LoadoutClothingUnderwearSocksThighXmas
+  price: 200
+  equipment:
+    socks: ClothingUnderwearSocksThighXmas

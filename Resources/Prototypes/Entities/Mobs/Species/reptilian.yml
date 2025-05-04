@@ -11,6 +11,8 @@
     - Snout
     - HeadTop
     - HeadSide
+    - Tail
+    - Hair 
     undergarmentBottom: UndergarmentBottomBoxersReptilian
   - type: Hunger
   - type: Puller
@@ -98,6 +100,8 @@
     - Snout
     - HeadTop
     - HeadSide
+    - Tail
+    - Hair 
     undergarmentBottom: UndergarmentBottomBoxersReptilian
   - type: Inventory
     speciesId: reptilian

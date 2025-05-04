@@ -132,6 +132,7 @@
     - Snout
     - HeadTop
     - HeadSide
+    - Head
 
 - type: entity
   abstract: true
@@ -177,6 +178,7 @@
     - Snout
     - HeadTop
     - HeadSide
+    - Head
 
 - type: entity
   abstract: true
@@ -230,6 +232,14 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 2 #recharge of 2 makes total drain 1w / s so max charge is 1:1 with time. Time to fully charge should be 5 minutes. Having recharge gives light an extended flicker period which gives you some warning to return to light area.
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Snout
+    - HeadTop
+    - HeadSide
+    - Head
+    hideOnToggle: true
 
 - type: entity
   abstract: true

@@ -22,6 +22,9 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 # Pilot
 - type: roleLoadout
@@ -47,6 +50,9 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 # Mercenary
 - type: roleLoadout
@@ -72,6 +78,9 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 # Frontier
 - type: roleLoadout
@@ -94,6 +103,9 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobNFJanitor
@@ -114,6 +126,9 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobMailCarrier
@@ -134,6 +149,9 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobStationTrafficController
@@ -156,6 +174,9 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobStationRepresentative
@@ -179,6 +200,9 @@
   - StationRepBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobSecurityGuard
@@ -201,6 +225,9 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobDirectorOfCare
@@ -225,6 +252,9 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 # Nfsd
 - type: roleLoadout
@@ -250,6 +280,9 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NfsdSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobDeputy
@@ -274,6 +307,9 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NfsdSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobBrigmedic
@@ -298,6 +334,9 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NfsdSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobNFDetective
@@ -322,6 +361,9 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NfsdSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobPublicAffairsLiaison
@@ -345,6 +387,9 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific # Explicitly civilian variant
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 # - type: roleLoadout # Fix when this is actully used
   # id: JobPrisonGuard
@@ -369,6 +414,9 @@
   # - ContractorBackpackItems
   # - ContractorHandItems
   # - NfsdSpeciesSpecific
+  # - TopUnderwear
+  # - PantsUnderwear
+  # - SocksUnderwear
 
 - type: roleLoadout
   id: JobBailiff
@@ -393,6 +441,9 @@
   - SeniorOfficerBackpackItems
   - ContractorHandItems
   - NfsdSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobSeniorOfficer
@@ -417,6 +468,9 @@
   - SeniorOfficerBackpackItems
   - ContractorHandItems
   - NfsdSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobSheriff
@@ -440,6 +494,9 @@
   - SeniorOfficerBackpackItems
   - ContractorHandItems
   - NfsdSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 # NFPirate
 
@@ -459,6 +516,9 @@
   - PirateBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
   canCustomizeName: true # pseudonym?
 
 - type: roleLoadout
@@ -478,6 +538,9 @@
   - PirateBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
   canCustomizeName: true # pseudonym?
 
 - type: roleLoadout
@@ -497,6 +560,9 @@
   - PirateCaptainBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
   canCustomizeName: true # pseudonym?
 
 # Prisoner
@@ -514,3 +580,6 @@
   - PrisonerSurvival
   - PrisonerPDA
   - NFSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear

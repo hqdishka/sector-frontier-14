@@ -1,0 +1,88 @@
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointValetLJ
+  name: Консьерж
+  suffix: LateJoin, Консьерж
+  components:
+    - type: SpawnPoint
+      job_id: Valet
+      spawn_type: LateJoin
+    - type: Sprite
+      sprite: Backmen/Markers/jobs.rsi
+      layers:
+        - state: green
+        - state: jobicon
+
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointNFJanitorLJ
+  name: Уборщик
+  suffix: LateJoin, Уборщик
+  components:
+    - type: SpawnPoint
+      job_id: NFJanitor
+      spawn_type: LateJoin
+    - type: Sprite
+      sprite: Backmen/Markers/jobs.rsi
+      layers:
+        - state: green
+        - state: jobicon
+
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointSecurityGuardLJ
+  name: Охранник
+  suffix: LateJoin, Охранник
+  components:
+  - type: SpawnPoint
+    job_id: SecurityGuard
+    spawn_type: LateJoin
+  - type: Sprite
+    sprite: _NF/Markers/jobs.rsi
+    layers:
+      - state: green
+      - state: securityguard
+
+# No LateJoin
+
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointValetJS
+  name: Консьерж
+  suffix: Spawner, Консьерж
+  components:
+    - type: SpawnPoint
+      job_id: Valet
+    - type: Sprite
+      sprite: Backmen/Markers/jobs.rsi
+      layers:
+        - state: green
+        - state: jobicon
+
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointNFJanitorJS
+  name: Уборщик
+  suffix: Spawner, Уборщик
+  components:
+    - type: SpawnPoint
+      job_id: NFJanitor
+    - type: Sprite
+      sprite: Backmen/Markers/jobs.rsi
+      layers:
+        - state: green
+        - state: jobicon
+
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointSecurityGuardJS
+  name: Охранник
+  suffix: Spawner, Охранник
+  components:
+  - type: SpawnPoint
+    job_id: SecurityGuard
+  - type: Sprite
+    sprite: _NF/Markers/jobs.rsi
+    layers:
+      - state: green
+      - state: securityguard

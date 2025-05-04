@@ -265,6 +265,8 @@
       path: /Audio/Machines/anomaly_generate.ogg
     generatingFinishedSound:
       path: /Audio/Machines/beep.ogg
+    requiredMaterial: Plasma
+    materialPerAnomaly: 1500
   - type: MaterialStorage
     whitelist:
       tags:

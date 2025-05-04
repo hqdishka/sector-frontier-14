@@ -9,36 +9,54 @@
   groups:
   - NFSpeciesSpecific
   - ContractorWallet
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobCentralCommandOfficial
   groups:
   - NFSpeciesSpecific
   - ContractorWallet
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobCentralCommandSpecialOperationsOfficer
   groups:
   - NFSpeciesSpecific
   - ContractorWallet
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobCentralCommandAssistant
   groups:
   - NFSpeciesSpecific
   - ContractorWallet
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobCentralCommandOperator
   groups:
   - NFSpeciesSpecific
   - ContractorWallet
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobBlueShieldOfficer
   groups:
   - NFSpeciesSpecific
   - ContractorWallet
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobMercenaryBase
@@ -63,57 +81,87 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobOutpostTypanResearcher
   groups:
   - NFSpeciesSpecific
   - ContractorWallet
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobOutpostTypanAtmosTech
   groups:
   - NFSpeciesSpecific
   - ContractorWallet
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobOutpostTypanBotanist
   groups:
   - NFSpeciesSpecific
   - ContractorWallet
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobOutpostTypanCargotech
   groups:
   - NFSpeciesSpecific
   - ContractorWallet
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobOutpostTypanChef
   groups:
   - NFSpeciesSpecific
   - ContractorWallet
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobOutpostTypanMedic
   groups:
   - NFSpeciesSpecific
   - ContractorWallet
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobOutpostTypanRD
   groups:
   - NFSpeciesSpecific
   - ContractorWallet
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobOutpostTypanScience
   groups:
   - NFSpeciesSpecific
   - ContractorWallet
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobOutpostTypanTelecommunicationsOfficer
   groups:
   - NFSpeciesSpecific
   - ContractorWallet
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear

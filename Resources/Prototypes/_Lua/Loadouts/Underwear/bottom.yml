@@ -1,0 +1,764 @@
+- type: loadoutGroup
+  id: PantsUnderwear
+  name: loadout-bottom-name
+  hidden: false
+  loadouts:
+    - LoadoutClothingUnderwearBottomBoxersWhite
+    - LoadoutClothingUnderwearBottomPantiesWhite
+    - LoadoutClothingUnderwearBottomBoxersNuclearOperative
+    - LoadoutClothingUnderwearBottomBoxersPirate
+    - LoadoutClothingUnderwearBottomBoxersSyndicateAgent
+    - LoadoutClothingUnderwearBottomBoxersCargoTechnician
+    - LoadoutClothingUnderwearBottomBoxersQuartermaster
+    - LoadoutClothingUnderwearBottomBoxersSalvageSpecialist
+    - LoadoutClothingUnderwearBottomBoxersBartender
+    - LoadoutClothingUnderwearBottomBoxersBotanist
+    - LoadoutClothingUnderwearBottomBoxersBoxer
+    - LoadoutClothingUnderwearBottomBoxersChaplain
+    - LoadoutClothingUnderwearBottomBoxersChef
+    - LoadoutClothingUnderwearBottomBoxersClown
+    - LoadoutClothingUnderwearBottomBoxersHeadofPersonnel
+    - LoadoutClothingUnderwearBottomBoxersJanitor
+    - LoadoutClothingUnderwearBottomBoxersLibrarian
+    - LoadoutClothingUnderwearBottomBoxersMime
+    - LoadoutClothingUnderwearBottomBoxersMusician
+    - LoadoutClothingUnderwearBottomBoxersReporter
+    - LoadoutClothingUnderwearBottomBoxersService
+    - LoadoutClothingUnderwearBottomBoxersZoo
+    - LoadoutClothingUnderwearBottomBoxersCaptain
+    - LoadoutClothingUnderwearBottomBoxersCBURN
+    #- LoadoutClothingUnderwearBottomBoxersCentcomm
+    #- LoadoutClothingUnderwearBottomBoxersDeathSquad
+    - LoadoutClothingUnderwearBottomBoxersERT
+    - LoadoutClothingUnderwearBottomBoxersBlueShieldOfficer
+    - LoadoutClothingUnderwearBottomBoxersAtmosphericTechnician
+    - LoadoutClothingUnderwearBottomBoxersChiefEngineer
+    - LoadoutClothingUnderwearBottomBoxersEngineer
+    - LoadoutClothingUnderwearBottomBoxersSeniorEngineer
+    - LoadoutClothingUnderwearBottomBoxersTechnicalAssistant
+    - LoadoutClothingUnderwearBottomBoxersIAA
+    - LoadoutClothingUnderwearBottomBoxersLawyer
+    - LoadoutClothingUnderwearBottomBoxersMagistrat
+    - LoadoutClothingUnderwearBottomBoxersChemist
+    - LoadoutClothingUnderwearBottomBoxersCMO
+    - LoadoutClothingUnderwearBottomBoxersDoctor
+    - LoadoutClothingUnderwearBottomBoxersIntern
+    - LoadoutClothingUnderwearBottomBoxersParamedic
+    - LoadoutClothingUnderwearBottomBoxersPsychologist
+    - LoadoutClothingUnderwearBottomBoxersSeniorPhysician
+    - LoadoutClothingUnderwearBottomBoxersPathologist
+    - LoadoutClothingUnderwearBottomBoxersResearchAssistant
+    - LoadoutClothingUnderwearBottomBoxersResearchDirector
+    - LoadoutClothingUnderwearBottomBoxersScientist
+    - LoadoutClothingUnderwearBottomBoxersSeniorResearcher
+    - LoadoutClothingUnderwearBottomBoxersBrigmedic
+    - LoadoutClothingUnderwearBottomBoxersCadet
+    - LoadoutClothingUnderwearBottomBoxersDetective
+    - LoadoutClothingUnderwearBottomBoxersHeadofSecurity
+    - LoadoutClothingUnderwearBottomBoxersSecurityOfficer
+    - LoadoutClothingUnderwearBottomBoxersSeniorOfficer
+    - LoadoutClothingUnderwearBottomBoxersWarden
+    - LoadoutClothingUnderwearBottomPantiesNuclearOperative
+    - LoadoutClothingUnderwearBottomPantiesPirate
+    - LoadoutClothingUnderwearBottomPantiesSyndicateAgent
+    - LoadoutClothingUnderwearBottomPantiesCargoTechnician
+    - LoadoutClothingUnderwearBottomPantiesQuartermaster
+    - LoadoutClothingUnderwearBottomPantiesSalvageSpecialist
+    - LoadoutClothingUnderwearBottomPantiesBartender
+    - LoadoutClothingUnderwearBottomPantiesBotanist
+    - LoadoutClothingUnderwearBottomPantiesBoxer
+    - LoadoutClothingUnderwearBottomPantiesChaplain
+    - LoadoutClothingUnderwearBottomPantiesChef
+    - LoadoutClothingUnderwearBottomPantiesClown
+    - LoadoutClothingUnderwearBottomPantiesHeadofPersonnel
+    - LoadoutClothingUnderwearBottomPantiesJanitor
+    - LoadoutClothingUnderwearBottomPantiesLibrarian
+    - LoadoutClothingUnderwearBottomPantiesMime
+    - LoadoutClothingUnderwearBottomPantiesMusician
+    - LoadoutClothingUnderwearBottomPantiesReporter
+    - LoadoutClothingUnderwearBottomPantiesService
+    - LoadoutClothingUnderwearBottomPantiesZoo
+    - LoadoutClothingUnderwearBottomPantiesCaptain
+    - LoadoutClothingUnderwearBottomPantiesCBURN
+    #- LoadoutClothingUnderwearBottomPantiesCentcomm
+    #- LoadoutClothingUnderwearBottomPantiesDeathSquad
+    - LoadoutClothingUnderwearBottomPantiesERT
+    - LoadoutClothingUnderwearBottomPantiesBlueShieldOfficer
+    - LoadoutClothingUnderwearBottomPantiesAtmosphericTechnician
+    - LoadoutClothingUnderwearBottomPantiesChiefEngineer
+    - LoadoutClothingUnderwearBottomPantiesEngineer
+    - LoadoutClothingUnderwearBottomPantiesSeniorEngineer
+    - LoadoutClothingUnderwearBottomPantiesTechnicalAssistant
+    - LoadoutClothingUnderwearBottomPantiesIAA
+    - LoadoutClothingUnderwearBottomPantiesLawyer
+    - LoadoutClothingUnderwearBottomPantiesMagistrat
+    - LoadoutClothingUnderwearBottomPantiesChemist
+    - LoadoutClothingUnderwearBottomPantiesCMO
+    - LoadoutClothingUnderwearBottomPantiesDoctor
+    - LoadoutClothingUnderwearBottomPantiesIntern
+    - LoadoutClothingUnderwearBottomPantiesParamedic
+    - LoadoutClothingUnderwearBottomPantiesPsychologist
+    - LoadoutClothingUnderwearBottomPantiesSeniorPhysician
+    - LoadoutClothingUnderwearBottomPantiesPathologist
+    - LoadoutClothingUnderwearBottomPantiesResearchAssistant
+    - LoadoutClothingUnderwearBottomPantiesResearchDirector
+    - LoadoutClothingUnderwearBottomPantiesScientist
+    - LoadoutClothingUnderwearBottomPantiesSeniorResearcher
+    - LoadoutClothingUnderwearBottomPantiesBrigmedic
+    - LoadoutClothingUnderwearBottomPantiesCadet
+    - LoadoutClothingUnderwearBottomPantiesDetective
+    - LoadoutClothingUnderwearBottomPantiesHeadofSecurity
+    - LoadoutClothingUnderwearBottomPantiesSecurityOfficer
+    - LoadoutClothingUnderwearBottomPantiesSeniorOfficer
+    - LoadoutClothingUnderwearBottomPantiesWarden
+
+  fallbacks:
+  - LoadoutClothingUnderwearBottomBoxersWhite
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersWhite
+  price: 0
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersWhite
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesWhite
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesWhite
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersNuclearOperative
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersNuclearOperative
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersPirate
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersPirate
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersSyndicateAgent
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersSyndicateAgent
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersCargoTechnician
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersCargoTechnician
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersQuartermaster
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersQuartermaster
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersSalvageSpecialist
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersSalvageSpecialist
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersBartender
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersBartender
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersBotanist
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersBotanist
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersBoxer
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersBoxer
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersChaplain
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersChaplain
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersChef
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersChef
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersClown
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersClown
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersHeadofPersonnel
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersHeadofPersonnel
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersJanitor
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersJanitor
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersLibrarian
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersLibrarian
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersMime
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersMime
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersMusician
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersMusician
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersReporter
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersReporter
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersService
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersService
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersZoo
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersZoo
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersCaptain
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersCaptain
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersCBURN
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersCBURN
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersCentcomm
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersCentcomm
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersDeathSquad
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersDeathSquad
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersERT
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersERT
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersBlueShieldOfficer
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersBlueShieldOfficer
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersAtmosphericTechnician
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersAtmosphericTechnician
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersChiefEngineer
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersChiefEngineer
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersEngineer
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersEngineer
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersSeniorEngineer
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersSeniorEngineer
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersTechnicalAssistant
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersTechnicalAssistant
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersIAA
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersIAA
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersLawyer
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersLawyer
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersMagistrat
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersMagistrat
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersChemist
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersChemist
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersCMO
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersCMO
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersDoctor
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersDoctor
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersIntern
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersIntern
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersParamedic
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersParamedic
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersPsychologist
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersPsychologist
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersSeniorPhysician
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersSeniorPhysician
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersPathologist
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersPathologist
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersResearchAssistant
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersResearchAssistant
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersResearchDirector
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersResearchDirector
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersScientist
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersScientist
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersSeniorResearcher
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersSeniorResearcher
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersBrigmedic
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersBrigmedic
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersCadet
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersCadet
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersDetective
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersDetective
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersHeadofSecurity
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersHeadofSecurity
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersSecurityOfficer
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersSecurityOfficer
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersSeniorOfficer
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersSeniorOfficer
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomBoxersWarden
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersWarden
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesNuclearOperative
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesNuclearOperative
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesPirate
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesPirate
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesSyndicateAgent
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesSyndicateAgent
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesCargoTechnician
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesCargoTechnician
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesQuartermaster
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesQuartermaster
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesSalvageSpecialist
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesSalvageSpecialist
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesBartender
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesBartender
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesBotanist
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesBotanist
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesBoxer
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesBoxer
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesChaplain
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesChaplain
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesChef
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesChef
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesClown
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesClown
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesHeadofPersonnel
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesHeadofPersonnel
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesJanitor
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesJanitor
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesLibrarian
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesLibrarian
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesMime
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesMime
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesMusician
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesMusician
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesReporter
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesReporter
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesService
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesService
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesZoo
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesZoo
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesCaptain
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesCaptain
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesCBURN
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesCBURN
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesCentcomm
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesCentcomm
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesDeathSquad
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesDeathSquad
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesERT
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesERT
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesBlueShieldOfficer
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesBlueShieldOfficer
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesAtmosphericTechnician
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesAtmosphericTechnician
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesChiefEngineer
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesChiefEngineer
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesEngineer
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesEngineer
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesSeniorEngineer
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesSeniorEngineer
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesTechnicalAssistant
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesTechnicalAssistant
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesIAA
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesIAA
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesLawyer
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesLawyer
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesMagistrat
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesMagistrat
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesChemist
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesChemist
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesCMO
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesCMO
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesDoctor
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesDoctor
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesIntern
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesIntern
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesParamedic
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesParamedic
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesPsychologist
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesPsychologist
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesSeniorPhysician
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesSeniorPhysician
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesPathologist
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesPathologist
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesResearchAssistant
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesResearchAssistant
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesResearchDirector
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesResearchDirector
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesScientist
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesScientist
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesSeniorResearcher
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesSeniorResearcher
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesBrigmedic
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesBrigmedic
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesCadet
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesCadet
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesDetective
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesDetective
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesHeadofSecurity
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesHeadofSecurity
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesSecurityOfficer
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesSecurityOfficer
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesSeniorOfficer
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesSeniorOfficer
+
+- type: loadout
+  id: LoadoutClothingUnderwearBottomPantiesWarden
+  price: 200
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesWarden

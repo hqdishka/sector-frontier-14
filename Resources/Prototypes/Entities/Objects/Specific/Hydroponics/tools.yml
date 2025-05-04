@@ -149,6 +149,7 @@
   - type: MagnetPickup # Frontier
     magnetEnabled: false # Frontier
     magnetCanBeEnabled: false # Frontier
+    range: 1.5
   - type: NFPlantBag # Frontier
   # Begin DeltaV Additions: toggle magnet from White Dream
   - type: ItemToggle

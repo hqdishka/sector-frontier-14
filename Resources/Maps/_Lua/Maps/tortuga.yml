@@ -4,8 +4,8 @@ meta:
   engineVersion: 251.0.0
   forkId: ""
   forkVersion: ""
-  time: 04/28/2025 15:19:03
-  entityCount: 2273
+  time: 05/03/2025 14:09:24
+  entityCount: 2293
 maps: []
 grids:
 - 1
@@ -1168,28 +1168,36 @@ entities:
           -1,4:
             0: 14
           0,5:
-            1: 192
-          0,6:
-            1: 68
+            1: 208
+          0,7:
+            1: 132
           1,7:
-            1: 16
-            0: 16896
+            1: 25360
           1,5:
             0: 34952
           2,5:
             0: 65535
           2,6:
             0: 15
+          1,8:
+            1: 136
           3,5:
-            0: 4369
+            0: 56785
+          3,6:
+            0: 12
           3,8:
-            0: 2
+            1: 118
           3,7:
-            0: 18432
+            1: 51200
           4,4:
             0: 63625
+          4,5:
+            0: 4368
+          4,6:
+            0: 1
+            1: 59392
           4,7:
-            1: 18
+            1: 310
           4,-1:
             0: 37683
           5,0:
@@ -1206,7 +1214,7 @@ entities:
             0: 3
           6,0:
             0: 12288
-            1: 68
+            1: 34884
           6,1:
             0: 65283
           6,3:
@@ -1215,7 +1223,9 @@ entities:
           6,2:
             0: 25134
           6,-1:
-            1: 17472
+            1: 17476
+          7,0:
+            1: 4096
           7,1:
             0: 9984
             1: 2
@@ -1224,14 +1234,23 @@ entities:
             1: 512
           7,3:
             0: 273
-          4,6:
-            1: 26760
           5,6:
-            1: 7
+            1: 310
           5,5:
-            1: 17476
+            1: 17544
           6,4:
-            1: 5120
+            1: 15360
+          7,4:
+            1: 16
+          -3,4:
+            1: 34882
+            0: 4
+          -3,3:
+            1: 9009
+          -2,5:
+            1: 2243
+          -1,5:
+            1: 3840
           -4,0:
             0: 65401
           -4,-1:
@@ -1240,6 +1259,11 @@ entities:
             0: 135
           -4,1:
             0: 6
+            1: 4096
+          -5,1:
+            1: 2160
+          -4,2:
+            1: 3138
           -3,0:
             0: 47513
           -3,1:
@@ -1247,6 +1271,7 @@ entities:
           -3,-1:
             0: 56797
           -3,2:
+            1: 4096
             0: 12
           -2,0:
             0: 65535
@@ -1262,14 +1287,16 @@ entities:
             0: 40175
           -1,2:
             0: 1638
+          -4,-4:
+            1: 61440
+          -5,-4:
+            1: 57344
           -4,-2:
             0: 65464
           -5,-2:
             0: 4080
           -5,-1:
             0: 61687
-          -4,-4:
-            1: 57344
           -4,-3:
             0: 34816
           -3,-4:
@@ -1283,16 +1310,27 @@ entities:
             0: 4352
           -2,-3:
             0: 4369
+            1: 12
           -2,-2:
             0: 65521
+          -1,-3:
+            1: 15
           -1,-2:
             0: 65395
+          0,-3:
+            1: 15
           0,-2:
             0: 28929
+          1,-3:
+            1: 3105
           1,-2:
             0: 30464
+          2,-3:
+            1: 34560
           2,-2:
             0: 57344
+          3,-3:
+            1: 28672
           3,-2:
             0: 47104
           4,-3:
@@ -1300,7 +1338,25 @@ entities:
           4,-2:
             0: 14197
           5,-2:
-            1: 3840
+            1: 4081
+          6,-2:
+            1: 28928
+          -7,-2:
+            1: 18568
+          -7,-1:
+            1: 17476
+          -7,0:
+            1: 2180
+          -6,-3:
+            1: 300
+          -5,-3:
+            1: 1
+          -6,0:
+            1: 4096
+          -6,1:
+            1: 142
+          2,8:
+            1: 240
         uniqueMixes:
         - volume: 2500
           temperature: 293.15
@@ -1497,7 +1553,6 @@ entities:
       parent: 1
     - type: DeviceList
       devices:
-      - 938
       - 38
       - 940
       - 679
@@ -5333,17 +5388,17 @@ entities:
       parent: 1
 - proto: ComputerPirateBounty
   entities:
-  - uid: 2264
+  - uid: 2292
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 12.5,10.5
+      rot: 1.5707963267948966 rad
+      pos: 6.5,12.5
       parent: 1
-  - uid: 2265
+  - uid: 2293
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 16.5,10.5
+      rot: -1.5707963267948966 rad
+      pos: 8.5,12.5
       parent: 1
 - proto: ComputerPirateBountyRedemption
   entities:
@@ -8586,9 +8641,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 17.5,10.5
       parent: 1
-    - type: DeviceNetwork
-      deviceLists:
-      - 7
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 939
@@ -10293,6 +10345,56 @@ entities:
     - type: Transform
       pos: 13.5,11.5
       parent: 1
+  - uid: 2277
+    components:
+    - type: Transform
+      pos: 19.5,11.5
+      parent: 1
+  - uid: 2278
+    components:
+    - type: Transform
+      pos: 18.5,11.5
+      parent: 1
+  - uid: 2279
+    components:
+    - type: Transform
+      pos: 17.5,11.5
+      parent: 1
+  - uid: 2280
+    components:
+    - type: Transform
+      pos: 16.5,11.5
+      parent: 1
+  - uid: 2281
+    components:
+    - type: Transform
+      pos: 15.5,11.5
+      parent: 1
+  - uid: 2287
+    components:
+    - type: Transform
+      pos: 4.5,9.5
+      parent: 1
+  - uid: 2288
+    components:
+    - type: Transform
+      pos: 5.5,9.5
+      parent: 1
+  - uid: 2289
+    components:
+    - type: Transform
+      pos: 6.5,9.5
+      parent: 1
+  - uid: 2290
+    components:
+    - type: Transform
+      pos: 7.5,9.5
+      parent: 1
+  - uid: 2291
+    components:
+    - type: Transform
+      pos: 8.5,9.5
+      parent: 1
 - proto: SpawnPointNFPirateCaptain
   entities:
   - uid: 1154
@@ -10300,12 +10402,62 @@ entities:
     - type: Transform
       pos: 10.5,11.5
       parent: 1
+  - uid: 2264
+    components:
+    - type: Transform
+      pos: 19.5,11.5
+      parent: 1
+  - uid: 2265
+    components:
+    - type: Transform
+      pos: 18.5,11.5
+      parent: 1
+  - uid: 2274
+    components:
+    - type: Transform
+      pos: 17.5,11.5
+      parent: 1
+  - uid: 2275
+    components:
+    - type: Transform
+      pos: 16.5,11.5
+      parent: 1
+  - uid: 2276
+    components:
+    - type: Transform
+      pos: 15.5,11.5
+      parent: 1
 - proto: SpawnPointNFPirateFirstMate
   entities:
   - uid: 1155
     components:
     - type: Transform
       pos: 12.5,11.5
+      parent: 1
+  - uid: 2282
+    components:
+    - type: Transform
+      pos: 19.5,11.5
+      parent: 1
+  - uid: 2283
+    components:
+    - type: Transform
+      pos: 18.5,11.5
+      parent: 1
+  - uid: 2284
+    components:
+    - type: Transform
+      pos: 17.5,11.5
+      parent: 1
+  - uid: 2285
+    components:
+    - type: Transform
+      pos: 16.5,11.5
+      parent: 1
+  - uid: 2286
+    components:
+    - type: Transform
+      pos: 15.5,11.5
       parent: 1
 - proto: SpeedLoaderRifleHeavy
   entities:
@@ -15108,7 +15260,7 @@ entities:
       pos: 4.5,7.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -70798.01
+      secondsUntilStateChange: -71177.15
       state: Opening
   - uid: 1928
     components:
