@@ -45,3 +45,6 @@ shuttle-console-dock = Пристыковать
 shuttle-console-docks-label = Стыковочные порты
 shuttle-console-undock-fail = Не удалось отстыковаться
 shuttle-console-dock-fail = Не удалось пристыковаться
+shuttle-console-ftl-lock = БСС Блокировка
+shuttle-console-ftl-lock-enabled = Включено
+shuttle-console-ftl-lock-disabled = Выключено
