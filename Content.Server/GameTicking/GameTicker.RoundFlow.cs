@@ -374,33 +374,55 @@ namespace Content.Server.GameTicking
             var readyPlayers = new List<ICommonSession>();
             var readyPlayerProfiles = new Dictionary<NetUserId, HumanoidCharacterProfile>();
             var autoDeAdmin = _cfg.GetCVar(CCVars.AdminDeadminOnJoin);
-            foreach (var (userId, status) in _playerGameStatuses)
-            {
-                if (LobbyEnabled && status != PlayerGameStatus.ReadyToPlay) continue;
-                if (!_playerManager.TryGetSessionById(userId, out var session)) continue;
-
-                if (autoDeAdmin && _adminManager.IsAdmin(session))
+                // Lua start WARNING EXPERIMENTAL!
+                foreach (var (userId, status) in _playerGameStatuses)
                 {
-                    _adminManager.DeAdmin(session);
-                }
+                    if (LobbyEnabled && status != PlayerGameStatus.ReadyToPlay)
+                        continue;
+
+                    if (!_playerManager.TryGetSessionById(userId, out var session))
+                        continue;
+
+                    if (!_prefsManager.HavePreferencesLoaded(session))
+                    {
+                        _chatManager.DispatchServerMessage(session, Loc.GetString("game-ticker-preferences-not-loaded"));
+                        continue;
+                    }
+
+                    if (_cfg.GetCVar(CCVars.AdminDeadminOnJoin) && _adminManager.IsAdmin(session))
+                    {
+                        _adminManager.DeAdmin(session);
+                    }
+
 #if DEBUG
-                DebugTools.Assert(_userDb.IsLoadComplete(session), $"Player was readied up but didn't have user DB data loaded yet??");
+    DebugTools.Assert(_userDb.IsLoadComplete(session), $"Player was readied up but didn't have user DB data loaded yet??");
 #endif
 
-                readyPlayers.Add(session);
-                HumanoidCharacterProfile profile;
-                if (_prefsManager.TryGetCachedPreferences(userId, out var preferences))
-                {
-                    profile = (HumanoidCharacterProfile) preferences.SelectedCharacter;
-                }
-                else
-                {
-                    profile = HumanoidCharacterProfile.Random();
-                }
-                readyPlayerProfiles.Add(userId, profile);
-            }
+                    if (!_prefsManager.TryGetCachedPreferences(userId, out var preferences))
+                        continue;
 
-            DebugTools.AssertEqual(readyPlayers.Count, ReadyPlayerCount());
+                    var selectedIndex = preferences.SelectedCharacterIndex;
+
+                    if (_usedCharacterProfiles.TryGetValue(userId, out var usedSet) && usedSet.Contains(selectedIndex))
+                    {
+                        _chatManager.DispatchServerMessage(session, Loc.GetString("game-ticker-character-already-used"));
+                        continue;
+                    }
+
+                    var profile = (HumanoidCharacterProfile)preferences.SelectedCharacter;
+
+                    readyPlayers.Add(session);
+                    readyPlayerProfiles.Add(userId, profile);
+                    if (!_usedCharacterProfiles.TryGetValue(userId, out var used))
+                    {
+                        used = new HashSet<int>();
+                        _usedCharacterProfiles[userId] = used;
+                    }
+                    used.Add(selectedIndex);
+                }
+                // Lua end WARNING EXPERIMENTAL!
+
+                DebugTools.AssertEqual(readyPlayers.Count, ReadyPlayerCount());
 
             // Just in case it hasn't been loaded previously we'll try loading it.
             LoadMaps();
@@ -483,6 +505,7 @@ namespace Content.Server.GameTicking
 
             DebugTools.Assert(RunLevel == GameRunLevel.InRound);
             _sawmill.Info("Ending round!");
+            _usedCharacterProfiles.Clear(); // Lua
 
             RunLevel = GameRunLevel.PostRound;
 

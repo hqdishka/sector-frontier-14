@@ -24,6 +24,8 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Robust.Shared.Network; // Lua
+
 #if EXCEPTION_TOLERANCE
 using Robust.Shared.Exceptions;
 #endif
@@ -71,6 +73,8 @@ namespace Content.Server.GameTicking
         [ViewVariables] public MapId DefaultMap { get; private set; }
 
         private ISawmill _sawmill = default!;
+
+        private readonly Dictionary<NetUserId, HashSet<int>> _usedCharacterProfiles = new(); // Lua
 
         public override void Initialize()
         {

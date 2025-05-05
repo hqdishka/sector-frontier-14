@@ -138,7 +138,32 @@ namespace Content.Server.GameTicking
             bool lateJoin = true,
             bool silent = false)
         {
-            var character = GetPlayerProfile(player);
+            // Lua start WARNING EXPERIMENTAL!
+            if (!_prefsManager.TryGetCachedPreferences(player.UserId, out var prefs))
+            {
+                _chatManager.DispatchServerMessage(player, Loc.GetString("game-ticker-preferences-not-loaded"));
+                PlayerJoinLobby(player);
+                return;
+            }
+
+            var selectedIndex = prefs.SelectedCharacterIndex;
+
+            if (_usedCharacterProfiles.TryGetValue(player.UserId, out var usedSet) && usedSet.Contains(selectedIndex))
+            {
+                _chatManager.DispatchServerMessage(player, Loc.GetString("game-ticker-character-already-used"));
+                PlayerJoinLobby(player);
+                return;
+            }
+
+            if (!_usedCharacterProfiles.TryGetValue(player.UserId, out var used))
+            {
+                used = new HashSet<int>();
+                _usedCharacterProfiles[player.UserId] = used;
+            }
+            used.Add(selectedIndex);
+
+            var character = (HumanoidCharacterProfile)prefs.SelectedCharacter;
+            // Lua end WARNING EXPERIMENTAL!
 
             var jobBans = _banManager.GetJobBans(player.UserId);
             if (jobBans == null || jobId != null && jobBans.Contains(jobId))
