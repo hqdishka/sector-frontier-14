@@ -6,8 +6,8 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using Content.Goobstation.Shared.Fishing.Components;
-using Content.Goobstation.Shared.Fishing.Events;
+using Content.Shared.Fishing.Components;
+using Content.Shared.Fishing.Events;
 using Content.Shared.Actions;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Popups;
@@ -19,7 +19,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
-namespace Content.Goobstation.Shared.Fishing.Systems;
+namespace Content.Shared.Fishing.Systems;
 
 /// <summary>
 /// This handles... da fish
@@ -33,6 +33,7 @@ public abstract class SharedFishingSystem : EntitySystem
     [Dependency] private readonly SharedActionsSystem _actions = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedHandsSystem _hands = default!;
+    [Dependency] private readonly IRobustRandom _random = default!;
 
     protected EntityQuery<ActiveFisherComponent> FisherQuery;
     protected EntityQuery<ActiveFishingSpotComponent> ActiveFishSpotQuery;
@@ -347,10 +348,11 @@ public abstract class SharedFishingSystem : EntitySystem
             var attachedEnt = lureComp.AttachedEntity.Value;
             var targetCoords = Xform.GetMapCoordinates(Transform(attachedEnt));
             var playerCoords = Xform.GetMapCoordinates(Transform(player));
-            var rand = new Random((int) Timing.CurTick.Value); // evil random prediction hack
+            var seed = (int)Timing.CurTick.Value;
+            _random.SetSeed(seed);
 
             // Calculate throw direction
-            var direction = (playerCoords.Position - targetCoords.Position) * rand.NextFloat(0.2f, 0.85f);
+            var direction = (playerCoords.Position - targetCoords.Position) * _random.NextFloat(0.2f, 0.85f);
 
             // Yeet
             Throwing.TryThrow(attachedEnt, direction, 4f, player);
