@@ -119,6 +119,11 @@
           32:
             sprite: Mobs/Species/Vox/displacement.rsi
             state: jumpsuit
+      underwearb:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vox/displacement.rsi
+            state: jumpsuit
       eyes:
         sizeMaps:
           32:
@@ -145,6 +150,11 @@
             sprite: Mobs/Species/Vox/displacement.rsi
             state: ears
       shoes:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vox/displacement.rsi
+            state: shoes
+      socks:
         sizeMaps:
           32:
             sprite: Mobs/Species/Vox/displacement.rsi
@@ -180,6 +190,11 @@
           32:
             sprite: Mobs/Species/Vox/displacement.rsi
             state: jumpsuit
+      underwearb:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vox/displacement.rsi
+            state: jumpsuit
       eyes:
         sizeMaps:
           32:
@@ -206,6 +221,11 @@
             sprite: Mobs/Species/Vox/displacement.rsi
             state: ears
       shoes:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vox/displacement.rsi
+            state: shoes
+      socks:
         sizeMaps:
           32:
             sprite: Mobs/Species/Vox/displacement.rsi
