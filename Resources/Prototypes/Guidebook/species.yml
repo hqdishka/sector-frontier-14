@@ -16,6 +16,8 @@
     - Harpy # DeltaV
     - Felinid # DeltaV
     - Oni # DeltaV
+    # ShibaStation
+    - Ariral
 
 - type: guideEntry
   id: Arachnid
