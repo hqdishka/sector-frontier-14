@@ -47,6 +47,7 @@ entities:
     - type: MetaData
     - type: Transform
       parent: invalid
+    - type: NoShuttleFTL
     - type: MapGrid
       chunks:
         0,1:

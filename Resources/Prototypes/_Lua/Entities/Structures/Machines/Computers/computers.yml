@@ -47,6 +47,21 @@
     layers:
     - state: ship_weapon
 
+- type: entity
+  parent: BaseNFFlatpack
+  id: PlayerStationAiVesselFlatpack
+  name: упакованный ИИ шаттла
+  description: Упакованный ИИ шаттла, составит компанию вашим путешествиям
+  components:
+  - type: Flatpack
+    entity: PlayerStationAiVessel
+  - type: StaticPrice
+    price: 250
+  - type: Sprite
+    sprite: _Lua/Flatpack/flatpack.rsi
+    layers:
+    - state: ship_weapon
+
 
 #LuaTech
 # - type: entity

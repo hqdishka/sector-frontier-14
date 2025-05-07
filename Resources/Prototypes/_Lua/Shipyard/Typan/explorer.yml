@@ -10,11 +10,7 @@
   group: Typan
   shuttlePath: /Maps/_Lua/Shuttles/Typan/explorer.yml
   addComponents:
-    - type: AutoDelete
-      distanceToCheck: 40
-      delayToDelete: 2400
-      delayToCheck: 60
-      isHumanoidNear: True
+
     - type: IFF
       color: "#990816"
     - type: NanotrasenFtl

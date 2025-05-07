@@ -4,8 +4,8 @@ meta:
   engineVersion: 251.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/03/2025 13:24:04
-  entityCount: 6562
+  time: 05/07/2025 15:44:33
+  entityCount: 6620
 maps:
 - 1
 grids:
@@ -4284,6 +4284,9 @@ entities:
     - type: ProtectedGrid
       hostileMobKillSound: !type:SoundPathSpecifier
         path: /Audio/Effects/holy.ogg
+      preventArtifactTriggers: True
+      preventExplosions: True
+      preventEmpEvents: True
     - type: SpreaderGrid
     - type: NavMap
     - type: IFF
@@ -4305,6 +4308,19 @@ entities:
     - type: ContainedSolution
       containerName: food
       container: 3
+  - uid: 6620
+    components:
+    - type: MetaData
+    - type: Transform
+      pos: -2.509191,12.870775
+      parent: 2
+    - type: RadarBlip
+      enabled: False
+      visibleFromOtherGrids: True
+      shape: Ring
+      scale: 0
+      radarColor: '#00DEFEFF'
+    - type: CircularShieldRadar
 - proto: ActionToggleLight
   entities:
   - uid: 6
@@ -5096,7 +5112,7 @@ entities:
       pos: 57.5,-1.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -48338.625
+      secondsUntilStateChange: -49187.867
       state: Opening
     - type: Docking
       name: 5A
@@ -15979,6 +15995,28 @@ entities:
     - Destructible
     - Anchorable
     - Construction
+- proto: CircularShieldBase
+  entities:
+  - uid: 6619
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 20.5,14.5
+      parent: 2
+    - type: ApcPowerReceiver
+      powerLoad: 0
+- proto: CircularShieldConsole
+  entities:
+  - uid: 3284
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 16.5,10.5
+      parent: 2
+    - type: DeviceLinkSource
+      linkedPorts:
+        6619:
+        - CircularShieldConsoleSender: CircularShieldConsoleReceiver
 - proto: CloningPod
   entities:
   - uid: 716
@@ -16429,6 +16467,8 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 12.5,14.5
       parent: 2
+    - type: ShuttleConsoleLock
+      locked: False
     - type: DeviceLinkSource
       linkedPorts: {}
       lastSignals: {}
@@ -33540,6 +33580,13 @@ entities:
     - type: Transform
       pos: -33.5,5.5
       parent: 2
+- proto: PlayerStationAiTSFMC
+  entities:
+  - uid: 6563
+    components:
+    - type: Transform
+      pos: 21.5,14.5
+      parent: 2
 - proto: PlushieAtmosian
   entities:
   - uid: 3246
@@ -33813,11 +33860,6 @@ entities:
     components:
     - type: Transform
       pos: -37.5,1.5
-      parent: 2
-  - uid: 3284
-    components:
-    - type: Transform
-      pos: 16.5,10.5
       parent: 2
   - uid: 3285
     components:
@@ -38866,24 +38908,519 @@ entities:
     - type: Transform
       pos: 7.5,15.5
       parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
   - uid: 4061
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 12.5,16.5
       parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
   - uid: 4062
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 19.5,10.5
       parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
   - uid: 4063
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 19.5,15.5
       parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6571
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 32.5,14.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6572
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 28.5,9.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6573
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 25.5,18.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6574
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 12.5,18.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6575
+    components:
+    - type: Transform
+      pos: 11.5,20.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6590
+    components:
+    - type: Transform
+      pos: 25.5,11.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6591
+    components:
+    - type: Transform
+      pos: 25.5,6.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+- proto: SurveillanceCameraEngineering
+  entities:
+  - uid: 6600
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -40.5,12.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6601
+    components:
+    - type: Transform
+      pos: -31.5,17.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6602
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -34.5,14.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6603
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -28.5,18.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6604
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -22.5,18.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6605
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -29.5,9.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+- proto: SurveillanceCameraGeneral
+  entities:
+  - uid: 6564
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 18.5,4.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6565
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 32.5,5.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6566
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 27.5,-4.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6569
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 47.5,6.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6570
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 57.5,3.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6576
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 21.5,26.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6577
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 11.5,27.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6578
+    components:
+    - type: Transform
+      pos: -6.5,26.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6579
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 0.5,30.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6580
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -23.5,28.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6581
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -15.5,25.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6582
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -31.5,28.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6584
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -11.5,14.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6587
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 29.5,27.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6588
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 38.5,26.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6592
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 53.5,23.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6593
+    components:
+    - type: Transform
+      pos: 57.5,24.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6594
+    components:
+    - type: Transform
+      pos: 7.5,1.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6595
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -1.5,-6.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6596
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -6.5,6.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6597
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -22.5,4.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6598
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -34.5,4.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6599
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -30.5,-5.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6606
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -45.5,5.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+- proto: SurveillanceCameraMedical
+  entities:
+  - uid: 6607
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -48.5,8.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6608
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -61.5,3.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6610
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -58.5,17.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6611
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -56.5,17.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6612
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -47.5,13.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6613
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -44.5,18.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6614
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -48.5,24.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6615
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -49.5,21.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6616
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -61.5,24.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6617
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -54.5,28.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6618
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -43.5,8.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
 - proto: SurveillanceCameraRouterCommand
   entities:
   - uid: 4064
@@ -38926,12 +39463,91 @@ entities:
     - type: Transform
       pos: 43.5,15.5
       parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
   - uid: 4070
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -61.5,8.5
       parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6609
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -59.5,9.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+- proto: SurveillanceCameraService
+  entities:
+  - uid: 6567
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 38.5,11.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6568
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 45.5,10.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6583
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -5.5,22.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6585
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -16.5,10.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6586
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -15.5,16.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6589
+    components:
+    - type: Transform
+      pos: 28.5,16.5
+      parent: 2
+    - type: Physics
+      canCollide: False
+    - type: Fixtures
+      fixtures: {}
 - proto: Table
   entities:
   - uid: 4075

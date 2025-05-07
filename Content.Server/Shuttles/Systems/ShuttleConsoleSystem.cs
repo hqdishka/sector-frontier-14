@@ -25,6 +25,7 @@ using Content.Shared.Access.Systems; // Frontier
 using Content.Shared.Construction.Components; // Frontier
 using Content.Server.Radio.EntitySystems;
 using Content.Shared.Verbs;
+using Content.Shared._NF.Shipyard.Components;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -63,7 +64,7 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         SubscribeLocalEvent<ShuttleConsoleComponent, PowerChangedEvent>(OnConsolePowerChange);
         SubscribeLocalEvent<ShuttleConsoleComponent, AnchorStateChangedEvent>(OnConsoleAnchorChange);
         SubscribeLocalEvent<ShuttleConsoleComponent, ActivatableUIOpenAttemptEvent>(OnConsoleUIOpenAttempt);
-        SubscribeLocalEvent<ShuttleConsoleComponent, GetVerbsEvent<AlternativeVerb>>(AddPanicButtonVerb);
+        SubscribeLocalEvent<ShuttleConsoleComponent, GetVerbsEvent<AlternativeVerb>>(OnConsoleGetVerbs); //Lua
         Subs.BuiEvents<ShuttleConsoleComponent>(ShuttleConsoleUiKey.Key, subs =>
         {
             subs.Event<ShuttleConsoleFTLBeaconMessage>(OnBeaconFTLMessage);
@@ -91,6 +92,12 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         InitializeFTL();
 
         InitializeNFDrone(); // Frontier: add our drone subscriptions
+    }
+
+    private void OnConsoleGetVerbs(EntityUid uid, ShuttleConsoleComponent comp, GetVerbsEvent<AlternativeVerb> args)
+    {
+        AddPanicButtonVerb(uid, comp, args);
+        AddPreventRemoverVerb(uid, comp, args);
     }
 
     private void OnFtlDestStartup(EntityUid uid, FTLDestinationComponent component, ComponentStartup args)
@@ -626,5 +633,45 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
 
         // Show confirmation popup
         _popup.PopupEntity(Loc.GetString("shuttle-console-panic-sent"), uid, user);
+    }
+
+    private void AddPreventRemoverVerb(EntityUid console, ShuttleConsoleComponent comp, GetVerbsEvent<AlternativeVerb> args)
+    {
+        if (!args.CanAccess || !args.CanInteract)
+            return;
+
+        if (!TryComp<TransformComponent>(console, out var xform) || xform.GridUid == null)
+            return;
+
+        var grid = xform.GridUid.Value;
+        var towComp = EnsureComp<PreventDeleteComponent>(grid);
+
+        var verb = new AlternativeVerb()
+        {
+            Text = towComp.Remover
+                ? Loc.GetString("shuttle-console-towing-allowed")
+                : Loc.GetString("shuttle-console-towing-prohibited"),
+            Act = () => TogglePreventRemover(console, args.User),
+            Priority = 5
+        };
+        args.Verbs.Add(verb);
+    }
+
+    private void TogglePreventRemover(EntityUid console, EntityUid user)
+    {
+        if (!TryComp<TransformComponent>(console, out var xform) || xform.GridUid == null)
+            return;
+
+        var grid = xform.GridUid.Value;
+        var comp = EnsureComp<PreventDeleteComponent>(grid);
+
+        comp.Remover = !comp.Remover;
+        Dirty(grid, comp);
+
+        var popup = comp.Remover
+            ? Loc.GetString("shuttle-console-towing-now-prohibited")
+            : Loc.GetString("shuttle-console-towing-now-allowed");
+
+        _popup.PopupEntity(popup, console, user);
     }
 }

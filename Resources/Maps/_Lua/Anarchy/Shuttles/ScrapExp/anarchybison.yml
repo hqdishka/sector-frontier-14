@@ -38,13 +38,6 @@ entities:
     - type: Transform
       pos: -0.46876526,-1.84375
       parent: invalid
-    - type: AutoDelete
-      distanceToCheck: 40
-      delayToDelete: 2400
-      delayToCheck: 60
-      isHumanoidNear: True
-    - type: IFF
-      color: '#FFFFFFFF'
     - type: MapGrid
       chunks:
         0,0:

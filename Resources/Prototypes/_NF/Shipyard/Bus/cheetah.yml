@@ -13,6 +13,11 @@
   id: Cheetah
   parent: BaseVesselBus
   shuttlePath: /Maps/_NF/Shuttles/Bus/cheetah.yml
+  addComponents:
+
+    - type: IFF
+      color: "#ffffff"
+    - type: NanotrasenFtl
 
 - type: gameMap
   id: Cheetah

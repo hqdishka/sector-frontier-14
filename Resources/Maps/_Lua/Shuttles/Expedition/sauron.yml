@@ -855,13 +855,6 @@ entities:
     - type: NavMap
     - type: BecomesStation
       id: Sauron
-    - type: AutoDelete
-      distanceToCheck: 40
-      delayToDelete: 2400
-      delayToCheck: 60
-      isHumanoidNear: True
-    - type: NtMercFtl
-    - type: NanotrasenFtl
 - proto: AirAlarm
   entities:
   - uid: 2

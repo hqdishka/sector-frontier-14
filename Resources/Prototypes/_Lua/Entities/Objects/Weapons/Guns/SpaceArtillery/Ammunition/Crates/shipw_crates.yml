@@ -232,3 +232,14 @@
     contents:
       - id: MachineFTLDrive600Flatpack
         amount: 1
+
+- type: entity
+  id: CratePlayerStationAiVesselFlatpack
+  parent: CrateShipWeaponBase
+  name: ящик с упакованным ИИ шаттла
+  description: Содержит 1 упакованный ИИ шаттла.
+  components:
+  - type: StorageFill
+    contents:
+      - id: PlayerStationAiVesselFlatpack
+        amount: 1

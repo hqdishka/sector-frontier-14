@@ -18,6 +18,11 @@
   - Civilian
   engine:
   - Uranium
+  addComponents:
+
+    - type: IFF
+      color: "#ffffff"
+    - type: NanotrasenFtl
 
 - type: gameMap
   id: Crossroads

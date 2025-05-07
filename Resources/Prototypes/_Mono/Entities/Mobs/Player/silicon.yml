@@ -187,7 +187,7 @@
 - type: entity
   id: PlayerStationAiRedacted
   parent: PlayerStationAiEmpty
-  suffix: Job spawn, Remnant
+  suffix: Job spawn, Враждебный шаттл
   components:
   - type: ContainerComp
     proto: AiHeldRedacted
@@ -275,7 +275,7 @@
 - type: entity
   id: PlayerStationAiVessel
   parent: PlayerStationAiEmpty
-  suffix: Job spawn, Vessel
+  suffix: Job spawn, Шаттл
   components:
   - type: ContainerComp
     proto: AiHeldVessel
@@ -374,7 +374,7 @@
 - type: entity
   id: PlayerStationAiTSFMC
   parent: PlayerStationAiEmpty
-  suffix: Job spawn, TSFMC
+  suffix: Job spawn, ДСФБ
   components:
   - type: ContainerComp
     proto: AiHeldTSFMC
@@ -475,7 +475,7 @@
 - type: entity
   id: PlayerStationAiRogue
   parent: PlayerStationAiEmpty
-  suffix: Job spawn, Rogue
+  suffix: Job spawn, Изгой, Шаттл
   components:
   - type: ContainerComp
     proto: AiHeldRogue

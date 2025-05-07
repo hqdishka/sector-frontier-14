@@ -22,6 +22,11 @@
   - Atmospherics
   engine:
   - Bananium
+  addComponents:
+
+    - type: IFF
+      color: "#ffffff"
+    - type: NanotrasenFtl
 
 - type: gameMap
   id: Retort

@@ -106,6 +106,12 @@ public sealed class ShipOwnershipSystem : EntitySystem
                 var mobQuery = GetEntityQuery<MobStateComponent>();
                 var xformQuery = GetEntityQuery<TransformComponent>();
 
+                if (EntityManager.TryGetComponent<PreventDeleteComponent>(uid, out var rmComp) && rmComp.Remover)
+                {
+                    Logger.DebugS("shipOwnership", $"Пропущено удаление шаттла {ToPrettyString(uid)} - включен режим запрета удаления");
+                    continue;
+                }
+
                 if (HasLivingBeingsOnShip(uid, mobQuery, xformQuery))
                 {
                     // Skip deletion if living beings are on the ship
