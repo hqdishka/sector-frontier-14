@@ -80,6 +80,8 @@
       collection: Belch # Frontier
     Squish: # Frontier
       collection: HarpySquishes # Frontier
+    MonkeyScreeches: # Frontier
+      collection: MonkeyScreeches # Frontier
 
 # - type: emoteSounds
 #   id: MaleVulpkanin
