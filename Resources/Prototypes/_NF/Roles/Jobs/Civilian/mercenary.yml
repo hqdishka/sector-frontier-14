@@ -22,25 +22,6 @@
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
 
-# Interview variant
-- type: job
-  id: MercenaryInterview
-  name: job-name-mercenary-interview
-  description: job-mercenary-pilot
-  playTimeTracker: JobMercenaryInterview
-  requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 108000
-  setPreference: false
-  startingGear: MercenaryHologramGear
-  icon: "JobIconMercenary"
-  supervisors: job-supervisors-hire
-  access:
-  - Mercenary
-  accessGroups:
-  - GeneralAccess
-  jobEntity: InterviewHologramMercenary
-
 - type: startingGear
   id: MercenaryGear
 #Lua add uplink for limited mercenary
@@ -66,6 +47,7 @@
   - GeneralAccess
   jobEntity: InterviewHologramMercenary
 
+- type: startingGear
   id: MercenaryHologramGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitMercenary
