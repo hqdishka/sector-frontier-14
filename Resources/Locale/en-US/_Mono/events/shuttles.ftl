@@ -4,9 +4,6 @@ station-event-ai-shuttle-detected = Unidentified dilapidated combat vessel appro
 
 # redacted AI ship borg stuff
 
-ghost-role-information-redacted-core = Automated Defense Ship AI Core
-ghost-role-information-redacted-core-description = The dilapidated silicon intelligence of a long unused automated defense vessel.
-
 ghost-role-information-redacted-borg = Automated Defense Ship Manipulator Module
 ghost-role-information-redacted-borg-description = The dilapidated silicon intelligence of a long unused automated defense vessel.
 
