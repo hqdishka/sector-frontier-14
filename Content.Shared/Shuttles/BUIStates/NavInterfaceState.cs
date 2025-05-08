@@ -57,7 +57,7 @@ public sealed class NavInterfaceState
         Angle? angle,
         Dictionary<NetEntity, List<DockingPortState>> docks,
         InertiaDampeningMode dampeningMode, // Frontier
-        ServiceFlags serviceFlags) // Frontier
+        ServiceFlags serviceFlags, // Frontier
         Dictionary<string, string>? networkPortNames = null)
     {
         MaxRange = maxRange;

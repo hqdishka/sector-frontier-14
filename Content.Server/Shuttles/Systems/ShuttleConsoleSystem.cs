@@ -541,7 +541,7 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
             angle,
             docks,
             _shuttle.NfGetInertiaDampeningMode(entity), // Frontier
-            _shuttle.NfGetServiceFlags(entity)); // Frontier
+            _shuttle.NfGetServiceFlags(entity), // Frontier
         portNames);
     }
 
