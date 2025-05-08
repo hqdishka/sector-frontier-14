@@ -13,8 +13,17 @@
   canBeAntag: false
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Science
-      time: 60000
+      department: Security
+      time: 32000
+    - !type:DepartmentTimeRequirement
+      department: Antag
+      time: 34000
+    - !type:DepartmentTimeRequirement
+      department: Civilian
+      time: 73000
+    - !type:DepartmentTimeRequirement
+      department: Frontier
+      time: 83000
     - !type:OverallPlaytimeRequirement
       time: 150000
   access:

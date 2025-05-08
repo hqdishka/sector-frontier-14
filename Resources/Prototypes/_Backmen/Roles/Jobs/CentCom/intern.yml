@@ -14,11 +14,10 @@
   whitelisted: true
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Engineering
-      time: 108000
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 108000
+      department: Security
+      time: 64800 # 18 hours
+    - !type:OverallPlaytimeRequirement
+      time: 121600 # 6 hours
     - !type:DepartmentTimeRequirement
       department: Civilian
       time: 108000

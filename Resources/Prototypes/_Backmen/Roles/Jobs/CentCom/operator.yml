@@ -15,13 +15,13 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobCentralCommandAssistant
-      time: 7200
+      time: 17200
     - !type:DepartmentTimeRequirement
       department: CentCom
-      time: 14400
+      time: 24400
     - !type:DepartmentTimeRequirement
-      department: Silicon
-      time: 6000
+      department: Frontier
+      time: 74400
   access:
     - CCCargo
     - CCSecurity

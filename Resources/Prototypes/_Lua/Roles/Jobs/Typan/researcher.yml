@@ -12,9 +12,29 @@
   supervisors: job-supervisors-typan-telecommunications-officer
   canBeAntag: false
   requirements:
+    - !type:RoleTimeRequirement
+      role: JobOutpostTypanAtmosTech
+      time: 29600
+    - !type:RoleTimeRequirement
+      role: JobOutpostTypanMedic
+      time: 25600
+    - !type:RoleTimeRequirement
+      role: JobOutpostTypanScience
+      time: 32500
+    - !type:RoleTimeRequirement
+      role: JobOutpostTypanBotanist
+      time: 33600
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 39000
+    - !type:DepartmentTimeRequirement
+      department: Antag
+      time: 36000
     - !type:DepartmentTimeRequirement
       department: Civilian
-      time: 4000
+      time: 43000
+    - !type:OverallPlaytimeRequirement
+      time: 360000
   access:
   - SyndicateAgent
   - NuclearOperative

@@ -13,7 +13,7 @@
   joinNotifyCrew: true
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Cargo
+      department: Civilian
       time: 126000
     - !type:RoleTimeRequirement
       role: JobCentralCommandAssistant

@@ -22,6 +22,9 @@
     - !type:DepartmentTimeRequirement
       department: CentCom
       time: 31600
+    - !type:DepartmentTimeRequirement
+      department: Frontier
+      time: 156600
   accessGroups:
     - AllAccess
     - CentCom

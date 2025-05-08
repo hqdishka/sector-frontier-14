@@ -7,8 +7,17 @@
     - !type:OverallPlaytimeRequirement
       time: 172800 # 48 hours
     - !type:RoleTimeRequirement
+      role: JobSecurityCadet
+      time: 29600 # 6 hours
+    - !type:RoleTimeRequirement
+      role: JobSecurityOfficer
+      time: 29600 # 6 hours
+    - !type:RoleTimeRequirement
       role: JobSeniorOfficer
-      time: 10800 # 3 hours
+      time: 29800 # 3 hours
+    - !type:RoleTimeRequirement
+      role: JobWarden
+      time: 21800 # 3 hours
   whitelisted: false
   startingGear: NFPirateCaptainGear
   alwaysUseSpawner: true

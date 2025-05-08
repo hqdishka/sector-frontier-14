@@ -62,14 +62,14 @@
       rules: ghost-role-information-nonantagonist-rules
       requirements:
         - !type:DepartmentTimeRequirement
-          department: Medical
+          department: Civilian
           time: 36000 # 10 hours
         - !type:DepartmentTimeRequirement
           department: Security
           time: 72000 # 20 hours
-        - !type:DepartmentTimeRequirement
-          department: Command
-          time: 36000 # 10 hours
+        - !type:RoleTimeRequirement
+          role: JobHeadOfSecurity
+          time: 21200 # 12 hours
       raffle:
         settings: default
       #job: ERTLeaderGamma
@@ -140,8 +140,8 @@
       rules: ghost-role-information-nonantagonist-rules
       requirements:
         - !type:DepartmentTimeRequirement
-          department: Medical
-          time: 14400 # 4 hours
+          department: Civilian
+          time: 36000 # 10 hours
         - !type:DepartmentTimeRequirement
           department: Security
           time: 72000 # 20 hours
@@ -213,14 +213,14 @@
       rules: ghost-role-information-nonantagonist-rules
       requirements:
         - !type:DepartmentTimeRequirement
-          department: Medical
+          department: Civilian
           time: 36000 # 10 hours
         - !type:DepartmentTimeRequirement
           department: Security
           time: 72000 # 20 hours
-        - !type:DepartmentTimeRequirement
-          department: Command
-          time: 36000 # 10 hours
+        - !type:RoleTimeRequirement
+          role: JobHeadOfSecurity
+          time: 21200 # 12 hours
       raffle:
         settings: default
       #job: ERTLeaderGamma
@@ -291,8 +291,8 @@
       rules: ghost-role-information-nonantagonist-rules
       requirements:
         - !type:DepartmentTimeRequirement
-          department: Medical
-          time: 14400 # 4 hours
+          department: Civilian
+          time: 36000 # 10 hours
         - !type:DepartmentTimeRequirement
           department: Security
           time: 72000 # 20 hours

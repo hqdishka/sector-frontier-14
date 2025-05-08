@@ -23,7 +23,7 @@
       role: JobHeadOfSecurity
       time: 18000
     - !type:RoleTimeRequirement
-      role: JobCentralCommandSecOfficer
+      role: JobBrigmedic
       time: 18000
   access:
     - CentralCommand

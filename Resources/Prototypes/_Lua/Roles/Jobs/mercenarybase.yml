@@ -8,11 +8,20 @@
   description: job-description-mercenary
   playTimeTracker: JobMercenaryBase
   requirements:
+    - !type:RoleTimeRequirement
+      role: JobSeniorOfficer
+      time: 21600
+    - !type:RoleTimeRequirement
+      role: JobBrigmedic
+      time: 21600
+    - !type:RoleTimeRequirement
+      role: JobSecurityCadet
+      time: 21600
     - !type:OverallPlaytimeRequirement
-      time: 10800
+      time: 22800
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 21600 #60 hrs
+      time: 39600 #60 hrs
   startingGear: MercenaryGear
   canBeAntag: true
   icon: "JobIconMercenary" 

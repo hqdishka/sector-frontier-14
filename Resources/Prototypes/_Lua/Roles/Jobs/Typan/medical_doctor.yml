@@ -13,11 +13,19 @@
   canBeAntag: false
   requirements:
     - !type:RoleTimeRequirement
-      role: JobChemist
-      time: 6000
+      role: JobOutpostTypanBotanist
+      time: 20600
     - !type:DepartmentTimeRequirement
-      department: Medical
+      department: Antag
+      time: 31000
+    - !type:DepartmentTimeRequirement
+      department: Civilian
       time: 18000
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 72000 # 20 hours
+    - !type:OverallPlaytimeRequirement
+      time: 360000
   access:
   - SyndicateAgent
   - NuclearOperative

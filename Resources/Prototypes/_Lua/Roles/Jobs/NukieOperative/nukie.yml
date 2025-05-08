@@ -57,10 +57,10 @@
       rules: ghost-role-information-rules-default-team-antagonist
       requirements:
       - !type:DepartmentTimeRequirement
-        department: Medical
+        department: Civilian
         time: 36000 # 10 hours
       - !type:DepartmentTimeRequirement
-        department: Security
+        department: Antag
         time: 72000 # 20 hours
       raffle:
         settings: default
@@ -101,14 +101,14 @@
       rules: ghost-role-information-rules-default-team-antagonist
       requirements:
       - !type:DepartmentTimeRequirement
-        department: Medical
-        time: 108000 # 30 hours
+        department: Civilian
+        time: 36000 # 10 hours
       - !type:DepartmentTimeRequirement
-        department: Security
+        department: Antag
         time: 72000 # 20 hours
-      - !type:DepartmentTimeRequirement
-        department: Command
-        time: 72000 # 20 hours
+      - !type:RoleTimeRequirement
+        role: JobPirateCaptain
+        time: 31200 # 12 hours
       raffle:
         settings: default
     - type: NukeOperative
@@ -148,13 +148,10 @@
       rules: ghost-role-information-rules-default-team-antagonist
       requirements:
       - !type:DepartmentTimeRequirement
-        department: Medical
-        time: 144000 # 40 hours
-      - !type:RoleTimeRequirement
-        role: JobChemist
-        time: 72000 # 20 hours
+        department: Civilian
+        time: 36000 # 10 hours
       - !type:DepartmentTimeRequirement
-        department: Security
+        department: Antag
         time: 72000 # 20 hours
       raffle:
         settings: default
@@ -195,10 +192,10 @@
       rules: ghost-role-information-loneop-rules
       requirements:
       - !type:DepartmentTimeRequirement
-        department: Medical
+        department: Civilian
         time: 36000 # 10 hours
       - !type:DepartmentTimeRequirement
-        department: Security
+        department: Antag
         time: 72000 # 20 hours
       raffle:
         settings: default

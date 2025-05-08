@@ -4,7 +4,17 @@
   description: ghost-role-information-redacted-borg-description
   rules: ghost-role-information-silicon-rules
   entityPrototype: PlayerBorgRedacted
-  whitelisted: true
+  whitelisted: false
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Civilian
+      time: 72000 # 20 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 72000 # 20 hours
+    - !type:DepartmentTimeRequirement
+      department: Frontier
+      time: 36000 # 10 hours
 
 - type: ghostRole
   id: RemnantAICore
@@ -12,6 +22,16 @@
   description: ghost-role-information-redacted-core-description
   rules: ghost-role-information-silicon-rules
   entityPrototype: StationAiBrainRedacted
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Civilian
+      time: 72000 # 20 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 72000 # 20 hours
+    - !type:DepartmentTimeRequirement
+      department: Frontier
+      time: 36000 # 10 hours
 
 - type: ghostRole
   id: VesselAICore
@@ -19,7 +39,17 @@
   description: ghost-role-information-vessel-core-description
   rules: ghost-role-information-silicon-rules
   entityPrototype: StationAiBrainVessel
-  whitelisted: true
+  whitelisted: false
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Civilian
+      time: 72000 # 20 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 72000 # 20 hours
+    - !type:DepartmentTimeRequirement
+      department: Frontier
+      time: 36000 # 10 hours
 
 - type: ghostRole
   id: TSFMCAICore
@@ -27,7 +57,17 @@
   description: ghost-role-information-tsfmc-core-description
   rules: ghost-role-information-silicon-rules
   entityPrototype: StationAiBrainTSFMC
-  whitelisted: true
+  whitelisted: false
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Civilian
+      time: 72000 # 20 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 72000 # 20 hours
+    - !type:DepartmentTimeRequirement
+      department: Frontier
+      time: 36000 # 10 hours
 
 - type: ghostRole
   id: RogueAICore
@@ -35,4 +75,14 @@
   description: ghost-role-information-rogue-core-description
   rules: ghost-role-information-silicon-rules
   entityPrototype: StationAiBrainRogue
-  whitelisted: true
+  whitelisted: false
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Civilian
+      time: 72000 # 20 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 72000 # 20 hours
+    - !type:DepartmentTimeRequirement
+      department: Frontier
+      time: 36000 # 10 hours

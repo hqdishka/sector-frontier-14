@@ -8,7 +8,13 @@
       time: 86400 # 24 hours
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 10800 # 3 hrs
+      time: 29800 # 3 hrs
+    - !type:RoleTimeRequirement
+      role: JobSecurityCadet
+      time: 29600 # 6 hours
+    - !type:RoleTimeRequirement
+      role: JobSecurityOfficer
+      time: 23600 # 6 hours
   startingGear: NFPirateGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true

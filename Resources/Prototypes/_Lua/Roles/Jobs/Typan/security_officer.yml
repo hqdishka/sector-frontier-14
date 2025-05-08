@@ -13,13 +13,13 @@
   canBeAntag: false
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Science
-      time: 60000
+      department: Antag
+      time: 30000
     - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 60000
+      department: Civilian
+      time: 95000
     - !type:DepartmentTimeRequirement
-      department: Command
+      department: Frontier
       time: 108000
     - !type:DepartmentTimeRequirement
       department: Security

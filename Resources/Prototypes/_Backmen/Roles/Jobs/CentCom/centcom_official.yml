@@ -13,9 +13,12 @@
   joinNotifyCrew: true
   whitelisted: true
   requirements:
+    - !type:RoleTimeRequirement
+      role: JobCentralCommandAssistant
+      time: 27200
     - !type:DepartmentTimeRequirement
       department: CentCom
-      time: 1
+      time: 24400
   access:
     - CCCargo
     - CCSecurity
