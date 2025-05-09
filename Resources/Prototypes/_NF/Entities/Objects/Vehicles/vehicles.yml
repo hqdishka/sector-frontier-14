@@ -550,7 +550,7 @@
 - type: entity
   parent:
   - VehicleHoverbikeMailcarrier
-  - BaseC2ContrabandUnredeemable
+  #- BaseC2ContrabandUnredeemable
   id: NFVehicleHoverbikeNfsd
   name: NFSD hoverbike
   description: An NFSD issued turbine with bike handles. Very safe.
@@ -644,7 +644,7 @@
 - type: entity
   parent:
   - VehicleHoverbikeMailcarrier
-  - BaseC3PirateContraband
+  #- BaseC3PirateContraband
   id: VehicleHoverbikePirate
   name: pirate hoverbike
   description: Yarr! Dis be me sovereign space shuttle. Now, whaur me rum?
@@ -724,7 +724,7 @@
 - type: entity
   parent:
   - VehicleHoverbikeMailcarrier
-  - BaseC3SyndicateContraband
+  #- BaseC3SyndicateContraband
   id: VehicleHoverbikeSyndicate
   name: syndicate hoverbike
   description: This thing screams style. And war crimes.

@@ -853,8 +853,6 @@ entities:
     - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: NavMap
-    - type: BecomesStation
-      id: Sauron
 - proto: AirAlarm
   entities:
   - uid: 2

@@ -14,27 +14,27 @@
   - type: StaticPrice
     price: 1000
 
-#Из упаковки в ящик
-- type: entity
-  parent: CrateEngineering
-  id: CrateADTSMESIndustrialEmpty
-  name: ящик с упакованным продвинутым смэсом
-  description: Содержит упакованный продвинутый смэс.
-  components:
-  - type: StorageFill
-    contents:
-      - id: ADTSMESIndustrialEmptyFlatpack
+# #Из упаковки в ящик
+# - type: entity
+#   parent: CrateEngineering
+#   id: CrateADTSMESIndustrialEmpty
+#   name: ящик с упакованным продвинутым смэсом
+#   description: Содержит упакованный продвинутый смэс.
+#   components:
+#   - type: StorageFill
+#     contents:
+#       - id: ADTSMESIndustrialEmptyFlatpack
   
-#Из ящика в карго консоль
-- type: cargoProduct
-  id: ADTSMESIndustrialEmpty
-  icon:
-    sprite: ADT/Structures/Power/smes.rsi
-    state: smes
-  product: CrateADTSMESIndustrialEmpty
-  cost: 30000
-  category: cargoproduct-category-name-engineering
-  group: market
+# #Из ящика в карго консоль
+# - type: cargoProduct
+#   id: ADTSMESIndustrialEmpty
+#   icon:
+#     sprite: ADT/Structures/Power/smes.rsi
+#     state: smes
+#   product: CrateADTSMESIndustrialEmpty
+#   cost: 30000
+#   category: cargoproduct-category-name-engineering
+#   group: market
 
 - type: entity
   parent: BaseNFFlatpack

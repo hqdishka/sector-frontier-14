@@ -749,6 +749,33 @@ public sealed partial class ShuttleSystem
             _transform.SetCoordinates(uid, xform, target, rotation: comp.TargetAngle);
         }
 
+        // Lua это временно
+        if (TryComp<PhysicsComponent>(uid, out var mainBody))
+        {
+            _physics.SetLinearVelocity(uid, Vector2.Zero, body: mainBody);
+            _physics.SetAngularVelocity(uid, 0f, body: mainBody);
+
+            if (xform.MapUid != null)
+            {
+                var mapUid = xform.MapUid.Value;
+                if (HasComp<SalvageExpeditionComponent>(mapUid) ||
+                    HasComp<MapGridComponent>(mapUid))
+                {
+                    Disable(uid, component: mainBody);
+                }
+                else
+                {
+                    Enable(uid, component: mainBody, shuttle: entity.Comp2);
+                }
+            }
+            else
+            {
+                Enable(uid, component: mainBody, shuttle: entity.Comp2);
+            }
+        }
+
+        // Lua это временно
+
         // Now move all docked shuttles to maintain their relative positions
         foreach (var dockedUid in dockedShuttles)
         {
@@ -784,16 +811,27 @@ public sealed partial class ShuttleSystem
                 var dockedShuttle = Comp<ShuttleComponent>(dockedUid);
                 _physics.SetLinearDamping(dockedUid, dockedBody, dockedShuttle.LinearDamping);
                 _physics.SetAngularDamping(dockedUid, dockedBody, dockedShuttle.AngularDamping);
-                if (HasComp<MapGridComponent>(xform.MapUid))
+                // Lua это временно
+                if (xform.MapUid != null)
                 {
-                    Disable(dockedUid, component: dockedBody);
+                    var mapUid = xform.MapUid.Value;
+                    if (HasComp<SalvageExpeditionComponent>(mapUid) ||
+                        HasComp<MapGridComponent>(mapUid))
+                    {
+                        Disable(dockedUid, component: dockedBody);
+                    }
+                    else
+                    {
+                        Enable(dockedUid, component: dockedBody, shuttle: dockedShuttle);
+                    }
                 }
                 else
                 {
                     Enable(dockedUid, component: dockedBody, shuttle: dockedShuttle);
                 }
             }
-            
+            // Lua это временно
+
             // Put linked shuttles in cooldown state instead of immediately removing the component
             if (FTLCooldown > 0f && TryComp<FTLComponent>(dockedUid, out var dockedFtl))
             {

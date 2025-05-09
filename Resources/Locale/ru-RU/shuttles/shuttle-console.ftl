@@ -8,7 +8,7 @@ shuttle-console-wrong-id = На ID-карте нет прав на шаттл.
 shuttle-console-wrong-deed = На ID-карте нет действительного документа на этот шаттл.
 shuttle-console-cannot-lock = У вас нет разрешения на блокировку этой консоли.
 shuttle-console-no-ship-id = Эта консоль не назначена ни на один корабль.
-shuttle-console-emergency-locked = Эта консоль находится в режиме экстренной блокировки. Разблокировать может только ДСФБ.
+shuttle-console-emergency-locked = Эта консоль находится в режиме экстренной блокировки. Разблокировать может только сотрудник ДСФБ.
 shuttle-console-emergency-unlocked = Экстренная блокировка отменена. Консоль разблокирована.
 
 ## Shuttle Console Lock Verbs
@@ -16,8 +16,8 @@ shuttle-console-verb-unlock = Разблокировать консоль
 shuttle-console-verb-lock = Заблокировать консоль
 
 ## Shuttle Console Panic Button
-shuttle-console-panic-button = Аварийная трансляция
+shuttle-console-panic-button = Аварийный сигнал
 shuttle-console-panic-no-grid = Не удалось идентифицировать корабль.
-shuttle-console-panic-failed = Не удалось отправить аварийную трансляцию.
+shuttle-console-panic-failed = Не удалось отправить аварийный сигнал.
 shuttle-console-panic-message = АВАРИЙНАЯ СИТУАЦИЯ: {$gridName} передаёт SOS ({$coordinates}).
-shuttle-console-panic-sent = Аварийная трансляция отправлена. Консоль заблокирована до получения ответа.
+shuttle-console-panic-sent = Аварийный сигнал отправлен. Консоль заблокирована, ожидайте сотрудника ДСФБ для разблокировки консоли.

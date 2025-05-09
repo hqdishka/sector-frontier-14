@@ -76,7 +76,7 @@ public sealed class GridCleanupSystem : EntitySystem
         // Skip if this is a planet expedition grid
         if (HasComp<SalvageExpeditionComponent>(gridUid))
         {
-            Logger.DebugS("salvage", $"CheckGrid: Skipping grid {gridUid} with SalvageExpeditionComponent");
+            //Logger.DebugS("salvage", $"CheckGrid: Skipping grid {gridUid} with SalvageExpeditionComponent");
             return;
         }
 
@@ -87,7 +87,7 @@ public sealed class GridCleanupSystem : EntitySystem
 
         if (HasComp<SalvageExpeditionComponent>(mapUid))
         {
-            Logger.DebugS("salvage", $"CheckGrid: Skipping grid {gridUid} on expedition map {mapUid}");
+            //Logger.DebugS("salvage", $"CheckGrid: Skipping grid {gridUid} on expedition map {mapUid}");
             return;
         }
 

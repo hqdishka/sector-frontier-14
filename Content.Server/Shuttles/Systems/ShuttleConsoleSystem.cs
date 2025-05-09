@@ -26,6 +26,7 @@ using Content.Shared.Construction.Components; // Frontier
 using Content.Server.Radio.EntitySystems;
 using Content.Shared.Verbs;
 using Content.Shared._NF.Shipyard.Components;
+using Robust.Shared.Timing;// Lua add timer panic button
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -47,6 +48,8 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
 
     private EntityQuery<MetaDataComponent> _metaQuery;
     private EntityQuery<TransformComponent> _xformQuery;
+    private const int PanicConfirmTimeout = 10000;// Lua add timer panic button
+    private readonly HashSet<EntityUid> _pendingPanicConfirm = new();// Lua add timer panic button
 
     private readonly HashSet<Entity<ShuttleConsoleComponent>> _consoles = new();
 
@@ -609,6 +612,19 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
     /// </summary>
     private void SendPanicSignal(EntityUid uid, EntityUid user, ShuttleConsoleComponent component)
     {
+        // Lua add timer panic button
+        if (!_pendingPanicConfirm.Add(uid))
+        {
+            _pendingPanicConfirm.Remove(uid);
+        }
+        else
+        {
+            _popup.PopupEntity(Loc.GetString("shuttle-console-panic-confirm"), uid, user);
+            Timer.Spawn(PanicConfirmTimeout, () => _pendingPanicConfirm.Remove(uid));
+            return;
+        }
+        // Lua add timer panic button
+
         // Get the grid entity
         var transform = Transform(uid);
         if (transform.GridUid is not {} gridUid)
