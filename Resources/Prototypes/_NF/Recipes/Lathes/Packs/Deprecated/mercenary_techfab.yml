@@ -124,6 +124,11 @@
   - MagazinePistolRubber
   - MagazineLightRifleRubber
   - MagazineShotgunBeanbag
+  - MagazineDMR # mono
+  - MagazineDMREmpty # mono
+  - MagazineBoxDMR # mono
+  ## Cyborg Modules
+  - BorgModuleMercenary # mono
 
 - type: latheRecipePack
   id: NFMercenaryTechfabDeprecated

@@ -321,3 +321,8 @@ uplink-emag-pass-desc = A card used to hack devices. Usable three times.
 
 uplink-syndicate-segway-name = Syndicate Segway
 uplink-syndicate-segway-desc = Move around in style without dirtying your blood red boots.
+
+uplink-security-cyborg-module-name = Security Cyborg Module
+uplink-security-cyborg-module-desc = A machete, an energy gun, and a stun baton, made specifically for borgs. Wait, don't Rogues have the same thing?
+
+#Mono End
