@@ -1,0 +1,8 @@
+- type: damageContainer
+  id: RaceDemon
+  supportedGroups:
+  - Brute
+  - Burn
+  - Toxin
+  - Airloss
+  - Genetic

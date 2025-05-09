@@ -5,16 +5,16 @@
   rules: ghost-role-information-silicon-rules
   entityPrototype: PlayerBorgRedacted
   whitelisted: false
-  requirements:
-    - !type:DepartmentTimeRequirement
-      department: Civilian
-      time: 72000 # 20 hours
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 72000 # 20 hours
-    - !type:DepartmentTimeRequirement
-      department: Frontier
-      time: 36000 # 10 hours
+  # requirements: oh wait change GhostRolePrototype
+  #   - !type:DepartmentTimeRequirement
+  #     department: Civilian
+  #     time: 72000 # 20 hours
+  #   - !type:DepartmentTimeRequirement
+  #     department: Security
+  #     time: 72000 # 20 hours
+  #   - !type:DepartmentTimeRequirement
+  #     department: Frontier
+  #     time: 36000 # 10 hours
 
 - type: ghostRole
   id: RemnantAICore
@@ -22,16 +22,16 @@
   description: ghost-role-information-redacted-core-description
   rules: ghost-role-information-silicon-rules
   entityPrototype: StationAiBrainRedacted
-  requirements:
-    - !type:DepartmentTimeRequirement
-      department: Civilian
-      time: 72000 # 20 hours
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 72000 # 20 hours
-    - !type:DepartmentTimeRequirement
-      department: Frontier
-      time: 36000 # 10 hours
+  # requirements:
+  #   - !type:DepartmentTimeRequirement
+  #     department: Civilian
+  #     time: 72000 # 20 hours
+  #   - !type:DepartmentTimeRequirement
+  #     department: Security
+  #     time: 72000 # 20 hours
+  #   - !type:DepartmentTimeRequirement
+  #     department: Frontier
+  #     time: 36000 # 10 hours
 
 - type: ghostRole
   id: VesselAICore
@@ -40,16 +40,16 @@
   rules: ghost-role-information-silicon-rules
   entityPrototype: StationAiBrainVessel
   whitelisted: false
-  requirements:
-    - !type:DepartmentTimeRequirement
-      department: Civilian
-      time: 72000 # 20 hours
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 72000 # 20 hours
-    - !type:DepartmentTimeRequirement
-      department: Frontier
-      time: 36000 # 10 hours
+  # requirements:
+  #   - !type:DepartmentTimeRequirement
+  #     department: Civilian
+  #     time: 72000 # 20 hours
+  #   - !type:DepartmentTimeRequirement
+  #     department: Security
+  #     time: 72000 # 20 hours
+  #   - !type:DepartmentTimeRequirement
+  #     department: Frontier
+  #     time: 36000 # 10 hours
 
 - type: ghostRole
   id: TSFMCAICore
@@ -58,16 +58,16 @@
   rules: ghost-role-information-silicon-rules
   entityPrototype: StationAiBrainTSFMC
   whitelisted: false
-  requirements:
-    - !type:DepartmentTimeRequirement
-      department: Civilian
-      time: 72000 # 20 hours
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 72000 # 20 hours
-    - !type:DepartmentTimeRequirement
-      department: Frontier
-      time: 36000 # 10 hours
+  # requirements:
+  #   - !type:DepartmentTimeRequirement
+  #     department: Civilian
+  #     time: 72000 # 20 hours
+  #   - !type:DepartmentTimeRequirement
+  #     department: Security
+  #     time: 72000 # 20 hours
+  #   - !type:DepartmentTimeRequirement
+  #     department: Frontier
+  #     time: 36000 # 10 hours
 
 - type: ghostRole
   id: RogueAICore
@@ -76,13 +76,13 @@
   rules: ghost-role-information-silicon-rules
   entityPrototype: StationAiBrainRogue
   whitelisted: false
-  requirements:
-    - !type:DepartmentTimeRequirement
-      department: Civilian
-      time: 72000 # 20 hours
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 72000 # 20 hours
-    - !type:DepartmentTimeRequirement
-      department: Frontier
-      time: 36000 # 10 hours
+  # requirements:
+  #   - !type:DepartmentTimeRequirement
+  #     department: Civilian
+  #     time: 72000 # 20 hours
+  #   - !type:DepartmentTimeRequirement
+  #     department: Security
+  #     time: 72000 # 20 hours
+  #   - !type:DepartmentTimeRequirement
+  #     department: Frontier
+  #     time: 36000 # 10 hours

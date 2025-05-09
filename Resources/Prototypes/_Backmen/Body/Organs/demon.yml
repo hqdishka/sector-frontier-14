@@ -1,0 +1,29 @@
+- type: entity
+  id: OrganDemonStomach
+  parent: BaseHumanOrgan
+  name: stomach-demon
+  description: "Gross. This is hard to stomach."
+  components:
+  - type: Sprite
+    state: stomach
+  - type: Item
+    size: Small
+    heldPrefix: stomach
+  - type: SolutionContainerManager
+    solutions:
+      stomach:
+        maxVol: 50
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 5
+  - type: Stomach
+  - type: Organ
+  - type: Metabolizer
+    # mm yummy
+    maxReagents: 3
+    metabolizerTypes: [Human]
+    groups:
+    - id: Food
+    - id: Drink

@@ -10,3 +10,8 @@
     Asphyxiation: -1.0
     Bloodloss: 0.0
     Cellular: 0.0
+
+- type: damageModifierSet
+  id: RaceDemon
+  coefficients:
+    Holy: 0.6
