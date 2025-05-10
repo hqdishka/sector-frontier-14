@@ -9,6 +9,8 @@
   - MARAUDERGuide
   - CHARONGuide
   - ASM302Guide
+  - CYREXAGuide
+  - DYMEREGuide
 
 - type: guideEntry
   id: L85Guide
@@ -38,4 +40,10 @@
   id: ASM302Guide
   name: guide-entry-asm302
   text: "/ServerInfo/_Mono/Guidebook/Specifications/ASM302.xml"
+  priority: 1
+
+- type: guideEntry 
+  id: DYMEREGuide
+  name: guide-entry-dymere
+  text: "/ServerInfo/_Mono/Guidebook/Specifications/DYMERE.xml"
   priority: 1
