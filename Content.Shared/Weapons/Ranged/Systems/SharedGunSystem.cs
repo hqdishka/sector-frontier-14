@@ -131,25 +131,15 @@ public abstract partial class SharedGunSystem : EntitySystem
     {
         var user = args.SenderSession.AttachedEntity;
 
-        //if (user == null ||
-        //    !_combatMode.IsInCombatMode(user) ||
-        //    !TryGetGun(user.Value, out var ent, out var gun) ||
-        //    HasComp<ItemComponent>(user)) // Delta-V: Felinids in duffelbags can't shoot.
-        //{
-        //    return;
-        //}
-        if (user == null ||
-            !_combatMode.IsInCombatMode(user) ||
-            HasComp<ItemComponent>(user)) // Delta-V: Felinids in duffelbags can't shoot.
+        if (user == null || !_combatMode.IsInCombatMode(user))
             return;
 
-        //Lua mech gun support start
         if (TryComp<MechPilotComponent>(user.Value, out var mechPilot))
             user = mechPilot.Mech;
 
-        if (!TryGetGun(user.Value, out var ent, out var gun))
+        if (!TryGetGun(user.Value, out var ent, out var gun) ||
+            HasComp<ItemComponent>(user))
             return;
-        //Lua mech gun support end
 
         if (ent != GetEntity(msg.Gun))
             return;
@@ -182,7 +172,7 @@ public abstract partial class SharedGunSystem : EntitySystem
     {
         var gunUid = GetEntity(ev.Gun);
 
-        var user = args.SenderSession.AttachedEntity; //Lua
+        var user = args.SenderSession.AttachedEntity;
 
         if (user == null)
             return;
@@ -212,7 +202,6 @@ public abstract partial class SharedGunSystem : EntitySystem
         gunEntity = default;
         gunComp = null;
 
-        //Lua mech gun support start
         if (TryComp<MechComponent>(entity, out var mech) &&
             mech.CurrentSelectedEquipment.HasValue &&
             TryComp<GunComponent>(mech.CurrentSelectedEquipment.Value, out var mechGun))
@@ -221,7 +210,6 @@ public abstract partial class SharedGunSystem : EntitySystem
             gunComp = mechGun;
             return true;
         }
-        //Lua mech gun support end
 
         if (EntityManager.TryGetComponent(entity, out HandsComponent? hands) &&
             hands.ActiveHandEntity is { } held &&

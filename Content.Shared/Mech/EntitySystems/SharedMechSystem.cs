@@ -25,6 +25,11 @@ using Content.Shared.Mobs.Components; // Frontier
 using Content.Shared.NPC.Components;
 using Content.Shared._NF.Mech.Equipment.Events; // Frontier
 
+// Goobstation Change
+using Content.Shared.Emag.Components;
+using Content.Shared.Emag.Systems;
+using Content.Shared.Weapons.Ranged.Events;
+
 namespace Content.Shared.Mech.EntitySystems;
 
 /// <summary>
@@ -55,6 +60,7 @@ public abstract class SharedMechSystem : EntitySystem
         SubscribeLocalEvent<MechComponent, GetAdditionalAccessEvent>(OnGetAdditionalAccess);
         SubscribeLocalEvent<MechComponent, DragDropTargetEvent>(OnDragDrop);
         SubscribeLocalEvent<MechComponent, CanDropTargetEvent>(OnCanDragDrop);
+        SubscribeLocalEvent<MechComponent, GotEmaggedEvent>(OnEmagged);
 
         SubscribeLocalEvent<MechPilotComponent, GetMeleeWeaponEvent>(OnGetMeleeWeapon);
         SubscribeLocalEvent<MechPilotComponent, CanAttackFromContainerEvent>(OnCanAttackFromContainer);
@@ -480,20 +486,14 @@ public abstract class SharedMechSystem : EntitySystem
         args.CanDrop |= !component.Broken && CanInsert(uid, args.Dragged, component);
     }
 
-    // Frontier
-    private void RaiseEquipmentEquippedEvent(Entity<MechComponent> ent, EntityUid? pilot = null)
+    private void OnEmagged(EntityUid uid, MechComponent component, ref GotEmaggedEvent args) // Goobstation
     {
-        if (_net.IsServer && ent.Comp.CurrentSelectedEquipment != null)
-        {
-            var ev = new MechEquipmentEquippedAction
-            {
-                Mech = ent,
-                Pilot = pilot ?? ent.Comp.PilotSlot.ContainedEntity
-            };
-            RaiseLocalEvent(ent.Comp.CurrentSelectedEquipment.Value, ev);
-        }
+        if (!component.BreakOnEmag)
+            return;
+        args.Handled = true;
+        component.EquipmentWhitelist = null;
+        Dirty(uid, component);
     }
-    // End Frontier
 }
 
 /// <summary>

@@ -342,6 +342,25 @@
     - BorgModules
     - MechParts
     - MechEquipment
+    # Shitmed Change
+    - BorgModulesDynamic
+    - SMCybernetics
+    # Mono - Mech parts
+    - ClarkeMechParts
+    - DurandMechParts
+    - GygaxMechParts
+    - MechWeapons
+  - type: EmagLatheRecipes
+    emagStaticPacks:
+    - WeaponMechCombatImmolationGun
+    - WeaponMechCombatSolarisLaser
+    - WeaponMechCombatFiredartLaser
+    - WeaponMechCombatUltraRifle
+    - WeaponMechCombatShotgun
+    - WeaponMechCombatShotgunIncendiary
+    - WeaponMechCombatDisabler
+    - WeaponMechCombatFlashbangLauncher
+    - WeaponMechCombatMissileRack8
   - type: MaterialStorage
     whitelist:
       tags:
@@ -403,11 +422,11 @@
     sprite: Structures/Machines/techfab.rsi
     layers:
     - state: icon
-      map: ["enum.LatheVisualLayers.IsRunning"]
+      map: [ "enum.LatheVisualLayers.IsRunning" ]
     - state: sec
     - state: unlit
       shader: unshaded
-      map: ["enum.PowerDeviceVisualLayers.Powered"]
+      map: [ "enum.PowerDeviceVisualLayers.Powered"]
     - state: inserting
       map: ["enum.MaterialStorageVisualLayers.Inserting"]
     - state: panel
@@ -429,6 +448,17 @@
     - SecurityAmmo
     - SecurityWeapons
     - SecurityDisablers
+    - SMCybernetics
+    # Mono - Mech parts
+    - WeaponMechCombatImmolationGun
+    - WeaponMechCombatSolarisLaser
+    - WeaponMechCombatFiredartLaser
+    - WeaponMechCombatUltraRifle
+    - WeaponMechCombatShotgun
+    - WeaponMechCombatShotgunIncendiary
+    - WeaponMechCombatDisabler
+    - WeaponMechCombatFlashbangLauncher
+    - WeaponMechCombatMissileRack8
   - type: MaterialStorage
     whitelist:
       tags:
