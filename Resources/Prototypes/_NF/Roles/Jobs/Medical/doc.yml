@@ -47,6 +47,7 @@
     pocket2: MedicalAppraisalTool
   storage:
     back:
-    - RubberStampDoc
-    - BoxFolderMedicalDoctor
     - StationAdministrationConsoleFlatpack
+    - MobileComputerTabletopCommsFlatpack
+    - BoxFolderMedicalDoctor
+    - RubberStampDoc
