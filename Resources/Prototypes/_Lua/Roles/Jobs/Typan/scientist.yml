@@ -11,6 +11,7 @@
   icon: "JobIconSyndicateScience"
   supervisors: job-supervisors-typan-rd
   canBeAntag: false
+  hideConsoleVisibility: true
   requirements:
     - !type:RoleTimeRequirement
       role: JobOutpostTypanBotanist
@@ -38,6 +39,8 @@
     components:
       - type: Company
         companyName: Syndicate
+      - type: SpecialSectorStationRecord
+        recordGeneration: FalseRecord
 
 - type: startingGear
   id: SyndicateScience

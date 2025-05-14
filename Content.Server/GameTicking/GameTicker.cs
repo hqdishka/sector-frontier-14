@@ -74,7 +74,7 @@ namespace Content.Server.GameTicking
 
         private ISawmill _sawmill = default!;
 
-        private readonly Dictionary<NetUserId, HashSet<int>> _usedCharacterProfiles = new(); // Lua
+        public readonly Dictionary<NetUserId, HashSet<int>> _usedCharacterProfiles = new(); // Lua
 
         public override void Initialize()
         {

@@ -125,6 +125,8 @@
     attributes:
       gender: male
   - type: Sharp
+  - type: TimedDespawn
+    lifetime: 2400
 
 - type: entity
   id: MobRatKingBuff
@@ -204,6 +206,8 @@
     - map: [ "enum.DamageStateVisualLayers.BaseUnshaded"]
       state: eyes
       shader: unshaded
+  - type: TimedDespawn
+    lifetime: 2400
 
   - type: SpriteMovement
     movementLayers:

@@ -42,6 +42,22 @@
     - type: Transform
 
 - type: entity
+  id: StandardFrontierVesselCargo
+  parent:
+    - BaseStation
+    - BaseStationCargo
+    - BaseStationJobsSpawning
+    - BaseStationRecords
+    - BaseStationAlertLevels
+    - BaseStationAllEventsEligible
+    - BaseStationRenameFaxes
+    - BaseStationRenameWarpPoints
+    - BaseStationSiliconLawFrontierShips
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Transform
+
+- type: entity
   id: StandardAsteroidOutpost
   parent:
     - BaseStation

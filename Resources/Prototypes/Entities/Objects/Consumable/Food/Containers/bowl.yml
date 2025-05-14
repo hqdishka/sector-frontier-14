@@ -84,6 +84,8 @@
   - type: SpaceGarbage
   - type: StaticPrice
     price: 4 # Frontier 0<4 4 needed for arbitrage
+  - type: TimedDespawn
+    lifetime: 900
 
 - type: entity
   name: bowl

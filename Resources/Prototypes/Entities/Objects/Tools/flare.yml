@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   name: emergency flare
   parent: [BaseItem, RecyclableItemSteelTiny] # Frontier: added RecyclableItemSteelTiny
   id: Flare
@@ -98,3 +98,5 @@
           Quantity: 2
         - ReagentId: Sulfur
           Quantity: 2
+  - type: TimedDespawn
+    lifetime: 3600

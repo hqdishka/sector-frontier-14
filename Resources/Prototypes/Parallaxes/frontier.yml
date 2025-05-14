@@ -8,14 +8,14 @@
       scale: "1, 1"    
     - texture:
         !type:ImageParallaxTextureSource
-        path: "/Textures/_NF/Parallaxes/FrontierParallaxBG.png"
+        path: "/Textures/_Lua/Parallaxes/FrontierParallaxBG.png"
       slowness: 0.998046875
-      scale: "1, 1"
+      scale: "0.5, 0.5"
     - texture:
         !type:ImageParallaxTextureSource
-        path: "/Textures/_NF/Parallaxes/FrontierParallaxNeb.png"
+        path: "/Textures/_Lua/Parallaxes/FrontierParallaxNeb.png"
       slowness: 0.998046875
-      scale: "1, 1"    
+      scale: "0.8, 0.8"      
     - texture:
         !type:GeneratedParallaxTextureSource
         id: "hq_wizard_stars"

@@ -179,6 +179,8 @@
       - MindRoleGhostRoleTeamAntagonist
       raffle:
         settings: short
+    - type: TimedDespawn
+      lifetime: 2400
 
 - type: entity
   name: green slime
@@ -219,6 +221,8 @@
       - MindRoleGhostRoleTeamAntagonist
       raffle:
         settings: short
+    - type: TimedDespawn
+      lifetime: 2400
 
 - type: entity
   name: yellow slime
@@ -258,3 +262,5 @@
       - MindRoleGhostRoleTeamAntagonist
       raffle:
         settings: short
+    - type: TimedDespawn
+      lifetime: 2400

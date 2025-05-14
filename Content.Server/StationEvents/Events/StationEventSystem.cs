@@ -9,6 +9,7 @@ using Content.Shared.Database;
 using Content.Shared.GameTicking.Components;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.Map;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 
@@ -36,6 +37,11 @@ public abstract class StationEventSystem<T> : GameRuleSystem<T> where T : ICompo
         Sawmill = Logger.GetSawmill("stationevents");
     }
 
+    protected virtual MapId GetRelevantMapId()
+    {
+        return GameTicker.DefaultMap;
+    }
+
     /// <inheritdoc/>
     protected override void Added(EntityUid uid, T component, GameRuleComponent gameRule, GameRuleAddedEvent args)
     {
@@ -49,14 +55,22 @@ public abstract class StationEventSystem<T> : GameRuleSystem<T> where T : ICompo
         // we don't want to send to players who aren't in game (i.e. in the lobby)
         Filter allPlayersInGame = Filter.Empty().AddWhere(GameTicker.UserHasJoinedGame);
 
+        // Lua
         if (stationEvent.StartAnnouncement != null)
-            ChatSystem.DispatchFilteredAnnouncement(allPlayersInGame, Loc.GetString(stationEvent.StartAnnouncement), playSound: false, colorOverride: stationEvent.StartAnnouncementColor);
+        {
+            var mapUid = MapSystem.GetMap(GetRelevantMapId()); //Lua
+            var mapName = MetaData(mapUid).EntityName; //Lua
+            var message = Loc.GetString(stationEvent.StartAnnouncement, ("mapdestination", mapName));
+            ChatSystem.DispatchFilteredAnnouncement(allPlayersInGame, message, playSound: false, colorOverride: stationEvent.StartAnnouncementColor);
+        }
+        // Lua
 
         // Frontier
         if (stationEvent.StartRadioAnnouncement != null)
         {
-            var message = Loc.GetString(stationEvent.StartRadioAnnouncement);
-            var mapUid = MapSystem.GetMap(GameTicker.DefaultMap); // Hack: need a reference to a valid entity on the default map - the map itself works.
+            var mapUid = MapSystem.GetMap(GetRelevantMapId()); //Lua
+            var mapName = MetaData(mapUid).EntityName; // Lua
+            var message = Loc.GetString(stationEvent.StartRadioAnnouncement, ("mapdestination", mapName));
             RadioSystem.SendRadioMessage(uid, message, stationEvent.StartRadioAnnouncementChannel, mapUid, escapeMarkup: false);
         }
 
@@ -96,14 +110,22 @@ public abstract class StationEventSystem<T> : GameRuleSystem<T> where T : ICompo
         // we don't want to send to players who aren't in game (i.e. in the lobby)
         Filter allPlayersInGame = Filter.Empty().AddWhere(GameTicker.UserHasJoinedGame);
 
+        // Lua
         if (stationEvent.EndAnnouncement != null)
-            ChatSystem.DispatchFilteredAnnouncement(allPlayersInGame, Loc.GetString(stationEvent.EndAnnouncement), playSound: false, colorOverride: stationEvent.EndAnnouncementColor);
+        {
+            var mapUid = MapSystem.GetMap(GetRelevantMapId()); //Lua
+            var mapName = MetaData(mapUid).EntityName; //Lua
+            var message = Loc.GetString(stationEvent.EndAnnouncement, ("mapdestination", mapName));
+            ChatSystem.DispatchFilteredAnnouncement(allPlayersInGame, message, playSound: false, colorOverride: stationEvent.EndAnnouncementColor);
+        }
+        // Lua
 
         // Frontier: radio announcements
         if (stationEvent.EndRadioAnnouncement != null)
         {
-            var message = Loc.GetString(stationEvent.EndRadioAnnouncement);
-            var mapUid = MapSystem.GetMap(GameTicker.DefaultMap); // Hack: need a reference to a valid entity on the default map - the map itself works.
+            var mapUid = MapSystem.GetMap(GetRelevantMapId()); //Lua
+            var mapName = MetaData(mapUid).EntityName; // Lua
+            var message = Loc.GetString(stationEvent.EndRadioAnnouncement, ("mapdestination", mapName));
             RadioSystem.SendRadioMessage(uid, message, stationEvent.EndRadioAnnouncementChannel, mapUid, escapeMarkup: false);
         }
         // End Frontier
@@ -138,12 +160,20 @@ public abstract class StationEventSystem<T> : GameRuleSystem<T> where T : ICompo
             else if (!stationEvent.WarningAnnounced && stationEvent.EndTime != null && (stationEvent.EndTime.Value - Timing.CurTime).TotalSeconds <= stationEvent.WarningDurationLeft && GameTicker.IsGameRuleActive(uid, ruleData))
             {
                 Filter allPlayersInGame = Filter.Empty().AddWhere(GameTicker.UserHasJoinedGame); // we don't want to send to players who aren't in game (i.e. in the lobby)
+                // Lua
                 if (stationEvent.WarningAnnouncement != null)
-                    ChatSystem.DispatchFilteredAnnouncement(allPlayersInGame, Loc.GetString(stationEvent.WarningAnnouncement), playSound: false, colorOverride: stationEvent.WarningAnnouncementColor);
+                {
+                    var mapUid = MapSystem.GetMap(GetRelevantMapId()); //Lua
+                    var mapName = MetaData(mapUid).EntityName; // Lua
+                    var message = Loc.GetString(stationEvent.WarningAnnouncement, ("mapdestination", mapName));
+                    ChatSystem.DispatchFilteredAnnouncement(allPlayersInGame, message, playSound: false, colorOverride: stationEvent.WarningAnnouncementColor);
+                }
+                // Lua
                 if (stationEvent.WarningRadioAnnouncement != null)
                 {
-                    var message = Loc.GetString(stationEvent.WarningRadioAnnouncement);
-                    var mapUid = MapSystem.GetMap(GameTicker.DefaultMap); // Hack: need a reference to a valid entity on the default map - the map itself works.
+                    var mapUid = MapSystem.GetMap(GetRelevantMapId()); //Lua
+                    var mapName = MetaData(mapUid).EntityName; // Lua
+                    var message = Loc.GetString(stationEvent.WarningRadioAnnouncement, ("mapdestination", mapName));
                     RadioSystem.SendRadioMessage(uid, message, stationEvent.WarningRadioAnnouncementChannel, mapUid, escapeMarkup: false);
                 }
                 Audio.PlayGlobal(stationEvent.WarningAudio, allPlayersInGame, true);

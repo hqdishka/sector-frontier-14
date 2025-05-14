@@ -48,13 +48,22 @@ public sealed partial class CrewMonitoringWindow : FancyWindow
         _blipTexture = _spriteSystem.Frame0(new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/NavMap/beveled_circle.png")));
 
         if (_entManager.TryGetComponent<TransformComponent>(mapUid, out var xform))
+        {
             NavMap.MapUid = xform.GridUid;
+            if (_entManager.TryGetComponent<MetaDataComponent>(xform.GridUid, out var stationMetaData))
+                stationName = stationMetaData.EntityName;
 
+            NavMap.Visible = true;
+        }
         else
+        {
             NavMap.Visible = false;
+        }
+
 
         StationName.AddStyleClass("LabelBig");
         StationName.Text = stationName;
+        NavMap.TrackedEntitySelectedAction += SetTrackedEntityFromNavMap;
         NavMap.ForceNavMapUpdate();
     }
 
@@ -173,6 +182,7 @@ public sealed partial class CrewMonitoringWindow : FancyWindow
                 Coordinates = coordinates,
                 Disabled = (coordinates == null),
                 HorizontalExpand = true,
+                SetHeight = 50,
             };
 
             if (sensor.SuitSensorUid == _trackedEntity)
@@ -195,6 +205,7 @@ public sealed partial class CrewMonitoringWindow : FancyWindow
                 SizeFlagsStretchRatio = 1.25f,
                 Orientation = LayoutOrientation.Horizontal,
                 HorizontalExpand = true,
+                SetHeight = 50,
             };
 
             mainContainer.AddChild(statusContainer);

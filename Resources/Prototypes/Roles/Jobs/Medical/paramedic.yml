@@ -3,15 +3,27 @@
   name: job-name-paramedic
   description: job-description-paramedic
   playTimeTracker: JobParamedic
-  setPreference: false # Frontier
+  setPreference: true # Lua
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 10800
   startingGear: ParamedicGear
+  alwaysUseSpawner: true
   icon: "JobIconParamedic"
-  supervisors: job-supervisors-hire # Frontier
+  supervisors: job-supervisors-mmo # Frontier
+  access:
+  - Medical
+  - Maintenance
+  - Paramedic
   accessGroups: # Frontier
   - GeneralAccess # Frontier
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: ParamedicGear

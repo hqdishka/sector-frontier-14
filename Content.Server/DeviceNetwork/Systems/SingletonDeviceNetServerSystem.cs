@@ -1,4 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.CodeAnalysis;
 using Content.Server.DeviceNetwork.Components;
 using Content.Server.Medical.CrewMonitoring;
 using Content.Server.Station.Systems;
@@ -84,6 +84,47 @@ public sealed class SingletonDeviceNetServerSystem : EntitySystem
         address = null;
         return address != null;
     }
+
+    // Lua start
+    public bool TryGetActiveServerAddressGlobal<TComp>([NotNullWhen(true)] out string? address)
+    where TComp : IComponent
+    {
+        var servers = EntityQueryEnumerator<
+            SingletonDeviceNetServerComponent,
+            DeviceNetworkComponent,
+            TComp
+        >();
+
+        (EntityUid id, SingletonDeviceNetServerComponent server, DeviceNetworkComponent device)? lastAvailable = null;
+
+        while (servers.MoveNext(out var uid, out var server, out var device, out _))
+        {
+            if (!server.Available)
+            {
+                DisconnectServer(uid, server, device);
+                continue;
+            }
+
+            lastAvailable = (uid, server, device);
+
+            if (server.Active)
+            {
+                address = device.Address;
+                return true;
+            }
+        }
+
+        if (lastAvailable.HasValue)
+        {
+            var (id, serv, dev) = lastAvailable.Value;
+            ConnectServer(id, serv, dev);
+            address = dev.Address;
+            return true;
+        }
+        address = null;
+        return false;
+    }
+    // Lua end
 
     /// <summary>
     /// Disconnects the server losing power

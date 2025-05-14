@@ -8,6 +8,8 @@
     factions:
     - SimpleHostile # Because AI stupid ass hell right now
   - type: MovementIgnoreGravity # Or they just can't do something
+  - type: TimedDespawn
+    lifetime: 2400
 
 - type: entity
   parent: NFMobOreCrab
@@ -258,6 +260,8 @@
   - type: RotationVisuals
     defaultRotation: 90
     horizontalRotation: 90
+  - type: TimedDespawn
+    lifetime: 2400
 
 - type: entity
   parent: NFMobOreGolem

@@ -72,6 +72,8 @@
     guides:
     - ExpandingRepairingStation
   - type: ConstructionMaterials # Frontier
+  - type: TimedDespawn
+    lifetime: 3600
 
 - type: entity
   parent: PartRodMetal

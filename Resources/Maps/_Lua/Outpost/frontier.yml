@@ -4,8 +4,8 @@ meta:
   engineVersion: 251.0.0
   forkId: ""
   forkVersion: ""
-  time: 05/07/2025 15:44:33
-  entityCount: 6620
+  time: 05/11/2025 12:21:26
+  entityCount: 6637
 maps:
 - 1
 grids:
@@ -4321,6 +4321,19 @@ entities:
       scale: 0
       radarColor: '#00DEFEFF'
     - type: CircularShieldRadar
+  - uid: 6621
+    components:
+    - type: MetaData
+    - type: Transform
+      pos: -2.509191,12.870775
+      parent: 2
+    - type: RadarBlip
+      enabled: False
+      visibleFromOtherGrids: True
+      shape: Ring
+      scale: 0
+      radarColor: '#00DEFEFF'
+    - type: CircularShieldRadar
 - proto: ActionToggleLight
   entities:
   - uid: 6
@@ -5112,7 +5125,7 @@ entities:
       pos: 57.5,-1.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -49187.867
+      secondsUntilStateChange: -50091.445
       state: Opening
     - type: Docking
       name: 5A
@@ -5212,7 +5225,7 @@ entities:
       pos: -0.5,-10.5
       parent: 2
     - type: Docking
-      name: '3A - ДСФБ '
+      name: '3A - ДСБФ '
   - uid: 149
     components:
     - type: Transform
@@ -16003,6 +16016,40 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 20.5,14.5
       parent: 2
+    - type: CircularShield
+      width: 6.283185307179586 rad
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PolygonShape
+            radius: 0.01
+            vertices:
+            - -0.45,-0.45
+            - 0.45,-0.45
+            - 0.45,0.45
+            - -0.45,0.45
+          mask:
+          - Impassable
+          - TableLayer
+          - LowImpassable
+          layer:
+          - TableLayer
+          - LowImpassable
+          density: 60
+          hard: True
+          restitution: 0
+          friction: 0.4
+        ShieldFixture:
+          shape: !type:PhysShapeCircle
+            radius: 0
+            position: -2.509191,12.870775
+          mask: []
+          layer:
+          - BulletImpassable
+          density: 1
+          hard: False
+          restitution: 0
+          friction: 0.4
     - type: ApcPowerReceiver
       powerLoad: 0
 - proto: CircularShieldConsole
@@ -33494,14 +33541,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 24.5,10.5
       parent: 2
-- proto: PaperWageFrontier
-  entities:
-  - uid: 3220
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 8.024455,21.552444
-      parent: 2
 - proto: PhotocopierBase
   entities:
   - uid: 3221
@@ -38307,6 +38346,48 @@ entities:
     - type: Transform
       pos: -60.5,12.5
       parent: 2
+- proto: SpawnPointChemist
+  entities:
+  - uid: 6630
+    components:
+    - type: Transform
+      pos: -60.5,19.5
+      parent: 2
+  - uid: 6631
+    components:
+    - type: Transform
+      pos: -60.5,18.5
+      parent: 2
+  - uid: 6632
+    components:
+    - type: Transform
+      pos: -60.5,17.5
+      parent: 2
+  - uid: 6633
+    components:
+    - type: Transform
+      pos: -60.5,16.5
+      parent: 2
+  - uid: 6634
+    components:
+    - type: Transform
+      pos: -60.5,15.5
+      parent: 2
+  - uid: 6635
+    components:
+    - type: Transform
+      pos: -60.5,14.5
+      parent: 2
+  - uid: 6636
+    components:
+    - type: Transform
+      pos: -60.5,13.5
+      parent: 2
+  - uid: 6637
+    components:
+    - type: Transform
+      pos: -60.5,12.5
+      parent: 2
 - proto: SpawnPointContractor
   entities:
   - uid: 6484
@@ -38405,6 +38486,48 @@ entities:
     components:
     - type: Transform
       pos: 29.5,18.5
+      parent: 2
+- proto: SpawnPointMedicalDoctor
+  entities:
+  - uid: 6622
+    components:
+    - type: Transform
+      pos: -60.5,19.5
+      parent: 2
+  - uid: 6623
+    components:
+    - type: Transform
+      pos: -60.5,18.5
+      parent: 2
+  - uid: 6624
+    components:
+    - type: Transform
+      pos: -60.5,17.5
+      parent: 2
+  - uid: 6625
+    components:
+    - type: Transform
+      pos: -60.5,16.5
+      parent: 2
+  - uid: 6626
+    components:
+    - type: Transform
+      pos: -60.5,15.5
+      parent: 2
+  - uid: 6627
+    components:
+    - type: Transform
+      pos: -60.5,14.5
+      parent: 2
+  - uid: 6628
+    components:
+    - type: Transform
+      pos: -60.5,13.5
+      parent: 2
+  - uid: 6629
+    components:
+    - type: Transform
+      pos: -60.5,12.5
       parent: 2
 - proto: SpawnPointMercenary
   entities:

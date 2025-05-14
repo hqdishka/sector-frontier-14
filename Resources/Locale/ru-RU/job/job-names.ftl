@@ -116,3 +116,10 @@ JobTypanMedic = Медик Синдиката
 JobTypanRD = Директор исследований Синдиката
 JobTypanScience = Учёный Синдиката
 JobTypanTelecommunicationsOfficer = Офицер телекомуникаций Синдиката
+
+# CentComm
+
+
+job-name-centcom-officer = Офицер ЦК
+
+JobCentralCommandOfficer = Офицер ЦК

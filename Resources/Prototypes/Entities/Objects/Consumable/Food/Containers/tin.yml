@@ -72,6 +72,8 @@
     - Trash
   - type: StaticPrice # Frontier
     price: 6 # Frontier
+  - type: TimedDespawn
+    lifetime: 900
 
 # Tins
 

@@ -23,3 +23,5 @@
     deleteOrgans: true
     gib: false
     useArgumentEntity: true
+  - type: TimedDespawn
+    lifetime: 2400

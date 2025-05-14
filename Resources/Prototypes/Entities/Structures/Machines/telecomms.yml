@@ -93,6 +93,7 @@
       - EncryptionKeyTrade # Lua - Trade Channel
       - EncryptionKeyMercenary # Lua
       - EncryptionKeyVip # Lua
+      - EncryptionKeyNfsd # Lua
 
 - type: entity
   parent: TelecomServer

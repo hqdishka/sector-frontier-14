@@ -192,8 +192,11 @@ namespace Content.Client.Construction.UI
 
                 if (!string.IsNullOrEmpty(search))
                 {
-                    if (!recipe.Name.ToLowerInvariant().Contains(search.Trim().ToLowerInvariant()))
+                    //Lua Localization
+                    var localizedName = GetEntityOrExplit(recipe.ID, $"construction-{recipe.ID}");
+                    if (!localizedName.ToLowerInvariant().Contains(search.Trim().ToLowerInvariant()))
                         continue;
+                    //Lua Localization
                 }
 
                 if (!isEmptyCategory)
@@ -331,14 +334,54 @@ namespace Content.Client.Construction.UI
             _constructionView.Categories = categoriesArray;
         }
 
+        // Lua construction Localization start
+        private string GetEntityOrExplit(string prototypeId, string fallbackKey, string? attr = null)
+        {
+            if (attr == null)
+            {
+                if (Loc.TryGetString(fallbackKey, out var explicitValue))
+                    return explicitValue;
+                return Loc.GetString($"ent-{prototypeId}");
+            }
+            else
+            {
+                var fullKey = $"{fallbackKey}-{attr}";
+                if (Loc.TryGetString(fullKey, out var explicitValue))
+                    return explicitValue;
+                return Loc.GetString($"ent-{prototypeId}.{attr}");
+            }
+        }
+
+        private string? TryGetEntityOrExplitAttr(string prototypeId, string fallbackKey, string attr)
+        {
+            var key = $"{fallbackKey}-{attr}";
+            if (Loc.TryGetString(key, out var explicitValue))
+                return explicitValue;
+            if (Loc.TryGetString($"ent-{prototypeId}.{attr}", out var entAttr))
+                return entAttr;
+            return null;
+        }
+        // Lua construction Localization end
+
         private void PopulateInfo(ConstructionPrototype prototype)
         {
             _constructionView.ClearRecipeInfo();
+            // Lua start
+            var name = GetEntityOrExplit(prototype.ID, $"construction-{prototype.ID}");
+            var suffix = TryGetEntityOrExplitAttr(prototype.ID, $"construction-{prototype.ID}", "suffix");
 
+            if (!string.IsNullOrWhiteSpace(suffix))
+                name += $" [{suffix}]";
+            // Lua end
+
+            // Lua Localization
             _constructionView.SetRecipeInfo(
-                prototype.Name, prototype.Description, _spriteSystem.Frame0(prototype.Icon),
+                name, // Lua
+                GetEntityOrExplit(prototype.ID, $"construction-{prototype.ID}", "desc"), // Lua
+                _spriteSystem.Frame0(prototype.Icon),
                 prototype.Type != ConstructionType.Item,
                 !_favoritedRecipes.Contains(prototype));
+            // Lua Localization
 
             var stepList = _constructionView.RecipeStepList;
             GenerateStepList(prototype, stepList);
@@ -371,13 +414,21 @@ namespace Content.Client.Construction.UI
 
         private ItemList.Item GetItem(ConstructionPrototype recipe, ItemList itemList)
         {
+            // Lua start
+            var name = GetEntityOrExplit(recipe.ID, $"construction-{recipe.ID}");
+            var suffix = TryGetEntityOrExplitAttr(recipe.ID, $"construction-{recipe.ID}", "suffix");
+
+            if (!string.IsNullOrWhiteSpace(suffix))
+                name += $" [{suffix}]";
+            // Lua end
+
             return new(itemList)
             {
                 Metadata = recipe,
-                Text = recipe.Name,
+                Text = name, // Lua Localization
                 Icon = _spriteSystem.Frame0(recipe.Icon),
                 TooltipEnabled = true,
-                TooltipText = recipe.Description,
+                TooltipText = GetEntityOrExplit(recipe.ID, $"construction-{recipe.ID}", "desc"), // Lua Localization
             };
         }
 

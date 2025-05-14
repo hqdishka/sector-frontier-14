@@ -11,6 +11,7 @@
   icon: "JobIconSyndicateRD"
   supervisors: job-supervisors-typan-syndicate
   canBeAntag: false
+  hideConsoleVisibility: true
   requirements:
     - !type:DepartmentTimeRequirement
       department: Security
@@ -39,6 +40,8 @@
     components:
       - type: Company
         companyName: Syndicate
+      - type: SpecialSectorStationRecord
+        recordGeneration: FalseRecord
 
 - type: startingGear
   id: SyndicateRD

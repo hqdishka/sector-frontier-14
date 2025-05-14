@@ -56,6 +56,7 @@ public sealed partial class ArtifactSystem
                 child.Edges.Add(node.Id);
 
                 uninitializedNodes.Add(child);
+                allNodes.Add(child);
                 createdNodes++;
             }
 
@@ -234,6 +235,10 @@ public sealed partial class ArtifactSystem
     [PublicAPI]
     public ArtifactNode GetNodeFromId(int id, ArtifactComponent component)
     {
+        if (!component.NodeTree.Any(x => x.Id == id))
+        {
+            Log.Error($"Artifact node with ID {id} not found in NodeTree!");
+        }
         return component.NodeTree.First(x => x.Id == id);
     }
 

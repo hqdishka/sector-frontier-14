@@ -44541,13 +44541,6 @@ entities:
     - type: Paper
       content: >
         Всё самое интересное всегда уходило из внимания моих глаз, прячась за завесой неизведанных возможностей...
-- proto: PaperWageTypan
-  entities:
-  - uid: 6483
-    components:
-    - type: Transform
-      pos: -14.481171,2.2150214
-      parent: 1
 - proto: ParticleAcceleratorControlBoxUnfinished
   entities:
   - uid: 6484

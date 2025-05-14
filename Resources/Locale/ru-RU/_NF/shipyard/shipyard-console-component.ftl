@@ -21,6 +21,7 @@ shipyard-console-sale-organic-aboard = Экипаж должен покинут�
 shipyard-console-sale-invalid-ship = Шаттл не соответствует нормам и не может быть продан.
 shipyard-console-sale-unknown-reason = Шаттл не может быть продан: { reason }
 shipyard-console-deed-label = Зарегистрированный шаттл:
+shipyard-console-deed-label-none = Нет
 shipyard-console-appraisal-label = Оценочная стоимость шаттла:{ " " }
 shipyard-console-no-voucher-redemptions = Все ваучеры использованы.
 
@@ -75,6 +76,7 @@ shipyard-console-menu-engine-label = Питание:{" "}
 shipyard-console-purchase-available = Приобрести
 shipyard-console-sell-button = Продать
 shipyard-console-guidebook = Документация
+shipyard-console-unassign-deed = Отвязать от ID
 
 shipyard-console-contraband-onboard = На борту обнаружена контрабанда.
 shipyard-console-station-resources = На борту обнаружены жизненно важные ресурсы станции.

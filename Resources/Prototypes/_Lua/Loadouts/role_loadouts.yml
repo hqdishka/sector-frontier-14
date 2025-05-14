@@ -2,7 +2,55 @@
 # Copyright (c) 2025 LuaWorld Contributors
 # See AGPLv3.txt for details.
 
-# MercenaryBase
+- type: roleLoadout
+  id: JobChemist 
+  groups:
+  - MedicalMask
+  - ChemistJumpsuit
+  - MedicalGloves
+  - ChemistBackpack
+  - ChemistOuterClothing
+  - MedicalShoes
+  - NFSpeciesSpecific
+  - ContractorWallet
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
+
+- type: roleLoadout
+  id: JobParamedic 
+  groups:
+  - ParamedicHead
+  - MedicalMask
+  - ParamedicJumpsuit
+  - MedicalGloves
+  - MedicalBackpack
+  - ParamedicOuterClothing
+  - ParamedicShoes
+  - Glasses
+  - NFSpeciesSpecific
+  - ContractorWallet
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
+
+- type: roleLoadout
+  id: JobMedicalDoctor 
+  groups:
+  - MedicalDoctorHead
+  - MedicalMask
+  - MedicalDoctorJumpsuit
+  - MedicalGloves
+  - MedicalBackpack
+  - MedicalDoctorOuterClothing
+  - MedicalShoes
+  - MedicalDoctorPDA
+  - Glasses
+  - NFSpeciesSpecific
+  - ContractorWallet
+  - TopUnderwear
+  - PantsUnderwear
+  - SocksUnderwear
 
 - type: roleLoadout
   id: JobCentralCommandCargo 

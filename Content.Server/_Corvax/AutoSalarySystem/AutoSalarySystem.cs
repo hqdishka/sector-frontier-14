@@ -26,13 +26,15 @@ public sealed class AutoSalarySystem : EntitySystem
     [ValidatePrototypeId<DepartmentPrototype>]
     private const string FrontierDepartament = "Frontier"; // Lua Dep<Departament
     [ValidatePrototypeId<DepartmentPrototype>]
-    private const string SecurityDepartament = "Security"; // Lua Dep<Departament
+    private const string SecurityDepartament = "Security"; // Lua Security
     [ValidatePrototypeId<DepartmentPrototype>]
     private const string TypanDepartament = "OutpostTypan"; // Lua add Typan
     [ValidatePrototypeId<DepartmentPrototype>]
     private const string CentCommDepartament = "CentCom"; // Lua add Centcomm
     [ValidatePrototypeId<DepartmentPrototype>]
     private const string CivilianDepartament = "Civilian"; // Lua add Civilian
+    [ValidatePrototypeId<DepartmentPrototype>]
+    private const string MedicalDepartament = "Medical"; // Lua add Medical
 
     public override void Initialize()
     {
@@ -66,6 +68,7 @@ public sealed class AutoSalarySystem : EntitySystem
         {
             if (GetDepartment(uid, out var job))
             {
+                Logger.Info($"Salary check: {ToPrettyString(uid)} as {job}");
                 int salary = GetSalary(job);
                 if (_bank.TryBankDeposit(uid, salary))
                 {
@@ -145,6 +148,10 @@ public sealed class AutoSalarySystem : EntitySystem
         var s when s == Loc.GetString("job-name-centcomassistant") => 93000,
         var s when s == Loc.GetString("job-name-centcomsecofficer") => 110000,
         var s when s == Loc.GetString("job-name-centcomoper") => 150000,
+        //Medical
+        var s when s == Loc.GetString("job-name-chemist") => 45000,
+        var s when s == Loc.GetString("job-name-paramedic") => 40000,
+        var s when s == Loc.GetString("job-name-doctor") => 70000,
         _ => throw new KeyNotFoundException()
     };
 
@@ -156,7 +163,8 @@ public sealed class AutoSalarySystem : EntitySystem
         SecurityDepartament,
         TypanDepartament,
         CentCommDepartament,
-        CivilianDepartament
+        CivilianDepartament,
+        MedicalDepartament
     };
     // Lua end
 

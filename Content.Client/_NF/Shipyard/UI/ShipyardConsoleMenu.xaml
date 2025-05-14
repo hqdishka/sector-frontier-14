@@ -49,12 +49,12 @@
         <GridContainer Columns="4" HorizontalExpand="True" Margin="0 8 0 2">
             <Button Name="TargetIdButton" Access="Public"/>
             <controls:ConfirmButton Name="SellShipButton"
-                Text="Sell"
-                ConfirmationText="{Loc 'shipyard-console-confirm-unassign'}"
+                Text="{Loc 'cargo-pallet-sell-button'}"
+                ConfirmationText="{Loc 'admin-notes-delete-confirm'}"
                 Disabled="True" />
             <controls:ConfirmButton Name="UnassignDeedButton"
                 Text="{Loc 'shipyard-console-unassign-deed'}"
-                ConfirmationText="{Loc 'shipyard-console-confirm-unassign'}"
+                ConfirmationText="{Loc 'admin-notes-delete-confirm'}"
                 Disabled="True" />
             <BoxContainer Orientation="Vertical">
                 <Label Text="{Loc 'shipyard-console-deed-label'}" />

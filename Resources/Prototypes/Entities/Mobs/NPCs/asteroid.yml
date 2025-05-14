@@ -91,6 +91,8 @@
       amount: 3
     - id: MaterialGoliathHide1
       amount: 3
+  - type: TimedDespawn
+    lifetime: 2400
 
 - type: entity
   id: ActionGoliathTentacle
@@ -240,6 +242,8 @@
   - type: Butcherable
     spawned:
     - id: FoodHivelordRemains
+  - type: TimedDespawn
+    lifetime: 2400
 
 - type: entity
   id: MobHivelordBrood

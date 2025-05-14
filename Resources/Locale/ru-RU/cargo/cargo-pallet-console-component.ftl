@@ -4,3 +4,5 @@ cargo-pallet-menu-appraisal-label = Оценочная стоимость:{ " " 
 cargo-pallet-menu-count-label = Кол-во продаваемых товаров:{ " " }
 cargo-pallet-appraise-button = Оценить
 cargo-pallet-sell-button = Продать
+pirate-cargo-pallet-appraise-button = Оценить
+pirate-cargo-pallet-sell-button = Продать

@@ -11873,9 +11873,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 32.5,104.5
       parent: 1
-    - type: GridFill
-      addComponents: []
-      path: /Maps/Corvax/Shuttles/ert_corvaxcentcomm.yml
     - type: DeviceLinkSource
       lastSignals: {}
       ports:

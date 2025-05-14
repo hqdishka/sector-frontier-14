@@ -274,6 +274,13 @@ namespace Content.Server.Explosion.EntitySystems
             var station = _station.GetOwningStation(uid);
             var stationText = station is null ? null : $"{Name(station.Value)} ";
 
+            var mapText = Loc.GetString("suit-sensor-location-unknown-map");
+            if (ownerXform.MapUid != null && TryComp<MetaDataComponent>(ownerXform.MapUid.Value, out var mapMeta))
+            {
+                if (!string.IsNullOrWhiteSpace(mapMeta.EntityName))
+                    mapText = mapMeta.EntityName;
+            }
+
             if (stationText == null)
                 stationText = "";
 
@@ -282,8 +289,8 @@ namespace Content.Server.Explosion.EntitySystems
             if (TryComp<HumanoidAppearanceComponent>(implanted.ImplantedEntity, out var species))
                 speciesText = $" ({species!.Species})";
 
-            var critMessage = Loc.GetString(component.CritMessage, ("user", implanted.ImplantedEntity.Value), ("specie", speciesText), ("grid", stationText!), ("position", posText));
-            var deathMessage = Loc.GetString(component.DeathMessage, ("user", implanted.ImplantedEntity.Value), ("specie", speciesText), ("grid", stationText!), ("position", posText));
+            var critMessage = Loc.GetString(component.CritMessage, ("user", implanted.ImplantedEntity.Value), ("specie", speciesText), ("grid", stationText!), ("map", mapText), ("position", posText));
+            var deathMessage = Loc.GetString(component.DeathMessage, ("user", implanted.ImplantedEntity.Value), ("specie", speciesText), ("grid", stationText!), ("map", mapText), ("position", posText));
 
             if (!TryComp<MobStateComponent>(implanted.ImplantedEntity, out var mobstate))
                 return;
@@ -292,9 +299,9 @@ namespace Content.Server.Explosion.EntitySystems
             {
                 // Sends a message to the radio channel specified by the implant
                 if (mobstate.CurrentState == MobState.Critical)
-                    _radioSystem.SendRadioMessage(uid, critMessage, _prototypeManager.Index<RadioChannelPrototype>(component.RadioChannel), uid);
+                    _radioSystem.SendRadioMessageGlobal(uid, critMessage, _prototypeManager.Index<RadioChannelPrototype>(component.RadioChannel), uid);
                 if (mobstate.CurrentState == MobState.Dead)
-                    _radioSystem.SendRadioMessage(uid, deathMessage, _prototypeManager.Index<RadioChannelPrototype>(component.RadioChannel), uid);
+                    _radioSystem.SendRadioMessageGlobal(uid, deathMessage, _prototypeManager.Index<RadioChannelPrototype>(component.RadioChannel), uid);
             }
 
             args.Handled = true;

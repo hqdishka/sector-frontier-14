@@ -71,6 +71,8 @@
   - type: MobMover
   - type: ZombieImmune
   - type: MovementIgnoreGravity
+  - type: TimedDespawn
+    lifetime: 2400
 
 - type: entity
   abstract: true

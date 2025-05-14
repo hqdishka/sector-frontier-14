@@ -412,6 +412,7 @@
   roles:
   - BlueTeamSpecialist
   - BlueTeamCaptain
+  editorHidden: true
 
 - type: entity
   parent: ClothingHeadsetAlt
@@ -849,6 +850,7 @@
   roles:
   - RedTeamSpecialist
   - RedTeamCaptain
+  editorHidden: true
 
 - type: entity
   parent: ClothingHeadsetAlt

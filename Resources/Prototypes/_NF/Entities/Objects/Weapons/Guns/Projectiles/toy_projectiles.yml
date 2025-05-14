@@ -27,6 +27,8 @@
       proto: BulletBBDamaged
       deleteOnSpawn: true
       muzzleFlash: null
+    - type: TimedDespawn
+      lifetime: 900
 
 # separate BB "cartridge" and projectile
 - type: entity

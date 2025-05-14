@@ -102,8 +102,13 @@ public sealed class SuitSensorSystem : EntitySystem
             {
                 // Frontier - PR 1053 QoL changes to coordinates display
                 // if (!_singletonServerSystem.TryGetActiveServerAddress<CrewMonitoringServerComponent>(sensor.StationId!.Value, out var address))
-                if (!_singletonServerSystem.TryGetActiveServerAddress<CrewMonitoringServerComponent>(xform.MapID, out var address))
+                //if (!_singletonServerSystem.TryGetActiveServerAddress<CrewMonitoringServerComponent>(xform.MapID, out var address)) // Lua
+                //    continue; // Lua
+                if (!_singletonServerSystem.TryGetActiveServerAddress<CrewMonitoringServerComponent>(xform.MapID, out var address) &&
+                !_singletonServerSystem.TryGetActiveServerAddressGlobal<CrewMonitoringServerComponent>(out address))
+                {
                     continue;
+                }
 
 
                 sensor.ConnectedServer = address;
@@ -443,56 +448,78 @@ public sealed class SuitSensorSystem : EntitySystem
                 status.TotalDamage = totalDamage;
                 status.TotalDamageThreshold = totalDamageThreshold;
                 break;
+            // Lua sector adaptation
             case SuitSensorMode.SensorCords:
-                status.IsAlive = isAlive;
-                status.TotalDamage = totalDamage;
-                status.TotalDamageThreshold = totalDamageThreshold;
-                EntityCoordinates coordinates;
-                var xformQuery = GetEntityQuery<TransformComponent>();
-                var locationName = "";
-
-                if (transform.GridUid != null)
                 {
+                    status.IsAlive = isAlive;
+                    status.TotalDamage = totalDamage;
+                    status.TotalDamageThreshold = totalDamageThreshold;
 
-                    coordinates = new EntityCoordinates(transform.GridUid.Value,
-                        Vector2.Transform(_transform.GetWorldPosition(transform, xformQuery),
-                            _transform.GetInvWorldMatrix(xformQuery.GetComponent(transform.GridUid.Value), xformQuery)));
+                    var xformQuery = GetEntityQuery<TransformComponent>();
+                    EntityCoordinates coordinates;
+                    string mapName = Loc.GetString("suit-sensor-location-unknown-map");
+                    string gridName = Loc.GetString("suit-sensor-location-space");
 
-                    // Frontier modification
-                    /// Checks if sensor is present on expedition grid
-                    if(TryComp<SalvageExpeditionComponent>(transform.GridUid.Value, out var salvageComp))
+                    if (transform.MapUid is { } mapUid &&
+                        TryComp<MetaDataComponent>(mapUid, out var mapMeta) &&
+                        !string.IsNullOrWhiteSpace(mapMeta.EntityName))
                     {
-                        locationName = Loc.GetString("suit-sensor-location-expedition");
+                        mapName = mapMeta.EntityName;
+                    }
+
+                    var onGrid = false;
+
+                    if (transform.GridUid != null)
+                    {
+                        onGrid = true;
+                        coordinates = new EntityCoordinates(
+                            transform.GridUid.Value,
+                            Vector2.Transform(
+                                _transform.GetWorldPosition(transform, xformQuery),
+                                _transform.GetInvWorldMatrix(
+                                    xformQuery.GetComponent(transform.GridUid.Value),
+                                    xformQuery)));
+
+                        if (TryComp<SalvageExpeditionComponent>(transform.GridUid.Value, out _))
+                        {
+                            gridName = Loc.GetString("suit-sensor-location-expedition");
+                        }
+                        else if (TryComp<MetaDataComponent>(transform.GridUid.Value, out var gridMeta) &&
+                                 !string.IsNullOrWhiteSpace(gridMeta.EntityName))
+                        {
+                            gridName = gridMeta.EntityName;
+                        }
+                        else
+                        {
+                            gridName = Loc.GetString("suit-sensor-location-unknown-grid");
+                        }
                     }
                     else
                     {
-                        var meta = MetaData(transform.GridUid.Value);
-
-                        locationName = meta.EntityName;
+                        coordinates = new EntityCoordinates(
+                            transform.MapUid ?? EntityUid.Invalid,
+                            _transform.GetWorldPosition(transform, xformQuery));
                     }
+
+                    string locationName;
+                    if (onGrid)
+                    {
+                        locationName = $"{mapName}\n{gridName}";
+                    }
+                    else
+                    {
+                        locationName = $"{mapName}\n{Loc.GetString("suit-sensor-location-space")}";
+                    }
+
+                    status.Coordinates = GetNetCoordinates(coordinates);
+                    status.LocationName = locationName;
+                    break;
                 }
-                else if (transform.MapUid != null)
-                {
-
-                    coordinates = new EntityCoordinates(transform.MapUid.Value,
-                        _transform.GetWorldPosition(transform, xformQuery)); //Frontier modification
-
-                    locationName = Loc.GetString("suit-sensor-location-space"); // Frontier modification
-                }
-                else
-                {
-                    coordinates = EntityCoordinates.Invalid;
-
-                    locationName = Loc.GetString("suit-sensor-location-unknown"); // Frontier modification
-                }
-
-                status.Coordinates = GetNetCoordinates(coordinates);
-                status.LocationName = locationName; //Frontier modification
-                break;
         }
 
         return status;
     }
+    // Lua sector adaptation
 
     /// <summary>
     ///     Serialize create a device network package from the suit sensors status.

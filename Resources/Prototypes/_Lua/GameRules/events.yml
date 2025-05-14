@@ -1,0 +1,44 @@
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseNukeopsRule
+  id: NukeopsFrontier
+  components:
+  - type: RuleGrids
+  - type: LoadMapRule
+    mapPath: /Maps/_Lua/ShuttleEvent/infiltratornukeops.yml
+  - type: NukeopsRule
+    roundEndBehavior: Nothing
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseGameRule
+  id: RuleFSFBravo
+  components:
+  - type: StationEvent
+    startAnnouncement: "Центральное Командование приняло решение. Мы начали подготовку отряда Браво для отправки в сектор Фронтир."
+    startAudio:
+      path: /Audio/_DeadSpace/Announcements/ERT/decision.ogg
+    weight: 10 # 10 default
+    reoccurrenceDelay: 30
+    duration: 1
+    maxOccurrences: 1 # should be the same as [copies] in shuttle_incoming_event.yml
+  - type: RuleGrids
+  - type: LoadMapRule
+    mapPath: /Maps/_Lua/ShuttleEvent/FSF/gamma_bravo.yml
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: BaseGameRule
+  id: RuleFSFCharlie
+  components:
+  - type: StationEvent
+    startAnnouncement: "Центральное Командование приняло решение. Мы начали подготовку отряда Чарли для отправки в сектор Фронтир."
+    startAudio:
+      path: /Audio/_DeadSpace/Announcements/ERT/decision.ogg
+    weight: 10 # 10 default
+    reoccurrenceDelay: 30
+    duration: 1
+    maxOccurrences: 1 # should be the same as [copies] in shuttle_incoming_event.yml
+  - type: RuleGrids
+  - type: LoadMapRule
+    mapPath: /Maps/_Lua/ShuttleEvent/FSF/gamma_charlie.yml

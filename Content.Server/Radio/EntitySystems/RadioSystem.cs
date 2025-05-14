@@ -98,15 +98,22 @@ public sealed class RadioSystem : EntitySystem
     /// </summary>
     public void SendRadioMessage(EntityUid messageSource, string message, ProtoId<RadioChannelPrototype> channel, EntityUid radioSource, int? frequency = null, bool escapeMarkup = true) // Frontier: added frequency
     {
-        SendRadioMessage(messageSource, message, _prototype.Index(channel), radioSource, frequency: frequency, escapeMarkup: escapeMarkup); // Frontier: added frequency
+        SendRadioInternal(messageSource, message, _prototype.Index(channel), radioSource, frequency: frequency, escapeMarkup: escapeMarkup, ignoreRange: false); // Frontier: added frequency // Lua SendRadioMessage<SendRadioInternal add ignoreRange
     }
+
+    // Lua Global Radio start
+    public void SendRadioMessageGlobal(EntityUid messageSource, string message, RadioChannelPrototype channel, EntityUid radioSource, int? frequency = null, bool escapeMarkup = true)
+    {
+        SendRadioInternal(messageSource, message, channel, radioSource, frequency, escapeMarkup, ignoreRange: true);
+    }
+    // Lua Global Radio end
 
     /// <summary>
     /// Send radio message to all active radio listeners
     /// </summary>
     /// <param name="messageSource">Entity that spoke the message</param>
     /// <param name="radioSource">Entity that picked up the message and will send it, e.g. headset</param>
-    public void SendRadioMessage(EntityUid messageSource, string message, RadioChannelPrototype channel, EntityUid radioSource, int? frequency = null, bool escapeMarkup = true) // Nuclear-14: add frequency
+    public void SendRadioInternal(EntityUid messageSource, string message, RadioChannelPrototype channel, EntityUid radioSource, int? frequency, bool escapeMarkup, bool ignoreRange) // Nuclear-14: add frequency // Lua SendRadioMessage<SendRadioInternal add ignoreRange
     {
         // TODO if radios ever garble / modify messages, feedback-prevention needs to be handled better than this.
         if (!_messages.Add(message))
@@ -192,7 +199,11 @@ public sealed class RadioSystem : EntitySystem
         var canSend = !sendAttemptEv.Cancelled;
 
         var sourceMapId = Transform(radioSource).MapID;
-        var hasActiveServer = HasActiveServer(sourceMapId, channel.ID);
+        //Lua mod global or local server start
+        var hasActiveServer = ignoreRange
+                    ? HasActiveServerGlobal(channel.ID)
+                    : HasActiveServer(sourceMapId, channel.ID);
+        //Lua mod global or local server end
         var sourceServerExempt = _exemptQuery.HasComp(radioSource);
 
         var radioQuery = EntityQueryEnumerator<ActiveRadioComponent, TransformComponent>();
@@ -257,6 +268,22 @@ public sealed class RadioSystem : EntitySystem
         }
         return false;
     }
+
+    // Lua global server start
+    private bool HasActiveServerGlobal(string channelId)
+    {
+        var servers = EntityQuery<TelecomServerComponent, EncryptionKeyHolderComponent, ApcPowerReceiverComponent, TransformComponent>();
+        foreach (var (_, keys, power, _) in servers)
+        {
+            if (!power.Powered)
+                continue;
+            if (!keys.Channels.Contains(channelId))
+                continue;
+            return true;
+        }
+        return false;
+    }
+    // Lua global server end
 
     private string Highlight(string msg)
     {

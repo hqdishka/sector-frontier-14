@@ -7,7 +7,7 @@
     - id: NFIonStorm
     - id: NFPowerGridCheck
     - id: NFRandomSentience
-    - id: NFSolarFlare
+    # - id: NFSolarFlare # Lua Disable
     - id: NFVentClog
     - id: NFBluespaceCargoCrate
     - id: NFBluespaceMcCargoCrate

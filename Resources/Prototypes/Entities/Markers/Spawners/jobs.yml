@@ -404,7 +404,6 @@
   id: SpawnPointMedicalDoctor
   parent: SpawnPointJobBase
   name: medicaldoctor
-  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: SpawnPoint
     job_id: MedicalDoctor
@@ -417,7 +416,6 @@
   id: SpawnPointParamedic
   parent: SpawnPointJobBase
   name: paramedic
-  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: SpawnPoint
     job_id: Paramedic
@@ -430,7 +428,6 @@
   id: SpawnPointChemist
   parent: SpawnPointJobBase
   name: chemist
-  categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: SpawnPoint
     job_id: Chemist

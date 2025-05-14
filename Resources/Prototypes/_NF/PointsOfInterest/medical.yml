@@ -12,8 +12,8 @@
   id: Medical
   parent: BasePOI
   name: 'Медицинский Центр'
-  minimumDistance: 1650
-  maximumDistance: 3400
+  minimumDistance: 450
+  maximumDistance: 600
   spawnGroup: Required
   gridPath: /Maps/_NF/POI/medical.yml
   addComponents:
@@ -43,6 +43,7 @@
           availableJobs:
             DirectorOfCare: [ 1, 1 ]
             Pilot: [ -1, -1 ]
+            Paramedic: [ 2, 2 ]
           tags:
           - HeadOfPersonnel
           - HeadOfSecurity

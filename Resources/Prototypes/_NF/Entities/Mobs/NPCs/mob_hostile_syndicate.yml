@@ -514,6 +514,8 @@
   - type: MovementSpeedModifier
     baseWalkSpeed : 4.5
     baseSprintSpeed : 4.5
+  - type: TimedDespawn
+    lifetime: 2400
 
 # Syndicate Commander, "armed" with AK
 - type: entity

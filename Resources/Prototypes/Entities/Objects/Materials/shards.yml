@@ -78,6 +78,8 @@
   - type: DeleteOnTrigger
   - type: StaticPrice
     price: 0
+  - type: TimedDespawn
+    lifetime: 1800
 
 - type: entity
   parent: ShardBase

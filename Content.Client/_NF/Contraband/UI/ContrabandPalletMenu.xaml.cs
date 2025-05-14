@@ -31,8 +31,8 @@ public sealed partial class ContrabandPalletMenu : FancyWindow
             AppraisalLabel.Text = Loc.GetString($"{_locPrefix}contraband-pallet-menu-no-goods-text");
             CountLabelLeft.Text = Loc.GetString($"{_locPrefix}contraband-pallet-menu-count-label");
             CountLabel.Text = Loc.GetString($"{_locPrefix}contraband-pallet-menu-no-goods-text");
-            AppraiseButton.Text = Loc.GetString($"{_locPrefix}contraband-pallet-appraise-button");
-            SellButton.Text = Loc.GetString($"{_locPrefix}contraband-pallet-sell-button");
+            AppraiseButton.Text = Loc.GetString($"{_locPrefix}cargo-pallet-appraise-button");
+            SellButton.Text = Loc.GetString($"{_locPrefix}cargo-pallet-sell-button");
         }
     }
 

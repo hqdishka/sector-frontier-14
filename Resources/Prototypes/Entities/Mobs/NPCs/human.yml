@@ -89,6 +89,8 @@
         Blunt: 19
   - type: Inventory
     templateId: corpse
+  - type: TimedDespawn
+    lifetime: 900
 
 - type: entity
   parent: MobHuman

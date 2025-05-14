@@ -421,22 +421,23 @@
   - Trinkets
   - GroupSpeciesBreathToolMedical
 
-- type: roleLoadout
-  id: JobMedicalDoctor
-  groups:
-  - GroupTankHarness
-  - MedicalDoctorHead
-  - MedicalMask
-  - MedicalDoctorJumpsuit
-  - MedicalGloves
-  - MedicalBackpack
-  - MedicalDoctorOuterClothing
-  - MedicalShoes
-  - MedicalDoctorPDA
-  - Glasses
-  - SurvivalMedical
-  - Trinkets
-  - GroupSpeciesBreathToolMedical
+# moved to Lua
+# - type: roleLoadout
+#   id: JobMedicalDoctor
+#   groups:
+#   - GroupTankHarness
+#   - MedicalDoctorHead
+#   - MedicalMask
+#   - MedicalDoctorJumpsuit
+#   - MedicalGloves
+#   - MedicalBackpack
+#   - MedicalDoctorOuterClothing
+#   - MedicalShoes
+#   - MedicalDoctorPDA
+#   - Glasses
+#   - SurvivalMedical
+#   - Trinkets
+#   - GroupSpeciesBreathToolMedical
 
 - type: roleLoadout
   id: JobMedicalIntern
@@ -449,35 +450,37 @@
   - Trinkets
   - GroupSpeciesBreathToolMedical
 
-- type: roleLoadout
-  id: JobChemist
-  groups:
-  - GroupTankHarness
-  - MedicalMask
-  - ChemistJumpsuit
-  - MedicalGloves
-  - ChemistBackpack
-  - ChemistOuterClothing
-  - MedicalShoes
-  - SurvivalMedical
-  - Trinkets
-  - GroupSpeciesBreathToolMedical
+# moved to Lua
+# - type: roleLoadout
+#   id: JobChemist
+#   groups:
+#   - GroupTankHarness
+#   - MedicalMask
+#   - ChemistJumpsuit
+#   - MedicalGloves
+#   - ChemistBackpack
+#   - ChemistOuterClothing
+#   - MedicalShoes
+#   - SurvivalMedical
+#   - Trinkets
+#   - GroupSpeciesBreathToolMedical
 
-- type: roleLoadout
-  id: JobParamedic
-  groups:
-  - GroupTankHarness
-  - ParamedicHead
-  - MedicalMask
-  - ParamedicJumpsuit
-  - MedicalGloves
-  - MedicalBackpack
-  - ParamedicOuterClothing
-  - ParamedicShoes
-  - Glasses
-  - SurvivalMedical
-  - Trinkets
-  - GroupSpeciesBreathToolMedical
+# moved to Lua
+# - type: roleLoadout
+#   id: JobParamedic
+#   groups:
+#   - GroupTankHarness
+#   - ParamedicHead
+#   - MedicalMask
+#   - ParamedicJumpsuit
+#   - MedicalGloves
+#   - MedicalBackpack
+#   - ParamedicOuterClothing
+#   - ParamedicShoes
+#   - Glasses
+#   - SurvivalMedical
+#   - Trinkets
+#   - GroupSpeciesBreathToolMedical
 
 # Wildcards
 - type: roleLoadout

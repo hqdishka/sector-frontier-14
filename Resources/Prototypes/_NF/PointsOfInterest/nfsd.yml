@@ -11,7 +11,7 @@
 - type: pointOfInterest
   id: Nfsd
   parent: BasePOI
-  name: 'Аванспост ДСФБ'
+  name: 'Аванспост ДСБФ'
   minimumDistance: 750
   maximumDistance: 1000
   spawnGroup: Required
@@ -27,7 +27,7 @@
 
 - type: gameMap
   id: Nfsd
-  mapName: 'Аванспост ДСФБ'
+  mapName: 'Аванспост ДСБФ'
   mapPath: /Maps/_Lua/POI/nfsd.yml
   minPlayers: 0
   stations:
@@ -35,7 +35,7 @@
       stationProto: SecurityFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Аванспост ДСФБ'
+          mapNameTemplate: 'Аванспост ДСБФ'
         - type: ExtraStationInformation
           iconPath: /Textures/_NF/Structures/Decoration/banner.rsi/nfsd-banner.png
           stationSubtext: 'frontier-lobby-nfsd-subtext'
@@ -46,10 +46,10 @@
             Sheriff: [ 1, 1 ]
             Bailiff: [ 1, 1 ]
             SeniorOfficer: [ 1, 1 ]
-            Brigmedic: [ 0, 0 ]
-            NFDetective: [ 0, 0 ]
+            Brigmedic: [ 1, 1 ]
+            NFDetective: [ 1, 1 ]
             Deputy: [ 3, 3 ]
-            Cadet: [ 0, 0 ]
+            Cadet: [ 2, 2 ]
             # Others:
             PublicAffairsLiaison: [ 1, 1 ]
           tags:

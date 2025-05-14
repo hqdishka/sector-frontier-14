@@ -80,6 +80,8 @@
   - type: Speech
     speechVerb: SmallMob
   - type: NonSpreaderZombie
+  - type: TimedDespawn
+    lifetime: 2400
 
 - type: entity
   id: MobTickSalvage

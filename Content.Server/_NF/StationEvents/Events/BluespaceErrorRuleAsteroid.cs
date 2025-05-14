@@ -19,6 +19,7 @@ using Content.Server.StationEvents.Events;
 using Content.Server._NF.Station.Systems;
 using Content.Server._NF.StationEvents.Components;
 using Robust.Shared.EntitySerialization.Systems;
+using Content.Server.LW.AsteroidSector;
 
 namespace Content.Server._NF.StationEvents.Events;
 
@@ -40,20 +41,31 @@ public sealed class BluespaceErrorRuleAsteroid : StationEventSystem<BluespaceErr
     [Dependency] private readonly StationRenameWarpsSystems _renameWarps = default!;
     [Dependency] private readonly BankSystem _bank = default!;
     [Dependency] private readonly SharedSalvageSystem _salvage = default!;
+    [Dependency] private readonly AsteroidSectorSystem _asteroid = default!;
 
     public override void Initialize()
     {
         base.Initialize();
     }
 
+    protected override MapId GetRelevantMapId()
+    {
+        return _asteroid.GetAsteroidSectorMapId();
+    }
+
     protected override void Started(EntityUid uid, BluespaceErrorRuleAsteroidComponent component, GameRuleComponent gameRule, GameRuleStartedEvent args)
     {
         base.Started(uid, component, gameRule, args);
 
-        if (!_map.TryGetMap(GameTicker.DefaultMap, out var mapUid))
+        var asteroidMapId = _asteroid.GetAsteroidSectorMapId();
+        if (asteroidMapId == MapId.Nullspace)
+        {
+            Log.Error("AsteroidSector не найден");
             return;
+        }
 
-        var spawnCoords = new EntityCoordinates(mapUid.Value, Vector2.Zero);
+        var mapUid = _mapManager.GetMapEntityId(asteroidMapId);
+        var spawnCoords = new EntityCoordinates(mapUid, Vector2.Zero);
 
         // Spawn on a dummy map and try to FTL if possible, otherwise dump it.
         _map.CreateMap(out var mapId);

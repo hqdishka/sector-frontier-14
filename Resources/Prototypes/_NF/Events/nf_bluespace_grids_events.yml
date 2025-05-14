@@ -15,7 +15,7 @@
     reoccurrenceDelay: 360 # 6 hours
     requiredJobs:
       Sheriff: 1
-  - type: BluespaceErrorRule
+  - type: BluespaceErrorRuleAsteroid
     groups:
       grid: !type:GridSpawnGroup
         nameLoc:
@@ -56,7 +56,7 @@
     reoccurrenceDelay: 360 # 6 hours
     requiredJobs:
       Sheriff: 1
-  - type: BluespaceErrorRule
+  - type: BluespaceErrorRuleAsteroid
     groups:
       grid: !type:GridSpawnGroup
         nameLoc:
@@ -136,7 +136,7 @@
     duration: 1800
     maxDuration: 2400
     reoccurrenceDelay: 360 # 6 hours
-  - type: BluespaceErrorRule
+  - type: BluespaceErrorRuleAsteroid
     groups:
       grid: !type:GridSpawnGroup
         nameLoc:
@@ -173,7 +173,7 @@
     duration: 900
     maxDuration: 1200
     reoccurrenceDelay: 360 # 6 hours
-  - type: BluespaceErrorRule
+  - type: BluespaceErrorRuleAsteroid
     groups:
       grid: !type:GridSpawnGroup
         nameLoc:
@@ -210,7 +210,7 @@
     duration: 1800
     maxDuration: 2400
     reoccurrenceDelay: 360 # 6 hours
-  - type: BluespaceErrorRule
+  - type: BluespaceErrorRuleAsteroid
     groups:
       grid: !type:GridSpawnGroup
         nameLoc:
@@ -246,7 +246,7 @@
     duration: 1800
     maxDuration: 2400
     maxOccurrences: 1
-  - type: BluespaceErrorRule
+  - type: BluespaceErrorRuleAsteroid
     groups:
       grid: !type:GridSpawnGroup
         nameLoc:
@@ -282,7 +282,7 @@
     duration: 900
     maxDuration: 1800
     reoccurrenceDelay: 240 # once per 4 hours
-  - type: BluespaceErrorRule
+  - type: BluespaceErrorRuleAsteroid
     groups:
       grid: !type:GridSpawnGroup
         nameLoc:

@@ -117,13 +117,6 @@
     - /Audio/Machines/double_ring.ogg # Frontier
 
 - type: soundCollection
-  id: HarpyHonks
-  files:
-    - /Audio/Items/bikehorn.ogg
-    - /Audio/Items/brokenbikehorn.ogg
-    - /Audio/Animals/goose_honk.ogg # Frontier
-
-- type: soundCollection
   id: HarpyPews
   files:
     - /Audio/Weapons/Guns/Gunshots/silenced.ogg

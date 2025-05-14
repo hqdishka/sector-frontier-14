@@ -166,6 +166,8 @@
   - type: Bloodstream
     bloodMaxVolume: 0.1
   - type: ZombieImmune
+  - type: TimedDespawn
+    lifetime: 2400
 
 
 - type: entity
@@ -455,6 +457,8 @@
   - type: Butcherable
     spawned:
     - id: FoodMeatSlime
+  - type: TimedDespawn
+    lifetime: 2400
 
 - type: entity
   name: mothroach
@@ -1287,6 +1291,8 @@
   - type: NpcFactionMember
     factions:
     - SimpleHostile
+  - type: TimedDespawn
+    lifetime: 2400
 
 - type: entity
   name: genetic ancestor
@@ -1506,7 +1512,7 @@
   - type: Speech
     speechSounds: Lizard
     speechVerb: Reptilian
-    allowedEmotes: ['Thump', 'ReptilianHiss'] # Imp: add ReptilianHiss
+    allowedEmotes: ['Thump', 'Hiss'] # Imp: add ReptilianHiss
   - type: Vocal
     sounds:
       Male: MaleReptilian
@@ -1972,7 +1978,7 @@
   - type: Speech
     speechSounds: Lizard
     speechVerb: Reptilian
-    allowedEmotes: ['ReptilianHiss'] # Can't thump tail because no body component
+    allowedEmotes: ['Hiss'] # Can't thump tail because no body component
   - type: Vocal
     sounds:
       Male: MaleReptilian
@@ -2939,6 +2945,8 @@
     heatDamage:
       types:
         Heat : 1 #per second, scales with temperature & other constants
+  - type: TimedDespawn
+    lifetime: 2400
 
 - type: entity
   name: corgi puppy

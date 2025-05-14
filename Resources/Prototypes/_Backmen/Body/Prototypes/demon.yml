@@ -15,17 +15,11 @@
       connections: # Goobstation - fix some species having their hands the wrong way around
       - right arm
       - left arm
-      - groin
-      - head
-      organs:
-        lungs: OrganAnimalLungs
-        heart: OrganAnimalHeart
-    groin: # Backmen edit: chest, groin separation
-      part: GroinDemon
-      connections:
       - right leg
       - left leg
       organs:
+        lungs: OrganAnimalLungs
+        heart: OrganAnimalHeart
         stomach: OrganDemonStomach
         liver: OrganAnimalLiver
         kidneys: OrganHumanKidneys

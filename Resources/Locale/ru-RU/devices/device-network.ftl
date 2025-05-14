@@ -42,3 +42,10 @@ device-net-id-wireless = Беспроводные
 device-net-id-apc = ЛКП
 device-net-id-atmos-devices = Атмос-устройства
 device-net-id-reserved = Резерв
+
+device-address-prefix-gas-drill = GDL-
+device-address-prefix-gas-sale-port = SLL-
+device-address-prefix-gaslock = LCK-
+device-address-prefix-portable-gaslock = PLK-
+
+device-frequency-prototype-name-transit-shuttle-display = Transit Shuttle Displays

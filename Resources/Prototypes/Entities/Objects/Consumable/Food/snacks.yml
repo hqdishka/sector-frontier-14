@@ -533,6 +533,8 @@
   - type: SpaceGarbage
   - type: StaticPrice
     price: 1
+  - type: TimedDespawn
+    lifetime: 900
 
 - type: entity
   categories: [ HideSpawnMenu ]

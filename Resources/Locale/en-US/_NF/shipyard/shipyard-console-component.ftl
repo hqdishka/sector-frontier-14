@@ -38,6 +38,7 @@ shipyard-console-unassign-deed = Unassign
 shipyard-console-deed-unassigned = Deed unassigned from ID card successfully.
 shipyard-console-confirm-unassign = Are you sure?
 shipyard-console-unassign-cooldown = Wait {$minutes} minute(s) before unassigning another deed.
+shipyard-console-deed-label-none = None
 
 # Keep these in enum order for ease of validation.
 shipyard-console-category-All = All

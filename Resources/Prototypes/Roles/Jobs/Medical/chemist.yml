@@ -3,15 +3,27 @@
   name: job-name-chemist
   description: job-description-chemist
   playTimeTracker: JobChemist
-  setPreference: false # Frontier
+  setPreference: true # Lua
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 10800
   startingGear: ChemistGear
+  alwaysUseSpawner: true
   icon: "JobIconChemist"
-  supervisors: job-supervisors-hire # Frontier
+  supervisors: job-supervisors-mmo # Frontier
+  access:
+  - Medical
+  - Chemistry
+  - Maintenance
   accessGroups: # Frontier
   - GeneralAccess # Frontier
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: ChemistGear

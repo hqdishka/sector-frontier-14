@@ -166,6 +166,8 @@
         Piercing: 3
         Slash: 3
         Structural: 20
+  - type: TimedDespawn
+    lifetime: 2400
 
 - type: entity
   parent: [NFMobRestrictions, NFMobSimpleHostileBase, MobCarp, NFMobRoadkillable]

@@ -49,10 +49,10 @@ namespace Content.Server._Lua.Tick
             var newRate = inGame switch
             {
                 <= 10 => 60,
-                <= 15 => 50,
+                <= 15 => 45,
                 <= 20 => 40,
-                <= 30 => 30,
-                _ => 26
+                <= 30 => 35,
+                _ => 30
             };
 
             _cfg.SetCVar(CVars.NetTickrate, newRate);

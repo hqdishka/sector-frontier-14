@@ -3,19 +3,32 @@
   name: job-name-doctor
   description: job-description-doctor
   playTimeTracker: JobMedicalDoctor
-  setPreference: false # Frontier
+  setPreference: true # Lua
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 10800
   startingGear: DoctorGear
+  alwaysUseSpawner: true
   icon: "JobIconMedicalDoctor"
-  supervisors: job-supervisors-hire # Frontier
+  supervisors: job-supervisors-mmo # Frontier
+  access:
+  - Medical
+  - Maintenance
+  extendedAccess:
+  - Paramedic
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   # special: # Frontier
   # - !type:GiveItemOnHolidaySpecial # Frontier
   #   holiday: DoctorDay # Frontier
   #   prototype: WehMedipen # Frontier
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: Company
+        companyName: Nanotrasen
 
 - type: startingGear
   id: DoctorGear

@@ -102,6 +102,8 @@
           - !type:PlaySoundBehavior
             sound:
               collection: GlassBreak
+  - type: TimedDespawn
+    lifetime: 2400
 
 - type: entity
   id: MobLuminousPerson

@@ -27,5 +27,5 @@ implanter-contained-implant-text = [color=green]{ $desc }[/color]
 ## Implanter Actions
 
 scramble-implant-activated-popup = Вы превратились в { $identity }
-deathrattle-implant-dead-message = Зафиксирована смерть { $user } { $position }.
-deathrattle-implant-critical-message = Жизненные показатели { $user } критические, требуется немедленная помощь { $position }.
+deathrattle-implant-dead-message = Зафиксирована смерть { $user } { $map} { $position }.
+deathrattle-implant-critical-message = Жизненные показатели { $user } критические, требуется немедленная помощь { $map} { $position }.

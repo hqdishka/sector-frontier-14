@@ -36,7 +36,7 @@
   # - Zookeeper # Frontier
   # - ServiceWorker # Frontier
   - Contractor # Frontier
-  - Mercenary # Frontier
+  - MercenaryBase # Lua
   - Pilot # Frontier
   - Borg # Frontier
 
@@ -118,9 +118,12 @@
   name: department-Medical
   description: department-Medical-description
   color: "#52B4E9"
-  weight: -93
-  primary: false
-  editorHidden: true # Frontier
+  weight: 49
+  roles:
+  - Chemist
+  - MedicalDoctor
+  - Paramedic
+  - DirectorOfCare
 
 - type: department
   id: Security

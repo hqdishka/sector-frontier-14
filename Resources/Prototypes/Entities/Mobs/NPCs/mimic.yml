@@ -44,3 +44,5 @@
     spawned:
     - id: DrinkChangelingStingCan
       amount: 1
+  - type: TimedDespawn
+    lifetime: 2400

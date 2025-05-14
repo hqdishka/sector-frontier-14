@@ -374,7 +374,7 @@
 - type: entity
   id: PlayerStationAiTSFMC
   parent: PlayerStationAiEmpty
-  suffix: Job spawn, ДСФБ
+  suffix: Job spawn, ДСБФ
   components:
   - type: ContainerComp
     proto: AiHeldTSFMC
