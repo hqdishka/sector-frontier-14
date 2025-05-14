@@ -35,9 +35,9 @@ public sealed partial class CircularShieldConsoleWindow : DefaultWindow
         ShieldActiveStatusLabel.SetMarkup(Loc.GetString(state.Enabled ? "shipevent-shieldconsole-active" : "shipevent-shieldconsole-inactive"));
 
         // Format and display power draw information
-        var powerDrawText = state.Enabled ?
-            Loc.GetString("shipevent-shieldconsole-powerdraw", ("watts", state.PowerDraw)) :
-            Loc.GetString("shipevent-shieldconsole-powerdraw-inactive");
+        var powerDrawText = state.Enabled
+            ? Loc.GetString("shipevent-shieldconsole-powerdraw", ("watts", state.PowerDraw))
+            : Loc.GetString("shipevent-shieldconsole-powerdraw-inactive");
         ShieldPowerDrawLabel.SetMarkup(powerDrawText);
 
         ShieldRadiusSlider.SetValueWithoutEvent(state.Radius);
