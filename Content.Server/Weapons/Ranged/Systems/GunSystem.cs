@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Numerics;
+using Content.Server._Mono.FireControl;
 using Content.Server.Cargo.Systems;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Weapons.Ranged.Components;
@@ -24,8 +25,9 @@ using Robust.Shared.Utility;
 using Robust.Shared.Containers;
 using Content.Shared.Interaction; // Frontier
 using Content.Shared.Examine; // Frontier
-using Content.Server.Power.Components;
-using Content.Shared.Power; // Frontier
+using Content.Shared._Mono;
+using Content.Shared.Power;
+using Robust.Shared.Physics.Components; // Frontier
 
 namespace Content.Server.Weapons.Ranged.Systems;
 
@@ -322,6 +324,10 @@ public sealed partial class GunSystem : SharedGunSystem
         }
 
         ShootProjectile(uid, mapDirection, gunVelocity, gunUid, user, gun.ProjectileSpeedModified);
+        if (HasComp<FireControllableComponent>(gunUid))
+        {
+            EnsureComp<ProjectileGridPhaseComponent>(uid);
+        }
     }
 
     /// <summary>
