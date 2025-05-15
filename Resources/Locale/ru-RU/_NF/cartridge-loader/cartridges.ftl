@@ -18,8 +18,10 @@ ledger-tab-Nfsd = ДСБФ
 ledger-tab-Medical = Медицинская диспетчерская
 # Fallback, if this displays, something's wrong.
 ledger-tab-Unknown = Неизвестно
+ledger-tab-Typan = Тайпан
+ledger-tab-CentComm = Центральное Командование
 
-ledger-entry-type-TickingIncome = NT Субсидии
+ledger-entry-type-TickingIncome = Субсидии
 ledger-entry-type-VendorTax = Налоги с продаж
 ledger-entry-type-CargoTax = Налоги Карго
 ledger-entry-type-MailDelivered = Почтовые выплаты
