@@ -314,7 +314,7 @@
   - type: RandomSpawner
     prototypes:
     - VesselCircuitBoard
-    - TSFMCCircuitBoard
+    - NFSDCircuitBoard
     - RogueCircuitBoard
     - NutimovCircuitBoard
     - AntimovCircuitBoard

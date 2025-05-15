@@ -85,7 +85,7 @@
   - type: FlashImmunity
   - type: EyeProtection
   - type: SolutionScanner
-  - type: PNV
+  - type: NightVision
 
 # Belt
 - type: entity

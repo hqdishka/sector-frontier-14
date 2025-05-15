@@ -3,6 +3,7 @@
 # See AGPLv3.txt for details.
 
 - type: vessel
+  parent: BaseVessel
   id: Kairiis
   name: LT Кайриис
   description: Легкий экспедиционный шаттл использует в качестве топлива уран, оборудован лазерными турелями LuaTech

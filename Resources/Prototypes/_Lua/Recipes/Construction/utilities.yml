@@ -1,0 +1,44 @@
+# FAN
+- type: construction
+  name: направленный вентилятор
+  id: AtmosDeviceFanDirectional
+  description: Небольшой вентилятор, препятствующий распространению газов.
+  graph: AtmosDeviceFanDirectional
+  startNode: start
+  targetNode: AtmosDeviceFanDirectional
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: Structures/Piping/Atmospherics/directionalfan.rsi
+    state: icon
+
+# DRAIN
+- type: construction
+  name: дренаж
+  id: FloorDrain
+  description: Сливает лужи вокруг в себя. Пригодится для опорожнения ведер или поддержания чистоты в определенных помещениях.
+  graph: FloorDrain
+  startNode: start
+  targetNode: FloorDrain
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: Objects/Specific/Janitorial/drain.rsi
+    state: icon
+
+# CRYOPOD
+- type: construction
+  name: капсула криосна
+  id: MachineCryoSleepPod
+  description: Холодная подушка обеспечена.
+  graph: MachineCryoSleepPod
+  startNode: start
+  targetNode: MachineCryoSleepPod
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  icon:
+    sprite: _NF/Structures/Machines/cryopod.rsi
+    state: closed

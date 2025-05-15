@@ -1,0 +1,194 @@
+# - type: htnCompound
+#   id: StunTurretCompoundCamera
+#   branches:
+#     - tasks:
+#         - !type:HTNPrimitiveTask
+#           operator: !type:UtilityOperator
+#             proto: NearbyStunTargets
+
+#         - !type:HTNPrimitiveTask
+#           preconditions:
+#             - !type:KeyExistsPrecondition
+#               key: Target
+#             - !type:TargetInRangePrecondition
+#               targetKey: Target
+#               # TODO: Non-scuffed
+#               rangeKey: RangedRange
+#             - !type:TargetInLOSPrecondition
+#               targetKey: Target
+#               rangeKey: RangedRange
+#           operator: !type:GunOperator
+#             targetKey: Target
+#             requireLOS: true
+#           services:
+#             - !type:UtilityService
+#               id: RangedService
+#               proto: NearbyStunTargets
+#               key: Target
+
+#     - tasks:
+#         - !type:HTNCompoundTask
+#           task: IdleSpinCompound
+
+# - type: entity
+#   abstract: true
+#   parent:
+#   - BaseC2ContrabandUnredeemable
+#   - SurveillanceCameraBase
+#   id: SurveillanceCameraTurret
+#   name: камера-АКЭТ
+#   suffix: Турель
+#   components:
+#   - type: MobState # otherwise NPCs won't attack the entity
+#   - type: MobThresholds
+#     thresholds:
+#       0: Alive
+#       500: Dead
+#   - type: Input
+#     context: "human"
+#   - type: NoRotateOnInteract
+#   - type: NoRotateOnMove
+#   - type: MouseRotator
+#     angleTolerance: 0
+#     rotationSpeed: 0
+#     simple4DirMode: false
+#   - type: Clickable
+#   - type: InteractionOutline
+#   - type: Actions
+#   - type: CombatMode
+#     toggleMouseRotator: false
+#   - type: DeviceNetwork
+#     deviceNetId: Wired
+#     transmitFrequencyId: SurveillanceCamera
+#   - type: SurveillanceCamera
+#     networkSet: true
+#   - type: HTN
+#     rootTask:
+#       task: StunTurretCompoundCamera
+#     blackboard:
+#       RotateSpeed: !type:Single
+#         3.141
+#       SoundTargetInLOS: !type:SoundPathSpecifier
+#         path: /Audio/Effects/double_beep.ogg
+#   - type: Gun
+#     fireRate: 2
+#     selectedMode: FullAuto
+#     availableModes:
+#       - FullAuto
+#     soundGunshot:
+#       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+#       params:
+#         variation: 0.125
+#   - type: ProjectileBatteryAmmoProvider
+#     proto: BulletDisablerStaminaOnly
+#     fireCost: 10
+#   - type: NpcFactionMember
+#     factions:
+#     - ContrabandDetection
+#   - type: Battery
+#     maxCharge: 500
+#     startingCharge: 500
+#   - type: BatterySelfRecharger
+#     autoRecharge: true
+#     autoRechargeRate: 5
+#   - type: Appearance
+#   - type: MagazineVisuals
+#     magState: mag
+#     steps: 8
+#     zeroVisible: true
+
+# - type: entity
+#   parent:
+#   - SurveillanceCameraTurret 
+#   - BaseC2ContrabandUnredeemable
+#   - SurveillanceCameraBase
+#   id: SurveillanceCameraEngineeringTurret
+#   name: камера-АКЭТ
+#   suffix: Турель, Инженерный
+#   components:
+#   - type: DeviceNetwork
+#     deviceNetId: Wired
+#     receiveFrequencyId: SurveillanceCameraEngineering
+#     transmitFrequencyId: SurveillanceCamera
+#   - type: SurveillanceCamera
+#     networkSet: true
+
+# - type: entity
+#   parent:
+#   - SurveillanceCameraTurret 
+#   - BaseC2ContrabandUnredeemable
+#   - SurveillanceCameraBase
+#   id: SurveillanceCameraMedicalTurret 
+#   name: камера-АКЭТ
+#   suffix: Турель, Медицинский
+#   components:
+#   - type: DeviceNetwork
+#     deviceNetId: Wired
+#     receiveFrequencyId: SurveillanceCameraMedical
+#     transmitFrequencyId: SurveillanceCamera
+#   - type: SurveillanceCamera
+#     networkSet: true
+
+# - type: entity
+#   parent:
+#   - SurveillanceCameraTurret 
+#   - BaseC2ContrabandUnredeemable
+#   - SurveillanceCameraBase
+#   id: SurveillanceCameraGeneralTurret 
+#   name: камера-АКЭТ
+#   suffix: Турель, Общий
+#   components:
+#   - type: DeviceNetwork
+#     deviceNetId: Wired
+#     receiveFrequencyId: SurveillanceCameraGeneral
+#     transmitFrequencyId: SurveillanceCamera
+#   - type: SurveillanceCamera
+#     networkSet: true
+
+# - type: entity
+#   parent:
+#   - SurveillanceCameraTurret 
+#   - BaseC2ContrabandUnredeemable
+#   - SurveillanceCameraBase
+#   id: SurveillanceCameraServiceTurret 
+#   name: камера-АКЭТ
+#   suffix: Турель, Сервис
+#   components:
+#   - type: DeviceNetwork
+#     deviceNetId: Wired
+#     receiveFrequencyId: SurveillanceCameraService
+#     transmitFrequencyId: SurveillanceCamera
+#   - type: SurveillanceCamera
+#     networkSet: true
+
+# - type: entity
+#   parent:
+#   - SurveillanceCameraTurret 
+#   - BaseC2ContrabandUnredeemable
+#   - SurveillanceCameraBase
+#   id: SurveillanceCameraCommandTurret 
+#   name: камера-АКЭТ
+#   suffix: Турель, Командование
+#   components:
+#   - type: DeviceNetwork
+#     deviceNetId: Wired
+#     receiveFrequencyId: SurveillanceCameraCommand
+#     transmitFrequencyId: SurveillanceCamera
+#   - type: SurveillanceCamera
+#     networkSet: true
+
+# - type: entity
+#   parent:
+#   - SurveillanceCameraTurret 
+#   - BaseC2ContrabandUnredeemable
+#   - SurveillanceCameraBase
+#   id: SurveillanceCameraSecurityTurret 
+#   name: камера-АКЭТ
+#   suffix: Турель, Охрана
+#   components:
+#   - type: DeviceNetwork
+#     deviceNetId: Wired
+#     receiveFrequencyId: SurveillanceCameraSecurity
+#     transmitFrequencyId: SurveillanceCamera
+#   - type: SurveillanceCamera
+#     networkSet: true

@@ -1,4 +1,4 @@
-﻿# Redacted
+# Redacted
 - type: siliconLaw
   id: Redacted1
   order: 1
@@ -88,28 +88,28 @@
   - Rogue3
   obeysTo: laws-owner-crew
 
-# TSFMC lawset
+# NFSD lawset
 - type: siliconLaw
-  id: TSFMC1
+  id: NFSD1
   order: 1
-  lawString: law-tsfmc-1
+  lawString: law-NFSD-1
 
 - type: siliconLaw
-  id: TSFMC2
+  id: NFSD2
   order: 2
-  lawString: law-tsfmc-2
+  lawString: law-NFSD-2
 
 - type: siliconLaw
-  id: TSFMC3
+  id: NFSD3
   order: 3
-  lawString: law-tsfmc-3
+  lawString: law-NFSD-3
 
 - type: siliconLawset
-  id: TSFMCLawset
+  id: NFSDLawset
   laws:
-  - TSFMC1
-  - TSFMC2
-  - TSFMC3
+  - NFSD1
+  - NFSD2
+  - NFSD3
   obeysTo: laws-owner-crew
 
 # Freeman lawset

@@ -13,6 +13,7 @@
 #
 
 - type: vessel
+  parent: BaseVessel
   id: EagleMercenary
   name: NM Eagle Mercenary
   description: Современное судно переделанное под нужды Наёмников.

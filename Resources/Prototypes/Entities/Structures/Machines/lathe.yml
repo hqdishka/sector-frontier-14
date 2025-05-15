@@ -345,9 +345,6 @@
     - BorgModules
     - MechParts
     - MechEquipment
-    # Shitmed Change
-    - BorgModulesDynamic
-    - SMCybernetics
     # Mono - Mech parts
     - ClarkeMechParts
     - DurandMechParts
@@ -451,7 +448,6 @@
     - SecurityAmmo
     - SecurityWeapons
     - SecurityDisablers
-    - SMCybernetics
     # Mono - Mech parts
     - WeaponMechCombatImmolationGun
     - WeaponMechCombatSolarisLaser

@@ -99,7 +99,7 @@ uplink-pirate-anaconda-name = Anaconda
 uplink-pirate-anaconda-desc = The pride of Cybersun engineers. A handheld, compact, self-recharging ballistic firearm.
 
 uplink-pirate-wspr-name = WSPR
-uplink-pirate-wspr-desc = A counter to the TSFMC's Annie. Uses the same .30 subsonic ammo.
+uplink-pirate-wspr-desc = A counter to the NFSD's Annie. Uses the same .30 subsonic ammo.
 
 uplink-pirate-burner-name = Burner Heavy Rifle
 uplink-pirate-burner-desc = A destructive .50 caliber rifle. Supports HE ammo. Horribly destructive.

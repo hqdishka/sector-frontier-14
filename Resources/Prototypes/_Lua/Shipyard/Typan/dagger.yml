@@ -3,6 +3,7 @@
 # See AGPLv3.txt for details.
 
 - type: vessel
+  parent: BaseVessel
   id: Dagger
   name: TY Dagger
   description: Старый боевой корабль, найденный в ангарах Синдиката. Имеет три стороны

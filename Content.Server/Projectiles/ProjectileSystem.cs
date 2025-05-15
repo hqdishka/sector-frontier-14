@@ -33,6 +33,10 @@ public sealed class ProjectileSystem : SharedProjectileSystem
     [Dependency] private readonly GunSystem _guns = default!;
     [Dependency] private readonly SharedCameraRecoilSystem _sharedCameraRecoil = default!;
 
+    [Dependency] private readonly StatusEffectsSystem _statusEffectsSystem = default!; // Frontier
+    [Dependency] private readonly BlindableSystem _blindingSystem = default!; // Frontier
+    [Dependency] private readonly IRobustRandom _random = default!; // Frontier
+    [Dependency] private readonly ChatSystem _chat = default!; // Frontier
 
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
@@ -70,6 +74,11 @@ public sealed class ProjectileSystem : SharedProjectileSystem
         var ev = new ProjectileHitEvent(component.Damage * _damageableSystem.UniversalProjectileDamageModifier, target, component.Shooter);
         RaiseLocalEvent(uid, ref ev);
 
+        if (component.RandomBlindChance > 0.0f && _random.Prob(component.RandomBlindChance)) // Frontier - bb make you go blind
+        {
+            TryBlind(target);
+        }
+
         var otherName = ToPrettyString(target);
         var damageRequired = _destructibleSystem.DestroyedAt(target);
         if (TryComp<DamageableComponent>(target, out var damageableComponent))
@@ -88,7 +97,7 @@ public sealed class ProjectileSystem : SharedProjectileSystem
             }
 
             _adminLogger.Add(LogType.BulletHit,
-                LogImpact.Medium,
+                HasComp<ActorComponent>(target) ? LogImpact.Extreme : LogImpact.High,
                 $"Projectile {ToPrettyString(uid):projectile} shot by {ToPrettyString(component.Shooter!.Value):user} hit {otherName:target} and dealt {modifiedDamage.GetTotal():damage} damage");
         }
 

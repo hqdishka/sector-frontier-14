@@ -27,8 +27,8 @@
   - type: Climbable
   - type: CryoSleep
   - type: Construction
-    graph: Cryopod
-    node: cryoPod
+    graph: MachineCryoSleepPod
+    node: MachineCryoSleepPod
   - type: ContainerContainer
     containers:
       body_container: !type:ContainerSlot

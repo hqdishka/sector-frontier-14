@@ -25,7 +25,8 @@ public sealed class HolopadBoundUserInterface : BoundUserInterface
         base.Open();
 
         _window = this.CreateWindow<HolopadWindow>();
-        _window.Title = Loc.GetString("holopad-window-title", ("title", EntMan.GetComponent<MetaDataComponent>(Owner).EntityName));
+        //_window.Title = Loc.GetString("holopad-window-title", ("title", EntMan.GetComponent<MetaDataComponent>(Owner).EntityName));
+        _window.Title = Loc.GetString("holopad-window-title"); // Lua
 
         if (this.UiKey is not HolopadUiKey)
         {

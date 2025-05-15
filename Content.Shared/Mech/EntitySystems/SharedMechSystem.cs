@@ -494,6 +494,21 @@ public abstract class SharedMechSystem : EntitySystem
         component.EquipmentWhitelist = null;
         Dirty(uid, component);
     }
+
+    // Frontier
+    private void RaiseEquipmentEquippedEvent(Entity<MechComponent> ent, EntityUid? pilot = null)
+    {
+        if (_net.IsServer && ent.Comp.CurrentSelectedEquipment != null)
+        {
+            var ev = new MechEquipmentEquippedAction
+            {
+                Mech = ent,
+                Pilot = pilot ?? ent.Comp.PilotSlot.ContainedEntity
+            };
+            RaiseLocalEvent(ent.Comp.CurrentSelectedEquipment.Value, ev);
+        }
+    }
+    // End Frontier
 }
 
 /// <summary>

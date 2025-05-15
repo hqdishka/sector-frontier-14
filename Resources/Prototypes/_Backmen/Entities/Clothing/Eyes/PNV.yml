@@ -14,7 +14,7 @@
     slots: [ Eyes ]
   - type: UseDelay
     delay: 4
-  - type: PNV
+  - type: NightVision
 
 - type: entity
   parent: ClothingEyesVision
@@ -34,7 +34,7 @@
     icon:
       sprite: Clothing/Eyes/Glasses/ninjavisor.rsi
       state: icon
-    event: !type:NVInstantActionEvent
+    event: !type:ToggleNightVisionEvent
 
 - type: entity
   id: SwitchNightVision
@@ -47,4 +47,4 @@
     icon:
       sprite: Clothing/Eyes/Glasses/ninjavisor.rsi
       state: icon
-    event: !type:NVInstantActionEvent
+    event: !type:ToggleNightVisionEvent

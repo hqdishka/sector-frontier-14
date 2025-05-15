@@ -37,6 +37,12 @@
   priority: 1
 
 - type: guideEntry
+  id: CYREXAGuide
+  name: guide-entry-cyrexa
+  text: "/ServerInfo/_Mono/Guidebook/Specifications/CYREXA.xml"
+  priority: 1
+
+- type: guideEntry
   id: ASM302Guide
   name: guide-entry-asm302
   text: "/ServerInfo/_Mono/Guidebook/Specifications/ASM302.xml"

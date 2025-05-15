@@ -608,7 +608,7 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
     }
 
     /// <summary>
-    /// Sends an emergency signal to the TSFMC radio channel with the shuttle's name and location
+    /// Sends an emergency signal to the NFSD radio channel with the shuttle's name and location
     /// </summary>
     private void SendPanicSignal(EntityUid uid, EntityUid user, ShuttleConsoleComponent component)
     {
@@ -650,7 +650,7 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
             ("gridName", gridName),
             ("coordinates", $"{mapCoordinates.Position.X:0.0}, {mapCoordinates.Position.Y:0.0}"));
 
-        // Send to TSFMC radio channel
+        // Send to NFSD radio channel
         _radioSystem.SendRadioMessage(user, message, "Nfsd", uid);
 
         // Lock the console in emergency mode

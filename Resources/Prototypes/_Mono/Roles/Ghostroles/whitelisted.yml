@@ -52,11 +52,11 @@
   #     time: 36000 # 10 hours
 
 - type: ghostRole
-  id: TSFMCAICore
-  name: ghost-role-information-tsfmc-core
-  description: ghost-role-information-tsfmc-core-description
+  id: NFSDAICore
+  name: ghost-role-information-NFSD-core
+  description: ghost-role-information-NFSD-core-description
   rules: ghost-role-information-silicon-rules
-  entityPrototype: StationAiBrainTSFMC
+  entityPrototype: StationAiBrainNFSD
   whitelisted: false
   # requirements:
   #   - !type:DepartmentTimeRequirement

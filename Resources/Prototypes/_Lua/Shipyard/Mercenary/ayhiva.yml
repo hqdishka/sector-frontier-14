@@ -3,6 +3,7 @@
 # See AGPLv3.txt for details.
 
 - type: vessel
+  parent: BaseVessel
   id: Ayhiva
   name: LT Айхива
   description: Боевой корабль созданный для длительных боев корпорацией LuaTech.

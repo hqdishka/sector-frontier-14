@@ -3,6 +3,7 @@
 # See AGPLv3.txt for details.
 
 - type: vessel
+  parent: BaseVessel
   id: Grabber
   name: SD Grabber
   description: Хвататель, или же Граббер обладает уникальной защитой по бокам и неплохое

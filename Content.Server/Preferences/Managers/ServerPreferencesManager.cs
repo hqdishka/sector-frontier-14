@@ -3,7 +3,6 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Content.Server.Database;
-using Content.Server.GameTicking; // Lua
 using Content.Shared.CCVar;
 using Content.Shared.Preferences;
 using Robust.Server.Player;
@@ -154,16 +153,6 @@ namespace Content.Server.Preferences.Managers
 
             var arr = new Dictionary<int, ICharacterProfile>(curPrefs.Characters);
             arr.Remove(slot);
-
-            // Lua slot cleaner
-            var ticker = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<GameTicker>();
-            if (ticker._usedCharacterProfiles.TryGetValue(userId, out var used))
-            {
-                used.Remove(slot);
-                if (used.Count == 0)
-                    ticker._usedCharacterProfiles.Remove(userId);
-            }
-            // Lua slot cleaner
 
             prefsData.Prefs = new PlayerPreferences(arr, nextSlot ?? curPrefs.SelectedCharacterIndex, curPrefs.AdminOOCColor);
 

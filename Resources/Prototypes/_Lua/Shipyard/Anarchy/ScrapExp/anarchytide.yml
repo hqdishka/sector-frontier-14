@@ -3,6 +3,7 @@
 # See AGPLv3.txt for details.
 
 - type: vessel
+  parent: BaseVessel
   id: AnarchyTide
   name: NA Tide
   description: Дешевый шаттл массового производства, собранный из говна и палок. Для опытного пилота.

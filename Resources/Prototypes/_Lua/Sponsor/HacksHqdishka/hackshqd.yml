@@ -117,7 +117,7 @@
   - type: FlashImmunity
   - type: EyeProtection
   - type: SolutionScanner
-  - type: PNV #Нет на Фобосе
+  - type: NightVision #Нет на Фобосе
 
 - type: entity
   parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]

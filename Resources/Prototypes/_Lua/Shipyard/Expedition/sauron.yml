@@ -3,6 +3,7 @@
 # See AGPLv3.txt for details.
 
 - type: vessel
+  parent: BaseVessel
   id: Sauron
   name: NT Sauron
   description: Научный шаттл, сделанный под заказ известной компанией. Имеет возможность

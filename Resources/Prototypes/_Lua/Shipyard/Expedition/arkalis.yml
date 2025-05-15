@@ -4,6 +4,7 @@
 
 - type: vessel
   id: Arkalis
+  parent: BaseVessel
   name: LT Аркалис
   description: Списанный крупный военный корабль переоборудованный под гражданские нужды.
   price: 260000

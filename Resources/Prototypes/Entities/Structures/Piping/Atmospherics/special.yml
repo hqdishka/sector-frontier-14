@@ -54,3 +54,6 @@
   - type: Tag
     tags:
       - SpreaderIgnore
+  - type: Construction
+    graph: AtmosDeviceFanDirectional
+    node: AtmosDeviceFanDirectional

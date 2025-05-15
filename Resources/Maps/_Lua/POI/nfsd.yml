@@ -16992,9 +16992,6 @@ entities:
     - type: Transform
       pos: -1.5517564,13.494865
       parent: 1
-    - type: SpecialRespawn
-      stationMap:
-        invalid: 1
 - proto: OxygenCanister
   entities:
   - uid: 2260
@@ -17883,7 +17880,7 @@ entities:
     - type: Transform
       pos: -6.5,18.5
       parent: 1
-- proto: PlayerStationAiTSFMC
+- proto: PlayerStationAiNFSD
   entities:
   - uid: 73
     components:

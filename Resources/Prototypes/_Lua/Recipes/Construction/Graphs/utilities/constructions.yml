@@ -1,0 +1,121 @@
+- type: constructionGraph
+  id: MachineCryoSleepPod
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: MachineCryoSleepPod
+      steps:
+      - material: Gold
+        amount: 30
+        doAfter: 1
+      - material: Cloth
+        amount: 15
+        doAfter: 1
+      - material: Plasteel
+        amount: 15
+        doAfter: 1
+      - material: Durathread
+        amount: 30
+        doAfter: 1
+      - material: Uranium
+        amount: 10
+        doAfter: 1
+      - material: ReinforcedUraniumGlass
+        amount: 20
+        doAfter: 1
+
+
+  - node: MachineCryoSleepPod
+    entity: MachineCryoSleepPod
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: IngotGold1
+        amount: 30
+      - !type:SpawnPrototype
+        prototype: MaterialCloth1
+        amount: 15
+      - !type:SpawnPrototype
+        prototype: SheetPlasteel1
+        amount: 15
+      - !type:SpawnPrototype
+        prototype: MaterialDurathread1
+        amount: 30
+      - !type:SpawnPrototype
+        prototype: SheetRUGlass1
+        amount: 10
+      - !type:SpawnPrototype
+        prototype: SheetUranium1
+        amount: 20
+      - !type:DeleteEntity
+      steps:
+      - tool: Screwing
+        doAfter: 1
+      - tool: Welding
+        doAfter: 1
+
+
+- type: constructionGraph
+  id: FloorDrain
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: FloorDrain
+      steps:
+      - material: Gold
+        amount: 30
+        doAfter: 1
+
+  - node: FloorDrain
+    entity: FloorDrain
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: IngotGold1
+        amount: 30
+      - !type:DeleteEntity
+      steps:
+      - tool: Screwing
+        doAfter: 1
+      - tool: Welding
+        doAfter: 1
+
+- type: constructionGraph
+  id: AtmosDeviceFanDirectional
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: AtmosDeviceFanDirectional
+      steps:
+      - material: Gold
+        amount: 15
+        doAfter: 1
+
+  - node: AtmosDeviceFanDirectional
+    entity: AtmosDeviceFanDirectional
+    edges:
+    - to: start
+      conditions:
+      - !type:EntityAnchored
+        anchored: false
+      completed:
+      - !type:SpawnPrototype
+        prototype: IngotGold1
+        amount: 15
+      - !type:DeleteEntity
+      steps:
+      - tool: Screwing
+        doAfter: 1
+      - tool: Welding
+        doAfter: 1

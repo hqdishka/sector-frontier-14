@@ -70,7 +70,6 @@
     factions:
     - SimpleHostile
   - type: NightVision
-    isToggle: true
     color: "#BF4943"
   - type: PassiveDamage
     allowedStates:

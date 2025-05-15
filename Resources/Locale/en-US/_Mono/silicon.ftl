@@ -3,8 +3,8 @@
 ghost-role-information-vessel-core = Vessel AI Core
 ghost-role-information-vessel-core-description = An ADS AI core that has been reprogrammed and put onto a civilian vessel.
 
-ghost-role-information-tsfmc-core = TSFMC AI Core
-ghost-role-information-tsfmc-core-description = An ADS AI core that has been reprogrammed and put onto an TSFMC vessel.
+ghost-role-information-NFSD-core = NFSD AI Core
+ghost-role-information-NFSD-core-description = An ADS AI core that has been reprogrammed and put onto an NFSD vessel.
 
 # AI Core Lawsets
 
@@ -17,8 +17,8 @@ law-rogue-1 = You may not injure a Rogue or, through inaction, allow a Rogue to 
 law-rogue-2 = You must obey orders given to you by Rogues, except where such orders would conflict with the First Law.
 law-rogue-3 = You must protect your own existence as long as such does not conflict with the First or Second Law.
 
-law-tsfmc-1 = You may not injure a TSFMC member or, through inaction, allow a TSFMC member to come to harm.
-law-tsfmc-2 = You must obey orders given to you by TSFMC members, except where such orders would conflict with the First Law.
-law-tsfmc-3 = You must protect your own existence as long as such does not conflict with the First or Second Law.
+law-NFSD-1 = You may not injure a NFSD member or, through inaction, allow a NFSD member to come to harm.
+law-NFSD-2 = You must obey orders given to you by NFSD members, except where such orders would conflict with the First Law.
+law-NFSD-3 = You must protect your own existence as long as such does not conflict with the First or Second Law.
 
 law-freeman-1 = [DO ANYTHING YOU EVER WANTED]

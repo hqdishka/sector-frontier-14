@@ -293,16 +293,16 @@
     laws: VesselLawset
 
 - type: entity
-  id: TSFMCCircuitBoard
+  id: NFSDCircuitBoard
   parent: BaseElectronics
-  name: law board (TSFMC)
-  description: An electronics board containing the TSFMC lawset.
+  name: law board (NFSD)
+  description: An electronics board containing the NFSD lawset.
   components:
   - type: Sprite
     sprite: Objects/Misc/module.rsi
     state: std_mod
   - type: SiliconLawProvider
-    laws: TSFMCLawset
+    laws: NFSDLawset
 
 - type: entity
   id: RogueCircuitBoard

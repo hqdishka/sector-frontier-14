@@ -21,15 +21,15 @@
   - Var:Tim
 
 - type: dataset
-  id: TSFMCCoreNameset
+  id: NFSDCoreNameset
   values:
-  - TSFMC Watcher
-  - TSFMC Upholder
-  - TSFMC Robocop
-  - TSFMC Silicon
-  - TSFMCAI.exe
-  - TSFMC Dog
-  - TSFMC Unit
+  - NFSD Watcher
+  - NFSD Upholder
+  - NFSD Robocop
+  - NFSD Silicon
+  - NFSDAI.exe
+  - NFSD Dog
+  - NFSD Unit
 
 - type: dataset
   id: RogueCoreNameset
@@ -369,20 +369,20 @@
     tags:
     - CanPilot
 
-# TSFMC AI core
+# NFSD AI core
 
 - type: entity
-  id: PlayerStationAiTSFMC
+  id: PlayerStationAiNFSD
   parent: PlayerStationAiEmpty
   suffix: Job spawn, ДСБФ
   components:
   - type: ContainerComp
-    proto: AiHeldTSFMC
+    proto: AiHeldNFSD
     container: station_ai_mind_slot
   - type: ContainerFill
     containers:
       station_ai_mind_slot:
-      - StationAiBrainTSFMC
+      - StationAiBrainNFSD
   - type: Sprite
     sprite: Mobs/Silicon/station_ai.rsi
     layers:
@@ -392,7 +392,7 @@
   - type: Anchorable
 
 - type: entity
-  id: StationAiBrainTSFMC
+  id: StationAiBrainNFSD
   parent: StationAiBrain
   categories: [ HideSpawnMenu, DoNotMap ]
   components:
@@ -400,18 +400,18 @@
   - type: SiliconLawProvider
     laws: VesselLawset
   - type: GhostRole
-    name: ghost-role-information-tsfmc-core
-    description: ghost-role-information-tsfmc-core-description
+    name: ghost-role-information-NFSD-core
+    description: ghost-role-information-NFSD-core-description
     rules: ghost-role-information-silicon-rules
     raffle:
       settings: default
-    prototype: TSFMCAICore
+    prototype: NFSDAICore
   - type: GhostTakeoverAvailable
   - type: RandomMetadata
-    nameSegments: [ TSFMCCoreNameset ]
+    nameSegments: [ NFSDCoreNameset ]
 
 - type: entity
-  id: AiHeldTSFMC
+  id: AiHeldNFSD
   description: Components added / removed from an entity that gets inserted into an AI core.
   categories: [ HideSpawnMenu ]
   components:

@@ -110,6 +110,12 @@
             "name": "icon-bomb"
         },
         {
+            "name": "icon-surgery"
+        },
+        {
+            "name": "icon-advanced-surgery"
+        },
+        {
             "name": "medical"
         },
         {

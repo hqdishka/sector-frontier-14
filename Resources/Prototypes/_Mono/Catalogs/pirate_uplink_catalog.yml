@@ -31,7 +31,7 @@
       - PirateUplink
   - !type:BuyerJobCondition
     whitelist:
-      - PirateCaptain
+      - NFPirateCaptain
 
 - type: listing
   id: UplinkPirateChemicalSynthesisKit

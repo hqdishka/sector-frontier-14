@@ -33619,7 +33619,7 @@ entities:
     - type: Transform
       pos: -33.5,5.5
       parent: 2
-- proto: PlayerStationAiTSFMC
+- proto: PlayerStationAiNFSD
   entities:
   - uid: 6563
     components:

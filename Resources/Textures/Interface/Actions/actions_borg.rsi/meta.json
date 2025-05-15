@@ -105,6 +105,12 @@
         },
         {
             "name": "select-type"
+        },
+        {
+            "name": "adv-surgery-module"
+        },
+        {
+            "name": "surgery-module"
         }
     ]
 }

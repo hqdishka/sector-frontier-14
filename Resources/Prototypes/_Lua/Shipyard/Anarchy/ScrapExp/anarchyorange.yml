@@ -3,6 +3,7 @@
 # See AGPLv3.txt for details.
 
 - type: vessel
+  parent: BaseVessel
   id: AnarchyOrange
   name: NA Orange
   description: Спасательный челнок, сделанный из найденных обломков, имеет большие повреждения.
