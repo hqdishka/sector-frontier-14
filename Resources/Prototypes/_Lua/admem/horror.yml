@@ -70,7 +70,9 @@
     factions:
     - SimpleHostile
   - type: NightVision
-    color: "#BF4943"
+    color: "#808080"
+    activateSound: null
+    deactivateSound: null
   - type: PassiveDamage
     allowedStates:
     - Alive

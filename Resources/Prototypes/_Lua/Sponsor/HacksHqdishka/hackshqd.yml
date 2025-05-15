@@ -117,7 +117,12 @@
   - type: FlashImmunity
   - type: EyeProtection
   - type: SolutionScanner
-  - type: NightVision #Нет на Фобосе
+  - type: ThermalVision
+    isEquipment: true
+    toggleAction: ToggleThermalVision
+  - type: NightVision
+    isEquipment: true
+    toggleAction: ToggleNightVision
 
 - type: entity
   parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
