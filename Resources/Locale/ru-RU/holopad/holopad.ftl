@@ -1,5 +1,5 @@
 # Window headers
-holopad-window-title = { CAPITALIZE($title) }
+holopad-window-title = Голопад
 holopad-window-subtitle = [color=white][bold]Система голографической связи[/bold][/color]
 holopad-window-options = [color=darkgray][font size=10][italic]Пожалуйста, выберите вариант из списка ниже[/italic][/font][/color]
 # Call status

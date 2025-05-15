@@ -6,6 +6,7 @@ using Content.Shared.Mobs.Components; // Frontier
 using System.Numerics; // Frontier
 using Robust.Shared.Map; // Frontier
 using Content.Server._NF.Salvage; // Frontier
+using Robust.Shared.Spawners;
 
 using EntityPosition = (Robust.Shared.GameObjects.EntityUid Entity, Robust.Shared.Map.EntityCoordinates Coordinates);
 using Content.Server.StationEvents.Events; // Frontier
@@ -19,6 +20,9 @@ public sealed class LocalityLoaderSystem : BaseWorldSystem
 {
     [Dependency] private readonly TransformSystem _xformSys = default!;
     [Dependency] private readonly LinkedLifecycleGridSystem _linkedLifecycleGrid = default!;
+
+    // Duration to reset the despawn timer to when a debris is loaded into a player's view.
+    private const float DebrisActiveDuration = 1200; //20 минут
 
     public override void Initialize()
     {
@@ -61,6 +65,9 @@ public sealed class LocalityLoaderSystem : BaseWorldSystem
                         if ((_xformSys.GetWorldPosition(loaderXform) - _xformSys.GetWorldPosition(xform)).Length() > loadable.LoadingDistance)
                             continue;
 
+                        // Reset the TimedDespawnComponent's lifetime when loaded
+                        ResetTimedDespawn(uid);
+
                         RaiseLocalEvent(uid, new LocalStructureLoadedEvent());
                         RemCompDeferred<LocalityLoaderComponent>(uid);
                         done = true;
@@ -68,6 +75,19 @@ public sealed class LocalityLoaderSystem : BaseWorldSystem
                     }
                 }
             }
+        }
+    }
+    private void ResetTimedDespawn(EntityUid uid)
+    {
+        if (TryComp<TimedDespawnComponent>(uid, out var timedDespawn))
+        {
+            timedDespawn.Lifetime = DebrisActiveDuration;
+        }
+        else
+        {
+            // Add TimedDespawnComponent if it does not exist
+            timedDespawn = AddComp<TimedDespawnComponent>(uid);
+            timedDespawn.Lifetime = DebrisActiveDuration;
         }
     }
 

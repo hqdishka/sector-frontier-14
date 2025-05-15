@@ -1,1 +1,0 @@
-holopad-window-title = Голопад
