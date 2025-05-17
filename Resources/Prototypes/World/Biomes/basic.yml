@@ -1,10 +1,9 @@
 - type: spaceBiome
   id: AsteroidsStandard
+  parent: NFBiomeBase
   priority: 0 # This probably shouldn't get selected.
   noiseRanges: {}
   chunkComponents:
-    - type: DebrisFeaturePlacerController
-      densityNoiseChannel: Density
     - type: SimpleDebrisSelector
       debrisTable:
         - id: AsteroidDebrisSmall
@@ -39,18 +38,12 @@
           prob: 0.01
           orGroup: wreck
 
-    - type: NoiseRangeCarver
-      ranges:
-        - 0.4, 0.6
-      noiseChannel: Carver
-
 - type: spaceBiome
   id: AsteroidSectorStandard
+  parent: NFBiomeBase
   priority: 0 # This probably shouldn't get selected.
   noiseRanges: {}
   chunkComponents:
-    - type: DebrisFeaturePlacerController
-      densityNoiseChannel: Density
     - type: SimpleDebrisSelector
       debrisTable:
         - id: AsteroidDebrisMedium
@@ -472,8 +465,3 @@
         - id: NFWreckDebrisBrassExtraLarge
           prob: 0.01
           orGroup: wreck
-
-    - type: NoiseRangeCarver
-      ranges:
-        - 0.4, 0.6
-      noiseChannel: Carver

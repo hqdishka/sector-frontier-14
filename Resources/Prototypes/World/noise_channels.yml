@@ -1,4 +1,4 @@
-﻿- type: noiseChannel
+- type: noiseChannel
   id: Density
   noiseType: Perlin
   fractalLacunarityByPi: 0.666666666
@@ -6,7 +6,7 @@
   clippingRanges:
     - 0.4, 0.6
   clippedValue: 15.258 # MONO NOTE = BIGGER = SMALLER AMOUNT OF ASTEROIDS!!!
-  inputMultiplier: 3 # Makes density hopefully low noise in the local area while still being interesting at scale.
+  inputMultiplier: 1.7647059 # Makes density hopefully low noise in the local area while still being interesting at scale.
   outputMultiplier: 5000.0 # We scale density up significantly for more human-friendly numbers.
   minimum: 0.25
 

@@ -13,8 +13,6 @@
     sprite: _Lua/Clothing/Head/Hats/foxyears_orange.rsi
   - type: Clothing
     sprite: _Lua/Clothing/Head/Hats/foxyears_orange.rsi
-  - type: AddAccentClothing
-    accent: GrowlingAccent
   # - type: InteractionPopup
     # successChance: 1
     # interactSuccessSpawn: EffectHearts

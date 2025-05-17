@@ -13,7 +13,7 @@
     - type: SimpleDebrisSelector
       debrisTable:
         - id: AsteroidDebrisSmall
-          prob: 0.11
+          prob: 0.05
 
 - type: spaceBiome
   id: AsteroidSectorFallback
@@ -25,9 +25,9 @@
     - type: SimpleDebrisSelector
       debrisTable:
         - id: AsteroidDebrisMedium
-          prob: 0.1 # Mono
+          prob: 0.07 # Mono
         - id: AsteroidDebrisLarge
-          prob: 0.11 # Mono
+          prob: 0.05 # Mono
         - id: AsteroidDebrisLarger
           prob: 0.02 # Mono
 

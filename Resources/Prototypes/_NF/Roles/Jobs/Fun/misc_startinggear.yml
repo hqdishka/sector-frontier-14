@@ -4,6 +4,9 @@
   equipment:
     back: ClothingBackpackSatchelHolding
     id: NFAdminPDA
+    ears: ClothingHeadsetDeathSquad # Lua
+    head: LWClothingHeadHatFoxyB # Lua
+    eyes: ClothingEyesChameleon # Lua
   storage:
     back:
     - GasAnalyzer
