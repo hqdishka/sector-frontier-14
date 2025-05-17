@@ -1,14 +1,7 @@
 using Content.Server.Worldgen.Components;
 using Robust.Server.GameObjects;
 using Content.Server._NF.Worldgen.Components.Debris; // Frontier
-using Content.Shared.Humanoid; // Frontier
-using Content.Shared.Mobs.Components; // Frontier
-using System.Numerics; // Frontier
-using Robust.Shared.Map; // Frontier
 using Content.Server._NF.Salvage; // Frontier
-using Robust.Shared.Spawners;
-
-using EntityPosition = (Robust.Shared.GameObjects.EntityUid Entity, Robust.Shared.Map.EntityCoordinates Coordinates);
 using Content.Server.StationEvents.Events; // Frontier
 
 namespace Content.Server.Worldgen.Systems;
@@ -19,16 +12,17 @@ namespace Content.Server.Worldgen.Systems;
 public sealed class LocalityLoaderSystem : BaseWorldSystem
 {
     [Dependency] private readonly TransformSystem _xformSys = default!;
-    [Dependency] private readonly LinkedLifecycleGridSystem _linkedLifecycleGrid = default!;
+    [Dependency] private readonly LinkedLifecycleGridSystem _linkedLifecycleGrid = default!; // Frontier
 
     // Duration to reset the despawn timer to when a debris is loaded into a player's view.
     private const float DebrisActiveDuration = 1200; //20 минут
 
+    // Frontier: space debris destruction
     public override void Initialize()
     {
         SubscribeLocalEvent<SpaceDebrisComponent, EntityTerminatingEvent>(OnDebrisDespawn);
     }
-    // Frontier
+    // End Frontier: space debris destruction
 
     /// <inheritdoc />
     public override void Update(float frameTime)
@@ -94,24 +88,19 @@ public sealed class LocalityLoaderSystem : BaseWorldSystem
     // Frontier
     private void OnDebrisDespawn(EntityUid entity, SpaceDebrisComponent component, EntityTerminatingEvent e)
     {
-        if (entity != null)
+        // Handle mobrestrictions getting deleted
+        var query = AllEntityQuery<NFSalvageMobRestrictionsComponent>();
+
+        while (query.MoveNext(out var salvUid, out var salvMob))
         {
-            // Handle mobrestrictions getting deleted
-            var query = AllEntityQuery<NFSalvageMobRestrictionsComponent>();
-
-            while (query.MoveNext(out var salvUid, out var salvMob))
-            {
-                if (entity == salvMob.LinkedGridEntity)
-                {
-                    QueueDel(salvUid);
-                }
-            }
-
-            // Do not delete the grid, it is being deleted.
-            _linkedLifecycleGrid.UnparentPlayersFromGrid(grid: entity, deleteGrid: false, ignoreLifeStage: true);
+            if (entity == salvMob.LinkedGridEntity)
+                QueueDel(salvUid);
         }
+
+        // Do not delete the grid, it is being deleted.
+        _linkedLifecycleGrid.UnparentPlayersFromGrid(grid: entity, deleteGrid: false, ignoreLifeStage: true);
     }
-    // Frontier
+    // End Frontier
 }
 
 /// <summary>

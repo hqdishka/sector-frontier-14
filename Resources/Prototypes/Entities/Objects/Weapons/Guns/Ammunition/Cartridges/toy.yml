@@ -27,4 +27,4 @@
   components:
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: BulletCap
+    # proto: BulletCap # Frontier

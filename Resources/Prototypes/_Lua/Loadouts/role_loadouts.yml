@@ -27,7 +27,7 @@
   - MedicalBackpack
   - ParamedicOuterClothing
   - ParamedicShoes
-  - Glasses
+  - MedicalEyewear
   - NFSpeciesSpecific
   - ContractorWallet
   - TopUnderwear
@@ -45,7 +45,7 @@
   - MedicalDoctorOuterClothing
   - MedicalShoes
   - MedicalDoctorPDA
-  - Glasses
+  - MedicalEyewear
   - NFSpeciesSpecific
   - ContractorWallet
   - TopUnderwear

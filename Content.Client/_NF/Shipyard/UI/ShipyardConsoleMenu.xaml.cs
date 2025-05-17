@@ -33,11 +33,10 @@ public sealed partial class ShipyardConsoleMenu : FancyWindow
     private bool _freeListings = false;
     private bool _validId = false;
 
-    public ShipyardConsoleMenu(ShipyardConsoleBoundUserInterface owner)
+    public ShipyardConsoleMenu()
     {
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
-        _menu = owner;
         Title = Loc.GetString("shipyard-console-menu-title");
         SearchBar.OnTextChanged += OnSearchBarTextChanged;
         Categories.OnItemSelected += OnCategoryItemSelected;

@@ -4,7 +4,7 @@
 #CREW
 #Recruit
 - type: entity
-  parent: Clothing
+  parent: [ Clothing, BaseC3SyndicateContrabandNoValue ] 
   id: ClothingSyndieBaseOutpostTypan
   name: syndicate base
   description: A dubious,, dark-grey jumpsuit. As if passengers weren't dubious enough already.
@@ -47,7 +47,7 @@
     sprite: Clothing/Uniforms/Jumpsuit/recruit_nt.rsi
 
 - type: entity
-  parent: ClothingSyndieBaseOutpostTypan
+  parent: [ ClothingSyndieBaseOutpostTypan, BaseC3SyndicateContrabandNoValue ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandNoValue
   id: ClothingUniformJumpsuitRecruitSyndie
   name: syndicate recruit jumpsuit
   description: A dubious, dark-grey jumpsuit. As if passengers weren't dubious enough already.
@@ -70,7 +70,7 @@
     sprite: Clothing/Uniforms/Jumpsuit/repairman_nt.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ ClothingUniformBase, BaseC3SyndicateContrabandNoValue ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandNoValue
   id: ClothingUniformJumpsuitRepairmanSyndie
   name: syndicate repairman jumpsuit
   description: Functional, fashionable, and badass. Nanotrasen's engineers wish they could look as good as this.
@@ -93,7 +93,7 @@
     sprite: Clothing/Uniforms/Jumpsuit/paramedic_nt.rsi
 
 - type: entity
-  parent: ClothingSyndieBaseOutpostTypan
+  parent: [ ClothingUniformBase, BaseC3SyndicateContrabandNoValue ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandNoValue
   id: ClothingUniformJumpsuitParamedicSyndie
   name: syndicate paramedic jumpsuit
   description: For some reason, wearing this makes you feel like you're awfully close to violating the Geneva Convention.
@@ -117,7 +117,7 @@
     sprite: Clothing/Uniforms/Jumpsuit/ce_nt.rsi
 
 - type: entity
-  parent: ClothingSyndieBaseOutpostTypan
+  parent: [ ClothingUniformBase, BaseC3SyndicateContrabandNoValue ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandNoValue
   id: ClothingUniformJumpsuitChiefEngineerSyndie
   name: syndicate chief engineer jumpsuit
   description: An evil-looking jumpsuit with a reflective vest & red undershirt. #TODO: Write a better description for this once Ship vs. Ship is real and actual player habits begin forming

@@ -183,6 +183,19 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             profile = HumanoidCharacterProfile.RandomWithSpecies(speciesId);
         }
 
+        if (profile != null)
+        {
+            _humanoidSystem.LoadProfile(entity.Value, profile);
+            _metaSystem.SetEntityName(entity.Value, profile.Name);
+
+            if (profile.FlavorText != "" && _configurationManager.GetCVar(CCVars.FlavorText))
+            {
+                var detailExamineComp = EntityManager.EnsureComponent<DetailExaminableComponent>(entity.Value);
+                detailExamineComp.Content = profile.FlavorText ?? "";
+                detailExamineComp.ERPStatus = profile.ERPStatus;
+            }
+        }
+
         if (loadout != null)
         {
             /// Frontier: overwriting EquipRoleLoadout
@@ -276,28 +289,10 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
         var gearEquippedEv = new StartingGearEquippedEvent(entity.Value);
         RaiseLocalEvent(entity.Value, ref gearEquippedEv);
 
-        if (profile != null)
+        if (prototype != null && TryComp(entity.Value, out MetaDataComponent? metaData))
         {
-            // Frontier: allow pseudonyms
-            var name = loadout != null && !string.IsNullOrEmpty(loadout.EntityName) ? loadout.EntityName : profile.Name;
-            // Janky hack for borgs
-            if (TryComp<NameIdentifierComponent>(entity.Value, out var identifier))
-            {
-                // Append our name identifier (why have a pseudonym for a role that has a complete name identifier group?)
-                name = $"{name} {identifier.FullIdentifier}";
-            }
-            // End Frontier
-            if (prototype != null)
-                SetPdaAndIdCardData(entity.Value, name, prototype, station); // Frontier: profile.Name<name
-
-            _humanoidSystem.LoadProfile(entity.Value, profile);
-            _metaSystem.SetEntityName(entity.Value, name); // Frontier: profile.Name<name
-            if (_configurationManager.GetCVar(CCVars.FlavorText))
-            {
-                var detailExamineComp = EntityManager.EnsureComponent<DetailExaminableComponent>(entity.Value);
-                detailExamineComp.Content = profile.FlavorText ?? "";
-                detailExamineComp.ERPStatus = profile.ERPStatus;
-            }
+            // FRONTIER MERGE: do custom borg/pirate names still work?
+            SetPdaAndIdCardData(entity.Value, metaData.EntityName, prototype, station);
         }
 
         DoJobSpecials(job, entity.Value);

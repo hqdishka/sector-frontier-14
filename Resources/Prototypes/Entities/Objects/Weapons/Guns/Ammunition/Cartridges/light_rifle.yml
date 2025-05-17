@@ -10,7 +10,7 @@
     - CartridgeLightRifle
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: BulletLightRifle
+    # proto: BulletLightRifle # Frontier
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
     layers:
@@ -22,22 +22,24 @@
     price: 1
 
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   id: CartridgeLightRifle
   name: cartridge (.30 rifle)
   parent: BaseCartridgeLightRifle
   components:
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: BulletLightRifle
+    # proto: BulletLightRifle # Frontier
 
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   id: CartridgeLightRiflePractice
   name: cartridge (.30 rifle practice)
   parent: BaseCartridgeLightRifle
   components:
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: BulletLightRiflePractice
+    # proto: BulletLightRiflePractice # Frontier
   - type: Sprite
     layers:
       - state: base
@@ -47,13 +49,14 @@
         color: "#dbdbdb"
 
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   id: CartridgeLightRifleIncendiary
   name: cartridge (.30 rifle incendiary)
   parent: BaseCartridgeLightRifle
   components:
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: BulletLightRifleIncendiary
+    # proto: BulletLightRifleIncendiary # Frontier
   - type: Sprite
     layers:
       - state: base
@@ -63,13 +66,14 @@
         color: "#ff6e52"
 
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   id: CartridgeLightRifleUranium
   name: cartridge (.30 rifle uranium)
   parent: BaseCartridgeLightRifle
   components:
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: BulletLightRifleUranium
+    # proto: BulletLightRifleUranium # Frontier
   - type: Sprite
     layers:
       - state: base

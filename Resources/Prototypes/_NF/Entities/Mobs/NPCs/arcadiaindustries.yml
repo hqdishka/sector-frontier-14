@@ -187,7 +187,7 @@
       tags:
         - FootstepSound
     - type: HitscanBatteryAmmoProvider
-      proto: RedLightLaser
+      proto: NFRedLightLaser
       fireCost: 50
     - type: BatterySelfRecharger
       autoRecharge: true

@@ -5,8 +5,9 @@
   playTimeTracker: JobParamedic
   setPreference: true # Lua
   requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 10800
+  - !type:DepartmentTimeRequirement
+    department: Medical
+    time: 9000 #2.5 hrs
   startingGear: ParamedicGear
   alwaysUseSpawner: true
   icon: "JobIconParamedic"

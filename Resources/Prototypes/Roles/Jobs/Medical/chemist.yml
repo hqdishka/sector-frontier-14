@@ -5,8 +5,9 @@
   playTimeTracker: JobChemist
   setPreference: true # Lua
   requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 10800
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 18000 #5 hrs
   startingGear: ChemistGear
   alwaysUseSpawner: true
   icon: "JobIconChemist"

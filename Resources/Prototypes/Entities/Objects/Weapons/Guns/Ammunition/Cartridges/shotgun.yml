@@ -1,4 +1,5 @@
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   id: BaseShellShotgun
   name: shell (.50)
   parent: [ BaseCartridge, BaseC1Contraband ] # Frontier: added BaseC1Contraband
@@ -23,6 +24,7 @@
     price: 1
 
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   id: ShellShotgunBeanbag
   name: shell (.50 beanbag)
   parent: BaseShellShotgun # Frontier: remove BaseSecurityBartenderContraband
@@ -38,11 +40,12 @@
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: PelletShotgunBeanbag
+    # proto: PelletShotgunBeanbag # Frontier
   - type: SpentAmmoVisuals
     state: "beanbag"
 
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   id: ShellShotgunSlug
   name: shell (.50 slug)
   parent: BaseShellShotgun # Frontier: remove BaseSecurityContraband
@@ -53,11 +56,12 @@
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: PelletShotgunSlug
+    # proto: PelletShotgunSlug # Frontier
   - type: SpentAmmoVisuals
     state: "slug"
 
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   id: ShellShotgunFlare
   name: shell (.50 flare)
   parent: BaseShellShotgun
@@ -73,11 +77,12 @@
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: PelletShotgunFlare
+    # proto: PelletShotgunFlare # Frontier
   - type: SpentAmmoVisuals
     state: "flare"
 
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   id: ShellShotgun
   name: shell (.50 pellet)
   parent: BaseShellShotgun # Frontier: remove BaseSecurityContraband
@@ -88,9 +93,10 @@
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: PelletShotgunSpread
+    # proto: PelletShotgunSpread # Frontier
 
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   id: ShellShotgunIncendiary
   name: shell (.50 incendiary)
   parent: BaseShellShotgun # Frontier: remove BaseSecurityContraband
@@ -101,11 +107,12 @@
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: PelletShotgunIncendiarySpread
+    # proto: PelletShotgunIncendiarySpread # Frontier
   - type: SpentAmmoVisuals
     state: "incendiary"
 
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   id: ShellShotgunPractice
   name: shell (.50 practice)
   parent: BaseShellShotgun # Frontier: remove BaseSecurityContraband
@@ -116,11 +123,12 @@
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: PelletShotgunPracticeSpread
+    # proto: PelletShotgunPracticeSpread # Frontier
   - type: SpentAmmoVisuals
     state: "practice"
 
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   id: ShellTranquilizer
   name: shell (.50 tranquilizer)
   parent: BaseShellShotgun # Frontier: remove BaseSecurityContraband
@@ -136,7 +144,7 @@
         map: [ "enum.AmmoVisualLayers.Base" ]
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: PelletShotgunTranquilizer
+    # proto: PelletShotgunTranquilizer # Frontier
   - type: ChemicalAmmo
   - type: SolutionContainerManager
     solutions:
@@ -150,6 +158,7 @@
     state: "tranquilizer"
 
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   id: ShellShotgunImprovised
   name: improvised shotgun shell
   description: A homemade shotgun shell that shoots painful glass shrapnel. The spread is so wide that it couldn't hit the broad side of a barn.
@@ -164,16 +173,17 @@
     layers:
       - state: improvised
         map: [ "enum.AmmoVisualLayers.Base" ]
-  - type: Construction
-    graph: ImprovisedShotgunShellGraph
-    node: shell
+  # - type: Construction # Frontier: swapped out for NF variant
+  #   graph: ImprovisedShotgunShellGraph # Frontier
+  #   node: shell # Frontier
   - type: CartridgeAmmo
     deleteOnSpawn: true
-    proto: PelletShotgunImprovisedSpread
+    # proto: PelletShotgunImprovisedSpread # Frontier
   - type: SpentAmmoVisuals
     state: "improvised"
 
 - type: entity
+  categories: [ HideSpawnMenu ] # Frontier
   id: ShellShotgunUranium
   name: uranium shotgun shell
   parent: BaseShellShotgun # Frontier: remove BaseSecurityContraband
@@ -183,7 +193,7 @@
         - state: depleted-uranium
           map: [ "enum.AmmoVisualLayers.Base" ]
     - type: CartridgeAmmo
-      deleteOnSpawn: true
-      proto: PelletShotgunUraniumSpread
+    deleteOnSpawn: true
+      # proto: PelletShotgunUraniumSpread # Frontier
     - type: SpentAmmoVisuals
       state: "depleted-uranium"
