@@ -294,9 +294,9 @@
   storage:
     back:
     - WeaponLaserCannon
-    - WeaponSubMachineGunWt550
-    - MagazinePistolSubMachineGunTopMounted
-    - MagazinePistolSubMachineGunTopMounted
+    - NFWeaponSubMachineGunWt550
+    - NFMagazineSubMachineGunTopMounted35
+    - NFMagazineSubMachineGunTopMounted35
     - BoxMRE
     - NFWeaponEnergyPistolDisabler
     - CrowbarRed
@@ -460,9 +460,9 @@
     - EmergencyMedipen
     - BoxMRE
     - WeaponLaserCannon
-    - WeaponSubMachineGunWt550
-    - MagazinePistolSubMachineGunTopMounted
-    - MagazinePistolSubMachineGunTopMounted
+    - NFWeaponSubMachineGunWt550
+    - NFMagazineSubMachineGunTopMounted35
+    - NFMagazineSubMachineGunTopMounted35
     - Flare
     - Truncheon
 

@@ -492,12 +492,12 @@
 
 - type: latheRecipe
   id: WeaponShotgunBulldogEvent
-  result: WeaponShotgunBulldog
+  result: NFWeaponShotgunBulldog
   completetime: 10
 
 - type: latheRecipe
   id: MagazineShotgunEvent
-  result: MagazineShotgun
+  result: NFMagazineShotgunDrum
   completetime: 5
 
 # SMGs
@@ -508,7 +508,7 @@
 
 - type: latheRecipe
   id: MagazinePistolSubMachineGunTopMountedEvent
-  result: MagazinePistolSubMachineGunTopMounted
+  result: NFMagazineSubMachineGunTopMounted35
   completetime: 5
 
 - type: latheRecipe
@@ -533,7 +533,7 @@
 
 - type: latheRecipe
   id: WeaponSubMachineGunC20rEvent
-  result: WeaponSubMachineGunC20r
+  result: NFWeaponSubMachineGunC20r
   completetime: 10
 
 - type: latheRecipe
@@ -594,7 +594,7 @@
 
 - type: latheRecipe
   id: MagazineCaselessRifleEvent
-  result: MagazineCaselessRifle
+  result: LuaMagazineCaselessRifle
   completetime: 5
 
 # Energy Weapons
@@ -613,7 +613,7 @@
 
 - type: latheRecipe
   id: MagazineBoxMagnumEvent
-  result: MagazineBoxMagnum
+  result: NFAmmunitionBoxPistol45
   completetime: 5
 
 - type: latheRecipe
@@ -634,12 +634,12 @@
 # LMG
 - type: latheRecipe
   id: WeaponLightMachineGunL6Event
-  result: WeaponLightMachineGunL6
+  result: NFWeaponLightMachineGunL6
   completetime: 10
 
 - type: latheRecipe
   id: MagazineLightRifleBoxEvent
-  result: MagazineLightRifleBox
+  result: NFMagazineBoxRifle20
   completetime: 5
 
 # Melee Weapons

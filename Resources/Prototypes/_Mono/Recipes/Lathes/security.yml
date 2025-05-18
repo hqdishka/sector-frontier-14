@@ -1,0 +1,22 @@
+# mono changes start
+
+- type: latheRecipe
+  parent: BaseEmptyAmmoRecipe
+  id: MagazineDMREmpty
+  result: MagazineDMREmpty
+  materials:
+    Steel: 30
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineDMR
+  result: MagazineDMR
+  materials:
+    Steel: 650
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineBoxDMR
+  result: MagazineBoxDMR
+  materials:
+    Steel: 1200

@@ -1,0 +1,14 @@
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: LuaMagazineCaselessRifle
+  name: "magazine (.25 caseless)"
+  parent: BaseMagazineCaselessRifle
+  components:
+  - type: BallisticAmmoProvider
+    proto: NFCartridgeRifle25
+  - type: Sprite
+    layers:
+    - state: red
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]

@@ -31,8 +31,8 @@
     contents:
       - id: MagazineShotgunSlug
       - id: MagazineShotgunSlug
-      - id: MagazineShotgun
-      - id: MagazineShotgun
+      - id: NFMagazineShotgunDrum
+      - id: NFMagazineShotgunDrum
 
 - type: entity
   parent: ClothingBackpackDuffelSyndicateAmmoBundle

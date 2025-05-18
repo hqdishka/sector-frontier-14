@@ -484,7 +484,7 @@
   id: UplinkMercenaryWeaponSubMachineGunC20r
   name:  C-20r
   description: Нелегальное оружие используемое агентами синдиката. Оружие, часто используемое печально известными ядерными оперативниками. Использует патроны калибра .35 авто.
-  productEntity: WeaponSubMachineGunC20r
+  productEntity: NFWeaponSubMachineGunC20r
   cost:
     Speso: 25000
   categories:
@@ -502,7 +502,7 @@
   id: UplinkMercenaryMagazinePistolSubMachineGun
   name:  магазин ПП (.35 авто)
   description: магазин ПП (.35 авто)
-  productEntity: MagazinePistolSubMachineGun
+  productEntity: NFMagazineSubMachineGun35
   cost:
     Speso: 1200
   categories:
@@ -576,7 +576,7 @@
   id: UplinkMercenaryMagazineCaselessRifle
   name:  магазин (.25 безгильзовые)
   description: магазин (.25 безгильзовые)
-  productEntity: MagazineCaselessRifle
+  productEntity: LuaMagazineCaselessRifle
   cost:
     Speso: 1200
   categories:
@@ -632,7 +632,7 @@
   id: UplinkMercenaryWeaponLightMachineGunL6
   name: L6 SAW
   description: Нелегальное оружие используемое агентами синдиката. Весьма традиционный лёгкий пулемёт с удобной лакированной деревянной пистолетной рукоятью. Использует патроны калибра .30 винтовочный.
-  productEntity: WeaponLightMachineGunL6
+  productEntity: NFWeaponLightMachineGunL6
   cost:
     Speso: 45000
   categories:
@@ -650,7 +650,7 @@
   id: UplinkMercenaryMagazineLightRifleBox
   name:  короб патронов L6 SAW (.30 винтовочные)
   description: короб патронов L6 SAW (.30 винтовочные)
-  productEntity: MagazineLightRifleBox
+  productEntity: NFMagazineBoxRifle20
   cost:
     Speso: 3000
   categories:
@@ -706,7 +706,7 @@
   id: UplinkMercenaryWeaponSubMachineGunWt550
   name: WT550
   description: Отличный пистолет-пулемёт, производства NanoTrasen's Small Arms Division. Использует патроны калибра .35 авто. Запрещено к использованию гражданскими.
-  productEntity: WeaponSubMachineGunWt550
+  productEntity: NFWeaponSubMachineGunWt550
   cost:
     Speso: 7000
   categories:
@@ -724,7 +724,7 @@
   id: UplinkMercenaryMagazinePistolSubMachineGunTopMounted
   name: магазин WT550 (.35 авто, надствольный)
   description: магазин WT550 (.35 авто, надствольный)
-  productEntity: MagazinePistolSubMachineGunTopMounted
+  productEntity: NFMagazineSubMachineGunTopMounted35
   cost:
     Speso: 600
   categories:
@@ -743,7 +743,7 @@
   id: UplinkMercenaryWeaponShotgunBulldog
   name: Бульдог
   description: Нелегальное оружие используемое агентами синдиката. Магазинный дробовик, предназначенный для ведения ближнего боя. Использует патроны калибра .50 ружейный.
-  productEntity: WeaponShotgunBulldog
+  productEntity: NFWeaponShotgunBulldog
   cost:
     Speso: 30000
   categories:
@@ -761,7 +761,7 @@
   id: UplinkMercenaryMagazineShotgun
   name: барабан (.50 дробь)
   description: барабан (.50 дробь)
-  productEntity: MagazineShotgun
+  productEntity: NFMagazineShotgunDrum
   cost:
     Speso: 2500
   categories:
