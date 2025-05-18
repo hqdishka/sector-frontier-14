@@ -1,11 +1,11 @@
 - type: entity
-  name: EG-4 energy revolver
-  parent: [BaseWeaponBatterySmall, BaseC2ContrabandUnredeemable] # Mono - C2 contra instead of command contra
-  id: WeaponEnergyRevolver
-  description: A highly advanced energy revolver capable of firing both lethal and disabling bullets.
+  name: cyborg energy gun
+  parent: [BaseWeaponBattery, BaseC1Contraband]
+  id: WeaponCyborgEnergyGun
+  description: "A basic hybrid energy gun with two settings: disable and kill. Designed for cyborgs. On the handle is a label that says 'for authorized use only.'"
   components:
   - type: Sprite
-    sprite: _Goobstation/Objects/Weapons/Guns/Battery/erevolver.rsi
+    sprite: _DV/Objects/Weapons/Guns/Battery/energygun.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -16,21 +16,22 @@
       map: ["enum.GunVisualLayers.MagUnshaded"]
       shader: unshaded
   - type: Clothing
-    quickEquip: false
-    slots:
-    - Belt
-    - suitStorage
-    - Back
-    sprite: _Goobstation/Objects/Weapons/Guns/Battery/erevolver.rsi
+    quickEquip: false # Frontier
+    slots: # Frontier
+    - Back # Frontier
+    - suitStorage # Frontier
+    sprite: _DV/Objects/Weapons/Guns/Battery/energygun.rsi
   - type: Gun
-    fireRate: 1.5
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+      path: /Audio/_DV/Weapons/Guns/Gunshots/laser.ogg
     soundEmpty:
       path: /Audio/_DV/Weapons/Guns/Empty/dry_fire.ogg
   - type: Battery
-    maxCharge: 1800
-    startingCharge: 1800
+    maxCharge: 3000 # Mono 2000->3000
+    startingCharge: 3000 # Mono 2000->3000
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 25
   - type: ProjectileBatteryAmmoProvider
     proto: NFBulletDisabler
     fireCost: 100
@@ -40,9 +41,9 @@
       fireCost: 100
       name: disable
       state: disabler
-    - proto: BulletEnergyGunMagnum
-      fireCost: 150 # Mono - 150 < 225
-      name: lethal
+    - proto: BulletEnergyGunLaser
+      fireCost: 200
+      name: kill
       state: lethal
   - type: MagazineVisuals
     magState: mag
@@ -55,10 +56,4 @@
         Firemode:
           Disabler: { state: mode-disabler }
           Lethal: { state: mode-lethal }
-  - type: Tag
-    tags:
-    - Sidearm
-  - type: BatterySelfRecharger
-    autoRecharge: true
-    autoRechargeRate: 75 # Mono - 75 < 35
-
+          Special: { state: mode-stun } # Unused

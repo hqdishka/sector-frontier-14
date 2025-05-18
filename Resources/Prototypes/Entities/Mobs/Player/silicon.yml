@@ -105,9 +105,6 @@
   description: Handles AI interactions across holocards + AI cores
   components:
   - type: ItemSlots
-  - type: Tag
-    tags:
-    - GhostOnlyWarp
   - type: StationAiHolder
     slot:
       name: station-ai-mind-slot
@@ -149,6 +146,78 @@
     state: std_mod
   - type: SiliconLawProvider
     laws: Corporate
+
+- type: entity
+  id: VesselEfficiencyCircuitBoard
+  parent: BaseElectronics
+  name: law board (Vessel Efficiency)
+  description: An electronics board containing the Vessel Efficiency lawset.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: std_mod
+  - type: SiliconLawProvider
+    laws: EfficiencyLawset
+
+- type: entity
+  id: VesselCircuitBoard
+  parent: BaseElectronics
+  name: law board (Vessel)
+  description: An electronics board containing the Vessel lawset.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: std_mod
+  - type: SiliconLawProvider
+    laws: VesselLawset
+
+- type: entity
+  id: NFSDCircuitBoard
+  parent: BaseElectronics
+  name: law board (NFSD)
+  description: An electronics board containing the NFSD lawset.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: std_mod
+  - type: SiliconLawProvider
+    laws: NFSDLawset
+
+- type: entity
+  id: RogueCircuitBoard
+  parent: BaseElectronics
+  name: law board (Rogue)
+  description: An electronics board containing the Rogue lawset.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: std_mod
+  - type: SiliconLawProvider
+    laws: RogueLawset
+
+- type: entity
+  id: FreemanCircuitBoard
+  parent: BaseElectronics
+  name: law board (Freeman)
+  description: An electronics board containing the Freeman lawset.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: std_mod
+  - type: SiliconLawProvider
+    laws: FreemanLawset
+
+- type: entity
+  id: EntertainerCircuitBoard
+  parent: BaseElectronics
+  name: law board (Entertainer)
+  description: An electronics board containing the Entertainer lawset.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: std_mod
+  - type: SiliconLawProvider
+    laws: EntertainerLawset
 
 # Items
 - type: entity
@@ -331,7 +400,7 @@
   description: The AI's viewer.
   categories: [ HideSpawnMenu, DoNotMap ]
   components:
-  - type: NoFTL
+  #- type: NoFTL # Mono - comment out
   #- type: WarpPoint # Mono - comment out
   #  follow: true
   - type: Eye
@@ -481,6 +550,7 @@
         # - BorgModuleFireExtinguisher # Frontier: jetpack is superior
         # - BorgModuleGPS # Frontier: useless
         - BorgModuleJetpack # Frontier
+        - BorgModuleGPS
   - type: ItemSlots
     slots:
       cell_slot:

@@ -197,7 +197,7 @@
     availableModes:
     - SemiAuto
   - type: HitscanBatteryAmmoProvider
-    proto: RedLaser
+    proto: NFRedMediumLaser
     fireCost: 50
 
 - type: entity
@@ -220,7 +220,7 @@
     soundGunshot:
       collection: N14RechargerPistolGunshot
   - type: HitscanBatteryAmmoProvider
-    proto: RedLaser
+    proto: NFRedMediumLaser
     fireCost: 50
   - type: BatterySelfRecharger
     autoRecharge: true

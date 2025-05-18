@@ -7,6 +7,7 @@ using Content.Server.Mind;
 using Content.Server.Station.Systems;
 using Content.Shared.Mind.Components;
 using Content.Shared.Verbs;
+using Robust.Shared.Player;
 
 namespace Content.Server._Lua.ShipRename;
 
@@ -18,6 +19,7 @@ public sealed class ShipRenameSystem : EntitySystem
     [Dependency] private readonly QuickDialogSystem _quickDialogSystem = default!;
     [Dependency] private readonly StationSystem _stationSystem = default!;
     [Dependency] private readonly MindSystem _mindSystem = default!;
+    [Dependency] private readonly ISharedPlayerManager _playerManager = default!;
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -38,11 +40,11 @@ public sealed class ShipRenameSystem : EntitySystem
             {
                 if (!component.GridId.HasValue)
                     return;
-                if (!TryComp<MindContainerComponent>(args.User, out var mind))
+                if (!_mindSystem.TryGetMind(args.User, out var mindEntity, out var mindComp))
                     return;
-                if (!mind.HasMind)
+                if (mindComp.UserId is not { } userId)
                     return;
-                if (!_mindSystem.TryGetSession(mind.Mind, out var session))
+                if (!_playerManager.TryGetSessionById(userId, out var session))
                     return;
                 _quickDialogSystem.OpenDialog(session, Loc.GetString("ship-rename-popup-title"),
                     Loc.GetString("ship-rename-popup-prompt"),

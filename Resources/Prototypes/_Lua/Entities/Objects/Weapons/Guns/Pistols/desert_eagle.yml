@@ -40,7 +40,7 @@
   name: пистолетный магазин пустынного орла (.44 магнум)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeMagnum
+    proto: NFCartridgePistol45
   - type: Sprite
     layers:
     - state: base
@@ -106,7 +106,7 @@
             - MagazineEagleAP
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeMagnum
+        startingItem: NFCartridgePistol45
         priority: 1
         whitelist:
           tags:

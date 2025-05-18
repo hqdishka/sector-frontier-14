@@ -166,7 +166,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: HitscanBatteryAmmoProvider
-    proto: RedMediumLaser
+    proto: NFRedMediumLaser
     fireCost: 100
   - type: Battery
     maxCharge: 1000
@@ -195,7 +195,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
   - type: ProjectileBatteryAmmoProvider
-    proto: BulletDisabler
+    proto: NFBulletDisabler
     fireCost: 50
 
 - type: entity

@@ -12,6 +12,7 @@
     FoodCabbage: 1
   reagents:
     Mayo: 2
+  recipeType: Oven # Frontier
 
 - type: microwaveMealRecipe
   id: ADTRecipeShawermaCheese
@@ -28,6 +29,7 @@
     FoodCheeseSlice: 1
   reagents:
     Mayo: 2
+  recipeType: Oven # Frontier
 
 - type: microwaveMealRecipe
   id: ADTRecipeShawermaMeat
@@ -41,3 +43,4 @@
     FoodMeatMeatball: 1
   reagents:
     Mayo: 2
+  recipeType: Oven # Frontier

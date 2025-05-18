@@ -384,7 +384,7 @@
 # Pistols
 - type: latheRecipe
   id: WeaponPistolMk58ExpeditionEvent
-  result: WeaponPistolMk58Expedition
+  result: NFWeaponPistolMk58Expedition
   completetime: 10
 
 - type: latheRecipe
@@ -418,18 +418,13 @@
   completetime: 5
 
 - type: latheRecipe
-  id: MagazineBoxCaselessRifle10x24Event
-  result: MagazineBoxCaselessRifle10x24
-  completetime: 5
-
-- type: latheRecipe
   id: WeaponPistolUniversalExpeditionEvent
-  result: WeaponPistolUniversalExpedition
+  result: NFWeaponPistolUniversalExpedition
   completetime: 10
 
 - type: latheRecipe
   id: WeaponPistolPollockExpeditionEvent
-  result: WeaponPistolPollockExpedition
+  result: NFWeaponPistolPollockExpedition
   completetime: 10
 
 - type: latheRecipe
@@ -440,7 +435,7 @@
 # Revolvers
 - type: latheRecipe
   id: WeaponRevolverArgentiExpeditionEvent
-  result: WeaponRevolverArgentiExpedition
+  result: NFWeaponRevolverArgentiExpedition
   completetime: 10
 
 - type: latheRecipe
@@ -450,7 +445,7 @@
 
 - type: latheRecipe
   id: WeaponRevolverDeckardExpeditionEvent
-  result: WeaponRevolverDeckardExpedition
+  result: NFWeaponRevolverDeckardExpedition
   completetime: 10
 
 - type: latheRecipe
@@ -459,28 +454,23 @@
   completetime: 10
 
 - type: latheRecipe
-  id: WeaponRevolverMatebaExpeditionEvent
-  result: WeaponRevolverMatebaExpedition
-  completetime: 10
-
-- type: latheRecipe
   id: WeaponRevolverFitzExpeditionEvent
-  result: WeaponRevolverFitzExpedition
+  result: NFWeaponRevolverFitzExpedition
   completetime: 10
 
 - type: latheRecipe
   id: WeaponRevolverFaithExpeditionEvent
-  result: WeaponRevolverFaithExpedition
+  result: NFWeaponRevolverFaithExpedition
   completetime: 10
 
 - type: latheRecipe
   id: WeaponRevolverLuckyExpeditionEvent
-  result: WeaponRevolverLuckyExpedition
+  result: NFWeaponRevolverLuckyExpedition
   completetime: 10
 
 - type: latheRecipe
   id: WeaponRevolverPirateExpeditionEvent
-  result: WeaponRevolverPirateExpedition
+  result: NFWeaponRevolverPirateExpedition
   completetime: 10
 
 # Shotguns
@@ -491,18 +481,13 @@
   completetime: 5
 
 - type: latheRecipe
-  id: WeaponShotgunSawnExpeditionEvent
-  result: WeaponShotgunSawnExpedition
-  completetime: 10
-
-- type: latheRecipe
   id: WeaponShotgunKammererExpeditionEvent
-  result: WeaponShotgunKammererExpedition
+  result: NFWeaponShotgunKammererExpedition
   completetime: 10
 
 - type: latheRecipe
   id: WeaponShotgunEnforcerExpeditionEvent
-  result: WeaponShotgunEnforcerExpedition
+  result: NFWeaponShotgunEnforcerExpedition
   completetime: 10
 
 - type: latheRecipe
@@ -518,7 +503,7 @@
 # SMGs
 - type: latheRecipe
   id: WeaponSubMachineGunWt550ExpeditionEvent
-  result: WeaponSubMachineGunWt550Expedition
+  result: NFWeaponSubMachineGunWt550Expedition
   completetime: 10
 
 - type: latheRecipe
@@ -533,17 +518,17 @@
 
 - type: latheRecipe
   id: WeaponSubMachineGunAtreidesExpeditionEvent
-  result: WeaponSubMachineGunAtreidesExpedition
+  result: NFWeaponSubMachineGunAtreidesExpedition
   completetime: 10
 
 - type: latheRecipe
   id: MagazinePistolSubMachineGunEvent
-  result: MagazinePistolSubMachineGun
+  result: NFMagazineSubMachineGun35
   completetime: 5
 
 - type: latheRecipe
   id: WeaponSubMachineGunDrozdExpeditionEvent
-  result: WeaponSubMachineGunDrozdExpedition
+  result: NFWeaponSubMachineGunDrozdExpedition
   completetime: 10
 
 - type: latheRecipe
@@ -553,28 +538,23 @@
 
 - type: latheRecipe
   id: WeaponSubMachineGunTypewriterExpeditionEvent
-  result: WeaponSubMachineGunTypewriterExpedition
+  result: NFWeaponSubMachineGunTypewriterExpedition
   completetime: 10
 
 # Rifles
 - type: latheRecipe
   id: WeaponRifleGestioEvent
-  result: WeaponRifleGestio
+  result: NFWeaponRifleAssaultGestio
   completetime: 10
 
 - type: latheRecipe
   id: MagazineLightRifleLowCapacityEvent
-  result: MagazineLightRifleLowCapacity
+  result: NFMagazineLowCapacityRifle30
   completetime: 5
 
 - type: latheRecipe
-  id: WeaponRifleNovaliteC1ExpeditionEvent
-  result: WeaponRifleNovaliteC1Expedition
-  completetime: 10
-
-- type: latheRecipe
   id: MagazineNovaliteC1Event
-  result: MagazineNovaliteC1
+  result: NFMagazineClipRifle20
   completetime: 5
 
 - type: latheRecipe
@@ -589,7 +569,7 @@
 
 - type: latheRecipe
   id: MagazineLightRifleEvent
-  result: MagazineLightRifle
+  result: NFMagazineRifle30
   completetime: 5
 
 - type: latheRecipe
@@ -604,17 +584,12 @@
 
 - type: latheRecipe
   id: WeaponRifleSVSEvent
-  result: WeaponRifleSVS
-  completetime: 10
-
-- type: latheRecipe
-  id: WeaponRifleVulcanExpeditionEvent
-  result: WeaponRifleVulcanExpedition
+  result: NFWeaponRifleSVS
   completetime: 10
 
 - type: latheRecipe
   id: WeaponRifleJackdawEvent
-  result: WeaponRifleJackdaw
+  result: NFWeaponRifleAssaultJackdaw
   completetime: 10
 
 - type: latheRecipe
@@ -623,51 +598,13 @@
   completetime: 5
 
 # Energy Weapons
-- type: latheRecipe
-  id: WeaponLaserGunExpeditionEvent
-  result: WeaponLaserGunExpedition
-  completetime: 10
-
-- type: latheRecipe
-  id: WeaponLaserSvalinnExpeditionEvent
-  result: WeaponLaserSvalinnExpedition
-  completetime: 10
 
 - type: latheRecipe
   id: PowerCellHighEvent
   result: PowerCellHigh
   completetime: 5
 
-- type: latheRecipe
-  id: WeaponLaserCarbineExpeditionEvent
-  result: WeaponLaserCarbineExpedition
-  completetime: 10
-
-- type: latheRecipe
-  id: WeaponEnergyGunExpeditionEvent
-  result: WeaponEnergyGunExpedition
-  completetime: 10
-
-- type: latheRecipe
-  id: WeaponAdvancedLaserExpeditionEvent
-  result: WeaponAdvancedLaserExpedition
-  completetime: 10
-
-- type: latheRecipe
-  id: WeaponLaserCannonExpeditionEvent
-  result: WeaponLaserCannonExpedition
-  completetime: 10
-
-- type: latheRecipe
-  id: WeaponXrayCannonExpeditionEvent
-  result: WeaponXrayCannonExpedition
-  completetime: 10
-
 # Sniper Rifles
-- type: latheRecipe
-  id: WeaponSniperMosinExpeditionEvent
-  result: WeaponSniperMosinExpedition
-  completetime: 10
 
 - type: latheRecipe
   id: MagazineBoxLightRifleEvent
@@ -691,17 +628,7 @@
 
 - type: latheRecipe
   id: WeaponSniperRepeaterEvent
-  result: WeaponSniperRepeater
-  completetime: 10
-
-- type: latheRecipe
-  id: WeaponMusketExpeditionEvent
-  result: WeaponMusketExpedition
-  completetime: 10
-
-- type: latheRecipe
-  id: WeaponSniperCeremonialExpeditionEvent
-  result: WeaponSniperCeremonialExpedition
+  result: NFWeaponRifleRepeater
   completetime: 10
 
 # LMG

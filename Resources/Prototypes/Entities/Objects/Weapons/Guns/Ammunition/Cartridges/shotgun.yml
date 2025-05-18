@@ -193,7 +193,7 @@
         - state: depleted-uranium
           map: [ "enum.AmmoVisualLayers.Base" ]
     - type: CartridgeAmmo
-    deleteOnSpawn: true
+      deleteOnSpawn: true
       # proto: PelletShotgunUraniumSpread # Frontier
     - type: SpentAmmoVisuals
       state: "depleted-uranium"

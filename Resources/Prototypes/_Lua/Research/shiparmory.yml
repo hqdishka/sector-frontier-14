@@ -71,10 +71,10 @@
   tier: 1
   cost: 12100
   recipeUnlocks:
-  - GrenadeBlast
+  - NFGrenadeBlast
   - CannonBall
   - GrenadeFrag
-  - GrenadeFlash
+  - NFGrenadeFlash
   technologyPrerequisites:
   - ShuttleShuttleGunPerforator
 

@@ -19,9 +19,9 @@
   - Cartridge140mmAP
   - Cartridge140mm
   - Cartridge140mmPF
-  - GrenadeBlast
+  - NFGrenadeBlast
   - GrenadeFrag
-  - GrenadeFlash
+  - NFGrenadeFlash
   - GrenadeBaton
   - GrenadeEMP
   - MagazineGrenadeEmpty
@@ -78,7 +78,6 @@
   - WeaponPistolViperEvent
   - WeaponPistolCobraEvent
   - MagazinePistolCaselessRifleEvent
-  - MagazineBoxCaselessRifle10x24Event
   - WeaponPistolUniversalExpeditionEvent
   - WeaponPistolPollockExpeditionEvent
   - WeaponAntiqueLaserEvent
@@ -87,14 +86,12 @@
   - SpeedLoaderRifleHeavyEvent
   - WeaponRevolverDeckardExpeditionEvent
   - WeaponRevolverPythonEvent
-  - WeaponRevolverMatebaExpeditionEvent
   - WeaponRevolverFitzExpeditionEvent
   - WeaponRevolverFaithExpeditionEvent
   - WeaponRevolverLuckyExpeditionEvent
   - WeaponRevolverPirateExpeditionEvent
   # Shotguns
   - BoxLethalshotEvent
-  - WeaponShotgunSawnExpeditionEvent
   - WeaponShotgunKammererExpeditionEvent
   - WeaponShotgunEnforcerExpeditionEvent
   - WeaponShotgunBulldogEvent
@@ -111,7 +108,6 @@
   # Rifles
   - WeaponRifleGestioEvent
   - MagazineLightRifleLowCapacityEvent
-  - WeaponRifleNovaliteC1ExpeditionEvent
   - MagazineNovaliteC1Event
   - WeaponRifleLecterEvent
   - MagazineRifleEvent
@@ -119,27 +115,16 @@
   - MagazineLightRifleEvent
   # - WeaponRifleM90GrenadeLauncherEvent
   - WeaponRifleSVSEvent
-  - WeaponRifleVulcanExpeditionEvent
   - WeaponRifleJackdawEvent
   - MagazineCaselessRifleEvent
   # Energy Weapons
-  - WeaponLaserGunExpeditionEvent
-  - WeaponLaserSvalinnExpeditionEvent
   - PowerCellHighEvent
-  - WeaponLaserCarbineExpeditionEvent
-  - WeaponEnergyGunExpeditionEvent
-  - WeaponAdvancedLaserExpeditionEvent
-  - WeaponLaserCannonExpeditionEvent
-  - WeaponXrayCannonExpeditionEvent
   # Sniper Rifles
-  - WeaponSniperMosinExpeditionEvent
   - MagazineBoxLightRifleEvent
   - WeaponSniperHristovEvent
   - MagazineBoxAntiMaterielEvent
   - WeaponSniperRepeaterEvent
   - MagazineBoxMagnumEvent
-  - WeaponMusketExpeditionEvent
-  - WeaponSniperCeremonialExpeditionEvent
   # LMG
   - WeaponLightMachineGunL6Event
   - MagazineLightRifleBoxEvent

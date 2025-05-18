@@ -29,11 +29,11 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: ProjectileBatteryAmmoProvider
-    proto: BulletDisabler
+    proto: NFBulletDisabler
     fireCost: 100
   - type: BatteryWeaponFireModes
     fireModes:
-    - proto: BulletDisabler
+    - proto: NFBulletDisabler
       fireCost: 100
     - proto: BulletTaser
       fireCost: 200

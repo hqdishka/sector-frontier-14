@@ -175,7 +175,7 @@
     - MagazineShotgunBeanbag
     - EmergencyMedipen
     - BoxMRE
-    - WeaponDisabler
+    - NFWeaponEnergyPistolDisabler
     - WeaponLaserSvalinn
     - PowerCellSmall
     - PowerCellMedium
@@ -235,7 +235,7 @@
     - TelescopicShield
     - EmergencyMedipen
     - BoxMRE
-    - WeaponDisabler
+    - NFWeaponEnergyPistolDisabler
     - WeaponLaserSvalinn
     - PowerCellSmall
     - PowerCellMedium

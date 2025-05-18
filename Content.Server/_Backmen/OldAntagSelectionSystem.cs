@@ -1,4 +1,4 @@
-﻿using Content.Server.GameTicking.Rules;
+using Content.Server.GameTicking.Rules;
 using Content.Server.GameTicking.Rules.Components;
 using Content.Server.Mind;
 using Content.Server.Preferences.Managers;
@@ -25,6 +25,7 @@ namespace Content.Server.Backmen;
 public sealed class OldAntagSelectionSystem : EntitySystem
 {
     [Dependency] private readonly IServerPreferencesManager _prefs = default!;
+    [Dependency] private readonly ISharedPlayerManager _player = default!;
     [Dependency] private readonly AudioSystem _audioSystem = default!;
     [Dependency] private readonly JobSystem _jobs = default!;
     [Dependency] private readonly MindSystem _mindSystem = default!;
@@ -327,10 +328,13 @@ public sealed class OldAntagSelectionSystem : EntitySystem
         if (!_mindSystem.TryGetMind(entity, out _, out var mindComponent))
             return;
 
-        if (mindComponent.Session == null)
+        if (mindComponent.UserId is not { } userId)
             return;
 
-        SendBriefing(mindComponent.Session, briefing, briefingColor, briefingSound);
+        if (!_player.TryGetSessionById(userId, out var session))
+            return;
+
+        SendBriefing(session, briefing, briefingColor, briefingSound);
     }
 
     /// <summary>

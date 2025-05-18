@@ -25,7 +25,7 @@
       soundGunshot:
         path: /Audio/Animals/cat_meow.ogg
     - type: ProjectileBatteryAmmoProvider
-      proto: BulletDisabler
+      proto: NFBulletDisabler
       fireCost: 100
     - type: MagazineVisuals
       magState: mag

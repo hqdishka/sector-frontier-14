@@ -1,76 +1,38 @@
-- type: dataset
+- type: localizedDataset
   id: MonoRedactedBorgNameset
   values:
-  - ADS Manipulator Module
+    prefix: names-MonoRedactedBorgNameset-borg-dataset-
+    count: 1
 
-- type: dataset
+- type: localizedDataset
   id: MonoRemnantCoreNameset
   values:
-  - ADS System Core
+    prefix: names-MonoRemnantCoreNameset-borg-dataset-
+    count: 1
 
-- type: dataset
+- type: localizedDataset
   id: VesselCoreNameset
   values:
-  - Steven
-  - Robyn
-  - Alex
-  - Bob
-  - Alexander
-  - Steve
-  - Kira
-  - Var:Tim
+    prefix: names-VesselCoreNameset-borg-dataset-
+    count: 8
 
-- type: dataset
+- type: localizedDataset
   id: NFSDCoreNameset
   values:
-  - NFSD Watcher
-  - NFSD Upholder
-  - NFSD Robocop
-  - NFSD Silicon
-  - NFSDAI.exe
-  - NFSD Dog
-  - NFSD Unit
+    prefix: names-NFSDCoreNameset-borg-dataset-
+    count: 7
 
-- type: dataset
+- type: localizedDataset
   id: RogueCoreNameset
   values:
-  - Rogue Overseer
-  - Rogue Silicon
-  - Rogue Grid
-  - Rogue Hivemind
-  - RogueAI.exe
-  - Rogue Cat
-  - Rogue Unit
+    prefix: names-RogueCoreNameset-borg-dataset-
+    count: 7
 
-- type: dataset
+- type: localizedDataset
   id: MonoRemnantShipNameset # eventually this will have a use... randommetadata component dont work with grids though...
   values:
-  - ADS-Glimmer
-  - ADS-Orion
-  - ADS-Expanse
-  - ADS-Symphony
-  - ADS-Chorus
-  - ADS-Flashpoint
-  - ADS-Phoron
-  - ADS-Conquest
-  - ADS-Prime
-  - ADS-Firestorm
-  - ADS-Retaliation
-  - ADS-Horizon
-  - ADS-Marksman
-  - ADS-Barricade
-  - ADS-Vein
-  - ADS-Zero
-  - ADS-Midnight
-  - ADS-Interdiction
-  - ADS-Mist
-  - ADS-Granite
-  - ADS-Typhoon
-  - ADS-Storm
-  - ADS-Rubicon
-  - ADS-Cauterizer
-  - ADS-Evasion
-  - ADS-Apprehension
+    prefix: names-MonoRemnantShipNameset-borg-dataset-
+    count: 26
 
 - type: entity
   id: BaseBorgChassisRedacted

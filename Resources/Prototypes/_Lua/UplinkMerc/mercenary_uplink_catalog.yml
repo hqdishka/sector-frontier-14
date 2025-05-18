@@ -272,7 +272,7 @@
   id: UplinkMercenaryGunEnergyGun
   name:  uplink-merc-energygun-name
   description: uplink-merc-energygun-desc
-  productEntity: WeaponEnergyGun
+  productEntity: NFWeaponEnergySubMachineGunDeltaV
   icon: { sprite: _DV/Objects/Weapons/Guns/Battery/energygun.rsi, state: icon }
   cost:
     Speso: 2300
@@ -310,7 +310,7 @@
   id: UplinkMercenaryAmmoLightRifle
   name:  uplink-merc-lightrifle-name
   description: uplink-merc-lightrifle-desc
-  productEntity: MagazineLightRifle
+  productEntity: NFMagazineRifle30
   icon: { sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/light_rifle_mag.rsi, state: red }
   cost:
     Speso: 1000
@@ -558,7 +558,7 @@
   id: UplinkMercenaryWeaponRifleJackdaw
   name: CAWS-25 "Галка"
   description: Начало конца возвещается песней галки. Использует безгильзовые патроны .25.
-  productEntity: WeaponRifleJackdaw
+  productEntity: NFWeaponRifleAssaultJackdaw
   cost:
     Speso: 13000
   categories:

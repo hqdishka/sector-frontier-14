@@ -4459,7 +4459,7 @@ entities:
     - type: Transform
       pos: -3.646531,6.2902155
       parent: 1
-- proto: SpawnDungeonLootMeleeT3
+- proto: SpawnDungeonLootMeleeT3L
   entities:
   - uid: 926
     components:

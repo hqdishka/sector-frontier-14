@@ -223,7 +223,7 @@
   id: UplinkVipGunWeaponDisabler
   name:  uplink-vip-WeaponDisabler-name
   description: uplink-vip-WeaponDisabler-desc
-  productEntity: WeaponDisabler
+  productEntity: NFWeaponEnergyPistolDisabler
   icon: { sprite: Objects/Weapons/Guns/Battery/disabler.rsi, state: base }
   cost:
     Speso: 1200

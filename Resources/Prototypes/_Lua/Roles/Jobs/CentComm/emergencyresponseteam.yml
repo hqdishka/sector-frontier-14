@@ -40,7 +40,7 @@
     shoes: ClothingShoesBootsMagFSF #Рейнджер
     id: FSFCommanderBravoPDA
     belt: ClothingBeltERTFilled
-    pocket1: WeaponDisabler
+    pocket1: NFWeaponEnergyPistolDisabler
     pocket2: DoorRemoteAll
   storage:
     back:
@@ -53,10 +53,10 @@
     - WeaponPulseCarbine
     - WeaponSubMachineGunVector
     - PinpointerNuclear
-    - MagazineMagnumSubMachineGun
-    - MagazineMagnumSubMachineGun
-    - MagazineMagnumSubMachineGun
-    - MagazineMagnumSubMachineGun
+    - NFMagazineSubMachineGun45
+    - NFMagazineSubMachineGun45
+    - NFMagazineSubMachineGun45
+    - NFMagazineSubMachineGun45
     - EmergencyMedipen
     - CombatMedipen
     - BoxMRE
@@ -108,13 +108,13 @@
     - JawsOfLife
     - HandheldCrewMonitor
     - TelescopicShield
-    - WeaponDisabler
+    - NFWeaponEnergyPistolDisabler
     - WeaponPulseCarbine
     - WeaponSubMachineGunVector
-    - MagazineMagnumSubMachineGun
-    - MagazineMagnumSubMachineGun
-    - MagazineMagnumSubMachineGun
-    - MagazineMagnumSubMachineGun
+    - NFMagazineSubMachineGun45
+    - NFMagazineSubMachineGun45
+    - NFMagazineSubMachineGun45
+    - NFMagazineSubMachineGun45
     - EmergencyMedipen
     - CombatMedipen
     - BoxMRE
@@ -164,7 +164,7 @@
     shoes: ClothingShoesBootsMagFSF #Рейнджер
     id: FSFCommanderCharliePDA
     belt: ClothingBeltERTFilled
-    pocket1: WeaponDisabler
+    pocket1: NFWeaponEnergyPistolDisabler
     pocket2: DoorRemoteAll
   storage:
     back:
@@ -179,10 +179,10 @@
     - WeaponPulseCarbine
     - WeaponSubMachineGunVector
     - PinpointerNuclear
-    - MagazineMagnumSubMachineGun
-    - MagazineMagnumSubMachineGun
-    - MagazineMagnumSubMachineGun
-    - MagazineMagnumSubMachineGun
+    - NFMagazineSubMachineGun45
+    - NFMagazineSubMachineGun45
+    - NFMagazineSubMachineGun45
+    - NFMagazineSubMachineGun45
     - EmergencyMedipen
     - CombatMedipen
     - CombatMedipen
@@ -237,13 +237,13 @@
     - JawsOfLife
     - HandheldCrewMonitor
     - TelescopicShield
-    - WeaponDisabler
+    - NFWeaponEnergyPistolDisabler
     - WeaponPulseCarbine
     - WeaponSubMachineGunVector
-    - MagazineMagnumSubMachineGun
-    - MagazineMagnumSubMachineGun
-    - MagazineMagnumSubMachineGun
-    - MagazineMagnumSubMachineGun
+    - NFMagazineSubMachineGun45
+    - NFMagazineSubMachineGun45
+    - NFMagazineSubMachineGun45
+    - NFMagazineSubMachineGun45
     - EmergencyMedipen
     - CombatMedipen
     - CombatMedipen
@@ -298,7 +298,7 @@
     - MagazinePistolSubMachineGunTopMounted
     - MagazinePistolSubMachineGunTopMounted
     - BoxMRE
-    - WeaponDisabler
+    - NFWeaponEnergyPistolDisabler
     - CrowbarRed
     - FlashlightSeclite
     - ADTtelescopicBaton
@@ -348,9 +348,9 @@
     back:
     - WeaponXrayCannon
     - WeaponSubMachineGunDrozd
-    - MagazinePistolSubMachineGun
-    - MagazinePistolSubMachineGun
-    - MagazinePistolSubMachineGun
+    - NFMagazineSubMachineGun35
+    - NFMagazineSubMachineGun35
+    - NFMagazineSubMachineGun35
     - BoxMRE
     - PinpointerNuclear
     - CrowbarRed
@@ -359,7 +359,7 @@
     - EmergencyMedipen
     - ADTtelescopicBaton
     - Flash
-    - WeaponDisabler
+    - NFWeaponEnergyPistolDisabler
     - Truncheon
 
 ## Gamma
@@ -398,7 +398,7 @@
     shoes: ADTClothingShoesBootsMagERT
     id: ERTLeaderGammaPDA
     belt: ClothingBeltERTFilled
-    pocket1: WeaponDisabler
+    pocket1: NFWeaponEnergyPistolDisabler
     pocket2: DoorRemoteAll
   storage:
     back:
@@ -406,10 +406,10 @@
     - WeaponSubMachineGunVector
     - PinpointerNuclear
     - CrowbarRed
-    - MagazinePistolSubMachineGun
-    - MagazinePistolSubMachineGun
-    - MagazinePistolSubMachineGun
-    - MagazinePistolSubMachineGun
+    - NFMagazineSubMachineGun35
+    - NFMagazineSubMachineGun35
+    - NFMagazineSubMachineGun35
+    - NFMagazineSubMachineGun35
     - EmergencyMedipen
     - BoxMRE
     - Flare
@@ -455,7 +455,7 @@
     back:
     - TelescopicShield
     - FlashlightSeclite
-    - WeaponDisabler
+    - NFWeaponEnergyPistolDisabler
     - CrowbarRed
     - EmergencyMedipen
     - BoxMRE
@@ -504,14 +504,14 @@
   storage:
     back:
     - TelescopicShield
-    - WeaponDisabler
+    - NFWeaponEnergyPistolDisabler
     - WeaponXrayCannon
     - EmergencyMedipen
     - BoxMRE
     - WeaponSubMachineGunDrozd
-    - MagazinePistolSubMachineGun
-    - MagazinePistolSubMachineGun
-    - MagazinePistolSubMachineGun
+    - NFMagazineSubMachineGun35
+    - NFMagazineSubMachineGun35
+    - NFMagazineSubMachineGun35
     - CrowbarRed
     - Flare
     - Truncheon
@@ -555,14 +555,14 @@
   storage:
     back:
     - TelescopicShield
-    - WeaponDisabler
+    - NFWeaponEnergyPistolDisabler
     - CrowbarRed
     - WeaponPulseCarbine
     - WeaponSubMachineGunVector
-    - MagazinePistolSubMachineGun
-    - MagazinePistolSubMachineGun
-    - MagazinePistolSubMachineGun
-    - MagazinePistolSubMachineGun
+    - NFMagazineSubMachineGun35
+    - NFMagazineSubMachineGun35
+    - NFMagazineSubMachineGun35
+    - NFMagazineSubMachineGun35
     - EmergencyMedipen
     - BoxMRE
     - Flare
@@ -615,7 +615,7 @@
     - MagazinePistol
     - WeaponLaserCarbine
     - Flare
-    - WeaponDisabler
+    - NFWeaponEnergyPistolDisabler
     - HandheldHealthAnalyzer
     - ChemistryBottleOmnizine
     - ChemistryBottleEpinephrine
@@ -678,7 +678,7 @@
     - SpeedLoader357
     - SpeedLoader357
     - Defibrillator
-    - WeaponDisabler
+    - NFWeaponEnergyPistolDisabler
     - HandheldHealthAnalyzer
 
 ## Gamma
@@ -736,7 +736,7 @@
     - MagazineMagnum
     - MagazineMagnum
     - MagazineMagnum
-    - WeaponDisabler
+    - NFWeaponEnergyPistolDisabler
     - HandheldHealthAnalyzer
     - PinpointerNuclear
 
@@ -780,7 +780,7 @@
   storage:
     back:
     - FlashlightLantern
-    - WeaponDisabler
+    - NFWeaponEnergyPistolDisabler
     - EmergencyMedipen
     - BoxMRE
     - WeaponPistolMk58
@@ -838,7 +838,7 @@
     - SpeedLoader357
     - RemoteSignaller
     - Flare
-    - WeaponDisabler
+    - NFWeaponEnergyPistolDisabler
 
 ## Gamma
 - type: job
@@ -877,7 +877,7 @@
     belt: ClothingBeltChiefEngineerFilled
   storage:
     back:
-    - WeaponDisabler
+    - NFWeaponEnergyPistolDisabler
     - RCDRecharging
     - RCDAmmo
     - RCDAmmo
@@ -948,7 +948,7 @@
     - MagazinePistol
     - MagazinePistol
     - Flare
-    - WeaponDisabler
+    - NFWeaponEnergyPistolDisabler
 
 ## Red
 - type: job
@@ -1001,7 +1001,7 @@
     - SpeedLoader357
     - TrashBagBlue
     - Flare
-    - WeaponDisabler
+    - NFWeaponEnergyPistolDisabler
 
 ## Gamma
 - type: job
@@ -1054,6 +1054,6 @@
     - MagazineMagnum
     - MagazineMagnum
     - CrowbarRed
-    - WeaponDisabler
+    - NFWeaponEnergyPistolDisabler
     - TrashBagBlue
     - PinpointerNuclear

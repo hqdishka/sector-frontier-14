@@ -31,7 +31,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineLightRifle
+        startingItem: NFMagazineRifle30
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
@@ -41,11 +41,11 @@
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeLightRifle
+        startingItem: NFCartridgeRifle30
         priority: 1
         whitelist:
           tags:
-            - CartridgeLightRifle
+            - NFCartridgeRifle30
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

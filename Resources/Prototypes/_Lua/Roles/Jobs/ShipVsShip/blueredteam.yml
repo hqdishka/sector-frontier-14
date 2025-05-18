@@ -279,7 +279,7 @@
     - PowerDrill
     - JawsOfLife
     - TelescopicShield
-    - WeaponDisabler
+    - NFWeaponEnergyPistolDisabler
     - WeaponPulseCarbine
     - WeaponSubMachineGunVector
     - MagazinePistolSubMachineGun
@@ -354,7 +354,7 @@
     shoes: ClothingShoesBootsMagFSF #Рейнджер
     id: BlueTeamCaptainIDCard
     belt: ClothingBeltERTFilled
-    pocket1: WeaponDisabler
+    pocket1: NFWeaponEnergyPistolDisabler
     pocket2: DoorRemoteAll
   storage:
     back:
@@ -717,7 +717,7 @@
     - PowerDrill
     - JawsOfLife
     - TelescopicShield
-    - WeaponDisabler
+    - NFWeaponEnergyPistolDisabler
     - WeaponPulseCarbine
     - WeaponSubMachineGunVector
     - MagazinePistolSubMachineGun
@@ -792,7 +792,7 @@
     shoes: ClothingShoesBootsMagFSF #Рейнджер
     id: RedTeamCaptainIDCard
     belt: ClothingBeltERTFilled
-    pocket1: WeaponDisabler
+    pocket1: NFWeaponEnergyPistolDisabler
     pocket2: DoorRemoteAll
   storage:
     back:

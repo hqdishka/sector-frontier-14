@@ -168,7 +168,7 @@
   - type: GhostTakeoverAvailable
   - type: RandomMetadata
     nameSegments:
-    - SyndicateNamesNormal
+    - NamesSyndicateNormal
     - NamesLastDeathSquad
   - type: Loadout
     prototypes: [ DeathSquadGear ]
@@ -1081,7 +1081,9 @@
       sprite: Mobs/Species/Human/parts.rsi
       state: full
     - type: RandomMetadata
-      nameSegments: [ adt_nukeagent_names ]
+      nameSegments:
+      - NamesSyndicatePrefix
+      - NamesSyndicateNormal
     - type: RandomHumanoidSpawner
       settings: SyndicateAgent
 

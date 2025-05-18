@@ -64,6 +64,7 @@
     offset: 0.0
     rarePrototypes:
     - SpawnDungeonLootMeleeT3
+    - SpawnDungeonLootMeleeT3L # Lua
     rareChance: 0.05
 
 #region melee T3
@@ -221,6 +222,7 @@
     offset: 0.0
     rarePrototypes:
     - SpawnDungeonLootGunT3
+    - SpawnDungeonLootGunT3L # Lua
     rareChance: 0.05
 
 #region guns T3
@@ -246,7 +248,7 @@
     - WeaponCaseLongAtreidesExpedition
     - WeaponCaseLongWT550Expedition
     - WeaponCaseLongDrozdExpedition
-    - WeaponCaseLongM90Expedition
+    # - WeaponCaseLongM90Expedition
     - WeaponCaseLongLecterExpedition
     - WeaponCaseShortSvalinnExpedition
     - WeaponCaseLongHristovExpedition

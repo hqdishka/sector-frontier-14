@@ -10,6 +10,7 @@
   solids:
     FoodCakePlain: 1
     FoodSpacemansTrumpet: 3
+  recipeType: Oven # Frontier
 
 - type: microwaveMealRecipe
   id: RecipeMealOmelette
@@ -21,6 +22,7 @@
     Milk: 5
   solids:
     FoodCheeseSlice: 1
+  recipeType: Oven # Frontier
 
 - type: microwaveMealRecipe
   id: RecipeSoupMiso
@@ -35,6 +37,7 @@
     FoodSoybeans: 1
     FoodLingzhi: 1
     FoodOnionRedSlice: 2
+  recipeType: Oven # Frontier
 
 - type: microwaveMealRecipe
   id: RecipeBakedCannoli
@@ -47,3 +50,4 @@
   solids:
     FoodSnackRaisins: 1
     FoodChevreSlice: 2
+  recipeType: Oven # Frontier

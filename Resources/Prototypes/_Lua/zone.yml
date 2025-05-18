@@ -71,7 +71,6 @@
         state: pink
       - state: icon
   - type: PacifiedZoneGenerator
-    killHostileMobs: true
     radius: 10
     immuneRoles:
       - Bailiff

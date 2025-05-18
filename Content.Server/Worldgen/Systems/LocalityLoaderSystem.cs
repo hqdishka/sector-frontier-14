@@ -3,6 +3,7 @@ using Robust.Server.GameObjects;
 using Content.Server._NF.Worldgen.Components.Debris; // Frontier
 using Content.Server._NF.Salvage; // Frontier
 using Content.Server.StationEvents.Events; // Frontier
+using Robust.Shared.Spawners;
 
 namespace Content.Server.Worldgen.Systems;
 

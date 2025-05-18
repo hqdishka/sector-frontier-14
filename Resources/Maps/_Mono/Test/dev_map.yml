@@ -10106,7 +10106,7 @@ entities:
     - type: Transform
       pos: -3.433327,-1.5
       parent: 2
-- proto: WeaponLaserTurboNF
+- proto: NFWeaponEnergyLightMachineGunTurbo
   entities:
   - uid: 1562
     components:

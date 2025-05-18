@@ -17,7 +17,7 @@
  - /Prototypes/Entities/Objects/Weapons/Guns/HMGs # Frontier
  - /Prototypes/Entities/Objects/Weapons/Guns/Pistols # Frontier
  - /Prototypes/Entities/Objects/Weapons/Guns/Projectiles/meteors.yml # Frontier
- - /Prototypes/Entities/Objects/Weapons/Guns/Projectiles/projectiles.yml # Frontier
+# - /Prototypes/Entities/Objects/Weapons/Guns/Projectiles/projectiles.yml # Frontier
  - /Prototypes/Entities/Objects/Weapons/Guns/Revolvers # Frontier
  - /Prototypes/Entities/Objects/Weapons/Guns/Rifles # Frontier
  - /Prototypes/Entities/Objects/Weapons/Guns/Shotguns # Frontier

@@ -9,6 +9,7 @@
     Milk: 5
     TableSalt: 2
     Egg: 6
+  recipeType: Oven # Frontier
 
 - type: microwaveMealRecipe
   id: ADTRecipeSausageFried
@@ -17,3 +18,4 @@
   time: 5
   solids:
     ADTFoodSausageRaw: 1
+  recipeType: Oven # Frontier

@@ -16,7 +16,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg
   - type: ProjectileBatteryAmmoProvider
-    proto: BulletKineticShuttle
+    proto: NFBulletKineticShuttle
     fireCost: 50
   - type: Appearance
   - type: AmmoCounter

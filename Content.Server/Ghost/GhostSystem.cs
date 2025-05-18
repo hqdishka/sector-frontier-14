@@ -43,6 +43,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Content.Server.Preferences.Managers;
+using Robust.Shared.Network;
 
 namespace Content.Server.Ghost
 {
@@ -437,7 +438,7 @@ namespace Content.Server.Ghost
 
         private IEnumerable<GhostWarp> GetAdminGhostWarps(EntityUid except)
         {
-            foreach (var player in _playerManager.Sessions)
+            foreach (var player in _player.Sessions)
             {
                 if (player.AttachedEntity is not {Valid: true} attached)
                     continue;
@@ -460,7 +461,7 @@ namespace Content.Server.Ghost
 
         private IEnumerable<GhostWarp> GetRegularGhostWarps(EntityUid except)
         {
-            foreach (var player in _playerManager.Sessions)
+            foreach (var player in _player.Sessions)
             {
                 if (player.AttachedEntity is not {Valid: true} attached)
                     continue;
@@ -583,9 +584,13 @@ namespace Content.Server.Ghost
             // If all else fails, it'll default to the default entity prototype name, "observer".
             // However, that should rarely happen.
             if (!string.IsNullOrWhiteSpace(mind.Comp.CharacterName))
+            {
                 _metaData.SetEntityName(ghost, mind.Comp.CharacterName);
-            else if (mind.Comp.UserId is { } userId && _player.TryGetSessionById(userId, out var session))
+            }
+            else if (mind.Comp.UserId is { } netUserId && _player.TryGetSessionById(netUserId, out var session))
+            {
                 _metaData.SetEntityName(ghost, session.Name);
+            }
 
             if (mind.Comp.TimeOfDeath.HasValue)
             {
@@ -606,7 +611,8 @@ namespace Content.Server.Ghost
             _nameMod.RefreshNameModifiers(ghost);
 
             // Apply admin OOC color to the ghost if the player has one
-            ApplyAdminOOCColor(ghost, mind.Owner);
+            if (mind.Comp.UserId is { } userId)
+                ApplyAdminOOCColor(ghost, userId);
 
             return ghost;
         }
@@ -616,9 +622,9 @@ namespace Content.Server.Ghost
         /// </summary>
         /// <param name="ghostEntity">The ghost entity to apply the color to</param>
         /// <param name="mindId">The mind ID of the player</param>
-        public void ApplyAdminOOCColor(EntityUid ghostEntity, EntityUid mindId) // Mono
+        public void ApplyAdminOOCColor(EntityUid ghostEntity, NetUserId mindId) // Mono
         {
-            if (!_mind.TryGetSession(mindId, out var session))
+            if (!_player.TryGetSessionById(mindId, out var session))
                 return;
 
             // Only apply admin OOC color if the player is actually an admin
@@ -649,7 +655,8 @@ namespace Content.Server.Ghost
             if (args.Mind == default)
                 return;
 
-            ApplyAdminOOCColor(uid, args.Mind);
+            if (args.Mind.Comp.UserId is { } userId)
+                ApplyAdminOOCColor(uid, userId);
         }
 
         public bool OnGhostAttempt(EntityUid mindId, bool canReturnGlobal, bool viaCommand = false, bool forced = false, MindComponent? mind = null)

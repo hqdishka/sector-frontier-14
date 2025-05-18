@@ -4341,7 +4341,7 @@ entities:
       parent: 1
     - type: WarpPoint
       location: LuaTech Транспортное Хранилище
-- proto: WeaponLaserTurboNF
+- proto: NFWeaponEnergyLightMachineGunTurbo
   entities:
   - uid: 29
     components:

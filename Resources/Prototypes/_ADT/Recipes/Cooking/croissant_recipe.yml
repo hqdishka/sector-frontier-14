@@ -9,6 +9,7 @@
     Cream: 5
   solids:
     FoodDoughSlice: 1
+  recipeType: Oven # Frontier
 
 - type: microwaveMealRecipe
   id: ADTFoodCroissantChocolateRecipe
@@ -21,6 +22,7 @@
   solids:
     FoodDoughSlice: 1
     FoodSnackChocolateBar: 1
+  recipeType: Oven # Frontier
 
 - type: microwaveMealRecipe
   id: ADTFoodCroissantCheeseRecipe
@@ -33,6 +35,7 @@
   solids:
     FoodDoughSlice: 1
     FoodCheeseSlice: 1
+  recipeType: Oven # Frontier
 
 - type: microwaveMealRecipe
   id: ADTFoodHotDogRecipe
@@ -44,6 +47,7 @@
   solids:
     FoodDoughSlice: 1
     ADTFoodSausageRaw: 1
+  recipeType: Oven # Frontier
 
 - type: microwaveMealRecipe
   id: ADTFoodMealPigblanketRecipe
@@ -53,3 +57,4 @@
   solids:
     FoodDoughSlice: 1
     ADTFoodSausageRaw: 1
+  recipeType: Oven # Frontier

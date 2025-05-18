@@ -69,7 +69,7 @@
   name: ghost-role-information-artifact-name
   description: ghost-role-information-artifact-description
   rules: ghost-role-information-freeagent-rules
-  entityPrototype: VariedXenoArtifactItem # Don't spawn this.  FIXME: entity has no ghost role component.
+  entityPrototype: ComplexXenoArtifactItem # Don't spawn this.  FIXME: entity has no ghost role component.
   whitelisted: false
 
 - type: ghostRole

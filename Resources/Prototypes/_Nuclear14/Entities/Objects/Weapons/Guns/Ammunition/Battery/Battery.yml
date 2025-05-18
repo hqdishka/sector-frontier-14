@@ -34,7 +34,7 @@
   - type: PowerCellVisuals
   - type: Riggable
   - type: HitscanBatteryAmmoProvider
-    proto: RedMediumLaser
+    proto: NFRedMediumLaser
     fireCost: 50
 
 #MARK: MF
@@ -113,7 +113,7 @@
     maxCharge: 600
     startingCharge: 600
   - type: HitscanBatteryAmmoProvider
-    proto: RedLaser
+    proto: NFRedMediumLaser
     fireCost: 50
 
 #MARK: ECP
@@ -141,7 +141,7 @@
     maxCharge: 2375
     startingCharge: 2375
   - type: HitscanBatteryAmmoProvider
-    proto: RedHeavyLaser
+    proto: NFRedHeavyLaser
     fireCost: 125
 
 #MARK: Fusion Cell
@@ -171,7 +171,7 @@
   - type: Item
     size: Small
   - type: HitscanBatteryAmmoProvider
-    proto: RedLaser
+    proto: NFRedMediumLaser
     fireCost: 50
 
 #MARK: Plasma cartridge

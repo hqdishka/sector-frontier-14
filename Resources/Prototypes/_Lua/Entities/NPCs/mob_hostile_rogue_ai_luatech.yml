@@ -27,7 +27,7 @@
     factions:
     - SiliconsLuaTech
   - type: ProjectileBatteryAmmoProvider
-    proto: AnomalousParticleSigmaStrong
+    proto: NFAnomalousParticleSigmaStrong
     fireCost: 100
 
 - type: entity

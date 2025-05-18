@@ -135,3 +135,11 @@
   #recipes: # Frontier
   #- WeaponDisabler # Frontier
   #- WeaponDisablerSMG # Frontier
+
+# WD EDIT START
+- type: latheRecipePack
+  id: VisionGoggles
+  recipes:
+  - ClothingEyesNightVisionGoggles
+  - ClothingEyesThermalVisionGoggles
+# WD EDIT END

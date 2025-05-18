@@ -8,3 +8,4 @@
   solids:
     ADTFoodSausageRaw: 1
     FoodPlateSmall: 1
+  recipeType: Oven # Frontier

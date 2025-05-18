@@ -42,8 +42,8 @@
           state: blue
     - type: RandomMetadata
       nameSegments:
-      - SyndicateOpPrefix
-      - SyndicateNamesNormal
+      - NamesSyndicatePrefix
+      - NamesSyndicateNormal
     - type: RandomHumanoidSpawner
       settings: NukeOperativePreset
 - type: randomHumanoidSettings
@@ -86,8 +86,8 @@
           state: blue
     - type: RandomMetadata
       nameSegments:
-      - SyndicateComOpPrefix
-      - SyndicateNamesNormal
+      - NamesSyndicatePrefix
+      - NamesSyndicateElite
     - type: RandomHumanoidSpawner
       settings: NukeopsCommanderPreset
 - type: randomHumanoidSettings
@@ -133,8 +133,8 @@
           state: blue
     - type: RandomMetadata
       nameSegments:
-      - SyndicateOpPrefix
-      - SyndicateNamesNormal
+      - NamesSyndicatePrefix
+      - NamesSyndicateNormal
     - type: RandomHumanoidSpawner
       settings: NukeopsMedicPreset
 - type: randomHumanoidSettings
@@ -177,8 +177,8 @@
           state: blue
     - type: RandomMetadata
       nameSegments:
-      - SyndicateNamesPrefix
-      - SyndicateNamesNormal
+      - NamesSyndicatePrefix
+      - NamesSyndicateNormal
     - type: RandomHumanoidSpawner
       settings: LoneNukeOperativePreset
 - type: randomHumanoidSettings

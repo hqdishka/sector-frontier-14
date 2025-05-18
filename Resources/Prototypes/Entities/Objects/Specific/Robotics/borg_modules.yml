@@ -443,7 +443,7 @@
     moduleId: Mercenary
     items:
     - Machete
-    - WeaponPistolMercenaryEchis
+    - LuaWeaponPistolMercenaryEchis
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-weapon-module }
 

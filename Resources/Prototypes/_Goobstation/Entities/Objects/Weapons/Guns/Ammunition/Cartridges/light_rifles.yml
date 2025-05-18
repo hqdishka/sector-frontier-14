@@ -6,7 +6,7 @@
   - type: Tag
     tags:
     - Cartridge
-    - CartridgeLightRifle
+    - NFCartridgeRifle30
     - CartridgeLightRifleSubsonic
   - type: CartridgeAmmo
     proto: BulletLightRifleSubsonic

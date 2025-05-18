@@ -1101,7 +1101,7 @@
     contents:
     - id: ADTObjectsWeaponSubMachineGunUmp
       amount: 1
-    - id: MagazineMagnumSubMachineGun
+    - id: NFMagazineSubMachineGun45
       amount: 4
 
 - type: entity
@@ -1121,7 +1121,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponLaserTurboNF
+    - id: NFWeaponEnergyLightMachineGunTurbo
       amount: 1
 
 - type: entity
@@ -1145,7 +1145,7 @@
     contents:
     - id: WeaponSubMachineGunVector
       amount: 1
-    - id: MagazineMagnumSubMachineGun
+    - id: NFMagazineSubMachineGun45
       amount: 1
 
 - type: entity
@@ -1157,7 +1157,7 @@
     contents:
     - id: ADTAbakanRifleAEK
       amount: 1
-    - id: MagazineLightRifle
+    - id: NFMagazineRifle30
       amount: 2
 
 - type: entity
@@ -1169,7 +1169,7 @@
     contents:
     - id: WeaponRevolverInspector
       amount: 1
-    - id: MagazinePistolSubMachineGun
+    - id: NFMagazineSubMachineGun35
       amount: 2
 
 - type: entity
@@ -1181,7 +1181,7 @@
     contents:
     - id: ADTGunRifleAN
       amount: 1
-    - id: MagazineLightRifle
+    - id: NFMagazineRifle30
       amount: 2
 
 - type: entity
@@ -1193,7 +1193,7 @@
     contents:
     - id: ADTObjectsWeaponSubMachineGunPPCH45S
       amount: 1
-    - id: MagazineMagnumSubMachineGun
+    - id: NFMagazineSubMachineGun45
       amount: 4
 
 - type: entity
@@ -1287,7 +1287,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponEnergyGunMultiphase
+    - id: NFWeaponEnergyPistolLaserX01Multiphase
       amount: 1
 
 - type: entity

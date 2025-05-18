@@ -141,7 +141,9 @@
     offset: 0.0
     rarePrototypes:
     - SpawnDungeonLootMeleeT3
+    - SpawnDungeonLootMeleeT3L # Lua
     - SpawnDungeonLootGunT3
+    - SpawnDungeonLootGunT3L # Lua
     - SpawnDungeonLootExplosivesT2
     rareChance: 0.1
 
@@ -168,6 +170,7 @@
     offset: 0.0
     rarePrototypes:
     - SpawnDungeonLootMeleeT3
+    - SpawnDungeonLootMeleeT3L # Lua
     rareChance: 0.1
 
 - type: entity
@@ -188,8 +191,9 @@
   - type: RandomSpawner
     prototypes:
     - SpawnDungeonLootGunT3
-    - SpawnDungeonLootGunT3
+    - SpawnDungeonLootGunT3L # Lua
     - SpawnDungeonLootMeleeT3
+    - SpawnDungeonLootMeleeT3L # Lua
     chance: 0.9
     offset: 0.0
     rarePrototypes:

@@ -5,7 +5,7 @@
 # T3: rare
 - type: entity
   name: random weapon
-  id: SpawnDungeonLootMeleeT3
+  id: SpawnDungeonLootMeleeT3L
   parent: MarkerBasePlaceFree
   suffix: "Dungeon, Melee, T3"
   categories: [ HideSpawnMenu ]
@@ -21,11 +21,6 @@
       color: red
   - type: RandomSpawner
     prototypes:
-    - PlasteelArmingSword
-    - Cutlass
-    - Claymore
-    - Truncheon
-    - WeaponCaseShortEnergyDaggerExpedition
 # Мили фоллыча
     - N14Hatchet
     - N14TribalHatchet
@@ -66,11 +61,11 @@
     offset: 0.0
     rarePrototypes:
     - SpawnDungeonLootMeleeT4
-    rareChance: 0.1
+    rareChance: 0.05
 
 - type: entity
   name: random weapon
-  id: SpawnDungeonLootGunT3
+  id: SpawnDungeonLootGunT3L
   parent: MarkerBasePlaceFree
   suffix: "Dungeon, Gun, T3"
   categories: [ HideSpawnMenu ]
@@ -86,11 +81,6 @@
       color: red
   - type: RandomSpawner
     prototypes:
-    - WeaponCaseLongWT550Expedition
-    - WeaponCaseLongDrozdExpedition
-    - WeaponCaseLongLecterExpedition
-    - WeaponCaseLongLaserCarbineExpedition
-    - WeaponCaseLongHristovExpedition
 #new
     - WeaponCaseShortN14WeaponLaserPistol
     - WeaponCaseShortN14WeaponLaserPistol
@@ -215,29 +205,4 @@
     offset: 0.0
     rarePrototypes:
     - SpawnDungeonLootGunT4
-    rareChance: 0.1
-
-- type: entity
-  name: random weapon
-  id: SpawnDungeonLootExplosivesT3
-  parent: MarkerBasePlaceFree
-  suffix: "Dungeon, Explosives, T3"
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Sprite
-    layers:
-    - state: green
-      scale: 0.7, 0.7
-    - sprite: Objects/Weapons/Bombs/seismic.rsi
-      state: icon
-    - sprite: Effects/crayondecals.rsi
-      state: 3
-      color: red
-  - type: RandomSpawner
-    prototypes:
-    - WeaponCaseShortSeismicCharge
-    chance: 0.5
-    offset: 0.0
-    rarePrototypes:
-    - SpawnDungeonLootExplosivesT4
-    rareChance: 0.1
+    rareChance: 0.05
