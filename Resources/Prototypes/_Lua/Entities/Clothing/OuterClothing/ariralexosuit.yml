@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingOuterHardsuitBase
+  parent: [ ClothingOuterHardsuitBase, BaseToggleClothing ]
   id: ClothingOuterHardsuitAriralExosuit
   name: Экзоскафандр Арирал
   description: Легкий экзоскафандр для подлглядывания за новыми видами.
@@ -10,21 +10,34 @@
     size: Huge
   - type: Clothing
     sprite: _Lua/Clothing/OuterClothing/Hardsuits/ariral.rsi
+  - type: ToggleClothing
+    action: ActionTogglePhaseCloak
+    disableOnUnequip: true
+  - type: ComponentToggler
+    parent: true
+    components:
+    - type: Stealth
+      minVisibility: 0.1
+      lastVisibility: 0.1
   - type: PressureProtection
-    highPressureMultiplier: 0.05
+    highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.001
+    coolingCoefficient: 0.001
   - type: ExplosionResistance
-    damageCoefficient: 0.05
+    damageCoefficient: 0.2
+  - type: FireProtection
+    reduction: 0.8
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.4
-        Slash: 0.35
-        Piercing: 0.2
-        Heat: 0.1
-        Cold: 0.1
-        Radiation: 0.1
-        Caustic: 0.1
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.2
+        Radiation: 0.01
+        Caustic: 0.5
   - type: ClothingSpeedModifier
     walkModifier: 1.15
     sprintModifier: 1.3
@@ -46,22 +59,26 @@
     sprite: _Lua/Clothing/Head/Hardsuits/ariral.rsi
   - type: Clothing
     sprite: _Lua/Clothing/Head/Hardsuits/ariral.rsi
+    allowedSpecies:
+      - Ariral
   - type: PointLight
     radius: 7
     energy: 3
   - type: PressureProtection
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.005
+    coolingCoefficient: 0.005
+  - type: FireProtection
+    reduction: 0.2
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.7
-        Slash: 0.6
-        Piercing: 0.5
-        Heat: 0.4
-        Cold: 0.4
-        Radiation: 0.1
-        Caustic: 0.1
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
   - type: FlashImmunity
   - type: EyeProtection
   - type: ShowHealthBars
