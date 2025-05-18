@@ -300,3 +300,18 @@ uplink-barber-scissors-name = Парикмахерские ножницы
 uplink-barber-scissors-desc = Хороший инструмент для того, чтобы подарить своему коллеге-агенту красивую стрижку, если, конечно, вы не хотите сделать её себе.
 uplink-backpack-syndicate-name = Рюкзак Синдиката
 uplink-backpack-syndicate-desc = Лёгкий взрывоустойчивый рюкзак для хранения различных предательских штучек.
+
+uplink-security-combat-pen-name = боевой медипен
+uplink-security-combat-pen-desc = Одноразовый медипен, содержащий химические вещества, восстанавливающие большинство видов повреждений.
+
+uplink-pirate-anti-poison-pen-name = автоинъектор противоядия
+uplink-pirate-anti-poison-pen-desc = Экспресс-доза противоядия. Содержит ультраваскулин и эпинефрин.
+
+uplink-pirate-puncturase-pen-name = автоинъектор пунктураза
+uplink-pirate-puncturase-pen-desc = Экспресс-доза пунктураза и транексамовой кислоты, предназначенная для применения в боевых условиях.
+
+uplink-pirate-pyrazine-pen-name = автоинъектор пиразина
+uplink-pirate-pyrazine-pen-desc = Экспресс-доза пиразина и дермалина, предназначенная для применения в боевых условиях.
+
+uplink-pirate-rad-pen-name = автоинъектор рад-повреждений
+uplink-pirate-rad-pen-desc = Экспресс-доза антирадиационного препарата. Содержит аритразин и бикаридин.

@@ -16,7 +16,7 @@ public sealed class LocalityLoaderSystem : BaseWorldSystem
     [Dependency] private readonly LinkedLifecycleGridSystem _linkedLifecycleGrid = default!; // Frontier
 
     // Duration to reset the despawn timer to when a debris is loaded into a player's view.
-    private const float DebrisActiveDuration = 1200; //20 минут
+    private const float DebrisActiveDuration = 3600; //20 минут
 
     // Frontier: space debris destruction
     public override void Initialize()

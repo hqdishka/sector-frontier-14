@@ -387,7 +387,7 @@
   id: UplinkPirateSMGAmmoBox
   name:  uplink-pirate-smg-ammo-box-name
   description: uplink-pirate-smg-ammo-box-desc
-  productEntity: MagazineBoxPistol
+  productEntity: NFAmmunitionBoxPistol35
   cost:
     Doubloon: 1
   categories:
