@@ -12,6 +12,7 @@
     Typan:
       stationProto: StandardTypanVessel
       components:
+      - type: MailStationDisabled
       - type: StationNameSetup
         mapNameTemplate: 'Тайпан'
       - type: ExtraStationInformation

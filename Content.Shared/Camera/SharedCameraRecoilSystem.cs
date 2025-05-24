@@ -65,7 +65,7 @@ public abstract class SharedCameraRecoilSystem : EntitySystem
             }
             else // Continually restore camera to 0.
             {
-                var normalized = recoil.CurrentKick.Normalized();
+                var normalized = recoil.CurrentKick == Vector2.Zero ? Vector2.Zero : recoil.CurrentKick.Normalized();
                 recoil.LastKickTime += frameTime;
                 var restoreRate = MathHelper.Lerp(RestoreRateMin, RestoreRateMax, Math.Min(1, recoil.LastKickTime / RestoreRateRamp));
                 var restore = normalized * restoreRate * frameTime;

@@ -37,6 +37,7 @@ device-address-prefix-freezer = FZR-
 device-address-prefix-volume-pump = VPP-
 device-address-prefix-smes = SMS-
 device-address-prefix-turret = TRT-
+device-address-prefix-sale-point = PNT-
 
 # PDAs and terminals
 device-address-prefix-console = CLS-

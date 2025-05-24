@@ -16,6 +16,14 @@
       ]
     },
     {
+      "name": "mixer_base",
+      "delays": [
+        [
+          1
+        ]
+      ]
+    },
+    {
       "name": "mixer_broken",
       "delays": [
         [

@@ -52,7 +52,7 @@
     gloves: ClothingHandsGlovesCombat
     head: ClothingHeadHelmetCentcom
     outerClothing: ClothingOuterArmorCentcom
-    suitstorage: WeaponRifleLecter
+    suitstorage: NFWeaponRifleAssaultLecter
     id: CentComPrivateOfficerPDA
     ears: ClothingHeadsetCentComCC
     belt: ClothingBeltSecuritySuper
@@ -62,7 +62,7 @@
     back:
     - MedkitCombatFilled
     - BoxSurvivalSecurity
-    - MagazineRifle
+    - NFMagazineRifle20
     - MagazinePistol
   #innerClothingSkirt: ClothingUniformJumpskirtSec
   #satchel: ClothingBackpackSatchelSecurityFilled

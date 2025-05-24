@@ -50,6 +50,34 @@
       path: /Audio/Items/Toys/rawr.ogg
 
 ##################################################################################
+- type: entity
+  parent: [ HoloprojectorField, Holoprojector ]
+  categories: [ HideSpawnMenu ]
+  id: LuaTechProjectorField
+  name: голопроектор "LuaTech"
+  description: Обычный голопроектор
+  components:
+    - type: HolosignProjector
+      signProto: LuaTechForcefield
+      chargeUse: 30
+    - type: Sprite
+      sprite: Objects/Devices/Holoprojectors/field.rsi
+      state: icon
+
+- type: entity
+  id: LuaTechForcefield
+  categories: [ HideSpawnMenu ]
+  parent: [HolosignForcefield, HolosignWetFloor,]
+  name: силовое поле
+  description: Сдерживающее силовое поле
+  components:
+  - type: TimedDespawn
+    lifetime: 360
+  - type: Airtight
+    noAirWhenFullyAirBlocked: false
+  - type: Sprite
+    sprite: _Lua/Sponsor/Lua/Lua_White/Structures/Holo/field.rsi
+    state: icon
 
 - type: entity
   parent: ClothingBackpack
@@ -371,6 +399,7 @@
         - Комбинезон медика "LuaTech"
         - Гипоспрей "LuaTech"
         - Визор "LuaTech"
+        - Голопроектор "LuaTech"
         - Блюспейс хранилище "LuaTech"
           - Челюсти жизни "LuaTech"
           - Ручной сканер массы "LuaTech"
@@ -406,6 +435,7 @@
       - id: RCDLua
       - id: WelderLua
       - id: HandheldCrewMonitorLua
+      - id: LuaTechProjectorField
 
 - type: entity
   name: портативный монитор экипажа "LuaTech"
@@ -778,6 +808,7 @@
       - id: PlushieIrisLua
       - id: PlushieHacksLua
       - id: ClothingBeltIrisRed
+      - id: BlinkImplanterLua
 
 - type: entity
   parent: [ ClothingHeadHelmetLua, ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
@@ -841,6 +872,7 @@
       - id: PlushieIrisLua
       - id: PlushieHacksLua
       - id: ClothingBeltIrisRed
+      - id: BlinkImplanterLua
 
 - type: entity
   parent: [ ClothingHeadHelmetLua, ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]

@@ -44,8 +44,13 @@ public sealed class CameraRecoilSystem : SharedCameraRecoilSystem
         var dampen = existing / KickMagnitudeMax;
         component.CurrentKick += recoil * (1 - dampen);
 
-        if (component.CurrentKick.Length() > KickMagnitudeMax)
-            component.CurrentKick = component.CurrentKick.Normalized() * KickMagnitudeMax;
+        if (component.CurrentKick.LengthSquared() > KickMagnitudeMax * KickMagnitudeMax)
+        {
+            if (component.CurrentKick != Vector2.Zero)
+                component.CurrentKick = component.CurrentKick.Normalized() * KickMagnitudeMax;
+            else
+                component.CurrentKick = Vector2.Zero;
+        }
 
         component.LastKickTime = 0;
     }

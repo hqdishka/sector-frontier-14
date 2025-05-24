@@ -59,8 +59,9 @@
     sprite: _Lua/Clothing/Head/Hardsuits/ariral.rsi
   - type: Clothing
     sprite: _Lua/Clothing/Head/Hardsuits/ariral.rsi
+  - type: SpeciesRequirement
     allowedSpecies:
-      - Ariral
+    - Ariral
   - type: PointLight
     radius: 7
     energy: 3

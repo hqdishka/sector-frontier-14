@@ -1,3 +1,9 @@
 # 2025-04-25
 # Pride to PottedPlant
 VendingMachinePride: VendingMachinePottedPlantVend
+
+# 2025-05-20 Lua reverse Frontier wall lockers with grid inventory
+LockerWallColorChemistry: LockerWallChemistry
+LockerWallColorChemistryFilled: LockerWallChemistryFilled
+LockerWallColorMedical: LockerWallMedical
+LockerWallColorMedicalFilled: LockerWallMedicalFilled

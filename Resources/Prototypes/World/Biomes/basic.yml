@@ -9,27 +9,6 @@
         - id: AsteroidDebrisSmall
           prob: 0.01
           orGroup: debris
-        - id: AsteroidDebrisIceSmall
-          prob: 0.01
-          orGroup: debris
-        - id: AsteroidDebrisAndesiteSmall
-          prob: 0.01
-          orGroup: debris
-        - id: AsteroidDebrisBasaltSmall
-          prob: 0.01
-          orGroup: debris
-        - id: AsteroidDebrisSandSmall
-          prob: 0.01
-          orGroup: debris
-        - id: AsteroidDebrisChromiteSmall
-          prob: 0.01
-          orGroup: debris
-        - id: AsteroidDebrisRedSmall
-          prob: 0.01
-          orGroup: debris
-        - id: AsteroidDebrisCrabSmall
-          prob: 0.01
-          orGroup: debris
 
     - type: NoiseDrivenDebrisSelector
       noiseChannel: Wreck
@@ -54,141 +33,6 @@
           orGroup: debris
         - id: AsteroidDebrisLarger
           prob: 0.01
-          orGroup: debris
-        - id: AsteroidDebrisHuge
-          prob: 0.005
-          orGroup: debris
-        - id: AsteroidSalvageFortress
-          prob: 0.01
-          orGroup: debris
-        - id: AsteroidSalvageBehemoth
-          prob: 0.001
-          orGroup: debris
-        - id: AsteroidDebrisIceMedium
-          prob: 0.03
-          orGroup: debris
-        - id: AsteroidDebrisIceLarge
-          prob: 0.02
-          orGroup: debris
-        - id: AsteroidDebrisIceLarger
-          prob: 0.03
-          orGroup: debris
-        - id: AsteroidDebrisIceHuge
-          prob: 0.005
-          orGroup: debris
-        - id: AsteroidFortressIce
-          prob: 0.01
-          orGroup: debris
-        - id: AsteroidBehemothIce
-          prob: 0.001
-          orGroup: debris
-        - id: AsteroidDebrisAndesiteMedium
-          prob: 0.02
-          orGroup: debris
-        - id: AsteroidDebrisAndesiteLarge
-          prob: 0.03
-          orGroup: debris
-        - id: AsteroidDebrisAndesiteLarger
-          prob: 0.005
-          orGroup: debris
-        - id: AsteroidDebrisAndesiteHuge
-          prob: 0.005
-          orGroup: debris
-        - id: AsteroidFortressAndesite
-          prob: 0.01
-          orGroup: debris
-        - id: AsteroidBehemothAndesite
-          prob: 0.001
-          orGroup: debris
-        - id: AsteroidDebrisBasaltMedium
-          prob: 0.02
-          orGroup: debris
-        - id: AsteroidDebrisBasaltLarge
-          prob: 0.03
-          orGroup: debris
-        - id: AsteroidDebrisBasaltLarger
-          prob: 0.03
-          orGroup: debris
-        - id: AsteroidDebrisBasaltHuge
-          prob: 0.005
-          orGroup: debris
-        - id: AsteroidFortressBasalt
-          prob: 0.01
-          orGroup: debris
-        - id: AsteroidBehemothBasalt
-          prob: 0.001
-          orGroup: debris
-        - id: AsteroidDebrisSandMedium
-          prob: 0.02
-          orGroup: debris
-        - id: AsteroidDebrisSandLarge
-          prob: 0.03
-          orGroup: debris
-        - id: AsteroidDebrisSandLarger
-          prob: 0.03
-          orGroup: debris
-        - id: AsteroidDebrisSandHuge
-          prob: 0.005
-          orGroup: debris
-        - id: AsteroidFortressSand
-          prob: 0.01
-          orGroup: debris
-        - id: AsteroidBehemothSand
-          prob: 0.001
-          orGroup: debris
-        - id: AsteroidDebrisChromiteMedium
-          prob: 0.02
-          orGroup: debris
-        - id: AsteroidDebrisChromiteLarge
-          prob: 0.03
-          orGroup: debris
-        - id: AsteroidDebrisChromiteLarger
-          prob: 0.03
-          orGroup: debris
-        - id: AsteroidDebrisChromiteHuge
-          prob: 0.005
-          orGroup: debris
-        - id: AsteroidFortressChromite
-          prob: 0.01
-          orGroup: debris
-        - id: AsteroidBehemothChromite
-          prob: 0.001
-          orGroup: debris
-        - id: AsteroidDebrisRedMedium
-          prob: 0.02
-          orGroup: debris
-        - id: AsteroidDebrisRedLarge
-          prob: 0.03
-          orGroup: debris
-        - id: AsteroidDebrisRedLarger
-          prob: 0.03
-          orGroup: debris
-        - id: AsteroidDebrisRedHuge
-          prob: 0.005
-          orGroup: debris
-        - id: AsteroidFortressRed
-          prob: 0.01
-          orGroup: debris
-        - id: AsteroidBehemothRed
-          prob: 0.001
-          orGroup: debris
-        - id: AsteroidDebrisCrabMedium
-          prob: 0.02
-          orGroup: debris
-        - id: AsteroidDebrisCrabLarge
-          prob: 0.03
-          orGroup: debris
-        - id: AsteroidDebrisCrabLarger
-          prob: 0.03
-          orGroup: debris
-        - id: AsteroidDebrisCrabHuge
-          prob: 0.005
-          orGroup: debris
-        - id: AsteroidFortressCrab
-          prob: 0.01
-          orGroup: debris
-        - id: AsteroidBehemothCrab
-          prob: 0.001
           orGroup: debris
         # Medium
         - id: NFAsteroidDebrisMedium
@@ -218,14 +62,14 @@
           orGroup: debris
         # Enormous
         - id: NFAsteroidDebrisEnormous
-          prob: 0.005
+          prob: 0.009
           orGroup: debris
         - id: NFAsteroidScrapDebrisEnormous
-          prob: 0.005
+          prob: 0.009
           orGroup: debris
         # Extra Enormous
         - id: NFAsteroidDebrisExtraEnormous
-          prob: 0.005
+          prob: 0.009
           orGroup: debris
         - id: NFAsteroidAndesiteDebrisExtraEnormous
           prob: 0.005
@@ -269,7 +113,7 @@
           orGroup: debris
         # Extra Massive
         - id: NFAsteroidDebrisExtraMassive
-          prob: 0.006
+          prob: 0.008
           orGroup: debris
         - id: NFAsteroidAndesiteDebrisExtraMassive
           prob: 0.006

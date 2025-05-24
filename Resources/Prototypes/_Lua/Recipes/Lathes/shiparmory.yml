@@ -394,7 +394,7 @@
 
 - type: latheRecipe
   id: WeaponPistolN1984Event
-  result: WeaponPistolN1984
+  result: NFWeaponPistolN1984
   completetime: 10
 
 - type: latheRecipe
@@ -404,7 +404,7 @@
 
 - type: latheRecipe
   id: WeaponPistolViperEvent
-  result: WeaponPistolViper
+  result: NFWeaponPistolViper
   completetime: 10
 
 - type: latheRecipe
@@ -559,12 +559,12 @@
 
 - type: latheRecipe
   id: WeaponRifleLecterEvent
-  result: WeaponRifleLecter
+  result: NFWeaponRifleAssaultLecter
   completetime: 10
 
 - type: latheRecipe
   id: MagazineRifleEvent
-  result: MagazineRifle
+  result: NFMagazineRifle20
   completetime: 5
 
 - type: latheRecipe

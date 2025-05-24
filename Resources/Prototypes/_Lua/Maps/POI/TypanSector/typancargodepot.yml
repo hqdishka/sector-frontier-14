@@ -34,5 +34,6 @@
     TypanCargoDepot:
       stationProto: StandardFrontierOutpost
       components: &cargoStationComponents
+        - type: MailStationDisabled
         - type: StationNameSetup
           mapNameTemplate: 'Чёрный Рынок'

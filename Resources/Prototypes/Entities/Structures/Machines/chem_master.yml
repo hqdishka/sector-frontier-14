@@ -10,6 +10,7 @@
     sprite: Structures/Machines/mixer.rsi
     snapCardinals: true
     layers:
+    - state: mixer_base # Lua Fix
     - state: mixer_empty
       map: ["BeakerInserted"] # Frontier
     - state: mixer_screens
@@ -17,7 +18,7 @@
       map: ["enum.PowerDeviceVisualLayers.Powered"]
   - type: Icon
     sprite: Structures/Machines/mixer.rsi
-    state: mixer_empty
+    state: mixer_base # Lua Fix
   - type: ItemMapper
     containerWhitelist: [beakerSlot]
     mapLayers:

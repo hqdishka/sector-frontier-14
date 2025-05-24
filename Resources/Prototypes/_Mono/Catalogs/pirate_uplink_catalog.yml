@@ -635,7 +635,7 @@
   id: UplinkPirateViper
   name:  uplink-pirate-viper-name
   description: uplink-pirate-viper-desc
-  productEntity: WeaponPistolViper
+  productEntity: NFWeaponPistolViper
   icon: { sprite: Objects/Weapons/Guns/Pistols/viper.rsi, state: icon }
   cost:
     Doubloon: 4

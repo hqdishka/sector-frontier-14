@@ -5,7 +5,7 @@
     - type: OwnedDebris
     - type: LocalityLoader
     - type: TimedDespawn
-      lifetime: 600
+      lifetime: 3600
     - type: IFF
       flags: HideLabel
       color: "#d67e27"

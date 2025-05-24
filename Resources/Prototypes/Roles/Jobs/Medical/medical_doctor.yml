@@ -5,8 +5,7 @@
   playTimeTracker: JobMedicalDoctor
   setPreference: true # Lua
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Medical
+    - !type:OverallPlaytimeRequirement
       time: 9000 #2.5 hrs
   startingGear: DoctorGear
   alwaysUseSpawner: true

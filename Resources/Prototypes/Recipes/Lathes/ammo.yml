@@ -28,21 +28,21 @@
 - type: latheRecipe
   parent: BaseEmptyAmmoRecipe
   id: MagazineRifleEmpty
-  result: MagazineRifleEmpty
+  result: NFMagazineRifle20Empty # Lua MagazineRifleEmpty<NFMagazineRifle20Empty
   materials:
     Steel: 25
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazineRifle
-  result: MagazineRifle
+  result: NFMagazineRifle20 # Lua MagazineRifle<NFMagazineRifle20
   materials:
     Steel: 475
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazineRifleIncendiary
-  result: MagazineRifleIncendiary
+  result: NFMagazineRifle20Incendiary # Lua MagazineRifleIncendiary<NFMagazineRifle20Incendiary
   materials:
     Steel: 25
     Plastic: 450
@@ -50,14 +50,14 @@
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazineRiflePractice
-  result: MagazineRiflePractice
+  result: NFMagazineRifle20Practice # Lua MagazineRiflePractice<NFMagazineRifle20Practice
   materials:
     Steel: 175
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazineRifleUranium
-  result: MagazineRifleUranium
+  result: NFMagazineRifle20Uranium # Lua MagazineRifleUranium<NFMagazineRifle20Uranium
   materials:
     Steel: 25
     Plastic: 300

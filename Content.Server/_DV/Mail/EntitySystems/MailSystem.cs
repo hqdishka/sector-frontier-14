@@ -617,6 +617,7 @@ namespace Content.Server._DV.Mail.EntitySystems
                 // Frontier: get name of station recipient is on, check recipient isn't SSD
                 string stationName;
                 if (_stationSystem.GetOwningStation(receiverUid) is { Valid: true } station
+                    && !HasComp<MailStationDisabledComponent>(station) // Lua
                     && TryComp<StationDataComponent>(station, out var stationData)
                     && _stationSystem.GetLargestGrid(stationData) is { Valid: true } stationGrid
                     && TryName(stationGrid, out var gridName)

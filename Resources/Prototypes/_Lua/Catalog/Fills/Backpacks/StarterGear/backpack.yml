@@ -11,5 +11,5 @@
     - type: StorageFill
       contents:
         - id: BoxSurvival
-        - id: WeaponPistolViper
+        - id: NFWeaponPistolViper
         - id: Telecrystal10

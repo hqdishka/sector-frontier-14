@@ -347,7 +347,7 @@
   storage:
     back:
     - WeaponXrayCannon
-    - WeaponSubMachineGunDrozd
+    - NFWeaponSubMachineGunDrozd
     - NFMagazineSubMachineGun35
     - NFMagazineSubMachineGun35
     - NFMagazineSubMachineGun35
@@ -508,7 +508,7 @@
     - WeaponXrayCannon
     - EmergencyMedipen
     - BoxMRE
-    - WeaponSubMachineGunDrozd
+    - NFWeaponSubMachineGunDrozd
     - NFMagazineSubMachineGun35
     - NFMagazineSubMachineGun35
     - NFMagazineSubMachineGun35
@@ -731,7 +731,7 @@
     - EmergencyMedipen
     - BoxMRE
     - Defibrillator
-    - WeaponPistolN1984
+    - NFWeaponPistolN1984
     - MagazineMagnum
     - MagazineMagnum
     - MagazineMagnum
@@ -889,7 +889,7 @@
     - WeaponPulsePistol
     - EmergencyMedipen
     - BoxMRE
-    - WeaponPistolN1984
+    - NFWeaponPistolN1984
     - MagazineMagnum
     - MagazineMagnum
     - MagazineMagnum
@@ -1048,7 +1048,7 @@
     - WeaponPulsePistol
     - EmergencyMedipen
     - BoxMRE
-    - WeaponPistolN1984
+    - NFWeaponPistolN1984
     - MagazineMagnum
     - MagazineMagnum
     - MagazineMagnum

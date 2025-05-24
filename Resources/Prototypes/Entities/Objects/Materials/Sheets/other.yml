@@ -110,6 +110,7 @@
   - type: Tag
     tags:
     - Sheet
+    - MedipenLathe
   - type: NFFuel # Frontier
 
 - type: entity
@@ -143,6 +144,7 @@
     tags:
     - Plastic
     - Sheet
+    - MedipenLathe
   - type: Material
   - type: PhysicalComposition
     materialComposition:

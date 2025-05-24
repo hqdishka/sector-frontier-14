@@ -12,6 +12,7 @@
     Cove:
       stationProto: StandardPiratesVessel
       components:
+        - type: MailStationDisabled
         - type: StationNameSetup
           mapNameTemplate: 'Аванпост Пиратов'
         - type: ExtraStationInformation

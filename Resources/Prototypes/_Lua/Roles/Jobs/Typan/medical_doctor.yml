@@ -41,6 +41,7 @@
         companyName: Syndicate
       - type: SpecialSectorStationRecord
         recordGeneration: FalseRecord
+      - type: MailDisabled
 
 - type: startingGear
   id: SyndicateParamedic
