@@ -143,6 +143,7 @@
     - NFLights # Frontier
     - NFServiceStatic # Frontier
     - ReportingStatic # DeltaV
+    - NFPaperAndPaperAccessories # Frontier
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NfsdAmmoStatic # Frontier: SecurityAmmoStatic<NfsdAmmoStatic
@@ -773,6 +774,7 @@
       tags:
       - Raw
       - Wooden
+      - RawMaterial # Frontier
   - type: Lathe
     idleState: base_machine
     runningState: base_machine_processing

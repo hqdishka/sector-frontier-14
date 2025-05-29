@@ -84,5 +84,6 @@ Sector Frontier 14 — это форк [Frontier Station 14](https://github.com/
 
 | Название форка | Репозиторий форка | Лицензия |
 |-----------|-----------------|---------|
+| Monolith | https://github.com/Monolith-Station/Monolith | AGPL 3.0 |
 | Space Station 14 | https://github.com/space-wizards/space-station-14 | MIT |
 | White Dream | https://github.com/WWhiteDreamProject/wwdpublic | AGPL 3.0 |
