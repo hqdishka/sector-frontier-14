@@ -93,18 +93,20 @@ public sealed class TTSSystem : EntitySystem
         var audioResource = new AudioResource();
         audioResource.Load(IoCManager.Instance!, Prefix / filePath);
 
+        var audioParams = AudioParams.Default
+            .WithVolume(AdjustVolume(ev.IsWhisper, ev.IsRadio))
+            .WithMaxDistance(AdjustDistance(ev.IsWhisper));
+
         var soundSpecifier = new ResolvedPathSpecifier(Prefix / filePath);
 
         if (ev.SourceUid != null)
         {
             var sourceUid = GetEntity(ev.SourceUid.Value);
-            if (sourceUid is { Id: 0 })
-                return;
-            _audio.PlayEntity(audioResource.AudioStream, sourceUid, soundSpecifier);
+            _audio.PlayEntity(audioResource.AudioStream, sourceUid, soundSpecifier, audioParams);
         }
         else
         {
-            _audio.PlayGlobal(audioResource.AudioStream, soundSpecifier);
+            _audio.PlayGlobal(audioResource.AudioStream, soundSpecifier, audioParams);
         }
 
         _contentRoot.RemoveFile(filePath);

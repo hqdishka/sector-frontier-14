@@ -66,28 +66,28 @@
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: MagazineBoxRifle
-  result: MagazineBoxRifle
+  result: NFAmmunitionBoxRifle20
   materials:
     Steel: 750
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: MagazineBoxRifleIncendiary
-  result: MagazineBoxRifleIncendiary
+  result: NFAmmunitionBoxRifle20Incendiary
   materials:
     Plastic: 750
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: MagazineBoxRiflePractice
-  result: MagazineBoxRiflePractice
+  result: NFAmmunitionBoxRifle20Practice
   materials:
     Steel: 250
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: MagazineBoxRifleUranium
-  result: MagazineBoxRifleUranium
+  result: NFAmmunitionBoxRifle20Uranium
   materials:
     Plastic: 500
     Uranium: 500
@@ -96,21 +96,21 @@
 - type: latheRecipe
   parent: BaseEmptyAmmoRecipe
   id: MagazineLightRifleEmpty
-  result: MagazineLightRifleEmpty
+  result: NFMagazineRifle30Empty
   materials:
     Steel: 25
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazineLightRifle
-  result: MagazineLightRifle
+  result: NFMagazineRifle30
   materials:
     Steel: 565
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazineLightRifleIncendiary
-  result: MagazineLightRifleIncendiary
+  result: NFMagazineRifle30Incendiary
   materials:
     Steel: 25
     Plastic: 540
@@ -118,14 +118,14 @@
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazineLightRiflePractice
-  result: MagazineLightRiflePractice
+  result: NFMagazineRifle30Practice
   materials:
     Steel: 205
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazineLightRifleUranium
-  result: MagazineLightRifleUranium
+  result: NFMagazineRifle30Uranium
   materials:
     Steel: 25
     Plastic: 360
@@ -134,28 +134,28 @@
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: MagazineBoxLightRifle
-  result: MagazineBoxLightRifle
+  result: NFAmmunitionBoxRifle30
   materials:
     Steel: 900
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: MagazineBoxLightRifleIncendiary
-  result: MagazineBoxLightRifleIncendiary
+  result: NFAmmunitionBoxRifle30Incendiary
   materials:
     Plastic: 900
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: MagazineBoxLightRiflePractice
-  result: MagazineBoxLightRiflePractice
+  result: NFAmmunitionBoxRifle30Practice
   materials:
     Steel: 300
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: MagazineBoxLightRifleUranium
-  result: MagazineBoxLightRifleUranium
+  result: NFAmmunitionBoxRifle30Uranium
   materials:
     Plastic: 600
     Uranium: 600
@@ -164,21 +164,21 @@
 - type: latheRecipe
   parent: BaseEmptyAmmoRecipe
   id: MagazinePistolEmpty
-  result: MagazinePistolEmpty
+  result: NFMagazinePistol35Empty
   materials:
     Steel: 25
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazinePistol
-  result: MagazinePistol
+  result: NFMagazinePistol35
   materials:
     Steel: 145
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazinePistolIncendiary
-  result: MagazinePistolIncendiary
+  result: NFMagazinePistol35Incendiary
   materials:
     Steel: 25
     Plastic: 120
@@ -186,14 +186,14 @@
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazinePistolPractice
-  result: MagazinePistolPractice
+  result: NFMagazinePistol35Practice
   materials:
     Steel: 85
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazinePistolUranium
-  result: MagazinePistolUranium
+  result: NFMagazinePistol35Uranium
   materials:
     Steel: 25
     Plastic: 65
@@ -202,21 +202,21 @@
 - type: latheRecipe
   parent: BaseEmptyAmmoRecipe
   id: MagazinePistolSubMachineGunEmpty
-  result: MagazinePistolSubMachineGunEmpty
+  result: NFMagazineSubMachineGun35Empty
   materials:
     Steel: 30
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazinePistolSubMachineGun
-  result: MagazinePistolSubMachineGun
+  result: NFMagazineSubMachineGun35
   materials:
     Steel: 300
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazinePistolSubMachineGunIncendiary
-  result: MagazinePistolSubMachineGunIncendiary
+  result: NFMagazineSubMachineGun35Incendiary
   materials:
     Steel: 25
     Plastic: 275
@@ -224,7 +224,7 @@
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazinePistolSubMachineGunUranium
-  result: MagazinePistolSubMachineGunUranium
+  result: NFMagazineSubMachineGun35Uranium
   materials:
     Steel: 25
     Plastic: 250
@@ -233,21 +233,21 @@
 - type: latheRecipe
   parent: BaseEmptyAmmoRecipe
   id: MagazinePistolSubMachineGunTopMountedEmpty
-  result: MagazinePistolSubMachineGunTopMountedEmpty
+  result: NFMagazineSubMachineGunTopMounted35Empty
   materials:
     Steel: 30
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazinePistolSubMachineGunTopMounted
-  result: MagazinePistolSubMachineGunTopMounted
+  result: NFMagazineSubMachineGunTopMounted35
   materials:
     Steel: 300
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: MagazineBoxPistol
-  result: MagazineBoxPistol
+  result: NFAmmunitionBoxPistol35
   materials:
     Steel: 600
 
@@ -261,7 +261,7 @@
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: MagazineBoxPistolPractice
-  result: MagazineBoxPistolPractice
+  result: NFAmmunitionBoxPistol35Practice
   materials:
     Steel: 300
 
@@ -277,21 +277,21 @@
 - type: latheRecipe
   parent: BaseEmptyAmmoRecipe
   id: SpeedLoaderMagnumEmpty
-  result: SpeedLoaderMagnumEmpty
+  result: NFSpeedLoaderPistol45Empty
   materials:
     Steel: 50
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: SpeedLoaderMagnum
-  result: SpeedLoaderMagnum
+  result: NFSpeedLoaderPistol45
   materials:
     Steel: 190
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: SpeedLoaderMagnumIncendiary
-  result: SpeedLoaderMagnumIncendiary
+  result: NFSpeedLoaderPistol45Incendiary
   materials:
     Steel: 50
     Plastic: 150
@@ -299,14 +299,14 @@
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: SpeedLoaderMagnumPractice
-  result: SpeedLoaderMagnumPractice
+  result: NFSpeedLoaderPistol45Practice
   materials:
     Steel: 90
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: SpeedLoaderMagnumUranium
-  result: SpeedLoaderMagnumUranium
+  result: NFSpeedLoaderPistol45Uranium
   materials:
     Steel: 50
     Plastic: 150
@@ -315,28 +315,28 @@
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: MagazineBoxMagnum
-  result: MagazineBoxMagnum
+  result: NFAmmunitionBoxPistol45
   materials:
     Steel: 240
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: MagazineBoxMagnumIncendiary
-  result: MagazineBoxMagnumIncendiary
+  result: NFAmmunitionBoxPistol45Incendiary
   materials:
     Plastic: 240
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: MagazineBoxMagnumPractice
-  result: MagazineBoxMagnumPractice
+  result: NFAmmunitionBoxPistol45Practice
   materials:
     Steel: 60
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: MagazineBoxMagnumUranium
-  result: MagazineBoxMagnumUranium
+  result: NFAmmunitionBoxPistol45Uranium
   materials:
     Plastic: 240
     Uranium: 180
@@ -345,21 +345,21 @@
 - type: latheRecipe
   parent: BaseEmptyAmmoRecipe
   id: MagazineShotgunEmpty
-  result: MagazineShotgunEmpty
+  result: NFMagazineShotgunDrumEmpty
   materials:
     Steel: 50
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazineShotgun
-  result: MagazineShotgun
+  result: NFMagazineShotgunDrum
   materials:
     Steel: 240
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazineShotgunIncendiary
-  result: MagazineShotgunIncendiary
+  result: NFMagazineShotgunDrumIncendiary
   materials:
     Steel: 100
     Plastic: 190
@@ -367,7 +367,7 @@
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazineShotgunBeanbag
-  result: MagazineShotgunBeanbag
+  result: NFMagazineShotgunDrumBeanbag
   materials:
     Steel: 150
     Plastic: 140
@@ -375,7 +375,7 @@
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazineShotgunSlug
-  result: MagazineShotgunSlug
+  result: NFMagazineShotgunDrumSlug
   materials:
     Steel: 190
     Plastic: 100
@@ -383,14 +383,14 @@
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: BoxLethalshot
-  result: BoxLethalshot
+  result: NFAmmunitionBoxShellShotgunBuckshot
   materials:
     Steel: 320
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: BoxShotgunIncendiary
-  result: BoxShotgunIncendiary
+  result: NFAmmunitionBoxShellShotgunIncendiary
   materials:
     Steel: 80
     Plastic: 320
@@ -398,14 +398,14 @@
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: BoxShotgunPractice
-  result: BoxShotgunPractice
+  result: NFAmmunitionBoxShellShotgunPractice
   materials:
     Steel: 80
 
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: BoxShotgunUranium
-  result: BoxShotgunUranium
+  result: NFAmmunitionBoxShellShotgunUranium
   materials:
     Plastic: 320
     Uranium: 240
@@ -413,7 +413,7 @@
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: BoxBeanbag
-  result: BoxBeanbag
+  result: NFAmmunitionBoxShellShotgunBeanbag
   materials:
     Steel: 160
     Plastic: 240
@@ -421,7 +421,7 @@
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: BoxShotgunSlug
-  result: BoxShotgunSlug
+  result: NFAmmunitionBoxShellShotgunSlug
   materials:
     Steel: 240
     Plastic: 160
@@ -429,7 +429,7 @@
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: BoxShellTranquilizer
-  result: BoxShellTranquilizer
+  result: NFAmmunitionBoxShellShotgunTranquilizer
   materials:
     Plastic: 240
     Steel: 160
@@ -440,7 +440,7 @@
 - type: latheRecipe
   parent: BaseAmmoBoxRecipe
   id: BoxShotgunFlare
-  result: BoxShotgunFlare
+  result: NFAmmunitionBoxShellShotgunFlare
   materials:
     Steel: 80
     Plastic: 80
@@ -448,7 +448,7 @@
 # Encampment ammo
 - type: latheRecipe
   id: MagazineGrenadeEmpty
-  result: MagazineGrenadeEmpty
+  result: NFMagazineGrenadeEmpty
   categories:
   - Magazines
   completetime: 3
@@ -458,7 +458,7 @@
 
 - type: latheRecipe
   id: GrenadeEMP
-  result: GrenadeEMP
+  result: NFGrenadeEMP
   categories:
   - Ammo
   completetime: 3
@@ -469,7 +469,7 @@
 
 - type: latheRecipe
   id: GrenadeBlast
-  result: GrenadeBlast
+  result: NFGrenadeBlast
   categories:
   - Ammo
   completetime: 3
@@ -480,7 +480,7 @@
 
 - type: latheRecipe
   id: GrenadeFlash
-  result: GrenadeFlash
+  result: NFGrenadeFlash
   categories:
   - Ammo
   completetime: 3

@@ -508,7 +508,7 @@ public enum LogType
     /// <summary>
     /// Логи пополнения баланса
     /// </summary>
-    BankTransaction = 300
+    BankTransaction = 300,
     // End Lua
     #endregion Lua Values
 }

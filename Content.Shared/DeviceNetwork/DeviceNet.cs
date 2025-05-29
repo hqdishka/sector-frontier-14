@@ -1,4 +1,8 @@
 using Robust.Shared.Random;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 using Content.Shared.DeviceNetwork.Components;
 
 namespace Content.Shared.DeviceNetwork;
@@ -30,12 +34,15 @@ public sealed class DeviceNet
     public readonly Dictionary<uint, HashSet<DeviceNetworkComponent>> ReceiveAllDevices = new();
 
     private readonly IRobustRandom _random;
+    private ISawmill _logger = default!;
     public readonly int NetId;
 
-    public DeviceNet(int netId, IRobustRandom random)
+    public DeviceNet(int netId, IRobustRandom random, ISawmill logger)
     {
         _random = random;
         NetId = netId;
+        _logger = logger;
+
     }
 
     /// <summary>
@@ -43,37 +50,74 @@ public sealed class DeviceNet
     /// </summary>
     public bool Add(DeviceNetworkComponent device)
     {
-        if (device.CustomAddress)
+        if (device == null)
         {
-            // Only add if the device's existing address is available.
-            if (!Devices.TryAdd(device.Address, device))
-                return false;
+            _logger.Error($"Attempted to add null device to network {NetId}");
+            return false;
         }
-        else
+
+        try
         {
-            // Randomly generate a new address if the existing random one is invalid. Otherwise, keep the existing address
+            if (device.CustomAddress)
+            {
+                if (string.IsNullOrWhiteSpace(device.Address))
+                {
+                    _logger.Error($"Device has custom address but it's null/empty. Network: {NetId}");
+                    return false;
+                }
+
+                return Devices.TryAdd(device.Address, device);
+            }
+
             if (string.IsNullOrWhiteSpace(device.Address) || Devices.ContainsKey(device.Address))
-                device.Address = GenerateValidAddress(device.Prefix);
+            {
+                device.Address = GenerateValidAddressWithFallback(device.Prefix);
+                if (device.Address == null)
+                {
+                    _logger.Error($"Failed to generate address for device. Network: {NetId}");
+                    return false;
+                }
+            }
 
             Devices[device.Address] = device;
+            UpdateFrequencySubscriptions(device);
+            return true;
+        }
+        catch (Exception ex)
+        {
+            _logger.Error($"Failed to add device to network {NetId}. Error: {ex}");
+            return false;
+        }
+    }
+
+    private string GenerateValidAddressWithFallback(string? prefix)
+    {
+        const int maxAttempts = 10;
+        int attempts = 0;
+
+        while (attempts < maxAttempts)
+        {
+            attempts++;
+            try
+            {
+                var address = GenerateValidAddress(prefix);
+                if (!Devices.ContainsKey(address))
+                    return address;
+            }
+            catch (Exception ex)
+            {
+                _logger.Warning($"Address generation failed (attempt {attempts}). Error: {ex}");
+            }
         }
 
-        if (device.ReceiveFrequency is not uint freq)
-            return true;
-
-        if (!ListeningDevices.TryGetValue(freq, out var devices))
-            ListeningDevices[freq] = devices = new();
-
-        devices.Add(device);
-
-        if (!device.ReceiveAll)
-            return true;
-
-        if (!ReceiveAllDevices.TryGetValue(freq, out var receiveAlldevices))
-            ReceiveAllDevices[freq] = receiveAlldevices = new();
-
-        receiveAlldevices.Add(device);
-        return true;
+        try
+        {
+            return $"FALLBACK-{_random.Next():X8}-{Guid.NewGuid():N}";
+        }
+        catch
+        {
+            return $"EMG-{Guid.NewGuid():N}";
+        }
     }
 
     /// <summary>
@@ -81,27 +125,52 @@ public sealed class DeviceNet
     /// </summary>
     public bool Remove(DeviceNetworkComponent device)
     {
-        if (device.Address == null || !Devices.Remove(device.Address))
+        if (device == null || device.Address == null)
+        {
+            _logger.Error($"Attempted to remove null device or device with null address from network {NetId}");
             return false;
+        }
 
-        if (device.ReceiveFrequency is not uint freq)
+        try
+        {
+            if (!Devices.Remove(device.Address))
+                return false;
+
+            RemoveFromFrequencySubscriptions(device);
             return true;
-
-        if (ListeningDevices.TryGetValue(freq, out var listening))
-        {
-            listening.Remove(device);
-            if (listening.Count == 0)
-                ListeningDevices.Remove(freq);
         }
-
-        if (device.ReceiveAll && ReceiveAllDevices.TryGetValue(freq, out var receiveAll))
+        catch (Exception ex)
         {
-            receiveAll.Remove(device);
-            if (receiveAll.Count == 0)
-                ListeningDevices.Remove(freq);
+            _logger.Error($"Failed to remove device {device.Address} from network {NetId}. Error: {ex}");
+            return false;
         }
+    }
 
-        return true;
+    private void RemoveFromFrequencySubscriptions(DeviceNetworkComponent device)
+    {
+        if (device.ReceiveFrequency is not uint freq)
+            return;
+
+        try
+        {
+            if (ListeningDevices.TryGetValue(freq, out var listeners))
+            {
+                listeners.Remove(device);
+                if (listeners.Count == 0)
+                    ListeningDevices.Remove(freq);
+            }
+
+            if (device.ReceiveAll && ReceiveAllDevices.TryGetValue(freq, out var receiveAll))
+            {
+                receiveAll.Remove(device);
+                if (receiveAll.Count == 0)
+                    ReceiveAllDevices.Remove(freq);
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.Error($"Failed to remove device {device.Address} from frequency subscriptions. Error: {ex}");
+        }
     }
 
     /// <summary>
@@ -224,15 +293,64 @@ public sealed class DeviceNet
     /// </summary>
     private string GenerateValidAddress(string? prefix)
     {
-        prefix = string.IsNullOrWhiteSpace(prefix) ? null : Loc.GetString(prefix);
-        string address;
-        do
+        string? processedPrefix = null;
+        if (!string.IsNullOrWhiteSpace(prefix))
         {
-            var num = _random.Next();
-            address = $"{prefix}{num >> 16:X4}-{num & 0xFFFF:X4}";
+            try
+            {
+                processedPrefix = Loc.GetString(prefix).Trim();
+            }
+            catch (Exception ex)
+            {
+                _logger.Warning($"Localization failed for prefix '{prefix}'. Using raw value. Error: {ex}");
+                processedPrefix = prefix;
+            }
         }
-        while (Devices.ContainsKey(address));
 
-        return address;
+        try
+        {
+            var num1 = _random.Next();
+            var num2 = _random.Next();
+            var num3 = _random.Next();
+
+            return processedPrefix != null
+                ? $"{processedPrefix}-{num1:X4}-{num2:X4}-{num3:X4}"
+                : $"{num1:X4}-{num2:X4}-{num3:X4}";
+        }
+        catch (Exception ex)
+        {
+            _logger.Error($"Primary address generation failed. Error: {ex}");
+            throw;
+        }
+    }
+
+    private void UpdateFrequencySubscriptions(DeviceNetworkComponent device)
+    {
+        try
+        {
+            if (device.ReceiveFrequency is not uint freq)
+                return;
+
+            if (!ListeningDevices.TryGetValue(freq, out var listeners))
+            {
+                listeners = new HashSet<DeviceNetworkComponent>();
+                ListeningDevices[freq] = listeners;
+            }
+            listeners.Add(device);
+
+            if (device.ReceiveAll)
+            {
+                if (!ReceiveAllDevices.TryGetValue(freq, out var receiveAll))
+                {
+                    receiveAll = new HashSet<DeviceNetworkComponent>();
+                    ReceiveAllDevices[freq] = receiveAll;
+                }
+                receiveAll.Add(device);
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.Error($"Failed to update frequency subscriptions for device {device.Address}. Error: {ex}");
+        }
     }
 }

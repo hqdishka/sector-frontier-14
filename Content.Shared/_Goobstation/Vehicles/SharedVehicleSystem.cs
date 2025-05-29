@@ -1,3 +1,4 @@
+using System.Linq; // Lua
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.Actions;
@@ -5,6 +6,8 @@ using Content.Shared.Audio;
 using Content.Shared.Buckle;
 using Content.Shared.Buckle.Components;
 using Content.Shared.Hands;
+using Content.Shared.Hands.Components; // Lua
+using Content.Shared.Hands.EntitySystems; // Lua
 using Content.Shared.Inventory.VirtualItem;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Systems;
@@ -33,6 +36,7 @@ public abstract partial class SharedVehicleSystem : EntitySystem
     [Dependency] private readonly SharedBuckleSystem _buckle = default!;
     [Dependency] private readonly SharedMoverController _mover = default!;
     [Dependency] private readonly SharedVirtualItemSystem _virtualItem = default!;
+    [Dependency] private readonly SharedHandsSystem _hands = default!; // Lua
     [Dependency] private readonly INetManager _net = default!; // Frontier
     [Dependency] private readonly UnpoweredFlashlightSystem _flashlight = default!; // Frontier
     [Dependency] private readonly SharedPopupSystem _popup = default!; // Frontier
@@ -41,6 +45,11 @@ public abstract partial class SharedVehicleSystem : EntitySystem
 
     public static readonly EntProtoId HornActionId = "ActionHorn";
     public static readonly EntProtoId SirenActionId = "ActionSiren";
+
+    // Lua antispam popup
+    private readonly Dictionary<EntityUid, TimeSpan> _lastNoHandsPopup = new();
+    private static readonly TimeSpan NoHandsPopupCooldown = TimeSpan.FromSeconds(2);
+    // Lua antispam popup
 
     public override void Initialize()
     {
@@ -173,6 +182,53 @@ public abstract partial class SharedVehicleSystem : EntitySystem
         args.Handled = true;
     }
 
+    // Lua start (fuck driver cowboy)
+    private bool TryOccupyHands(EntityUid rider, EntityUid vehicle)
+    {
+        if (!TryComp<HandsComponent>(rider, out var hands))
+            return false;
+
+        var emptyHands = hands.Hands.Values.Where(hand => hand.IsEmpty).ToList();
+        if (emptyHands.Count < 2)
+            return false;
+
+        foreach (var _ in emptyHands.Take(2))
+            _virtualItem.TrySpawnVirtualItemInHand(vehicle, rider);
+
+        return true;
+    }
+
+    private void EnsureHandsAreCorrect(EntityUid rider, EntityUid vehicle)
+    {
+        if (!TryComp<HandsComponent>(rider, out var hands))
+            return;
+
+        foreach (var hand in hands.Hands.Values)
+        {
+            if (hand.IsEmpty
+                || !TryComp<VirtualItemComponent>(hand.HeldEntity, out var virt)
+                || virt.BlockingEntity != vehicle)
+            {
+                _virtualItem.TrySpawnVirtualItemInHand(vehicle, rider);
+            }
+        }
+    }
+
+    public override void Update(float frameTime)
+    {
+        base.Update(frameTime);
+
+        foreach (var comp in EntityQuery<VehicleRiderComponent>())
+        {
+            var rider = comp.Owner;
+            if (Transform(rider).ParentUid is { } vehicle &&
+                HasComp<VehicleComponent>(vehicle))
+            {
+                EnsureHandsAreCorrect(rider, vehicle);
+            }
+        }
+    }
+    // Lua end (fuck driver cowboy)
 
     private void OnStrapAttempt(Entity<VehicleComponent> ent, ref StrapAttemptEvent args)
     {
@@ -212,7 +268,14 @@ public abstract partial class SharedVehicleSystem : EntitySystem
     protected virtual void OnStrapped(Entity<VehicleComponent> ent, ref StrappedEvent args) //Lua: private void<protected virtual void
     {
         var driver = args.Buckle.Owner;
-
+        // Lua start (fuck driver cowboy)
+        if (!TryOccupyHands(driver, ent.Owner))
+        {
+            _buckle.TryUnbuckle(driver, ent.Owner);
+            _popup.PopupEntity(Loc.GetString("vehicle-no-free-hands"), driver, PopupType.Medium);
+            return;
+        }
+        // Lua end  (fuck driver cowboy)
         if (!TryComp(driver, out MobMoverComponent? mover) || ent.Comp.Driver != null)
             return;
 

@@ -253,7 +253,7 @@
   id: UplinkMercenaryGunMk58
   name:  uplink-merc-mk58-name
   description: uplink-merc-mk58-desc
-  productEntity: WeaponPistolMk58
+  productEntity: NFWeaponPistolMk58
   icon: { sprite: Objects/Weapons/Guns/Pistols/mk58.rsi, state: icon }
   cost:
     Speso: 1900
@@ -291,7 +291,7 @@
   id: UplinkMercenaryGunRifleAk
   name:  uplink-merc-rifleak-name
   description: uplink-merc-rifleak-desc
-  productEntity: WeaponRifleAk
+  productEntity: NFWeaponRifleAssaultSm
   icon: { sprite: Objects/Weapons/Guns/Rifles/ak.rsi, state: icon }
   cost:
     Speso: 16800
@@ -329,7 +329,7 @@
   id: UplinkMercenaryAmmoMagazinePistol
   name:  uplink-merc-magazineoistol-name
   description: uplink-merc-magazineoistol-desc
-  productEntity: MagazinePistol
+  productEntity: NFMagazinePistol35
   icon: { sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi, state: red-icon }
   cost:
     Speso: 150

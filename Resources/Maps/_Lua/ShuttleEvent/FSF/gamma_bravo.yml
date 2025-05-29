@@ -6951,14 +6951,14 @@ entities:
     - type: Transform
       pos: 2.5,-3.5
       parent: 1
-- proto: PottedPlantRandomPlasticMigration1
+- proto: PottedPlantRandomPlastic
   entities:
   - uid: 912
     components:
     - type: Transform
       pos: 9.5,-6.5
       parent: 1
-- proto: PottedPlantRandomPlasticMigration2
+- proto: PottedPlantRandomPlastic
   entities:
   - uid: 913
     components:
@@ -8776,21 +8776,21 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -1.5,-15.5
       parent: 1
-- proto: VendingMachineAmmoFree
+- proto: VendingMachineAmmo
   entities:
   - uid: 1063
     components:
     - type: Transform
       pos: 4.5,-15.5
       parent: 1
-- proto: VendingMachineBoozeFree
+- proto: VendingMachineBooze
   entities:
   - uid: 926
     components:
     - type: Transform
       pos: 3.5,-1.5
       parent: 1
-- proto: VendingMachineChemicalsFree
+- proto: VendingMachineChemicals
   entities:
   - uid: 939
     components:
@@ -8799,14 +8799,14 @@ entities:
       parent: 1
     missingComponents:
     - Anchorable
-- proto: VendingMachineEngivendFree
+- proto: VendingMachineEngivend
   entities:
   - uid: 1066
     components:
     - type: Transform
       pos: -0.5,-10.5
       parent: 1
-- proto: VendingMachineMedicalFree
+- proto: VendingMachineMedical
   entities:
   - uid: 940
     components:
@@ -8815,14 +8815,14 @@ entities:
       parent: 1
     missingComponents:
     - Anchorable
-- proto: VendingMachineSecFree
+- proto: VendingMachineSec
   entities:
   - uid: 1068
     components:
     - type: Transform
       pos: 9.5,-8.5
       parent: 1
-- proto: VendingMachineTankDispenserEVAFree
+- proto: VendingMachineTankDispenserEVA
   entities:
   - uid: 1064
     components:
@@ -8838,14 +8838,14 @@ entities:
       parent: 1
     missingComponents:
     - Anchorable
-- proto: VendingMachineWallMedicalFree
+- proto: VendingMachineWallMedical
   entities:
   - uid: 1071
     components:
     - type: Transform
       pos: 3.5,-0.5
       parent: 1
-- proto: VendingMachineYouToolFree
+- proto: VendingMachineYouTool
   entities:
   - uid: 1072
     components:

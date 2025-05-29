@@ -23,6 +23,7 @@ namespace Content.Server.DeviceNetwork.Systems
         [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
         [Dependency] private readonly DeviceListSystem _deviceLists = default!;
         [Dependency] private readonly NetworkConfiguratorSystem _configurator = default!;
+        [Dependency] private readonly ILogManager _logManager = default!;
 
         private readonly Dictionary<int, DeviceNet> _networks = new(4);
         private readonly Queue<DeviceNetworkPacketEvent> _queueA = new();
@@ -127,7 +128,8 @@ namespace Content.Server.DeviceNetwork.Systems
         {
             if (_networks.TryGetValue(netId, out var deviceNet))
                 return deviceNet;
-            var newDeviceNet = new DeviceNet(netId, _random);
+            var logger = _logManager.GetSawmill($"DeviceNet:{netId}");
+            var newDeviceNet = new DeviceNet(netId, _random, logger);
             _networks[netId] = newDeviceNet;
             return newDeviceNet;
         }

@@ -54,7 +54,7 @@
   name: пистолетный магазин пустынного орла (.44 магнум бронебойные)
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeMagnumAP
+    proto: NFCartridgePistol45
   - type: Sprite
     layers:
     - state: red

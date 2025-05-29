@@ -20,7 +20,7 @@
     - type: StorageFill
       contents:
         - id: BoxSurvival
-        - id: WeaponPulseCarbine
+        - id: NFWeaponEnergyRifleAssaultPulseCarbine
         - id: Handcuffs
         - id: Handcuffs
         - id: WeaponSubMachineGunAtreides

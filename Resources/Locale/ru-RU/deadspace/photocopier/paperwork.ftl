@@ -128,5 +128,5 @@ paperwork-form-title-centcomm-operator-8 = Приказ об увольнени�
 paperwork-form-title-centcomm-operator-9 = Запрос отчётов по усилению бюрократизации
 paperwork-form-title-valentine-0 = Валентинка
 
-paperwork-form-title-frontier-1 = Орден
+paperwork-form-title-frontier-1 = Ордер
 paperwork-form-title-frontier-2 = Уведомление о Штрафе

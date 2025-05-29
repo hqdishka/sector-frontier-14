@@ -123,3 +123,8 @@ JobTypanTelecommunicationsOfficer = Офицер телекомуникаций 
 job-name-centcom-officer = Офицер ЦК
 
 JobCentralCommandOfficer = Офицер ЦК
+
+job-name-fsfcommander-bravo = Командир Рейнджеров Браво
+job-name-fsfspecialist-bravo = Специалист Рейнджеров Браво
+job-name-fsfcommander-charlie = Командир Рейнджеров Чарли
+job-name-fsfspecialist-charlie = Специалист Рейнджеров Чарли

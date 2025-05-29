@@ -280,7 +280,7 @@
     - JawsOfLife
     - TelescopicShield
     - NFWeaponEnergyPistolDisabler
-    - WeaponPulseCarbine
+    - NFWeaponEnergyRifleAssaultPulseCarbine
     - WeaponSubMachineGunVector
     - NFMagazineSubMachineGun35
     - NFMagazineSubMachineGun35
@@ -364,7 +364,7 @@
     - HandHeldMassScanner
     - PowerDrill
     - JawsOfLife
-    - WeaponPulseCarbine
+    - NFWeaponEnergyRifleAssaultPulseCarbine
     - WeaponSubMachineGunVector
     - NFMagazineSubMachineGun35
     - NFMagazineSubMachineGun35
@@ -718,7 +718,7 @@
     - JawsOfLife
     - TelescopicShield
     - NFWeaponEnergyPistolDisabler
-    - WeaponPulseCarbine
+    - NFWeaponEnergyRifleAssaultPulseCarbine
     - WeaponSubMachineGunVector
     - NFMagazineSubMachineGun35
     - NFMagazineSubMachineGun35
@@ -802,7 +802,7 @@
     - HandHeldMassScanner
     - PowerDrill
     - JawsOfLife
-    - WeaponPulseCarbine
+    - NFWeaponEnergyRifleAssaultPulseCarbine
     - WeaponSubMachineGunVector
     - NFMagazineSubMachineGun35
     - NFMagazineSubMachineGun35

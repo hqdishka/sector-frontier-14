@@ -1858,7 +1858,7 @@
     - Ambrosia
     - MedipenLathe
   - type: StaticPrice
-    price: 48
+    price: 1
   - type: FoodSequenceElement
     entries:
       Taco: AmbrosiaDeus

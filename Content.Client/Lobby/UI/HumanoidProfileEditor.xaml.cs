@@ -554,6 +554,12 @@ namespace Content.Client.Lobby.UI
                 {
                     _erpStatus.Visible = false;
                     _flavorText.NoERPLabelInfo();
+
+                    if (Profile != null)
+                    {
+                        Profile = Profile.WithERPStatus(EnumERPStatus.NO);
+                        IsDirty = true;
+                    }
                 }
 
                 _erpStatus = _flavorText.CERPStatusOption;
@@ -869,6 +875,12 @@ namespace Content.Client.Lobby.UI
         public void SetProfile(HumanoidCharacterProfile? profile, int? slot)
         {
             Profile = profile?.Clone();
+
+            if (!_cfgManager.GetCVar(CLVars.IsERP) && Profile != null)
+            {
+                Profile = Profile.WithERPStatus(EnumERPStatus.NO);
+            }
+
             CharacterSlot = slot;
             IsDirty = false;
             JobOverride = null;

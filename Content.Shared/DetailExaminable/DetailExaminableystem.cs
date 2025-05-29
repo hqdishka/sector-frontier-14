@@ -1,13 +1,16 @@
 using Content.Shared.Examine;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Verbs;
-using Content.Shared._Lua.ERP;
+using Content.Shared._Lua.ERP; // Lua
+using Content.Shared.Lua.CLVar; // Lua
 using Robust.Shared.Utility;
+using Robust.Shared.Configuration; // Lua
 
 namespace Content.Shared.DetailExaminable;
 
 public sealed class DetailExaminableSystem : EntitySystem
 {
+    [Dependency] private readonly IConfigurationManager _cfg = default!; // Lua
     [Dependency] private readonly ExamineSystemShared _examine = default!;
 
     public override void Initialize()
@@ -33,14 +36,17 @@ public sealed class DetailExaminableSystem : EntitySystem
                 var markup = new FormattedMessage();
                 markup.AddMarkupPermissive(ent.Comp.Content);
 
-                if (ent.Comp.ERPStatus == EnumERPStatus.FULL)
-                    markup.PushColor(Color.Green);
-                else if (ent.Comp.ERPStatus == EnumERPStatus.HALF)
-                    markup.PushColor(Color.Yellow);
-                else
-                    markup.PushColor(Color.Red);
+                if (_cfg.GetCVar(CLVars.IsERP))
+                {
+                    if (ent.Comp.ERPStatus == EnumERPStatus.FULL)
+                        markup.PushColor(Color.Green);
+                    else if (ent.Comp.ERPStatus == EnumERPStatus.HALF)
+                        markup.PushColor(Color.Yellow);
+                    else
+                        markup.PushColor(Color.Red);
 
-                markup.AddMarkupOrThrow("\n" + ent.Comp.GetERPStatusName());
+                    markup.AddMarkupOrThrow("\n" + ent.Comp.GetERPStatusName());
+                }
 
                 _examine.SendExamineTooltip(user, ent, markup, false, false);
             },

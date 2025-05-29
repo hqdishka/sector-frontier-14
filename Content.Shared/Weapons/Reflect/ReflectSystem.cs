@@ -184,9 +184,9 @@ public sealed class ReflectSystem : EntitySystem
         newDirection = -spread.RotateVec(direction);
 
         if (shooter != null)
-            _adminLogger.Add(LogType.HitScanHit, LogImpact.Medium, $"{ToPrettyString(user)} reflected hitscan from {ToPrettyString(shotSource)} shot by {ToPrettyString(shooter.Value)}");
+            _adminLogger.Add(LogType.HitScanHit, LogImpact.Low, $"{ToPrettyString(user)} reflected hitscan from {ToPrettyString(shotSource)} shot by {ToPrettyString(shooter.Value)}");
         else
-            _adminLogger.Add(LogType.HitScanHit, LogImpact.Medium, $"{ToPrettyString(user)} reflected hitscan from {ToPrettyString(shotSource)}");
+            _adminLogger.Add(LogType.HitScanHit, LogImpact.Low, $"{ToPrettyString(user)} reflected hitscan from {ToPrettyString(shotSource)}");
 
         return true;
     }

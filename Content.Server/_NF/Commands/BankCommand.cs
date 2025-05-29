@@ -166,11 +166,11 @@ public sealed class BankCommand : IConsoleCommand
         var absAmount = Math.Abs(amount);
         var actionText = amount > 0 ? Loc.GetString("cmd-bank-log-deposited") : Loc.GetString("cmd-bank-log-withdrew");
 
-        _adminLogger.Add(LogType.BankTransaction, LogImpact.High,
+        _adminLogger.Add(LogType.BankTransaction, LogImpact.Extreme,
         $"{executor} {actionText} {absAmount} {(amount > 0 ? Loc.GetString("cmd-bank-admin-to") : Loc.GetString("cmd-bank-admin-from"))} {target}. {Loc.GetString("cmd-bank-admin-new-balance", ("balance", newBalance.Value))}");
 
-        _chatManager.DispatchServerAnnouncement(Loc.GetString("cmd-bank-admin-chat", ("executor", executor), ("action", actionText), ("amount", absAmount), ("target", target), ("balance", newBalance.Value))
-        );
+        //_chatManager.DispatchServerAnnouncement(Loc.GetString("cmd-bank-admin-chat", ("executor", executor), ("action", actionText), ("amount", absAmount), ("target", target), ("balance", newBalance.Value))
+        //);
         //Lua end logs
     }
 

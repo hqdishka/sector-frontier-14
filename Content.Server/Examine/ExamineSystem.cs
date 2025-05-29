@@ -1,6 +1,7 @@
 using System.Linq;
 using Content.Server.Verbs;
-using Content.Shared._Lua.ERP;
+using Content.Shared._Lua.ERP; // Lua
+using Content.Shared.Lua.CLVar; // Lua
 using Content.Shared._NF.Bank.Components;
 using Content.Shared.DetailExaminable;
 using Content.Shared.Examine;
@@ -8,12 +9,14 @@ using Content.Shared.Verbs;
 using JetBrains.Annotations;
 using Robust.Shared.Player;
 using Robust.Shared.Utility;
+using Robust.Shared.Configuration; // Lua
 
 namespace Content.Server.Examine
 {
     [UsedImplicitly]
     public sealed class ExamineSystem : ExamineSystemShared
     {
+        [Dependency] private readonly IConfigurationManager _cfg = default!; // Lua
         [Dependency] private readonly VerbSystem _verbSystem = default!;
 
         private readonly FormattedMessage _entityNotFoundMessage = new();
@@ -53,7 +56,7 @@ namespace Content.Server.Examine
             var channel = player.Channel;
             var entity = GetEntity(request.NetEntity);
 
-            if (session.AttachedEntity is not {Valid: true} playerEnt
+            if (session.AttachedEntity is not { Valid: true } playerEnt
                 || !EntityManager.EntityExists(entity))
             {
                 RaiseNetworkEvent(new ExamineSystemMessages.ExamineInfoResponseMessage(
@@ -74,7 +77,9 @@ namespace Content.Server.Examine
 
             var text = GetExamineText(entity, player.AttachedEntity);
 
-            if (TryComp<BankAccountComponent>(entity, out _) && TryComp<DetailExaminableComponent>(entity, out var detail))
+            if (_cfg.GetCVar(CLVars.IsERP)
+                && TryComp<BankAccountComponent>(entity, out _)
+                && TryComp<DetailExaminableComponent>(entity, out var detail))
             {
                 AddERPStatusToMessage(text, detail.ERPStatus);
             }

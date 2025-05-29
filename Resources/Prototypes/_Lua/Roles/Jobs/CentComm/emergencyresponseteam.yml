@@ -50,7 +50,7 @@
     - PowerDrill
     - JawsOfLife
     - HandheldCrewMonitor
-    - WeaponPulseCarbine
+    - NFWeaponEnergyRifleAssaultPulseCarbine
     - WeaponSubMachineGunVector
     - PinpointerNuclear
     - NFMagazineSubMachineGun45
@@ -109,7 +109,7 @@
     - HandheldCrewMonitor
     - TelescopicShield
     - NFWeaponEnergyPistolDisabler
-    - WeaponPulseCarbine
+    - NFWeaponEnergyRifleAssaultPulseCarbine
     - WeaponSubMachineGunVector
     - NFMagazineSubMachineGun45
     - NFMagazineSubMachineGun45
@@ -176,7 +176,7 @@
     - PowerDrill
     - JawsOfLife
     - HandheldCrewMonitor
-    - WeaponPulseCarbine
+    - NFWeaponEnergyRifleAssaultPulseCarbine
     - WeaponSubMachineGunVector
     - PinpointerNuclear
     - NFMagazineSubMachineGun45
@@ -238,7 +238,7 @@
     - HandheldCrewMonitor
     - TelescopicShield
     - NFWeaponEnergyPistolDisabler
-    - WeaponPulseCarbine
+    - NFWeaponEnergyRifleAssaultPulseCarbine
     - WeaponSubMachineGunVector
     - NFMagazineSubMachineGun45
     - NFMagazineSubMachineGun45
@@ -402,7 +402,7 @@
     pocket2: DoorRemoteAll
   storage:
     back:
-    - WeaponPulseCarbine
+    - NFWeaponEnergyRifleAssaultPulseCarbine
     - WeaponSubMachineGunVector
     - PinpointerNuclear
     - CrowbarRed
@@ -557,7 +557,7 @@
     - TelescopicShield
     - NFWeaponEnergyPistolDisabler
     - CrowbarRed
-    - WeaponPulseCarbine
+    - NFWeaponEnergyRifleAssaultPulseCarbine
     - WeaponSubMachineGunVector
     - NFMagazineSubMachineGun35
     - NFMagazineSubMachineGun35

@@ -35,7 +35,7 @@
         priority: 1
         whitelist:
           tags:
-            - CartridgeRifle
+            - NFCartridgeRifle20
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
@@ -97,7 +97,7 @@
         priority: 1
         whitelist:
           tags:
-            - CartridgeRifle
+            - NFCartridgeRifle20
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot

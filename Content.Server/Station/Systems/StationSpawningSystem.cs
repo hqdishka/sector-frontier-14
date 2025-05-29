@@ -7,6 +7,7 @@ using Content.Server.Station.Components;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.CCVar;
+using Content.Shared.Lua.CLVar; // Lua
 using Content.Shared.Clothing;
 using Content.Shared.DetailExaminable;
 using Content.Shared.Humanoid;
@@ -188,11 +189,19 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             _humanoidSystem.LoadProfile(entity.Value, profile);
             _metaSystem.SetEntityName(entity.Value, profile.Name);
 
-            if (profile.FlavorText != "" && _configurationManager.GetCVar(CCVars.FlavorText))
             {
-                var detailExamineComp = EntityManager.EnsureComponent<DetailExaminableComponent>(entity.Value);
-                detailExamineComp.Content = profile.FlavorText ?? "";
-                detailExamineComp.ERPStatus = profile.ERPStatus;
+                var showFlavor = _configurationManager.GetCVar(CCVars.FlavorText) && !string.IsNullOrWhiteSpace(profile.FlavorText);
+                var showErp = _configurationManager.GetCVar(CLVars.IsERP);
+
+                if (showFlavor || showErp)
+                {
+                    var detailExamineComp = EntityManager.EnsureComponent<DetailExaminableComponent>(entity.Value);
+
+                    detailExamineComp.Content = showFlavor
+                        ? profile.FlavorText!
+                        : "";
+                    detailExamineComp.ERPStatus = profile.ERPStatus;
+                }
             }
         }
 

@@ -19,6 +19,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
+using Content.Shared.Lua.CLVar;
 
 namespace Content.Shared.Preferences
 {
@@ -81,7 +82,9 @@ namespace Content.Shared.Preferences
         /// </summary>
         [DataField]
         public string FlavorText { get; set; } = string.Empty;
-        public EnumERPStatus ERPStatus { get; set; }
+
+        [DataField]
+        public EnumERPStatus ERPStatus { get; set; } = EnumERPStatus.NO;
 
         /// <summary>
         /// Associated <see cref="SpeciesPrototype"/> for this profile.
@@ -581,6 +584,9 @@ namespace Content.Shared.Preferences
             // ensure the species can be that sex and their age fits the founds
             if (!speciesPrototype.Sexes.Contains(sex))
                 sex = speciesPrototype.Sexes[0];
+
+            if (!configManager.GetCVar(CLVars.IsERP))
+                ERPStatus = EnumERPStatus.NO;
 
             var age = Math.Clamp(Age, speciesPrototype.MinAge, speciesPrototype.MaxAge);
 
