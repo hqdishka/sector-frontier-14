@@ -7,3 +7,6 @@ LockerWallColorChemistry: LockerWallChemistry
 LockerWallColorChemistryFilled: LockerWallChemistryFilled
 LockerWallColorMedical: LockerWallMedical
 LockerWallColorMedicalFilled: LockerWallMedicalFilled
+
+# 2025-05-30 Lua port map previous frontier
+WeaponTargetingPad: ComputerGunneryConsole
