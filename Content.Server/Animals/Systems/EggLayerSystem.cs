@@ -1,6 +1,8 @@
+using Content.Server._Lua.Animals.Components;
 using Content.Server.Actions;
 using Content.Server.Animals.Components;
 using Content.Server.Popups;
+using Content.Shared._Lua.Actions.Events;
 using Content.Shared.Actions.Events;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Nutrition.Components;
@@ -32,7 +34,9 @@ public sealed class EggLayerSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<EggLayerComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<EggAriralLayerComponent, MapInitEvent>(OnMapInitAriral);
         SubscribeLocalEvent<EggLayerComponent, EggLayInstantActionEvent>(OnEggLayAction);
+        SubscribeLocalEvent<EggAriralLayerComponent, EggAriralLayInstantActionEvent>(OnEggAriralLayAction);
     }
 
     public override void Update(float frameTime)
@@ -67,10 +71,20 @@ public sealed class EggLayerSystem : EntitySystem
         component.NextGrowth = _timing.CurTime + TimeSpan.FromSeconds(_random.NextFloat(component.EggLayCooldownMin, component.EggLayCooldownMax));
     }
 
+    private void OnMapInitAriral(EntityUid uid, EggAriralLayerComponent component, MapInitEvent args)
+    {
+        _actions.AddAction(uid, ref component.Action, component.EggLayAction);
+    }
+
     private void OnEggLayAction(EntityUid uid, EggLayerComponent egglayer, EggLayInstantActionEvent args)
     {
         // Cooldown is handeled by ActionAnimalLayEgg in types.yml.
         args.Handled = TryLayEgg(uid, egglayer);
+    }
+
+    private void OnEggAriralLayAction(EntityUid uid, EggAriralLayerComponent eggarirlayer, EggAriralLayInstantActionEvent args)
+    {
+        args.Handled = TryArirLayEgg(uid, eggarirlayer);
     }
 
     public bool TryLayEgg(EntityUid uid, EggLayerComponent? egglayer)
@@ -100,6 +114,27 @@ public sealed class EggLayerSystem : EntitySystem
 
         // Sound + popups
         _audio.PlayPvs(egglayer.EggLaySound, uid);
+        _popup.PopupEntity(Loc.GetString("action-popup-lay-egg-user"), uid, uid);
+        _popup.PopupEntity(Loc.GetString("action-popup-lay-egg-others", ("entity", uid)), uid, Filter.PvsExcept(uid), true);
+
+        return true;
+    }
+
+    public bool TryArirLayEgg(EntityUid uid, EggAriralLayerComponent? eggarirlayer)
+    {
+        if (!Resolve(uid, ref eggarirlayer))
+            return false;
+
+        if (_mobState.IsDead(uid))
+            return false;
+
+        foreach (var ent in EntitySpawnCollection.GetSpawns(eggarirlayer.EggSpawn, _random))
+        {
+            Spawn(ent, Transform(uid).Coordinates);
+        }
+
+        // Sound + popups
+        _audio.PlayPvs(eggarirlayer.EggLaySound, uid);
         _popup.PopupEntity(Loc.GetString("action-popup-lay-egg-user"), uid, uid);
         _popup.PopupEntity(Loc.GetString("action-popup-lay-egg-others", ("entity", uid)), uid, Filter.PvsExcept(uid), true);
 

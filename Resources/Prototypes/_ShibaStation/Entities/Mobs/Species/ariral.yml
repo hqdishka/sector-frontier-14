@@ -5,6 +5,9 @@
   id: BaseMobAriral
   abstract: true
   components:
+  - type: EggAriralLayer
+    eggSpawn:
+    - id: FoodAriralEggLaid
   - type: Hunger
   - type: Icon # It will not have an icon in the adminspawn menu without this. Body parts seem fine for whatever reason.
     sprite: _ShibaStation/Mobs/Species/Ariral/parts.rsi
