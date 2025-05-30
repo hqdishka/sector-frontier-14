@@ -1,0 +1,110 @@
+- type: entity
+  name: сырая креветка
+  parent: [BaseFish, FoodMeatBase]
+  id: FoodShrimp
+  description: Один из видов еды, который используется в готовке.
+  components:
+  - type: Tag
+    tags:
+    - Shrimp
+    - Raw
+    - Meat
+  - type: Sprite
+    sprite: _Lua/Objects/Consumable/Food/raw_shrimp.rsi
+    scale: 0.7, 0.7
+    state: icon
+  - type: Item
+    size: Tiny
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 15
+        - ReagentId: Fat
+          Quantity: 3
+  - type: Construction
+    graph: ShrimpSteak
+    node: start
+    defaultTarget: filet shrimp
+
+- type: entity
+  name: приготовленная креветка
+  parent: FoodMeatBase
+  id: FoodShrimpCooked
+  description: Любимое лакомство ариралов
+  components:
+  - type: Tag
+    tags:
+    - Cooked
+    - Meat
+  - type: Sprite
+    sprite: _Lua/Objects/Consumable/Food/shrimp.rsi
+    scale: 0.7, 0.7
+    state: icon
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 9
+        - ReagentId: Protein
+          Quantity: 9
+  - type: Construction
+    graph: UnusualShrimpSteak
+    node: start
+    defaultTarget: filet unusual shrimp
+
+- type: entity
+  name: сырая необычная креветка
+  parent: [BaseFishRare, FoodMeatBase]
+  id: FoodUnusualShrimp
+  description: Один из видов еды, который используется в готовке.
+  components:
+  - type: Tag
+    tags:
+    - Raw
+    - Meat
+  - type: Sprite
+    sprite: _Lua/Objects/Consumable/Food/raw_blueshrimp.rsi
+    scale: 0.7, 0.7
+    state: icon
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 21
+        - ReagentId: Fat
+          Quantity: 3
+  - type: Construction
+    graph: UnusualShrimpSteak
+    node: start
+    defaultTarget: filet unusual shrimp
+
+- type: entity
+  name: приготовленная необычная креветка
+  parent: FoodMeatBase
+  id: FoodUnusualShrimpCooked
+  description: Любимое лакомство ариралов
+  components:
+  - type: Tag
+    tags:
+    - Cooked
+    - Meat
+  - type: Sprite
+    sprite: _Lua/Objects/Consumable/Food/blueshrimp.rsi
+    scale: 0.7, 0.7
+    state: icon
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 15
+        - ReagentId: Protein
+          Quantity: 15
+  - type: Construction
+    graph: UnusualShrimpSteak
+    node: start
+    defaultTarget: filet unusual shrimp

@@ -1,0 +1,34 @@
+- type: constructionGraph
+  id: ShrimpSteak
+  start: start
+  graph:
+
+  - node: start
+    edges:
+    - to: filet shrimp
+      completed:
+      - !type:PlaySound
+        sound: /Audio/Effects/sizzle.ogg
+      steps:
+      - minTemperature: 345
+
+  - node: filet shrimp
+    entity: FoodShrimpCooked
+
+
+- type: constructionGraph
+  id: UnusualShrimpSteak
+  start: start
+  graph:
+
+  - node: start
+    edges:
+    - to: filet unusual shrimp
+      completed:
+      - !type:PlaySound
+        sound: /Audio/Effects/sizzle.ogg
+      steps:
+      - minTemperature: 345
+
+  - node: filet unusual shrimp
+    entity: FoodUnusualShrimpCooked

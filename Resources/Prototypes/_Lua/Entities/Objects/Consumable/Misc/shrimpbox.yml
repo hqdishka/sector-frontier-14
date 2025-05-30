@@ -1,0 +1,54 @@
+- type: entity
+  parent: [BaseStorageItem, RecyclableItemCardboard]
+  id: FoodContainerShrimp
+  name: упаковка креветок
+  description: Упаковка королевских креветок. Величайший деликатес во вселенной.
+  components:
+  - type: Sprite
+    sprite: _Lua/Objects/Consumable/Food/shrimp_packaging.rsi
+    layers:
+    - state: base
+    - state: mag-1
+      map: ["mag-1"]
+      visible: false
+    - state: mag-2
+      map: ["mag-2"]
+      visible: false
+    - state: mag-3
+      map: ["mag-3"]
+      visible: false
+    - state: mag-4
+      map: ["mag-4"]
+      visible: false
+    - state: mag-5
+      map: ["mag-5"]
+      visible: false
+    - state: mag-6
+      map: ["mag-6"]
+      visible: false
+  - type: Storage
+    grid:
+    - 0,0,2,1
+    whitelist:
+      tags:
+      - Shrimp
+    hideStackVisualsWhenClosed: false
+  - type: Item
+    sprite: _Lua/Objects/Consumable/Food/shrimp_packaging.rsi
+    size: Small
+  - type: StorageFill
+    contents:
+    - id: FoodShrimp
+      amount: 6
+  - type: ItemCounter
+    count:
+      tags: [Shrimp]
+    composite: true
+    layerStates:
+    - mag-1
+    - mag-2
+    - mag-3
+    - mag-4
+    - mag-5
+    - mag-6
+  - type: Appearance

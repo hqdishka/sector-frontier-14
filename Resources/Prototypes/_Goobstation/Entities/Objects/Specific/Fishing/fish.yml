@@ -99,17 +99,17 @@
   - type: Item
     sprite: _Goobstation/Objects/Specific/Fishing/fish.rsi
 
-- type: entity
-  id: FishBoyFisher
-  parent: BaseFishRare
-  name: boy fisher
-  description: You like kissing fish, don't you?
-  components:
-  - type: Sprite
-    sprite: _Goobstation/Objects/Specific/Fishing/fish.rsi
-    state: boy_fisher
-  - type: Item
-    sprite: _Goobstation/Objects/Specific/Fishing/fish.rsi
+# - type: entity
+#   id: FishBoyFisher
+#   parent: BaseFishRare
+#   name: boy fisher
+#   description: You like kissing fish, don't you?
+#   components:
+#   - type: Sprite
+#     sprite: _Goobstation/Objects/Specific/Fishing/fish.rsi
+#     state: boy_fisher
+#   - type: Item
+#     sprite: _Goobstation/Objects/Specific/Fishing/fish.rsi
 
 - type: entity
   id: FishCat
@@ -135,17 +135,17 @@
   - type: Item
     sprite: _Goobstation/Objects/Specific/Fishing/fish.rsi
 
-- type: entity
-  id: FishNukeDisk
-  parent: BaseFishRare
-  name: nuke disk fish
-  description: Erm, Actually, it's a bad idea trying to fit a fish inside a nuclear explosion device.
-  components:
-  - type: Sprite
-    sprite: _Goobstation/Objects/Specific/Fishing/fish.rsi
-    state: disk
-  - type: Item
-    sprite: _Goobstation/Objects/Specific/Fishing/fish.rsi
+# - type: entity
+#   id: FishNukeDisk
+#   parent: BaseFishRare
+#   name: nuke disk fish
+#   description: Erm, Actually, it's a bad idea trying to fit a fish inside a nuclear explosion device.
+#   components:
+#   - type: Sprite
+#     sprite: _Goobstation/Objects/Specific/Fishing/fish.rsi
+#     state: disk
+#   - type: Item
+#     sprite: _Goobstation/Objects/Specific/Fishing/fish.rsi
 
 - type: entity
   id: FishGib
@@ -171,17 +171,17 @@
   - type: Item
     sprite: _Goobstation/Objects/Specific/Fishing/fish.rsi
 
-- type: entity
-  id: FishNuker
-  parent: BaseFishRare
-  name: nuclear operative fish
-  description: Predator of the nuke disk fish.
-  components:
-  - type: Sprite
-    sprite: _Goobstation/Objects/Specific/Fishing/fish.rsi
-    state: nuker
-  - type: Item
-    sprite: _Goobstation/Objects/Specific/Fishing/fish.rsi
+# - type: entity
+#   id: FishNuker
+#   parent: BaseFishRare
+#   name: nuclear operative fish
+#   description: Predator of the nuke disk fish.
+#   components:
+#   - type: Sprite
+#     sprite: _Goobstation/Objects/Specific/Fishing/fish.rsi
+#     state: nuker
+#   - type: Item
+#     sprite: _Goobstation/Objects/Specific/Fishing/fish.rsi
 
 - type: entity
   id: FishPuffer
@@ -243,14 +243,14 @@
   - type: Item
     sprite: _Goobstation/Objects/Specific/Fishing/fish.rsi
 
-- type: entity
-  id: FishIan
-  parent: BaseFishRare
-  name: ian fish
-  description: Water-born ian from the sea.
-  components:
-  - type: Sprite
-    sprite: _Goobstation/Objects/Specific/Fishing/fish.rsi
-    state: ian
-  - type: Item
-    sprite: _Goobstation/Objects/Specific/Fishing/fish.rsi
+# - type: entity
+#   id: FishIan
+#   parent: BaseFishRare
+#   name: ian fish
+#   description: Water-born ian from the sea.
+#   components:
+#   - type: Sprite
+#     sprite: _Goobstation/Objects/Specific/Fishing/fish.rsi
+#     state: ian
+#   - type: Item
+#     sprite: _Goobstation/Objects/Specific/Fishing/fish.rsi

@@ -38,13 +38,14 @@
     children:
     - id: FishAlien
     - id: FishBingle
-    - id: FishBoyFisher
-    - id: FishNukeDisk
+    # - id: FishBoyFisher
+    # - id: FishNukeDisk
     - id: FishGib
     - id: FishMutant
-    - id: FishNuker
+    # - id: FishNuker
     - id: FishToxic
-    - id: FishIan
+    # - id: FishIan
+    - id: FoodUnusualShrimp
 
 # Fish from water
 - type: entityTable
@@ -61,6 +62,7 @@
     - id: FishSilver
     - id: FishTropicalSun
     - id: FishTropical
+    - id: FoodShrimp
 
 # Items from Water
 - type: entityTable
