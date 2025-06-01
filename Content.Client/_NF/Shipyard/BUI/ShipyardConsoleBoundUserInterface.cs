@@ -28,6 +28,7 @@ public sealed class ShipyardConsoleBoundUserInterface : BoundUserInterface
             _menu.OnOrderApproved += ApproveOrder;
             _menu.OnSellShip += SellShip;
             _menu.OnUnassignDeed += UnassignDeed;
+            _menu.OnRenameShip += RenameShip;
             _menu.TargetIdButton.OnPressed += _ => SendMessage(new ItemSlotButtonPressedEvent("ShipyardConsole-targetId"));
 
             // Disable the NFSD popup for now.
@@ -89,5 +90,10 @@ public sealed class ShipyardConsoleBoundUserInterface : BoundUserInterface
     private void UnassignDeed(ButtonEventArgs args)
     {
         SendMessage(new ShipyardConsoleUnassignDeedMessage());
+    }
+
+    private void RenameShip(string newName)
+    {
+        SendMessage(new ShipyardConsoleRenameMessage(newName));
     }
 }
