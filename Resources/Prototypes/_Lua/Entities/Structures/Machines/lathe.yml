@@ -56,30 +56,6 @@
       - ArmoryLatheDynamicPack
 
 - type: entity
-  id: ArmoryLatheEvent
-  parent: BaseLathe
-  name: корабельный автолат
-  description: Автолат для создания корабельного вооружения и аммуниции.
-  suffix: Ивент, НЕ МАППИТЬ!
-  components:
-  - type: Sprite
-    sprite: _Lua/Structures/Machines/armorylathe.rsi
-    snapCardinals: true
-    layers:
-    - state: base_machine
-      map: ["enum.LatheVisualLayers.IsRunning"]
-    - state: buttons_on
-      shader: unshaded
-      map: ["enum.PowerDeviceVisualLayers.Powered"]
-  - type: Machine
-    board: ArmoryLatheMachineCircuitboard
-  - type: Lathe
-    idleState: base_machine
-    runningState: base_machine_processing
-    staticPacks:
-      - ArmoryLatheDynamicPackEvent
-
-- type: entity
   id: MedipenTechfab
   parent: BaseLathe
   name: ТехФаб Медипенов
@@ -108,27 +84,4 @@
     board: MedipenTechFabCircuitboard
   - type: StealTarget
     stealGroup: MedipenTechFabCircuitboard
-
-- type: entity
-  id: MedipenTechfabEvent
-  parent: BaseLathe
-  name: ТехФаб Медипенов
-  description: Техфаб для производства медипенов
-  suffix: Ивент, НЕ МАППИТЬ!
-  components:
-  - type: Sprite
-    sprite: _Lua/Structures/Machines/medipentechfab.rsi
-    layers:
-    - state: icon
-      map: ["enum.LatheVisualLayers.IsRunning"]
-    - state: buttons_on
-      shader: unshaded
-      map: ["enum.PowerDeviceVisualLayers.Powered"]
-    - state: inserting
-      map: ["enum.MaterialStorageVisualLayers.Inserting"]
-  - type: Lathe
-    idleState: icon
-    runningState: processing
-    staticPacks:
-      - MedipenTechfabPackEvent
 

@@ -6,7 +6,8 @@
   id: ArmoryLatheDynamicPack
   recipes:
   - PowerCageRechargerCircuitboard
-  # - WeaponPadCircuitboard
+  - GunneryControlComputerCircuitboard
+  - MachineGCSCircuitboard
   - MagazineBox20mmAP
   - MagazineBox53mmAP
   - MagazineBox80mmAP
@@ -19,18 +20,20 @@
   - Cartridge140mmAP
   - Cartridge140mm
   - Cartridge140mmPF
+  - MachineShieldMS225Circuitboard
+  - ShieldControlComputerCircuitboard
   - NFGrenadeBlast
-  - GrenadeFrag
+  - NFGrenadeFrag
   - NFGrenadeFlash
-  - GrenadeBaton
-  - GrenadeEMP
-  - MagazineGrenadeEmpty
+  - NFGrenadeBaton
+  - NFGrenadeEMP
+  - NFMagazineGrenadeEmpty
   - PowerCageSmallEmpty
   - PowerCageMediumEmpty
   - PowerCageHighEmpty
-  - CannonBall
-  - CannonBallGrapeshot
-  - CannonBallGlassshot
+  - NFCannonBall
+  - NFCannonBallGrapeshot
+  - NFCannonBallGlassshot
   - ShuttleGunSvalinnMachineGunCircuitboard
   - ShuttleGunPerforatorCircuitboard
   - ShuttleGunFriendshipCircuitboard
@@ -52,102 +55,3 @@
   - SpaceMedipen
   - RadAutoInjector
   - AirlossAutoInjector
-
-- type: latheRecipePack
-  id: ArmoryLatheDynamicPackEvent
-  recipes:
-  - MagazineBox20mmAPEvent
-  - MagazineBox53mmAPEvent
-  - MagazineBox80mmAPEvent
-  - MagazineBox105mmAPEvent
-  - MagazineBox105mmHEEvent
-  - MagazineBox105mmPFEvent
-  - Cartridge120mmAPEvent
-  - Cartridge120mmEvent
-  - Cartridge120mmPFEvent
-  - Cartridge140mmAPEvent
-  - Cartridge140mmEvent
-  - Cartridge140mmPFEvent
-  - MissileTomahawkEvent
-  - MissileGREvent
-  # Replaced WeaponCase entries with actual weapons and magazines:
-  - WeaponPistolMk58ExpeditionEvent
-  - MagazinePistolEvent
-  - WeaponPistolN1984Event
-  - MagazineMagnumEvent
-  - WeaponPistolViperEvent
-  - WeaponPistolCobraEvent
-  - MagazinePistolCaselessRifleEvent
-  - WeaponPistolUniversalExpeditionEvent
-  - WeaponPistolPollockExpeditionEvent
-  - WeaponAntiqueLaserEvent
-  # Revolvers
-  - WeaponRevolverArgentiExpeditionEvent
-  - SpeedLoaderRifleHeavyEvent
-  - WeaponRevolverDeckardExpeditionEvent
-  - WeaponRevolverPythonEvent
-  - WeaponRevolverFitzExpeditionEvent
-  - WeaponRevolverFaithExpeditionEvent
-  - WeaponRevolverLuckyExpeditionEvent
-  - WeaponRevolverPirateExpeditionEvent
-  # Shotguns
-  - BoxLethalshotEvent
-  - WeaponShotgunKammererExpeditionEvent
-  - WeaponShotgunEnforcerExpeditionEvent
-  - WeaponShotgunBulldogEvent
-  - MagazineShotgunEvent
-  # SMGs
-  - WeaponSubMachineGunWt550ExpeditionEvent
-  - MagazinePistolSubMachineGunTopMountedEvent
-  - MagazineBoxPistolEvent
-  - WeaponSubMachineGunAtreidesExpeditionEvent
-  - MagazinePistolSubMachineGunEvent
-  - WeaponSubMachineGunDrozdExpeditionEvent
-  - WeaponSubMachineGunC20rEvent
-  - WeaponSubMachineGunTypewriterExpeditionEvent
-  # Rifles
-  - WeaponRifleGestioEvent
-  - MagazineLightRifleLowCapacityEvent
-  - MagazineNovaliteC1Event
-  - WeaponRifleLecterEvent
-  - MagazineRifleEvent
-  - WeaponRifleAkEvent
-  - MagazineLightRifleEvent
-  # - WeaponRifleM90GrenadeLauncherEvent
-  - WeaponRifleSVSEvent
-  - WeaponRifleJackdawEvent
-  - MagazineCaselessRifleEvent
-  # Energy Weapons
-  - PowerCellHighEvent
-  # Sniper Rifles
-  - MagazineBoxLightRifleEvent
-  - WeaponSniperHristovEvent
-  - MagazineBoxAntiMaterielEvent
-  - WeaponSniperRepeaterEvent
-  - MagazineBoxMagnumEvent
-  # LMG
-  - WeaponLightMachineGunL6Event
-  - MagazineLightRifleBoxEvent
-  # Melee Weapons
-  - EnergySwordEvent
-  # Explosives
-  # - FireBombEvent
-  # - PipeBombEvent
-  # - SeismicChargeEvent
-  # - ExGrenadeEvent
-  # - C4Event
-
-- type: latheRecipePack
-  id: MedipenTechfabPackEvent
-  recipes:
-  - EmergencyMedipenEvent
-  - BurnAutoInjectorEvent
-  #- ZetaTwoMedipen
-  #- ZetaOneMedipen
-  - AntiPoisonMedipenEvent
-  - PyraAutoInjectorEvent
-  - PunctAutoInjectorEvent
-  - CombatMedipenEvent
-  - SpaceMedipenEvent
-  - RadAutoInjectorEvent
-  - AirlossAutoInjectorEvent
