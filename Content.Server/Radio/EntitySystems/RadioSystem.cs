@@ -220,14 +220,19 @@ public sealed class RadioSystem : EntitySystem
                     continue;
             }
 
-            if (!HasComp<GhostComponent>(receiver) && GetFrequency(receiver, channel) != frequency) // Nuclear-14
-                continue; // Nuclear-14
+            // Lua start global
+            if (!ignoreRange)
+            {
+                if (!HasComp<GhostComponent>(receiver) && GetFrequency(receiver, channel) != frequency)
+                    continue;
 
-            if (!channel.LongRange && transform.MapID != sourceMapId && !radio.GlobalReceive)
-                continue;
+                if (!channel.LongRange && transform.MapID != sourceMapId && !radio.GlobalReceive)
+                    continue;
+            }
+            // Lua end global
 
             // don't need telecom server for long range channels or handheld radios and intercoms
-            var needServer = !channel.LongRange && !sourceServerExempt;
+            var needServer = !ignoreRange && !channel.LongRange && !sourceServerExempt; // lua add ignoreRange
             if (needServer && !hasActiveServer)
                 continue;
 

@@ -10,3 +10,7 @@ LockerWallColorMedicalFilled: LockerWallMedicalFilled
 
 # 2025-05-30 Lua port map previous frontier
 WeaponTargetingPad: ComputerGunneryConsole
+
+# 2025-06-02 Lua migrate ArmoryLathe
+ArmoryLatheEvent: ArmoryLathe
+MedipenTechfabEvent: MedipenTechfab

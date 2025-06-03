@@ -32,8 +32,8 @@
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: SpaceArtillery
-    powerChargeRate: 150
-    powerUsePassive: 100
+    powerChargeRate: 1150
+    powerUsePassive: 1100
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 500
@@ -43,7 +43,7 @@
   - type: Airtight
   - type: ProjectileBatteryAmmoProvider
     proto: 20mmBulletArmorPiercing
-    fireCost: 15
+    fireCost: 150
   - type: RadiationBlocker
     resistance: 8
   - type: RadarBlip
@@ -82,15 +82,15 @@
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: SpaceArtillery
-    powerChargeRate: 250
-    powerUsePassive: 200
+    powerChargeRate: 2250
+    powerUsePassive: 2200
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 95
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: 90mmBulletArmorPiercing
-    fireCost: 50
+    fireCost: 250
   - type: RadarBlip
     radarColor: "#FF9100"
     scale: 1
@@ -135,15 +135,15 @@
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: SpaceArtillery
-    powerChargeRate: 250
-    powerUsePassive: 200
+    powerChargeRate: 550
+    powerUsePassive: 500
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 60
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipCyrexaProjectile
-    fireCost: 350
+    fireCost: 450
   - type: RadarBlip
     radarColor: "#03FC9D"
   - type: ShipGunType
@@ -179,15 +179,15 @@
     soundEmpty:
       path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
   - type: SpaceArtillery
-    powerChargeRate: 250
-    powerUsePassive: 200
+    powerChargeRate: 2250
+    powerUsePassive: 2200
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 350
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipRailgunProjectile
-    fireCost: 1500
+    fireCost: 4500
   - type: Fixtures
     fixtures:
       fix1:
