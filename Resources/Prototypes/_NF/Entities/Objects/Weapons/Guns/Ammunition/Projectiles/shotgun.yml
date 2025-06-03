@@ -8,7 +8,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 4
+        Piercing: 10
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -19,8 +19,8 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 2
-        Heat: 2
+        Blunt: 4
+        Heat: 6
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -31,8 +31,7 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 0.5
-
+        Blunt: 1
 - type: entity
   categories: [ HideSpawnMenu ]
   id: NFPelletShotgunUranium
@@ -42,7 +41,7 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 3
+        Radiation: 7
         Piercing: 3
 
 - type: entity
@@ -63,7 +62,7 @@
     damage:
       types:
         Piercing: 2
-        Slash: 2
+        Slash: 8
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -74,7 +73,7 @@
   - type: Projectile
     damage:
       types:
-        Slash: 4
+        Slash: 8
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -85,8 +84,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 5
-        Structural: 5
+        Piercing: 7
+        Structural: 10
 
 #region PelletsSpread
 - type: entity
@@ -174,7 +173,7 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 10
+        Blunt: 5
   - type: StaminaDamageOnCollide
     damage: 30 # 4 hits to stun
 
