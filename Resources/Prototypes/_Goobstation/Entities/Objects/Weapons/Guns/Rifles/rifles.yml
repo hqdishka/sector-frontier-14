@@ -37,7 +37,7 @@
         priority: 2
         whitelist:
           tags:
-            - MagazineLightRifle
+            - NFMagazineRifle30
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
