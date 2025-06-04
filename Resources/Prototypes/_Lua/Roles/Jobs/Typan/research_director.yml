@@ -6,6 +6,7 @@
   id: OutpostTypanRD
   name: job-name-typan-rd
   playTimeTracker: JobOutpostTypanRD
+  salary: 45000
   description: Директор исследований из далёкого космоса.
   startingGear: SyndicateRD
   icon: "JobIconSyndicateRD"

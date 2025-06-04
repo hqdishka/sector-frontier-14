@@ -6,6 +6,7 @@
   id: OutpostTypanResearcher
   name: job-name-typan-researcher
   playTimeTracker: JobOutpostTypanResearcher
+  salary: 25000
   description: Исследователь из далёкого космоса.
   startingGear: SyndicateResearcher
   icon: "JobIconSyndicateResearcher"

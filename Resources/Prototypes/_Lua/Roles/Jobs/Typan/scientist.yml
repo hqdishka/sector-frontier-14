@@ -6,6 +6,7 @@
   id: OutpostTypanScience
   name: job-name-typan-science
   playTimeTracker: JobOutpostTypanScience
+  salary: 35000
   description: Учёный из далёкого космоса.
   startingGear: SyndicateScience
   icon: "JobIconSyndicateScience"

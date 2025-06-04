@@ -6,6 +6,7 @@
   id: OutpostTypanAtmosTech
   name: job-name-typan-atmos-tech
   playTimeTracker: JobOutpostTypanAtmosTech
+  salary: 35000
   description: Атмосферный инженер из далёкого космоса.
   startingGear: SyndicateAtmos
   icon: "JobIconSyndicateAtmos"

@@ -183,6 +183,15 @@ namespace Content.Server.GameTicking
                 return;
             }
 
+            if (_mind.TryGetMind(player.UserId, out var oldMindId, out var oldMind) &&
+                oldMind.OwnedEntity is { } oldEntity)
+            {
+                if (TryComp<JobTrackingComponent>(oldEntity, out var oldJobTracking))
+                {
+                    _stationJobs.ClearOriginalJob(oldJobTracking.SpawnStation, player.UserId);
+                }
+            }
+
             // We raise this event to allow other systems to handle spawning this player themselves. (e.g. late-join wizard, etc)
             var bev = new PlayerBeforeSpawnEvent(player, character, jobId, lateJoin, station);
             RaiseLocalEvent(bev);
@@ -260,6 +269,7 @@ namespace Content.Server.GameTicking
             // End Frontier
 
             _roles.MindAddJobRole(newMind, silent: silent, jobPrototype:jobId);
+            _stationJobs.TryAssignJob(station, jobPrototype, player.UserId);
             var jobName = _jobs.MindTryGetJobName(newMind);
             _admin.UpdatePlayerList(player);
 
@@ -337,6 +347,17 @@ namespace Content.Server.GameTicking
 
         public void Respawn(ICommonSession player)
         {
+            if (_mind.TryGetMind(player.UserId, out var mindId, out var mind))
+            {
+                if (mind.OwnedEntity is { } ownedEntity)
+                {
+                    if (TryComp<JobTrackingComponent>(ownedEntity, out var jobTracking))
+                    {
+                        _stationJobs.ClearOriginalJob(jobTracking.SpawnStation, player.UserId);
+                    }
+                }
+            }
+
             _mind.WipeMind(player);
             _adminLogger.Add(LogType.Respawn, LogImpact.Medium, $"Player {player} was respawned.");
 

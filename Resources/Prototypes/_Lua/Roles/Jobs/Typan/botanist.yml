@@ -6,6 +6,7 @@
   id: OutpostTypanBotanist
   name: job-name-typan-botanist
   playTimeTracker: JobOutpostTypanBotanist
+  salary: 25000
   description: Ботаник из далёкого космоса.
   startingGear: SyndicateBotanist
   icon: "JobIconOutpostTypanBotanist"

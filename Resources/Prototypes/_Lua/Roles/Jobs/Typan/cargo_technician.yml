@@ -6,6 +6,7 @@
   id: OutpostTypanCargotech
   name: job-name-typan-cargotech
   playTimeTracker: JobOutpostTypanCargotech
+  salary: 35000
   description: Карготехник из далёкого космоса.
   startingGear: SyndicateCargotech
   icon: "JobIconOutpostTypanCargotech"
