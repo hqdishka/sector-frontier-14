@@ -30,8 +30,11 @@ ChangelogEntry = dict[str, Any]
 
 
 def main():
-    if not DISCORD_WEBHOOK_URL:
-        print("No discord webhook URL found, skipping discord send")
+    webhook_lua = os.environ.get("DISCORD_WEBHOOK_URL_LUA")
+    webhook_ds = os.environ.get("DISCORD_WEBHOOK_URL_DS")
+
+    if not webhook_lua and not webhook_ds:
+        print("No Discord webhooks found, skipping")
         return
 
     if DEBUG:
@@ -149,8 +152,20 @@ def send_discord_webhook(lines: list[str]):
     content = "".join(lines)
     body = get_discord_body(content)
 
-    response = requests.post(DISCORD_WEBHOOK_URL, json=body)
-    response.raise_for_status()
+    webhook_url_lua = os.environ.get("DISCORD_WEBHOOK_URL_LUA")
+    if webhook_url_lua:
+        response_lua = requests.post(webhook_url_lua, json=body)
+        response_lua.raise_for_status()
+        print("Sent to LUA webhook")
+
+    webhook_url_ds = os.environ.get("DISCORD_WEBHOOK_URL_DS")
+    if webhook_url_ds:
+        response_ds = requests.post(webhook_url_ds, json=body)
+        response_ds.raise_for_status()
+        print("Sent to DS webhook")
+
+    if not webhook_url_lua and not webhook_url_ds:
+        print("No Discord webhooks configured!")
 
 
 def changelog_entries_to_message_lines(entries: Iterable[ChangelogEntry]) -> list[str]:
