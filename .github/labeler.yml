@@ -6,13 +6,28 @@
 - changed-files:
   - any-glob-to-any-file: "Resources/Maps/_NF/Admin/**/*.yml" # Grid Files
 
+"Карта-Админ":
+- changed-files:
+  - any-glob-to-any-file: "Resources/Maps/_Mono/Admin/**/*.yml"
+  - any-glob-to-any-file: "Resources/Maps/_Lua/Admin/**/*.yml"
+
 "Map-Bluespace":
 - changed-files:
   - any-glob-to-any-file: "Resources/Maps/_NF/Bluespace/**/*.yml" # Grid Files
 
+"Карта-Блюспейс":
+- changed-files:
+  - any-glob-to-any-file: "Resources/Maps/_Mono/Bluespace/**/*.yml"
+  - any-glob-to-any-file: "Resources/Maps/_Lua/Bluespace/**/*.yml"
+
 "Map-Dungeon":
 - changed-files:
   - any-glob-to-any-file: "Resources/Maps/_NF/Dungeon/**/*.yml" # Grid Files
+
+"Карта-Данж":
+- changed-files:
+  - any-glob-to-any-file: "Resources/Maps/_Mono/Dungeon/**/*.yml"
+  - any-glob-to-any-file: "Resources/Maps/_Lua/Dungeon/**/*.yml"
 
 "Map-Outpost":
 - changed-files:
@@ -20,17 +35,37 @@
     - "Resources/Maps/_NF/Outpost/*.yml" # Map Files
     - "Resources/Prototypes/_MF/Maps/Outpost/*.yml" # Prototypes Files
 
+"Карта-Аванпост":
+- changed-files:
+  - any-glob-to-any-file:
+    - "Resources/Maps/_Mono/Outpost/*.yml"
+    - "Resources/Maps/_Lua/Outpost/*.yml"
+
 "Map-Shuttle":
 - changed-files:
   - any-glob-to-any-file:
     - "Resources/Maps/_NF/Shuttles/**/*.yml" # Grid Files
     - "Resources/Prototypes/_NF/Shipyard/**/*.yml" # Prototypes Files
 
+"Карта-Шаттлы":
+- changed-files:
+  - any-glob-to-any-file:
+    - "Resources/Maps/_Mono/Shuttles/**/*.yml"
+    - "Resources/Maps/_Lua/Shuttles/**/*.yml"
+    - "Resources/Prototypes/_Mono/Shipyard/**/*.yml"
+    - "Resources/Prototypes/_Lua/Shipyard/**/*.yml"
+
 "Map-POI":
 - changed-files:
   - any-glob-to-any-file:
     - "Resources/Maps/_NF/POI/**/*.yml" # Grid Files
     - "Resources/Prototypes/_MF/Maps/POI/**/*.yml" # Prototypes Files
+
+"Карта-POI":
+- changed-files:
+  - any-glob-to-any-file:
+    - "Resources/Maps/_Mono/POI/**/*.yml"
+    - "Resources/Maps/_Lua/POI/**/*.yml"
 
 "Sprites":
 - changed-files:
@@ -73,8 +108,12 @@
   - changed-files:
     - any-glob-to-any-file: "**/*.yml"
     - all-globs-to-any-file:
+      - "!Resources/Maps/_Mono/**/*.yml"
+      - "!Resources/Maps/_Lua/**/*.yml"
+      - "!Resources/Prototypes/_Mono/Maps/**/*.yml"
+      - "!Resources/Prototypes/_Lua/Maps/**/*.yml"
       - "!Resources/Maps/_NF/**/*.yml"
-      - "!Resources/Prototypes/Maps/_NF/**/*.yml"
+      - "!Resources/Prototypes/_NF/Maps/**/*.yml"
 
 "DB Migration":
 - changed-files:
