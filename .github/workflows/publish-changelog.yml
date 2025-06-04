@@ -20,5 +20,6 @@ jobs:
       run: Tools/actions_changelogs_since_last_run.py
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK }}
+        DISCORD_WEBHOOK_URL_LUA: ${{ secrets.CHANGELOG_DISCORD_LUA_WEBHOOK }}
+        DISCORD_WEBHOOK_URL_DS: ${{ secrets.CHANGELOG_DISCORD_DS_WEBHOOK }}
     continue-on-error: true
