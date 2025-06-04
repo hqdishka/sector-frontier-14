@@ -31,6 +31,7 @@ entities:
     components:
     - type: MetaData
       name: Чёрный Рынок
+    - type: GridGodMode
     - type: Transform
       pos: -0.5,-0.5208335
       parent: invalid

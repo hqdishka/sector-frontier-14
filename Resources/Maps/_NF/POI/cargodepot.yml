@@ -18,6 +18,7 @@ entities:
   - uid: 10
     components:
     - type: MetaData
+    - type: GridGodMode
     - type: Transform
     - type: NoShuttleFTL
     - type: MapGrid

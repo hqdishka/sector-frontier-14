@@ -12,6 +12,7 @@
     color: "#ffffff"
     flags: [IsPlayerShuttle]
   - type: NanotrasenFtl
+  - type: ShuttleTempGodMode
 
 - type: vessel
   id: BaseVesselAntag
