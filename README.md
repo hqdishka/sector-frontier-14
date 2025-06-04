@@ -1,5 +1,4 @@
 <p align="center"> <img alt="Sector Frontier 14" height="300" src="https://github.com/HacksLua/sector-frontier-14/blob/master/Resources/Textures/_Lua/Logo/logogit.png?raw=true" /></p>
-![Alt](https://repobeats.axiom.co/api/embed/966f78fd8296899bae8548ab217d16da5723a238.svg "Repobeats analytics image")
 
 Sector Frontier 14 — это форк [Frontier Station 14](https://github.com/new-frontiers-14/frontier-station-14)/[Space Station 14](https://github.com/space-wizards/space-station-14), работающий на движке [Robust Toolbox](https://github.com/space-wizards/RobustToolbox), написанном на C#.
 
@@ -40,6 +39,8 @@ Sector Frontier 14 — это форк [Frontier Station 14](https://github.com/
 Большинство ассетов лицензированы по [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), если не указано иное. Лицензия и авторские права указаны в метаданных файлов. [Пример](https://github.com/space-wizards/space-station-14/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
 
 Обратите внимание, что некоторые ассеты лицензированы по некоммерческой лицензии [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) или аналогичным некоммерческим лицензиям и должны быть удалены, если вы планируете использовать этот проект в коммерческих целях.
+
+![Alt](https://repobeats.axiom.co/api/embed/966f78fd8296899bae8548ab217d16da5723a238.svg "Repobeats analytics image")
 
 ## Атрибуция
 
