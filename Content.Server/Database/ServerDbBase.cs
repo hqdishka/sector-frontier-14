@@ -569,6 +569,12 @@ namespace Content.Server.Database
         #endregion
 
         #region Playtime
+        /// <summary>
+        /// Retrieves the playtime records for a player, either from an external playtime server if enabled or from the local database.
+        /// </summary>
+        /// <param name="player">The unique identifier of the player.</param>
+        /// <param name="cancel">A cancellation token for the asynchronous operation.</param>
+        /// <returns>A list of <see cref="PlayTime"/> records for the specified player. Returns an empty list if the external server is enabled but the request fails.</returns>
         public async Task<List<PlayTime>> GetPlayTimes(Guid player, CancellationToken cancel)
         {
             // DS14 playtimeserver
