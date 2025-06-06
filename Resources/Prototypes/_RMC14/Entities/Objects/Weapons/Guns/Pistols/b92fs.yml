@@ -24,7 +24,7 @@
         priority: 2
         whitelist:
           tags:
-          - RMCMagazinePistolB92FS`
+          - RMCMagazinePistolB92FS
         startingItem: RMCMagazinePistolB92FS
   # - type: GunDamageModifier
   #   multiplier: 0.9
