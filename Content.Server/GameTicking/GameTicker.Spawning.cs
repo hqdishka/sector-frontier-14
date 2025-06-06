@@ -267,7 +267,6 @@ namespace Content.Server.GameTicking
             var salary = EnsureComp<SalaryTrackingComponent>(mob);
             salary.Station = station;
             salary.JobId = jobId;
-            Dirty(mob, salary);
             jobComp.SpawnStation = station;
             jobComp.Active = true;
             Dirty(mob, jobComp);
