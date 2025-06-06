@@ -199,6 +199,33 @@ internal sealed partial class ChatManager : IChatManager
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Hook OOC from {sender}: {message}");
     }
 
+    public void SendHookAdmin(string sender, string message)
+    {
+        var clients = _adminManager.ActiveAdmins.Select(p => p.Channel);
+        var wrappedMessage = Loc.GetString("chat-manager-send-hook-admin-wrap-message", ("senderName", sender), ("message", FormattedMessage.EscapeText(message)));
+        
+        ChatMessageToMany(ChatChannel.AdminChat, message, wrappedMessage, source: EntityUid.Invalid, hideChat: false, recordReplay: false, clients);
+        _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Hook admin from {sender}: {message}");
+    }
+
+    public void SendHookAhelp(NetUserId userId, string sender, string message)
+    {
+        // Send the ahelp message to the BwoinkSystem to handle it properly
+        var bwoinkSystem = _entityManager.System<BwoinkSystem>();
+        bwoinkSystem.OnWebhookBwoinkTextMessage(
+            new SharedBwoinkSystem.BwoinkTextMessage(userId, SharedBwoinkSystem.SystemUserId, message),
+            new ServerApi.BwoinkActionBody
+            {
+                Text = message,
+                Username = sender,
+                Guid = userId.UserId,
+                UserOnly = false,
+                WebhookUpdate = false
+            }
+        );
+        _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Hook ahelp from {sender} to {userId}: {message}");
+    }
+
     #endregion
 
     #region Public OOC Chat API
