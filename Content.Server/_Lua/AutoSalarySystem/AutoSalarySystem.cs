@@ -7,7 +7,6 @@ using Content.Server.Chat.Managers; // Lua
 using Content.Server.Popups; // Lua
 using Content.Server.Station.Systems; // Lua
 using Content.Shared._NF.Bank.Components;
-using Content.Shared._NF.Roles.Components;
 using Content.Shared.Chat; // Lua
 using Content.Shared.GameTicking;
 using Content.Shared.Humanoid;
@@ -25,7 +24,6 @@ public sealed class AutoSalarySystem : EntitySystem
     [Dependency] private readonly BankSystem _bank = default!;
     [Dependency] private readonly PopupSystem _popup = default!; // Lua
     [Dependency] private readonly IChatManager _chatManager = default!; // Lua
-    [Dependency] private readonly StationJobsSystem _stationJobs = default!; // Lua
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!; // Lua
     [Dependency] private readonly IConfigurationManager _cfg = default!; // Lua
 
@@ -48,7 +46,7 @@ public sealed class AutoSalarySystem : EntitySystem
 
         if (_currentTime <= 0)
         {
-            _currentTime = _interval;
+            _currentTime = _cfg.GetCVar(CLVars.AutoSalaryInterval);
             ProcessSalary();
         }
     }
@@ -61,23 +59,20 @@ public sealed class AutoSalarySystem : EntitySystem
     // Lua start
     private void ProcessSalary()
     {
-        var query = EntityQueryEnumerator<HumanoidAppearanceComponent, BankAccountComponent, ActorComponent>();
-        while (query.MoveNext(out var uid, out _, out _, out var actor))
+        var query = EntityQueryEnumerator<HumanoidAppearanceComponent, BankAccountComponent, ActorComponent, SalaryTrackingComponent>();
+        while (query.MoveNext(out var uid, out _, out _, out var actor, out var salary))
         {
-            var station = GetOwningStation(uid);
-            if (station == null)
+            if (string.IsNullOrEmpty(salary.JobId))
                 continue;
 
-            if (TryComp<JobTrackingComponent>(uid, out var jobTracking) &&
-                jobTracking.Active &&
-                _stationJobs.TryGetOriginalJob(station.Value, actor.PlayerSession.UserId, out var jobId))
+            if (!_prototypeManager.TryIndex(new ProtoId<JobPrototype>(salary.JobId), out var job))
+                continue;
+
+            Logger.Info($"DEBUG: {ToPrettyString(uid)} jobID: {salary.JobId}");
+            var amount = job.Salary;
+            if (_bank.TryBankDeposit(uid, amount))
             {
-                Logger.Info($"DEBUG: {ToPrettyString(uid)} оригинальный JobID: {jobId}");
-                var salary = GetSalary(jobId);
-                if (_bank.TryBankDeposit(uid, salary))
-                {
-                    NotifySalaryReceived(uid, salary);
-                }
+                NotifySalaryReceived(uid, amount);
             }
         }
     }
