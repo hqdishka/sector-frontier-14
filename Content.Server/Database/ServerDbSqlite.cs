@@ -32,6 +32,16 @@ namespace Content.Server.Database
 
         private int _msDelay;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ServerDbSqlite"/> class, configuring SQLite database options, concurrency, and migration behavior.
+        /// </summary>
+        /// <param name="options">A factory function for creating database context options.</param>
+        /// <param name="inMemory">Indicates whether the database operates in in-memory mode.</param>
+        /// <param name="cfg">Configuration manager for retrieving and subscribing to configuration values.</param>
+        /// <param name="synchronous">If true, database migration is performed synchronously; otherwise, asynchronously.</param>
+        /// <remarks>
+        /// Subscribes to configuration changes for database delay and playtime server settings, updating internal fields and HTTP client headers as needed.
+        /// </remarks>
         public ServerDbSqlite(
             Func<DbContextOptions<SqliteServerDbContext>> options,
             bool inMemory,

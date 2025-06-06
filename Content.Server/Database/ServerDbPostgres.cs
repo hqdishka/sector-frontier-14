@@ -27,6 +27,14 @@ namespace Content.Server.Database
 
         private int _msLag;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ServerDbPostgres"/> class, configuring database options, concurrency controls, and subscribing to relevant configuration changes.
+        /// </summary>
+        /// <param name="options">Entity Framework Core options for the PostgreSQL context.</param>
+        /// <param name="connectionString">The connection string for the PostgreSQL database.</param>
+        /// <remarks>
+        /// Sets up asynchronous database migration, concurrency semaphore, and listeners for configuration changes including fake lag and playtime server integration. Initializes notification listeners for database events.
+        /// </remarks>
         public ServerDbPostgres(DbContextOptions<PostgresServerDbContext> options,
             string connectionString,
             IConfigurationManager cfg,
