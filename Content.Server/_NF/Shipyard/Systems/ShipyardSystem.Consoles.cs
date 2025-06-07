@@ -53,6 +53,7 @@ namespace Content.Server._NF.Shipyard.Systems;
 public sealed partial class ShipyardSystem : SharedShipyardSystem
 {
     [Dependency] private readonly IAdminLogManager _adminLogger = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IPlayerManager _player = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IServerPreferencesManager _prefManager = default!;
@@ -70,6 +71,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     [Dependency] private readonly ShuttleRecordsSystem _shuttleRecordsSystem = default!;
     [Dependency] private readonly ShuttleConsoleLockSystem _shuttleConsoleLock = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private readonly IEntityManager _entityManager = default!;
 
     private static readonly Regex DeedRegex = new(@"\s*\([^()]*\)");
 
@@ -433,6 +435,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         }
 
         var shuttleName = ToPrettyString(shuttleUid); // Grab the name before it gets 1984'd
+        var shuttleNetEntity = _entityManager.GetNetEntity(shuttleUid); // same with the netEntity for shuttle records
 
         // Check for shipyard blacklisting components
         var disableSaleQuery = GetEntityQuery<ShipyardSellConditionComponent>();
@@ -466,6 +469,9 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             PlayDenySound(player, uid, component);
             return;
         }
+
+        // Update shuttle records
+        _shuttleRecordsSystem.TrySetSaleTime(shuttleNetEntity);
 
         RemComp<ShuttleDeedComponent>(targetId);
 
@@ -616,7 +622,11 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
 
     private void PlayDenySound(EntityUid playerUid, EntityUid consoleUid, ShipyardConsoleComponent component)
     {
-        _audio.PlayEntity(component.ErrorSound, playerUid, consoleUid);
+        if (_timing.CurTime >= component.NextDenySoundTime)
+        {
+            component.NextDenySoundTime = _timing.CurTime + component.DenySoundDelay;
+            _audio.PlayPvs(_audio.ResolveSound(component.ErrorSound), consoleUid);
+        }
     }
 
     private void PlayConfirmSound(EntityUid playerUid, EntityUid consoleUid, ShipyardConsoleComponent component)

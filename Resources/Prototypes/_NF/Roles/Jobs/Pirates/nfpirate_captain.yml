@@ -40,6 +40,7 @@
       recordGeneration: FalseRecord
     - type: Company
       companyName: None
+    - type: DisableSuitSensors
   - !type:AddImplantSpecial
     implants: [ FreelanceTrackingImplant ]
   - !type:GiveItemOnHolidaySpecial # Even pirates get a piece of cake.

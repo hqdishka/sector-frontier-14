@@ -1,5 +1,5 @@
 using Content.Client.UserInterface.Systems.Chat.Controls;
-using Content.Shared.CCVar;
+using Content.Shared._EE.CCVars; // EE - chat stacking
 using Content.Shared.Chat;
 using Content.Shared.Input;
 using Robust.Client.Audio;
@@ -8,6 +8,7 @@ using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Audio;
+using Robust.Shared.Configuration;
 using Robust.Shared.Input;
 using Robust.Shared.Player;
 using Robust.Shared.Utility;
@@ -22,22 +23,23 @@ public partial class ChatBox : UIWidget
 {
     private readonly ChatUIController _controller;
     private readonly IEntityManager _entManager;
-    private readonly IConfigurationManager _cfg; // WD EDIT
-    private readonly ILocalizationManager _loc; // WD EDIT
+    [Dependency] private readonly IConfigurationManager _cfg = default!; // EE - Chat stacking
+    [Dependency] private readonly ILocalizationManager _loc = default!; // EE - Chat stacking
 
     public bool Main { get; set; }
 
     public ChatSelectChannel SelectedChannel => ChatInput.ChannelSelector.SelectedChannel;
-    // WD EDIT START
-    private bool _coalescence = false; // op ult btw
-    private (string, Color)? _lastLine;
-    private int _lastLineRepeatCount = 0;
-    // WD EDIT END
+
+    // EE - Chat stacking
+    private int _chatStackAmount = 0;
+    private bool ChatStackEnabled => _chatStackAmount > 0;
+    private List<ChatStackData> _chatStackList;
+    // End EE - Chat stacking
 
     public ChatBox()
     {
         RobustXamlLoader.Load(this);
-        _loc = IoCManager.Resolve<ILocalizationManager>();
+        IoCManager.InjectDependencies(this);
         _entManager = IoCManager.Resolve<IEntityManager>();
 
         ChatInput.Input.OnTextEntered += OnTextEntered;
@@ -52,14 +54,18 @@ public partial class ChatBox : UIWidget
         _controller.MessageAdded += OnMessageAdded;
         _controller.RegisterChat(this);
 
-        // WD EDIT START
-        _cfg = IoCManager.Resolve<IConfigurationManager>();
-        _coalescence = _cfg.GetCVar(CCVars.CoalesceIdenticalMessages); // i am uncomfortable calling repopulate on chatbox in its ctor, even though it worked in testing i'll still err on the side of caution
-        _cfg.OnValueChanged(CCVars.CoalesceIdenticalMessages, UpdateCoalescence, false); // eplicitly false to underline the above comment
-        // WD EDIT END
+        // EE - Chat stacking
+        _chatStackList = new List<ChatStackData>(_chatStackAmount);
+        _cfg.OnValueChanged(EECVars.ChatStackLastLines, UpdateChatStack, true);
+        // End EE - Chat stacking
     }
 
-    private void UpdateCoalescence(bool value) { _coalescence = value; Repopulate(); } // WD EDIT
+    // EE - Chat stacking
+    private void UpdateChatStack(int value)
+    {
+        _chatStackAmount = value >= 0 ? value : 0;
+        Repopulate();
+    }
 
     private void OnTextEntered(LineEditEventArgs args)
     {
@@ -81,26 +87,54 @@ public partial class ChatBox : UIWidget
 
         var color = msg.MessageColorOverride ?? msg.Channel.TextColor();
 
-        // WD EDIT START
-        (string, Color) tup = (msg.WrappedMessage, color);
 
-        // Removing and then adding insantly nudges the chat window up before slowly dragging it back down, which makes the whole chat log shake
-        // and make it borderline unreadable with frequent enough spam.
-        // Adding first and then removing does not produce any visual effects.
-        // The other option is to copypaste into Content all of OutputPanel and everything it uses but is intertanl to Robust namespace.
-        // Thanks robustengine, very cool.
-        if (_coalescence && _lastLine == tup)
+        // EE - Chat stacking
+        var index = _chatStackList.FindIndex(data => data.Channel == msg.Channel && data.Entity == msg.SenderEntity && data.Message == msg.Message); // Frontier: add entity, channel, use message, not wrapped message
+
+        if (index == -1) // this also handles chatstack being disabled, since FindIndex won't find anything in an empty array
         {
-            _lastLineRepeatCount++;
-            AddLine(msg.WrappedMessage, color, _lastLineRepeatCount);
-            Contents.RemoveEntry(^2);
+            TrackNewMessage(msg.WrappedMessage, color, msg.Message, msg.SenderEntity, msg.Channel); // Frontier: add Message, SenderEntity
+            AddLine(msg.WrappedMessage, color);
+            return;
         }
-        else
+
+        UpdateRepeatingLine(index);
+        // End EE - Chat stacking
+    }
+
+    /// <summary>
+    /// Removing and then adding instantly nudges the chat window up before slowly dragging it back down, which makes the whole chat log shake.
+    /// With rapid enough updates, the whole chat becomes unreadable.
+    /// Adding first and then removing does not produce any visual effects.
+    /// The other option is to duplicate OutputPanel functionality and everything internal to the engine it relies on.
+    /// But OutputPanel relies on directly setting Control.Position for control embedding. (which is not exposed to Content.)
+    /// Thanks robustengine, very cool.
+    /// </summary>
+    /// <remarks>
+    /// zero index is the very last line in chat, 1 is the line before the last one, 2 is the line before that, etc.
+    /// </remarks>
+    // EE - Chat stacking
+    private void UpdateRepeatingLine(int index)
+    {
+        _chatStackList[index].RepeatCount++;
+        for (var i = index; i >= 0; i--)
         {
-            _lastLineRepeatCount = 0;
-            _lastLine = (msg.WrappedMessage, color);
-            AddLine(msg.WrappedMessage, color, _lastLineRepeatCount);
-        } // WD EDIT END
+            var data = _chatStackList[i];
+            AddLine(data.WrappedMessage, data.ColorOverride, data.RepeatCount);
+            Contents.RemoveEntry(Index.FromEnd(index + 2));
+        }
+    }
+
+    // EE - Chat stacking
+    private void TrackNewMessage(string wrappedMessage, Color colorOverride, string message, NetEntity entity, ChatChannel channel) // Frontier: add message, entity, channel
+    {
+        if (!ChatStackEnabled)
+            return;
+
+        if (_chatStackList.Count == _chatStackList.Capacity)
+            _chatStackList.RemoveAt(_chatStackList.Capacity - 1);
+
+        _chatStackList.Insert(0, new ChatStackData(wrappedMessage, colorOverride, message, entity, channel)); // Frontier: add message, entity, channel
     }
 
     private void OnChannelSelect(ChatSelectChannel channel)
@@ -111,7 +145,7 @@ public partial class ChatBox : UIWidget
     public void Repopulate()
     {
         Contents.Clear();
-
+        _chatStackList = new List<ChatStackData>(_chatStackAmount); // EE - Chat stacking
         foreach (var message in _controller.History)
         {
             OnMessageAdded(message.Item2);
@@ -139,15 +173,19 @@ public partial class ChatBox : UIWidget
         formatted.PushColor(color);
         formatted.AddMarkupOrThrow(message);
         formatted.Pop();
-        if(repeat != 0) // WD EDIT START
+
+        // EE - Chat stacking
+        if (repeat != 0)
         {
-            int displayRepeat = repeat + 1;
-            int sizeIncrease = Math.Min(displayRepeat / 6, 5);
-            formatted.AddMarkup(_loc.GetString("chat-system-repeated-message-counter",
-                ("count", displayRepeat),
-                ("size", 8+sizeIncrease)
-            ));
-        } // WD EDIT END
+            var displayRepeat = repeat + 1;
+            var sizeIncrease = Math.Min(displayRepeat / 6, 5);
+            formatted.AddMarkupOrThrow(_loc.GetString("chat-system-repeated-message-counter",
+                                ("count", displayRepeat),
+                                ("size", 8 + sizeIncrease)
+                                ));
+        }
+        // End EE - Chat stacking
+
         Contents.AddMessage(formatted);
     }
 
@@ -245,6 +283,26 @@ public partial class ChatBox : UIWidget
         ChatInput.Input.OnKeyBindDown -= OnInputKeyBindDown;
         ChatInput.Input.OnTextChanged -= OnTextChanged;
         ChatInput.ChannelSelector.OnChannelSelect -= OnChannelSelect;
-        _cfg.UnsubValueChanged(CCVars.CoalesceIdenticalMessages, UpdateCoalescence); // WD EDIT
+        _cfg.UnsubValueChanged(EECVars.ChatStackLastLines, UpdateChatStack); // EE - Chat stacking
     }
+
+    // EE - Chat stacking
+    private sealed class ChatStackData
+    {
+        public NetEntity Entity; // Frontier: speaker
+        public string Message; // Frontier: base message
+        public ChatChannel Channel; // Frontier: channel
+        public string WrappedMessage;
+        public Color ColorOverride;
+        public int RepeatCount = 0;
+        public ChatStackData(string wrappedMessage, Color colorOverride, string message, NetEntity entity, ChatChannel channel)
+        {
+            WrappedMessage = wrappedMessage;
+            ColorOverride = colorOverride;
+            Message = message; // Frontier
+            Entity = entity; // Frontier
+            Channel = channel; // Frontier
+        }
+    }
+    // End EE - Chat stacking
 }

@@ -31,3 +31,7 @@ VendingMachineEngivendFree: null
 VendingMachineMedicalFree: null
 VendingMachineSyndieDrobeFree: null
 VendingMachineYouToolFree: null
+
+# 2025-06-07 lua rever locker
+NFLockerScientist: LockerScientist
+NFLockerScienceFilled: LockerScienceFilled
