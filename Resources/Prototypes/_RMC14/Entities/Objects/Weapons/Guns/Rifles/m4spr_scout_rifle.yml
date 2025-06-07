@@ -1,5 +1,5 @@
 - type: entity
-  parent: [BaseC2Contraband, WeaponRifleM4SPR]
+  parent: WeaponRifleM4SPR
   name: M4SPR custom battle rifle
   id: WeaponRifleM4SPRCustom
   description: An improvement over the already great M4SPR. Able to take A19 rounds, as well as having better control and accuracy at the cost of being harder to use. Can take traditional M4SPR mags, at lower damage.
@@ -150,9 +150,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 25
-  - type: StaminaDamageOnCollide
-    damage: 24 # ~5 hits to stun sounds reasonable, less effective than pistol because rifle round is smaller in size
+        Piercing: 40
 
 - type: Tag
   id: RMCMagazineRifleM4SPRA19

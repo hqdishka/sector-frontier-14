@@ -1,5 +1,5 @@
 - type: entity
-  parent: [BaseC2ExpeditionContraband, CMBaseWeaponSMG]
+  parent: CMBaseWeaponSMG
   name: M63 submachine gun
   id: WeaponSMGM63
   description: The Aegis Battlefield Armaments M-63 submachinegun. Occasionally carried by light-infantry, scouts, engineers and medics.
@@ -13,11 +13,7 @@
       map: [ "enum.GunVisualLayers.Mag" ]
   - type: Clothing
     sprite: _RMC14/Objects/Weapons/Guns/SMGs/m63.rsi
-  - type: HeldSpeedModifier
-    walkModifier: 1.1
-    sprintModifier: 1.1
   - type: Gun
-    fireRate: 5
     shotsPerBurst: 3
     soundGunshot:
       path: /Audio/_RMC14/Weapons/Guns/Gunshots/gun_m63.ogg
@@ -48,7 +44,6 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: CMMagazineSMGM63
         insertSound: /Audio/_RMC14/Weapons/Guns/Reload/smg_reload.ogg
         ejectSound: /Audio/_RMC14/Weapons/Guns/Reload/smg_unload.ogg
         priority: 2
@@ -83,7 +78,7 @@
       tags:
       - CMCartridge10x20mm
     proto: CMCartridge10x20mm
-    capacity: 40
+    capacity: 48
   - type: Sprite
     sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Magazines/m63.rsi
     layers:
@@ -128,7 +123,7 @@
   name: "M63 extended magazine (10x20mm)"
   components:
   - type: BallisticAmmoProvider
-    capacity: 60
+    capacity: 72
   - type: Sprite
     sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Magazines/m63e.rsi
     layers:
@@ -175,7 +170,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 22
+        Piercing: 34
 
 - type: entity
   parent: Bullet10x20mm
@@ -185,8 +180,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 3
-    ignoreResistances: true
+        Piercing: 26
 
 - type: Tag
   id: RMCWeaponSMGM63

@@ -1,12 +1,9 @@
 - type: entity
-  parent: [BaseC1Contraband, CMWeaponPistolBase]
+  parent: CMWeaponPistolBase
   id: CMWeaponPistolM1984
   name: M1984 service pistol
   description: An M1984 Service Pistol, once the standard issue sidearm of the Marines but has recently been replaced with the M77 combat pistol. Fires 9mm pistol rounds.
   components:
-  - type: Gun
-    selectedMode: SemiAuto
-    fireRate: 3
   # - type: RMCSelectiveFire
   #   scatterWielded: 10
   #   scatterUnwielded: 10

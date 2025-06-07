@@ -17,10 +17,6 @@
   name: buckshot
   categories: [ HideSpawnMenu ]
   components:
-  - type: ProjectileSpread
-    count: 5 # six total, includes the spread as a bullet
-    spread: 11
-    proto: CMPelletShotgunIncendiaryBuckshot
   - type: Sprite
     sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Projectiles/shotgun_projectiles.rsi
     layers:
@@ -29,7 +25,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 20
+        Piercing: 25
 
 - type: entity
   parent: CMPelletShotgunBase
@@ -45,7 +41,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 35
+        Piercing: 25
 
 - type: entity
   parent: CMPelletShotgunBase
@@ -75,7 +71,7 @@
   - type: Projectile
     damage: {}
   - type: StaminaDamageOnCollide
-    damage: 30
+    damage: 25
 
 - type: entity
   parent: CMPelletShotgunBase
@@ -88,14 +84,10 @@
     layers:
     - state: flechette
       shader: unshaded
-  - type: ProjectileSpread
-    count: 5 # six total, includes the spread as a bullet
-    spread: 11
-    proto: CMPelletShotgunFlechette
   - type: Projectile
     damage:
       types:
-        Piercing: 17
+        Piercing: 26
 
 - type: entity
   parent: CMPelletShotgunBuckshot
@@ -107,10 +99,5 @@
     damage:
       types:
         Piercing: 5
-        Heat: 7
-  - type: ProjectileSpread
-    count: 5 # six total, includes the spread as a bullet
-    spread: 11
-    proto: CMPelletShotgunIncendiaryBuckshot
   - type: IgnitionSource
     ignited: true
