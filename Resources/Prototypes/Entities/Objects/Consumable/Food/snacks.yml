@@ -547,7 +547,6 @@
           Quantity: 5
   - type: Food
     requiresSpecialDigestion: true
-    price: 1
   - type: TimedDespawn
     lifetime: 900
 

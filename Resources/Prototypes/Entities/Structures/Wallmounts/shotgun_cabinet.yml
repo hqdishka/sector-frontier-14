@@ -19,7 +19,7 @@
         ejectOnInteract: true
         whitelist:
           tags:
-          - NFWeaponShotgunKammerer
+          - WeaponShotgunKammerer
   - type: AccessReader
     access: [["Security"], ["Command"]]
 

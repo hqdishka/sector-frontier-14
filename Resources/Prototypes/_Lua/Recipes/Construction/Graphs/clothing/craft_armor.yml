@@ -15,7 +15,7 @@
                   sprite: Objects/Misc/cablecuffs.rsi
                   state: cuff
                   color: red
-              name: cuffs
+              name: crafting-cuffs
             - material: Steel
               amount: 6
               doAfter: 10
