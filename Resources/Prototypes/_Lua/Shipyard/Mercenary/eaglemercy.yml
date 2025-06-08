@@ -17,7 +17,7 @@
   id: EagleMercenary
   name: NM Eagle Mercenary
   description: Современное судно переделанное под нужды Наёмников.
-  price: 80550
+  price: 89550
   category: Medium
   group: Mercenary
   shuttlePath: /Maps/_Lua/Shuttles/Mercenary/eaglemercy.yml

@@ -51060,7 +51060,7 @@ entities:
     - type: Transform
       pos: 51.545853,-13.080103
       parent: 2
-- proto: WeaponPistolMk58
+- proto: NFWeaponPistolMk58
   entities:
   - uid: 543
     components:

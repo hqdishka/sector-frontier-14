@@ -402,7 +402,7 @@
   id: UplinkPirateShellBoxLethal
   name:  uplink-pirate-shell-box-lethal-name
   description: uplink-pirate-shell-box-lethal-desc
-  productEntity: BoxLethalshot
+  productEntity: NFAmmunitionBoxShellShotgunBuckshot
   icon: { sprite: Objects/Weapons/Guns/Ammunition/Boxes/shotgun.rsi, state: lethal }
   cost:
     Doubloon: 2
@@ -508,7 +508,7 @@
   id: UplinkPirateSpeedLoaderMagnum
   name:  uplink-pirate-speed-loader-magnum-name
   description: uplink-pirate-speed-loader-magnum-desc
-  productEntity: SpeedLoaderMagnum
+  productEntity: NFSpeedLoaderPistol45
   icon: { sprite: Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon }
   cost:
     Doubloon: 1
@@ -666,7 +666,7 @@
   id: UplinkPirateAk
   name:  uplink-pirate-ak-name
   description: uplink-pirate-ak-desc
-  productEntity: WeaponRifleAk
+  productEntity: NFWeaponRifleAssaultSm
   icon: { sprite: Objects/Weapons/Guns/Rifles/ak.rsi, state: icon }
   cost:
     Doubloon: 12
@@ -730,7 +730,7 @@
   id: UplinkPirateLaserGun
   name:  uplink-pirate-laser-gun-name
   description: uplink-pirate-laser-gun-desc
-  productEntity: WeaponLaserGun
+  productEntity: NFWeaponEnergyPistolLaser
   icon: { sprite: Objects/Weapons/Guns/Battery/laser_retro.rsi, state: icon }
   cost:
     Doubloon: 4

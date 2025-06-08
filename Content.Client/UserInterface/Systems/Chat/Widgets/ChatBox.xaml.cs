@@ -13,7 +13,6 @@ using Robust.Shared.Input;
 using Robust.Shared.Player;
 using Robust.Shared.Utility;
 using static Robust.Client.UserInterface.Controls.LineEdit;
-using Robust.Shared.Configuration;
 
 namespace Content.Client.UserInterface.Systems.Chat.Widgets;
 

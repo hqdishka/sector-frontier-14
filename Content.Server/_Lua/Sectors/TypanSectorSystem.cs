@@ -193,7 +193,8 @@ public sealed class TypanSectorSystem : EntitySystem
         {
             if (_shuttle.TryAddFTLDestination(_mapId, true, false, false, out var ftl))
             {
-                DisableFtl((source.Owner, ftl));
+                var entityUid = ftl.Owner;
+                DisableFtl((entityUid, ftl));
             }
         }
         _map.InitializeMap(_mapUid);

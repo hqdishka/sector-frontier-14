@@ -2,12 +2,6 @@
 # Pride to PottedPlant
 VendingMachinePride: VendingMachinePottedPlantVend
 
-# 2025-05-20 Lua reverse Frontier wall lockers with grid inventory
-LockerWallColorChemistry: LockerWallChemistry
-LockerWallColorChemistryFilled: LockerWallChemistryFilled
-LockerWallColorMedical: LockerWallMedical
-LockerWallColorMedicalFilled: LockerWallMedicalFilled
-
 # 2025-05-30 Lua port map previous frontier
 WeaponTargetingPad: ComputerGunneryConsole
 
@@ -31,7 +25,3 @@ VendingMachineEngivendFree: null
 VendingMachineMedicalFree: null
 VendingMachineSyndieDrobeFree: null
 VendingMachineYouToolFree: null
-
-# 2025-06-07 lua rever locker
-NFLockerScientist: LockerScientist
-NFLockerScienceFilled: LockerScienceFilled

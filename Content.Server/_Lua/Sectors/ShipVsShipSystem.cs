@@ -95,7 +95,8 @@ public sealed class ShipVsShipRedSystem : EntitySystem
         {
             if (_shuttle.TryAddFTLDestination(_redMapId, false, false, false, out var ftl))
             {
-                DisableFtl((source.Owner, ftl));
+                var entityUid = ftl.Owner;
+                DisableFtl((entityUid, ftl));
             }
         }
 
@@ -128,7 +129,8 @@ public sealed class ShipVsShipRedSystem : EntitySystem
         {
             if (_shuttle.TryAddFTLDestination(_blueMapId, false, false, false, out var ftl))
             {
-                DisableFtl((source.Owner, ftl));
+                var entityUid = ftl.Owner;
+                DisableFtl((entityUid, ftl));
             }
         }
 

@@ -1116,16 +1116,6 @@
 
 - type: entity
   parent: WeaponCaseLong
-  id: WeaponCaseLongWeaponLaserTurboNF
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: StorageFill
-    contents:
-    - id: NFWeaponEnergyLightMachineGunTurbo
-      amount: 1
-
-- type: entity
-  parent: WeaponCaseLong
   id: WeaponCaseLongADTWeaponRifleXC67
   categories: [ HideSpawnMenu ]
   components:
@@ -1167,7 +1157,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponRevolverInspector
+    - id: NFWeaponRevolverInspector
       amount: 1
     - id: NFMagazineSubMachineGun35
       amount: 2
@@ -1203,20 +1193,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponShotgunEnforcer
+    - id: NFWeaponShotgunEnforcer
       amount: 1
-    - id: BoxLethalshot
+    - id: NFAmmunitionBoxShellShotgunBuckshot
       amount: 2
-
-- type: entity
-  parent: WeaponCaseLong
-  id: WeaponCaseLongWeaponTeslaGun
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: StorageFill
-    contents:
-    - id: WeaponTeslaGun
-      amount: 1
 
 - type: entity
   parent: WeaponCaseShort
@@ -1245,7 +1225,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponAntiqueLaser
+    - id: NFWeaponEnergyPistolLaserAntique
       amount: 1
 
 - type: entity
@@ -1255,10 +1235,10 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponPistolFlintlock
+    - id: NFWeaponPistolFlintlock
       amount: 1
-    - id: MagazineBoxAntiMateriel
-      amount: 3
+    - id: NFAmmunitionBoxRifle60
+      amount: 1
 
 - type: entity
   parent: WeaponCaseLong
@@ -1267,17 +1247,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponDisablerSMG
-      amount: 1
-
-- type: entity
-  parent: WeaponCaseShort
-  id: WeaponCaseShortWeaponTaser
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: StorageFill
-    contents:
-    - id: WeaponTaser
+    - id: NFWeaponEnergySubMachineGunDisabler
       amount: 1
 
 - type: entity
@@ -1297,9 +1267,9 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponShotgunBlunderbuss
+    - id: NFWeaponShotgunBlunderbuss
       amount: 1
-    - id: BoxLethalshot
+    - id: NFAmmunitionBoxShellShotgunBuckshot
       amount: 2
 
 - type: entity
@@ -1321,9 +1291,9 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponShotgunImprovised
+    - id: NFWeaponShotgunImprovised
       amount: 1
-    - id: BoxLethalshot
+    - id: NFAmmunitionBoxShellShotgunBuckshot
       amount: 2
 
 - type: entity
@@ -1333,7 +1303,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponMakeshiftLaser
+    - id: NFWeaponEnergyPistolLaserMakeshift
       amount: 1
 
 - type: entity
@@ -1343,7 +1313,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponLaserCannon
+    - id: NFWeaponEnergyRifleSniperCannon
       amount: 1
 
 - type: entity
@@ -1353,7 +1323,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponXrayCannon
+    - id: NFWeaponEnergyRifleSniperXrayCannon
       amount: 1
 
 - type: entity
@@ -1375,9 +1345,9 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponRevolverPirate
+    - id: NFWeaponRevolverPirate
       amount: 1
-    - id: SpeedLoaderMagnum
+    - id: NFSpeedLoaderPistol45
       amount: 2
 
 - type: entity
@@ -1387,7 +1357,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: WeaponRevolverMateba
+    - id: NFWeaponRevolverWard45
       amount: 1
-    - id: SpeedLoaderMagnum
+    - id: NFSpeedLoaderPistol45
       amount: 2

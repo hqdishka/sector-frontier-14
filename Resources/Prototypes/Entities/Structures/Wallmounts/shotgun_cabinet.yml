@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   parent: FireAxeCabinet
   id: ShotGunCabinet
   name: shotgun cabinet
@@ -19,7 +19,7 @@
         ejectOnInteract: true
         whitelist:
           tags:
-          - WeaponShotgunKammerer
+          - NFWeaponShotgunKammerer
   - type: AccessReader
     access: [["Security"], ["Command"]]
 

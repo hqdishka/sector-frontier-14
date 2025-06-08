@@ -38,6 +38,8 @@
       - MeleeWeapon
       - Blocking
       - WeaponCaseInsertable
+      - HitscanBatteryAmmoProvider
+      - ProjectileBatteryAmmoProvider
       tags:
       - Cartridge
 
@@ -69,6 +71,8 @@
       - MeleeWeapon
       - Blocking
       - WeaponCaseInsertable
+      - HitscanBatteryAmmoProvider
+      - ProjectileBatteryAmmoProvider
       tags:
       - Cartridge
 

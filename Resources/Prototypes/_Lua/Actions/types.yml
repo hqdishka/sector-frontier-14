@@ -30,3 +30,13 @@
           Quantity: 6
         - ReagentId: AriralBlood
           Quantity: 6
+
+- type: entity
+  id: OwOVoice
+  name: Change speech
+  components:
+    - type: InstantAction
+      checkCanInteract: false
+      icon: Interface/Actions/owo-button.png
+      iconOn: Interface/Actions/owo-button-on.png
+      event: !type:OwOAccentActionEvent
