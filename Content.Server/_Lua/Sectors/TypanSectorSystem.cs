@@ -52,6 +52,9 @@ public sealed class TypanSectorSystem : EntitySystem
     private bool _asteroidSectorEnabled = true;
     public override void Initialize()
     {
+#if DEBUG
+        return;
+#endif
         base.Initialize();
 
         SubscribeLocalEvent<RoundStartingEvent>(OnRoundStart);

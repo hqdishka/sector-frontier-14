@@ -42,6 +42,9 @@ public sealed class MercenarySectorSystem : EntitySystem
 
     public override void Initialize()
     {
+#if DEBUG
+        return;
+#endif
         base.Initialize();
 
         SubscribeLocalEvent<RoundRestartCleanupEvent>(OnCleanup);

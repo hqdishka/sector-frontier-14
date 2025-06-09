@@ -64,6 +64,9 @@ public sealed class AsteroidSectorSystem : EntitySystem
     private string _asteroidConfig = "AsteroidSectorDefault";
     public override void Initialize()
     {
+#if DEBUG
+        return;
+#endif
         base.Initialize();
 
         SubscribeLocalEvent<RoundStartingEvent>(OnRoundStart);

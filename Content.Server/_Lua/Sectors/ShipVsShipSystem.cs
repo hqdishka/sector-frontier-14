@@ -33,6 +33,9 @@ public sealed class ShipVsShipRedSystem : EntitySystem
 
     public override void Initialize()
     {
+#if DEBUG
+        return;
+#endif
         base.Initialize();
 
         SubscribeLocalEvent<RoundRestartCleanupEvent>(OnCleanup);
