@@ -17,4 +17,6 @@
   - type: PhysicalComposition
     materialComposition:
       NecroGland: 100
+  - type: Stack
+    stackType: NecroGland
   - type: Material

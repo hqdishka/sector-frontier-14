@@ -243,6 +243,8 @@
   - type: PhysicalComposition
     materialComposition:
       Nettle: 100
+  - type: Stack
+    stackType: Nettle
   - type: Tag
     tags:
     - MedipenLathe
@@ -283,6 +285,8 @@
   - type: PhysicalComposition
     materialComposition:
       DeathNettle: 100
+  - type: Stack
+    stackType: DeathNettle
   - type: Tag
     tags:
     - MedipenLathe
@@ -630,6 +634,8 @@
   - type: PhysicalComposition
     materialComposition:
       FoodGarlic: 100
+  - type: Stack
+    stackType: FoodGarlic
   - type: FlavorProfile
     flavors:
       - garlic
@@ -1051,6 +1057,8 @@
   - type: PhysicalComposition
     materialComposition:
       FoodBloodTomato: 100
+  - type: Stack
+    stackType: FoodBloodTomato
   - type: SolutionContainerManager
     solutions:
       food:
@@ -1176,6 +1184,8 @@
   - type: PhysicalComposition
     materialComposition:
       FoodGoldenApple: 100
+  - type: Stack
+    stackType: FoodGoldenApple
   - type: FlavorProfile
     flavors:
       - apple
@@ -1526,6 +1536,8 @@
   - type: PhysicalComposition
     materialComposition:
       FoodChiliPepper: 100
+  - type: Stack
+    stackType: FoodChiliPepper
   - type: FlavorProfile
     flavors:
       - spicy
@@ -1568,6 +1580,8 @@
   - type: PhysicalComposition
     materialComposition:
       FoodChillyPepper: 100
+  - type: Stack
+    stackType: FoodChillyPepper
   - type: Tag
     tags:
     - MedipenLathe
@@ -1610,6 +1624,8 @@
   - type: PhysicalComposition
     materialComposition:
       FoodAloe: 100
+  - type: Stack
+    stackType: FoodAloe
   - type: FlavorProfile
     flavors:
       - medicine
@@ -1651,6 +1667,8 @@
   - type: PhysicalComposition
     materialComposition:
       FoodPoppy: 100
+  - type: Stack
+    stackType: FoodPoppy
   - type: Clothing
     slots:
     - HEAD
@@ -1694,6 +1712,8 @@
   - type: PhysicalComposition
     materialComposition:
       FoodLily: 100
+  - type: Stack
+    stackType: FoodLily
   - type: FlavorProfile
     flavors:
       - medicine
@@ -1733,6 +1753,8 @@
   - type: PhysicalComposition
     materialComposition:
       FoodLingzhi: 100
+  - type: Stack
+    stackType: FoodLingzhi
   - type: Tag
     tags:
     - MedipenLathe
@@ -1774,6 +1796,8 @@
   - type: PhysicalComposition
     materialComposition:
       FoodAmbrosiaVulgaris: 100
+  - type: Stack
+    stackType: FoodAmbrosiaVulgaris
   - type: FlavorProfile
     flavors:
       - leafy
@@ -1826,6 +1850,8 @@
   - type: PhysicalComposition
     materialComposition:
       FoodAmbrosiaDeus: 100
+  - type: Stack
+    stackType: FoodAmbrosiaDeus
   - type: FlavorProfile
     flavors:
       - leafy
@@ -1876,6 +1902,8 @@
   - type: PhysicalComposition
     materialComposition:
       FoodGalaxythistle: 100
+  - type: Stack
+    stackType: FoodGalaxythistle
   - type: FlavorProfile
     flavors:
       - medicine
@@ -1984,6 +2012,8 @@
   - type: PhysicalComposition
     materialComposition:
       FoodFlyAmanita: 100
+  - type: Stack
+    stackType: FoodFlyAmanita
   - type: Tag
     tags:
     - MedipenLathe
@@ -2025,6 +2055,8 @@
   - type: PhysicalComposition
     materialComposition:
       FoodGatfruit: 100
+  - type: Stack
+    stackType: FoodGatfruit
   - type: FlavorProfile
     flavors:
       - gunpowder
@@ -2165,6 +2197,8 @@
   - type: PhysicalComposition
     materialComposition:
       FoodSpacemansTrumpet: 100
+  - type: Stack
+    stackType: FoodSpacemansTrumpet
   - type: FlavorProfile
     flavors:
       - violets
