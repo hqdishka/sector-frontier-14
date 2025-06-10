@@ -41,14 +41,15 @@
     state: SecurityPilot
 
 - type: entity
-  parent: BasePDA
+  parent: [ BasePDA, BaseItem, StorePresetUplink ] 
   id: BaseTypanPDA
-  categories: [ HideSpawnMenu ]
+  abstract: true
   components:
   - type: Sprite
     sprite: _Lua/Objects/Devices/typan_pda.rsi
     layers:
     - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
     - state: "light_overlay"
       map: [ "enum.PdaVisualLayers.Flashlight" ]
       shader: "unshaded"
@@ -59,7 +60,7 @@
       visible: false
   - type: Icon
     sprite: _Lua/Objects/Devices/typan_pda.rsi
-    state: pda-syndi-com
+    state: pda
 
 - type: entity
   parent: BaseTypanPDA

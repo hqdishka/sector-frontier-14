@@ -7,7 +7,7 @@
   - type: Sprite
     # sprite: _NF/Structures/Machines/cryopod.rsi
     sprite: _Lua/Structures/cryopod.rsi # Lua
-    snapCardinals: true # Frontier
+    #snapCardinals: true # Frontier Чтобы это пофиксить я потратил 19 часов....
     layers:
     - state: closed
   - type: Physics

@@ -61,6 +61,10 @@
     - type: NoRotateOnMove
     - type: Input
       context: "human"
+    - type: ContainerContainer
+      containers:
+        machine_board: !type:Container
+        machine_parts: !type:Container
     - type: StaticPrice
       price: 750
 

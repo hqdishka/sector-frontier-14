@@ -47,10 +47,10 @@
         prototype: MaterialDurathread1
         amount: 30
       - !type:SpawnPrototype
-        prototype: SheetRUGlass1
+        prototype: SheetUranium1
         amount: 10
       - !type:SpawnPrototype
-        prototype: SheetUranium1
+        prototype: SheetRUGlass1
         amount: 20
       - !type:DeleteEntity
       steps:

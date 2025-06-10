@@ -41,12 +41,12 @@
     belt: ClothingBeltMilitaryWebbing
   storage:
     back:
-    - WeaponShotgunKammerer
+    - NFWeaponShotgunKammerer
     - GrenadeIncendiary
     - PillCanisterCBURN
     - CrowbarRed
     - WeaponFlareGun
-    - BoxShotgunFlare
+    - NFAmmunitionBoxShellShotgunFlare
     - NFMagazineShotgunDrum
     - NFMagazineShotgunDrum
     - MagazineShotgunSlug
@@ -57,7 +57,7 @@
     - EmergencyMedipen
     - BoxMRE
     - PinpointerNuclear
-    - WeaponLaserSvalinn
+    - NFWeaponEnergyPistolLaserSvalinn
     - PowerCellSmall
     - PowerCellMedium
 
@@ -99,11 +99,11 @@
     belt: ClothingBeltMilitaryWebbing
   storage:
     back:
-    - WeaponShotgunEnforcer
+    - NFWeaponShotgunEnforcer
     - GrenadeIncendiary
     - CrowbarRed
     - WeaponFlareGun
-    - BoxShotgunFlare
+    - NFAmmunitionBoxShellShotgunFlare
     - NFMagazineShotgunDrum
     - NFMagazineShotgunDrum
     - NFMagazineShotgunDrum
@@ -115,7 +115,7 @@
     # - ZetaTwoMedipen
     # - ZetaTwoMedipen
     - TelescopicShield
-    - WeaponLaserSvalinn
+    - NFWeaponEnergyPistolLaserSvalinn
     - Flash
     - DoorRemoteAll
     - EmergencyMedipen
@@ -163,11 +163,11 @@
     belt: ClothingBeltMilitaryWebbing
   storage:
     back:
-    - WeaponShotgunKammerer
+    - NFWeaponShotgunKammerer
     - GrenadeIncendiary
     - CrowbarRed
     - WeaponFlareGun
-    - BoxShotgunFlare
+    - NFAmmunitionBoxShellShotgunFlare
     - NFMagazineShotgunDrum
     - NFMagazineShotgunDrum
     - MagazineShotgunSlug
@@ -176,7 +176,7 @@
     - EmergencyMedipen
     - BoxMRE
     - NFWeaponEnergyPistolDisabler
-    - WeaponLaserSvalinn
+    - NFWeaponEnergyPistolLaserSvalinn
     - PowerCellSmall
     - PowerCellMedium
 
@@ -217,11 +217,11 @@
     belt: ClothingBeltMilitaryWebbing
   storage:
     back:
-    - WeaponShotgunEnforcer
+    - NFWeaponShotgunEnforcer
     - GrenadeIncendiary
     - CrowbarRed
     - WeaponFlareGun
-    - BoxShotgunFlare
+    - NFAmmunitionBoxShellShotgunFlare
     - NFMagazineShotgunDrum
     - NFMagazineShotgunDrum
     - NFMagazineShotgunDrum
@@ -236,7 +236,7 @@
     - EmergencyMedipen
     - BoxMRE
     - NFWeaponEnergyPistolDisabler
-    - WeaponLaserSvalinn
+    - NFWeaponEnergyPistolLaserSvalinn
     - PowerCellSmall
     - PowerCellMedium
 

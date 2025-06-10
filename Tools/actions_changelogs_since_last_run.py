@@ -13,6 +13,7 @@ from typing import Any, Iterable
 
 import requests
 import yaml
+import time
 
 DEBUG = False
 DEBUG_CHANGELOG_FILE_OLD = Path("Resources/Changelog/Old.yml")
@@ -147,22 +148,42 @@ def get_discord_body(content: str):
         "flags": 1 << 2,
     }
 
+def send_with_retry(webhook_url: str, body: dict, name: str):
+    retry_attempt = 0
+    MAX_RETRIES = 20
+
+    while True:
+        try:
+            response = requests.post(webhook_url, json=body, timeout=10)
+            if response.status_code == 429:
+                retry_attempt += 1
+                if retry_attempt > MAX_RETRIES:
+                    print(f"[{name}] Too many retries, giving up")
+                    return
+                retry_after = response.json().get("retry_after", 5)
+                print(f"[{name}] Rate limited, retrying after {retry_after} seconds")
+                time.sleep(retry_after)
+                continue
+
+            response.raise_for_status()
+            print(f"Sent to {name} webhook")
+            break
+        except requests.exceptions.RequestException as e:
+            print(f"[{name}] Failed to send message: {e}")
+            break
 
 def send_discord_webhook(lines: list[str]):
     content = "".join(lines)
     body = get_discord_body(content)
 
     webhook_url_lua = os.environ.get("DISCORD_WEBHOOK_URL_LUA")
-    if webhook_url_lua:
-        response_lua = requests.post(webhook_url_lua, json=body)
-        response_lua.raise_for_status()
-        print("Sent to LUA webhook")
-
     webhook_url_ds = os.environ.get("DISCORD_WEBHOOK_URL_DS")
+
+    if webhook_url_lua:
+        send_with_retry(webhook_url_lua, body, "LUA")
+
     if webhook_url_ds:
-        response_ds = requests.post(webhook_url_ds, json=body)
-        response_ds.raise_for_status()
-        print("Sent to DS webhook")
+        send_with_retry(webhook_url_ds, body, "DS")
 
     if not webhook_url_lua and not webhook_url_ds:
         print("No Discord webhooks configured!")
@@ -173,7 +194,7 @@ def changelog_entries_to_message_lines(entries: Iterable[ChangelogEntry]) -> lis
     message_lines = []
 
     for contributor_name, group in itertools.groupby(entries, lambda x: x["author"]):
-        message_lines.append(f"**{contributor_name}** обновил:\n")
+        message_lines.append(f"**{contributor_name}**:\n")
 
         for entry in group:
             url = entry.get("url")

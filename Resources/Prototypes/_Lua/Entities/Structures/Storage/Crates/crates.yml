@@ -20,16 +20,17 @@
   - type: Construction
     graph: CrateGenericSteelMagneet
     node: crategenericsteelmagneet
+  - type: StaticPrice
+    price: 190
   
 - type: construction
-  name: стальной магнитный ящик
+  name: crate-generic-steel
   id: CrateGenericSteelMagneet
   graph: CrateGenericSteelMagneet
   startNode: start
   targetNode: crategenericsteelmagneet
   category: construction-category-storage
-  description: Большой контейнер для предметов.
-  icon: { sprite: _Lua/Structures/Storage/Crates/steelmagneet.rsi, state: icon }
+  description: crate-generic-steel-desc
   objectType: Structure
 
 

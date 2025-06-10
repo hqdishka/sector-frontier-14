@@ -44,7 +44,6 @@ entities:
       name: grid
     - type: Transform
       pos: 9.221013,3.687084
-      parent: invalid
     - type: BecomesStation
       id: Wasp
     - type: MapGrid
@@ -4000,9 +3999,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -1.5,15.5
       parent: 1
-    - type: DeviceNetwork
-      configurators:
-      - invalid
 - proto: ComputerGunneryConsole
   entities:
   - uid: 1458

@@ -49,6 +49,11 @@
   - type: ActivatableUI
     key: enum.StoreUiKey.Key
     singleUser: true
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
+      board: !type:Container
   - type: Computer
     board: Null
 
@@ -73,6 +78,11 @@
       state: suplink
     - map: ["computerLayerKeys"]
       state: uplink_key
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
+      board: !type:Container
   - type: Store
     balance:
       FrontierUplinkCoin: 0

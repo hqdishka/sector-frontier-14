@@ -24,23 +24,21 @@
 #    Cloth: 300
 
 - type: construction
-  name: самодельный бронированный шлем
+  name: makeshift-headhelmet
   id: ClothingCraftHelmet
   graph: ClothingCraftHelmet
   startNode: start
   targetNode: clothingCraftHelmet
   category: construction-category-clothing
-  description: самодельная каска с защитой для лица.
-  icon: { sprite: _Lua/Clothing/Head/Hats/crafthelmet.rsi, state: icon }
+  description: makeshift-headhelmet-desc
   objectType: Item
 
 - type: construction
-  name: самодельная броня для тела
+  name: makeshift-armorbody
   id: ClothingCraftArmor
   graph: ClothingCraftArmor
   startNode: start
   targetNode: clothingCraftArmor
   category: construction-category-clothing
-  description: сомедельный бронежилет из кусков стали
-  icon: { sprite: _Lua/Clothing/OuterClothing/Armor/ArmorBasicSlim.rsi, state: icon }
+  description: makeshift-armorbody-desc
   objectType: Item

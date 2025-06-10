@@ -13,7 +13,7 @@
   parent: BaseVessel
   name: UNJ Gudinov
   description: A cheap but effective salvage shuttle.
-  price: 14000
+  price: 20000
   category: Small
   group: Shipyard
   shuttlePath: /Maps/_Mono/Shuttles/gudinov.yml

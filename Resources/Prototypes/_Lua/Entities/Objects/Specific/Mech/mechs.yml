@@ -34,7 +34,7 @@
     mechToPilotDamageMultiplier: 0.05
     maxEquipmentAmount: 4
     equipmentWhitelist:
-      tags: 
+      tags:
       - ReisingGun
     pilotWhitelist:
       components:
@@ -67,7 +67,6 @@
       minValue: 0.1
       maxValue: 2.0
       isLooped: true
-  - type: ToggleableLightVisuals
   - type: PointLight
     enabled: false
     mask: /Textures/Effects/LightMasks/cone.png

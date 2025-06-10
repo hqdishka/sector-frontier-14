@@ -9,12 +9,16 @@ The different technologies and their respective discipline are listed below.
 <GuideTechDisciplineEmbed Discipline="Industrial"/>
 
 ## Arsenal
-<GuideTechDisciplineEmbed Discipline="Arsenal"/>
+##<GuideTechDisciplineEmbed Discipline="Arsenal"/>
+## Fix later
 
 ## Experimental
 <GuideTechDisciplineEmbed Discipline="Experimental"/>
 
 ## Civilian Services
 <GuideTechDisciplineEmbed Discipline="CivilianServices"/>
+
+## Civilian Services
+<GuideTechDisciplineEmbed Discipline="Shiparmory"/>
 
 </Document>

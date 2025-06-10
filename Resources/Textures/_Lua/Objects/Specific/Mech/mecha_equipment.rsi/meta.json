@@ -15,6 +15,9 @@
 	},
 	{
 	  "name": "mecha_sniper"
-	}
+	},
+    {
+      "name": "mag-1"
+    }
   ]
 }

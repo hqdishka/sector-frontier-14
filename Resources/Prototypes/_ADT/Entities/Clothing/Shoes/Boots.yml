@@ -102,7 +102,6 @@
     toggleAction: ActionToggleADTJetpack
   - type: CanMoveInAir
   - type: InputMover
-    toParent: true
   - type: MovementSpeedModifier
     weightlessAcceleration: 1
     weightlessFriction: 0.3

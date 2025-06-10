@@ -467,12 +467,12 @@ namespace Content.Client.Lobby.UI
                 CompanyButton.SelectId(args.Id);
                 if (args.Id >= 0 && args.Id < companies.Count)
                 {
-                    var companyId = companies[args.Id].ID;
-
-                    // Description of Company (pointed-to in prototype, defined in Locale)
-                    CompanyDescriptionLabel.SetMessage(!string.IsNullOrEmpty(companies[args.Id].Description)
-                        ? Loc.GetString(companies[args.Id].Description)
-                        : "N/A"); // Only if there's a description. If not, then set to N/A.
+                    var company = companies[args.Id];
+                    var companyId = company.ID;
+                    var descKey = company.Description;
+                    CompanyDescriptionLabel.SetMessage(!string.IsNullOrEmpty(descKey)
+                    ? Loc.GetString(descKey)
+                    : "N/A"); // Only if there's a description. If not, then set to N/A.
 
                     // Get the current profile for comparison
                     var oldCompany = Profile?.Company;
@@ -1882,9 +1882,10 @@ namespace Content.Client.Lobby.UI
                 CompanyButton.SelectId(i);
 
                 // Description of Company (pointed-to in prototype, defined in Locale)
-                CompanyDescriptionLabel.SetMessage(!string.IsNullOrEmpty(companies[i].Description)
-                    ? Loc.GetString(companies[i].Description)
-                    : "N/A"); // Only if there's a description. If not, then set to N/A.
+                var descKey = companies[i].Description;
+                CompanyDescriptionLabel.SetMessage(!string.IsNullOrEmpty(descKey)
+                ? Loc.GetString(descKey)
+                : "N/A"); // Only if there's a description. If not, then set to N/A.
 
                 found = true;
                 break;

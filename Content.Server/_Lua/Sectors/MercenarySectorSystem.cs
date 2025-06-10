@@ -42,6 +42,9 @@ public sealed class MercenarySectorSystem : EntitySystem
 
     public override void Initialize()
     {
+#if DEBUG
+        return;
+#endif
         base.Initialize();
 
         SubscribeLocalEvent<RoundRestartCleanupEvent>(OnCleanup);
@@ -132,7 +135,8 @@ public sealed class MercenarySectorSystem : EntitySystem
         {
             if (_shuttle.TryAddFTLDestination(_mapId, true, false, false, out var ftl))
             {
-                DisableFtl((source.Owner, ftl));
+                var entityUid = ftl.Owner;
+                DisableFtl((entityUid, ftl));
             }
         }
         _mapSystem.InitializeMap(_mapUid);

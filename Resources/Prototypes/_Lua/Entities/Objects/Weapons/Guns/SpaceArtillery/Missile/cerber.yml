@@ -31,6 +31,8 @@
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
+      machine_board: !type:Container
+      machine_parts: !type:Container
   - type: ItemSlots
     slots:
       gun_magazine:

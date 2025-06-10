@@ -211,6 +211,10 @@
         3.141
       SoundTargetInLOS: !type:SoundPathSpecifier
         path: /Audio/Effects/double_beep.ogg
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
   - type: NpcFactionMember
     factions:
     - NanoTrasen

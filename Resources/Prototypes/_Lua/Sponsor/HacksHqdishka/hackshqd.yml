@@ -100,6 +100,10 @@
     clothingPrototype: ClothingOuterHardsuitLua
     requiredSlot: BACK
     slot: outerClothing
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+      toggleable-clothing: !type:ContainerSlot
   - type: StorageFill
     contents:
       - id: HacksHat
@@ -216,6 +220,7 @@
   - type: ContainerContainer
     containers:
       cell_slot: !type:ContainerSlot
+      toggleable-clothing: !type:ContainerSlot
   - type: ItemSlots
     slots:
       cell_slot:
@@ -325,7 +330,6 @@
       toggleAction: ActionToggleADTJetpack
     - type: CanMoveInAir
     - type: InputMover
-      toParent: true
     - type: ClothingSpeedModifier
       walkModifier: 1
       sprintModifier: 1
@@ -477,50 +481,45 @@
     size: Normal
   - type: Tool
     qualities:
-      - Cutting
+    - Cutting
     speedModifier: 1.2
-    useSound: /Audio/Items/drill_use.ogg
+    useSound: !type:SoundPathSpecifier
+      path: /Audio/Items/jaws_cut.ogg
   - type: Prying
     speedModifier: 3.0
+    enabled: false
   - type: Clothing
     sprite: _Lua/Sponsor/Lua/Lua_Black/Tools/lua_jaws.rsi
     quickEquip: false
     slots:
       - Belt
   - type: MultipleTool
+    statusShowBehavior: true
     entries:
-      - behavior: Cutting
-        sprite:
-          sprite: _Lua/Sponsor/Lua/Lua_Black/Tools/lua_jaws.rsi
-          state: syn_jaws_cutter
-        useSound:
-          path: /Audio/Items/jaws_cut.ogg
-        changeSound:
-          path: /Audio/Items/change_jaws.ogg
-      - behavior: Prying
-        sprite:
-          sprite: _Lua/Sponsor/Lua/Lua_Black/Tools/lua_jaws.rsi
-          state: syn_jaws_pry
-        useSound:
-          path: /Audio/Items/jaws_pry.ogg
-        changeSound:
-          path: /Audio/Items/change_jaws.ogg
-      - behavior: Screwing
-        sprite:
-          sprite: _Lua/Sponsor/Lua/Lua_Black/Tools/lua_jaws.rsi
-          state: syn_jaws_drill
-        useSound:
-          path: /Audio/Items/drill_use.ogg
-        changeSound:
-          path: /Audio/Items/change_jaws.ogg
-      - behavior: Anchoring
-        sprite:
-          sprite: _Lua/Sponsor/Lua/Lua_Black/Tools/lua_jaws.rsi
-          state: syn_jaws_wrench
-        useSound:
-          path: /Audio/Items/ratchet.ogg
-        changeSound:
-          path: /Audio/Items/change_jaws.ogg
+    - behavior: Cutting
+      sprite:
+        sprite: _Lua/Sponsor/Lua/Lua_Black/Tools/lua_jaws.rsi
+        state: syn_jaws_cutter
+      useSound: /Audio/Items/jaws_cut.ogg
+      changeSound: /Audio/Items/change_jaws.ogg
+    - behavior: Prying
+      sprite:
+        sprite: _Lua/Sponsor/Lua/Lua_Black/Tools/lua_jaws.rsi
+        state: syn_jaws_pry
+      useSound: /Audio/Items/jaws_pry.ogg
+      changeSound: /Audio/Items/change_jaws.ogg
+    - behavior: Screwing
+      sprite:
+        sprite: _Lua/Sponsor/Lua/Lua_Black/Tools/lua_jaws.rsi
+        state: syn_jaws_drill
+      useSound: /Audio/Items/drill_use.ogg
+      changeSound: /Audio/Items/change_jaws.ogg
+    - behavior: Anchoring
+      sprite:
+        sprite: _Lua/Sponsor/Lua/Lua_Black/Tools/lua_jaws.rsi
+        state: syn_jaws_wrench
+      useSound: /Audio/Items/ratchet.ogg
+      changeSound: /Audio/Items/change_jaws.ogg
   - type: MeleeWeapon
     damage:
       types:

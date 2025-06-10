@@ -57,7 +57,7 @@
     id: CentComPrivateOfficerPDA
     ears: ClothingHeadsetCentComCC
     belt: ClothingBeltSecuritySuper
-    pocket1: WeaponPistolMk58
+    pocket1: NFWeaponPistolMk58
     pocket2: MagazinePistol
   storage:
     back:

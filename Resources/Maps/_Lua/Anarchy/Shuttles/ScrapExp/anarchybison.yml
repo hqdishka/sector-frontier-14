@@ -2445,7 +2445,6 @@ entities:
         - 0
         - 0
         - 0
-    - type: InsideEntityStorage
   - uid: 2251
     components:
     - type: Transform
@@ -2508,7 +2507,6 @@ entities:
       parent: 2649
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
   - uid: 2224
     components:
     - type: Transform
@@ -2562,7 +2560,6 @@ entities:
       parent: 2747
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
 - proto: Bucket
   entities:
   - uid: 1995
@@ -7459,28 +7456,24 @@ entities:
       parent: 2924
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
   - uid: 3026
     components:
     - type: Transform
       parent: 2924
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
   - uid: 3027
     components:
     - type: Transform
       parent: 2924
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
   - uid: 3028
     components:
     - type: Transform
       parent: 2924
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
 - proto: ClothingEyesEyepatch
   entities:
   - uid: 2798
@@ -7600,14 +7593,12 @@ entities:
       parent: 2014
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
   - uid: 1660
     components:
     - type: Transform
       parent: 2624
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
 - proto: ClothingHeadTinfoil
   entities:
   - uid: 2194
@@ -7623,14 +7614,12 @@ entities:
       parent: 2014
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
   - uid: 1612
     components:
     - type: Transform
       parent: 2624
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
 - proto: ClothingNeckBling
   entities:
   - uid: 2215
@@ -7673,14 +7662,12 @@ entities:
       parent: 2014
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
   - uid: 1661
     components:
     - type: Transform
       parent: 2624
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
 - proto: ClothingOuterHoodieBlack
   entities:
   - uid: 2802
@@ -8066,7 +8053,7 @@ entities:
           friction: 0.4
     - type: PlaceableSurface
       isPlaceable: True
-- proto: CrateServiceJanitorialSupplies2
+- proto: CrateServiceJanitorialSupplies
   entities:
   - uid: 747
     components:
@@ -8148,7 +8135,6 @@ entities:
       parent: 2646
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
   - uid: 2758
     components:
     - type: Transform
@@ -8167,7 +8153,6 @@ entities:
       parent: 2924
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
   - uid: 2938
     components:
     - type: Transform
@@ -8624,21 +8609,18 @@ entities:
       parent: 2979
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
   - uid: 2983
     components:
     - type: Transform
       parent: 2979
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
   - uid: 2984
     components:
     - type: Transform
       parent: 2979
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
 - proto: EmergencyOxygenTankFilled
   entities:
   - uid: 641
@@ -8647,21 +8629,18 @@ entities:
       parent: 2014
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
   - uid: 1664
     components:
     - type: Transform
       parent: 2624
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
   - uid: 2980
     components:
     - type: Transform
       parent: 2979
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
 - proto: FaxMachineShip
   entities:
   - uid: 460
@@ -8735,7 +8714,6 @@ entities:
       parent: 2646
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
   - uid: 2621
     components:
     - type: Transform
@@ -9050,7 +9028,6 @@ entities:
       parent: 2646
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
   - uid: 2469
     components:
     - type: Transform
@@ -9068,35 +9045,30 @@ entities:
       parent: 2924
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
   - uid: 2927
     components:
     - type: Transform
       parent: 2924
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
   - uid: 2928
     components:
     - type: Transform
       parent: 2924
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
   - uid: 2929
     components:
     - type: Transform
       parent: 2924
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
   - uid: 2930
     components:
     - type: Transform
       parent: 2924
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
   - uid: 2940
     components:
     - type: Transform
@@ -19262,7 +19234,6 @@ entities:
       parent: 2747
     - type: Physics
       canCollide: False
-    - type: InsideEntityStorage
 - proto: WelderIndustrial
   entities:
   - uid: 2803

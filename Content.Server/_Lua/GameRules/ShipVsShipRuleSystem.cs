@@ -31,6 +31,9 @@ public sealed class ShipVsShipRuleSystem : GameRuleSystem<ShipVsShipRuleComponen
 
     public override void Initialize()
     {
+#if DEBUG
+        return;
+#endif
         base.Initialize();
     }
 

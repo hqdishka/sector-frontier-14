@@ -23,6 +23,7 @@ using Robust.Shared.Physics.Events;
 using Robust.Shared.Threading;
 using Content.Shared._Mono.SpaceArtillery;
 using Robust.Shared.Map;
+using Robust.Shared.Physics;
 
 namespace Content.Server.Theta.ShipEvent.Systems;
 
@@ -88,7 +89,8 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
             _shieldRadar.RemoveShieldRadarBlip(uid); // Mono
 
             // Remove shield fixture to break physics references
-            _fixSys.DestroyFixture(uid, shield.ShieldFixtureId);
+            if (TryComp<FixturesComponent>(uid, out var fixtures))
+                _fixSys.DestroyFixture(uid, shield.ShieldFixtureId, manager: fixtures);
 
             // Make sure the entity transform is detached from any parent
             var xform = Transform(uid);
@@ -373,7 +375,10 @@ public sealed class CircularShieldSystem : SharedCircularShieldSystem
         _shieldRadar.RemoveShieldRadarBlip(shield);
 
         // Remove shield fixture to prevent physics references
-        _fixSys.DestroyFixture(shield, shield.Comp.ShieldFixtureId);
+        if (TryComp<FixturesComponent>(shield, out var fixtures))
+        {
+            _fixSys.DestroyFixture(shield, shield.Comp.ShieldFixtureId, manager: fixtures);
+        }
 
         // Make sure the transform is properly detached to avoid parent-child issues
         var xform = Transform(shield);

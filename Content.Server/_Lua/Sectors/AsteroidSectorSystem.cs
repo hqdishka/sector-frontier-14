@@ -64,6 +64,9 @@ public sealed class AsteroidSectorSystem : EntitySystem
     private string _asteroidConfig = "AsteroidSectorDefault";
     public override void Initialize()
     {
+#if DEBUG
+        return;
+#endif
         base.Initialize();
 
         SubscribeLocalEvent<RoundStartingEvent>(OnRoundStart);
@@ -325,7 +328,8 @@ public sealed class AsteroidSectorSystem : EntitySystem
         {
             if (_shuttle.TryAddFTLDestination(_mapId, true, false, false, out var ftl))
             {
-                DisableFtl((source.Owner, ftl));
+                var entityUid = ftl.Owner;
+                DisableFtl((entityUid, ftl));
             }
         }
         _mapSystem.InitializeMap(_mapUid);

@@ -207,7 +207,7 @@
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Item
-    size: Ginormous
+    size: Large
     sprite: _Nuclear14/Objects/Weapons/Guns/Shotguns/riot_shotgun.rsi
   - type: Wieldable
   - type: GunRequiresWield

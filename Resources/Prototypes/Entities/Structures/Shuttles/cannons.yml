@@ -72,7 +72,7 @@
     containers:
       machine_board: !type:Container
       machine_parts: !type:Container
-      gun_magazine: !type:ContainerSlot
+      cell_slot: !type:ContainerSlot
   - type: Destructible
     thresholds:
     - trigger:
@@ -96,9 +96,11 @@
     zeroVisible: true
   - type: Machine
     board: ShuttleGunSvalinnMachineGunCircuitboard
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
   - type: ItemSlots
     slots:
-      gun_magazine:
+      cell_slot:
         name: Magazine
         insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
@@ -106,7 +108,9 @@
           tags:
             - PowerCell
             - PowerCellSmall
-  - type: MagazineAmmoProvider
+  - type: HitscanBatteryAmmoProvider
+    proto: NFRedLightLaser # Frontier: use NF prefix
+    fireCost: 50
 
 - type: entity
   id: ShuttleGunPerforator
@@ -130,7 +134,7 @@
     containers:
       machine_board: !type:Container
       machine_parts: !type:Container
-      gun_magazine: !type:ContainerSlot
+      cell_slot: !type:ContainerSlot
   - type: Destructible
     thresholds:
     - trigger:
@@ -153,16 +157,20 @@
     zeroVisible: true
   - type: Machine
     board: ShuttleGunPerforatorCircuitboard
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
   - type: ItemSlots
     slots:
-      gun_magazine:
+      cell_slot:
         name: Magazine
         insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
         whitelist:
           tags:
             - PowerCage
-  - type: MagazineAmmoProvider
+  - type: HitscanBatteryAmmoProvider
+    proto: NFRedShuttleLaser # Frontier: use NF variant
+    fireCost: 150
 
 # ---- Launchers ----
 # naming: EXP (Explosion) + conventional power + suffix (g for Grenade, c for RPG Cartridge) + Name
@@ -296,6 +304,8 @@
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
+      machine_board: !type:Container
+      machine_parts: !type:Container
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: Metallic
@@ -328,6 +338,8 @@
     - NFPirate # Frontier
   - type: Rotatable # Frontier
     rotateWhileAnchored: true # Frontier
+  - type: Machine # Lua
+    board: ShuttleGunPirateCannonCircuitboard # Lua
 
 - type: entity
   id: ShuttleGunKinetic

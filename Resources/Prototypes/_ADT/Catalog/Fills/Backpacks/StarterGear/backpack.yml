@@ -7,10 +7,10 @@
       contents:
         - id: BoxSurvival
         - id: MedkitAdvancedFilled
-        - id: WeaponShotgunEnforcer
-        - id: WeaponPulsePistol
-        - id: BoxLethalshot
-        - id: BoxShotgunSlug
+        - id: NFWeaponShotgunEnforcer
+        - id: NFWeaponEnergyPistolPulse
+        - id: NFAmmunitionBoxShellShotgunBuckshot
+        - id: NFAmmunitionBoxShellShotgunSlug
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -23,7 +23,7 @@
         - id: NFWeaponEnergyRifleAssaultPulseCarbine
         - id: Handcuffs
         - id: Handcuffs
-        - id: WeaponSubMachineGunAtreides
+        - id: NFWeaponSubMachineGunAtreides
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -33,6 +33,6 @@
     - type: StorageFill
       contents:
         - id: BoxSurvival
-        - id: WeaponPulsePistol
-        - id: WeaponPistolMk58
+        - id: NFWeaponEnergyPistolPulse
+        - id: NFWeaponPistolMk58
         - id: EmergencyMedipen

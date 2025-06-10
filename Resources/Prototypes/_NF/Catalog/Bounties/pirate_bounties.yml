@@ -165,7 +165,7 @@
   entries:
   - name: pirate-bounty-item-mk58
     amount: 2
-    id: WeaponPistolMk58
+    id: NFWeaponPistolMk58
 
 - type: pirateBounty
   id: PirateBountyArtifactAnalyzer

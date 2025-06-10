@@ -124,30 +124,6 @@
 
 # Boards
 - type: entity
-  id: AsimovCircuitBoard
-  parent: BaseElectronics
-  name: law board (Crewsimov)
-  description: An electronics board containing the Crewsimov lawset.
-  components:
-  - type: Sprite
-    sprite: Objects/Misc/module.rsi
-    state: std_mod
-  - type: SiliconLawProvider
-    laws: Crewsimov
-
-- type: entity
-  id: CorporateCircuitBoard
-  parent: BaseElectronics
-  name: law board (Corporate)
-  description: An electronics board containing the Corporate lawset.
-  components:
-  - type: Sprite
-    sprite: Objects/Misc/module.rsi
-    state: std_mod
-  - type: SiliconLawProvider
-    laws: Corporate
-
-- type: entity
   id: VesselEfficiencyCircuitBoard
   parent: BaseElectronics
   name: law board (Vessel Efficiency)
@@ -548,9 +524,7 @@
       borg_module:
         - BorgModuleTool
         # - BorgModuleFireExtinguisher # Frontier: jetpack is superior
-        # - BorgModuleGPS # Frontier: useless
         - BorgModuleJetpack # Frontier
-        - BorgModuleGPS
   - type: ItemSlots
     slots:
       cell_slot:
