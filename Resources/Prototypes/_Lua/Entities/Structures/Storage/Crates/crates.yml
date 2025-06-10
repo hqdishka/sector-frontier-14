@@ -20,6 +20,8 @@
   - type: Construction
     graph: CrateGenericSteelMagneet
     node: crategenericsteelmagneet
+  - type: StaticPrice
+    price: 190
   
 - type: construction
   name: crate-generic-steel

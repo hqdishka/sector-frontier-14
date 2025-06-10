@@ -5,7 +5,7 @@
   components:
   - type: RuleGrids
   - type: LoadMapRule
-    mapPath: /Maps/_Lua/ShuttleEvent/infiltratornukeops.yml
+    gridPath: /Maps/_Lua/ShuttleEvent/infiltratornukeops.yml
   - type: NukeopsRule
     roundEndBehavior: Nothing
 
@@ -24,7 +24,7 @@
     maxOccurrences: 1 # should be the same as [copies] in shuttle_incoming_event.yml
   - type: RuleGrids
   - type: LoadMapRule
-    mapPath: /Maps/_Lua/ShuttleEvent/FSF/gamma_bravo.yml
+    gridPath: /Maps/_Lua/ShuttleEvent/FSF/gamma_bravo.yml
 
 - type: entity
   categories: [ HideSpawnMenu ]
@@ -41,4 +41,4 @@
     maxOccurrences: 1 # should be the same as [copies] in shuttle_incoming_event.yml
   - type: RuleGrids
   - type: LoadMapRule
-    mapPath: /Maps/_Lua/ShuttleEvent/FSF/gamma_charlie.yml
+    gridPath: /Maps/_Lua/ShuttleEvent/FSF/gamma_charlie.yml

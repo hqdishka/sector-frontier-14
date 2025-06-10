@@ -283,6 +283,10 @@
         whitelist:
           tags:
             - N14CartridgePistol9
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+      gun_chamber: !type:ContainerSlot
   - type: BallisticAmmoProvider
     capacity: 14
     proto: N14CartridgePistol9
@@ -330,6 +334,10 @@
     whitelist:
       tags:
       - N14CartridgePistol9
+  - type: ContainerContainer
+    containers:
+      gun_chamber: !type:ContainerSlot
+      ballistic-ammo: !type:Container
 
 - type: entity
   name: 22lr Pistol

@@ -249,6 +249,8 @@
   - type: Construction
     graph: Seat
     node: adtchurchbenchleft
+  - type: StaticPrice
+    price: 21
 
 - type: entity
   name: church bench middle
@@ -268,6 +270,8 @@
   - type: Construction
     graph: Seat
     node: adtchurchbenchmiddle
+  - type: StaticPrice
+    price: 21
 
 - type: entity
   name: church bench side
@@ -287,3 +291,5 @@
   - type: Construction
     graph: Seat
     node: adtchurchbenchright
+  - type: StaticPrice
+    price: 21

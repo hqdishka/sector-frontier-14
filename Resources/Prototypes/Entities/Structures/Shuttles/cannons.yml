@@ -304,6 +304,8 @@
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
+      machine_board: !type:Container
+      machine_parts: !type:Container
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: Metallic
@@ -336,6 +338,8 @@
     - NFPirate # Frontier
   - type: Rotatable # Frontier
     rotateWhileAnchored: true # Frontier
+  - type: Machine # Lua
+    board: ShuttleGunPirateCannonCircuitboard # Lua
 
 - type: entity
   id: ShuttleGunKinetic

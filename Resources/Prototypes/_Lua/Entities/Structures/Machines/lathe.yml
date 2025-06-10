@@ -18,7 +18,7 @@
   components:
     - type: MachineBoard
       prototype: ArmoryLathe
-      stackRequirements:
+      requirements:
         MatterBin: 2
         Manipulator: 2
       tagRequirements:

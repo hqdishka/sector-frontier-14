@@ -27,9 +27,10 @@
     state: security
   - type: MachineBoard
     prototype: ShuttleGunPirateCannon
+    requirements:
+      MatterBin: 1
+      Manipulator: 1
     stackRequirements:
-      MatterBin: 6
-      Manipulator: 4
       Steel: 10
       Uranium: 2
       CableHV: 5

@@ -10,7 +10,11 @@ using Content.Server._NF.StationEvents.Events;
 
 namespace Content.Server._NF.StationEvents.Components;
 
+#if DEBUG
+[RegisterComponent, Access(typeof(BluespaceErrorRule), typeof(ShuttleSystem))]
+#else
 [RegisterComponent, Access(typeof(BluespaceErrorRuleAsteroid), typeof(ShuttleSystem))]
+#endif
 public sealed partial class BluespaceErrorRuleAsteroidComponent : Component
 {
     /// <summary>

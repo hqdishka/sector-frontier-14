@@ -16,12 +16,15 @@ GoldenRose: null
 PistolDominator: null
 RandomAnimalSpawner: null
 SpawnVehicleAntagVehicle: null
-VendingMachineBoozeFree: null
-VendingMachineChefvendFree: null
-VendingMachineChemicalsFree: null
-VendingMachineDinnerwareFree: null
-VendingMachineEngiDrobeFree: null
-VendingMachineEngivendFree: null
-VendingMachineMedicalFree: null
-VendingMachineSyndieDrobeFree: null
-VendingMachineYouToolFree: null
+VendingMachineBoozeFree: VendingMachineBooze
+VendingMachineChefvendFree: VendingMachineChefvend
+VendingMachineChemicalsFree: VendingMachineChemicals
+VendingMachineDinnerwareFree: VendingMachineDinnerware
+VendingMachineEngiDrobeFree: VendingMachineEngiDrobe
+VendingMachineEngivendFree: VendingMachineEngivend
+VendingMachineMedicalFree: VendingMachineMedical
+VendingMachineSyndieDrobeFree: VendingMachineSyndieDrobe
+VendingMachineYouToolFree: VendingMachineYouTool
+
+# 2025-06-10 Lua migration vending
+VendingMachineTankDispenserEVAFree: VendingMachineTankDispenserEVA

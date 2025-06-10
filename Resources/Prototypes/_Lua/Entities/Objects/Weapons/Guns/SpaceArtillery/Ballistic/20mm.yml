@@ -42,6 +42,8 @@
       containers:
         gun_magazine: !type:ContainerSlot
         gun_chamber: !type:ContainerSlot
+        machine_board: !type:Container
+        machine_parts: !type:Container
 
 - type: entity
   parent: [BaseWeaponNavalBallisctic, Weapon20mmBase]
@@ -59,6 +61,13 @@
   - type: BallisticAmmoProvider
     proto: Cartridge20mm
     capacity: 1500
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+      machine_board: !type:Container
+      machine_parts: !type:Container
+      ballistic-ammo: !type:Container
   - type: Gun
     fireRate: 14
     projectileSpeed: 60

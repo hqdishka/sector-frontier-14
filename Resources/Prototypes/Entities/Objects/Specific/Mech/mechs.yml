@@ -197,7 +197,7 @@
       params:
         variation: 0.17
   - type: Mech
-    maxEquipmentAmount: 2
+    maxEquipmentAmount: 3
     baseState: honker
     openState: honker-open
     brokenState: honker-broken

@@ -10,9 +10,9 @@
   components:
   - type: Sprite
     layers:
-    - sprite: _Lua/Objects/Devices/pda.rsi
+    - sprite: _NF/Objects/Devices/pda.rsi
       map: [ "enum.PdaVisualLayers.Base" ]
-      state: "pda-vip"
+      state: "pda"
     - sprite: _NF/Objects/Devices/pda.rsi
       state: "light_overlay"
       map: [ "enum.PdaVisualLayers.Flashlight" ]

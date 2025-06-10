@@ -41,6 +41,8 @@
       containers:
         gun_magazine: !type:ContainerSlot
         gun_chamber: !type:ContainerSlot
+        machine_board: !type:Container
+        machine_parts: !type:Container
 
 - type: entity
   parent: Weapon140mmBase

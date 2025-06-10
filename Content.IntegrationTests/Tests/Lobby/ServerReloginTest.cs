@@ -7,7 +7,7 @@ namespace Content.IntegrationTests.Tests.Lobby;
 
 public sealed class ServerReloginTest
 {
-    [Test]
+    [Test, ]
     public async Task Relogin()
     {
         await using var pair = await PoolManager.GetServerClient(new PoolSettings
