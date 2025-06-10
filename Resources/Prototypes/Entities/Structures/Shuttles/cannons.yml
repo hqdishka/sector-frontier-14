@@ -295,7 +295,7 @@
 
 - type: entity
   id: ShuttleGunPirateCannon
-  parent: ShuttleGunBase
+  parent: [BaseStructureDisableToolUse, ShuttleGunBase, BaseC3PirateContrabandNoValue] # Frontier: Added BaseStructureDisableToolUse, BaseC3PirateContrabandNoValue
   name: pirate ship cannon
   description: Kaboom!
   components:
