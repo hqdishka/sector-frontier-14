@@ -68,7 +68,7 @@ Sector Frontier 14 — это форк [Frontier Station 14](https://github.com/
 | Подкаталог | Название форка | Репозиторий форка | Лицензия |
 |--------------|-----------|-----------------|---------|
 | `_Lua` | LuaWorld | https://github.com/HacksLua/sector-frontier-14 | AGPL 3.0 |
-| `_ADT` | AdventureTimeSS14 | https://github.com/AdventureTimeSS14/space_station | MIT |
+| `_ADT` | AdventureTimeSS14 | https://github.com/AdventureTimeSS14/space_station_ADT | AGPL 3.0 |
 | `_Nuclear14` | Nuclear 14 | https://github.com/Vault-Overseers/nuclear-14 | AGPL 3.0 |
 | `_RMC14` | RMC-14 | https://github.com/RMC-14/RMC-14 | MIT |
 | `_Backman` | Rxup | https://github.com/Rxup/space-station-14 | AGPL 3.0 |
