@@ -61,3 +61,12 @@ Entries:
   id: 6
   time: '2025-06-11T18:19:55.0000000+00:00'
   url: https://github.com/HacksLua/sector-frontier-14/pull/20
+- author: HacksLua
+  changes:
+    - type: Fix
+      message: Исправлен критический баг с падением сервера при эмотах клувня.
+    - type: Fix
+      message: Исправлена гиб игрушка клоуна.
+  id: 7
+  time: '2025-06-11T18:32:07.0000000+00:00'
+  url: https://github.com/HacksLua/sector-frontier-14/pull/21
