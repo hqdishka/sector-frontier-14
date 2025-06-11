@@ -32,6 +32,7 @@ public sealed class CluwneSystem : EntitySystem
     [Dependency] private readonly AutoEmoteSystem _autoEmote = default!;
     [Dependency] private readonly NameModifierSystem _nameMod = default!;
 
+    private bool _inEmoteHandler = false;
     public override void Initialize()
     {
         base.Initialize();
@@ -86,21 +87,31 @@ public sealed class CluwneSystem : EntitySystem
     /// </summary>
     private void OnEmote(EntityUid uid, CluwneComponent component, ref EmoteEvent args)
     {
-        if (args.Handled)
+        if (_inEmoteHandler)
             return;
-        args.Handled = _chat.TryPlayEmoteSound(uid, EmoteSounds, args.Emote);
-
-        if (_robustRandom.Prob(component.GiggleRandomChance))
+        _inEmoteHandler = true;
+        try
         {
-            _audio.PlayPvs(component.SpawnSound, uid);
-            _chat.TrySendInGameICMessage(uid, "honks", InGameICChatType.Emote, ChatTransmitRange.Normal);
+            if (args.Handled)
+                return;
+            args.Handled = _chat.TryPlayEmoteSound(uid, EmoteSounds, args.Emote);
+
+            if (_robustRandom.Prob(component.GiggleRandomChance))
+            {
+                _audio.PlayPvs(component.SpawnSound, uid);
+                _chat.TrySendInGameICMessage(uid, "honks", InGameICChatType.Emote, ChatTransmitRange.Normal);
+            }
+
+            else if (_robustRandom.Prob(component.KnockChance))
+            {
+                _audio.PlayPvs(component.KnockSound, uid);
+                _stunSystem.TryParalyze(uid, TimeSpan.FromSeconds(component.ParalyzeTime), true);
+                _chat.TrySendInGameICMessage(uid, "spasms", InGameICChatType.Emote, ChatTransmitRange.Normal);
+            }
         }
-
-        else if (_robustRandom.Prob(component.KnockChance))
+        finally
         {
-            _audio.PlayPvs(component.KnockSound, uid);
-            _stunSystem.TryParalyze(uid, TimeSpan.FromSeconds(component.ParalyzeTime), true);
-            _chat.TrySendInGameICMessage(uid, "spasms", InGameICChatType.Emote, ChatTransmitRange.Normal);
+            _inEmoteHandler = false;
         }
     }
 

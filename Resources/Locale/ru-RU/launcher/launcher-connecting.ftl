@@ -10,7 +10,6 @@ connecting-in-progress = Подключение к серверу...
 connecting-disconnected = Отключён от сервера:
 connecting-tip = Не умирай!
 connecting-window-tip = Совет { $numberTip }
-connecting-version = Pre-Alpha 29052025p0.2
 connecting-fail-reason =
     Не удалось подключиться к серверу:
     { $reason }
