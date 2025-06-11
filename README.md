@@ -8,7 +8,7 @@ Sector Frontier 14 — это форк [Frontier Station 14](https://github.com/
 
 ## Ссылки
 
-[Discord](https://discord.com/invite/3Uak8dpDpJ) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/)
+[Discord](https://discord.gg/luaworld) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/)
 
 ## Документация / Вики
 
