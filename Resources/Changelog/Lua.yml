@@ -50,3 +50,14 @@ Entries:
   id: 5
   time: '2025-06-10T16:59:09.0000000+00:00'
   url: https://github.com/HacksLua/sector-frontier-14/pull/10
+- author: AlpJustAlp
+  changes:
+    - type: Tweak
+      message: Увеличено количество очков науки, даваемое артефактами за каждый узел.
+    - type: Tweak
+      message: Немного увеличен модификатор стоимости артефакта.
+    - type: Add
+      message: Новая локализация аналитической консоли.
+  id: 6
+  time: '2025-06-11T18:19:55.0000000+00:00'
+  url: https://github.com/HacksLua/sector-frontier-14/pull/20
