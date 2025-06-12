@@ -4,6 +4,7 @@ using Content.Shared._Mono.CCVar;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Light.Components;
 using Content.Shared.Nutrition.Components;
+using Content.Shared.Shuttles.Components;
 using Robust.Shared.Configuration;
 using Robust.Shared.Containers;
 using Robust.Shared.Timing;
