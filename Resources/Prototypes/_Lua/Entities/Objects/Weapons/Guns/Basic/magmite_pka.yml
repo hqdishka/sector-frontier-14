@@ -1,0 +1,46 @@
+- type: entity
+  name: Магмитный прото-ускоритель
+  id: WeaponMagmiteAccelerator
+  parent: WeaponProtoKineticAcceleratorBase
+  description: Очень тяжелый и горячий. Имеет низкую скорость стрельбы, но высокую убойность.
+  components:
+  - type: Sprite
+    sprite: _Lua/Objects/Weapons/Guns/Basic/magmite_accelerator.rsi
+    layers:
+    - state: icon
+    - state: animation-icon
+      visible: false
+      map: [ "empty-icon" ]
+  - type: Item
+    sprite: _Lua/Objects/Weapons/Guns/Basic/magmite_accelerator.rsi
+    size: Normal
+  - type: Gun
+    fireRate: 0.3
+  - type: Wieldable
+  - type: BasicEntityAmmoProvider
+    proto: BulletKineticMagmite
+  - type: HeldSpeedModifier
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: Clothing
+    sprite: _Lua/Objects/Weapons/Guns/Basic/magmite_accelerator.rsi
+
+- type: entity
+  name: Кинетическая пуля
+  id: BulletKineticMagmite
+  parent: BulletKinetic
+  description: Простая кинетическая пуля, выпущенная из Магмитного прото-ускорителя.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 40
+        Structural: 45
+        Slash: 45
+        Radiation: 10
+  - type: StaminaDamageOnCollide
+    damage: 65
+
+

@@ -14,6 +14,11 @@
   - BluespaceCrystal # Frontier
 
 - type: latheRecipePack
+  id: OreMagmiteSmelting
+  recipes:
+  - SheetMagmite1 # Lua
+
+- type: latheRecipePack
   id: RGlassSmelting
   recipes:
   - SheetRGlassRaw
@@ -26,3 +31,4 @@
   - SheetPlasteel1
   - SheetUGlass1
   - SheetRUGlass1
+  - SheetMagmite30 # Lua
