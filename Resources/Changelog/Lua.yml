@@ -91,3 +91,20 @@ Entries:
   id: 8
   time: '2025-06-13T19:38:58.0000000+00:00'
   url: https://github.com/HacksLua/sector-frontier-14/pull/24
+- author: salo2016
+  changes:
+    - type: Tweak
+      message: Макс. открытых интерфейсов хранилищ 10, а не 3.
+    - type: Fix
+      message: >-
+        Пиратские шаттлы купленные на чёрной верфи теперь коричневого оттенка!
+        (пробный вариант)
+    - type: Add
+      message: Тир-Лист контробанды на морпеховский огнестрел.
+    - type: Tweak
+      message: Ребаланс всего морпеховского огнестрела!
+    - type: Fix
+      message: Дробь морпехов умножена с 1 до 6.
+  id: 9
+  time: '2025-06-13T20:13:09.0000000+00:00'
+  url: https://github.com/HacksLua/sector-frontier-14/pull/23
