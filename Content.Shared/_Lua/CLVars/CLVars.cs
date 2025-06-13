@@ -87,5 +87,11 @@ namespace Content.Shared.Lua.CLVar
         /// </summary>
         public static readonly CVarDef<float> AutoSalaryInterval =
             CVarDef.Create("salary.auto_interval", 3600f, CVar.SERVER | CVar.ARCHIVE);
+
+        /// <summary>
+        /// Включение/отключение автo-удаления мелких гридов.
+        /// </summary>
+        public static readonly CVarDef<bool> AutoGridCleanupEnabled =
+            CVarDef.Create("shuttle.grid_cleanup_enabled", true, CVar.SERVERONLY | CVar.ARCHIVE);
     }
 }
