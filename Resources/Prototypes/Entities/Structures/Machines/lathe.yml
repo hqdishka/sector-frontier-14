@@ -749,6 +749,7 @@
     timeMultiplier: 0.5
     staticPacks:
     - OreSmelting
+    - OreMagmiteSmelting # Lua
     - RGlassSmelting
     - AdvancedSmelting
 

@@ -268,18 +268,14 @@
       path: /Audio/Machines/anomaly_generate.ogg
     generatingFinishedSound:
       path: /Audio/Machines/beep.ogg
-    requiredMaterial: Plasma
-    materialPerAnomaly: 1500
   - type: MaterialStorage
     whitelist:
       tags:
 #        - Sheet # Frontier
-#        - RawMaterial # Frontier
-        - Sheet # Lua
+        - RawMaterial # Frontier
     materialWhiteList:
 #    - Plasma # Frontier
-#    - Anomalite # Frontier
-    - Plasma # Lua
+    - Anomalite # Frontier
     storage: # Frontier
       Anomalite: 300 # Frontier: one free charge
     storageLimit: 300 # Frontier: one charge

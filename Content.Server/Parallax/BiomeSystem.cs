@@ -8,6 +8,7 @@ using Content.Server.Decals;
 using Content.Server.Ghost.Roles.Components;
 using Content.Server.Shuttles.Events;
 using Content.Server.Shuttles.Systems;
+using Content.Server._Lua.MapperGrid; // Lua
 using Content.Shared.Atmos;
 using Content.Shared.Decals;
 using Content.Shared.Ghost;
@@ -1038,6 +1039,7 @@ public sealed partial class BiomeSystem : SharedBiomeSystem
 
         EnsureComp<SunShadowComponent>(mapUid);
         EnsureComp<SunShadowCycleComponent>(mapUid);
+        EnsureComp<MapperGridComponent>(mapUid);
 
         var moles = new float[Atmospherics.AdjustedNumberOfGases];
         moles[(int) Gas.Oxygen] = 21.824779f;

@@ -49,6 +49,11 @@
   - HandHeldMassScanner
   - ClothingMaskWeldingGas
   - SignallerAdvanced
+  - JetpackMining # Lua
+  - ClothingShoesBootsJetBoots # Lua
+  - WeaponMagmiteCrusher # Lua
+  - WeaponMagmiteCrusherGlaive # Lua
+  - WeaponMagmiteAccelerator # Lua
 
 - type: latheRecipePack
   id: SalvageSecurityBoards

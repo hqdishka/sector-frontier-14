@@ -3,6 +3,7 @@ using Robust.Shared.Map.Components;
 using Robust.Shared.Timing;
 using Content.Server.Salvage.Expeditions;
 using Content.Server.Gateway.Components;
+using Content.Server._Lua.MapperGrid; // Lua
 using Content.Shared.Tiles;
 
 namespace Content.Server.Shuttles.Systems;
@@ -71,7 +72,7 @@ public sealed class GridCleanupSystem : EntitySystem
         var gridUid = ent.Owner;
         var grid = ent.Comp;
 
-        if (HasComp<GatewayGeneratorDestinationComponent>(gridUid))
+        if (HasComp<GatewayGeneratorDestinationComponent>(gridUid) || HasComp<MapperGridComponent>(gridUid))
             return;
 
         // Skip if already scheduled for deletion
@@ -131,7 +132,7 @@ public sealed class GridCleanupSystem : EntitySystem
         foreach (var (gridUid, targetTime) in _pendingCleanup)
         {
 
-            if (HasComp<GatewayGeneratorDestinationComponent>(gridUid))
+            if (HasComp<GatewayGeneratorDestinationComponent>(gridUid) || HasComp<MapperGridComponent>(gridUid))
             {
                 toRemove.Add(gridUid);
                 continue;

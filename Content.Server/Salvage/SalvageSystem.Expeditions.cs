@@ -3,6 +3,7 @@ using System.Threading;
 using Content.Server.Salvage.Expeditions;
 using Content.Server.Salvage.Expeditions.Structure;
 using Content.Server.Gateway.Components; // Lua
+using Content.Server._Lua.MapperGrid; // Lua
 using Content.Shared.CCVar;
 using Content.Shared.Examine;
 using Content.Shared.Random.Helpers;
@@ -291,7 +292,7 @@ public sealed partial class SalvageSystem
     // Send all ghosts (relevant for admins) back to the default map so they don't lose their stuff.
     private void OnMapTerminating(EntityUid uid, SalvageExpeditionComponent component, EntityTerminatingEvent ev)
     {
-        if (HasComp<GatewayGeneratorDestinationComponent>(uid))
+        if (HasComp<GatewayGeneratorDestinationComponent>(uid) || HasComp<MapperGridComponent>(uid))
             return; // Lua
         var ghosts = EntityQueryEnumerator<GhostComponent, TransformComponent>();
         var newCoords = new MapCoordinates(Vector2.Zero, _gameTicker.DefaultMap);
