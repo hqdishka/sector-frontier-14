@@ -70,3 +70,24 @@ Entries:
   id: 7
   time: '2025-06-11T18:32:07.0000000+00:00'
   url: https://github.com/HacksLua/sector-frontier-14/pull/21
+- author: HacksLua
+  changes:
+    - type: Add
+      message: Добавлена возможность переименовать корабль в консоли покупки кораблей
+    - type: Add
+      message: >-
+        Добавлено перенаправление Admin OOC Ahelp в дискорд чат так же доступен
+        в обратную сторону
+    - type: Tweak
+      message: Улучшена система очистки космоса
+    - type: Fix
+      message: Исправлена локализация в агосте в панели быстрого доступа
+    - type: Fix
+      message: Исправлено ошибочное удаление планет при маппинге
+    - type: Tweak
+      message: Генератор аномалий переведен на работу от Аномалита (новый материал)
+    - type: Tweak
+      message: Восстановлен крафт магмитовых инструментов и переплавка руд
+  id: 8
+  time: '2025-06-13T19:38:58.0000000+00:00'
+  url: https://github.com/HacksLua/sector-frontier-14/pull/24
