@@ -1,7 +1,7 @@
-- type: sponsorLoadout
-  id: Kelic
-  entity: ClothingBackpackKelic
-  sponsorOnly: true
+#- type: sponsorLoadout
+#  id: Kelic
+#  entity: ClothingBackpackKelic
+#  sponsorOnly: true
 
 # Backpack
 - type: entity
