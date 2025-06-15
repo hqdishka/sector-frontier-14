@@ -667,7 +667,7 @@
   name:  uplink-pirate-ak-name
   description: uplink-pirate-ak-desc
   productEntity: NFWeaponRifleAssaultSm
-  icon: { sprite: sprite: Objects/Weapons/Guns/Rifles/ak.rsi, state: icon }
+  icon: { sprite: Objects/Weapons/Guns/Rifles/ak.rsi, state: icon }
   cost:
     Doubloon: 12
   categories:
