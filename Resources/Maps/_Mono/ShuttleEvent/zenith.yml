@@ -64,6 +64,8 @@ entities:
       fixtures: {}
     - type: BecomesStation
       id: Zenith
+    - type: IFF
+      color: "#FF0000"
     - type: OccluderTree
     - type: Shuttle
     - type: GridPathfinding
