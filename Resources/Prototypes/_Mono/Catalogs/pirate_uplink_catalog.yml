@@ -666,8 +666,8 @@
   id: UplinkPirateAk
   name:  uplink-pirate-ak-name
   description: uplink-pirate-ak-desc
-  productEntity: WeaponRifleAk
-  icon: { sprite: Objects/Weapons/Guns/Rifles/ak.rsi, state: icon }
+  productEntity: NFWeaponRifleAssaultSm
+  icon: { sprite: Objects/_NF/Objects/Weapons/Guns/Rifles/solandmoss.rsi, state: icon }
   cost:
     Doubloon: 12
   categories:

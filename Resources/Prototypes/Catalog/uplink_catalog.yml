@@ -5,11 +5,11 @@
 
 - type: listing
   id: UplinkConvertTelecrystal
-  name: Телекристалл
-  description: Обменяйте свои кредиты на более полезные вещи
+  name: Телекристаллы
+  description: Конвертация вашей валюты в ТК, если вам не хватает начальных
   productEntity: Telecrystal1
   cost:
-    Speso: 10000
+    Speso: 5000
   categories:
   - UplinkConverter
 
@@ -86,6 +86,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - TypanUplink
 
 - type: listing
   id: UplinkEnergyDagger
@@ -128,24 +129,23 @@
   categories:
   - UplinkWeaponry
 
-- type: listing
-  id: UplinkDisposableTurret
-  name: uplink-disposable-turret-name
-  description: uplink-disposable-turret-desc
-  productEntity: ToolboxElectricalTurretFilled
-  discountCategory: usualDiscounts
-  discountDownTo:
-    Telecrystal: 3
-  cost:
-    Telecrystal: 6
-  categories:
-  - UplinkWeaponry
-  conditions:
-    - !type:StoreWhitelistCondition
-      blacklist:
-        tags:
-          - NukeOpsUplink
-          - TypanUplink
+# - type: listing
+#   id: UplinkDisposableTurret
+#   name: uplink-disposable-turret-name
+#   description: uplink-disposable-turret-desc
+#   productEntity: ToolboxElectricalTurretFilled
+#   discountCategory: usualDiscounts
+#   discountDownTo:
+#     Telecrystal: 3
+#   cost:
+#     Telecrystal: 6
+#   categories:
+#   - UplinkWeaponry
+#   conditions:
+#     - !type:StoreWhitelistCondition
+#       blacklist:
+#         tags:
+#           - NukeOpsUplink
 
 - type: listing
   id: UplinkEshield
@@ -234,6 +234,35 @@
     Telecrystal: 24
   cost:
     Telecrystal: 30
+  categories:
+  - UplinkWeaponry
+
+
+- type: listing
+  id: WSPR-uplink-syndicate
+  name: WSPR
+  description: Новая винтовка синдиката, специально для ваших боёв
+  icon: { sprite: /Textures/_Goobstation/Objects/Weapons/Guns/Rifles/wspr.rsi, state: icon }
+  productEntity:  ClothingBackpackDuffelSyndicateFilledWSPR
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 10
+  cost:
+    Telecrystal: 14
+  categories:
+  - UplinkWeaponry
+
+- type: listing
+  id: AKMS-uplink-syndicate
+  name: AKMS
+  description: Старая винтовка синдиката, специально для ваших боёв
+  icon: { sprite: /Textures/_NF/Objects/Weapons/Guns/Rifles/solandmoss.rsi, state: icon }
+  productEntity: NFWeaponRifleAssaultSm
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 8
+  cost:
+    Telecrystal: 12
   categories:
   - UplinkWeaponry
 
@@ -731,11 +760,8 @@
   name: uplink-cigarettes-name
   description: uplink-cigarettes-desc
   productEntity: CigPackSyndicate
-  discountCategory: rareDiscounts
-  discountDownTo:
-    Telecrystal: 1
   cost:
-    Telecrystal: 2
+    Telecrystal: 1
   categories:
   - UplinkChemicals
 
@@ -1508,15 +1534,12 @@
       whitelist:
         tags:
           - NukeOpsUplink
+          - TypanUplink
     - !type:BuyerWhitelistCondition
       blacklist:
         components:
           - SurplusBundle
-    - !type:StoreWhitelistCondition
-      blacklist:
-        tags:
-          - TypanUplink
-
+          
 - type: listing
   id: UplinkFakeMindshield
   name: uplink-fake-mindshield-name
@@ -1573,7 +1596,7 @@
   id: UplinkChestRig
   name: uplink-chest-rig-name
   description: uplink-chest-rig-desc
-  productEntity: ClothingBeltMilitaryWebbing
+  productEntity: ClothingBeltOutpostTypanSecurityWebbing
   cost:
     Telecrystal: 1
   categories:
@@ -1606,16 +1629,17 @@
   categories:
   - UplinkWearables
 
+# TODO: Revert back to normal thieving gloves when clothes dyeing is added
 - type: listing
   id: UplinkgClothingThievingGloves
-  name: uplink-clothing-thieving-gloves-name
-  description: uplink-clothing-thieving-gloves-desc
-  productEntity: ThievingGloves
+  name: uplink-clothing-chameleon-thieving-gloves-name
+  description: uplink-clothing-chameleon-thieving-gloves-desc
+  productEntity: ClothingHandsChameleonThief
   discountCategory: veryRareDiscounts
   discountDownTo:
-    Telecrystal: 2
+    Telecrystal: 3
   cost:
-    Telecrystal: 4
+    Telecrystal: 5
   categories:
   - UplinkWearables
 
@@ -1688,15 +1712,29 @@
 
 - type: listing
   id: UplinkHardsuitSyndie
-  name: uplink-hardsuit-syndie-name
-  description: uplink-hardsuit-syndie-desc
-  icon: { sprite: /Textures/Clothing/OuterClothing/Hardsuits/syndicate.rsi, state: icon }
-  productEntity: ClothingBackpackDuffelSyndicateHardsuitBundle
+  name: Syndycate Modsuit 
+  description: Новая технолгия синдиката специально для учёных тайпана
+  icon: { sprite: /Textures/_Donevinoll/SyndicateModsuit/BACK/nukeops.rsi, state: icon }
+  productEntity: ClothingmodsuitBloodRedHardsuit
   discountCategory: veryRareDiscounts
   discountDownTo:
     Telecrystal: 4
   cost:
     Telecrystal: 8
+  categories:
+  - UplinkWearables
+
+- type: listing
+  id: UplinkHardsuitSyndieelite
+  name: Syndycate elite Modsuit 
+  description: Новая технолгия синдиката специально для элитных учёных тайпана
+  icon: { sprite: /Textures/_Donevinoll/SyndicateeliteModsuit/BACK/pmc.rsi, state: icon }
+  productEntity: ClothingmodsuitBloodRedHardsuitElite
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 10
   categories:
   - UplinkWearables
 

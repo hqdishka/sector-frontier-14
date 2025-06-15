@@ -1,0 +1,35 @@
+- type: entity
+  parent: [ClothingBackpackERTSecurity, BaseC3SyndicateContraband]
+  id: ClothingmodsuitBloodRedHardsuit
+  name:  Blood-red Modsuit
+  description: A hardsuit adorned with signature markings of the syndicate. The armor is remarkably nimble for the protection it offers.
+  components:
+    - type: Storage
+      grid:
+      - 0,0,9,5
+    - type: Sprite
+      sprite: _Donevinoll/SyndicateModsuit/back/nukeops.rsi
+    - type: Clothing
+      sprite: _Donevinoll/SyndicateModsuit/back/nukeops.rsi
+    - type: ToggleableClothing
+      clothingPrototype: ClothingOuterHardsuitBloodRedHardsuit
+      requiredSlot: back
+      slot: outerClothing
+
+- type: entity
+  parent: [ClothingBackpackERTSecurity, BaseC3SyndicateContraband]
+  id: ClothingmodsuitBloodRedHardsuitElite
+  name: Blood-red Modsuit elite
+  description: A hardsuit adorned with signature markings of the syndicate. The armor is remarkably nimble for the protection it offers.
+  components:
+    - type: Storage
+      grid:
+      - 0,0,9,5
+    - type: Sprite
+      sprite: _Donevinoll/SyndicateeliteModsuit/back/pmc.rsi
+    - type: Clothing
+      sprite: _Donevinoll/SyndicateeliteModsuit/back/pmc.rsi
+    - type: ToggleableClothing
+      clothingPrototype: ClothingOuterHardsuitBloodRedHardsuitelite
+      requiredSlot: back
+      slot: outerClothing
