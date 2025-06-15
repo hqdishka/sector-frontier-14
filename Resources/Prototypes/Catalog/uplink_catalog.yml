@@ -142,12 +142,6 @@
     Telecrystal: 6
   categories:
   - UplinkWeaponry
-  conditions:
-  - !type:StoreWhitelistCondition
-    blacklist:
-      tags:
-      - TypanUplink
-      - NukeOpsUplink
 
 # - type: listing
 #   id: UplinkDisposableTurret
