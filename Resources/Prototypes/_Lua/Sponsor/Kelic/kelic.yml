@@ -107,8 +107,8 @@
         Caustic: 0.5
   - type: Tag
     tags: [] # ignore "WhitelistChameleon" tag
-  - type: HardsuitIdentification
-    nonlethal: true
+#  - type: HardsuitIdentification
+#    nonlethal: true
   - type: HideLayerClothing
     slots:
     - Tail
