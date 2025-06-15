@@ -5,11 +5,11 @@
 
 - type: listing
   id: UplinkConvertTelecrystal
-  name: Телекристаллы
-  description: Конвертация вашей валюты в ТК, если вам не хватает начальных
+  name: ������������
+  description: ��������� ���� ������� �� ����� �������� ����
   productEntity: Telecrystal1
   cost:
-    Speso: 5000
+    Speso: 10000
   categories:
   - UplinkConverter
 
@@ -126,6 +126,20 @@
     Telecrystal: 4
   cost:
     Telecrystal: 8
+  categories:
+  - UplinkWeaponry
+
+- type: listing
+  id: UplinkGlovesKnuckleDusters
+  name: uplink-gloves-knuckleduster-name
+  description: uplink-gloves-knuckleduster-desc
+  icon: { sprite: Clothing/Hands/Gloves/KnuckleDusters/syndicateknuckleduster.rsi, state: syndicateknuckleduster }
+  productEntity: ClothingHandsKnuckleDustersSyndicate
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 3
+  cost:
+    Telecrystal: 6
   categories:
   - UplinkWeaponry
 
@@ -1712,7 +1726,7 @@
 
 - type: listing
   id: UplinkHardsuitSyndie
-  name: Syndycate Modsuit 
+  name: Syndicate Modsuit 
   description: Новая технолгия синдиката специально для учёных тайпана
   icon: { sprite: /Textures/_Donevinoll/SyndicateModsuit/BACK/nukeops.rsi, state: icon }
   productEntity: ClothingmodsuitBloodRedHardsuit
@@ -1726,7 +1740,7 @@
 
 - type: listing
   id: UplinkHardsuitSyndieelite
-  name: Syndycate elite Modsuit 
+  name: Syndicate elite Modsuit 
   description: Новая технолгия синдиката специально для элитных учёных тайпана
   icon: { sprite: /Textures/_Donevinoll/SyndicateeliteModsuit/BACK/pmc.rsi, state: icon }
   productEntity: ClothingmodsuitBloodRedHardsuitElite
