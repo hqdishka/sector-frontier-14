@@ -1,3 +1,9 @@
 store-preset-name-vip-uplink = Аплинк Випа
 stealTargetGroup-medipen-techfab-circuitboard = медипен техфаб (машинная плата)
 store-preset-name-mercenary-uplink = Аплинк Наёмника
+uplink-convert-telecrystal-name = Телекристаллы
+uplink-convert-telecrystal-desc = Обменяйте свои кредиты на более полезные вещи
+uplink-syndicate-elite-modsuit-name =  Элитный модульный скафандр синдиката
+uplink-syndicate-elite-modsuit-desc = Элитный модульный скафандр синдиката, использует новые материаллы взятые со складов синдиката, оборудовавнн ПНВ 3-его поколения и пульсовым термальным сканером
+uplink-syndicate-modsuit-name = модульный скафандр синдиката
+uplink-syndicate-modsuit-desc = модульный скафандр синдиката, использует новые материаллы взятые со складов синдиката, оборудовавнн ПНВ 3-его поколения

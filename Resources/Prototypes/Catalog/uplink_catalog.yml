@@ -5,9 +5,9 @@
 
 - type: listing
   id: UplinkConvertTelecrystal
-  name: ������������
-  description: ��������� ���� ������� �� ����� �������� ����
-  productEntity: Telecrystal1
+  name: uplink-convert-telecrystal-name
+  description: uplink-convert-telecrystal-desc
+  productEntity: Telecrystal
   cost:
     Speso: 10000
   categories:
@@ -253,9 +253,9 @@
 
 
 - type: listing
-  id: WSPR-uplink-syndicate
-  name: WSPR
-  description: Новая винтовка синдиката, специально для ваших боёв
+  id: uplinkwspr
+  name: uplink-wspr-name
+  description: uplink-wspr-desc
   icon: { sprite: /Textures/_Goobstation/Objects/Weapons/Guns/Rifles/wspr.rsi, state: icon }
   productEntity:  ClothingBackpackDuffelSyndicateFilledWSPR
   discountCategory: usualDiscounts
@@ -268,8 +268,8 @@
 
 - type: listing
   id: AKMS-uplink-syndicate
-  name: AKMS
-  description: Старая винтовка синдиката, специально для ваших боёв
+  name: uplink-akms-name
+  description: uplink-akms-desc
   icon: { sprite: /Textures/_NF/Objects/Weapons/Guns/Rifles/solandmoss.rsi, state: icon }
   productEntity: NFWeaponRifleAssaultSm
   discountCategory: usualDiscounts
@@ -1643,9 +1643,8 @@
   categories:
   - UplinkWearables
 
-# TODO: Revert back to normal thieving gloves when clothes dyeing is added
 - type: listing
-  id: UplinkgClothingThievingGloves
+  id: UplinkgClothingChameleonGloves
   name: uplink-clothing-chameleon-thieving-gloves-name
   description: uplink-clothing-chameleon-thieving-gloves-desc
   productEntity: ClothingHandsChameleonThief
@@ -1730,7 +1729,7 @@
   description: uplink-hardsuit-syndie-desc
   icon: { sprite: /Textures/Clothing/OuterClothing/Hardsuits/syndicate.rsi, state: icon }
   productEntity: ClothingBackpackDuffelSyndicateHardsuitBundle
- discountCategory: veryRareDiscounts
+  discountCategory: veryRareDiscounts
   discountDownTo:
     Telecrystal: 4
   cost:
@@ -1744,10 +1743,10 @@
       - NukeOpsUplink
 
 - type: listing
-  id: UplinkHardsuitSyndie
-  name: Syndicate Modsuit 
-  description: Новая технолгия синдиката специально для учёных тайпана
-  icon: { sprite: /Textures/_Donevinoll/SyndicateModsuit/BACK/nukeops.rsi, state: icon }
+  id: UplinkmodsuitSyndie
+  name: uplink-syndicate-modsuit-name
+  description: uplink-syndicate-modsuit-desc
+  icon: { sprite: /Textures/_Lua/Clothing/Back/nukeops.rsi, state: icon }
   productEntity: ClothingmodsuitBloodRedHardsuit
   discountCategory: veryRareDiscounts
   discountDownTo:
@@ -1764,10 +1763,10 @@
       - TypanUplink
 
 - type: listing
-  id: UplinkHardsuitSyndieelite
-  name: Syndicate elite Modsuit 
-  description: Новая технолгия синдиката специально для элитных учёных тайпана
-  icon: { sprite: /Textures/_Donevinoll/SyndicateeliteModsuit/BACK/pmc.rsi, state: icon }
+  id: UplinkmodsuitSyndieelite
+  name: uplink-syndicate-elite-modsuit-name
+  description: uplink-syndicate-elite-modsuit-desc
+  icon: { sprite: /Textures/_Lua/Clothing/Back/pmc.rsi, state: icon }
   productEntity: ClothingmodsuitBloodRedHardsuitElite
   discountCategory: veryRareDiscounts
   discountDownTo:

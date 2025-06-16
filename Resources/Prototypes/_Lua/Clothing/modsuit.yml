@@ -6,7 +6,7 @@
   components:
     - type: Storage
       grid:
-      - 0,0,9,5
+       - 0,0,9,5
     - type: Sprite
       sprite: _Lua/Clothing/Back/nukeops.rsi
     - type: Clothing
@@ -24,7 +24,7 @@
   components:
     - type: Storage
       grid:
-      - 0,0,9,5
+       - 0,0,9,5
     - type: Sprite
       sprite: _Lua/Clothing/Back/pmc.rsi
     - type: Clothing
