@@ -1,5 +1,5 @@
-using System.Numerics;
 using Content.Server._Lua.Sectors;
+using Content.Server._NF.GameTicking.Events;
 using Content.Server.Backmen.Arrivals.CentComm;
 using Content.Server.Chat.Systems;
 using Content.Server.GameTicking;
@@ -38,6 +38,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using System.Numerics;
 
 namespace Content.Server.Backmen.Arrivals;
 
@@ -77,13 +78,12 @@ public sealed class CentcommSystem : EntitySystem
         base.Initialize();
         SubscribeLocalEvent<ActorComponent, CentcomFtlAction>(OnFtlActionUsed);
         SubscribeLocalEvent<PreGameMapLoad>(OnPreGameMapLoad, after: new[] { typeof(StationSystem) });
-        SubscribeLocalEvent<RoundStartingEvent>(OnCentComInit, before: new[] { typeof(EmergencyShuttleSystem) });
         SubscribeLocalEvent<RoundEndedEvent>(OnCentComEndRound);
         SubscribeLocalEvent<RoundRestartCleanupEvent>(OnCleanup);
         SubscribeLocalEvent<ShuttleConsoleComponent, GotEmaggedEvent>(OnShuttleConsoleEmaged);
         SubscribeLocalEvent<FTLCompletedEvent>(OnFTLCompleted);
         SubscribeLocalEvent<FtlCentComAnnounce>(OnFtlAnnounce);
-        SubscribeLocalEvent<LoadingMapsEvent>(OnLoadingMaps);
+        SubscribeLocalEvent<StationsGeneratedEvent>(OnStationsGenerated, after: new[] { typeof(GameTicker) }, before: new[] { typeof(EmergencyShuttleSystem) });
         _cfg.OnValueChanged(CCVars.GridFill, OnGridFillChange);
 
         //_stationCentComMapPool = _prototypeManager.Index<WeightedRandomPrototype>(StationCentComMapPool);
@@ -122,11 +122,8 @@ public sealed class CentcommSystem : EntitySystem
         }
     }
 
-
-    private void OnLoadingMaps(LoadingMapsEvent ev)
+    private void OnStationsGenerated(StationsGeneratedEvent ev)
     {
-        //if (_gameTicker.CurrentPreset?.IsMiniGame ?? false)
-        //    return;
         if (!_cfg.GetCVar(CCVars.GridFill))
             return;
         EnsureCentcom(true);
@@ -366,15 +363,15 @@ public sealed class CentcommSystem : EntitySystem
         _shuttle.SetFTLWhitelist(ent, null);
     }
 
-    private void OnCentComInit(RoundStartingEvent ev)
-    {
-        //if (_gameTicker.CurrentPreset?.IsMiniGame ?? false)
-        //    return;
-        if (!_cfg.GetCVar(CCVars.GridFill))
-            return;
+    //private void OnCentComInit(RoundStartingEvent ev)
+    //{
+    //    //if (_gameTicker.CurrentPreset?.IsMiniGame ?? false)
+    //    //    return;
+    //    if (!_cfg.GetCVar(CCVars.GridFill))
+    //        return;
 
-        EnsureCentcom(true);
-    }
+    //    EnsureCentcom(true);
+    //}
 
     private void OnPreGameMapLoad(PreGameMapLoad ev)
     {
