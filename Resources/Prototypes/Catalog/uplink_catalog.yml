@@ -1610,7 +1610,7 @@
   id: UplinkChestRig
   name: uplink-chest-rig-name
   description: uplink-chest-rig-desc
-  productEntity: ClothingBeltOutpostTypanSecurityWebbing
+  productEntity: ClothingBeltMilitaryWebbing
   cost:
     Telecrystal: 1
   categories:
