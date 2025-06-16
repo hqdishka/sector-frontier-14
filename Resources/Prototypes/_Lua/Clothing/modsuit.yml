@@ -8,9 +8,9 @@
       grid:
       - 0,0,9,5
     - type: Sprite
-      sprite: _Donevinoll/SyndicateModsuit/back/nukeops.rsi
+      sprite: _Lua/Clothing/Back/nukeops.rsi
     - type: Clothing
-      sprite: _Donevinoll/SyndicateModsuit/back/nukeops.rsi
+      sprite: _Lua/Clothing/Back/nukeops.rsi
     - type: ToggleableClothing
       clothingPrototype: ClothingOuterHardsuitBloodRedHardsuit
       requiredSlot: back
@@ -26,9 +26,9 @@
       grid:
       - 0,0,9,5
     - type: Sprite
-      sprite: _Donevinoll/SyndicateeliteModsuit/back/pmc.rsi
+      sprite: _Lua/Clothing/Back/pmc.rsi
     - type: Clothing
-      sprite: _Donevinoll/SyndicateeliteModsuit/back/pmc.rsi
+      sprite: _Lua/Clothing/Back/pmc.rsi
     - type: ToggleableClothing
       clothingPrototype: ClothingOuterHardsuitBloodRedHardsuitelite
       requiredSlot: back

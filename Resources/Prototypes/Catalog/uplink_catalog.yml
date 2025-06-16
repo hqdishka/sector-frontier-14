@@ -1726,6 +1726,25 @@
 
 - type: listing
   id: UplinkHardsuitSyndie
+  name: uplink-hardsuit-syndie-name
+  description: uplink-hardsuit-syndie-desc
+  icon: { sprite: /Textures/Clothing/OuterClothing/Hardsuits/syndicate.rsi, state: icon }
+  productEntity: ClothingBackpackDuffelSyndicateHardsuitBundle
+ discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 8
+  categories:
+  - UplinkWearables
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
+  id: UplinkHardsuitSyndie
   name: Syndicate Modsuit 
   description: Новая технолгия синдиката специально для учёных тайпана
   icon: { sprite: /Textures/_Donevinoll/SyndicateModsuit/BACK/nukeops.rsi, state: icon }
@@ -1737,6 +1756,12 @@
     Telecrystal: 8
   categories:
   - UplinkWearables
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+      - TypanUplink
 
 - type: listing
   id: UplinkHardsuitSyndieelite
@@ -1751,6 +1776,12 @@
     Telecrystal: 10
   categories:
   - UplinkWearables
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+      - TypanUplink
 
 - type: listing
   id: UplinkClothingOuterArmorRaid
