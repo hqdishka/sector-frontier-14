@@ -24,6 +24,7 @@
       shape: triangle
     - type: TimedDespawn
       lifetime: 20
+    - type: ShipWeaponProjectile
 
 - type: entity
   id: Bullet53mmAP
@@ -47,6 +48,7 @@
       shape: triangle
     - type: TimedDespawn
       lifetime: 20
+    - type: ShipWeaponProjectile
 
 - type: entity
   id: Bullet80mmAP
@@ -70,6 +72,7 @@
       shape: triangle
     - type: TimedDespawn
       lifetime: 20
+    - type: ShipWeaponProjectile
 
 - type: entity
   id: Bullet105mmAP
@@ -93,6 +96,7 @@
       shape: triangle
     - type: TimedDespawn
       lifetime: 20
+    - type: ShipWeaponProjectile
 
 - type: entity
   id: Bullet120mmAP
@@ -116,6 +120,7 @@
       shape: triangle
     - type: TimedDespawn
       lifetime: 20
+    - type: ShipWeaponProjectile
 
 - type: entity
   id: Bullet140mmAP
@@ -139,3 +144,4 @@
       shape: triangle
     - type: TimedDespawn
       lifetime: 20
+    - type: ShipWeaponProjectile
