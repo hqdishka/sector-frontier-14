@@ -143,6 +143,8 @@
   name: RTG generator flatpack
   description: A flatpack used for constructing a Radioisotope Thermoelectric Generator.
   components:
+  - type: StaticPrice
+    price: 5000
   - type: Flatpack
     entity: GeneratorRTG
 

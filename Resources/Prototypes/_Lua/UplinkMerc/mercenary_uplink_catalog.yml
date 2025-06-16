@@ -776,23 +776,23 @@
         - MercenaryBase
 
 #X-01
-- type: listing
-  id: UplinkMercenaryADTWeaponPistolX01
-  name: X-01 мультифазовый энергетический пистолет
-  description: Это дорогая, современная версия антикварного лазерного пистолета. У этого оружия есть несколько уникальных режимов огня, но нет возможности самостоятельно перезаряжаться с течением времени.
-  productEntity: ADTWeaponPistolX01
-  cost:
-    Speso: 45000
-  categories:
-    - UplinkMercenaryGun
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - MercenaryUplink
-    - !type:BuyerJobCondition
-      whitelist:
-        - MercenaryBase
+#- type: listing
+#  id: UplinkMercenaryADTWeaponPistolX01
+#  name: X-01 мультифазовый энергетический пистолет
+#  description: Это дорогая, современная версия антикварного лазерного пистолета. У этого оружия есть несколько уникальных режимов огня, но нет возможности самостоятельно перезаряжаться с течением времени.
+#  productEntity: ADTWeaponPistolX01
+#  cost:
+#    Speso: 45000
+#  categories:
+#    - UplinkMercenaryGun
+#  conditions:
+#    - !type:StoreWhitelistCondition
+#      whitelist:
+#        tags:
+#          - MercenaryUplink
+#    - !type:BuyerJobCondition
+#      whitelist:
+#        - MercenaryBase
 
 #AntiMateriel
 - type: listing
