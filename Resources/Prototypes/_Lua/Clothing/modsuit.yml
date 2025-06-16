@@ -1,7 +1,7 @@
 - type: entity
   parent: [ClothingBackpackERTSecurity, BaseC3SyndicateContraband]
   id: ClothingmodsuitBloodRedHardsuit
-  name:  Blood-red Modsuit
+  name: Blood-red Modsuit
   description: A hardsuit adorned with signature markings of the syndicate. The armor is remarkably nimble for the protection it offers.
   components:
     - type: Storage
