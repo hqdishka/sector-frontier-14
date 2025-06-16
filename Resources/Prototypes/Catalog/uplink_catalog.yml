@@ -7,7 +7,7 @@
   id: UplinkConvertTelecrystal
   name: uplink-convert-telecrystal-name
   description: uplink-convert-telecrystal-desc
-  productEntity: Telecrystall
+  productEntity: Telecrystal
   cost:
     Speso: 10000
   categories:
