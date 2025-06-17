@@ -11,6 +11,10 @@
       sprite: _Lua/Clothing/Back/nukeops.rsi
     - type: Clothing
       sprite: _Lua/Clothing/Back/nukeops.rsi
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
+        toggleable-clothing: !type:ContainerSlot
     - type: ToggleableClothing
       clothingPrototype: ClothingOuterHardsuitBloodRedHardsuit
       requiredSlot: back
@@ -29,6 +33,10 @@
       sprite: _Lua/Clothing/Back/pmc.rsi
     - type: Clothing
       sprite: _Lua/Clothing/Back/pmc.rsi
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
+        toggleable-clothing: !type:ContainerSlot
     - type: ToggleableClothing
       clothingPrototype: ClothingOuterHardsuitBloodRedHardsuitelite
       requiredSlot: back
