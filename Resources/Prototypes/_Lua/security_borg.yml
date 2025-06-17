@@ -606,14 +606,14 @@
         store: part-container
 
       - component: Flash
-        name: flash
+        name: borg-part-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi
           state: flash
 
       - component: Flash
-        name: second flash
+        name: borg-part-second-flash
         store: part-container
         icon:
           sprite: Objects/Weapons/Melee/flash.rsi

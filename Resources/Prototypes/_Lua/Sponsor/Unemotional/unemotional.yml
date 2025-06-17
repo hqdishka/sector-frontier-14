@@ -59,7 +59,6 @@
       toggleAction: ActionToggleADTJetpack
     - type: CanMoveInAir
     - type: InputMover
-      toParent: true
     - type: ClothingSpeedModifier
       walkModifier: 1
       sprintModifier: 1

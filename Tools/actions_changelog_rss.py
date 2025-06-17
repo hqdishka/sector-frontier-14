@@ -46,7 +46,7 @@ FEED_LANGUAGE    = "en-US"
 FEED_GUID_PREFIX = "ss14-changelog-wizards-"
 FEED_URL         = "https://central.spacestation14.io/changelog.xml"
 
-CHANGELOG_FILE = "Resources/Changelog/Frontier.yml" # Frontier: Changelog.yml<Frontier.yml
+CHANGELOG_FILE = "Resources/Changelog/Lua.yml" # Lua Frontier.yml<Lua.yml Frontier: Changelog.yml<Frontier.yml
 
 TYPES_TO_EMOJI = {
     "Fix":    "🐛",
@@ -176,7 +176,7 @@ def generate_description_for_entries(entries: List[Any]) -> str:
     keyfn = lambda x: x["author"]
     sorted_author = sorted(entries, key=keyfn)
     for author, group in itertools.groupby(sorted_author, keyfn):
-        desc.write(f"<h3>{html.escape(author)} updated:</h3>\n")
+        desc.write(f"<h3>{html.escape(author)} обновил:</h3>\n")
         desc.write("<ul>\n")
         for entry in sorted(group, key=lambda x: x["time"]):
             for change in entry["changes"]:

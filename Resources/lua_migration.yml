@@ -2,11 +2,29 @@
 # Pride to PottedPlant
 VendingMachinePride: VendingMachinePottedPlantVend
 
-# 2025-05-20 Lua reverse Frontier wall lockers with grid inventory
-LockerWallColorChemistry: LockerWallChemistry
-LockerWallColorChemistryFilled: LockerWallChemistryFilled
-LockerWallColorMedical: LockerWallMedical
-LockerWallColorMedicalFilled: LockerWallMedicalFilled
-
 # 2025-05-30 Lua port map previous frontier
 WeaponTargetingPad: ComputerGunneryConsole
+
+# 2025-06-02 Lua migrate ArmoryLathe
+ArmoryLatheEvent: ArmoryLathe
+MedipenTechfabEvent: MedipenTechfab
+
+# 2025-06-05 Lua new migrations
+ClothingUniformJumpskirtVictorianBlack: null
+ClothingUniformJumpskirtVictorianrRed: null
+GoldenRose: null
+PistolDominator: null
+RandomAnimalSpawner: null
+SpawnVehicleAntagVehicle: null
+VendingMachineBoozeFree: VendingMachineBooze
+VendingMachineChefvendFree: VendingMachineChefvend
+VendingMachineChemicalsFree: VendingMachineChemicals
+VendingMachineDinnerwareFree: VendingMachineDinnerware
+VendingMachineEngiDrobeFree: VendingMachineEngiDrobe
+VendingMachineEngivendFree: VendingMachineEngivend
+VendingMachineMedicalFree: VendingMachineMedical
+VendingMachineSyndieDrobeFree: VendingMachineSyndieDrobe
+VendingMachineYouToolFree: VendingMachineYouTool
+
+# 2025-06-10 Lua migration vending
+VendingMachineTankDispenserEVAFree: VendingMachineTankDispenserEVA

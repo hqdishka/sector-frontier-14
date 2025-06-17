@@ -17,6 +17,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
+    - type: GridGodMode
     - type: Transform
       parent: invalid
     - type: NoShuttleFTL

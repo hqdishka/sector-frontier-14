@@ -7,7 +7,7 @@
   id: AnarchyOrange
   name: NA Orange
   description: Спасательный челнок, сделанный из найденных обломков, имеет большие повреждения.
-  price: 16000 #Appraisal is 14500
+  price: 18000 #Appraisal is 14500
   category: Small
   group: AnarchyScrapExp
   shuttlePath: /Maps/_Lua/Anarchy/Shuttles/ScrapExp/anarchyorange.yml

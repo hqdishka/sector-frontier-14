@@ -1,7 +1,12 @@
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Timing;
+using Robust.Shared.Configuration;
 using Content.Server.Salvage.Expeditions;
+using Content.Server.Gateway.Components;
+using Content.Server._Lua.MapperGrid; // Lua
+using Content.Shared.Tiles;
+using Content.Shared.Lua.CLVar; // Lua
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -13,6 +18,7 @@ public sealed class GridCleanupSystem : EntitySystem
     [Dependency] private readonly IMapManager _mapManager = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly SharedMapSystem _mapSystem = default!;
+    [Dependency] private readonly IConfigurationManager _cfg = default!;
 
     // The minimum number of tiles a grid needs to avoid being cleaned up
     private const int MinimumTiles = 10;
@@ -31,6 +37,11 @@ public sealed class GridCleanupSystem : EntitySystem
         SubscribeLocalEvent<GridStartupEvent>(OnGridStartup);
         SubscribeLocalEvent<MapGridComponent, TileChangedEvent>(OnTileChanged);
         SubscribeLocalEvent<SalvageExpeditionComponent, ComponentStartup>(OnExpeditionStartup);
+    }
+
+    private bool IsCleanupEnabled()
+    {
+        return _cfg.GetCVar(CLVars.AutoGridCleanupEnabled);
     }
 
     private void OnGridStartup(GridStartupEvent ev)
@@ -66,8 +77,14 @@ public sealed class GridCleanupSystem : EntitySystem
 
     private void CheckGrid(Entity<MapGridComponent> ent)
     {
+        if (!IsCleanupEnabled())
+            return;
+
         var gridUid = ent.Owner;
         var grid = ent.Comp;
+
+        if (HasComp<GatewayGeneratorDestinationComponent>(gridUid) || HasComp<MapperGridComponent>(gridUid))
+            return;
 
         // Skip if already scheduled for deletion
         if (_pendingCleanup.ContainsKey(gridUid))
@@ -116,7 +133,7 @@ public sealed class GridCleanupSystem : EntitySystem
     {
         base.Update(frameTime);
 
-        if (_pendingCleanup.Count == 0)
+        if (!IsCleanupEnabled() || _pendingCleanup.Count == 0)
             return;
 
         // Check if any grids need to be cleaned up
@@ -125,6 +142,13 @@ public sealed class GridCleanupSystem : EntitySystem
 
         foreach (var (gridUid, targetTime) in _pendingCleanup)
         {
+
+            if (HasComp<GatewayGeneratorDestinationComponent>(gridUid) || HasComp<MapperGridComponent>(gridUid))
+            {
+                toRemove.Add(gridUid);
+                continue;
+            }
+
             // Skip if the time hasn't elapsed yet
             if (currentTime < targetTime)
                 continue;

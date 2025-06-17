@@ -33,7 +33,6 @@ entities:
       name: Sauron
     - type: Transform
       pos: -0.59375,-0.5625
-      parent: invalid
     - type: BecomesStation
       id: Sauron
     - type: MapGrid
@@ -4737,9 +4736,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -2.5,2.5
       parent: 1
-    - type: DeviceList
-      configurators:
-      - invalid
   - uid: 684
     components:
     - type: Transform

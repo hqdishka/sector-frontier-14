@@ -9,7 +9,7 @@
   id: pal
   spritePath: /Textures/_NF/Effects/speech.rsi
   typingState: pal0
-  idleState: pal0
+  idleState: pal3
   offset: 0, 0.125
 
 - type: typingIndicator

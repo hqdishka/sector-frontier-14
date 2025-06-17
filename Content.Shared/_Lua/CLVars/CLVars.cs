@@ -81,5 +81,17 @@ namespace Content.Shared.Lua.CLVar
 
         public static readonly CVarDef<bool> AsteroidSectorEnabled =
             CVarDef.Create("game.asteroid_sector_enabled", false, CVar.SERVERONLY);
+
+        /// <summary>
+        /// Интервал автоматической выдачи зарплаты в секундах 3600 = 1 час.
+        /// </summary>
+        public static readonly CVarDef<float> AutoSalaryInterval =
+            CVarDef.Create("salary.auto_interval", 3600f, CVar.SERVER | CVar.ARCHIVE);
+
+        /// <summary>
+        /// Включение/отключение автo-удаления мелких гридов.
+        /// </summary>
+        public static readonly CVarDef<bool> AutoGridCleanupEnabled =
+            CVarDef.Create("shuttle.grid_cleanup_enabled", true, CVar.SERVERONLY | CVar.ARCHIVE);
     }
 }

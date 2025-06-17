@@ -6,6 +6,7 @@
   id: OutpostTypanMedic
   name: job-name-typan-medic
   playTimeTracker: JobOutpostTypanMedic
+  salary: 35000
   description: Медик из далёкого космоса.
   startingGear: SyndicateParamedic
   icon: "JobIconSyndicateParamedic"

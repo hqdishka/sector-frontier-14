@@ -60,6 +60,7 @@ entities:
     - type: Transform
     - type: Map
       mapPaused: True
+    - type: GridGodMode
     - type: PhysicsMap
     - type: GridTree
     - type: MovedGrids

@@ -49,6 +49,11 @@
   - HandHeldMassScanner
   - ClothingMaskWeldingGas
   - SignallerAdvanced
+  - JetpackMining # Lua
+  - ClothingShoesBootsJetBoots # Lua
+  - WeaponMagmiteCrusher # Lua
+  - WeaponMagmiteCrusherGlaive # Lua
+  - WeaponMagmiteAccelerator # Lua
 
 - type: latheRecipePack
   id: SalvageSecurityBoards
@@ -59,3 +64,6 @@
   id: SalvageSecurityWeapons
   recipes: [] # Frontier: empty list
   # - WeaponProtoKineticAccelerator # Frontier
+  # - PKAUpgradeDamage # Frontier
+  # - PKAUpgradeRange # Frontier
+  # - PKAUpgradeFireRate # Frontier

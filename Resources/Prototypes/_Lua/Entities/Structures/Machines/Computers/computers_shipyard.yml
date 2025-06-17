@@ -76,6 +76,7 @@
   - type: ContainerContainer
     containers:
       ShipyardConsole-targetId: !type:ContainerSlot {}
+      board: !type:Container
 
 - type: entity
   id: ComputerShipyardAnarchyScrapExp

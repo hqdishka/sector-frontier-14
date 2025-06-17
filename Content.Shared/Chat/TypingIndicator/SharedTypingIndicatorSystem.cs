@@ -88,6 +88,6 @@ public abstract class SharedTypingIndicatorSystem : EntitySystem
         // if (!Resolve(uid, ref appearance, false)) // Corvax-TypingIndicator
         //     return;
 
-        _appearance.SetData(uid, TypingIndicatorVisuals.State, state); // Corvax-TypingIndicator
+        _appearance.SetData(uid, TypingIndicatorVisuals.State, state, appearance); // Corvax-TypingIndicator
     }
 }

@@ -123,6 +123,7 @@
   - type: ShowAntagIcons
   - type: ShowJobIcons
   - type: ShowMindShieldIcons
+  - type: ShowContrabandDetails
   - type: Inventory
     templateId: aghost
   - type: Loadout

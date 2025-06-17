@@ -3,6 +3,7 @@
   name: job-name-centcomsecofficer
   description: job-description-centcomsecofficer
   playTimeTracker: JobCentralCommandSecOfficer
+  salary: 110000
   setPreference: true
   startingGear: CentComPrivateOfficerGear
   icon: JobIconSecurityOfficer
@@ -56,7 +57,7 @@
     id: CentComPrivateOfficerPDA
     ears: ClothingHeadsetCentComCC
     belt: ClothingBeltSecuritySuper
-    pocket1: WeaponPistolMk58
+    pocket1: NFWeaponPistolMk58
     pocket2: MagazinePistol
   storage:
     back:

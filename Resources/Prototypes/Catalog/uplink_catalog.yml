@@ -7,7 +7,7 @@
   id: UplinkConvertTelecrystal
   name: uplink-convert-telecrystal-name
   description: uplink-convert-telecrystal-desc
-  productEntity: Telecrystal
+  productEntity: Telecrystal1
   cost:
     Speso: 10000
   categories:
@@ -1643,6 +1643,7 @@
   categories:
   - UplinkWearables
 
+# TODO: Revert back to normal thieving gloves when clothes dyeing is added
 - type: listing
   id: UplinkClothingChameleonGloves
   name: uplink-clothing-chameleon-thieving-gloves-name

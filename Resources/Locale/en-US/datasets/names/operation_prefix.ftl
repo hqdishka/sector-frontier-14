@@ -96,7 +96,3 @@ names-operation-prefix-dataset-95 = Warm
 names-operation-prefix-dataset-96 = Weird
 names-operation-prefix-dataset-97 = Western
 names-operation-prefix-dataset-98 = Wet
-names-operation-prefix-dataset-99 = White
-names-operation-prefix-dataset-100 = Wild
-names-operation-prefix-dataset-101 = Winter
-names-operation-prefix-dataset-102 = Yellow

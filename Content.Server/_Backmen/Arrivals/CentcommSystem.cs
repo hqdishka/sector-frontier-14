@@ -71,6 +71,9 @@ public sealed class CentcommSystem : EntitySystem
 
     public override void Initialize()
     {
+#if DEBUG
+        return;
+#endif
         base.Initialize();
         SubscribeLocalEvent<ActorComponent, CentcomFtlAction>(OnFtlActionUsed);
         SubscribeLocalEvent<PreGameMapLoad>(OnPreGameMapLoad, after: new[] { typeof(StationSystem) });

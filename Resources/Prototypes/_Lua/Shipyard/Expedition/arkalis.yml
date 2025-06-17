@@ -7,7 +7,7 @@
   parent: BaseVessel
   name: LT Аркалис
   description: Списанный крупный военный корабль переоборудованный под гражданские нужды.
-  price: 260000
+  price: 280000
   category: Large
   group: Expedition
   shuttlePath: /Maps/_Lua/Shuttles/Expedition/arkalis.yml

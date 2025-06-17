@@ -1,12 +1,14 @@
 <p align="center"> <img alt="Sector Frontier 14" height="300" src="https://github.com/HacksLua/sector-frontier-14/blob/master/Resources/Textures/_Lua/Logo/logogit.png?raw=true" /></p>
 
+![Alt](https://repobeats.axiom.co/api/embed/966f78fd8296899bae8548ab217d16da5723a238.svg "Repobeats analytics image")
+
 Sector Frontier 14 — это форк [Frontier Station 14](https://github.com/new-frontiers-14/frontier-station-14)/[Space Station 14](https://github.com/space-wizards/space-station-14), работающий на движке [Robust Toolbox](https://github.com/space-wizards/RobustToolbox), написанном на C#.
 
 Это основной репозиторий Sector Frontier 14. Является форком Frontier Station 14.
 
 ## Ссылки
 
-[Discord](https://discord.com/invite/3Uak8dpDpJ) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/)
+[Discord](https://discord.gg/luaworld) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/)
 
 ## Документация / Вики
 
@@ -66,7 +68,7 @@ Sector Frontier 14 — это форк [Frontier Station 14](https://github.com/
 | Подкаталог | Название форка | Репозиторий форка | Лицензия |
 |--------------|-----------|-----------------|---------|
 | `_Lua` | LuaWorld | https://github.com/HacksLua/sector-frontier-14 | AGPL 3.0 |
-| `_ADT` | AdventureTimeSS14 | https://github.com/AdventureTimeSS14/space_station | MIT |
+| `_ADT` | AdventureTimeSS14 | https://github.com/AdventureTimeSS14/space_station_ADT | AGPL 3.0 |
 | `_Nuclear14` | Nuclear 14 | https://github.com/Vault-Overseers/nuclear-14 | AGPL 3.0 |
 | `_RMC14` | RMC-14 | https://github.com/RMC-14/RMC-14 | MIT |
 | `_Backman` | Rxup | https://github.com/Rxup/space-station-14 | AGPL 3.0 |

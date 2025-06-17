@@ -204,7 +204,7 @@
   id: UplinkVipGunShotgunKammerer
   name:  uplink-vip-ShotgunKammerer-name
   description: uplink-vip-ShotgunKammerer-desc
-  productEntity: WeaponShotgunKammerer
+  productEntity: NFWeaponShotgunKammerer
   icon: { sprite: Objects/Weapons/Guns/Shotguns/pump.rsi, state: icon }
   cost:
     Speso: 4300
@@ -242,7 +242,7 @@
   id: UplinkVipGunSvalinn
   name:  uplink-vip-Svalinn-name
   description: uplink-vip-Svalinn-desc
-  productEntity: WeaponLaserSvalinn
+  productEntity: NFWeaponEnergyPistolLaserSvalinn
   icon: { sprite: Objects/Weapons/Guns/Battery/svalinn.rsi, state: icon }
   cost:
     Speso: 4500
@@ -282,7 +282,7 @@
   id: UplinkVipAmmoBoxLethalshot
   name:  uplink-vip-BoxLethalshot-name
   description: uplink-vip-BoxLethalshot-desc
-  productEntity: BoxLethalshot
+  productEntity: NFAmmunitionBoxShellShotgunBuckshot
   icon: { sprite: Objects/Storage/boxes.rsi, state: box }
   cost:
     Speso: 1200

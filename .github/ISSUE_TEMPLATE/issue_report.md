@@ -1,20 +1,19 @@
 ---
-name: Report an Issue
+name: Сообщить об ошибке
 about: "..."
 title: ''
 labels: ''
 assignees: ''
-
 ---
 
-## Description
-<!-- Explain your issue in detail. Issues without proper explanation are liable to be closed by maintainers. -->
+## Описание
+<!-- Подробно опишите вашу проблему. Заявки без надлежащего объяснения могут быть закрыты. -->
 
-**Reproduction**
-<!-- Include the steps to reproduce if applicable. -->
+**Воспроизведение**
+<!-- При необходимости укажите шаги для воспроизведения. -->
 
-**Screenshots**
-<!-- If applicable, add screenshots to help explain your problem. -->
+**Скриншоты**
+<!-- При наличии добавьте скриншоты, которые помогут объяснить вашу проблему. -->
 
-**Additional context**
-<!-- Add any other context about the problem here. Anything you think is related to the issue. -->
+**Дополнительный контекст**
+<!-- Добавьте любой другой контекст по данной проблеме. Все, что вы считаете связанным. -->

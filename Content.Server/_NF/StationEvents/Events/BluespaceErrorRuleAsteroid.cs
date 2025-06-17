@@ -23,6 +23,9 @@ using Content.Server.LW.AsteroidSector;
 
 namespace Content.Server._NF.StationEvents.Events;
 
+#if DEBUG
+using BluespaceErrorRuleAsteroid = BluespaceErrorRule;
+#else
 public sealed class BluespaceErrorRuleAsteroid : StationEventSystem<BluespaceErrorRuleAsteroidComponent>
 {
     NanotrasenNameGenerator _nameGenerator = new();
@@ -284,6 +287,7 @@ public sealed class BluespaceErrorRuleAsteroid : StationEventSystem<BluespaceErr
         {
             if (_map.MapExists(mapId))
                 _map.DeleteMap(mapId);
+            }
         }
     }
-}
+#endif

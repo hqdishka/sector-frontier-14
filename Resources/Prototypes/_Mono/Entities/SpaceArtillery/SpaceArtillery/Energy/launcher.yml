@@ -28,15 +28,15 @@
     soundEmpty:
       path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
   - type: SpaceArtillery
-    powerChargeRate: 250
-    powerUsePassive: 200
+    powerChargeRate: 2250
+    powerUsePassive: 2200
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 350
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipMediumPlasmaProjectile
-    fireCost: 500
+    fireCost: 1500
   - type: Destructible
     thresholds:
     - trigger:
@@ -90,15 +90,15 @@
     soundEmpty:
       path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
   - type: SpaceArtillery
-    powerChargeRate: 250
-    powerUsePassive: 200
+    powerChargeRate: 2250
+    powerUsePassive: 2200
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 350
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipRubiconProjectile
-    fireCost: 500
+    fireCost: 1500
   - type: Destructible
     thresholds:
     - trigger:
@@ -160,8 +160,8 @@
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
   - type: SpaceArtillery
-    powerChargeRate: 250
-    powerUsePassive: 200
+    powerChargeRate: 2250
+    powerUsePassive: 2200
     powerUseActive: 0
   - type: BatterySelfRecharger
     autoRecharge: true
@@ -169,7 +169,7 @@
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipDymereProjectile
-    fireCost: 2400 # Adjusted from 1600 to achieve 17 total shots
+    fireCost: 4400 # Adjusted from 1600 to achieve 17 total shots
   - type: RadarBlip
     radarColor: "#FA4E5C"
   - type: ShipGunType

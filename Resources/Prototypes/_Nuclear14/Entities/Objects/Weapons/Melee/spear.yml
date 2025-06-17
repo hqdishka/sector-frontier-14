@@ -98,6 +98,13 @@
     damage:
       types:
         Piercing: 20
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    fillBaseName: spear
+    inHandsFillBaseName: ""
+    inHandsMaxFillLevels: 0
+    equippedFillBaseName: ""
+    equippedMaxFillLevels: 0
 
 
 - type: entity
@@ -124,6 +131,13 @@
     damage:
       types:
         Piercing: 20
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    fillBaseName: spear
+    inHandsFillBaseName: ""
+    inHandsMaxFillLevels: 0
+    equippedFillBaseName: ""
+    equippedMaxFillLevels: 0
 
 
 - type: entity
@@ -147,6 +161,13 @@
       types:
         Piercing: 18
         Slash: 8
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    fillBaseName: spear
+    inHandsFillBaseName: ""
+    inHandsMaxFillLevels: 0
+    equippedFillBaseName: ""
+    equippedMaxFillLevels: 0
 
 - type: entity
   name: javelin

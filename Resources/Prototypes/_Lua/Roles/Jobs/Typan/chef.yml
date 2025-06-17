@@ -6,6 +6,7 @@
   id: OutpostTypanChef
   name: job-name-typan-chef
   playTimeTracker: JobOutpostTypanChef
+  salary: 25000
   description: Повар из далёкого космоса.
   startingGear: SyndicateChef
   icon: "JobIconOutpostTypanChef"

@@ -28,15 +28,15 @@
     soundEmpty:
       path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
   - type: SpaceArtillery
-    powerChargeRate: 250
-    powerUsePassive: 200
+    powerChargeRate: 2250
+    powerUsePassive: 2200
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 350
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipMissileASM302
-    fireCost: 300
+    fireCost: 4300
   - type: Destructible
     thresholds:
     - trigger:

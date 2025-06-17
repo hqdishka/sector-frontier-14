@@ -1,6 +1,6 @@
 - type: entity
   name: сырая креветка
-  parent: [BaseFish, FoodMeatBase]
+  parent: [FoodMeatBase, BaseFish ]
   id: FoodShrimp
   description: Один из видов еды, который используется в готовке.
   components:
@@ -51,13 +51,13 @@
         - ReagentId: Protein
           Quantity: 9
   - type: Construction
-    graph: UnusualShrimpSteak
+    graph: ShrimpSteak
     node: start
-    defaultTarget: filet unusual shrimp
+    defaultTarget: filet shrimp
 
 - type: entity
   name: сырая необычная креветка
-  parent: [BaseFishRare, FoodMeatBase]
+  parent: [FoodMeatBase, BaseFishRare ]
   id: FoodUnusualShrimp
   description: Один из видов еды, который используется в готовке.
   components:

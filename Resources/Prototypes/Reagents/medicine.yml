@@ -444,6 +444,7 @@
   color: "#731024"
   metabolisms:
     Medicine:
+      metabolismRate: 0.1 # Smaller doses stabilize critical people for longer. Gives it a specific usecase as to not be entirely outclassed by dex+
       effects:
       - !type:HealthChange
         conditions:
@@ -452,7 +453,7 @@
           mobstate: Critical
         damage:
           types:
-            Asphyxiation: -5
+            Asphyxiation: -2
       - !type:ModifyBleedAmount
         amount: -0.25
   pricePerUnit: 3
@@ -1140,8 +1141,6 @@
       effects:
       - !type:SatiateThirst
         factor: 3
-    Medicine:
-      effects:
       - !type:HealthChange
         conditions:
         - !type:TotalDamage
@@ -1153,6 +1152,7 @@
             Heat: -0.2
             Shock: -0.2
             Cold: -0.2
+
   reactiveEffects:
     Extinguish:
       methods: [ Touch ]

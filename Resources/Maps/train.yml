@@ -107107,7 +107107,7 @@ entities:
     - type: Transform
       pos: 1.2513196,-368.03192
       parent: 2
-- proto: WeaponPistolMk58
+- proto: NFWeaponPistolMk58
   entities:
   - uid: 5609
     components:

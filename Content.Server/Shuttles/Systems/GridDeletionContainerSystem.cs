@@ -1,5 +1,8 @@
 using System.Linq;
+using Content.Server.Gateway.Components;
+using Content.Server._Lua.MapperGrid; // Lua
 using Content.Server.Storage.Components;
+using Content.Shared.Tiles;
 using Robust.Shared.Containers;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Timing;
@@ -29,6 +32,11 @@ public sealed class GridDeletionContainerSystem : EntitySystem
 
     private void OnGridTerminating(EntityUid uid, MapGridComponent component, ref EntityTerminatingEvent args)
     {
+        if (HasComp<GatewayGeneratorDestinationComponent>(uid) || HasComp<MapperGridComponent>(uid))
+        {
+            return;
+        }
+
         // Prevent re-entrancy. If we are already processing this grid, stop.
         if (!_gridsBeingDeleted.Add(uid))
             return;

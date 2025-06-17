@@ -21,6 +21,17 @@
     Magmite: 2000 
 
 - type: latheRecipe
+  id: WeaponMagmiteAccelerator
+  result: WeaponMagmiteAccelerator
+  completetime: 30
+  materials:
+    Plasteel: 8000
+    Glass: 1200
+    Gold: 700
+    Silver: 1500
+    Magmite: 2000
+
+- type: latheRecipe
   id: JetpackMining
   result: JetpackMining
   completetime: 10

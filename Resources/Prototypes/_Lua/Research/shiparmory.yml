@@ -2,18 +2,18 @@
 # Copyright (c) 2025 LuaWorld Contributors
 # See AGPLv3.txt for details.
 
-# - type: technology
-#   id: BasicShuttleWeaponPad
-# #  name: research-technology-basic-shuttle-armament
-#   name: research-technology-basic-weaponpad
-#   icon:
-#     sprite: _Lua/Structures/Machines/computers.rsi
-#     state: full
-#   discipline: Shiparmory
-#   tier: 1
-#   cost: 10500
-#   recipeUnlocks:
-#   - WeaponPadCircuitboard
+- type: technology
+  id: BasicShuttleWeaponPad
+  name: research-technology-basic-weaponpad
+  icon:
+    sprite: _Lua/Structures/Machines/computers.rsi
+    state: full
+  discipline: Shiparmory
+  tier: 1
+  cost: 10500
+  recipeUnlocks:
+  - GunneryControlComputerCircuitboard
+  - MachineGCSCircuitboard
 
 - type: technology
   id: BasicShuttleWeapon
@@ -27,8 +27,8 @@
   recipeUnlocks:
   - ShuttleGunKineticCircuitboard
   - ShuttleGunSvalinnMachineGunCircuitboard
-  # technologyPrerequisites:
-  # - BasicShuttleWeaponPad
+  technologyPrerequisites:
+  - BasicShuttleWeaponPad
 
 - type: technology
   id: ShuttlePowerCage
@@ -72,8 +72,8 @@
   cost: 12100
   recipeUnlocks:
   - NFGrenadeBlast
-  - CannonBall
-  - GrenadeFrag
+  - NFCannonBall
+  - NFGrenadeFrag
   - NFGrenadeFlash
   technologyPrerequisites:
   - ShuttleShuttleGunPerforator
@@ -103,8 +103,8 @@
   tier: 2
   cost: 16900
   recipeUnlocks:
-  - CannonBallGrapeshot
-  - CannonBallGlassshot
+  - NFCannonBallGrapeshot
+  - NFCannonBallGlassshot
   technologyPrerequisites:
   - ShuttleFriendshipPirate
 
@@ -118,8 +118,8 @@
   tier: 2
   cost: 14800
   recipeUnlocks:
-  - GrenadeEMP
-  - GrenadeBaton
+  - NFGrenadeEMP
+  - NFGrenadeBaton
   technologyPrerequisites:
   - ShuttleCannonBall
 
@@ -133,7 +133,7 @@
   tier: 2
   cost: 21100
   recipeUnlocks:
-  - MagazineGrenadeEmpty
+  - NFMagazineGrenadeEmpty
   - ShuttleGunDusterCircuitboard
   technologyPrerequisites:
   - ShuttleGrenadeEMP
@@ -154,37 +154,20 @@
   technologyPrerequisites:
   - ShuttleGunDuster
 
-# - type: technology
-#   id: ShuttleTurretHEone
-#   name: research-technology-turret-one-he
-#   icon:
-#     sprite: _Lua/Objects/Weapons/Guns/Ammunition/Boxes/light_rifle_he.rsi
-#     state: base-full53
-#   discipline: Shiparmory
-#   tier: 3
-#   cost: 12600
-#   recipeUnlocks:
-#   - MagazineBox20mm
-#   - MagazineBox53mm
-#   - MagazineBox80mm
-#   technologyPrerequisites:
-#   - ShuttleTurretAPone
-
-# - type: technology
-#   id: ShuttleTurretPFone
-#   name: research-technology-turret-one-pf
-#   icon:
-#     sprite: _Lua/Objects/Weapons/Guns/Ammunition/Boxes/light_rifle_pf.rsi
-#     state: base-full80
-#   discipline: Shiparmory
-#   tier: 3
-#   cost: 16800
-#   recipeUnlocks:
-#   - MagazineBox20mmPF
-#   - MagazineBox53mmPF
-#   - MagazineBox80mmPF
-#   technologyPrerequisites:
-#   - ShuttleTurretHEone
+- type: technology
+  id: ShuttleShields
+  name: research-technology-shields
+  icon:
+    sprite: _Mono/Structures/ShuttleComponents/shield.rsi
+    state: control_on
+  discipline: Shiparmory
+  tier: 3
+  cost: 12600
+  recipeUnlocks:
+  - MachineShieldMS225Circuitboard
+  - ShieldControlComputerCircuitboard
+  technologyPrerequisites:
+  - ShuttleTurretAPone
 
 - type: technology
   id: ShuttleTurretAPtwo

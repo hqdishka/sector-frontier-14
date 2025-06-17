@@ -13,6 +13,7 @@ from typing import Any, Iterable
 
 import requests
 import yaml
+import time
 
 DEBUG = False
 DEBUG_CHANGELOG_FILE_OLD = Path("Resources/Changelog/Old.yml")
@@ -22,7 +23,7 @@ GITHUB_API_URL = os.environ.get("GITHUB_API_URL", "https://api.github.com")
 DISCORD_SPLIT_LIMIT = 2000
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
 
-CHANGELOG_FILE = "Resources/Changelog/Frontier.yml" # Frontier: Changelog.yml<Frontier.yml
+CHANGELOG_FILE = "Resources/Changelog/Lua.yml" # Lua Frontier.yml<Lua.yml Frontier: Changelog.yml<Frontier.yml
 
 TYPES_TO_EMOJI = {"Fix": "🐛", "Add": "🆕", "Remove": "❌", "Tweak": "⚒️"}
 
@@ -30,8 +31,11 @@ ChangelogEntry = dict[str, Any]
 
 
 def main():
-    if not DISCORD_WEBHOOK_URL:
-        print("No discord webhook URL found, skipping discord send")
+    webhook_lua = os.environ.get("DISCORD_WEBHOOK_URL_LUA")
+    webhook_ds = os.environ.get("DISCORD_WEBHOOK_URL_DS")
+
+    if not webhook_lua and not webhook_ds:
+        print("No Discord webhooks found, skipping")
         return
 
     if DEBUG:
@@ -144,13 +148,45 @@ def get_discord_body(content: str):
         "flags": 1 << 2,
     }
 
+def send_with_retry(webhook_url: str, body: dict, name: str):
+    retry_attempt = 0
+    MAX_RETRIES = 20
+
+    while True:
+        try:
+            response = requests.post(webhook_url, json=body, timeout=10)
+            if response.status_code == 429:
+                retry_attempt += 1
+                if retry_attempt > MAX_RETRIES:
+                    print(f"[{name}] Too many retries, giving up")
+                    return
+                retry_after = response.json().get("retry_after", 5)
+                print(f"[{name}] Rate limited, retrying after {retry_after} seconds")
+                time.sleep(retry_after)
+                continue
+
+            response.raise_for_status()
+            print(f"Sent to {name} webhook")
+            break
+        except requests.exceptions.RequestException as e:
+            print(f"[{name}] Failed to send message: {e}")
+            break
 
 def send_discord_webhook(lines: list[str]):
     content = "".join(lines)
     body = get_discord_body(content)
 
-    response = requests.post(DISCORD_WEBHOOK_URL, json=body)
-    response.raise_for_status()
+    webhook_url_lua = os.environ.get("DISCORD_WEBHOOK_URL_LUA")
+    webhook_url_ds = os.environ.get("DISCORD_WEBHOOK_URL_DS")
+
+    if webhook_url_lua:
+        send_with_retry(webhook_url_lua, body, "LUA")
+
+    if webhook_url_ds:
+        send_with_retry(webhook_url_ds, body, "DS")
+
+    if not webhook_url_lua and not webhook_url_ds:
+        print("No Discord webhooks configured!")
 
 
 def changelog_entries_to_message_lines(entries: Iterable[ChangelogEntry]) -> list[str]:
@@ -158,7 +194,7 @@ def changelog_entries_to_message_lines(entries: Iterable[ChangelogEntry]) -> lis
     message_lines = []
 
     for contributor_name, group in itertools.groupby(entries, lambda x: x["author"]):
-        message_lines.append(f"**{contributor_name}** updated:\n")
+        message_lines.append(f"**{contributor_name}**:\n")
 
         for entry in group:
             url = entry.get("url")

@@ -35,6 +35,8 @@
     - type: DeviceLinkSource
       ports:
         - CircularShieldConsoleSender
+    - type: Computer # Mono
+      board: ShieldControlComputerCircuitboard
 
 - type: entity
   id: CircularShieldBase
@@ -53,6 +55,7 @@
     - type: ExtensionCableReceiver
     - type: ApcPowerReceiver
       needsPower: true
+      powerLoad: 0
     - type: Anchorable
       delay: 10
     - type: Sprite
@@ -90,3 +93,17 @@
       energy: 1.5
     - type: LitOnPowered
     - type: InteractionOutline
+    - type: Machine
+      board: MachineShieldMS225Circuitboard
+    - type: Construction # Mono
+      graph: Machine
+      node: machine
+      containers:
+      - machine_board
+      - machine_parts
+    - type: ContainerContainer # Mono
+      containers:
+        machine_board: !type:Container
+        machine_parts: !type:Container
+    - type: PirateBountyItem
+      id: ShipShield

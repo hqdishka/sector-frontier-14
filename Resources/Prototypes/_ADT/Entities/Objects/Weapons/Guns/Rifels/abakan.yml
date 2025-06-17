@@ -1,6 +1,6 @@
 - type: entity
   name: AEK-974
-  parent: BaseItem
+  parent: [BaseC3Contraband, BaseItem]
   id: ADTAbakanRifleAEK
   description: Rifles
   components:
@@ -28,7 +28,7 @@
         priority: 2
         whitelist:
           tags:
-            - MagazineLightRifle
+            - NFMagazineRifle30
       gun_chamber:
         name: Chamber
         startingItem: NFCartridgeRifle20
@@ -62,7 +62,7 @@
 
 - type: entity
   name: AN-97
-  parent: BaseItem
+  parent: [BaseC3Contraband, BaseItem]
   id: ADTGunRifleAN
   description: Rifles
   components:
@@ -90,7 +90,7 @@
         priority: 2
         whitelist:
           tags:
-            - MagazineLightRifle
+            - NFMagazineRifle30
       gun_chamber:
         name: Chamber
         startingItem: NFCartridgeRifle20

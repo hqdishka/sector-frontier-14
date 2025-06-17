@@ -57,7 +57,7 @@
           5: { state: reinf_construct-5, visible: true}
   - type: ReinforcedWallReplacementMarker
   - type: StaticPrice
-    price: 50
+    price: 120
   - type: RadiationBlocker
     resistance: 5
 

@@ -20,7 +20,7 @@
   parent: BaseVessel
   name: UNJ Jug
   description: A science vessel that requires some setup. Great for Science-Salvage crews!
-  price: 33000
+  price: 46000
   category: Medium
   group: Shipyard
   shuttlePath: /Maps/_Mono/Shuttles/jug.yml
