@@ -297,7 +297,7 @@
   - type: PirateBountyItem # Frontier
     id: GeneratorRTG # Frontier
   - type: StaticPrice
-    price: 100
+    price: 4000
 
 - type: entity
   id: GeneratorRTGMachineCircuitboard
