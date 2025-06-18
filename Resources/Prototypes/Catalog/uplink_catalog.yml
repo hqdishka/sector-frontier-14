@@ -86,7 +86,6 @@
     whitelist:
       tags:
       - NukeOpsUplink
-      - TypanUplink
 
 - type: listing
   id: UplinkEnergyDagger
