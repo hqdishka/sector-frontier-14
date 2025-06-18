@@ -121,3 +121,16 @@ Entries:
   id: 10
   time: '2025-06-18T13:18:36.0000000+00:00'
   url: https://github.com/HacksLua/sector-frontier-14/pull/28
+- author: HacksLua
+  changes:
+    - type: Add
+      message: Добавлено пару треков в лобби
+    - type: Tweak
+      message: Нерф Charon'a
+    - type: Fix
+      message: Исправлено игнорирование щита турелями прошлого поколения
+    - type: Fix
+      message: Исправлена загрузка центкома первее фронтира
+  id: 11
+  time: '2025-06-18T13:17:43.0000000+00:00'
+  url: https://github.com/HacksLua/sector-frontier-14/pull/34
