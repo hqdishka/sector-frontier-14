@@ -36,3 +36,4 @@
     shape: triangle
   - type: TimedDespawn
     lifetime: 20
+  - type: ShipWeaponProjectile

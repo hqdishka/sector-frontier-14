@@ -180,14 +180,14 @@
       path: /Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg
   - type: SpaceArtillery
     powerChargeRate: 2250
-    powerUsePassive: 2200
+    powerUsePassive: 24200
   - type: BatterySelfRecharger
     autoRecharge: true
-    autoRechargeRate: 350
+    autoRechargeRate: 150
   - type: Actions
   - type: ProjectileBatteryAmmoProvider
     proto: ShipRailgunProjectile
-    fireCost: 4500
+    fireCost: 39999
   - type: Fixtures
     fixtures:
       fix1:
