@@ -134,3 +134,16 @@ Entries:
   id: 11
   time: '2025-06-18T13:17:43.0000000+00:00'
   url: https://github.com/HacksLua/sector-frontier-14/pull/34
+- author: salo2016
+  changes:
+    - type: Add
+      message: >-
+        Шериф: Энергетический пистолет заменён на X-01 мультифазовый
+        энергетический пистолет
+    - type: Add
+      message: Собранный РИТЭГ выгодно продаётся.
+    - type: Fix
+      message: Проджектайл плазменного резака теперь дропает руду с рудных камней.
+  id: 12
+  time: '2025-06-18T13:18:00.0000000+00:00'
+  url: https://github.com/HacksLua/sector-frontier-14/pull/31
