@@ -1,3 +1,15 @@
 store-preset-name-vip-uplink = Аплинк Випа
 stealTargetGroup-medipen-techfab-circuitboard = медипен техфаб (машинная плата)
 store-preset-name-mercenary-uplink = Аплинк Наёмника
+uplink-convert-telecrystal-name = Телекристаллы
+uplink-convert-telecrystal-desc = Обменяйте свои кредиты на более полезные вещи
+uplink-syndicate-elite-modsuit-name =  Элитный модульный скафандр синдиката
+uplink-syndicate-elite-modsuit-desc = Элитный модульный скафандр синдиката, использует новые материаллы взятые со складов синдиката, оборудовавнн ПНВ 3-его поколения и пульсовым термальным сканером
+uplink-syndicate-modsuit-name = модульный скафандр синдиката
+uplink-syndicate-modsuit-desc = модульный скафандр синдиката, использует новые материаллы взятые со складов синдиката, оборудовавнн ПНВ 3-его поколения
+uplink-clothing-chameleon-thieving-gloves-name = Воровские перчатки
+uplink-clothing-chameleon-thieving-gloves-desc = Воровксие перчатки специально для ваших скрытных операций по воровству технологий Nanotrasen
+uplink-akms-name = АКМС
+uplink-akms-desc = Старая винтовка синдиката, специально для вашей самозащиты и нападения, она зарекомендовла себя временем!
+uplink-wspr-name = ВСПР 
+uplink-wspr-desc = Новая винтовка синдиката, специально для вашей самозащиты и нападения, теперь имеет встроенный глушитель и дозвуковые патротны для повышения скрытности!
