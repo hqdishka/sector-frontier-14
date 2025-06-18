@@ -147,3 +147,10 @@ Entries:
   id: 12
   time: '2025-06-18T13:18:00.0000000+00:00'
   url: https://github.com/HacksLua/sector-frontier-14/pull/31
+- author: salo2016
+  changes:
+    - type: Add
+      message: Новые законы враждебному ИИ Razor - Zenith.
+  id: 13
+  time: '2025-06-18T13:18:15.0000000+00:00'
+  url: https://github.com/HacksLua/sector-frontier-14/pull/29
